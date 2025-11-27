@@ -1,0 +1,1000 @@
+
+map -a "ECP5U" -p LFE5U-25F -t CABGA256 -s 6 -oc Commercial   "AICAM_impl1.ngd" -o "AICAM_impl1_map.ncd" -pr "AICAM_impl1.prf" -mp "AICAM_impl1.mrp" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1/AICAM_impl1.lpf" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf"             
+map:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: AICAM_impl1.ngd
+   Picdevice="LFE5U-25F"
+
+   Pictype="CABGA256"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-25FCABGA256, Performance used: 6.
+
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(89): Semantic error in &quot;LOCATE COMP &quot;D[0]&quot; SITE &quot;E2&quot; ;&quot;: " arg1="D[0]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="89"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(89): Semantic error in &quot;IOBUF PORT &quot;D[0]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[0]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="89"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(90): Semantic error in &quot;LOCATE COMP &quot;D[1]&quot; SITE &quot;E1&quot; ;&quot;: " arg1="D[1]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="90"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(90): Semantic error in &quot;IOBUF PORT &quot;D[1]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[1]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="90"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(91): Semantic error in &quot;LOCATE COMP &quot;D[2]&quot; SITE &quot;F2&quot; ;&quot;: " arg1="D[2]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="91"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(91): Semantic error in &quot;IOBUF PORT &quot;D[2]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[2]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="91"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(92): Semantic error in &quot;LOCATE COMP &quot;D[3]&quot; SITE &quot;F3&quot; ;&quot;: " arg1="D[3]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="92"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(92): Semantic error in &quot;IOBUF PORT &quot;D[3]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[3]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="92"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(93): Semantic error in &quot;LOCATE COMP &quot;D[4]&quot; SITE &quot;G2&quot; ;&quot;: " arg1="D[4]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="93"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(93): Semantic error in &quot;IOBUF PORT &quot;D[4]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[4]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="93"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94): Semantic error in &quot;LOCATE COMP &quot;D[5]&quot; SITE &quot;G1&quot; ;&quot;: " arg1="D[5]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="94"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94): Semantic error in &quot;IOBUF PORT &quot;D[5]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[5]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="94"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95): Semantic error in &quot;LOCATE COMP &quot;D[6]&quot; SITE &quot;J1&quot; ;&quot;: " arg1="D[6]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="95"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95): Semantic error in &quot;IOBUF PORT &quot;D[6]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[6]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="95"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96): Semantic error in &quot;LOCATE COMP &quot;D[7]&quot; SITE &quot;J2&quot; ;&quot;: " arg1="D[7]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="96"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96): Semantic error in &quot;IOBUF PORT &quot;D[7]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="D[7]" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="96"  />
+Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="PROGRAMN"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="INITN"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="DONE"  />
+Removing unused logic...
+
+Optimizing...
+
+425 CCU2 constant inputs absorbed.
+
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="PROGRAMN"  />
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="INITN"  />
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="DONE"  />
+
+
+
+Design Summary:
+   Number of registers:    461 out of 24879 (2%)
+      PFU registers:          461 out of 24288 (2%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       433 out of 12144 (4%)
+      SLICEs as Logic/ROM:    433 out of 12144 (4%)
+      SLICEs as RAM:            0 out of  9108 (0%)
+      SLICEs as Carry:        106 out of 12144 (1%)
+   Number of LUT4s:        571 out of 24288 (2%)
+      Number used as logic LUTs:        359
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      212
+      Number used as shift registers:     0
+   Number of PIO sites used: 55 out of 197 (28%)
+   Number of block RAMs:  2 out of 56 (4%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  4
+     Net PCLK_c: 120 loads, 120 rising, 0 falling (Driver: PIO PCLK )
+     Net buf_CLKI: 1 loads, 1 rising, 0 falling (Driver: PIO CRYSTAL )
+     Net SD_CLK_c: 98 loads, 98 rising, 0 falling (Driver: u_pll/PLLInst_0 )
+     Net CCLK_c: 69 loads, 69 rising, 0 falling (Driver: PIO CCLK )
+   Number of Clock Enables:  23
+     Net u_cam/PCLK_c_enable_12: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_39: 6 loads, 6 LSLICEs
+     Net u_cam/PCLK_c_enable_50: 7 loads, 7 LSLICEs
+     Net u_cam/PCLK_c_enable_51: 8 loads, 8 LSLICEs
+     Net SD_CLK_c_enable_63: 19 loads, 19 LSLICEs
+     Net rd_data_7__N_1177: 17 loads, 17 LSLICEs
+     Net u_stream/PCLK_c_enable_4: 1 loads, 1 LSLICEs
+     Net u_stream/PCLK_c_enable_5: 1 loads, 1 LSLICEs
+     Net u_stream/PCLK_c_enable_28: 1 loads, 1 LSLICEs
+     Net u_stream/u_dc/wptr_bin_11__N_1150: 13 loads, 13 LSLICEs
+     Net u_sdram/ref_due_N_811: 8 loads, 8 LSLICEs
+     Net u_sdram/SD_A_12_N_789_6: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_1: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_29: 5 loads, 5 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_24: 7 loads, 7 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_28: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_30: 2 loads, 2 LSLICEs
+     Net wptr_bin_9__N_886: 11 loads, 11 LSLICEs
+     Net u_spi/CCLK_c_enable_29: 9 loads, 9 LSLICEs
+     Net u_spi/CCLK_c_enable_20: 4 loads, 4 LSLICEs
+     Net u_spi/CCLK_c_enable_5: 1 loads, 1 LSLICEs
+     Net u_spi/CCLK_c_enable_27: 1 loads, 1 LSLICEs
+     Net u_spi/CCLK_c_enable_26: 1 loads, 1 LSLICEs
+   Number of LSRs:  18
+     Net byte_sel: 1 loads, 1 LSLICEs
+     Net VSYNC_c: 14 loads, 14 LSLICEs
+     Net u_stream/n3142: 3 loads, 3 LSLICEs
+     Net u_stream/n2796: 1 loads, 1 LSLICEs
+     Net u_stream/n3168: 3 loads, 3 LSLICEs
+     Net u_sdram/n635: 1 loads, 1 LSLICEs
+     Net u_sdram/ref_cnt_15__N_577: 10 loads, 10 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_24: 5 loads, 5 LSLICEs
+     Net u_sdram/SD_DQM_1_N_802_1: 2 loads, 2 LSLICEs
+     Net u_sdram/n3161: 7 loads, 7 LSLICEs
+     Net u_sdram/n3139: 9 loads, 9 LSLICEs
+     Net u_sdram/row_12: 1 loads, 1 LSLICEs
+     Net u_sdram/row_11: 1 loads, 1 LSLICEs
+     Net u_sdram/row_9: 1 loads, 1 LSLICEs
+     Net u_sdram/n87: 1 loads, 1 LSLICEs
+     Net u_sdram/n634: 2 loads, 2 LSLICEs
+     Net u_spi/CCLK_c_enable_20: 7 loads, 7 LSLICEs
+     Net u_spi/n5: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net u_sdram/rd_empty: 32 loads
+     Net u_sdram/ref_due_N_811: 32 loads
+     Net rd_data_7__N_1177: 28 loads
+     Net u_sdram/dq_oe: 26 loads
+     Net u_sdram/n636: 21 loads
+     Net u_sdram/SD_DQM_1_N_802_1: 21 loads
+     Net u_sdram/n635: 20 loads
+     Net VSYNC_c: 20 loads
+     Net SD_CLK_c_enable_63: 19 loads
+     Net timer_0: 19 loads
+ 
+
+   Number of warnings:  22
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 118 MB
+
+Dumping design to file AICAM_impl1_map.ncd.
+
+ncd2vdb "AICAM_impl1_map.ncd" ".vdbs/AICAM_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+
+trce -f "AICAM_impl1.mt" -o "AICAM_impl1.tw1" "AICAM_impl1_map.ncd" "AICAM_impl1.prf"
+trce:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file aicam_impl1_map.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application trce from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Mon Nov 17 21:38:23 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o AICAM_impl1.tw1 -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd AICAM_impl1.prf 
+Design file:     aicam_impl1_map.ncd
+Preference file: aicam_impl1.prf
+Device,speed:    LFE5U-25F,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5024 paths, 3 nets, and 1104 connections (42.69% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Mon Nov 17 21:38:23 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o AICAM_impl1.tw1 -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd AICAM_impl1.prf 
+Design file:     aicam_impl1_map.ncd
+Preference file: aicam_impl1.prf
+Device,speed:    LFE5U-25F,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5024 paths, 3 nets, and 1111 connections (42.96% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 171 MB
+
+
+ldbanno "AICAM_impl1_map.ncd" -n Verilog -o "AICAM_impl1_mapvo.vo" -w -neg
+ldbanno: version Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the AICAM_impl1_map design file.
+
+
+Loading design for application ldbanno from file AICAM_impl1_map.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application ldbanno from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Converting design AICAM_impl1_map.ncd into .ldb format.
+Writing Verilog netlist to file AICAM_impl1_mapvo.vo
+Writing SDF timing to file AICAM_impl1_mapvo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 144 MB
+
+ldbanno "AICAM_impl1_map.ncd" -n VHDL -o "AICAM_impl1_mapvho.vho" -w -neg
+ldbanno: version Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the AICAM_impl1_map design file.
+
+
+Loading design for application ldbanno from file AICAM_impl1_map.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application ldbanno from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Converting design AICAM_impl1_map.ncd into .ldb format.
+Writing VHDL netlist to file AICAM_impl1_mapvho.vho
+Writing SDF timing to file AICAM_impl1_mapvho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 144 MB
+
+mpartrce -p "AICAM_impl1.p2t" -f "AICAM_impl1.p3t" -tf "AICAM_impl1.pt" "AICAM_impl1_map.ncd" "AICAM_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "AICAM_impl1_map.ncd"
+Mon Nov 17 21:38:26 2025
+
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 AICAM_impl1_map.ncd AICAM_impl1.dir/5_1.ncd AICAM_impl1.prf
+Preference file: AICAM_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file AICAM_impl1_map.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application par from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      55/197          27% used
+                     55/197          27% bonded
+
+   SLICE            433/12144         3% used
+
+   GSR                1/1           100% used
+   EBR                2/56            3% used
+   PLL                1/2            50% used
+
+
+Number of Signals: 1061
+Number of Connections: 2586
+
+Pin Constraint Summary:
+   55 out of 55 pins locked (100% locked).
+
+INFO: CLKI 'CRYSTAL' at C8 driving 'u_pll/PLLInst_0' must use PCLK.
+The following 12 signals are selected to use the primary clock routing resources:
+    SD_CLK_c (driver: u_pll/PLLInst_0, clk/ce/sr load #: 98/0/0)
+    PCLK_c (driver: PCLK, clk/ce/sr load #: 120/0/0)
+    CCLK_c (driver: CCLK, clk/ce/sr load #: 69/0/0)
+    SD_CLK_c_enable_63 (driver: u_sdram/u_fifo/SLICE_436, clk/ce/sr load #: 0/19/0)
+    rd_data_7__N_1177 (driver: u_spi/SLICE_375, clk/ce/sr load #: 0/17/0)
+    VSYNC_c (driver: VSYNC, clk/ce/sr load #: 0/0/14)
+    u_stream/u_dc/wptr_bin_11__N_1150 (driver: u_stream/u_dc/SLICE_288, clk/ce/sr load #: 0/13/0)
+    u_sdram/SD_CLK_c_enable_24 (driver: u_sdram/SLICE_343, clk/ce/sr load #: 0/7/5)
+    wptr_bin_9__N_886 (driver: SLICE_196, clk/ce/sr load #: 0/11/0)
+    u_spi/CCLK_c_enable_20 (driver: u_spi/SLICE_236, clk/ce/sr load #: 0/4/7)
+    u_sdram/ref_cnt_15__N_577 (driver: u_sdram/SLICE_179, clk/ce/sr load #: 0/0/10)
+    buf_CLKI (driver: CRYSTAL, clk/ce/sr load #: 1/0/0)
+
+    <postMsg mid="61121046" type="Warning" dynamic="4" navigation="0" arg0="VSYNC" arg1="P6" arg2="PLL_BL0" arg3="u_pll/PLLInst_0"  />
+
+Signal SSPI_CS_n_c is selected as Global Set/Reset.
+Starting Placer Phase 0.
+............
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+......................
+Placer score = 219895.
+Finished Placer Phase 1.  REAL time: 5 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  217974
+Finished Placer Phase 2.  REAL time: 5 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 2 out of 12 (16%)
+  GR_PCLK    : 2 out of 12 (16%)
+  PLL        : 1 out of 2 (50%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "L1 (PL26A)", CLK/CE/SR load = 8
+  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 1
+  PRIMARY "VSYNC_c" from comp "VSYNC" on PIO site "P6 (PL47C)", CLK/CE/SR load = 7
+
+  PRIMARY  : 3 out of 16 (18%)
+
+Quadrant TR Clocks:
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 7
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "L1 (PL26A)", CLK/CE/SR load = 7
+  PRIMARY "SD_CLK_c_enable_63" from F0 on comp "u_sdram/u_fifo/SLICE_436" on site "R26C52D", CLK/CE/SR load = 6
+
+  PRIMARY  : 3 out of 16 (18%)
+
+Quadrant BL Clocks:
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 1
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "L1 (PL26A)", CLK/CE/SR load = 57
+  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 68
+  PRIMARY "rd_data_7__N_1177" from F1 on comp "u_spi/SLICE_375" on site "R38C30B", CLK/CE/SR load = 17
+  PRIMARY "VSYNC_c" from comp "VSYNC" on PIO site "P6 (PL47C)", CLK/CE/SR load = 7
+  PRIMARY "u_stream/u_dc/wptr_bin_11__N_1150" from F1 on comp "u_stream/u_dc/SLICE_288" on site "R28C29B", CLK/CE/SR load = 13
+  PRIMARY "u_spi/CCLK_c_enable_20" from F1 on comp "u_spi/SLICE_236" on site "R39C31D", CLK/CE/SR load = 11
+  PRIMARY "buf_CLKI" from comp "CRYSTAL" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 1
+
+  PRIMARY  : 8 out of 16 (50%)
+
+Quadrant BR Clocks:
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 90
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "L1 (PL26A)", CLK/CE/SR load = 48
+  PRIMARY "SD_CLK_c_enable_63" from F0 on comp "u_sdram/u_fifo/SLICE_436" on site "R26C52D", CLK/CE/SR load = 13
+  PRIMARY "u_sdram/SD_CLK_c_enable_24" from F1 on comp "u_sdram/SLICE_343" on site "R33C49C", CLK/CE/SR load = 12
+  PRIMARY "wptr_bin_9__N_886" from F1 on comp "SLICE_196" on site "R27C48D", CLK/CE/SR load = 11
+  PRIMARY "u_sdram/ref_cnt_15__N_577" from Q0 on comp "u_sdram/SLICE_179" on site "R34C55B", CLK/CE/SR load = 10
+
+  PRIMARY  : 6 out of 16 (37%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   55 out of 197 (27.9%) PIO sites used.
+   55 out of 197 (27.9%) bonded PIO sites used.
+   Number of PIO comps: 55; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 8 / 24 ( 33%)  | 3.3V       | -          | -          |
+| 1        | 2 / 32 (  6%)  | 3.3V       | -          | -          |
+| 2        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
+| 3        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
+| 6        | 14 / 32 ( 43%) | 3.3V       | -          | -          |
+| 7        | 0 / 32 (  0%)  | -          | -          | -          |
+| 8        | 5 / 13 ( 38%)  | 2.5V       | -          | -          |
++----------+----------------+------------+------------+------------+
+
+Total placer CPU time: 5 secs 
+
+Dumping design to file AICAM_impl1.dir/5_1.ncd.
+
+0 connections routed; 2586 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 8 secs 
+
+Start NBR router at 21:38:34 11/17/25
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 21:38:35 11/17/25
+
+Start NBR section for initial routing at 21:38:35 11/17/25
+Level 1, iteration 1
+1(0.00%) conflict; 1843(71.27%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.359ns/0.000ns; real time: 9 secs 
+Level 2, iteration 1
+9(0.00%) conflicts; 1818(70.30%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.679ns/0.000ns; real time: 9 secs 
+Level 3, iteration 1
+10(0.00%) conflicts; 1629(62.99%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.684ns/0.000ns; real time: 9 secs 
+Level 4, iteration 1
+62(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 21:38:35 11/17/25
+Level 1, iteration 1
+6(0.00%) conflicts; 65(2.51%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 2, iteration 1
+6(0.00%) conflicts; 65(2.51%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 3, iteration 1
+3(0.00%) conflicts; 66(2.55%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 1
+23(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 2
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 3
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 4
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 6
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 7
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+Level 4, iteration 9
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 9 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 21:38:35 11/17/25
+
+Start NBR section for re-routing at 21:38:36 11/17/25
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.597ns/0.000ns; real time: 10 secs 
+
+Start NBR section for post-routing at 21:38:36 11/17/25
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 1.597ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 9 secs 
+Total REAL time: 10 secs 
+Completely routed.
+End of route.  2586 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file AICAM_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 1.597
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.174
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 10 secs 
+Total REAL time to completion: 10 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "AICAM_impl1.pt" -o "AICAM_impl1.twr" "AICAM_impl1.ncd" "AICAM_impl1.prf"
+trce:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application trce from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Mon Nov 17 21:38:37 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o AICAM_impl1.twr -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1.ncd AICAM_impl1.prf 
+Design file:     aicam_impl1.ncd
+Preference file: aicam_impl1.prf
+Device,speed:    LFE5U-25F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5024 paths, 3 nets, and 1111 connections (42.96% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Mon Nov 17 21:38:37 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o AICAM_impl1.twr -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1.ncd AICAM_impl1.prf 
+Design file:     aicam_impl1.ncd
+Preference file: aicam_impl1.prf
+Device,speed:    LFE5U-25F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5024 paths, 3 nets, and 1111 connections (42.96% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 173 MB
+
+
+iotiming  "AICAM_impl1.ncd" "AICAM_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application iotiming from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 7
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Running Performance Grade: 7
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 8
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Running Performance Grade: 8
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 9
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Running Performance Grade: 9
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+ibisgen "AICAM_impl1.ncd" "C:/lscc/diamond/3.14/cae_library/ibis/ecp5u.ibs" "AICAM_impl1.prf"
+IBIS Models Generator: Lattice Diamond (64-bit) 3.14.0.75.2
+
+Mon Nov 17 21:38:40 2025
+
+
+Loading design for application GENERIC from file AICAM_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application GENERIC from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Created design models.
+
+
+Generating: C:\Users\kunsh\Desktop\AiCamera\Lattice Diamond\impl1\IBIS\AICAM_impl1.ibs
+
+
+    <postMsg mid="1191031" type="Info"    dynamic="0" navigation="0"  />
+Package model file "ecp5u_25f_bg256.pkg" is not available for the device/package selected in the design.
+
+
+ldbanno "AICAM_impl1.ncd" -n Verilog  -o "AICAM_impl1_vo.vo"        -w -neg
+ldbanno: version Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the AICAM_impl1 design file.
+
+
+Loading design for application ldbanno from file AICAM_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application ldbanno from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Converting design AICAM_impl1.ncd into .ldb format.
+Loading preferences from aicam_impl1.prf.
+Writing Verilog netlist to file AICAM_impl1_vo.vo
+Writing SDF timing to file AICAM_impl1_vo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 147 MB
+
+ldbanno "AICAM_impl1.ncd" -n VHDL -o "AICAM_impl1_vho.vho"        -w -neg 
+ldbanno: version Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the AICAM_impl1 design file.
+
+
+Loading design for application ldbanno from file AICAM_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application ldbanno from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Converting design AICAM_impl1.ncd into .ldb format.
+Loading preferences from aicam_impl1.prf.
+Writing VHDL netlist to file AICAM_impl1_vho.vho
+Writing SDF timing to file AICAM_impl1_vho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 147 MB
+
+tmcheck -par "AICAM_impl1.par" 
+
+bitgen -w "AICAM_impl1.ncd" -f "AICAM_impl1.t2b" -e -s "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.sec" -k "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.bek" "AICAM_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file AICAM_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application Bitgen from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from AICAM_impl1.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        CfgMode  |                      Disable**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                          2.4**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                    CONFIG_MODE  |                         JTAG**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+|            SLAVE_PARALLEL_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                      DONE_PULL  |                           ON**  |
++---------------------------------+---------------------------------+
+|               CONFIG_IOVOLTAGE  |                          2.5**  |
++---------------------------------+---------------------------------+
+|                        TRANSFR  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 10.27.
+ 
+Saving bit stream in "AICAM_impl1.bit".
+Total CPU Time: 2 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 282 MB
+
+ddtcmd -dev LFE5U-25F -if AICAM_impl1.bit -oft -int -of AICAM_impl1.mcs 
+Lattice Diamond Deployment Tool 3.14 Command Line
+
+Loading Programmer Device Database...
+
+Generating Bitstream.....
+Device Name: LFE5U-25F
+Reading Input File: AICAM_impl1.bit
+Format:  Single Intel Hex
+Output File: AICAM_impl1.mcs
+Start generation.
+Generating Intel Hex.....
+Processing file AICAM_impl1.bit ......
+File AICAM_impl1.bit processed successfully.
+
+The file AICAM_impl1.mcs was generated successfully.
+
+Lattice Diamond Deployment Tool has exited successfully.
+

@@ -1,0 +1,29 @@
+#Start recording tcl command: 10/28/2025 00:55:03
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_run Translate -impl impl1
+prj_run Map -impl impl1
+prj_run PAR -impl impl1
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/Main.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/Main.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/camera_capture.v"
+prj_src add -exclude "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.ldc"
+prj_src enable "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.ldc"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.ldc"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_writer.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/spi_bridge.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v"
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m"
+source "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/generate_core.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/pll24m_to_48m.sbx"
+sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/pll24m_to_48m.sbx"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/pll24m_to_48m.sbx"
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m"
+source "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/generate_core.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
+#Stop recording: 10/29/2025 13:23:12

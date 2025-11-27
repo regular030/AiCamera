@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "AICAM_impl1.log"
+-o "AICAM_impl1.csv"
+-pr "AICAM_impl1.prf"

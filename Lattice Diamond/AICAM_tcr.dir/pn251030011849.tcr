@@ -1,0 +1,45 @@
+#Start recording tcl command: 10/29/2025 18:57:05
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_min.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/dc_fifo.v"
+sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m"
+source "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/generate_core.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+pwc_command new
+pwc_command exit
+sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pixel_packer_2x8.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/timing.sdc"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_crop_stream.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pixel_assemble_rgb565.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker_motion.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_streamer_rgb565.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/camera_capture.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_writer.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pixel_packer_2x8.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_crop_stream.v"
+sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run Map -impl impl1
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapVerilogSimFile
+prj_run Map -impl impl1 -task MapVHDLSimFile
+prj_run PAR -impl impl1
+prj_run Export -impl impl1
+prj_run PAR -impl impl1
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapVHDLSimFile
+prj_run Map -impl impl1 -task MapVerilogSimFile
+prj_run PAR -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapVerilogSimFile
+prj_run Map -impl impl1 -task MapVHDLSimFile
+prj_run PAR -impl impl1
+prj_run PAR -impl impl1
+prj_run PAR -impl impl1 -task IOTiming
+#Stop recording: 10/30/2025 01:18:49

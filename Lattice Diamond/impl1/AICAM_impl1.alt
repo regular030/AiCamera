@@ -1,0 +1,63 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Mon Nov 17 21:38:46 2025 *
+NOTE DESIGN NAME: fpga_top *
+NOTE DEVICE NAME: LFE5U-25F-6CABGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS CRYSTAL : C8 : in *
+NOTE PINS SD_WE_N : N13 : out *
+NOTE PINS SD_CS_N : R15 : out *
+NOTE PINS SD_CLK : J15 : out *
+NOTE PINS SD_RAS_N : T14 : out *
+NOTE PINS DOUT : M8 : out *
+NOTE PINS MCLK : C7 : out *
+NOTE PINS SD_CAS_N : R13 : out *
+NOTE PINS SD_A[12] : A9 : out *
+NOTE PINS SD_A[11] : A8 : out *
+NOTE PINS SD_A[10] : T7 : out *
+NOTE PINS SD_A[9] : A7 : out *
+NOTE PINS SD_A[8] : A6 : out *
+NOTE PINS SD_A[7] : A5 : out *
+NOTE PINS SD_A[6] : A4 : out *
+NOTE PINS SD_A[5] : A3 : out *
+NOTE PINS SD_A[4] : A2 : out *
+NOTE PINS SD_A[3] : T2 : out *
+NOTE PINS SD_A[2] : T3 : out *
+NOTE PINS SD_A[1] : T4 : out *
+NOTE PINS SD_A[0] : T6 : out *
+NOTE PINS SD_BA[1] : L12 : out *
+NOTE PINS SD_BA[0] : K12 : out *
+NOTE PINS SD_DQ[15] : H15 : out *
+NOTE PINS SD_DQ[14] : G16 : out *
+NOTE PINS SD_DQ[13] : G15 : out *
+NOTE PINS SD_DQ[12] : F16 : out *
+NOTE PINS SD_DQ[11] : F15 : out *
+NOTE PINS SD_DQ[10] : E16 : out *
+NOTE PINS SD_DQ[9] : E15 : out *
+NOTE PINS SD_DQ[8] : D16 : out *
+NOTE PINS SD_DQ[7] : J16 : out *
+NOTE PINS SD_DQ[6] : R16 : out *
+NOTE PINS SD_DQ[5] : P16 : out *
+NOTE PINS SD_DQ[4] : M14 : out *
+NOTE PINS SD_DQ[3] : M15 : out *
+NOTE PINS SD_DQ[2] : K16 : out *
+NOTE PINS SD_DQ[1] : M16 : out *
+NOTE PINS SD_DQ[0] : L15 : out *
+NOTE PINS SD_DQM[1] : D14 : out *
+NOTE PINS SD_DQM[0] : T15 : out *
+NOTE PINS PCLK : L1 : in *
+NOTE PINS VSYNC : P6 : in *
+NOTE PINS HREF : N7 : in *
+NOTE PINS Y9 : P5 : in *
+NOTE PINS Y8 : P4 : in *
+NOTE PINS Y7 : N5 : in *
+NOTE PINS Y6 : N4 : in *
+NOTE PINS Y5 : N3 : in *
+NOTE PINS Y4 : N1 : in *
+NOTE PINS Y3 : P1 : in *
+NOTE PINS Y2 : P2 : in *
+NOTE PINS CCLK : J14 : in *
+NOTE PINS SSPI_CS_n : R1 : in *
+NOTE PINS DIN : T8 : in *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: off *

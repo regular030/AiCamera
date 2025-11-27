@@ -1,0 +1,263 @@
+
+Loading design for application trce from file aicam_impl1_map.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application trce from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Mon Nov 17 21:38:23 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o AICAM_impl1.tw1 -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd AICAM_impl1.prf 
+Design file:     aicam_impl1_map.ncd
+Preference file: aicam_impl1.prf
+Device,speed:    LFE5U-25F,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "buf_CLKI" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "SD_CLK_c" 96.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 4.143ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         DP16KD     Port           u_sdram/u_fifo/mem0(ASIC)  (from SD_CLK_c +)
+   Destination:    FF         Data in        u_sdram/u_fifo/rd_data_i0_i12  (to SD_CLK_c +)
+
+   Delay:               6.534ns  (91.2% logic, 8.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      6.534ns physical path delay u_sdram/u_fifo/mem0 to u_sdram/u_fifo/SLICE_132 meets
+     10.417ns delay constraint less
+     -0.260ns DIN_SET requirement (totaling 10.677ns) by 4.143ns
+
+ Physical Path Details:
+
+      Data path u_sdram/u_fifo/mem0 to u_sdram/u_fifo/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+C2Q_DEL     ---     5.724 *ifo/mem0.CLKB to *fo/mem0.DOB12 u_sdram/u_fifo/mem0 (from SD_CLK_c)
+ROUTE         1   e 0.573 *fo/mem0.DOB12 to */SLICE_132.D0 u_sdram/u_fifo/n1866
+CTOF_DEL    ---     0.236 */SLICE_132.D0 to */SLICE_132.F0 u_sdram/u_fifo/SLICE_132
+ROUTE         1   e 0.001 */SLICE_132.F0 to *SLICE_132.DI0 u_sdram/u_fifo/rd_data_15_N_903_12 (to SD_CLK_c)
+                  --------
+                    6.534   (91.2% logic, 8.8% route), 2 logic levels.
+
+Report:  159.388MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "MCLK_c" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "buf_CLKI" 24.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "SD_CLK_c" 96.000000 MHz  |             |             |
+;                                       |   96.000 MHz|  159.388 MHz|   2  
+                                        |             |             |
+FREQUENCY NET "MCLK_c" 24.000000 MHz ;  |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: buf_CLKI   Source: CRYSTAL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 99
+   Covered under: FREQUENCY NET "SD_CLK_c" 96.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PCLK_c   Source: PCLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: CCLK_c   Source: CCLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: PCLK_c   Source: PCLK.PAD   Loads: 120
+   No transfer within this clock domain is found
+
+Clock Domain: CCLK_c   Source: CCLK.PAD   Loads: 69
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5024 paths, 3 nets, and 1104 connections (42.69% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Mon Nov 17 21:38:23 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o AICAM_impl1.tw1 -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd AICAM_impl1.prf 
+Design file:     aicam_impl1_map.ncd
+Preference file: aicam_impl1.prf
+Device,speed:    LFE5U-25F,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "buf_CLKI" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "SD_CLK_c" 96.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.103ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_sdram/fs_meta_161  (from SD_CLK_c +)
+   Destination:    FF         Data in        u_sdram/fs_sync_162  (to SD_CLK_c +)
+
+   Delay:               0.221ns  (73.8% logic, 26.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.221ns physical path delay u_sdram/SLICE_174 to u_sdram/SLICE_174 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.118ns) by 0.103ns
+
+ Physical Path Details:
+
+      Data path u_sdram/SLICE_174 to u_sdram/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163 *SLICE_174.CLK to */SLICE_174.Q1 u_sdram/SLICE_174 (from SD_CLK_c)
+ROUTE         4   e 0.058 */SLICE_174.Q1 to */SLICE_174.M0 u_sdram/fs_meta (to SD_CLK_c)
+                  --------
+                    0.221   (73.8% logic, 26.2% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "MCLK_c" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "buf_CLKI" 24.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "SD_CLK_c" 96.000000 MHz  |             |             |
+;                                       |     0.000 ns|     0.103 ns|   1  
+                                        |             |             |
+FREQUENCY NET "MCLK_c" 24.000000 MHz ;  |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: buf_CLKI   Source: CRYSTAL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 99
+   Covered under: FREQUENCY NET "SD_CLK_c" 96.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PCLK_c   Source: PCLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: CCLK_c   Source: CCLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: PCLK_c   Source: PCLK.PAD   Loads: 120
+   No transfer within this clock domain is found
+
+Clock Domain: CCLK_c   Source: CCLK.PAD   Loads: 69
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5024 paths, 3 nets, and 1111 connections (42.96% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

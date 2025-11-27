@@ -1,0 +1,29 @@
+SCUBA, Version Diamond (64-bit) 3.14.0.75.2
+Wed Oct 29 00:41:34 2025
+  
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+  
+BEGIN SCUBA Module Synthesis
+  
+    Issued command   : C:\lscc\diamond\3.14\ispfpga\bin\nt64\scuba.exe -w -n pll24m_to_48m -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type pll -fin 24.000 -clkibuf LVCMOS33 -fclkop 24.000 -fclkop_tol 0.0 -phase_cntl STATIC -fb_mode 1 
+    Circuit name     : pll24m_to_48m
+    Module type      : pll
+    Module Version   : 5.7
+    Ports            : 
+    Inputs       : CLKI
+    Outputs      : CLKOP
+    I/O buffer       : not inserted
+    EDIF output      : pll24m_to_48m.edn
+    Verilog output   : pll24m_to_48m.v
+    Verilog template : pll24m_to_48m_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : pll24m_to_48m.srp
+    Estimated Resource Usage:
+  
+END   SCUBA Module Synthesis
+

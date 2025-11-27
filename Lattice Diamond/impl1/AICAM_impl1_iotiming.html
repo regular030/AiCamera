@@ -1,0 +1,174 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 7
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 8
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 9
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+// Design: fpga_top
+// Package: CABGA256
+// ncd File: aicam_impl1.ncd
+// Version: Diamond (64-bit) 3.14.0.75.2
+// Written on Mon Nov 17 21:38:40 2025
+// M: Minimum Performance Grade
+// iotiming AICAM_impl1.ncd AICAM_impl1.prf -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 9, 8, 7, 6):
+
+// Input Setup and Hold Times
+
+Port      Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+DIN       CCLK  R     0.549      M       1.522     6
+HREF      PCLK  R     3.458      6       0.152     6
+SSPI_CS_n CCLK  R     5.214      6      -0.642     M
+VSYNC     PCLK  R     4.285      6      -0.180     M
+Y2        PCLK  R     0.467      M       0.991     6
+Y3        PCLK  R     0.634      M       0.731     6
+Y4        PCLK  R     0.394      M       1.133     6
+Y5        PCLK  R     0.779      6       0.558     6
+Y6        PCLK  R     0.979      6       0.425     6
+Y7        PCLK  R     1.034      6       0.349     6
+Y8        PCLK  R     1.239      6       0.213     6
+Y9        PCLK  R     1.532      6      -0.028     6
+
+
+// Clock to Output Delay
+
+Port      Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+DOUT      CCLK    R     7.843         6        3.195          M
+SD_A[0]   CRYSTAL R     9.492         6        3.868          M
+SD_A[10]  CRYSTAL R     9.475         6        3.850          M
+SD_A[11]  CRYSTAL R    10.009         6        4.047          M
+SD_A[12]  CRYSTAL R     9.431         6        3.827          M
+SD_A[1]   CRYSTAL R    10.388         6        4.188          M
+SD_A[2]   CRYSTAL R    10.001         6        4.067          M
+SD_A[3]   CRYSTAL R     9.714         6        3.950          M
+SD_A[4]   CRYSTAL R    10.572         6        4.293          M
+SD_A[5]   CRYSTAL R    10.943         6        4.431          M
+SD_A[6]   CRYSTAL R    10.760         6        4.359          M
+SD_A[7]   CRYSTAL R    10.252         6        4.158          M
+SD_A[8]   CRYSTAL R    10.064         6        4.092          M
+SD_A[9]   CRYSTAL R     9.779         6        3.965          M
+SD_BA[0]  CRYSTAL R     8.296         6        3.412          M
+SD_BA[1]  CRYSTAL R     8.039         6        3.310          M
+SD_CAS_N  CRYSTAL R     9.065         6        3.700          M
+SD_DQM[0] CRYSTAL R     9.339         6        3.784          M
+SD_DQM[1] CRYSTAL R     9.945         6        4.030          M
+SD_DQ[0]  CRYSTAL R     9.999         6        3.412          M
+SD_DQ[10] CRYSTAL R    10.847         6        3.685          M
+SD_DQ[11] CRYSTAL R    10.847         6        3.684          M
+SD_DQ[12] CRYSTAL R    10.847         6        3.613          M
+SD_DQ[13] CRYSTAL R    10.847         6        3.689          M
+SD_DQ[14] CRYSTAL R    10.385         6        3.571          M
+SD_DQ[15] CRYSTAL R    10.385         6        3.642          M
+SD_DQ[1]  CRYSTAL R     9.777         6        3.411          M
+SD_DQ[2]  CRYSTAL R    10.308         6        3.506          M
+SD_DQ[3]  CRYSTAL R     9.777         6        3.668          M
+SD_DQ[4]  CRYSTAL R    10.187         6        3.584          M
+SD_DQ[5]  CRYSTAL R    10.199         6        3.644          M
+SD_DQ[6]  CRYSTAL R    10.199         6        3.645          M
+SD_DQ[7]  CRYSTAL R    10.308         6        3.411          M
+SD_DQ[8]  CRYSTAL R    11.389         6        3.840          M
+SD_DQ[9]  CRYSTAL R    11.389         6        3.839          M
+SD_RAS_N  CRYSTAL R     8.628         6        3.526          M
+SD_WE_N   CRYSTAL R     8.160         6        3.345          M
+WARNING: you must also run trce with hold speed: 6
+WARNING: you must also run trce with setup speed: M
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

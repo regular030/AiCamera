@@ -1,0 +1,22 @@
+Results of NGD DRC are available in fpga_top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'PROGRAMN' has no load.
+WARNING - synthesis: input pad net 'PROGRAMN' has no legal load.
+WARNING - synthesis: logical net 'INITN' has no load.
+WARNING - synthesis: input pad net 'INITN' has no legal load.
+WARNING - synthesis: logical net 'DONE' has no load.
+WARNING - synthesis: input pad net 'DONE' has no legal load.
+WARNING - synthesis: DRC complete with 6 warnings.
+
+Design Results:
+   1011 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file AICAM_impl1.ngd.

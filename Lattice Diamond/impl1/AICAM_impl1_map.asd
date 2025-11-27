@@ -1,0 +1,79 @@
+[ActiveSupport MAP]
+Device = LFE5U-25F;
+Package = CABGA256;
+Performance = 6;
+LUTS_avail = 24288;
+LUTS_used = 571;
+FF_avail = 24485;
+FF_used = 461;
+INPUT_LVCMOS33 = 15;
+OUTPUT_LVCMOS33 = 40;
+IO_avail = 197;
+IO_used = 55;
+EBR_avail = 56;
+EBR_used = 2;
+;
+; start of DSP statistics
+MULT18X18D = 0;
+MULT9X9D = 0;
+ALU54B = 0;
+ALU24B = 0;
+PRADD18A = 0;
+PRADD9A = 0;
+DSP_MULT_avail = 56;
+DSP_MULT_used = 0;
+DSP_ALU_avail = 28;
+DSP_ALU_used = 0;
+DSP_PRADD_avail = 56;
+DSP_PRADD_used = 0;
+; end of DSP statistics
+;
+; Begin EBR Section
+Instance_Name = u_sdram/u_fifo/mem0;
+Type = DP16KD;
+Width_B = 16;
+Depth_A = 512;
+Depth_B = 512;
+REGMODE_A = NOREG;
+REGMODE_B = NOREG;
+RESETMODE = SYNC;
+ASYNC_RESET_RELEASE = SYNC;
+WRITEMODE_A = WRITETHROUGH;
+WRITEMODE_B = WRITETHROUGH;
+GSR = DISABLED;
+Instance_Name = u_stream/u_dc/mem0;
+Type = DP16KD;
+Width_B = 8;
+Depth_A = 2048;
+Depth_B = 2048;
+REGMODE_A = NOREG;
+REGMODE_B = NOREG;
+RESETMODE = SYNC;
+ASYNC_RESET_RELEASE = SYNC;
+WRITEMODE_A = WRITETHROUGH;
+WRITEMODE_B = WRITETHROUGH;
+GSR = DISABLED;
+; End EBR Section
+; Begin PLL Section
+Instance_Name = u_pll/PLLInst_0;
+Type = EHXPLLL;
+CLKOP_Post_Divider_A_Input = DIVA;
+CLKOS_Post_Divider_B_Input = DIVB;
+CLKOS2_Post_Divider_C_Input = DIVC;
+CLKOS3_Post_Divider_D_Input = DIVD;
+FB_MODE = CLKOP;
+CLKI_Divider = 1;
+CLKFB_Divider = 4;
+CLKOP_Divider = 6;
+CLKOS_Divider = 24;
+CLKOS2_Divider = 1;
+CLKOS3_Divider = 1;
+CLKOP_Desired_Phase_Shift(degree) = 0;
+CLKOP_Trim_Option_Rising/Falling = FALLING;
+CLKOP_Trim_Option_Delay = 0;
+CLKOS_Desired_Phase_Shift(degree) = 0;
+CLKOS_Trim_Option_Rising/Falling = FALLING;
+CLKOS_Trim_Option_Delay = 0;
+CLKOS2_Desired_Phase_Shift(degree) = 0;
+CLKOS3_Desired_Phase_Shift(degree) = 0;
+; End PLL Section
