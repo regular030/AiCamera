@@ -2,8 +2,8 @@
 // Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.14.0.75.2
 
 // ldbanno -n Verilog -o AICAM_impl1_vo.vo -w -neg -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1.ncd 
-// Netlist created on Mon Nov 17 21:38:21 2025
-// Netlist written on Mon Nov 17 21:38:43 2025
+// Netlist created on Sat Jan 10 18:48:28 2026
+// Netlist written on Sat Jan 10 18:48:50 2026
 // Design is for device LFE5U-25F
 // Design is for package CABGA256
 // Design is for performance grade 6
@@ -11,11 +11,13 @@
 `timescale 1 ns / 1 ps
 
 module fpga_top ( CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6, Y5, Y4, Y3, Y2, 
-                  MCLK, CCLK, SSPI_CS_n, DIN, DOUT, PROGRAMN, INITN, DONE, 
-                  SD_CLK, SD_CS_N, SD_WE_N, SD_RAS_N, SD_CAS_N, SD_A, SD_BA, 
-                  SD_DQ, SD_DQM );
+                  MCLK, CCLK, SSPI_CS_n, DIN, DOUT, ESP_D, PROGRAMN, INITN, 
+                  DONE, SD_CLK, SD_CS_N, SD_WE_N, SD_RAS_N, SD_CAS_N, SD_A, 
+                  SD_BA, SD_DQ, SD_DQM );
   input  CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6, Y5, Y4, Y3, Y2, CCLK, 
-         SSPI_CS_n, DIN, PROGRAMN, INITN, DONE;
+         SSPI_CS_n, DIN;
+  input  [7:0] ESP_D;
+  input  PROGRAMN, INITN, DONE;
   output MCLK, DOUT, SD_CLK, SD_CS_N, SD_WE_N, SD_RAS_N, SD_CAS_N;
   output [12:0] SD_A;
   output [1:0] SD_BA;

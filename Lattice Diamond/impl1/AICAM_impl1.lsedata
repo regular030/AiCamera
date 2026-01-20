@@ -22,7 +22,7 @@
 <unit name = "fpga_top">
 
     <!--
-        Top Level Pins: 58
+        Top Level Pins: 66
     -->
 
     <pins>
@@ -43,6 +43,14 @@
         <pitem  name = "SSPI_CS_n"  direction = "in"  />
         <pitem  name = "DIN"  direction = "in"  />
         <pitem  name = "DOUT"  direction = "out"  />
+        <pitem  name = "ESP_D[7]"  direction = "in"  />
+        <pitem  name = "ESP_D[6]"  direction = "in"  />
+        <pitem  name = "ESP_D[5]"  direction = "in"  />
+        <pitem  name = "ESP_D[4]"  direction = "in"  />
+        <pitem  name = "ESP_D[3]"  direction = "in"  />
+        <pitem  name = "ESP_D[2]"  direction = "in"  />
+        <pitem  name = "ESP_D[1]"  direction = "in"  />
+        <pitem  name = "ESP_D[0]"  direction = "in"  />
         <pitem  name = "PROGRAMN"  direction = "in"  />
         <pitem  name = "INITN"  direction = "in"  />
         <pitem  name = "DONE"  direction = "in"  />

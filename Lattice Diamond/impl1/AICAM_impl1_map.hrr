@@ -11,11 +11,11 @@ Report for cell fpga_top
                                    EBR	          2        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                            spi_bridge	          1        10.9
-                        sdram_ctrl_min	          1        44.7
                    roi_streamer_rgb565	          1        24.1
                  pixel_assemble_rgb565	          1         7.4
                                pll_24m	          1         0.0
+                            spi_bridge	          1        10.9
+                        sdram_ctrl_min	          1        44.7
 ---------------------------------------------------
 Report for cell pixel_assemble_rgb565
    Instance path: fpga_top/u_cam

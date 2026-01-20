@@ -38,7 +38,7 @@ Performance Hardware Data Status:   Final          Version 55.1.
 // Package: CABGA256
 // ncd File: aicam_impl1.ncd
 // Version: Diamond (64-bit) 3.14.0.75.2
-// Written on Mon Nov 17 21:38:40 2025
+// Written on Sat Jan 10 18:48:48 2026
 // M: Minimum Performance Grade
 // iotiming AICAM_impl1.ncd AICAM_impl1.prf -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml
 

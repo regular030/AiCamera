@@ -15,7 +15,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  11/17/25  21:38:21
+Mapped on:  01/10/26  18:48:28
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Design Summary (cont)
 ---------------------
@@ -151,82 +151,82 @@ Design Summary (cont)
 
 
 
-   Number of warnings:  22
+   Number of warnings:  30
    Number of errors:    0
      
 
 Design Errors/Warnings
 ----------------------
 
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(89):
-     Semantic error in "LOCATE COMP "D[0]" SITE "E2" ;": COMP "D[0]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(89):
-     Semantic error in "IOBUF PORT "D[0]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[0]" does not exist in the design. This preference has been
-     disabled.
 WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(90):
-     Semantic error in "LOCATE COMP "D[1]" SITE "E1" ;": COMP "D[1]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(90):
-     Semantic error in "IOBUF PORT "D[1]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[1]" does not exist in the design. This preference has been
+     Semantic error in "IOBUF PORT "ESP_D[0]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[0]" does not exist in the design. This preference has been
      disabled.
 WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(91):
-     Semantic error in "LOCATE COMP "D[2]" SITE "F2" ;": COMP "D[2]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(91):
-     Semantic error in "IOBUF PORT "D[2]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[2]" does not exist in the design. This preference has been
+     Semantic error in "IOBUF PORT "ESP_D[1]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[1]" does not exist in the design. This preference has been
      disabled.
 WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(92):
-     Semantic error in "LOCATE COMP "D[3]" SITE "F3" ;": COMP "D[3]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(92):
-     Semantic error in "IOBUF PORT "D[3]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[3]" does not exist in the design. This preference has been
+     Semantic error in "IOBUF PORT "ESP_D[2]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[2]" does not exist in the design. This preference has been
      disabled.
 WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(93):
-     Semantic error in "LOCATE COMP "D[4]" SITE "G2" ;": COMP "D[4]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(93):
-     Semantic error in "IOBUF PORT "D[4]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[4]" does not exist in the design. This preference has been
+     Semantic error in "IOBUF PORT "ESP_D[3]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94):
+     Semantic error in "IOBUF PORT "ESP_D[4]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[4]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95):
+     Semantic error in "IOBUF PORT "ESP_D[5]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[5]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96):
+     Semantic error in "IOBUF PORT "ESP_D[6]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[6]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(97):
+     Semantic error in "IOBUF PORT "ESP_D[7]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[7]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: input pad net 'ESP_D[7]' has no legal load.
+WARNING - map: input pad net 'ESP_D[6]' has no legal load.
 
                                     Page 3
 
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Design Errors/Warnings (cont)
 -----------------------------
-     disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94):
-     Semantic error in "LOCATE COMP "D[5]" SITE "G1" ;": COMP "D[5]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94):
-     Semantic error in "IOBUF PORT "D[5]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[5]" does not exist in the design. This preference has been
-     disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95):
-     Semantic error in "LOCATE COMP "D[6]" SITE "J1" ;": COMP "D[6]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95):
-     Semantic error in "IOBUF PORT "D[6]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[6]" does not exist in the design. This preference has been
-     disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96):
-     Semantic error in "LOCATE COMP "D[7]" SITE "J2" ;": COMP "D[7]" cannot be
-     found in design. This preference has been disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96):
-     Semantic error in "IOBUF PORT "D[7]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "D[7]" does not exist in the design. This preference has been
-     disabled.
+WARNING - map: input pad net 'ESP_D[5]' has no legal load.
+WARNING - map: input pad net 'ESP_D[4]' has no legal load.
+WARNING - map: input pad net 'ESP_D[3]' has no legal load.
+WARNING - map: input pad net 'ESP_D[2]' has no legal load.
+WARNING - map: input pad net 'ESP_D[1]' has no legal load.
+WARNING - map: input pad net 'ESP_D[0]' has no legal load.
 WARNING - map: input pad net 'PROGRAMN' has no legal load.
 WARNING - map: input pad net 'INITN' has no legal load.
 WARNING - map: input pad net 'DONE' has no legal load.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](7)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](6)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](5)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](4)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](3)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](2)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](1)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port ESP_D[7:0](0)...logic will
+     be discarded.
 WARNING - map: IO buffer missing for top level port PROGRAMN...logic will be
      discarded.
 WARNING - map: IO buffer missing for top level port INITN...logic will be
@@ -264,7 +264,7 @@ IO (PIO) Attributes
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -330,7 +330,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -396,7 +396,7 @@ Signal u_sdram/u_fifo/wptr_gray_7__I_0_0/S1 undriven or does not drive anything
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Removed logic (cont)
 --------------------
@@ -462,7 +462,7 @@ Signal u_stream/u_dc/wptr_gray_9__I_0_8/S1 undriven or does not drive anything -
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Removed logic (cont)
 --------------------
@@ -528,7 +528,7 @@ Signal _add_1_775_add_4_1/CI undriven or does not drive anything - clipped.
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Removed logic (cont)
 --------------------
@@ -594,7 +594,7 @@ Block u_sdram/i1822_1_lut_rep_102 was optimized away.
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Removed logic (cont)
 --------------------
@@ -660,7 +660,7 @@ PLL 1:                                     Pin/Node Value
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 PLL/DLL Summary (cont)
 ----------------------
@@ -726,7 +726,7 @@ GSR Component:
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -792,7 +792,7 @@ GSR Usage (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -858,7 +858,7 @@ GSR Usage (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -924,7 +924,7 @@ GSR Usage (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -990,7 +990,7 @@ GSR Usage (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -1056,7 +1056,7 @@ GSR Usage (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -1122,7 +1122,7 @@ GSR Usage (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -1188,7 +1188,7 @@ GSR Usage (cont)
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 GSR Usage (cont)
 ----------------
@@ -1254,7 +1254,7 @@ Run Time and Memory Usage
 
 
 
-Design:  fpga_top                                      Date:  11/17/25  21:38:21
+Design:  fpga_top                                      Date:  01/10/26  18:48:28
 
 Run Time and Memory Usage (cont)
 --------------------------------

@@ -1,0 +1,201 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\kunsh\Desktop\AiCamera\PCB\altium\Altium_Ai-Camera_2026-01-19\Ai-Camera\Board1\PCB1.pcbdoc
+Date     : 2026-01-19
+Time     : 10:52:22 PM
+
+Processing Rule : Clearance Constraint (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0mil) ((InNet('SD_A0') OR InNet('SD_A1') OR InNet('SD_A2') OR InNet('SD_A3') OR InNet('SD_A4') OR InNet('SD_A5') OR InNet('SD_A6') OR InNet('SD_A7') OR InNet('SD_A8') OR InNet('SD_A9') OR InNet('SD_A10') OR InNet('SD_A11') OR InNet('SD_A12') OR InNet('SD_DQ15') OR InNet('SD_DQ14') OR InNet('SD_DQ8') OR InNet('SD_BA0') OR InNet('SD_BA1') OR InNet('SD_DQ9') OR InNet('SD_DQ7') OR InNet('SD_CLK') OR InNet('SD_WE_N') OR InNet('SD_DQ10') OR InNet('SD_CAS_N') OR InNet('SD_DQM1') OR InNet('SD_DQ2') OR InNet('SD_DQ3') OR InNet('SD_DQ11') OR InNet('SD_DQ12') OR InNet('SD_DQ13') OR InNet('SD_DQ0') OR InNet('SD_DQ1') OR InNet('SD_CS_N') OR InNet('SD_RAS_N') OR InNet('SD_DQ4') OR InNet('SD_DQ6') OR InNet('$1N9241') OR InNet('$1N9192') OR InNet('GND') OR InNet('$1N9142') OR InNet('SD_DQ5') OR InNet('$1N9091') OR InNet('SD_DQM0') OR InNet('$1N9039') OR InNet('$1N8986') OR InNet('$1N8318') OR InNet('$1N9437') OR InNet('$1N9341') OR InNet('+3V3') OR InNet('$1N11348') OR InNet('DOUT') OR InNet('DIN') OR InNet('CCLK') OR InNet('DONE') OR InNet('PROGRAMN') OR InNet('INITN') OR InNet('$1N11975') OR InNet('DN') OR InNet('DP') OR InNet('$1N14459') OR InNet('$1N14416') OR InNet('$1N14567') OR InNet('+5V') OR InNet('$1N16833') OR InNet('$1N16832') OR InNet('+1V1') OR InNet('$1N16834') OR InNet('+1V8') OR InNet('$1N17349') OR InNet('$1N12557') OR InNet('$1N12553') OR InNet('M_D2') OR InNet('M_D3') OR InNet('M_CMD') OR InNet('M_CLK') OR InNet('M_D0') OR InNet('M_D1') OR InNet('SDA') OR InNet('SCL') OR InNet('RESET') OR InNet('VSYNC') OR InNet('HREF') OR InNet('Y9') OR InNet('MCLK') OR InNet('Y8') OR InNet('Y7') OR InNet('PCLK') OR InNet('Y6') OR InNet('Y2') OR InNet('Y5') OR InNet('Y3') OR InNet('Y4') OR InNet('$1N14571') OR InNet('$1N24422') OR InNet('$1N24377') OR InNet('$1N24492') OR InNet('CRYSTAL') OR InNet('SSPI_CS_N') OR InNet('D0') OR InNet('D1') OR InNet('D2') OR InNet('D4') OR InNet('D3') OR InNet('D5') OR InNet('D6') OR InNet('D7') OR InNet('RX') OR InNet('TX') OR InNet('$1N29790') OR InNet('$1N29833') OR InNet('$1N29916') OR InNet('$1N29959') OR InNet('$1N30002') OR InNet('$1N30085') OR InNet('$1N30089') OR InNet('$1N30093') OR InNet('TDO') OR InNet('TDI') OR InNet('TMS') OR InNet('TCK') OR InNet('$1N33205') OR InNet('PROGRAM') OR InNet('$1N36431') OR InNet('$1N36646') OR InNet('$1N36895') OR InNet('$1N37600') OR InNet('$1N37295') OR InNet('$1N36495') OR InNet('$1N36690') OR InNet('$1N36953') OR InNet('$1N37637') OR InNet('$1N37245') OR InNet('$1N37470') OR InNet('$1N36752') OR InNet('$1N37409') OR InNet('$1N36552') OR InNet('$1N37361') OR InNet('$1N36571') OR InNet('$1N36807') OR InNet('$1N37097') OR InNet('$1N37518') OR InNet('$1N37345') OR InNet('$1N37150') OR InNet('$1N47813') OR InNet('$1N41066'))),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad U1-A13(4398.738mil,5863.228mil) on Top Layer And Track (4398.738mil,5863.228mil)(4407.008mil,5871.498mil) on Top Layer Location : [X = 4400.862mil][Y = 5865.352mil]
+   Violation between Short-Circuit Constraint: Between Pad U1-A14(4430.238mil,5863.228mil) on Top Layer And Track (4430.238mil,5863.228mil)(4442.008mil,5874.998mil) on Top Layer Location : [X = 4432.362mil][Y = 5865.352mil]
+   Violation between Short-Circuit Constraint: Between Pad U1-A15(4461.728mil,5863.228mil) on Top Layer And Track (4461.728mil,5863.228mil)(4475.508mil,5877.008mil) on Top Layer Location : [X = 4463.852mil][Y = 5865.352mil]
+   Violation between Short-Circuit Constraint: Between Pad U1-B15(4461.728mil,5831.728mil) on Top Layer And Track (4461.728mil,5831.728mil)(4477.008mil,5847.008mil) on Top Layer Location : [X = 4463.852mil][Y = 5833.852mil]
+   Violation between Short-Circuit Constraint: Between Pad U1-B16(4493.228mil,5831.728mil) on Top Layer And Track (4493.228mil,5831.728mil)(4508.508mil,5847.008mil) on Top Layer Location : [X = 4495.352mil][Y = 5833.852mil]
+   Violation between Short-Circuit Constraint: Between Pad U1-P11(4335.748mil,5453.778mil) on Top Layer And Track (4323.978mil,5442.008mil)(4335.748mil,5453.778mil) on Top Layer Location : [X = 4333.624mil][Y = 5451.654mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-15(4337.203mil,3907.008mil) on Top Layer And Track (4337.203mil,3907.008mil)(4377.008mil,3907.008mil) on Top Layer Location : [X = 4350.963mil][Y = 3907.008mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-30(4136.813mil,4526.498mil) on Top Layer And Track (4136.813mil,4526.498mil)(4136.813mil,4551.498mil) on Top Layer Location : [X = 4136.813mil][Y = 4538.998mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-30(4136.813mil,4526.498mil) on Top Layer And Track (4136.813mil,4551.498mil)(4197.323mil,4612.008mil) on Top Layer Location : [X = 4139.492mil][Y = 4552.758mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-38(3736.813mil,4526.498mil) on Top Layer And Track (3712.008mil,4572.008mil)(3736.813mil,4547.203mil) on Top Layer Location : [X = 3731.986mil][Y = 4550.611mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-38(3736.813mil,4526.498mil) on Top Layer And Track (3736.813mil,4526.498mil)(3736.813mil,4547.203mil) on Top Layer Location : [X = 3736.813mil][Y = 4536.85mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-39(3686.813mil,4526.498mil) on Top Layer And Track (3686.813mil,4526.498mil)(3686.813mil,4577.203mil) on Top Layer Location : [X = 3686.813mil][Y = 4540.258mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-4(3786.813mil,3837.518mil) on Top Layer And Track (3786.813mil,3837.518mil)(3795.817mil,3828.514mil) on Top Layer Location : [X = 3791.315mil][Y = 3833.016mil]
+   Violation between Short-Circuit Constraint: Between Pad U2-4(3786.813mil,3837.518mil) on Top Layer And Track (3795.817mil,3773.199mil)(3795.817mil,3828.514mil) on Top Layer Location : [X = 3795.817mil][Y = 3819.256mil]
+Rule Violations :14
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net GND Between Pad R12-1(4397.008mil,3606.668mil) on Top Layer And Pad C23-1(4507.008mil,3544.568mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C26-1(4877.008mil,3554.448mil) on Top Layer And Track (5070.158mil,3604.608mil)(5117.008mil,3557.758mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Track (3547.378mil,3236.928mil)(3570.018mil,3259.568mil) on Top Layer And Pad C33-1(3716.378mil,3237.008mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad P1-2(3546.448mil,4830.493mil) on Top Layer And Pad C34-2(3664.688mil,4867.008mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C35-2(3657.008mil,4989.688mil) on Top Layer And Via (3664.688mil,4887.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad CARD1-11(3949.723mil,6240.588mil) on Top Layer And Via (4037.008mil,5887.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad R36-2(4902.008mil,4784.048mil) on Top Layer And Via (4912.008mil,4657.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-D15(4461.728mil,5768.738mil) on Top Layer And Pad U1-A16(4493.228mil,5863.228mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4447.008mil,5755.138mil) from Top Layer to Bottom Layer And Pad U1-H16(4493.228mil,5642.758mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-T1(4020.788mil,5390.788mil) on Top Layer And Pad U1-N2(4052.288mil,5485.278mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Region (0 hole(s)) Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3641.813mil,3787.008mil) from Top Layer to Bottom Layer And Track (3652.008mil,3541.668mil)(3759.748mil,3649.408mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (3677.008mil,4587.008mil)(3686.813mil,4577.203mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (3686.813mil,4526.498mil)(3686.813mil,4577.203mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (3712.008mil,4572.008mil)(3736.813mil,4547.203mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (3736.813mil,4526.498mil)(3736.813mil,4547.203mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (3786.813mil,3837.518mil)(3795.817mil,3828.514mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (3795.817mil,3773.199mil)(3795.817mil,3828.514mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (3795.817mil,3773.199mil)(3802.008mil,3767.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (3802.008mil,3697.008mil)(3802.008mil,3767.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4136.813mil,4526.498mil)(4136.813mil,4551.498mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4136.813mil,4551.498mil)(4197.323mil,4612.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4197.323mil,4612.008mil)(4222.008mil,4612.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4222.008mil,4612.008mil)(4232.008mil,4602.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4322.008mil,5442.008mil)(4323.978mil,5442.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4322.053mil,5441.963mil)(4337.008mil,5427.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4323.978mil,5442.008mil)(4335.748mil,5453.778mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4337.008mil,5422.008mil)(4337.008mil,5427.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4337.203mil,3907.008mil)(4377.008mil,3907.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4377.008mil,3907.008mil)(4397.008mil,3887.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4398.738mil,5863.228mil)(4407.008mil,5871.498mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4407.008mil,5871.498mil)(4407.008mil,5877.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4407.008mil,5877.008mil)(4422.008mil,5892.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4422.008mil,5892.008mil)(4422.008mil,5912.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4422.008mil,5912.008mil)(4424.792mil,5914.792mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4424.792mil,5914.792mil)(4449.792mil,5914.792mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4430.238mil,5863.228mil)(4442.008mil,5874.998mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4442.008mil,5874.998mil)(4442.008mil,5877.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4442.008mil,5877.008mil)(4442.008mil,5892.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4449.792mil,5914.792mil)(4462.008mil,5927.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4461.728mil,5831.728mil)(4477.008mil,5847.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4461.728mil,5863.228mil)(4475.508mil,5877.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4475.508mil,5877.008mil)(4477.008mil,5877.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4477.008mil,5847.008mil)(4496.181mil,5866.181mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4477.008mil,5877.008mil)(4477.008mil,5897.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4493.228mil,5831.728mil)(4508.508mil,5847.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4496.181mil,5866.181mil)(4496.181mil,5888.564mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4496.181mil,5888.564mil)(4502.008mil,5894.39mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4502.008mil,5894.39mil)(4502.008mil,5932.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4508.508mil,5847.008mil)(4512.008mil,5847.008mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4509.701mil,5849.315mil)(4532.008mil,5871.622mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4532.008mil,5871.622mil)(4532.008mil,5927.008mil) on Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Track (4750.428mil,5797.008mil)(4762.558mil,5809.138mil) on Top Layer And Track (4825.548mil,5809.138mil)(4825.548mil,5857.008mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (5172.008mil,5862.008mil) from Top Layer to Bottom Layer And Track (5242.008mil,6557.008mil)(5242.008mil,6637.008mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6118.819mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6150.315mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6181.811mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6213.307mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6244.803mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6276.299mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6307.795mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6339.291mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6370.788mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6402.284mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6433.78mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6465.276mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6496.772mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6528.268mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6559.764mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (3012.008mil,6595.197mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3414.283mil,6307.182mil) from Top Layer to Bottom Layer And Via (3582.504mil,6395.216mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3480.628mil,6563.428mil) from Top Layer to Bottom Layer And Via (3582.504mil,6395.216mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3582.504mil,6395.216mil) from Top Layer to Bottom Layer And Via (3949.723mil,6305.521mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3602.008mil,4687.008mil) from Top Layer to Bottom Layer And Via (3636.813mil,4577.157mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3636.813mil,4577.157mil) from Top Layer to Bottom Layer And Via (3967.448mil,4178.068mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3641.813mil,3787.008mil) from Top Layer to Bottom Layer And Via (3862.04mil,4039.235mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3644.968mil,5611.753mil) from Top Layer to Bottom Layer And Via (3957.008mil,5527.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3687.008mil,4982.835mil) from Top Layer to Bottom Layer And Via (3812.008mil,4943.953mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3712.008mil,3417.008mil) from Top Layer to Bottom Layer And Via (3772.008mil,3237.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Via (3795.817mil,3773.199mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3812.008mil,4943.953mil) from Top Layer to Bottom Layer And Via (3947.008mil,5062.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3942.008mil,3232.008mil) from Top Layer to Bottom Layer And Via (4337.008mil,3606.668mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3947.008mil,5062.008mil) from Top Layer to Bottom Layer And Via (4077.008mil,5272.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3947.008mil,5062.008mil) from Top Layer to Bottom Layer And Via (4332.008mil,4937.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (3949.723mil,6305.521mil) from Top Layer to Bottom Layer And Via (4012.008mil,6563.428mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4036.528mil,5657.008mil) from Top Layer to Bottom Layer And Via (4190.02mil,5585.849mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4037.008mil,5887.008mil) from Top Layer to Bottom Layer And Via (4131.958mil,5752.058mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4077.008mil,5272.008mil) from Top Layer to Bottom Layer And Via (4171.173mil,5367.843mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4131.958mil,5752.058mil) from Top Layer to Bottom Layer And Via (4256.64mil,5715.748mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4171.173mil,5367.843mil) from Top Layer to Bottom Layer And Via (4397.048mil,5361.968mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4287.664mil,5595.197mil) from Top Layer to Bottom Layer And Via (4414.488mil,5530.638mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Via (4322.053mil,5441.963mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4397.048mil,5361.968mil) from Top Layer to Bottom Layer And Via (4414.488mil,5530.638mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4397.048mil,5361.968mil) from Top Layer to Bottom Layer And Via (4507.008mil,5377.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Via (4407.008mil,5877.008mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (4442.008mil,5877.008mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4457.008mil,6210.839mil) from Top Layer to Bottom Layer And Via (4512.008mil,5882.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Via (4477.008mil,5847.008mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Via (4477.008mil,5877.008mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4507.008mil,5377.008mil) from Top Layer to Bottom Layer And Via (4512.008mil,5642.835mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4507.008mil,5377.008mil) from Top Layer to Bottom Layer And Via (4902.008mil,5312.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Via (4509.701mil,5849.315mil) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4512.008mil,5882.008mil) from Top Layer to Bottom Layer And Via (4732.008mil,5797.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4568.192mil,3544.568mil) from Top Layer to Bottom Layer And Via (4680.98mil,3554.448mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4680.98mil,3554.448mil) from Top Layer to Bottom Layer And Via (4827.008mil,3554.448mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4801.762mil,3652.386mil) from Top Layer to Bottom Layer And Via (4827.008mil,3554.448mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4825.548mil,5857.008mil) from Top Layer to Bottom Layer And Via (5002.008mil,5847.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4902.008mil,4822.008mil) from Top Layer to Bottom Layer And Via (4902.008mil,5312.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (4902.008mil,5312.008mil) from Top Layer to Bottom Layer And Via (5109.018mil,5302.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (5002.008mil,5847.008mil) from Top Layer to Bottom Layer And Via (5172.008mil,5862.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (5109.018mil,5302.008mil) from Top Layer to Bottom Layer And Via (5387.008mil,4755.593mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (5117.008mil,3557.008mil) from Top Layer to Bottom Layer And Via (5619.087mil,3523.206mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (5172.008mil,5862.008mil) from Top Layer to Bottom Layer And Via (5582.008mil,5857.008mil) from Top Layer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Via (5387.008mil,4578.423mil) from Top Layer to Bottom Layer And Via (5387.008mil,4755.593mil) from Top Layer to Bottom Layer 
+Rule Violations :121
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=3.9mil) (Max=100mil) (Preferred=4mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=8mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Routing Topology Rule(Topology=Shortest) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 135
+Waived Violations : 0
+Time Elapsed        : 00:00:01

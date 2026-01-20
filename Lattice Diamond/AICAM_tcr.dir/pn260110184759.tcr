@@ -1,0 +1,9 @@
+#Start recording tcl command: 1/10/2026 18:25:44
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+pwc_command new
+pwc_thermal set -ambient 30
+pwc_parameters set -process Worst
+prj_run Export -impl impl1
+pwc_command exit
+#Stop recording: 1/10/2026 18:47:59

@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION "3.0")
   (DESIGN "fpga_top")
-  (DATE "Mon Nov 17 21:38:25 2025")
+  (DATE "Sat Jan 10 18:48:32 2026")
   (VENDOR "Lattice")
   (PROGRAM "ldbanno")
   (VERSION "Diamond (64-bit) 3.14.0.75.2")

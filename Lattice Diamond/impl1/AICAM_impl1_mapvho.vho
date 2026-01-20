@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.14.0.75.2
 
 -- ldbanno -n VHDL -o AICAM_impl1_mapvho.vho -w -neg -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd 
--- Netlist created on Mon Nov 17 21:38:21 2025
--- Netlist written on Mon Nov 17 21:38:26 2025
+-- Netlist created on Sat Jan 10 18:48:28 2026
+-- Netlist written on Sat Jan 10 18:48:33 2026
 -- Design is for device LFE5U-25F
 -- Design is for package CABGA256
 -- Design is for performance grade 6
@@ -7575,7 +7575,8 @@
           Y7: in Std_logic; Y6: in Std_logic; Y5: in Std_logic; 
           Y4: in Std_logic; Y3: in Std_logic; Y2: in Std_logic; 
           MCLK: out Std_logic; CCLK: in Std_logic; SSPI_CS_n: in Std_logic; 
-          DIN: in Std_logic; DOUT: out Std_logic; PROGRAMN: in Std_logic; 
+          DIN: in Std_logic; DOUT: out Std_logic; 
+          ESP_D: in Std_logic_vector (7 downto 0); PROGRAMN: in Std_logic; 
           INITN: in Std_logic; DONE: in Std_logic; SD_CLK: out Std_logic; 
           SD_CS_N: out Std_logic; SD_WE_N: out Std_logic; 
           SD_RAS_N: out Std_logic; SD_CAS_N: out Std_logic; 

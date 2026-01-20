@@ -18,6 +18,7 @@ module fpga_top (
     input  wire         SSPI_CS_n,   // SPI CS# from ESP32 (active low)
     input  wire         DIN,         // MOSI  (ESP32 -> FPGA)
     output wire         DOUT,        // MISO  (FPGA -> ESP32)
+	input  wire [7:0] ESP_D,
 
     // ---- FPGA config/status (connected to pins, not used here) ----
     input  wire         PROGRAMN,
