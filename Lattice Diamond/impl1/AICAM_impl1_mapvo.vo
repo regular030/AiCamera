@@ -2,20 +2,20 @@
 // Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.14.0.75.2
 
 // ldbanno -n Verilog -o AICAM_impl1_mapvo.vo -w -neg -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd 
-// Netlist created on Sat Jan 10 18:48:28 2026
-// Netlist written on Sat Jan 10 18:48:32 2026
+// Netlist created on Wed Jan 28 06:55:10 2026
+// Netlist written on Wed Jan 28 06:55:13 2026
 // Design is for device LFE5U-25F
 // Design is for package CABGA256
 // Design is for performance grade 6
 
 `timescale 1 ns / 1 ps
 
-module fpga_top ( CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6, Y5, Y4, Y3, Y2, 
-                  MCLK, CCLK, SSPI_CS_n, DIN, DOUT, ESP_D, PROGRAMN, INITN, 
-                  DONE, SD_CLK, SD_CS_N, SD_WE_N, SD_RAS_N, SD_CAS_N, SD_A, 
-                  SD_BA, SD_DQ, SD_DQM );
-  input  CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6, Y5, Y4, Y3, Y2, CCLK, 
-         SSPI_CS_n, DIN;
+module fpga_top ( CRYSTAL, PCLK, VSYNC, HREF, FSDA, FSCL, Y9, Y8, Y7, Y6, Y5, 
+                  Y4, Y3, Y2, MCLK, CCLK, SSPI_CS_n, DIN, DOUT, ESP_D, 
+                  PROGRAMN, INITN, DONE, SD_CLK, SD_CS_N, SD_WE_N, SD_RAS_N, 
+                  SD_CAS_N, SD_A, SD_BA, SD_DQ, SD_DQM );
+  input  CRYSTAL, PCLK, VSYNC, HREF, FSDA, FSCL, Y9, Y8, Y7, Y6, Y5, Y4, Y3, 
+         Y2, CCLK, SSPI_CS_n, DIN;
   input  [7:0] ESP_D;
   input  PROGRAMN, INITN, DONE;
   output MCLK, DOUT, SD_CLK, SD_CS_N, SD_WE_N, SD_RAS_N, SD_CAS_N;
@@ -4019,12 +4019,17 @@ endmodule
 
 module MCLK ( input PADDO, output MCLK );
 
-  sapiobuf0001 MCLK_pad( .I(PADDO), .PAD(MCLK));
+  sapiobuf0003 MCLK_pad( .I(PADDO), .PAD(MCLK));
 
   specify
     (PADDO => MCLK) = (0:0:0,0:0:0);
   endspecify
 
+endmodule
+
+module sapiobuf0003 ( input I, output PAD );
+
+  OB INST5( .I(I), .O(PAD));
 endmodule
 
 module SD_CAS_N ( input PADDO, output SD_CAS_N );
@@ -4190,7 +4195,7 @@ endmodule
 module SD_DQ_15_ ( input PADDO, PADDT, output SDDQ15 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_15( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ15));
+  sapiobuf0004 SD_DQ_pad_15( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ15));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4200,7 +4205,7 @@ module SD_DQ_15_ ( input PADDO, PADDT, output SDDQ15 );
 
 endmodule
 
-module sapiobuf0003 ( input I, T, output PAD );
+module sapiobuf0004 ( input I, T, output PAD );
 
   OBZ INST5( .I(I), .T(T), .O(PAD));
 endmodule
@@ -4213,7 +4218,7 @@ endmodule
 module SD_DQ_14_ ( input PADDO, PADDT, output SDDQ14 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_14( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ14));
+  sapiobuf0004 SD_DQ_pad_14( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ14));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4226,7 +4231,7 @@ endmodule
 module SD_DQ_13_ ( input PADDO, PADDT, output SDDQ13 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_13( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ13));
+  sapiobuf0004 SD_DQ_pad_13( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ13));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4239,7 +4244,7 @@ endmodule
 module SD_DQ_12_ ( input PADDO, PADDT, output SDDQ12 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_12( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ12));
+  sapiobuf0004 SD_DQ_pad_12( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ12));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4252,7 +4257,7 @@ endmodule
 module SD_DQ_11_ ( input PADDO, PADDT, output SDDQ11 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_11( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ11));
+  sapiobuf0004 SD_DQ_pad_11( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ11));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4265,7 +4270,7 @@ endmodule
 module SD_DQ_10_ ( input PADDO, PADDT, output SDDQ10 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_10( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ10));
+  sapiobuf0004 SD_DQ_pad_10( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ10));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4278,7 +4283,7 @@ endmodule
 module SD_DQ_9_ ( input PADDO, PADDT, output SDDQ9 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_9( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ9));
+  sapiobuf0004 SD_DQ_pad_9( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ9));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4291,7 +4296,7 @@ endmodule
 module SD_DQ_8_ ( input PADDO, PADDT, output SDDQ8 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_8( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ8));
+  sapiobuf0004 SD_DQ_pad_8( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ8));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4304,7 +4309,7 @@ endmodule
 module SD_DQ_7_ ( input PADDO, PADDT, output SDDQ7 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_7( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ7));
+  sapiobuf0004 SD_DQ_pad_7( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ7));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4317,7 +4322,7 @@ endmodule
 module SD_DQ_6_ ( input PADDO, PADDT, output SDDQ6 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_6( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ6));
+  sapiobuf0004 SD_DQ_pad_6( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ6));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4330,7 +4335,7 @@ endmodule
 module SD_DQ_5_ ( input PADDO, PADDT, output SDDQ5 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_5( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ5));
+  sapiobuf0004 SD_DQ_pad_5( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ5));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4343,7 +4348,7 @@ endmodule
 module SD_DQ_4_ ( input PADDO, PADDT, output SDDQ4 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_4( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ4));
+  sapiobuf0004 SD_DQ_pad_4( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ4));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4356,7 +4361,7 @@ endmodule
 module SD_DQ_3_ ( input PADDO, PADDT, output SDDQ3 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_3( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ3));
+  sapiobuf0004 SD_DQ_pad_3( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ3));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4369,7 +4374,7 @@ endmodule
 module SD_DQ_2_ ( input PADDO, PADDT, output SDDQ2 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_2( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ2));
+  sapiobuf0004 SD_DQ_pad_2( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ2));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4382,7 +4387,7 @@ endmodule
 module SD_DQ_1_ ( input PADDO, PADDT, output SDDQ1 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_1( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ1));
+  sapiobuf0004 SD_DQ_pad_1( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ1));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4395,7 +4400,7 @@ endmodule
 module SD_DQ_0_ ( input PADDO, PADDT, output SDDQ0 );
   wire   PADDT_NOTIN;
 
-  sapiobuf0003 SD_DQ_pad_0( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ0));
+  sapiobuf0004 SD_DQ_pad_0( .I(PADDO), .T(PADDT_NOTIN), .PAD(SDDQ0));
   inverter PADDT_INVERTERIN( .I(PADDT), .Z(PADDT_NOTIN));
 
   specify
@@ -4427,7 +4432,7 @@ endmodule
 
 module PCLK ( output PADDI, input PCLK );
 
-  sapiobuf PCLK_pad( .Z(PADDI), .PAD(PCLK));
+  sapiobuf0005 PCLK_pad( .Z(PADDI), .PAD(PCLK));
 
   specify
     (PCLK => PADDI) = (0:0:0,0:0:0);
@@ -4437,9 +4442,14 @@ module PCLK ( output PADDI, input PCLK );
 
 endmodule
 
+module sapiobuf0005 ( output Z, input PAD );
+
+  IB INST1( .I(PAD), .O(Z));
+endmodule
+
 module VSYNC ( output PADDI, input VSYNC );
 
-  sapiobuf VSYNC_pad( .Z(PADDI), .PAD(VSYNC));
+  sapiobuf0005 VSYNC_pad( .Z(PADDI), .PAD(VSYNC));
 
   specify
     (VSYNC => PADDI) = (0:0:0,0:0:0);
@@ -4451,7 +4461,7 @@ endmodule
 
 module HREF ( output PADDI, input HREF );
 
-  sapiobuf0004 HREF_pad( .Z(PADDI), .PAD(HREF));
+  sapiobuf0005 HREF_pad( .Z(PADDI), .PAD(HREF));
 
   specify
     (HREF => PADDI) = (0:0:0,0:0:0);
@@ -4461,14 +4471,9 @@ module HREF ( output PADDI, input HREF );
 
 endmodule
 
-module sapiobuf0004 ( output Z, input PAD );
-
-  IB INST1( .I(PAD), .O(Z));
-endmodule
-
 module Y9 ( output PADDI, input Y9 );
 
-  sapiobuf Y9_pad( .Z(PADDI), .PAD(Y9));
+  sapiobuf0005 Y9_pad( .Z(PADDI), .PAD(Y9));
 
   specify
     (Y9 => PADDI) = (0:0:0,0:0:0);
@@ -4480,7 +4485,7 @@ endmodule
 
 module Y8 ( output PADDI, input Y8 );
 
-  sapiobuf Y8_pad( .Z(PADDI), .PAD(Y8));
+  sapiobuf0005 Y8_pad( .Z(PADDI), .PAD(Y8));
 
   specify
     (Y8 => PADDI) = (0:0:0,0:0:0);
@@ -4492,7 +4497,7 @@ endmodule
 
 module Y7 ( output PADDI, input Y7 );
 
-  sapiobuf Y7_pad( .Z(PADDI), .PAD(Y7));
+  sapiobuf0005 Y7_pad( .Z(PADDI), .PAD(Y7));
 
   specify
     (Y7 => PADDI) = (0:0:0,0:0:0);
@@ -4504,7 +4509,7 @@ endmodule
 
 module Y6 ( output PADDI, input Y6 );
 
-  sapiobuf Y6_pad( .Z(PADDI), .PAD(Y6));
+  sapiobuf0005 Y6_pad( .Z(PADDI), .PAD(Y6));
 
   specify
     (Y6 => PADDI) = (0:0:0,0:0:0);
@@ -4516,7 +4521,7 @@ endmodule
 
 module Y5 ( output PADDI, input Y5 );
 
-  sapiobuf Y5_pad( .Z(PADDI), .PAD(Y5));
+  sapiobuf0005 Y5_pad( .Z(PADDI), .PAD(Y5));
 
   specify
     (Y5 => PADDI) = (0:0:0,0:0:0);
@@ -4528,7 +4533,7 @@ endmodule
 
 module Y4 ( output PADDI, input Y4 );
 
-  sapiobuf Y4_pad( .Z(PADDI), .PAD(Y4));
+  sapiobuf0005 Y4_pad( .Z(PADDI), .PAD(Y4));
 
   specify
     (Y4 => PADDI) = (0:0:0,0:0:0);
@@ -4540,7 +4545,7 @@ endmodule
 
 module Y3 ( output PADDI, input Y3 );
 
-  sapiobuf Y3_pad( .Z(PADDI), .PAD(Y3));
+  sapiobuf0005 Y3_pad( .Z(PADDI), .PAD(Y3));
 
   specify
     (Y3 => PADDI) = (0:0:0,0:0:0);
@@ -4552,7 +4557,7 @@ endmodule
 
 module Y2 ( output PADDI, input Y2 );
 
-  sapiobuf Y2_pad( .Z(PADDI), .PAD(Y2));
+  sapiobuf0005 Y2_pad( .Z(PADDI), .PAD(Y2));
 
   specify
     (Y2 => PADDI) = (0:0:0,0:0:0);
@@ -4576,7 +4581,7 @@ endmodule
 
 module SSPI_CS_n ( output PADDI, input SSPI_CS_n );
 
-  sapiobuf0005 SSPI_CS_n_pad( .Z(PADDI), .PAD(SSPI_CS_n));
+  sapiobuf0006 SSPI_CS_n_pad( .Z(PADDI), .PAD(SSPI_CS_n));
 
   specify
     (SSPI_CS_n => PADDI) = (0:0:0,0:0:0);
@@ -4586,14 +4591,14 @@ module SSPI_CS_n ( output PADDI, input SSPI_CS_n );
 
 endmodule
 
-module sapiobuf0005 ( output Z, input PAD );
+module sapiobuf0006 ( output Z, input PAD );
 
   IBPU INST1( .I(PAD), .O(Z));
 endmodule
 
 module DIN ( output PADDI, input DIN );
 
-  sapiobuf0004 DIN_pad( .Z(PADDI), .PAD(DIN));
+  sapiobuf0007 DIN_pad( .Z(PADDI), .PAD(DIN));
 
   specify
     (DIN => PADDI) = (0:0:0,0:0:0);
@@ -4601,6 +4606,11 @@ module DIN ( output PADDI, input DIN );
     $width (negedge DIN, 0:0:0);
   endspecify
 
+endmodule
+
+module sapiobuf0007 ( output Z, input PAD );
+
+  IB INST1( .I(PAD), .O(Z));
 endmodule
 
 module GSR_INST ( input GSRNET );
@@ -4964,7 +4974,7 @@ module u_sdram_u_fifo_mem0 ( input DIA15, DIA14, DIA13, DIA12, DIA11, DIA10,
          ADA5_dly, ADA4_dly, WEA_dly, ADB4_dly, CLKB_dly, ADB5_dly, ADB6_dly, 
          ADB7_dly, ADB8_dly, ADB9_dly, ADB10_dly, ADB11_dly, ADB12_dly;
 
-  DP16KD0006 \u_sdram/u_fifo/mem0_DP16KD ( .CEA(VCCI), .OCEA(VCCI), 
+  DP16KD0008 \u_sdram/u_fifo/mem0_DP16KD ( .CEA(VCCI), .OCEA(VCCI), 
     .CLKA(CLKA_dly), .WEA(WEA_dly), .CSA0(GNDI), .CSA1(GNDI), .CSA2(GNDI), 
     .RSTA(GNDI), .CEB(VCCI), .OCEB(VCCI), .CLKB(CLKB_dly), .WEB(GNDI), 
     .CSB0(GNDI), .CSB1(GNDI), .CSB2(GNDI), .RSTB(GNDI), .DIA0(DIA0_dly), 
@@ -5052,7 +5062,7 @@ module u_sdram_u_fifo_mem0 ( input DIA15, DIA14, DIA13, DIA12, DIA11, DIA10,
 
 endmodule
 
-module DP16KD0006 ( input CEA, OCEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, 
+module DP16KD0008 ( input CEA, OCEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, 
     OCEB, CLKB, WEB, CSB0, CSB1, CSB2, RSTB, DIA0, DIA1, DIA2, DIA3, DIA4, 
     DIA5, DIA6, DIA7, DIA8, DIA9, DIA10, DIA11, DIA12, DIA13, DIA14, DIA15, 
     DIA16, DIA17, ADA0, ADA1, ADA2, ADA3, ADA4, ADA5, ADA6, ADA7, ADA8, ADA9, 

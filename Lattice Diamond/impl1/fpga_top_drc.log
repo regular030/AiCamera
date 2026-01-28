@@ -7,6 +7,10 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
+WARNING - synthesis: logical net 'FSDA' has no load.
+WARNING - synthesis: input pad net 'FSDA' has no legal load.
+WARNING - synthesis: logical net 'FSCL' has no load.
+WARNING - synthesis: input pad net 'FSCL' has no legal load.
 WARNING - synthesis: logical net 'ESP_D[7]' has no load.
 WARNING - synthesis: input pad net 'ESP_D[7]' has no legal load.
 WARNING - synthesis: logical net 'ESP_D[6]' has no load.
@@ -29,7 +33,7 @@ WARNING - synthesis: logical net 'INITN' has no load.
 WARNING - synthesis: input pad net 'INITN' has no legal load.
 WARNING - synthesis: logical net 'DONE' has no load.
 WARNING - synthesis: input pad net 'DONE' has no legal load.
-WARNING - synthesis: DRC complete with 22 warnings.
+WARNING - synthesis: DRC complete with 26 warnings.
 
 Design Results:
    1011 blocks expanded

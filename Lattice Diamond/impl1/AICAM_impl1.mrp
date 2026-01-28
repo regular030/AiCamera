@@ -15,7 +15,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  01/10/26  18:48:28
+Mapped on:  01/28/26  06:55:10
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
 
 Design Summary (cont)
 ---------------------
@@ -151,57 +151,67 @@ Design Summary (cont)
 
 
 
-   Number of warnings:  30
+   Number of warnings:  36
    Number of errors:    0
      
 
 Design Errors/Warnings
 ----------------------
 
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(90):
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(28):
+     Semantic error in "IOBUF PORT "FSCL" IO_TYPE=LVCMOS18 PULLMODE=NONE ;":
+     Port "FSCL" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(29):
+     Semantic error in "IOBUF PORT "FSDA" IO_TYPE=LVCMOS18 PULLMODE=NONE ;":
+     Port "FSDA" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(93):
      Semantic error in "IOBUF PORT "ESP_D[0]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
      Port "ESP_D[0]" does not exist in the design. This preference has been
      disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(91):
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94):
      Semantic error in "IOBUF PORT "ESP_D[1]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
      Port "ESP_D[1]" does not exist in the design. This preference has been
      disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(92):
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95):
      Semantic error in "IOBUF PORT "ESP_D[2]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
      Port "ESP_D[2]" does not exist in the design. This preference has been
      disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(93):
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96):
      Semantic error in "IOBUF PORT "ESP_D[3]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
      Port "ESP_D[3]" does not exist in the design. This preference has been
      disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94):
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(97):
      Semantic error in "IOBUF PORT "ESP_D[4]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
      Port "ESP_D[4]" does not exist in the design. This preference has been
      disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95):
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(98):
      Semantic error in "IOBUF PORT "ESP_D[5]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
      Port "ESP_D[5]" does not exist in the design. This preference has been
      disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96):
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(99):
      Semantic error in "IOBUF PORT "ESP_D[6]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "ESP_D[6]" does not exist in the design. This preference has been
-     disabled.
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(97):
-     Semantic error in "IOBUF PORT "ESP_D[7]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
-     Port "ESP_D[7]" does not exist in the design. This preference has been
-     disabled.
-WARNING - map: input pad net 'ESP_D[7]' has no legal load.
-WARNING - map: input pad net 'ESP_D[6]' has no legal load.
 
                                     Page 3
 
 
 
 
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
 
 Design Errors/Warnings (cont)
 -----------------------------
+     Port "ESP_D[6]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(100):
+     Semantic error in "IOBUF PORT "ESP_D[7]" IO_TYPE=LVCMOS33 PULLMODE=NONE ;":
+     Port "ESP_D[7]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: input pad net 'FSDA' has no legal load.
+WARNING - map: input pad net 'FSCL' has no legal load.
+WARNING - map: input pad net 'ESP_D[7]' has no legal load.
+WARNING - map: input pad net 'ESP_D[6]' has no legal load.
 WARNING - map: input pad net 'ESP_D[5]' has no legal load.
 WARNING - map: input pad net 'ESP_D[4]' has no legal load.
 WARNING - map: input pad net 'ESP_D[3]' has no legal load.
@@ -211,6 +221,10 @@ WARNING - map: input pad net 'ESP_D[0]' has no legal load.
 WARNING - map: input pad net 'PROGRAMN' has no legal load.
 WARNING - map: input pad net 'INITN' has no legal load.
 WARNING - map: input pad net 'DONE' has no legal load.
+WARNING - map: IO buffer missing for top level port FSDA...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port FSCL...logic will be
+     discarded.
 WARNING - map: IO buffer missing for top level port ESP_D[7:0](7)...logic will
      be discarded.
 WARNING - map: IO buffer missing for top level port ESP_D[7:0](6)...logic will
@@ -244,6 +258,16 @@ IO (PIO) Attributes
 | CRYSTAL             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_WE_N             | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 4
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | SD_CS_N             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -253,21 +277,11 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+
 | DOUT                | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| MCLK                | OUTPUT    | LVCMOS33  |            |
+| MCLK                | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_A[12]            | OUTPUT    | LVCMOS33  |            |
-
-                                    Page 4
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | SD_A[11]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -310,6 +324,16 @@ IO (PIO) Attributes (cont)
 | SD_DQ[10]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_DQ[9]            | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 5
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | SD_DQ[8]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -324,16 +348,6 @@ IO (PIO) Attributes (cont)
 | SD_DQ[3]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_DQ[2]            | OUTPUT    | LVCMOS33  |            |
-
-                                    Page 5
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | SD_DQ[1]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -343,27 +357,27 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | SD_DQM[0]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| PCLK                | INPUT     | LVCMOS33  |            |
+| PCLK                | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| VSYNC               | INPUT     | LVCMOS33  |            |
+| VSYNC               | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| HREF                | INPUT     | LVCMOS33  |            |
+| HREF                | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y9                  | INPUT     | LVCMOS33  |            |
+| Y9                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y8                  | INPUT     | LVCMOS33  |            |
+| Y8                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y7                  | INPUT     | LVCMOS33  |            |
+| Y7                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y6                  | INPUT     | LVCMOS33  |            |
+| Y6                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y5                  | INPUT     | LVCMOS33  |            |
+| Y5                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y4                  | INPUT     | LVCMOS33  |            |
+| Y4                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y3                  | INPUT     | LVCMOS33  |            |
+| Y3                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-| Y2                  | INPUT     | LVCMOS33  |            |
+| Y2                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | CCLK                | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -376,6 +390,16 @@ Removed logic
 -------------
 
 Signal n2611 was merged into signal u_sdram/dq_oe
+
+                                    Page 6
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+Removed logic (cont)
+--------------------
 Signal u_sdram/n6743 was merged into signal u_sdram/n635
 Signal u_sdram/n3163 was merged into signal u_sdram/row_11
 Signal u_sdram/n3162 was merged into signal u_sdram/row_9
@@ -390,16 +414,6 @@ Signal u_sdram/u_fifo/wptr_gray_rd2_9__I_0_0/CI undriven or does not drive
      anything - clipped.
 Signal u_sdram/u_fifo/wptr_gray_7__I_0_0/S1 undriven or does not drive anything
      - clipped.
-
-                                    Page 6
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-Removed logic (cont)
---------------------
 Signal u_sdram/u_fifo/wptr_gray_7__I_0_0/S0 undriven or does not drive anything
      - clipped.
 Signal u_sdram/u_fifo/wptr_gray_7__I_0_0/CI undriven or does not drive anything
@@ -442,6 +456,16 @@ Signal u_sdram/col_531_add_4_1/S0 undriven or does not drive anything - clipped.
      
 Signal u_sdram/col_531_add_4_1/CI undriven or does not drive anything - clipped.
      
+
+                                    Page 7
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+Removed logic (cont)
+--------------------
 Signal u_sdram/col_531_add_4_9/CO undriven or does not drive anything - clipped.
      
 Signal u_sdram/row_530_add_4_1/S0 undriven or does not drive anything - clipped.
@@ -456,16 +480,6 @@ Signal _add_1_830_add_4_12/S1 undriven or does not drive anything - clipped.
 Signal _add_1_830_add_4_12/S0 undriven or does not drive anything - clipped.
 Signal u_stream/u_dc/wptr_gray_9__I_0_8/S1 undriven or does not drive anything -
      clipped.
-
-                                    Page 7
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-Removed logic (cont)
---------------------
 Signal u_stream/u_dc/wptr_gray_9__I_0_8/S0 undriven or does not drive anything -
      clipped.
 Signal u_stream/u_dc/wptr_gray_9__I_0_10_2641/S1 undriven or does not drive
@@ -508,6 +522,16 @@ Signal u_stream/u_dc/equal_629_11_2642/S1 undriven or does not drive anything -
      clipped.
 Signal u_stream/u_dc/equal_629_11_2642/S0 undriven or does not drive anything -
      clipped.
+
+                                    Page 8
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+Removed logic (cont)
+--------------------
 Signal u_stream/u_dc/equal_629_11/S1 undriven or does not drive anything -
      clipped.
 Signal u_stream/u_dc/equal_629_11/CO undriven or does not drive anything -
@@ -522,16 +546,6 @@ Signal _add_1_830_add_4_14/S0 undriven or does not drive anything - clipped.
 Signal _add_1_830_add_4_14/CO undriven or does not drive anything - clipped.
 Signal _add_1_775_add_4_1/S0 undriven or does not drive anything - clipped.
 Signal _add_1_775_add_4_1/CI undriven or does not drive anything - clipped.
-
-                                    Page 8
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-Removed logic (cont)
---------------------
 Signal _add_1_812_add_4_2/S1 undriven or does not drive anything - clipped.
 Signal _add_1_812_add_4_2/S0 undriven or does not drive anything - clipped.
 Signal _add_1_812_add_4_2/CI undriven or does not drive anything - clipped.
@@ -574,6 +588,16 @@ Signal _add_1_803_add_4_1/CI undriven or does not drive anything - clipped.
 Signal _add_1_778_add_4_1/S0 undriven or does not drive anything - clipped.
 Signal _add_1_778_add_4_1/CI undriven or does not drive anything - clipped.
 Signal _add_1_775_add_4_13/S1 undriven or does not drive anything - clipped.
+
+                                    Page 9
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+Removed logic (cont)
+--------------------
 Signal _add_1_775_add_4_13/CO undriven or does not drive anything - clipped.
 Signal _add_1_803_add_4_13/S1 undriven or does not drive anything - clipped.
 Signal _add_1_803_add_4_13/CO undriven or does not drive anything - clipped.
@@ -588,16 +612,6 @@ Signal _add_1_830_add_4_8/S1 undriven or does not drive anything - clipped.
 Signal _add_1_830_add_4_8/S0 undriven or does not drive anything - clipped.
 Block u_sdram/i887_1_lut was optimized away.
 Block u_sdram/i1822_1_lut_rep_102 was optimized away.
-
-                                    Page 9
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-Removed logic (cont)
---------------------
 Block u_sdram/i1353_1_lut was optimized away.
 Block u_sdram/i1352_1_lut was optimized away.
 Block u_sdram/i1354_1_lut was optimized away.
@@ -640,6 +654,16 @@ PLL 1:                                     Pin/Node Value
   Output Clock(P):                         PIN,NODE SD_CLK_c
   Output Clock(S):                         PIN      MCLK_c
   Feedback Signal:                         NODE     SD_CLK_c
+
+                                   Page 10
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+PLL/DLL Summary (cont)
+----------------------
   Reset Signal:                                     NONE
   Standby Signal:                          NODE     GND_net
   Input Clock Frequency (MHz):                      24.0000
@@ -654,16 +678,6 @@ PLL 1:                                     Pin/Node Value
   Pre Divider C Input:                              NONE
   Pre Divider D Input:                              NONE
   FB_MODE:                                          CLKOP
-
-                                   Page 10
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-PLL/DLL Summary (cont)
-----------------------
   CLKI Divider:                                     1
   CLKFB Divider:                                    4
   CLKOP Divider:                                    6
@@ -706,6 +720,16 @@ GSR Component:
    The design components with GSR property set to ENABLED will respond to global
         set reset while the components with GSR property set to DISABLED will
         not.
+
+                                   Page 11
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
         
 
      Components with disabled GSR Property
@@ -720,16 +744,6 @@ GSR Component:
 
      Type and instance name of component: 
    Register : u_cam/byte0_i0_i0
-
-                                   Page 11
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : u_cam/frame_start_37
    Register : u_cam/byte_sel_42
    Register : u_cam/pix_valid_36
@@ -772,6 +786,16 @@ GSR Usage (cont)
    Register : u_cam/pix_y__i2
    Register : u_cam/pix_y__i3
    Register : u_cam/pix_y__i4
+
+                                   Page 12
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_cam/pix_y__i5
    Register : u_cam/pix_y__i6
    Register : u_cam/pix_y__i7
@@ -786,16 +810,6 @@ GSR Usage (cont)
    Register : _add_1_797_e2_i0_i2
    Register : _add_1_797_e2_i0_i3
    Register : _add_1_797_e2_i0_i4
-
-                                   Page 12
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : _add_1_797_e2_i0_i5
    Register : _add_1_797_e2_i0_i6
    Register : _add_1_797_e2_i0_i7
@@ -838,6 +852,16 @@ GSR Usage (cont)
    Register : u_stream/u_dc/mem_610
    Register : u_stream/u_dc/mem_609
    Register : u_stream/u_dc/wptr_gray_i0_i0
+
+                                   Page 13
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_stream/u_dc/rptr_gray_i0_i0
    Register : u_stream/u_dc/mem_612
    Register : u_stream/u_dc/rd_data_i0_i0
@@ -852,16 +876,6 @@ GSR Usage (cont)
    Register : u_stream/u_dc/mem_622
    Register : u_stream/u_dc/mem_623
    Register : u_stream/u_dc/mem_624
-
-                                   Page 13
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : u_stream/u_dc/mem_625
    Register : u_stream/u_dc/mem_626
    Register : u_stream/u_dc/mem_627
@@ -904,6 +918,16 @@ GSR Usage (cont)
    Register : u_stream/u_dc/rd_data_i0_i5
    Register : u_stream/u_dc/rd_data_i0_i6
    Register : u_stream/u_dc/rd_data_i0_i7
+
+                                   Page 14
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_stream/u_dc/wptr_bin_i0_i1
    Register : u_stream/u_dc/wptr_bin_i0_i2
    Register : u_stream/u_dc/wptr_bin_i0_i3
@@ -918,16 +942,6 @@ GSR Usage (cont)
    Register : u_stream/u_dc/wptr_gray_rd1_i2
    Register : u_stream/u_dc/wptr_gray_rd1_i3
    Register : u_stream/u_dc/wptr_gray_rd1_i4
-
-                                   Page 14
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : u_stream/u_dc/wptr_gray_rd1_i5
    Register : u_stream/u_dc/wptr_gray_rd1_i6
    Register : u_stream/u_dc/wptr_gray_rd1_i7
@@ -970,6 +984,16 @@ GSR Usage (cont)
    Register : u_stream/u_dc/rptr_gray_wr2_i11
    Register : u_sdram/fs_sync_162
    Register : u_sdram/dq_oe_172
+
+                                   Page 15
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_sdram/SD_BA__i1
    Register : u_sdram/SD_CAS_N_166
    Register : u_sdram/SD_DQM_i1
@@ -984,16 +1008,6 @@ GSR Usage (cont)
    Register : u_sdram/row_530__i7
    Register : u_sdram/SD_A_i12
    Register : u_sdram/row_530__i6
-
-                                   Page 15
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : u_sdram/row_530__i5
    Register : u_sdram/row_530__i4
    Register : u_sdram/row_530__i3
@@ -1036,6 +1050,16 @@ GSR Usage (cont)
    Register : u_sdram/timer_i10
    Register : u_sdram/timer_i11
    Register : u_sdram/timer_i12
+
+                                   Page 16
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_sdram/timer_i13
    Register : u_sdram/timer_i14
    Register : u_sdram/timer_i15
@@ -1050,16 +1074,6 @@ GSR Usage (cont)
    Register : u_sdram/ref_cnt_i11
    Register : u_sdram/ref_cnt_i12
    Register : u_sdram/ref_cnt_i13
-
-                                   Page 16
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : u_sdram/ref_cnt_i14
    Register : u_sdram/ref_cnt_i15
    Register : u_sdram/col_531__i5
@@ -1102,6 +1116,16 @@ GSR Usage (cont)
    Register : u_sdram/u_fifo/mem_659
    Register : u_sdram/u_fifo/mem_658
    Register : u_sdram/u_fifo/mem_657
+
+                                   Page 17
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_sdram/u_fifo/mem_656
    Register : u_sdram/u_fifo/mem_655
    Register : u_sdram/u_fifo/mem_654
@@ -1116,16 +1140,6 @@ GSR Usage (cont)
    Register : u_sdram/u_fifo/mem_645
    Register : u_sdram/u_fifo/mem_643
    Register : u_sdram/u_fifo/wptr_gray_i0_i1
-
-                                   Page 17
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : u_sdram/u_fifo/wptr_gray_i0_i2
    Register : u_sdram/u_fifo/wptr_gray_i0_i3
    Register : u_sdram/u_fifo/wptr_gray_i0_i4
@@ -1168,6 +1182,16 @@ GSR Usage (cont)
    Register : u_sdram/u_fifo/wptr_bin_i0_i8
    Register : u_sdram/u_fifo/wptr_gray_rd1_i1
    Register : u_sdram/u_fifo/wptr_gray_rd1_i2
+
+                                   Page 18
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_sdram/u_fifo/wptr_gray_rd1_i3
    Register : u_sdram/u_fifo/wptr_gray_rd1_i4
    Register : u_sdram/u_fifo/wptr_gray_rd1_i5
@@ -1182,16 +1206,6 @@ GSR Usage (cont)
    Register : u_sdram/u_fifo/wptr_gray_rd2_i5
    Register : u_sdram/u_fifo/wptr_gray_rd2_i6
    Register : u_sdram/u_fifo/wptr_gray_rd2_i7
-
-                                   Page 18
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-GSR Usage (cont)
-----------------
    Register : u_sdram/u_fifo/wptr_gray_rd2_i8
    Register : u_sdram/u_fifo/wptr_gray_rd2_i9
    Register : u_sdram/u_fifo/rptr_gray_wr1_i1
@@ -1234,6 +1248,16 @@ GSR Usage (cont)
    Register : u_spi/byte_phase_FSM__i11
    Register : u_spi/byte_phase_FSM__i12
    Register : u_spi/byte_phase_FSM__i13
+
+                                   Page 19
+
+
+
+
+Design:  fpga_top                                      Date:  01/28/26  06:55:10
+
+GSR Usage (cont)
+----------------
    Register : u_spi/byte_phase_FSM__i3
    Register : u_spi/byte_phase_FSM__i14
    Register : u_spi/byte_phase_FSM__i4
@@ -1248,32 +1272,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-
-                                   Page 19
-
-
-
-
-Design:  fpga_top                                      Date:  01/10/26  18:48:28
-
-Run Time and Memory Usage (cont)
---------------------------------
    Peak Memory Usage: 118 MB
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

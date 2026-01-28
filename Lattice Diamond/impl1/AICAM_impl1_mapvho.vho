@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.14.0.75.2
 
 -- ldbanno -n VHDL -o AICAM_impl1_mapvho.vho -w -neg -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd 
--- Netlist created on Sat Jan 10 18:48:28 2026
--- Netlist written on Sat Jan 10 18:48:33 2026
+-- Netlist created on Wed Jan 28 06:55:10 2026
+-- Netlist written on Wed Jan 28 06:55:14 2026
 -- Design is for device LFE5U-25F
 -- Design is for package CABGA256
 -- Design is for performance grade 6
@@ -495,6 +495,25 @@
 
   end Structure;
 
+-- entity sapiobuf0003
+  library IEEE, vital2000, ECP5U;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use ECP5U.COMPONENTS.ALL;
+
+  entity sapiobuf0003 is
+    port (I: in Std_logic; PAD: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF sapiobuf0003 : ENTITY IS TRUE;
+
+  end sapiobuf0003;
+
+  architecture Structure of sapiobuf0003 is
+  begin
+    INST5: OB
+      port map (I=>I, O=>PAD);
+  end Structure;
+
 -- entity MCLKB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -524,11 +543,11 @@
     signal PADDO_ipd 	: std_logic := 'X';
     signal MCLKS_out 	: std_logic := 'X';
 
-    component sapiobuf0001
+    component sapiobuf0003
       port (I: in Std_logic; PAD: out Std_logic);
     end component;
   begin
-    MCLK_pad: sapiobuf0001
+    MCLK_pad: sapiobuf0003
       port map (I=>PADDO_ipd, PAD=>MCLKS_out);
 
     --  INPUT PATH DELAYs
@@ -1634,20 +1653,20 @@
 
   end Structure;
 
--- entity sapiobuf0003
+-- entity sapiobuf0004
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use ECP5U.COMPONENTS.ALL;
 
-  entity sapiobuf0003 is
+  entity sapiobuf0004 is
     port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF sapiobuf0003 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF sapiobuf0004 : ENTITY IS TRUE;
 
-  end sapiobuf0003;
+  end sapiobuf0004;
 
-  architecture Structure of sapiobuf0003 is
+  architecture Structure of sapiobuf0004 is
   begin
     INST5: OBZ
       port map (I=>I, T=>T, O=>PAD);
@@ -1707,14 +1726,14 @@
     signal SDDQ15_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_15: sapiobuf0003
+    SD_DQ_pad_15: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ15_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -1789,14 +1808,14 @@
     signal SDDQ14_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_14: sapiobuf0003
+    SD_DQ_pad_14: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ14_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -1871,14 +1890,14 @@
     signal SDDQ13_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_13: sapiobuf0003
+    SD_DQ_pad_13: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ13_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -1953,14 +1972,14 @@
     signal SDDQ12_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_12: sapiobuf0003
+    SD_DQ_pad_12: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ12_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2035,14 +2054,14 @@
     signal SDDQ11_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_11: sapiobuf0003
+    SD_DQ_pad_11: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ11_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2117,14 +2136,14 @@
     signal SDDQ10_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_10: sapiobuf0003
+    SD_DQ_pad_10: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ10_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2199,14 +2218,14 @@
     signal SDDQ9_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_9: sapiobuf0003
+    SD_DQ_pad_9: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ9_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2281,14 +2300,14 @@
     signal SDDQ8_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_8: sapiobuf0003
+    SD_DQ_pad_8: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ8_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2363,14 +2382,14 @@
     signal SDDQ7_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_7: sapiobuf0003
+    SD_DQ_pad_7: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ7_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2445,14 +2464,14 @@
     signal SDDQ6_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_6: sapiobuf0003
+    SD_DQ_pad_6: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ6_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2527,14 +2546,14 @@
     signal SDDQ5_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_5: sapiobuf0003
+    SD_DQ_pad_5: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ5_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2609,14 +2628,14 @@
     signal SDDQ4_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_4: sapiobuf0003
+    SD_DQ_pad_4: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ4_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2691,14 +2710,14 @@
     signal SDDQ3_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_3: sapiobuf0003
+    SD_DQ_pad_3: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ3_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2773,14 +2792,14 @@
     signal SDDQ2_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_2: sapiobuf0003
+    SD_DQ_pad_2: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ2_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2855,14 +2874,14 @@
     signal SDDQ1_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_1: sapiobuf0003
+    SD_DQ_pad_1: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ1_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2937,14 +2956,14 @@
     signal SDDQ0_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_0: sapiobuf0003
+    SD_DQ_pad_0: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ0_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -3118,6 +3137,25 @@
 
   end Structure;
 
+-- entity sapiobuf0005
+  library IEEE, vital2000, ECP5U;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use ECP5U.COMPONENTS.ALL;
+
+  entity sapiobuf0005 is
+    port (Z: out Std_logic; PAD: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF sapiobuf0005 : ENTITY IS TRUE;
+
+  end sapiobuf0005;
+
+  architecture Structure of sapiobuf0005 is
+  begin
+    INST1: IB
+      port map (I=>PAD, O=>Z);
+  end Structure;
+
 -- entity PCLKB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -3150,11 +3188,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal PCLKS_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    PCLK_pad: sapiobuf
+    PCLK_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>PCLKS_ipd);
 
     --  INPUT PATH DELAYs
@@ -3234,11 +3272,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal VSYNCS_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    VSYNC_pad: sapiobuf
+    VSYNC_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>VSYNCS_ipd);
 
     --  INPUT PATH DELAYs
@@ -3286,25 +3324,6 @@
 
   end Structure;
 
--- entity sapiobuf0004
-  library IEEE, vital2000, ECP5U;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use ECP5U.COMPONENTS.ALL;
-
-  entity sapiobuf0004 is
-    port (Z: out Std_logic; PAD: in Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF sapiobuf0004 : ENTITY IS TRUE;
-
-  end sapiobuf0004;
-
-  architecture Structure of sapiobuf0004 is
-  begin
-    INST1: IB
-      port map (I=>PAD, O=>Z);
-  end Structure;
-
 -- entity HREFB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -3337,11 +3356,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal HREFS_ipd 	: std_logic := 'X';
 
-    component sapiobuf0004
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    HREF_pad: sapiobuf0004
+    HREF_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>HREFS_ipd);
 
     --  INPUT PATH DELAYs
@@ -3421,11 +3440,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y9S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y9_pad: sapiobuf
+    Y9_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y9S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3505,11 +3524,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y8S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y8_pad: sapiobuf
+    Y8_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y8S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3589,11 +3608,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y7S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y7_pad: sapiobuf
+    Y7_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y7S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3673,11 +3692,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y6S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y6_pad: sapiobuf
+    Y6_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y6S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3757,11 +3776,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y5S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y5_pad: sapiobuf
+    Y5_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y5S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3841,11 +3860,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y4S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y4_pad: sapiobuf
+    Y4_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y4S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3925,11 +3944,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y3S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y3_pad: sapiobuf
+    Y3_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y3S_ipd);
 
     --  INPUT PATH DELAYs
@@ -4009,11 +4028,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y2S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y2_pad: sapiobuf
+    Y2_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y2S_ipd);
 
     --  INPUT PATH DELAYs
@@ -4145,20 +4164,20 @@
 
   end Structure;
 
--- entity sapiobuf0005
+-- entity sapiobuf0006
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use ECP5U.COMPONENTS.ALL;
 
-  entity sapiobuf0005 is
+  entity sapiobuf0006 is
     port (Z: out Std_logic; PAD: in Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF sapiobuf0005 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF sapiobuf0006 : ENTITY IS TRUE;
 
-  end sapiobuf0005;
+  end sapiobuf0006;
 
-  architecture Structure of sapiobuf0005 is
+  architecture Structure of sapiobuf0006 is
   begin
     INST1: IBPU
       port map (I=>PAD, O=>Z);
@@ -4196,11 +4215,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal SSPICSn_ipd 	: std_logic := 'X';
 
-    component sapiobuf0005
+    component sapiobuf0006
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    SSPI_CS_n_pad: sapiobuf0005
+    SSPI_CS_n_pad: sapiobuf0006
       port map (Z=>PADDI_out, PAD=>SSPICSn_ipd);
 
     --  INPUT PATH DELAYs
@@ -4248,6 +4267,25 @@
 
   end Structure;
 
+-- entity sapiobuf0007
+  library IEEE, vital2000, ECP5U;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use ECP5U.COMPONENTS.ALL;
+
+  entity sapiobuf0007 is
+    port (Z: out Std_logic; PAD: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF sapiobuf0007 : ENTITY IS TRUE;
+
+  end sapiobuf0007;
+
+  architecture Structure of sapiobuf0007 is
+  begin
+    INST1: IB
+      port map (I=>PAD, O=>Z);
+  end Structure;
+
 -- entity DINB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -4280,11 +4318,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal DINS_ipd 	: std_logic := 'X';
 
-    component sapiobuf0004
+    component sapiobuf0007
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    DIN_pad: sapiobuf0004
+    DIN_pad: sapiobuf0007
       port map (Z=>PADDI_out, PAD=>DINS_ipd);
 
     --  INPUT PATH DELAYs
@@ -5970,13 +6008,13 @@
 
   end Structure;
 
--- entity DP16KD0006
+-- entity DP16KD0008
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use ECP5U.COMPONENTS.ALL;
 
-  entity DP16KD0006 is
+  entity DP16KD0008 is
     port (CEA: in Std_logic; OCEA: in Std_logic; CLKA: in Std_logic; 
           WEA: in Std_logic; CSA0: in Std_logic; CSA1: in Std_logic; 
           CSA2: in Std_logic; RSTA: in Std_logic; CEB: in Std_logic; 
@@ -6017,11 +6055,11 @@
           DOB13: out Std_logic; DOB14: out Std_logic; DOB15: out Std_logic; 
           DOB16: out Std_logic; DOB17: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF DP16KD0006 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF DP16KD0008 : ENTITY IS TRUE;
 
-  end DP16KD0006;
+  end DP16KD0008;
 
-  architecture Structure of DP16KD0006 is
+  architecture Structure of DP16KD0008 is
   begin
     INST10: DP16KD
       generic map (ASYNC_RESET_RELEASE => "SYNC", CSDECODE_A => "0b000", 
@@ -6491,7 +6529,7 @@
     component vcc
       port (PWR1: out Std_logic);
     end component;
-    component DP16KD0006
+    component DP16KD0008
       port (CEA: in Std_logic; OCEA: in Std_logic; CLKA: in Std_logic; 
             WEA: in Std_logic; CSA0: in Std_logic; CSA1: in Std_logic; 
             CSA2: in Std_logic; RSTA: in Std_logic; CEB: in Std_logic; 
@@ -6533,7 +6571,7 @@
             DOB16: out Std_logic; DOB17: out Std_logic);
     end component;
   begin
-    u_sdram_u_fifo_mem0_DP16KD: DP16KD0006
+    u_sdram_u_fifo_mem0_DP16KD: DP16KD0008
       port map (CEA=>VCCI, OCEA=>VCCI, CLKA=>CLKA_dly, WEA=>WEA_dly, 
                 CSA0=>GNDI, CSA1=>GNDI, CSA2=>GNDI, RSTA=>GNDI, CEB=>VCCI, 
                 OCEB=>VCCI, CLKB=>CLKB_dly, WEB=>GNDI, CSB0=>GNDI, CSB1=>GNDI, 
@@ -7571,16 +7609,16 @@
 
   entity fpga_top is
     port (CRYSTAL: in Std_logic; PCLK: in Std_logic; VSYNC: in Std_logic; 
-          HREF: in Std_logic; Y9: in Std_logic; Y8: in Std_logic; 
-          Y7: in Std_logic; Y6: in Std_logic; Y5: in Std_logic; 
-          Y4: in Std_logic; Y3: in Std_logic; Y2: in Std_logic; 
-          MCLK: out Std_logic; CCLK: in Std_logic; SSPI_CS_n: in Std_logic; 
-          DIN: in Std_logic; DOUT: out Std_logic; 
-          ESP_D: in Std_logic_vector (7 downto 0); PROGRAMN: in Std_logic; 
-          INITN: in Std_logic; DONE: in Std_logic; SD_CLK: out Std_logic; 
-          SD_CS_N: out Std_logic; SD_WE_N: out Std_logic; 
-          SD_RAS_N: out Std_logic; SD_CAS_N: out Std_logic; 
-          SD_A: out Std_logic_vector (12 downto 0); 
+          HREF: in Std_logic; FSDA: in Std_logic; FSCL: in Std_logic; 
+          Y9: in Std_logic; Y8: in Std_logic; Y7: in Std_logic; 
+          Y6: in Std_logic; Y5: in Std_logic; Y4: in Std_logic; 
+          Y3: in Std_logic; Y2: in Std_logic; MCLK: out Std_logic; 
+          CCLK: in Std_logic; SSPI_CS_n: in Std_logic; DIN: in Std_logic; 
+          DOUT: out Std_logic; ESP_D: in Std_logic_vector (7 downto 0); 
+          PROGRAMN: in Std_logic; INITN: in Std_logic; DONE: in Std_logic; 
+          SD_CLK: out Std_logic; SD_CS_N: out Std_logic; 
+          SD_WE_N: out Std_logic; SD_RAS_N: out Std_logic; 
+          SD_CAS_N: out Std_logic; SD_A: out Std_logic_vector (12 downto 0); 
           SD_BA: out Std_logic_vector (1 downto 0); 
           SD_DQ: out Std_logic_vector (15 downto 0); 
           SD_DQM: out Std_logic_vector (1 downto 0));

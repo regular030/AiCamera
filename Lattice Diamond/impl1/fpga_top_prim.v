@@ -1,48 +1,50 @@
 // Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.14.0.75.2
-// Netlist written on Sat Jan 10 18:48:28 2026
+// Netlist written on Wed Jan 28 06:55:09 2026
 //
 // Verilog Description of module fpga_top
 //
 
-module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6, 
-            Y5, Y4, Y3, Y2, MCLK, CCLK, SSPI_CS_n, DIN, DOUT, 
-            ESP_D, PROGRAMN, INITN, DONE, SD_CLK, SD_CS_N, SD_WE_N, 
-            SD_RAS_N, SD_CAS_N, SD_A, SD_BA, SD_DQ, SD_DQM) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(5[8:16])
+module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, FSDA, FSCL, Y9, Y8, 
+            Y7, Y6, Y5, Y4, Y3, Y2, MCLK, CCLK, SSPI_CS_n, 
+            DIN, DOUT, ESP_D, PROGRAMN, INITN, DONE, SD_CLK, SD_CS_N, 
+            SD_WE_N, SD_RAS_N, SD_CAS_N, SD_A, SD_BA, SD_DQ, SD_DQM) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(5[8:16])
     input CRYSTAL /* synthesis black_box_pad_pin=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(7[25:32])
     input PCLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
     input VSYNC;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(11[25:30])
     input HREF;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(12[25:29])
-    input Y9;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[25:27])
-    input Y8;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[29:31])
-    input Y7;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[33:35])
-    input Y6;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[37:39])
-    input Y5;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[41:43])
-    input Y4;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[45:47])
-    input Y3;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[49:51])
-    input Y2;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[53:55])
-    output MCLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(14[25:29])
-    input CCLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(17[25:29])
-    input SSPI_CS_n;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(18[25:34])
-    input DIN;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:28])
-    output DOUT;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(20[25:29])
-    input [7:0]ESP_D;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(21[20:25])
-    input PROGRAMN;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(24[25:33])
-    input INITN;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(25[25:30])
-    input DONE;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(26[25:29])
-    output SD_CLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(29[25:31])
-    output SD_CS_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(30[25:32])
-    output SD_WE_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:32])
-    output SD_RAS_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(32[25:33])
-    output SD_CAS_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(33[25:33])
-    output [12:0]SD_A;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    output [1:0]SD_BA;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(35[25:30])
-    output [15:0]SD_DQ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:30])
-    output [1:0]SD_DQM;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(37[25:31])
+    input FSDA;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[17:21])
+    input FSCL;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(14[17:21])
+    input Y9;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[25:27])
+    input Y8;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[29:31])
+    input Y7;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[33:35])
+    input Y6;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[37:39])
+    input Y5;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[41:43])
+    input Y4;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[45:47])
+    input Y3;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[49:51])
+    input Y2;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[53:55])
+    output MCLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(16[25:29])
+    input CCLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:29])
+    input SSPI_CS_n;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(20[25:34])
+    input DIN;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(21[25:28])
+    output DOUT;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(22[25:29])
+    input [7:0]ESP_D;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(23[20:25])
+    input PROGRAMN;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(26[25:33])
+    input INITN;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(27[25:30])
+    input DONE;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(28[25:29])
+    output SD_CLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:31])
+    output SD_CS_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(32[25:32])
+    output SD_WE_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(33[25:32])
+    output SD_RAS_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:33])
+    output SD_CAS_N;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(35[25:33])
+    output [12:0]SD_A;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    output [1:0]SD_BA;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(37[25:30])
+    output [15:0]SD_DQ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(38[25:30])
+    output [1:0]SD_DQM;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(39[25:31])
     
     wire PCLK_c /* synthesis is_clock=1, SET_AS_NETWORK=PCLK_c */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
-    wire MCLK_c /* synthesis is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(14[25:29])
-    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(17[25:29])
-    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(29[25:31])
+    wire MCLK_c /* synthesis is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(16[25:29])
+    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:29])
+    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:31])
     wire buf_CLKI /* synthesis is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pll_24m/pll_24m.v(17[10:18])
     
     wire GND_net, VCC_net, VSYNC_c, HREF_c, Y9_c_7, Y8_c_6, Y7_c_5, 
@@ -51,14 +53,14 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
         SD_A_c_10, SD_A_c_9, SD_A_c_8, SD_A_c_7, SD_A_c_6, SD_A_c_5, 
         SD_A_c_4, SD_A_c_3, SD_A_c_2, SD_A_c_1, SD_A_c_0, SD_BA_c_1, 
         SD_BA_c_0, SD_DQM_c_0, pix_valid_rgb;
-    wire [15:0]pix_rgb565;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(62[17:27])
+    wire [15:0]pix_rgb565;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(64[17:27])
     
     wire frame_start;
-    wire [11:0]pix_x;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(66[17:22])
-    wire [11:0]pix_y;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(66[24:29])
+    wire [11:0]pix_x;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(68[17:22])
+    wire [11:0]pix_y;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(68[24:29])
     
     wire n4537, stream_arm_spi;
-    wire [7:0]stream_fifo_rd_data;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(186[17:36])
+    wire [7:0]stream_fifo_rd_data;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(188[17:36])
     
     wire stream_fifo_empty, n72, n69, n66, n63, n60, n57, n54, 
         n51, n48, n45, n42, n39, n36, byte_sel, line_end_N_200, 
@@ -122,8 +124,8 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
             n31, n34, n37, n40_adj_1351, n43_adj_1348, n46_adj_1349, 
             n49_adj_1350, n52, n55, n58, n61}), .n4889(n4889), .line_end_N_200(line_end_N_200), 
             .Y9_c_7(Y9_c_7), .Y8_c_6(Y8_c_6), .Y7_c_5(Y7_c_5), .Y6_c_4(Y6_c_4), 
-            .Y5_c_3(Y5_c_3), .Y4_c_2(Y4_c_2), .Y3_c_1(Y3_c_1), .pix_rgb565({pix_rgb565})) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(68[27] 81[6])
-    IB Inst1_IB (.I(CRYSTAL), .O(buf_CLKI)) /* synthesis IO_TYPE="LVCMOS33", syn_instantiated=1, LSE_LINE_FILE_ID=4, LSE_LCOL=13, LSE_RCOL=6, LSE_LLINE=48, LSE_RLINE=52 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pll_24m/pll_24m.v(21[8:41])
+            .Y5_c_3(Y5_c_3), .Y4_c_2(Y4_c_2), .Y3_c_1(Y3_c_1), .pix_rgb565({pix_rgb565})) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(70[27] 83[6])
+    IB Inst1_IB (.I(CRYSTAL), .O(buf_CLKI)) /* synthesis IO_TYPE="LVCMOS33", syn_instantiated=1, LSE_LINE_FILE_ID=4, LSE_LCOL=13, LSE_RCOL=6, LSE_LLINE=50, LSE_RLINE=54 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pll_24m/pll_24m.v(21[8:41])
     CCU2C _add_1_830_add_4_8 (.A0(pix_y[5]), .B0(GND_net), .C0(GND_net), 
           .D0(VCC_net), .A1(pix_y[6]), .B1(GND_net), .C1(GND_net), .D1(VCC_net), 
           .CIN(n4527), .COUT(n4528));
@@ -177,9 +179,9 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
     defparam _add_1_775_add_4_3.INIT1 = 16'haaa0;
     defparam _add_1_775_add_4_3.INJECT1_0 = "NO";
     defparam _add_1_775_add_4_3.INJECT1_1 = "NO";
-    OB SD_WE_N_pad (.I(SD_WE_N_c), .O(SD_WE_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:32])
-    OB SD_CS_N_pad (.I(VCC_net), .O(SD_CS_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(30[25:32])
-    OB SD_CLK_pad (.I(SD_CLK_c), .O(SD_CLK));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(29[25:31])
+    OB SD_WE_N_pad (.I(SD_WE_N_c), .O(SD_WE_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(33[25:32])
+    OB SD_CS_N_pad (.I(VCC_net), .O(SD_CS_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(32[25:32])
+    OB SD_CLK_pad (.I(SD_CLK_c), .O(SD_CLK));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:31])
     CCU2C _add_1_830_add_4_2 (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
           .D0(VCC_net), .A1(pix_y[0]), .B1(GND_net), .C1(GND_net), .D1(VCC_net), 
           .COUT(n4525));
@@ -208,7 +210,7 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
     defparam _add_1_775_add_4_13.INIT1 = 16'h0000;
     defparam _add_1_775_add_4_13.INJECT1_0 = "NO";
     defparam _add_1_775_add_4_13.INJECT1_1 = "NO";
-    OB SD_RAS_N_pad (.I(SD_RAS_N_c), .O(SD_RAS_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(32[25:33])
+    OB SD_RAS_N_pad (.I(SD_RAS_N_c), .O(SD_RAS_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:33])
     FD1P3AX _add_1_803_e2_i0_i0 (.D(rptr_bin_11__N_1180[0]), .SP(rd_data_7__N_1177), 
             .CK(CCLK_c), .Q(n62));   // c:/users/kunsh/desktop/aicamera/lattice diamond/dc_fifo.v(44[30:45])
     defparam _add_1_803_e2_i0_i0.GSR = "DISABLED";
@@ -238,24 +240,24 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
     defparam _add_1_775_add_4_5.INIT1 = 16'haaa0;
     defparam _add_1_775_add_4_5.INJECT1_0 = "NO";
     defparam _add_1_775_add_4_5.INJECT1_1 = "NO";
-    OB DOUT_pad (.I(DOUT_c), .O(DOUT));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(20[25:29])
-    OB MCLK_pad (.I(MCLK_c), .O(MCLK));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(14[25:29])
-    OB SD_CAS_N_pad (.I(SD_CAS_N_c), .O(SD_CAS_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(33[25:33])
-    OB SD_A_pad_12 (.I(SD_A_c_12), .O(SD_A[12]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_11 (.I(SD_A_c_11), .O(SD_A[11]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_10 (.I(SD_A_c_10), .O(SD_A[10]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_9 (.I(SD_A_c_9), .O(SD_A[9]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_8 (.I(SD_A_c_8), .O(SD_A[8]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_7 (.I(SD_A_c_7), .O(SD_A[7]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_6 (.I(SD_A_c_6), .O(SD_A[6]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_5 (.I(SD_A_c_5), .O(SD_A[5]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_4 (.I(SD_A_c_4), .O(SD_A[4]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_3 (.I(SD_A_c_3), .O(SD_A[3]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_2 (.I(SD_A_c_2), .O(SD_A[2]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_1 (.I(SD_A_c_1), .O(SD_A[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_A_pad_0 (.I(SD_A_c_0), .O(SD_A[0]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(34[25:29])
-    OB SD_BA_pad_1 (.I(SD_BA_c_1), .O(SD_BA[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(35[25:30])
-    OB SD_BA_pad_0 (.I(SD_BA_c_0), .O(SD_BA[0]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(35[25:30])
+    OB DOUT_pad (.I(DOUT_c), .O(DOUT));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(22[25:29])
+    OB MCLK_pad (.I(MCLK_c), .O(MCLK));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(16[25:29])
+    OB SD_CAS_N_pad (.I(SD_CAS_N_c), .O(SD_CAS_N));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(35[25:33])
+    OB SD_A_pad_12 (.I(SD_A_c_12), .O(SD_A[12]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_11 (.I(SD_A_c_11), .O(SD_A[11]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_10 (.I(SD_A_c_10), .O(SD_A[10]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_9 (.I(SD_A_c_9), .O(SD_A[9]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_8 (.I(SD_A_c_8), .O(SD_A[8]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_7 (.I(SD_A_c_7), .O(SD_A[7]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_6 (.I(SD_A_c_6), .O(SD_A[6]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_5 (.I(SD_A_c_5), .O(SD_A[5]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_4 (.I(SD_A_c_4), .O(SD_A[4]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_3 (.I(SD_A_c_3), .O(SD_A[3]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_2 (.I(SD_A_c_2), .O(SD_A[2]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_1 (.I(SD_A_c_1), .O(SD_A[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_A_pad_0 (.I(SD_A_c_0), .O(SD_A[0]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(36[25:29])
+    OB SD_BA_pad_1 (.I(SD_BA_c_1), .O(SD_BA[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(37[25:30])
+    OB SD_BA_pad_0 (.I(SD_BA_c_0), .O(SD_BA[0]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(37[25:30])
     OBZ SD_DQ_pad_15 (.I(fifo_dout[15]), .T(n2611), .O(SD_DQ[15]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(118[12:17])
     OBZ SD_DQ_pad_14 (.I(fifo_dout[14]), .T(n2611), .O(SD_DQ[14]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(118[12:17])
     OBZ SD_DQ_pad_13 (.I(fifo_dout[13]), .T(n2611), .O(SD_DQ[13]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(118[12:17])
@@ -272,22 +274,22 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
     OBZ SD_DQ_pad_2 (.I(fifo_dout[2]), .T(n2611), .O(SD_DQ[2]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(118[12:17])
     OBZ SD_DQ_pad_1 (.I(fifo_dout[1]), .T(n2611), .O(SD_DQ[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(118[12:17])
     OBZ SD_DQ_pad_0 (.I(fifo_dout[0]), .T(n2611), .O(SD_DQ[0]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(118[12:17])
-    OB SD_DQM_pad_1 (.I(SD_DQM_c_0), .O(SD_DQM[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(37[25:31])
-    OB SD_DQM_pad_0 (.I(SD_DQM_c_0), .O(SD_DQM[0]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(37[25:31])
+    OB SD_DQM_pad_1 (.I(SD_DQM_c_0), .O(SD_DQM[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(39[25:31])
+    OB SD_DQM_pad_0 (.I(SD_DQM_c_0), .O(SD_DQM[0]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(39[25:31])
     IB PCLK_pad (.I(PCLK), .O(PCLK_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
     IB VSYNC_pad (.I(VSYNC), .O(VSYNC_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(11[25:30])
     IB HREF_pad (.I(HREF), .O(HREF_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(12[25:29])
-    IB Y9_pad (.I(Y9), .O(Y9_c_7));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[25:27])
-    IB Y8_pad (.I(Y8), .O(Y8_c_6));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[29:31])
-    IB Y7_pad (.I(Y7), .O(Y7_c_5));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[33:35])
-    IB Y6_pad (.I(Y6), .O(Y6_c_4));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[37:39])
-    IB Y5_pad (.I(Y5), .O(Y5_c_3));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[41:43])
-    IB Y4_pad (.I(Y4), .O(Y4_c_2));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[45:47])
-    IB Y3_pad (.I(Y3), .O(Y3_c_1));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[49:51])
-    IB Y2_pad (.I(Y2), .O(Y2_c_0));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[53:55])
-    IB CCLK_pad (.I(CCLK), .O(CCLK_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(17[25:29])
-    IB SSPI_CS_n_pad (.I(SSPI_CS_n), .O(SSPI_CS_n_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(18[25:34])
-    IB DIN_pad (.I(DIN), .O(DIN_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:28])
+    IB Y9_pad (.I(Y9), .O(Y9_c_7));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[25:27])
+    IB Y8_pad (.I(Y8), .O(Y8_c_6));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[29:31])
+    IB Y7_pad (.I(Y7), .O(Y7_c_5));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[33:35])
+    IB Y6_pad (.I(Y6), .O(Y6_c_4));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[37:39])
+    IB Y5_pad (.I(Y5), .O(Y5_c_3));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[41:43])
+    IB Y4_pad (.I(Y4), .O(Y4_c_2));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[45:47])
+    IB Y3_pad (.I(Y3), .O(Y3_c_1));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[49:51])
+    IB Y2_pad (.I(Y2), .O(Y2_c_0));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[53:55])
+    IB CCLK_pad (.I(CCLK), .O(CCLK_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:29])
+    IB SSPI_CS_n_pad (.I(SSPI_CS_n), .O(SSPI_CS_n_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(20[25:34])
+    IB DIN_pad (.I(DIN), .O(DIN_c));   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(21[25:28])
     CCU2C _add_1_778_add_4_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
           .D0(VCC_net), .A1(n4889), .B1(n5350), .C1(pix_y[0]), .D1(VCC_net), 
           .COUT(n4497), .S1(n61));   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(49[29:42])
@@ -789,7 +791,7 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
             .\rptr_bin_11__N_1180[6] (rptr_bin_11__N_1180[6]), .\rptr_bin_11__N_1180[7] (rptr_bin_11__N_1180[7]), 
             .\rptr_bin_11__N_1180[8] (rptr_bin_11__N_1180[8]), .\rptr_bin_11__N_1180[9] (rptr_bin_11__N_1180[9]), 
             .\rptr_bin_11__N_1180[10] (rptr_bin_11__N_1180[10]), .\rptr_gray_11__N_1192[11] (rptr_gray_11__N_1192[11]), 
-            .\rptr_bin_11__N_1180[0] (rptr_bin_11__N_1180[0]), .stream_fifo_empty(stream_fifo_empty)) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(189[25] 212[6])
+            .\rptr_bin_11__N_1180[0] (rptr_bin_11__N_1180[0]), .stream_fifo_empty(stream_fifo_empty)) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(191[25] 214[6])
     CCU2C _add_1_830_add_4_12 (.A0(pix_y[9]), .B0(GND_net), .C0(GND_net), 
           .D0(VCC_net), .A1(pix_y[10]), .B1(GND_net), .C1(GND_net), 
           .D1(VCC_net), .CIN(n4529), .COUT(n4530));
@@ -805,7 +807,7 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
     defparam _add_1_830_add_4_10.INJECT1_0 = "NO";
     defparam _add_1_830_add_4_10.INJECT1_1 = "NO";
     pll_24m u_pll (.SD_CLK_c(SD_CLK_c), .MCLK_c(MCLK_c), .buf_CLKI(buf_CLKI), 
-            .GND_net(GND_net)) /* synthesis NGD_DRC_MASK=1, syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(48[13] 52[6])
+            .GND_net(GND_net)) /* synthesis NGD_DRC_MASK=1, syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(50[13] 54[6])
     sdram_ctrl_min u_sdram (.timer({timer}), .SD_CLK_c(SD_CLK_c), .SD_BA_c_0(SD_BA_c_0), 
             .SD_CAS_N_c(SD_CAS_N_c), .SD_DQM_c_0(SD_DQM_c_0), .ref_cnt({ref_cnt}), 
             .n81(n81), .frame_start(frame_start), .n72(n72), .n69(n69), 
@@ -840,14 +842,14 @@ module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, Y9, Y8, Y7, Y6,
             .\rptr_bin_9__N_922[5] (rptr_bin_9__N_922[5]), .wr_full_N_891(wr_full_N_891), 
             .\rptr_bin_9__N_922[6] (rptr_bin_9__N_922[6]), .\rptr_gray_9__N_932[9] (rptr_gray_9__N_932[9]), 
             .\wptr_gray[9] (wptr_gray[9]), .\rptr_gray_wr2[9] (rptr_gray_wr2[9]), 
-            .\rptr_bin_9__N_922[0] (rptr_bin_9__N_922[0])) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(122[7] 142[6])
+            .\rptr_bin_9__N_922[0] (rptr_bin_9__N_922[0])) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(124[7] 144[6])
     spi_bridge u_spi (.CCLK_c(CCLK_c), .DIN_c(DIN_c), .stream_arm_spi(stream_arm_spi), 
             .n6380(n6380), .DOUT_c(DOUT_c), .stream_fifo_empty(stream_fifo_empty), 
             .stream_fifo_rd_data({stream_fifo_rd_data}), .pix_valid_rgb(pix_valid_rgb), 
             .wptr_bin_9__N_886(wptr_bin_9__N_886), .\wptr_gray[9] (wptr_gray[9]), 
             .wr_full_N_892(wr_full_N_892), .wr_full_N_891(wr_full_N_891), 
             .\rptr_gray_wr2[9] (rptr_gray_wr2[9]), .n6201(n6201), .n6203(n6203), 
-            .rd_data_7__N_1177(rd_data_7__N_1177), .SSPI_CS_n_c(SSPI_CS_n_c)) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(217[16] 236[6])
+            .rd_data_7__N_1177(rd_data_7__N_1177), .SSPI_CS_n_c(SSPI_CS_n_c)) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(219[16] 238[6])
     VLO i1 (.Z(GND_net));
     
 endmodule
@@ -896,11 +898,11 @@ module pixel_assemble_rgb565 (HREF_c, byte_sel, n67, PCLK_c, Y2_c_0,
     LUT4 i2126_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[11]), .Z(n903)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2126_2_lut_3_lut.init = 16'h8080;
     FD1P3AX byte0_i0_i0 (.D(Y2_c_0), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i0.GSR = "DISABLED";
     LUT4 i917_2_lut_rep_113 (.A(HREF_c), .B(VSYNC_c), .Z(n6754)) /* synthesis lut_function=(!((B)+!A)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam i917_2_lut_rep_113.init = 16'h2222;
-    FD1S3AX frame_start_37 (.D(VSYNC_c), .CK(PCLK_c), .Q(frame_start)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+    FD1S3AX frame_start_37 (.D(VSYNC_c), .CK(PCLK_c), .Q(frame_start)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam frame_start_37.GSR = "DISABLED";
     LUT4 i7_4_lut (.A(pix_x[0]), .B(n14), .C(n10), .D(pix_x[4]), .Z(n5350)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(46[17:27])
     defparam i7_4_lut.init = 16'hfffe;
@@ -909,15 +911,15 @@ module pixel_assemble_rgb565 (HREF_c, byte_sel, n67, PCLK_c, Y2_c_0,
     LUT4 i2_2_lut_3_lut (.A(HREF_c), .B(VSYNC_c), .C(byte_sel), .Z(PCLK_c_enable_12)) /* synthesis lut_function=(!((B+(C))+!A)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam i2_2_lut_3_lut.init = 16'h0202;
     FD1S3IX byte_sel_42 (.D(byte_sel_N_202), .CK(PCLK_c), .CD(VSYNC_c), 
-            .Q(byte_sel)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte_sel)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte_sel_42.GSR = "DISABLED";
-    FD1S3IX pix_valid_36 (.D(n6754), .CK(PCLK_c), .CD(n2), .Q(pix_valid_rgb)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+    FD1S3IX pix_valid_36 (.D(n6754), .CK(PCLK_c), .CD(n2), .Q(pix_valid_rgb)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_valid_36.GSR = "DISABLED";
     FD1P3IX pix_x__i0 (.D(n892), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i0.GSR = "DISABLED";
     FD1P3IX pix_y__i0 (.D(n67_adj_24[0]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i0.GSR = "DISABLED";
     LUT4 byte_sel_I_0_2_lut (.A(byte_sel), .B(HREF_c), .Z(byte_sel_N_202)) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam byte_sel_I_0_2_lut.init = 16'h6666;
@@ -934,70 +936,70 @@ module pixel_assemble_rgb565 (HREF_c, byte_sel, n67, PCLK_c, Y2_c_0,
          .D(pix_x[8]), .Z(n4889)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(46[17:27])
     defparam i1_4_lut_adj_131.init = 16'hfffe;
     FD1P3AX byte0_i0_i7 (.D(Y9_c_7), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i7.GSR = "DISABLED";
     FD1P3AX byte0_i0_i6 (.D(Y8_c_6), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i6.GSR = "DISABLED";
     FD1P3AX byte0_i0_i5 (.D(Y7_c_5), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i5.GSR = "DISABLED";
     FD1P3AX byte0_i0_i4 (.D(Y6_c_4), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i4.GSR = "DISABLED";
     FD1P3AX byte0_i0_i3 (.D(Y5_c_3), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i3.GSR = "DISABLED";
     FD1P3AX byte0_i0_i2 (.D(Y4_c_2), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i2.GSR = "DISABLED";
     FD1P3AX byte0_i0_i1 (.D(Y3_c_1), .SP(PCLK_c_enable_12), .CK(PCLK_c), 
-            .Q(byte0[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(byte0[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam byte0_i0_i1.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i15 (.D(byte0[7]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[15])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[15])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i15.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i14 (.D(byte0[6]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[14])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[14])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i14.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i13 (.D(byte0[5]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[13])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[13])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i13.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i12 (.D(byte0[4]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[12])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[12])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i12.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i11 (.D(byte0[3]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i11.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i10 (.D(byte0[2]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i10.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i9 (.D(byte0[1]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i9.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i8 (.D(byte0[0]), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i8.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i7 (.D(Y9_c_7), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i7.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i6 (.D(Y8_c_6), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i6.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i5 (.D(Y7_c_5), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i5.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i4 (.D(Y6_c_4), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i4.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i3 (.D(Y5_c_3), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i3.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i2 (.D(Y4_c_2), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i2.GSR = "DISABLED";
     FD1P3AX pix_rgb565_i0_i1 (.D(Y3_c_1), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i1.GSR = "DISABLED";
     LUT4 i1_2_lut_rep_112 (.A(pix_x[2]), .B(pix_x[6]), .Z(n6753)) /* synthesis lut_function=(A+(B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(46[17:27])
     defparam i1_2_lut_rep_112.init = 16'heeee;
@@ -1007,39 +1009,39 @@ module pixel_assemble_rgb565 (HREF_c, byte_sel, n67, PCLK_c, Y2_c_0,
     LUT4 i2051_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[0]), .Z(n892)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2051_2_lut_3_lut.init = 16'h8080;
     FD1P3IX pix_x__i1 (.D(n893), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i1.GSR = "DISABLED";
     LUT4 i2116_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[1]), .Z(n893)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2116_2_lut_3_lut.init = 16'h8080;
     FD1P3IX pix_x__i2 (.D(n894), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i2.GSR = "DISABLED";
     FD1P3IX pix_x__i3 (.D(n895), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i3.GSR = "DISABLED";
     FD1P3IX pix_x__i4 (.D(n896), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i4.GSR = "DISABLED";
     FD1P3IX pix_x__i5 (.D(n897), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i5.GSR = "DISABLED";
     FD1P3IX pix_x__i6 (.D(n898), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i6.GSR = "DISABLED";
     FD1P3IX pix_x__i7 (.D(n899), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i7.GSR = "DISABLED";
     FD1P3IX pix_x__i8 (.D(n900), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i8.GSR = "DISABLED";
     FD1P3IX pix_x__i9 (.D(n901), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i9.GSR = "DISABLED";
     FD1P3IX pix_x__i10 (.D(n902), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i10.GSR = "DISABLED";
     FD1P3IX pix_x__i11 (.D(n903), .SP(PCLK_c_enable_39), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_x[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_x[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_x__i11.GSR = "DISABLED";
     LUT4 i2117_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[2]), .Z(n894)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2117_2_lut_3_lut.init = 16'h8080;
@@ -1050,41 +1052,41 @@ module pixel_assemble_rgb565 (HREF_c, byte_sel, n67, PCLK_c, Y2_c_0,
     LUT4 i2120_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[5]), .Z(n897)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2120_2_lut_3_lut.init = 16'h8080;
     FD1P3IX pix_y__i1 (.D(n67_adj_24[1]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i1.GSR = "DISABLED";
     LUT4 i2121_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[6]), .Z(n898)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2121_2_lut_3_lut.init = 16'h8080;
     LUT4 i2122_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[7]), .Z(n899)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2122_2_lut_3_lut.init = 16'h8080;
     FD1P3IX pix_y__i2 (.D(n67_adj_24[2]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i2.GSR = "DISABLED";
     FD1P3IX pix_y__i3 (.D(n67_adj_24[3]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i3.GSR = "DISABLED";
     FD1P3IX pix_y__i4 (.D(n67_adj_24[4]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i4.GSR = "DISABLED";
     FD1P3IX pix_y__i5 (.D(n67_adj_24[5]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i5.GSR = "DISABLED";
     FD1P3IX pix_y__i6 (.D(n67_adj_24[6]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i6.GSR = "DISABLED";
     FD1P3IX pix_y__i7 (.D(n67_adj_24[7]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i7.GSR = "DISABLED";
     FD1P3IX pix_y__i8 (.D(n67_adj_24[8]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i8.GSR = "DISABLED";
     FD1P3IX pix_y__i9 (.D(n67_adj_24[9]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i9.GSR = "DISABLED";
     FD1P3IX pix_y__i10 (.D(n67_adj_24[10]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i10.GSR = "DISABLED";
     FD1P3IX pix_y__i11 (.D(n67_adj_24[11]), .SP(PCLK_c_enable_50), .CD(VSYNC_c), 
-            .CK(PCLK_c), .Q(pix_y[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .CK(PCLK_c), .Q(pix_y[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_y__i11.GSR = "DISABLED";
     LUT4 i2123_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[8]), .Z(n900)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2123_2_lut_3_lut.init = 16'h8080;
@@ -1093,7 +1095,7 @@ module pixel_assemble_rgb565 (HREF_c, byte_sel, n67, PCLK_c, Y2_c_0,
     LUT4 i2125_2_lut_3_lut (.A(HREF_c), .B(byte_sel), .C(n67[10]), .Z(n902)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(44[18] 51[12])
     defparam i2125_2_lut_3_lut.init = 16'h8080;
     FD1P3AX pix_rgb565_i0_i0 (.D(Y2_c_0), .SP(PCLK_c_enable_51), .CK(PCLK_c), 
-            .Q(pix_rgb565[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=68, LSE_RLINE=81 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
+            .Q(pix_rgb565[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=27, LSE_RCOL=6, LSE_LLINE=70, LSE_RLINE=83 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(19[12] 52[8])
     defparam pix_rgb565_i0_i0.GSR = "DISABLED";
     LUT4 i1_2_lut_rep_107 (.A(VSYNC_c), .B(HREF_c), .Z(PCLK_c_enable_50)) /* synthesis lut_function=(A+!(B)) */ ;
     defparam i1_2_lut_rep_107.init = 16'hbbbb;
@@ -1184,7 +1186,7 @@ module roi_streamer_rgb565 (\pix_rgb565[4] , PCLK_c, stream_arm_spi, frame_start
     output stream_fifo_empty;
     
     wire PCLK_c /* synthesis is_clock=1, SET_AS_NETWORK=PCLK_c */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
-    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(17[25:29])
+    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:29])
     wire [2:0]state;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(32[15:20])
     
     wire n5423, arm_pclk, arm_meta, fifo_full, n6, n6686;
@@ -1201,9 +1203,9 @@ module roi_streamer_rgb565 (\pix_rgb565[4] , PCLK_c, stream_arm_spi, frame_start
     
     LUT4 i1_2_lut (.A(state[1]), .B(\pix_rgb565[4] ), .Z(n5423)) /* synthesis lut_function=(A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(79[13] 92[16])
     defparam i1_2_lut.init = 16'h8888;
-    FD1S3AX arm_pclk_56 (.D(arm_meta), .CK(PCLK_c), .Q(arm_pclk)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(25[12] 28[8])
+    FD1S3AX arm_pclk_56 (.D(arm_meta), .CK(PCLK_c), .Q(arm_pclk)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(25[12] 28[8])
     defparam arm_pclk_56.GSR = "DISABLED";
-    FD1S3AX arm_meta_55 (.D(stream_arm_spi), .CK(PCLK_c), .Q(arm_meta)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(25[12] 28[8])
+    FD1S3AX arm_meta_55 (.D(stream_arm_spi), .CK(PCLK_c), .Q(arm_meta)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(25[12] 28[8])
     defparam arm_meta_55.GSR = "DISABLED";
     LUT4 i2144_3_lut_3_lut (.A(state[1]), .B(state[0]), .C(fifo_full), 
          .Z(n6)) /* synthesis lut_function=(!((B+(C))+!A)) */ ;
@@ -1224,39 +1226,39 @@ module roi_streamer_rgb565 (\pix_rgb565[4] , PCLK_c, stream_arm_spi, frame_start
          .Z(n6297)) /* synthesis lut_function=(A (B (C (D)))+!A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(62[9] 100[16])
     defparam i4377_4_lut.init = 16'hc444;
     FD1P3AX state_i2 (.D(state_2__N_943[2]), .SP(PCLK_c_enable_4), .CK(PCLK_c), 
-            .Q(state[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+            .Q(state[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam state_i2.GSR = "DISABLED";
     FD1S3IX wr_data_i0 (.D(\pix_rgb565[0] ), .CK(PCLK_c), .CD(n3142), 
-            .Q(wr_data[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+            .Q(wr_data[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i0.GSR = "DISABLED";
     FD1P3AX state_i1 (.D(state_2__N_943[1]), .SP(PCLK_c_enable_5), .CK(PCLK_c), 
-            .Q(state[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+            .Q(state[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam state_i1.GSR = "DISABLED";
-    FD1S3IX wr_en_57 (.D(n6728), .CK(PCLK_c), .CD(n2796), .Q(wr_en)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+    FD1S3IX wr_en_57 (.D(n6728), .CK(PCLK_c), .CD(n2796), .Q(wr_en)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_en_57.GSR = "DISABLED";
-    FD1S3IX wr_data_i1 (.D(n6291), .CK(PCLK_c), .CD(n3168), .Q(wr_data[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+    FD1S3IX wr_data_i1 (.D(n6291), .CK(PCLK_c), .CD(n3168), .Q(wr_data[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i1.GSR = "DISABLED";
     LUT4 i1_4_lut (.A(wr_en_N_1072), .B(n6728), .C(n5423), .D(state[0]), 
          .Z(n4933)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(79[13] 92[16])
     defparam i1_4_lut.init = 16'h8000;
     PFUMX state_2__I_0_61_Mux_4_i7 (.BLUT(n4933), .ALUT(n6), .C0(state[2]), 
-          .Z(wr_data_7__N_946[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;
+          .Z(wr_data_7__N_946[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;
     FD1P3AX state_i0 (.D(state_2__N_943[0]), .SP(PCLK_c_enable_28), .CK(PCLK_c), 
-            .Q(state[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+            .Q(state[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam state_i0.GSR = "DISABLED";
     FD1S3IX wr_data_i2 (.D(\pix_rgb565[2] ), .CK(PCLK_c), .CD(n3142), 
-            .Q(wr_data[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+            .Q(wr_data[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i2.GSR = "DISABLED";
-    FD1S3IX wr_data_i3 (.D(n6293), .CK(PCLK_c), .CD(n3168), .Q(wr_data[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+    FD1S3IX wr_data_i3 (.D(n6293), .CK(PCLK_c), .CD(n3168), .Q(wr_data[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i3.GSR = "DISABLED";
-    FD1S3AX wr_data_i4 (.D(wr_data_7__N_946[4]), .CK(PCLK_c), .Q(wr_data[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+    FD1S3AX wr_data_i4 (.D(wr_data_7__N_946[4]), .CK(PCLK_c), .Q(wr_data[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i4.GSR = "DISABLED";
-    FD1S3IX wr_data_i5 (.D(n6295), .CK(PCLK_c), .CD(n3168), .Q(wr_data[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+    FD1S3IX wr_data_i5 (.D(n6295), .CK(PCLK_c), .CD(n3168), .Q(wr_data[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i5.GSR = "DISABLED";
     FD1S3IX wr_data_i6 (.D(\pix_rgb565[6] ), .CK(PCLK_c), .CD(n3142), 
-            .Q(wr_data[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+            .Q(wr_data[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i6.GSR = "DISABLED";
-    FD1S3IX wr_data_i7 (.D(n6297), .CK(PCLK_c), .CD(n3168), .Q(wr_data[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=189, LSE_RLINE=212 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
+    FD1S3IX wr_data_i7 (.D(n6297), .CK(PCLK_c), .CD(n3168), .Q(wr_data[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=25, LSE_RCOL=6, LSE_LLINE=191, LSE_RLINE=214 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(58[12] 101[8])
     defparam wr_data_i7.GSR = "DISABLED";
     LUT4 fifo_full_bdd_4_lut (.A(fifo_full), .B(arm_pclk), .C(state[2]), 
          .D(state[1]), .Z(n6687)) /* synthesis lut_function=(A (B (C (D)+!C !(D))+!B (C))+!A (B ((D)+!C)+!B (C+(D)))) */ ;
@@ -1393,7 +1395,7 @@ module \dc_fifo(DEPTH=2048)  (PCLK_c, \wptr_bin[1] , \wptr_bin[4] , wr_data,
     output n34;
     
     wire PCLK_c /* synthesis is_clock=1, SET_AS_NETWORK=PCLK_c */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
-    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(17[25:29])
+    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:29])
     
     wire n1782, n1781, n1789, n1788;
     wire [7:0]rd_data_7__N_1169;
@@ -2050,15 +2052,15 @@ module pll_24m (SD_CLK_c, MCLK_c, buf_CLKI, GND_net) /* synthesis NGD_DRC_MASK=1
     input buf_CLKI;
     input GND_net;
     
-    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(29[25:31])
-    wire MCLK_c /* synthesis is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(14[25:29])
+    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:31])
+    wire MCLK_c /* synthesis is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(16[25:29])
     wire buf_CLKI /* synthesis is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/pll_24m/pll_24m.v(17[10:18])
     
     EHXPLLL PLLInst_0 (.CLKI(buf_CLKI), .CLKFB(SD_CLK_c), .PHASESEL0(GND_net), 
             .PHASESEL1(GND_net), .PHASEDIR(GND_net), .PHASESTEP(GND_net), 
             .PHASELOADREG(GND_net), .STDBY(GND_net), .PLLWAKESYNC(GND_net), 
             .RST(GND_net), .ENCLKOP(GND_net), .ENCLKOS(GND_net), .ENCLKOS2(GND_net), 
-            .ENCLKOS3(GND_net), .CLKOP(SD_CLK_c), .CLKOS(MCLK_c)) /* synthesis FREQUENCY_PIN_CLKOS="24.000000", FREQUENCY_PIN_CLKOP="96.000000", FREQUENCY_PIN_CLKI="24.000000", ICP_CURRENT="5", LPF_RESISTOR="16", syn_instantiated=1, LSE_LINE_FILE_ID=4, LSE_LCOL=13, LSE_RCOL=6, LSE_LLINE=48, LSE_RLINE=52 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(48[13] 52[6])
+            .ENCLKOS3(GND_net), .CLKOP(SD_CLK_c), .CLKOS(MCLK_c)) /* synthesis FREQUENCY_PIN_CLKOS="24.000000", FREQUENCY_PIN_CLKOP="96.000000", FREQUENCY_PIN_CLKI="24.000000", ICP_CURRENT="5", LPF_RESISTOR="16", syn_instantiated=1, LSE_LINE_FILE_ID=4, LSE_LCOL=13, LSE_RCOL=6, LSE_LLINE=50, LSE_RLINE=54 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(50[13] 54[6])
     defparam PLLInst_0.CLKI_DIV = 1;
     defparam PLLInst_0.CLKFB_DIV = 4;
     defparam PLLInst_0.CLKOP_DIV = 6;
@@ -2219,7 +2221,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     output \rptr_gray_wr2[9] ;
     input \rptr_bin_9__N_922[0] ;
     
-    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(29[25:31])
+    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:31])
     wire PCLK_c /* synthesis is_clock=1, SET_AS_NETWORK=PCLK_c */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
     
     wire n6749, n28, n6043, n6758, n6747;
@@ -2288,15 +2290,15 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     defparam i4_2_lut_rep_108.init = 16'heeee;
     LUT4 i2079_4_lut (.A(n28), .B(n6043), .C(n6758), .D(n6747), .Z(n1684[0])) /* synthesis lut_function=(!(A+(B+(C+(D))))) */ ;
     defparam i2079_4_lut.init = 16'h0001;
-    FD1S3AX fs_sync_162 (.D(fs_meta), .CK(SD_CLK_c), .Q(fs_sync)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(73[14:70])
+    FD1S3AX fs_sync_162 (.D(fs_meta), .CK(SD_CLK_c), .Q(fs_sync)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(73[14:70])
     defparam fs_sync_162.GSR = "DISABLED";
     LUT4 i2_2_lut_3_lut_3_lut_4_lut_4_lut (.A(n626[7]), .B(rd_empty), .C(n626[6]), 
          .D(ref_due_N_811), .Z(n2895)) /* synthesis lut_function=(!(A+(B+!(C (D))))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i2_2_lut_3_lut_3_lut_4_lut_4_lut.init = 16'h1000;
     FD1S3IX dq_oe_172 (.D(SD_A_12__N_789[6]), .CK(SD_CLK_c), .CD(n6743), 
-            .Q(dq_oe)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+            .Q(dq_oe)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam dq_oe_172.GSR = "DISABLED";
-    FD1S3AX SD_BA__i1 (.D(bank[0]), .CK(SD_CLK_c), .Q(SD_BA_c_0)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX SD_BA__i1 (.D(bank[0]), .CK(SD_CLK_c), .Q(SD_BA_c_0)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_BA__i1.GSR = "DISABLED";
     LUT4 i1_2_lut_3_lut_4_lut (.A(timer[15]), .B(timer[11]), .C(timer[14]), 
          .D(timer[8]), .Z(n6137)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
@@ -2306,19 +2308,19 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     LUT4 i1_4_lut (.A(n626[6]), .B(n6723), .C(n3), .D(ref_due_N_811), 
          .Z(timer_15__N_529[2])) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i1_4_lut.init = 16'hecee;
-    FD1S3AX SD_CAS_N_166 (.D(SD_CAS_N_N_809), .CK(SD_CLK_c), .Q(SD_CAS_N_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX SD_CAS_N_166 (.D(SD_CAS_N_N_809), .CK(SD_CLK_c), .Q(SD_CAS_N_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_CAS_N_166.GSR = "DISABLED";
-    FD1S3AX SD_DQM_i1 (.D(SD_DQM_1__N_499[0]), .CK(SD_CLK_c), .Q(SD_DQM_c_0)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX SD_DQM_i1 (.D(SD_DQM_1__N_499[0]), .CK(SD_CLK_c), .Q(SD_DQM_c_0)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_DQM_i1.GSR = "DISABLED";
-    FD1S3AX timer_i0 (.D(timer_15__N_529[0]), .CK(SD_CLK_c), .Q(timer[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i0 (.D(timer_15__N_529[0]), .CK(SD_CLK_c), .Q(timer[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i0.GSR = "DISABLED";
     FD1P3AX bank_i0 (.D(bank_1__N_523[0]), .SP(SD_CLK_c_enable_1), .CK(SD_CLK_c), 
-            .Q(bank[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+            .Q(bank[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam bank_i0.GSR = "DISABLED";
     FD1P3IX ref_cnt_i0 (.D(n81), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i0.GSR = "DISABLED";
-    FD1S3AX fs_meta_161 (.D(frame_start), .CK(SD_CLK_c), .Q(fs_meta)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(73[14:70])
+    FD1S3AX fs_meta_161 (.D(frame_start), .CK(SD_CLK_c), .Q(fs_meta)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(73[14:70])
     defparam fs_meta_161.GSR = "DISABLED";
     LUT4 i1_2_lut_adj_39 (.A(rd_empty), .B(timer[2]), .Z(n3)) /* synthesis lut_function=(A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i1_2_lut_adj_39.init = 16'h8888;
@@ -2352,7 +2354,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     defparam i1_4_lut_adj_47.init = 16'heca0;
     LUT4 i1_2_lut_adj_48 (.A(SD_DQM_1__N_802[1]), .B(n63), .Z(n5783)) /* synthesis lut_function=(A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i1_2_lut_adj_48.init = 16'h8888;
-    FD1S3IX SD_A_i10 (.D(n2895), .CK(SD_CLK_c), .CD(n3162), .Q(SD_A_c_9)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i10 (.D(n2895), .CK(SD_CLK_c), .CD(n3162), .Q(SD_A_c_9)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i10.GSR = "DISABLED";
     FD1P3IX row_530__i0 (.D(n1[0]), .SP(SD_CLK_c_enable_24), .CD(n3161), 
             .CK(SD_CLK_c), .Q(row[0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(217[41:51])
@@ -2363,7 +2365,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     LUT4 i1_4_lut_adj_49 (.A(SD_DQM_1__N_802[1]), .B(n11), .C(n6737), 
          .D(n60), .Z(timer_15__N_529[7])) /* synthesis lut_function=(A (B+(C (D)))+!A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i1_4_lut_adj_49.init = 16'heccc;
-    FD1S3IX SD_A_i12 (.D(n2895), .CK(SD_CLK_c), .CD(n3163), .Q(SD_A_c_11)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i12 (.D(n2895), .CK(SD_CLK_c), .CD(n3163), .Q(SD_A_c_11)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i12.GSR = "DISABLED";
     LUT4 i1_2_lut_adj_50 (.A(timer[7]), .B(n16), .Z(n11)) /* synthesis lut_function=(A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i1_2_lut_adj_50.init = 16'h8888;
@@ -2459,7 +2461,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
             .CK(SD_CLK_c), .Q(col[3])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(218[37:47])
     defparam col_531__i3.GSR = "DISABLED";
     FD1P3JX ref_cnt_i6 (.D(\ref_cnt_15__N_561[6] ), .SP(SD_CLK_c_enable_30), 
-            .PD(ref_cnt_15__N_577), .CK(SD_CLK_c), .Q(ref_cnt[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .PD(ref_cnt_15__N_577), .CK(SD_CLK_c), .Q(ref_cnt[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i6.GSR = "DISABLED";
     FD1P3IX col_531__i0 (.D(n41[0]), .SP(SD_CLK_c_enable_29), .CD(SD_CLK_c_enable_24), 
             .CK(SD_CLK_c), .Q(col[0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(218[37:47])
@@ -2497,7 +2499,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
             .CK(SD_CLK_c), .Q(row[9])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(217[41:51])
     defparam row_530__i9.GSR = "DISABLED";
     FD1P3JX ref_cnt_i5 (.D(\ref_cnt_15__N_561[5] ), .SP(SD_CLK_c_enable_30), 
-            .PD(ref_cnt_15__N_577), .CK(SD_CLK_c), .Q(ref_cnt[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .PD(ref_cnt_15__N_577), .CK(SD_CLK_c), .Q(ref_cnt[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i5.GSR = "DISABLED";
     LUT4 i962_4_lut (.A(n5322), .B(n6352), .C(n6735), .D(n6017), .Z(n2750)) /* synthesis lut_function=(A+!(B+!(C (D)))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i962_4_lut.init = 16'hbaaa;
@@ -2525,7 +2527,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     LUT4 i950_4_lut (.A(ref_cnt_15__N_577), .B(n6193), .C(SD_DQM_1__N_802[1]), 
          .D(n6346), .Z(n2738)) /* synthesis lut_function=(A (B (C+!(D))+!B (C))+!A !((D)+!B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam i950_4_lut.init = 16'ha0ec;
-    FD1S3JX SD_RAS_N_167 (.D(n767), .CK(SD_CLK_c), .PD(n87), .Q(SD_RAS_N_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3JX SD_RAS_N_167 (.D(n767), .CK(SD_CLK_c), .PD(n87), .Q(SD_RAS_N_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_RAS_N_167.GSR = "DISABLED";
     LUT4 i1_4_lut_adj_71 (.A(n6187), .B(n6262), .C(n6312), .D(ref_cnt[8]), 
          .Z(n6193)) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;
@@ -2554,9 +2556,9 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     LUT4 i1369_4_lut (.A(SD_CLK_c_enable_24), .B(n6077), .C(n6071), .D(n13), 
          .Z(n3161)) /* synthesis lut_function=(A (B+(C+!(D)))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(217[41:51])
     defparam i1369_4_lut.init = 16'ha8aa;
-    FD1S3AX SD_BA__i2 (.D(bank[1]), .CK(SD_CLK_c), .Q(SD_BA_c_1)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX SD_BA__i2 (.D(bank[1]), .CK(SD_CLK_c), .Q(SD_BA_c_1)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_BA__i2.GSR = "DISABLED";
-    FD1S3IX SD_A_i1 (.D(n4753), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_0)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i1 (.D(n4753), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_0)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i1.GSR = "DISABLED";
     LUT4 i1_3_lut_4_lut (.A(timer[10]), .B(timer[7]), .C(n6758), .D(n6127), 
          .Z(n5453)) /* synthesis lut_function=(!(A+(B+((D)+!C)))) */ ;
@@ -2585,95 +2587,95 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
     LUT4 i1_4_lut_adj_76 (.A(n6039), .B(n6752), .C(n6029), .D(timer[0]), 
          .Z(n6043)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i1_4_lut_adj_76.init = 16'hfffe;
-    FD1S3IX SD_A_i2 (.D(n4751), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_1)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i2 (.D(n4751), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_1)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i2.GSR = "DISABLED";
-    FD1S3IX SD_A_i3 (.D(n1330[2]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_2)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i3 (.D(n1330[2]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_2)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i3.GSR = "DISABLED";
-    FD1S3IX SD_A_i4 (.D(n1330[3]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_3)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i4 (.D(n1330[3]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_3)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i4.GSR = "DISABLED";
-    FD1S3IX SD_A_i5 (.D(n4749), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_4)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i5 (.D(n4749), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_4)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i5.GSR = "DISABLED";
-    FD1S3IX SD_A_i6 (.D(n1330[5]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_5)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i6 (.D(n1330[5]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_5)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i6.GSR = "DISABLED";
-    FD1S3IX SD_A_i7 (.D(n4755), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_6)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i7 (.D(n4755), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_6)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i7.GSR = "DISABLED";
-    FD1S3IX SD_A_i8 (.D(n1330[7]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_7)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i8 (.D(n1330[7]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_7)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i8.GSR = "DISABLED";
-    FD1S3IX SD_A_i9 (.D(n1330[8]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_8)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i9 (.D(n1330[8]), .CK(SD_CLK_c), .CD(n3139), .Q(SD_A_c_8)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i9.GSR = "DISABLED";
-    FD1S3AX SD_A_i11 (.D(SD_A_12__N_482[10]), .CK(SD_CLK_c), .Q(SD_A_c_10)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX SD_A_i11 (.D(SD_A_12__N_482[10]), .CK(SD_CLK_c), .Q(SD_A_c_10)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i11.GSR = "DISABLED";
-    FD1S3JX timer_i1 (.D(n4741), .CK(SD_CLK_c), .PD(n626[8]), .Q(timer[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3JX timer_i1 (.D(n4741), .CK(SD_CLK_c), .PD(n626[8]), .Q(timer[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i1.GSR = "DISABLED";
-    FD1S3AX timer_i2 (.D(timer_15__N_529[2]), .CK(SD_CLK_c), .Q(timer[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i2 (.D(timer_15__N_529[2]), .CK(SD_CLK_c), .Q(timer[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i2.GSR = "DISABLED";
-    FD1S3AX timer_i3 (.D(timer_15__N_529[3]), .CK(SD_CLK_c), .Q(timer[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i3 (.D(timer_15__N_529[3]), .CK(SD_CLK_c), .Q(timer[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i3.GSR = "DISABLED";
-    FD1S3AX timer_i4 (.D(timer_15__N_529[4]), .CK(SD_CLK_c), .Q(timer[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i4 (.D(timer_15__N_529[4]), .CK(SD_CLK_c), .Q(timer[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i4.GSR = "DISABLED";
-    FD1S3AX timer_i5 (.D(timer_15__N_529[5]), .CK(SD_CLK_c), .Q(timer[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i5 (.D(timer_15__N_529[5]), .CK(SD_CLK_c), .Q(timer[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i5.GSR = "DISABLED";
-    FD1S3AX timer_i6 (.D(timer_15__N_529[6]), .CK(SD_CLK_c), .Q(timer[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i6 (.D(timer_15__N_529[6]), .CK(SD_CLK_c), .Q(timer[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i6.GSR = "DISABLED";
-    FD1S3AX timer_i7 (.D(timer_15__N_529[7]), .CK(SD_CLK_c), .Q(timer[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i7 (.D(timer_15__N_529[7]), .CK(SD_CLK_c), .Q(timer[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i7.GSR = "DISABLED";
-    FD1S3AX timer_i8 (.D(timer_15__N_529[8]), .CK(SD_CLK_c), .Q(timer[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i8 (.D(timer_15__N_529[8]), .CK(SD_CLK_c), .Q(timer[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i8.GSR = "DISABLED";
-    FD1S3AX timer_i9 (.D(timer_15__N_529[9]), .CK(SD_CLK_c), .Q(timer[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i9 (.D(timer_15__N_529[9]), .CK(SD_CLK_c), .Q(timer[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i9.GSR = "DISABLED";
-    FD1S3AX timer_i10 (.D(timer_15__N_529[10]), .CK(SD_CLK_c), .Q(timer[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i10 (.D(timer_15__N_529[10]), .CK(SD_CLK_c), .Q(timer[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i10.GSR = "DISABLED";
-    FD1S3AX timer_i11 (.D(timer_15__N_529[11]), .CK(SD_CLK_c), .Q(timer[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i11 (.D(timer_15__N_529[11]), .CK(SD_CLK_c), .Q(timer[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i11.GSR = "DISABLED";
-    FD1S3AX timer_i12 (.D(timer_15__N_529[12]), .CK(SD_CLK_c), .Q(timer[12])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i12 (.D(timer_15__N_529[12]), .CK(SD_CLK_c), .Q(timer[12])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i12.GSR = "DISABLED";
-    FD1S3AX timer_i13 (.D(timer_15__N_529[13]), .CK(SD_CLK_c), .Q(timer[13])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i13 (.D(timer_15__N_529[13]), .CK(SD_CLK_c), .Q(timer[13])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i13.GSR = "DISABLED";
-    FD1S3AX timer_i14 (.D(timer_15__N_529[14]), .CK(SD_CLK_c), .Q(timer[14])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i14 (.D(timer_15__N_529[14]), .CK(SD_CLK_c), .Q(timer[14])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i14.GSR = "DISABLED";
-    FD1S3AX timer_i15 (.D(timer_15__N_529[15]), .CK(SD_CLK_c), .Q(timer[15])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3AX timer_i15 (.D(timer_15__N_529[15]), .CK(SD_CLK_c), .Q(timer[15])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam timer_i15.GSR = "DISABLED";
     FD1P3AX bank_i1 (.D(bank_1__N_523[1]), .SP(SD_CLK_c_enable_28), .CK(SD_CLK_c), 
-            .Q(bank[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+            .Q(bank[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam bank_i1.GSR = "DISABLED";
     LUT4 i1_4_lut_adj_77 (.A(n6749), .B(n6744), .C(timer[7]), .D(n626[8]), 
          .Z(n6039)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i1_4_lut_adj_77.init = 16'hfffe;
     FD1P3IX ref_cnt_i2 (.D(n75), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i2.GSR = "DISABLED";
     FD1P3IX ref_cnt_i3 (.D(n72_adj_1), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i3.GSR = "DISABLED";
     FD1P3IX ref_cnt_i4 (.D(n69_adj_2), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i4.GSR = "DISABLED";
     FD1P3IX ref_cnt_i7 (.D(n60_adj_3), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i7.GSR = "DISABLED";
     FD1P3IX ref_cnt_i8 (.D(n57_adj_4), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[8])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i8.GSR = "DISABLED";
     FD1P3IX ref_cnt_i9 (.D(n54), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[9])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i9.GSR = "DISABLED";
     FD1P3IX ref_cnt_i10 (.D(n51_adj_5), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[10])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i10.GSR = "DISABLED";
     FD1P3IX ref_cnt_i11 (.D(n48_adj_6), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[11])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i11.GSR = "DISABLED";
     FD1P3IX ref_cnt_i12 (.D(n45_adj_7), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[12])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[12])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i12.GSR = "DISABLED";
     FD1P3IX ref_cnt_i13 (.D(n42), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[13])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[13])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i13.GSR = "DISABLED";
     FD1P3IX ref_cnt_i14 (.D(n39_adj_8), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[14])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[14])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i14.GSR = "DISABLED";
     FD1P3IX ref_cnt_i15 (.D(n36_adj_9), .SP(ref_due_N_811), .CD(ref_cnt_15__N_577), 
-            .CK(SD_CLK_c), .Q(ref_cnt[15])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .CK(SD_CLK_c), .Q(ref_cnt[15])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i15.GSR = "DISABLED";
     LUT4 i1_4_lut_adj_78 (.A(n626[6]), .B(n6724), .C(n3_adj_1331), .D(ref_due_N_811), 
          .Z(timer_15__N_529[0])) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B)) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
@@ -2712,7 +2714,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
             .CK(SD_CLK_c), .Q(col[5])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(218[37:47])
     defparam col_531__i5.GSR = "DISABLED";
     FD1P3JX ref_cnt_i1 (.D(\ref_cnt_15__N_561[1] ), .SP(SD_CLK_c_enable_30), 
-            .PD(ref_cnt_15__N_577), .CK(SD_CLK_c), .Q(ref_cnt[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
+            .PD(ref_cnt_15__N_577), .CK(SD_CLK_c), .Q(ref_cnt[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(104[14] 105[59])
     defparam ref_cnt_i1.GSR = "DISABLED";
     LUT4 i1_3_lut_4_lut_adj_82 (.A(n28), .B(n6749), .C(col[7]), .D(n6747), 
          .Z(n6071)) /* synthesis lut_function=(A+(B+((D)+!C))) */ ;
@@ -2767,7 +2769,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
           .C0(n626[7]), .Z(n1330[7]));
     LUT4 i4308_2_lut_rep_104 (.A(col[8]), .B(col[3]), .Z(n6745)) /* synthesis lut_function=(A (B)) */ ;
     defparam i4308_2_lut_rep_104.init = 16'h8888;
-    FD1S3IX SD_A_i13 (.D(n2895), .CK(SD_CLK_c), .CD(n3164), .Q(SD_A_c_12)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+    FD1S3IX SD_A_i13 (.D(n2895), .CK(SD_CLK_c), .CD(n3164), .Q(SD_A_c_12)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_A_i13.GSR = "DISABLED";
     FD1S3AX state_FSM_i7 (.D(n2748), .CK(SD_CLK_c), .Q(n626[7]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(139[13] 223[20])
     defparam state_FSM_i7.GSR = "DISABLED";
@@ -2839,7 +2841,7 @@ module sdram_ctrl_min (timer, SD_CLK_c, SD_BA_c_0, SD_CAS_N_c, SD_DQM_c_0,
          .Z(n6356)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i4436_4_lut.init = 16'hfffe;
     FD1S3JX SD_WE_N_165 (.D(n3138), .CK(SD_CLK_c), .PD(SD_DQM_1__N_802[1]), 
-            .Q(SD_WE_N_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=122, LSE_RLINE=142 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
+            .Q(SD_WE_N_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=7, LSE_RCOL=6, LSE_LLINE=124, LSE_RLINE=144 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(130[18] 224[12])
     defparam SD_WE_N_165.GSR = "DISABLED";
     LUT4 i1_4_lut_4_lut_adj_92 (.A(n6747), .B(n5955), .C(n5877), .D(n6735), 
          .Z(SD_A_12__N_763[5])) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;
@@ -3137,7 +3139,7 @@ module \dc_fifo(WIDTH=16,DEPTH=512)  (\wptr_bin_9__N_876[1] , \wptr_bin_9__N_876
     input \rptr_bin_9__N_922[0] ;
     
     wire PCLK_c /* synthesis is_clock=1, SET_AS_NETWORK=PCLK_c */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
-    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(29[25:31])
+    wire SD_CLK_c /* synthesis SET_AS_NETWORK=SD_CLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(31[25:31])
     wire [9:0]wptr_gray_9__N_893;
     
     wire n4443;
@@ -3815,11 +3817,11 @@ module spi_bridge (CCLK_c, DIN_c, stream_arm_spi, n6380, DOUT_c, stream_fifo_emp
     output rd_data_7__N_1177;
     input SSPI_CS_n_c;
     
-    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(17[25:29])
+    wire CCLK_c /* synthesis SET_AS_NETWORK=CCLK_c, is_clock=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(19[25:29])
     wire [15:0]n33;
     
     wire CCLK_c_enable_29, n5379, n6368;
-    wire [1:0]mode_req;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(86[16:24])
+    wire [1:0]mode_req;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(88[16:24])
     
     wire n6765;
     wire [15:0]n498;
@@ -3868,10 +3870,10 @@ module spi_bridge (CCLK_c, DIN_c, stream_arm_spi, n6380, DOUT_c, stream_fifo_emp
          .D(bit_cnt[2]), .Z(CCLK_c_enable_20)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(101[25:39])
     defparam i1_2_lut_3_lut_4_lut.init = 16'h8000;
     FD1P3AX cmd_i0_i0 (.D(DIN_c), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i0.GSR = "ENABLED";
     FD1P3AX stream_arm_80 (.D(n6380), .SP(CCLK_c_enable_5), .CK(CCLK_c), 
-            .Q(stream_arm_spi)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(stream_arm_spi)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam stream_arm_80.GSR = "ENABLED";
     LUT4 i2661_2_lut_3_lut (.A(bit_cnt[1]), .B(bit_cnt[0]), .C(bit_cnt[2]), 
          .Z(n17[2])) /* synthesis lut_function=(!(A (B (C)+!B !(C))+!A !(C))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(101[25:39])
@@ -3890,17 +3892,17 @@ module spi_bridge (CCLK_c, DIN_c, stream_arm_spi, n6380, DOUT_c, stream_fifo_emp
          .D(bit_cnt[0]), .Z(n6338)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i4418_2_lut_3_lut_4_lut.init = 16'hfffe;
     FD1P3AX mode_req_i0_i0 (.D(rx_byte[0]), .SP(CCLK_c_enable_26), .CK(CCLK_c), 
-            .Q(mode_req[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(mode_req[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam mode_req_i0_i0.GSR = "ENABLED";
     FD1P3AX rx_byte__i1 (.D(DIN_c), .SP(CCLK_c_enable_27), .CK(CCLK_c), 
-            .Q(rx_byte[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(rx_byte[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam rx_byte__i1.GSR = "ENABLED";
-    FD1S3AX shift_in_i1 (.D(DIN_c), .CK(CCLK_c), .Q(shift_in[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_in_i1 (.D(DIN_c), .CK(CCLK_c), .Q(shift_in[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_in_i1.GSR = "ENABLED";
     FD1S3IX shift_out_i0 (.D(shift_out_7__N_1277[0]), .CK(CCLK_c), .CD(n5), 
-            .Q(shift_out[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(shift_out[0])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i0.GSR = "ENABLED";
-    FD1S3AX DOUT_78 (.D(shift_out[7]), .CK(CCLK_c), .Q(DOUT_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX DOUT_78 (.D(shift_out[7]), .CK(CCLK_c), .Q(DOUT_c)) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam DOUT_78.GSR = "ENABLED";
     LUT4 i1_2_lut (.A(stream_fifo_empty), .B(cmd[2]), .Z(n4)) /* synthesis lut_function=(!(A+!(B))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(93[30] 94[55])
     defparam i1_2_lut.init = 16'h4444;
@@ -3993,27 +3995,27 @@ module spi_bridge (CCLK_c, DIN_c, stream_arm_spi, n6380, DOUT_c, stream_fifo_emp
             .Q(n33[1]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(122[39:56])
     defparam byte_phase_FSM__i1.GSR = "ENABLED";
     FD1P3AX cmd_i0_i1 (.D(shift_in[0]), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i1.GSR = "ENABLED";
     LUT4 i2654_2_lut (.A(bit_cnt[1]), .B(bit_cnt[0]), .Z(n17[1])) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(101[25:39])
     defparam i2654_2_lut.init = 16'h6666;
     FD1P3AX cmd_i0_i2 (.D(shift_in[1]), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i2.GSR = "ENABLED";
     FD1P3AX cmd_i0_i3 (.D(shift_in[2]), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i3.GSR = "ENABLED";
     FD1P3AX cmd_i0_i4 (.D(shift_in[3]), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i4.GSR = "ENABLED";
     FD1P3AX cmd_i0_i5 (.D(shift_in[4]), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i5.GSR = "ENABLED";
     FD1P3AX cmd_i0_i6 (.D(shift_in[5]), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i6.GSR = "ENABLED";
     FD1P3AX cmd_i0_i7 (.D(shift_in[6]), .SP(CCLK_c_enable_20), .CK(CCLK_c), 
-            .Q(cmd[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(cmd[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam cmd_i0_i7.GSR = "ENABLED";
     FD1P3IX byte_phase_FSM__i14 (.D(n498[13]), .SP(CCLK_c_enable_29), .CD(CCLK_c_enable_20), 
             .CK(CCLK_c), .Q(n498[14]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(122[39:56])
@@ -4031,36 +4033,36 @@ module spi_bridge (CCLK_c, DIN_c, stream_arm_spi, n6380, DOUT_c, stream_fifo_emp
             .CK(CCLK_c), .Q(n498[7]));   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(122[39:56])
     defparam byte_phase_FSM__i7.GSR = "ENABLED";
     FD1P3AX mode_req_i0_i1 (.D(rx_byte[1]), .SP(CCLK_c_enable_26), .CK(CCLK_c), 
-            .Q(mode_req[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(mode_req[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam mode_req_i0_i1.GSR = "ENABLED";
     FD1P3AX rx_byte__i2 (.D(shift_in[0]), .SP(CCLK_c_enable_27), .CK(CCLK_c), 
-            .Q(rx_byte[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+            .Q(rx_byte[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam rx_byte__i2.GSR = "ENABLED";
-    FD1S3AX shift_in_i2 (.D(shift_in[0]), .CK(CCLK_c), .Q(shift_in[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_in_i2 (.D(shift_in[0]), .CK(CCLK_c), .Q(shift_in[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_in_i2.GSR = "ENABLED";
-    FD1S3AX shift_in_i3 (.D(shift_in[1]), .CK(CCLK_c), .Q(shift_in[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_in_i3 (.D(shift_in[1]), .CK(CCLK_c), .Q(shift_in[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_in_i3.GSR = "ENABLED";
-    FD1S3AX shift_in_i4 (.D(shift_in[2]), .CK(CCLK_c), .Q(shift_in[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_in_i4 (.D(shift_in[2]), .CK(CCLK_c), .Q(shift_in[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_in_i4.GSR = "ENABLED";
-    FD1S3AX shift_in_i5 (.D(shift_in[3]), .CK(CCLK_c), .Q(shift_in[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_in_i5 (.D(shift_in[3]), .CK(CCLK_c), .Q(shift_in[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_in_i5.GSR = "ENABLED";
-    FD1S3AX shift_in_i6 (.D(shift_in[4]), .CK(CCLK_c), .Q(shift_in[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_in_i6 (.D(shift_in[4]), .CK(CCLK_c), .Q(shift_in[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_in_i6.GSR = "ENABLED";
-    FD1S3AX shift_in_i7 (.D(shift_in[5]), .CK(CCLK_c), .Q(shift_in[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_in_i7 (.D(shift_in[5]), .CK(CCLK_c), .Q(shift_in[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_in_i7.GSR = "ENABLED";
-    FD1S3AX shift_out_i1 (.D(shift_out_7__N_1209[1]), .CK(CCLK_c), .Q(shift_out[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_out_i1 (.D(shift_out_7__N_1209[1]), .CK(CCLK_c), .Q(shift_out[1])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i1.GSR = "ENABLED";
-    FD1S3AX shift_out_i2 (.D(shift_out_7__N_1209[2]), .CK(CCLK_c), .Q(shift_out[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_out_i2 (.D(shift_out_7__N_1209[2]), .CK(CCLK_c), .Q(shift_out[2])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i2.GSR = "ENABLED";
-    FD1S3AX shift_out_i3 (.D(shift_out_7__N_1209[3]), .CK(CCLK_c), .Q(shift_out[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_out_i3 (.D(shift_out_7__N_1209[3]), .CK(CCLK_c), .Q(shift_out[3])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i3.GSR = "ENABLED";
-    FD1S3AX shift_out_i4 (.D(shift_out_7__N_1209[4]), .CK(CCLK_c), .Q(shift_out[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_out_i4 (.D(shift_out_7__N_1209[4]), .CK(CCLK_c), .Q(shift_out[4])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i4.GSR = "ENABLED";
-    FD1S3AX shift_out_i5 (.D(shift_out_7__N_1209[5]), .CK(CCLK_c), .Q(shift_out[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_out_i5 (.D(shift_out_7__N_1209[5]), .CK(CCLK_c), .Q(shift_out[5])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i5.GSR = "ENABLED";
-    FD1S3AX shift_out_i6 (.D(shift_out_7__N_1209[6]), .CK(CCLK_c), .Q(shift_out[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_out_i6 (.D(shift_out_7__N_1209[6]), .CK(CCLK_c), .Q(shift_out[6])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i6.GSR = "ENABLED";
-    FD1S3AX shift_out_i7 (.D(shift_out_7__N_1209[7]), .CK(CCLK_c), .Q(shift_out[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=217, LSE_RLINE=236 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
+    FD1S3AX shift_out_i7 (.D(shift_out_7__N_1209[7]), .CK(CCLK_c), .Q(shift_out[7])) /* synthesis LSE_LINE_FILE_ID=4, LSE_LCOL=16, LSE_RCOL=6, LSE_LLINE=219, LSE_RLINE=238 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam shift_out_i7.GSR = "ENABLED";
     LUT4 i4528_4_lut (.A(n6163), .B(n33[1]), .C(cmd[1]), .D(n7), .Z(CCLK_c_enable_26)) /* synthesis lut_function=(!(A+(((D)+!C)+!B))) */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(90[18] 130[12])
     defparam i4528_4_lut.init = 16'h0040;

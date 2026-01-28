@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sat Jan 10 18:48:28 2026
+Wed Jan 28 06:55:09 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -21,44 +21,6 @@ Report level:    verbose report, limited to 3 items per constraint
 Constraint: create_clock -period 5.000000 -name clk2 [get_nets CCLK_c]
             2227 items scored, 2001 timing errors detected.
 --------------------------------------------------------------------------------
-
-
-Error:  The following path violates requirements by 3.873ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3AX    CK             \u_stream/u_dc/rptr_gray_i0_i10  (from CCLK_c +)
-   Destination:    DP16KD     ADB[14]        \u_stream/u_dc/mem0  (to CCLK_c +)
-
-   Delay:                   8.639ns  (18.7% logic, 81.3% route), 8 logic levels.
-
- Constraint Details:
-
-      8.639ns data_path \u_stream/u_dc/rptr_gray_i0_i10 to \u_stream/u_dc/mem0 violates
-      5.000ns delay constraint less
-      0.234ns EBSWAD_S requirement (totaling 4.766ns) by 3.873ns
-
- Path Details: \u_stream/u_dc/rptr_gray_i0_i10 to \u_stream/u_dc/mem0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \u_stream/u_dc/rptr_gray_i0_i10 (from CCLK_c)
-Route         2   e 1.258                                  \u_stream/u_dc/rptr_gray[10]
-A1_TO_FCO   ---     0.329           C[2] to COUT           \u_stream/u_dc/wptr_gray_rd2_11__I_0_0
-Route         1   e 0.020                                  \u_stream/u_dc/n4450
-FCI_TO_FCO  ---     0.051            CIN to COUT           \u_stream/u_dc/wptr_gray_rd2_11__I_0_9
-Route         1   e 0.020                                  \u_stream/u_dc/n4451
-FCI_TO_FCO  ---     0.051            CIN to COUT           \u_stream/u_dc/wptr_gray_rd2_11__I_0_11
-Route         1   e 0.020                                  \u_stream/u_dc/n4452
-FCI_TO_F    ---     0.322            CIN to S[2]           \u_stream/u_dc/wptr_gray_rd2_11__I_0_12
-Route         4   e 1.397                                  stream_fifo_empty
-LUT4        ---     0.166              A to Z              \u_spi/i1_2_lut
-Route         6   e 1.378                                  \u_spi/n4
-LUT4        ---     0.166              B to Z              \u_spi/i1_4_lut_adj_30
-Route        43   e 1.772                                  rd_data_7__N_1177
-LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i5_3_lut
-Route         2   e 1.158                                  \u_stream/u_dc/n1741
-                  --------
-                    8.639  (18.7% logic, 81.3% route), 8 logic levels.
 
 
 Error:  The following path violates requirements by 3.873ns
@@ -131,8 +93,46 @@ LUT4        ---     0.166              A to Z              \u_spi/i1_2_lut
 Route         6   e 1.378                                  \u_spi/n4
 LUT4        ---     0.166              B to Z              \u_spi/i1_4_lut_adj_30
 Route        43   e 1.772                                  rd_data_7__N_1177
-LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i6_3_lut
-Route         2   e 1.158                                  \u_stream/u_dc/n1740
+LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i9_3_lut
+Route         2   e 1.158                                  \u_stream/u_dc/n1737
+                  --------
+                    8.639  (18.7% logic, 81.3% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 3.873ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_stream/u_dc/rptr_gray_i0_i10  (from CCLK_c +)
+   Destination:    DP16KD     ADB[14]        \u_stream/u_dc/mem0  (to CCLK_c +)
+
+   Delay:                   8.639ns  (18.7% logic, 81.3% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.639ns data_path \u_stream/u_dc/rptr_gray_i0_i10 to \u_stream/u_dc/mem0 violates
+      5.000ns delay constraint less
+      0.234ns EBSWAD_S requirement (totaling 4.766ns) by 3.873ns
+
+ Path Details: \u_stream/u_dc/rptr_gray_i0_i10 to \u_stream/u_dc/mem0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_stream/u_dc/rptr_gray_i0_i10 (from CCLK_c)
+Route         2   e 1.258                                  \u_stream/u_dc/rptr_gray[10]
+A1_TO_FCO   ---     0.329           C[2] to COUT           \u_stream/u_dc/wptr_gray_rd2_11__I_0_0
+Route         1   e 0.020                                  \u_stream/u_dc/n4450
+FCI_TO_FCO  ---     0.051            CIN to COUT           \u_stream/u_dc/wptr_gray_rd2_11__I_0_9
+Route         1   e 0.020                                  \u_stream/u_dc/n4451
+FCI_TO_FCO  ---     0.051            CIN to COUT           \u_stream/u_dc/wptr_gray_rd2_11__I_0_11
+Route         1   e 0.020                                  \u_stream/u_dc/n4452
+FCI_TO_F    ---     0.322            CIN to S[2]           \u_stream/u_dc/wptr_gray_rd2_11__I_0_12
+Route         4   e 1.397                                  stream_fifo_empty
+LUT4        ---     0.166              A to Z              \u_spi/i1_2_lut
+Route         6   e 1.378                                  \u_spi/n4
+LUT4        ---     0.166              B to Z              \u_spi/i1_4_lut_adj_30
+Route        43   e 1.772                                  rd_data_7__N_1177
+LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i8_3_lut
+Route         2   e 1.158                                  \u_stream/u_dc/n1738
                   --------
                     8.639  (18.7% logic, 81.3% route), 8 logic levels.
 
@@ -258,9 +258,9 @@ LUT4        ---     0.166              C to Z              \u_stream/u_dc/i1_2_l
 Route         1   e 1.020                                  \u_stream/u_dc/n6730
 LUT4        ---     0.166              B to Z              \u_stream/u_dc/i1_4_lut
 Route         4   e 1.297                                  \u_stream/n34
-LUT4        ---     0.166              B to Z              \u_stream/n6497_bdd_4_lut_else_3_lut
-Route         1   e 0.020                                  \u_stream/n6762
-MUXL5       ---     0.116           BLUT to Z              \u_stream/i4624
+LUT4        ---     0.166              B to Z              \u_stream/n6497_bdd_4_lut_then_3_lut
+Route         1   e 0.020                                  \u_stream/n6763
+MUXL5       ---     0.116           ALUT to Z              \u_stream/i4624
 Route         1   e 1.020                                  \u_stream/PCLK_c_enable_5
                   --------
                     7.804  (22.2% logic, 77.8% route), 9 logic levels.
@@ -435,5 +435,5 @@ Timing errors: 2783  Score: 6009546
 Constraints cover  12231 paths, 1005 nets, and 2556 connections (86.9% coverage)
 
 
-Peak memory: 101588992 bytes, TRCE: 1486848 bytes, DLYMAN: 0 bytes
+Peak memory: 99684352 bytes, TRCE: 1069056 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

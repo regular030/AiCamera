@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jan 10 18:48:26 2026
+Wed Jan 28 06:55:07 2026
 
 
 Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
@@ -116,7 +116,9 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
 Package Status:                     Final          Version 1.44.
 Top-level module name = fpga_top.
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(182): Register roi_valid_spi_42 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(184): Register roi_valid_spi_42 is stuck at One. VDB-5014
+WARNING - synthesis: I/O Port FSDA 's net has no driver and is unused.
+WARNING - synthesis: I/O Port FSCL 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[7] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[6] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[5] 's net has no driver and is unused.
@@ -217,6 +219,8 @@ original encoding -> new encoding (one-hot encoding)
 
 ######## Mapping RTL RAM \u_sdram/u_fifo/mem to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
 
+WARNING - synthesis: I/O Port FSDA 's net has no driver and is unused.
+WARNING - synthesis: I/O Port FSCL 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[7] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[6] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[5] 's net has no driver and is unused.
@@ -231,8 +235,8 @@ WARNING - synthesis: I/O Port DONE 's net has no driver and is unused.
 WARNING - synthesis: Skipping pad insertion on CRYSTAL due to black_box_pad_pin attribute.
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/roi_tracker_motion.v(69): Register \u_roi/roi_xmin_i0 is stuck at Zero. VDB-5013
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(223): Register \u_sdram/state_FSM_i1 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(163): Register roi_xmax_lat_i0_i0 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(182): Register roi_xmin_spi_i0_i11 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(165): Register roi_xmax_lat_i0_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(184): Register roi_xmin_spi_i0_i11 is stuck at Zero. VDB-5013
 Duplicate register/latch removal. \u_stream/u_dc/mem_618 is a one-to-one match with \u_stream/u_dc/rptr_bin_rep_5_i4.
 Duplicate register/latch removal. \u_stream/u_dc/mem_616 is a one-to-one match with \u_stream/u_dc/rptr_bin_rep_5_i3.
 Duplicate register/latch removal. \u_stream/u_dc/mem_614 is a one-to-one match with \u_stream/u_dc/rptr_bin_rep_5_i2.
@@ -265,6 +269,10 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'FSDA' has no load.
+WARNING - synthesis: input pad net 'FSDA' has no legal load.
+WARNING - synthesis: logical net 'FSCL' has no load.
+WARNING - synthesis: input pad net 'FSCL' has no legal load.
 WARNING - synthesis: logical net 'ESP_D[7]' has no load.
 WARNING - synthesis: input pad net 'ESP_D[7]' has no legal load.
 WARNING - synthesis: logical net 'ESP_D[6]' has no load.
@@ -287,7 +295,7 @@ WARNING - synthesis: logical net 'INITN' has no load.
 WARNING - synthesis: input pad net 'INITN' has no legal load.
 WARNING - synthesis: logical net 'DONE' has no load.
 WARNING - synthesis: input pad net 'DONE' has no legal load.
-WARNING - synthesis: DRC complete with 22 warnings.
+WARNING - synthesis: DRC complete with 26 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.
 
@@ -367,8 +375,8 @@ clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   90.041 MHz|     8 *
 3 constraints not met.
 
 
-Peak Memory Usage: 96.953  MB
+Peak Memory Usage: 95.203  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.594  secs
+Elapsed CPU time for LSE flow : 1.563  secs
 --------------------------------------------------------------

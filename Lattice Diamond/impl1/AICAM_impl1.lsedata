@@ -22,7 +22,7 @@
 <unit name = "fpga_top">
 
     <!--
-        Top Level Pins: 66
+        Top Level Pins: 68
     -->
 
     <pins>
@@ -30,6 +30,8 @@
         <pitem  name = "PCLK"  direction = "in"  />
         <pitem  name = "VSYNC"  direction = "in"  />
         <pitem  name = "HREF"  direction = "in"  />
+        <pitem  name = "FSDA"  direction = "in"  />
+        <pitem  name = "FSCL"  direction = "in"  />
         <pitem  name = "Y9"  direction = "in"  />
         <pitem  name = "Y8"  direction = "in"  />
         <pitem  name = "Y7"  direction = "in"  />

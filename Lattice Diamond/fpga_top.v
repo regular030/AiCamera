@@ -10,6 +10,8 @@ module fpga_top (
     input  wire         PCLK,
     input  wire         VSYNC,
     input  wire         HREF,
+	wire			 FSDA,
+	wire			 FSCL,
     input  wire         Y9, Y8, Y7, Y6, Y5, Y4, Y3, Y2,  // D7..D0 from sensor
     output wire         MCLK,      // 24 MHz to camera (from PLL)
 
