@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.14.0.75.2
 
 -- ldbanno -n VHDL -o AICAM_impl1_vho.vho -w -neg -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1.ncd 
--- Netlist created on Sat Jan 10 18:48:28 2026
--- Netlist written on Sat Jan 10 18:48:52 2026
+-- Netlist created on Wed Jan 28 20:07:36 2026
+-- Netlist written on Wed Jan 28 20:08:14 2026
 -- Design is for device LFE5U-25F
 -- Design is for package CABGA256
 -- Design is for performance grade 6
@@ -495,6 +495,25 @@
 
   end Structure;
 
+-- entity sapiobuf0003
+  library IEEE, vital2000, ECP5U;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use ECP5U.COMPONENTS.ALL;
+
+  entity sapiobuf0003 is
+    port (I: in Std_logic; PAD: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF sapiobuf0003 : ENTITY IS TRUE;
+
+  end sapiobuf0003;
+
+  architecture Structure of sapiobuf0003 is
+  begin
+    INST5: OB
+      port map (I=>I, O=>PAD);
+  end Structure;
+
 -- entity MCLKB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -524,11 +543,11 @@
     signal PADDO_ipd 	: std_logic := 'X';
     signal MCLKS_out 	: std_logic := 'X';
 
-    component sapiobuf0001
+    component sapiobuf0003
       port (I: in Std_logic; PAD: out Std_logic);
     end component;
   begin
-    MCLK_pad: sapiobuf0001
+    MCLK_pad: sapiobuf0003
       port map (I=>PADDO_ipd, PAD=>MCLKS_out);
 
     --  INPUT PATH DELAYs
@@ -1634,20 +1653,20 @@
 
   end Structure;
 
--- entity sapiobuf0003
+-- entity sapiobuf0004
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use ECP5U.COMPONENTS.ALL;
 
-  entity sapiobuf0003 is
+  entity sapiobuf0004 is
     port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF sapiobuf0003 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF sapiobuf0004 : ENTITY IS TRUE;
 
-  end sapiobuf0003;
+  end sapiobuf0004;
 
-  architecture Structure of sapiobuf0003 is
+  architecture Structure of sapiobuf0004 is
   begin
     INST5: OBZ
       port map (I=>I, T=>T, O=>PAD);
@@ -1707,14 +1726,14 @@
     signal SDDQ15_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_15: sapiobuf0003
+    SD_DQ_pad_15: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ15_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -1789,14 +1808,14 @@
     signal SDDQ14_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_14: sapiobuf0003
+    SD_DQ_pad_14: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ14_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -1871,14 +1890,14 @@
     signal SDDQ13_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_13: sapiobuf0003
+    SD_DQ_pad_13: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ13_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -1953,14 +1972,14 @@
     signal SDDQ12_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_12: sapiobuf0003
+    SD_DQ_pad_12: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ12_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2035,14 +2054,14 @@
     signal SDDQ11_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_11: sapiobuf0003
+    SD_DQ_pad_11: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ11_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2117,14 +2136,14 @@
     signal SDDQ10_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_10: sapiobuf0003
+    SD_DQ_pad_10: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ10_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2199,14 +2218,14 @@
     signal SDDQ9_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_9: sapiobuf0003
+    SD_DQ_pad_9: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ9_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2281,14 +2300,14 @@
     signal SDDQ8_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_8: sapiobuf0003
+    SD_DQ_pad_8: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ8_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2363,14 +2382,14 @@
     signal SDDQ7_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_7: sapiobuf0003
+    SD_DQ_pad_7: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ7_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2445,14 +2464,14 @@
     signal SDDQ6_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_6: sapiobuf0003
+    SD_DQ_pad_6: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ6_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2527,14 +2546,14 @@
     signal SDDQ5_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_5: sapiobuf0003
+    SD_DQ_pad_5: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ5_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2609,14 +2628,14 @@
     signal SDDQ4_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_4: sapiobuf0003
+    SD_DQ_pad_4: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ4_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2691,14 +2710,14 @@
     signal SDDQ3_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_3: sapiobuf0003
+    SD_DQ_pad_3: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ3_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2773,14 +2792,14 @@
     signal SDDQ2_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_2: sapiobuf0003
+    SD_DQ_pad_2: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ2_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2855,14 +2874,14 @@
     signal SDDQ1_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_1: sapiobuf0003
+    SD_DQ_pad_1: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ1_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -2937,14 +2956,14 @@
     signal SDDQ0_out 	: std_logic := 'X';
 
     signal PADDT_NOTIN: Std_logic;
-    component sapiobuf0003
+    component sapiobuf0004
       port (I: in Std_logic; T: in Std_logic; PAD: out Std_logic);
     end component;
     component inverter
       port (I: in Std_logic; Z: out Std_logic);
     end component;
   begin
-    SD_DQ_pad_0: sapiobuf0003
+    SD_DQ_pad_0: sapiobuf0004
       port map (I=>PADDO_ipd, T=>PADDT_NOTIN, PAD=>SDDQ0_out);
     PADDT_INVERTERIN: inverter
       port map (I=>PADDT_ipd, Z=>PADDT_NOTIN);
@@ -3118,6 +3137,25 @@
 
   end Structure;
 
+-- entity sapiobuf0005
+  library IEEE, vital2000, ECP5U;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use ECP5U.COMPONENTS.ALL;
+
+  entity sapiobuf0005 is
+    port (Z: out Std_logic; PAD: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF sapiobuf0005 : ENTITY IS TRUE;
+
+  end sapiobuf0005;
+
+  architecture Structure of sapiobuf0005 is
+  begin
+    INST1: IB
+      port map (I=>PAD, O=>Z);
+  end Structure;
+
 -- entity PCLKB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -3150,11 +3188,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal PCLKS_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    PCLK_pad: sapiobuf
+    PCLK_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>PCLKS_ipd);
 
     --  INPUT PATH DELAYs
@@ -3234,11 +3272,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal VSYNCS_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    VSYNC_pad: sapiobuf
+    VSYNC_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>VSYNCS_ipd);
 
     --  INPUT PATH DELAYs
@@ -3286,25 +3324,6 @@
 
   end Structure;
 
--- entity sapiobuf0004
-  library IEEE, vital2000, ECP5U;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use ECP5U.COMPONENTS.ALL;
-
-  entity sapiobuf0004 is
-    port (Z: out Std_logic; PAD: in Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF sapiobuf0004 : ENTITY IS TRUE;
-
-  end sapiobuf0004;
-
-  architecture Structure of sapiobuf0004 is
-  begin
-    INST1: IB
-      port map (I=>PAD, O=>Z);
-  end Structure;
-
 -- entity HREFB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -3337,11 +3356,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal HREFS_ipd 	: std_logic := 'X';
 
-    component sapiobuf0004
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    HREF_pad: sapiobuf0004
+    HREF_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>HREFS_ipd);
 
     --  INPUT PATH DELAYs
@@ -3421,11 +3440,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y9S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y9_pad: sapiobuf
+    Y9_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y9S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3505,11 +3524,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y8S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y8_pad: sapiobuf
+    Y8_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y8S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3589,11 +3608,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y7S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y7_pad: sapiobuf
+    Y7_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y7S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3673,11 +3692,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y6S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y6_pad: sapiobuf
+    Y6_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y6S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3757,11 +3776,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y5S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y5_pad: sapiobuf
+    Y5_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y5S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3841,11 +3860,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y4S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y4_pad: sapiobuf
+    Y4_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y4S_ipd);
 
     --  INPUT PATH DELAYs
@@ -3925,11 +3944,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y3S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y3_pad: sapiobuf
+    Y3_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y3S_ipd);
 
     --  INPUT PATH DELAYs
@@ -4009,11 +4028,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal Y2S_ipd 	: std_logic := 'X';
 
-    component sapiobuf
+    component sapiobuf0005
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    Y2_pad: sapiobuf
+    Y2_pad: sapiobuf0005
       port map (Z=>PADDI_out, PAD=>Y2S_ipd);
 
     --  INPUT PATH DELAYs
@@ -4145,20 +4164,20 @@
 
   end Structure;
 
--- entity sapiobuf0005
+-- entity sapiobuf0006
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use ECP5U.COMPONENTS.ALL;
 
-  entity sapiobuf0005 is
+  entity sapiobuf0006 is
     port (Z: out Std_logic; PAD: in Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF sapiobuf0005 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF sapiobuf0006 : ENTITY IS TRUE;
 
-  end sapiobuf0005;
+  end sapiobuf0006;
 
-  architecture Structure of sapiobuf0005 is
+  architecture Structure of sapiobuf0006 is
   begin
     INST1: IBPU
       port map (I=>PAD, O=>Z);
@@ -4196,11 +4215,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal SSPICSn_ipd 	: std_logic := 'X';
 
-    component sapiobuf0005
+    component sapiobuf0006
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    SSPI_CS_n_pad: sapiobuf0005
+    SSPI_CS_n_pad: sapiobuf0006
       port map (Z=>PADDI_out, PAD=>SSPICSn_ipd);
 
     --  INPUT PATH DELAYs
@@ -4248,6 +4267,25 @@
 
   end Structure;
 
+-- entity sapiobuf0007
+  library IEEE, vital2000, ECP5U;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use ECP5U.COMPONENTS.ALL;
+
+  entity sapiobuf0007 is
+    port (Z: out Std_logic; PAD: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF sapiobuf0007 : ENTITY IS TRUE;
+
+  end sapiobuf0007;
+
+  architecture Structure of sapiobuf0007 is
+  begin
+    INST1: IB
+      port map (I=>PAD, O=>Z);
+  end Structure;
+
 -- entity DINB
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
@@ -4280,11 +4318,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal DINS_ipd 	: std_logic := 'X';
 
-    component sapiobuf0004
+    component sapiobuf0007
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    DIN_pad: sapiobuf0004
+    DIN_pad: sapiobuf0007
       port map (Z=>PADDI_out, PAD=>DINS_ipd);
 
     --  INPUT PATH DELAYs
@@ -5970,13 +6008,13 @@
 
   end Structure;
 
--- entity DP16KD0006
+-- entity DP16KD0008
   library IEEE, vital2000, ECP5U;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use ECP5U.COMPONENTS.ALL;
 
-  entity DP16KD0006 is
+  entity DP16KD0008 is
     port (CEA: in Std_logic; OCEA: in Std_logic; CLKA: in Std_logic; 
           WEA: in Std_logic; CSA0: in Std_logic; CSA1: in Std_logic; 
           CSA2: in Std_logic; RSTA: in Std_logic; CEB: in Std_logic; 
@@ -6017,11 +6055,11 @@
           DOB13: out Std_logic; DOB14: out Std_logic; DOB15: out Std_logic; 
           DOB16: out Std_logic; DOB17: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF DP16KD0006 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF DP16KD0008 : ENTITY IS TRUE;
 
-  end DP16KD0006;
+  end DP16KD0008;
 
-  architecture Structure of DP16KD0006 is
+  architecture Structure of DP16KD0008 is
   begin
     INST10: DP16KD
       generic map (ASYNC_RESET_RELEASE => "SYNC", CSDECODE_A => "0b000", 
@@ -6491,7 +6529,7 @@
     component vcc
       port (PWR1: out Std_logic);
     end component;
-    component DP16KD0006
+    component DP16KD0008
       port (CEA: in Std_logic; OCEA: in Std_logic; CLKA: in Std_logic; 
             WEA: in Std_logic; CSA0: in Std_logic; CSA1: in Std_logic; 
             CSA2: in Std_logic; RSTA: in Std_logic; CEB: in Std_logic; 
@@ -6533,7 +6571,7 @@
             DOB16: out Std_logic; DOB17: out Std_logic);
     end component;
   begin
-    u_sdram_u_fifo_mem0_DP16KD: DP16KD0006
+    u_sdram_u_fifo_mem0_DP16KD: DP16KD0008
       port map (CEA=>VCCI, OCEA=>VCCI, CLKA=>CLKA_dly, WEA=>WEA_dly, 
                 CSA0=>GNDI, CSA1=>GNDI, CSA2=>GNDI, RSTA=>GNDI, CEB=>VCCI, 
                 OCEB=>VCCI, CLKB=>CLKB_dly, WEB=>GNDI, CSB0=>GNDI, CSB1=>GNDI, 
@@ -7571,16 +7609,16 @@
 
   entity fpga_top is
     port (CRYSTAL: in Std_logic; PCLK: in Std_logic; VSYNC: in Std_logic; 
-          HREF: in Std_logic; Y9: in Std_logic; Y8: in Std_logic; 
-          Y7: in Std_logic; Y6: in Std_logic; Y5: in Std_logic; 
-          Y4: in Std_logic; Y3: in Std_logic; Y2: in Std_logic; 
-          MCLK: out Std_logic; CCLK: in Std_logic; SSPI_CS_n: in Std_logic; 
-          DIN: in Std_logic; DOUT: out Std_logic; 
-          ESP_D: in Std_logic_vector (7 downto 0); PROGRAMN: in Std_logic; 
-          INITN: in Std_logic; DONE: in Std_logic; SD_CLK: out Std_logic; 
-          SD_CS_N: out Std_logic; SD_WE_N: out Std_logic; 
-          SD_RAS_N: out Std_logic; SD_CAS_N: out Std_logic; 
-          SD_A: out Std_logic_vector (12 downto 0); 
+          HREF: in Std_logic; cam_scl: in Std_logic; cam_sda: in Std_logic; 
+          Y9: in Std_logic; Y8: in Std_logic; Y7: in Std_logic; 
+          Y6: in Std_logic; Y5: in Std_logic; Y4: in Std_logic; 
+          Y3: in Std_logic; Y2: in Std_logic; MCLK: out Std_logic; 
+          CCLK: in Std_logic; SSPI_CS_n: in Std_logic; DIN: in Std_logic; 
+          DOUT: out Std_logic; ESP_D: in Std_logic_vector (7 downto 0); 
+          PROGRAMN: in Std_logic; INITN: in Std_logic; DONE: in Std_logic; 
+          SD_CLK: out Std_logic; SD_CS_N: out Std_logic; 
+          SD_WE_N: out Std_logic; SD_RAS_N: out Std_logic; 
+          SD_CAS_N: out Std_logic; SD_A: out Std_logic_vector (12 downto 0); 
           SD_BA: out Std_logic_vector (1 downto 0); 
           SD_DQ: out Std_logic_vector (15 downto 0); 
           SD_DQM: out Std_logic_vector (1 downto 0));
@@ -7869,28 +7907,28 @@
     signal wr_en_N_1079: Std_logic;
     signal u_stream_u_dc_wptr_gray_8: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_8: Std_logic;
-    signal u_stream_u_dc_wptr_gray_9: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_9: Std_logic;
+    signal u_stream_u_dc_wptr_gray_9: Std_logic;
     signal u_stream_u_dc_n4447: Std_logic;
     signal u_stream_u_dc_n4455: Std_logic;
     signal u_stream_u_dc_n1781: Std_logic;
+    signal u_stream_u_dc_n1759: Std_logic;
     signal u_stream_u_dc_n1762: Std_logic;
     signal u_stream_u_dc_n1760: Std_logic;
-    signal u_stream_u_dc_n1759: Std_logic;
     signal u_stream_u_dc_n1761: Std_logic;
-    signal u_stream_u_dc_n1763: Std_logic;
     signal u_stream_u_dc_n1764: Std_logic;
+    signal u_stream_u_dc_n1763: Std_logic;
     signal u_stream_u_dc_n1765: Std_logic;
     signal u_stream_u_dc_n1766: Std_logic;
     signal u_stream_u_dc_n4454: Std_logic;
-    signal u_stream_u_dc_n1770: Std_logic;
-    signal u_stream_u_dc_n1767: Std_logic;
     signal u_stream_u_dc_n1769: Std_logic;
+    signal u_stream_u_dc_n1770: Std_logic;
     signal u_stream_u_dc_n1768: Std_logic;
-    signal u_stream_u_dc_n1774: Std_logic;
-    signal u_stream_u_dc_n1773: Std_logic;
-    signal u_stream_u_dc_n1771: Std_logic;
+    signal u_stream_u_dc_n1767: Std_logic;
     signal u_stream_u_dc_n1772: Std_logic;
+    signal u_stream_u_dc_n1774: Std_logic;
+    signal u_stream_u_dc_n1771: Std_logic;
+    signal u_stream_u_dc_n1773: Std_logic;
     signal u_stream_u_dc_n4453: Std_logic;
     signal u_stream_u_dc_n1775: Std_logic;
     signal u_stream_u_dc_n1776: Std_logic;
@@ -7924,27 +7962,27 @@
     signal u_stream_u_dc_n4450: Std_logic;
     signal u_stream_u_dc_wptr_gray_rd2_10: Std_logic;
     signal u_stream_u_dc_rptr_gray_10: Std_logic;
-    signal u_stream_u_dc_wptr_gray_rd2_11: Std_logic;
     signal u_stream_u_dc_rptr_gray_11: Std_logic;
+    signal u_stream_u_dc_wptr_gray_rd2_11: Std_logic;
     signal u_stream_u_dc_n4449: Std_logic;
     signal u_stream_u_dc_wr_full_N_1156: Std_logic;
     signal u_stream_u_dc_wptr_gray_0: Std_logic;
-    signal u_stream_u_dc_wptr_gray_1: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_0: Std_logic;
+    signal u_stream_u_dc_wptr_gray_1: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_1: Std_logic;
-    signal u_stream_u_dc_wptr_gray_2: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_2: Std_logic;
     signal u_stream_u_dc_wptr_gray_3: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_3: Std_logic;
+    signal u_stream_u_dc_wptr_gray_2: Std_logic;
     signal u_stream_u_dc_n4448: Std_logic;
     signal u_stream_u_dc_wptr_gray_4: Std_logic;
+    signal u_stream_u_dc_rptr_gray_wr2_5: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_4: Std_logic;
     signal u_stream_u_dc_wptr_gray_5: Std_logic;
-    signal u_stream_u_dc_rptr_gray_wr2_5: Std_logic;
+    signal u_stream_u_dc_wptr_gray_6: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_6: Std_logic;
     signal u_stream_u_dc_wptr_gray_7: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_7: Std_logic;
-    signal u_stream_u_dc_wptr_gray_6: Std_logic;
     signal n4529: Std_logic;
     signal u_sdram_row_12: Std_logic;
     signal u_sdram_row_11: Std_logic;
@@ -8016,9 +8054,9 @@
     signal u_sdram_u_fifo_n4457: Std_logic;
     signal u_sdram_u_fifo_n1839: Std_logic;
     signal u_sdram_u_fifo_n1828: Std_logic;
-    signal u_sdram_u_fifo_n1825: Std_logic;
     signal u_sdram_u_fifo_n1826: Std_logic;
     signal u_sdram_u_fifo_n1827: Std_logic;
+    signal u_sdram_u_fifo_n1825: Std_logic;
     signal u_sdram_u_fifo_n1830: Std_logic;
     signal u_sdram_u_fifo_n1832: Std_logic;
     signal u_sdram_u_fifo_n1831: Std_logic;
@@ -8026,38 +8064,38 @@
     signal u_sdram_u_fifo_n4456: Std_logic;
     signal u_sdram_u_fifo_n1833: Std_logic;
     signal u_sdram_u_fifo_n1834: Std_logic;
-    signal u_sdram_u_fifo_n1836: Std_logic;
     signal u_sdram_u_fifo_n1835: Std_logic;
-    signal u_sdram_u_fifo_n1837: Std_logic;
+    signal u_sdram_u_fifo_n1836: Std_logic;
     signal u_sdram_u_fifo_n1838: Std_logic;
+    signal u_sdram_u_fifo_n1837: Std_logic;
     signal u_sdram_u_fifo_n4446: Std_logic;
     signal u_sdram_rd_empty: Std_logic;
-    signal u_sdram_u_fifo_wptr_gray_3: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_wr2_2: Std_logic;
-    signal u_sdram_u_fifo_wptr_gray_2: Std_logic;
+    signal u_sdram_u_fifo_wptr_gray_3: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_wr2_3: Std_logic;
-    signal u_sdram_u_fifo_rptr_gray_wr2_4: Std_logic;
+    signal u_sdram_u_fifo_wptr_gray_2: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_4: Std_logic;
+    signal u_sdram_u_fifo_rptr_gray_wr2_4: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_wr2_5: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_5: Std_logic;
     signal u_sdram_u_fifo_n4442: Std_logic;
-    signal u_sdram_u_fifo_rptr_gray_0: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd2_0: Std_logic;
-    signal u_sdram_u_fifo_rptr_gray_1: Std_logic;
+    signal u_sdram_u_fifo_rptr_gray_0: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd2_1: Std_logic;
-    signal u_sdram_u_fifo_wptr_gray_rd2_2: Std_logic;
-    signal u_sdram_u_fifo_rptr_gray_3: Std_logic;
-    signal u_sdram_u_fifo_wptr_gray_rd2_3: Std_logic;
+    signal u_sdram_u_fifo_rptr_gray_1: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_2: Std_logic;
+    signal u_sdram_u_fifo_wptr_gray_rd2_2: Std_logic;
+    signal u_sdram_u_fifo_wptr_gray_rd2_3: Std_logic;
+    signal u_sdram_u_fifo_rptr_gray_3: Std_logic;
     signal u_sdram_u_fifo_n4445: Std_logic;
-    signal u_sdram_u_fifo_wptr_gray_rd2_5: Std_logic;
-    signal u_sdram_u_fifo_rptr_gray_4: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd2_4: Std_logic;
+    signal u_sdram_u_fifo_rptr_gray_4: Std_logic;
+    signal u_sdram_u_fifo_wptr_gray_rd2_5: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_5: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd2_6: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_6: Std_logic;
-    signal u_sdram_u_fifo_rptr_gray_7: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd2_7: Std_logic;
+    signal u_sdram_u_fifo_rptr_gray_7: Std_logic;
     signal u_sdram_u_fifo_n4444: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_6: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_wr2_6: Std_logic;
@@ -8065,14 +8103,14 @@
     signal u_sdram_u_fifo_wptr_gray_7: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd2_8: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_8: Std_logic;
-    signal u_sdram_u_fifo_wptr_gray_rd2_9: Std_logic;
     signal u_sdram_u_fifo_rptr_gray_9: Std_logic;
+    signal u_sdram_u_fifo_wptr_gray_rd2_9: Std_logic;
     signal u_spi_shift_out_7: Std_logic;
     signal DOUT_c: Std_logic;
-    signal u_sdram_n5877: Std_logic;
     signal u_sdram_n6747: Std_logic;
-    signal u_sdram_n5975: Std_logic;
     signal u_sdram_n6735: Std_logic;
+    signal u_sdram_n5877: Std_logic;
+    signal u_sdram_n5975: Std_logic;
     signal u_sdram_n4753: Std_logic;
     signal u_sdram_n635: Std_logic;
     signal u_sdram_n3139: Std_logic;
@@ -8105,9 +8143,9 @@
     signal u_sdram_n2895: Std_logic;
     signal SD_A_c_9: Std_logic;
     signal u_sdram_n5091: Std_logic;
+    signal u_sdram_n28: Std_logic;
     signal u_sdram_n6043: Std_logic;
     signal u_sdram_n6758: Std_logic;
-    signal u_sdram_n28: Std_logic;
     signal u_sdram_SD_A_12_N_482_10: Std_logic;
     signal u_sdram_n6757: Std_logic;
     signal SD_A_c_10: Std_logic;
@@ -8121,8 +8159,8 @@
     signal u_sdram_SD_CAS_N_N_809: Std_logic;
     signal SD_CAS_N_c: Std_logic;
     signal u_sdram_n5589: Std_logic;
-    signal u_sdram_n6137: Std_logic;
     signal u_sdram_n6732: Std_logic;
+    signal u_sdram_n6137: Std_logic;
     signal SD_DQM_c_0: Std_logic;
     signal u_sdram_SD_DQM_1_N_802_1: Std_logic;
     signal u_sdram_n767: Std_logic;
@@ -8135,11 +8173,11 @@
     signal byte_sel: Std_logic;
     signal HREF_c: Std_logic;
     signal u_cam_byte_sel_N_202: Std_logic;
-    signal u_sdram_u_fifo_n1845: Std_logic;
-    signal u_sdram_u_fifo_n1840: Std_logic;
     signal u_sdram_u_fifo_n1844: Std_logic;
-    signal u_sdram_u_fifo_n1843: Std_logic;
+    signal u_sdram_u_fifo_n1840: Std_logic;
+    signal u_sdram_u_fifo_n1845: Std_logic;
     signal u_sdram_u_fifo_n1842: Std_logic;
+    signal u_sdram_u_fifo_n1843: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_1: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_0: Std_logic;
     signal fifo_dout_0: Std_logic;
@@ -8154,14 +8192,14 @@
     signal fifo_dout_3: Std_logic;
     signal u_sdram_u_fifo_n1853: Std_logic;
     signal u_sdram_u_fifo_n1852: Std_logic;
-    signal u_sdram_u_fifo_n1850: Std_logic;
     signal u_sdram_u_fifo_n1851: Std_logic;
+    signal u_sdram_u_fifo_n1850: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_5: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_4: Std_logic;
     signal fifo_dout_4: Std_logic;
     signal fifo_dout_5: Std_logic;
-    signal u_sdram_u_fifo_n1856: Std_logic;
     signal u_sdram_u_fifo_n1857: Std_logic;
+    signal u_sdram_u_fifo_n1856: Std_logic;
     signal u_sdram_u_fifo_n1854: Std_logic;
     signal u_sdram_u_fifo_n1855: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_7: Std_logic;
@@ -8170,8 +8208,8 @@
     signal fifo_dout_7: Std_logic;
     signal u_sdram_u_fifo_n1861: Std_logic;
     signal u_sdram_u_fifo_n1860: Std_logic;
-    signal u_sdram_u_fifo_n1858: Std_logic;
     signal u_sdram_u_fifo_n1859: Std_logic;
+    signal u_sdram_u_fifo_n1858: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_9: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_8: Std_logic;
     signal fifo_dout_8: Std_logic;
@@ -8186,14 +8224,14 @@
     signal fifo_dout_11: Std_logic;
     signal u_sdram_u_fifo_n1869: Std_logic;
     signal u_sdram_u_fifo_n1868: Std_logic;
-    signal u_sdram_u_fifo_n1867: Std_logic;
     signal u_sdram_u_fifo_n1866: Std_logic;
+    signal u_sdram_u_fifo_n1867: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_13: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_12: Std_logic;
     signal fifo_dout_12: Std_logic;
     signal fifo_dout_13: Std_logic;
-    signal u_sdram_u_fifo_n1873: Std_logic;
     signal u_sdram_u_fifo_n1872: Std_logic;
+    signal u_sdram_u_fifo_n1873: Std_logic;
     signal u_sdram_u_fifo_n1870: Std_logic;
     signal u_sdram_u_fifo_n1871: Std_logic;
     signal u_sdram_u_fifo_rd_data_15_N_903_15: Std_logic;
@@ -8249,34 +8287,34 @@
     signal u_cam_n900: Std_logic;
     signal u_cam_n903: Std_logic;
     signal u_cam_n902: Std_logic;
-    signal u_spi_stream_arm_N_1307: Std_logic;
     signal u_spi_shift_in_6: Std_logic;
     signal u_spi_shift_in_0: Std_logic;
+    signal u_spi_stream_arm_N_1307: Std_logic;
     signal u_spi_shift_in_1: Std_logic;
-    signal n6203: Std_logic;
     signal stream_arm_spi: Std_logic;
+    signal n6203: Std_logic;
     signal n6201: Std_logic;
     signal n6380: Std_logic;
     signal u_spi_CCLK_c_enable_5: Std_logic;
-    signal u_stream_u_dc_n1786: Std_logic;
     signal u_stream_u_dc_n1782: Std_logic;
     signal u_stream_u_dc_n1787: Std_logic;
-    signal u_stream_u_dc_n1784: Std_logic;
+    signal u_stream_u_dc_n1786: Std_logic;
     signal u_stream_u_dc_n1785: Std_logic;
+    signal u_stream_u_dc_n1784: Std_logic;
     signal u_stream_u_dc_rd_data_7_N_1169_1: Std_logic;
     signal u_stream_u_dc_rd_data_7_N_1169_0: Std_logic;
     signal stream_fifo_rd_data_0: Std_logic;
     signal stream_fifo_rd_data_1: Std_logic;
     signal u_stream_u_dc_n1791: Std_logic;
     signal u_stream_u_dc_n1790: Std_logic;
-    signal u_stream_u_dc_n1789: Std_logic;
     signal u_stream_u_dc_n1788: Std_logic;
+    signal u_stream_u_dc_n1789: Std_logic;
     signal u_stream_u_dc_rd_data_7_N_1169_3: Std_logic;
     signal u_stream_u_dc_rd_data_7_N_1169_2: Std_logic;
     signal stream_fifo_rd_data_2: Std_logic;
     signal stream_fifo_rd_data_3: Std_logic;
-    signal u_stream_u_dc_n1795: Std_logic;
     signal u_stream_u_dc_n1794: Std_logic;
+    signal u_stream_u_dc_n1795: Std_logic;
     signal u_stream_u_dc_n1792: Std_logic;
     signal u_stream_u_dc_n1793: Std_logic;
     signal u_stream_u_dc_rd_data_7_N_1169_5: Std_logic;
@@ -8285,24 +8323,24 @@
     signal stream_fifo_rd_data_5: Std_logic;
     signal u_stream_u_dc_n1799: Std_logic;
     signal u_stream_u_dc_n1798: Std_logic;
-    signal u_stream_u_dc_n1796: Std_logic;
     signal u_stream_u_dc_n1797: Std_logic;
+    signal u_stream_u_dc_n1796: Std_logic;
     signal u_stream_u_dc_rd_data_7_N_1169_7: Std_logic;
     signal u_stream_u_dc_rd_data_7_N_1169_6: Std_logic;
     signal stream_fifo_rd_data_6: Std_logic;
     signal stream_fifo_rd_data_7: Std_logic;
-    signal u_sdram_n3_adj_1331: Std_logic;
     signal u_sdram_n6724: Std_logic;
+    signal u_sdram_n3_adj_1331: Std_logic;
     signal u_sdram_timer_15_N_529_0: Std_logic;
     signal u_sdram_n6725: Std_logic;
     signal u_sdram_n5491: Std_logic;
     signal u_sdram_n4741: Std_logic;
     signal u_sdram_n634: Std_logic;
     signal u_sdram_n6737: Std_logic;
-    signal u_sdram_n5779: Std_logic;
     signal u_sdram_n16: Std_logic;
-    signal u_sdram_n6723: Std_logic;
+    signal u_sdram_n5779: Std_logic;
     signal u_sdram_n3: Std_logic;
+    signal u_sdram_n6723: Std_logic;
     signal u_sdram_timer_15_N_529_3: Std_logic;
     signal u_sdram_timer_15_N_529_2: Std_logic;
     signal u_sdram_n5787: Std_logic;
@@ -8335,22 +8373,22 @@
     signal u_sdram_SD_CLK_c_enable_1: Std_logic;
     signal u_sdram_bank_1_N_523_1: Std_logic;
     signal u_sdram_SD_CLK_c_enable_28: Std_logic;
-    signal u_sdram_n6733: Std_logic;
     signal u_sdram_n6330: Std_logic;
+    signal u_sdram_n6733: Std_logic;
     signal u_sdram_SD_A_12_N_789_6: Std_logic;
     signal u_sdram_dq_oe: Std_logic;
     signal u_sdram_fs_meta: Std_logic;
     signal u_sdram_fs_sync: Std_logic;
-    signal u_sdram_n6352: Std_logic;
-    signal u_sdram_n5322: Std_logic;
     signal u_sdram_n6017: Std_logic;
+    signal u_sdram_n5322: Std_logic;
+    signal u_sdram_n6352: Std_logic;
     signal u_sdram_n6731: Std_logic;
     signal u_sdram_n2750: Std_logic;
     signal u_sdram_n2748: Std_logic;
     signal u_sdram_n62_adj_1318: Std_logic;
+    signal u_sdram_n6187: Std_logic;
     signal u_sdram_n6262: Std_logic;
     signal u_sdram_n6312: Std_logic;
-    signal u_sdram_n6187: Std_logic;
     signal u_sdram_n6193: Std_logic;
     signal u_sdram_n6346: Std_logic;
     signal u_sdram_n2738: Std_logic;
@@ -8406,8 +8444,8 @@
     signal u_sdram_u_fifo_wptr_gray_rd1_7: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd1_8: Std_logic;
     signal u_sdram_u_fifo_wptr_gray_rd1_9: Std_logic;
-    signal u_spi_bit_cnt_1: Std_logic;
     signal u_spi_bit_cnt_0: Std_logic;
+    signal u_spi_bit_cnt_1: Std_logic;
     signal u_spi_n19: Std_logic;
     signal u_spi_n20: Std_logic;
     signal u_spi_bit_cnt_2: Std_logic;
@@ -8450,9 +8488,9 @@
     signal u_spi_shift_out_7_N_1277_0: Std_logic;
     signal u_spi_n5: Std_logic;
     signal u_spi_shift_out_0: Std_logic;
+    signal u_spi_n6378: Std_logic;
     signal u_spi_n6597: Std_logic;
     signal u_spi_shift_out_1: Std_logic;
-    signal u_spi_n6378: Std_logic;
     signal u_spi_n6581: Std_logic;
     signal u_spi_shift_out_7_N_1209_2: Std_logic;
     signal u_spi_shift_out_7_N_1209_1: Std_logic;
@@ -8474,17 +8512,17 @@
     signal u_spi_shift_out_7_N_1209_7: Std_logic;
     signal u_spi_n7: Std_logic;
     signal u_spi_n6147: Std_logic;
-    signal u_spi_n5334: Std_logic;
     signal u_spi_n4968: Std_logic;
+    signal u_spi_n5334: Std_logic;
     signal u_spi_n5379: Std_logic;
     signal u_stream_arm_meta: Std_logic;
     signal u_stream_arm_pclk: Std_logic;
     signal u_stream_u_dc_wr_full_N_1155: Std_logic;
     signal u_stream_u_dc_rptr_gray_wr2_11: Std_logic;
-    signal u_stream_state_1: Std_logic;
     signal u_stream_state_0: Std_logic;
-    signal u_stream_state_2: Std_logic;
+    signal u_stream_state_1: Std_logic;
     signal u_stream_fifo_full: Std_logic;
+    signal u_stream_state_2: Std_logic;
     signal u_stream_state_2_N_943_0: Std_logic;
     signal u_stream_PCLK_c_enable_28: Std_logic;
     signal u_stream_state_2_N_943_1: Std_logic;
@@ -8501,8 +8539,8 @@
     signal u_stream_u_dc_n1738: Std_logic;
     signal u_stream_u_dc_n1737: Std_logic;
     signal u_stream_u_dc_n1736: Std_logic;
-    signal u_stream_wr_en: Std_logic;
     signal u_stream_u_dc_n6750: Std_logic;
+    signal u_stream_wr_en: Std_logic;
     signal u_stream_u_dc_n1735: Std_logic;
     signal u_stream_wr_data_1: Std_logic;
     signal u_stream_wr_data_0: Std_logic;
@@ -8561,8 +8599,8 @@
     signal u_stream_u_dc_wptr_gray_rd1_10: Std_logic;
     signal u_stream_u_dc_wptr_gray_rd1_11: Std_logic;
     signal u_stream_n3142: Std_logic;
-    signal u_stream_wr_en_N_1072: Std_logic;
     signal u_stream_n6728: Std_logic;
+    signal u_stream_wr_en_N_1072: Std_logic;
     signal u_stream_n6291: Std_logic;
     signal u_stream_n3168: Std_logic;
     signal u_stream_n6295: Std_logic;
@@ -8573,27 +8611,27 @@
     signal u_stream_n5399: Std_logic;
     signal u_stream_n2796: Std_logic;
     signal u_stream_n34: Std_logic;
-    signal u_sdram_n3409: Std_logic;
     signal u_sdram_n6751: Std_logic;
+    signal u_sdram_n3409: Std_logic;
     signal u_sdram_n5501: Std_logic;
     signal u_sdram_n15_adj_1319: Std_logic;
-    signal u_cam_n10: Std_logic;
     signal u_cam_n14: Std_logic;
+    signal u_cam_n10: Std_logic;
     signal line_end_N_200: Std_logic;
+    signal u_cam_n6085: Std_logic;
     signal u_cam_n6091: Std_logic;
     signal u_cam_n6753: Std_logic;
-    signal u_cam_n6085: Std_logic;
     signal u_stream_n27: Std_logic;
     signal u_stream_u_dc_n6730: Std_logic;
     signal u_sdram_n6749: Std_logic;
     signal u_sdram_n6071: Std_logic;
     signal u_sdram_n5625: Std_logic;
-    signal u_sdram_n6752: Std_logic;
     signal u_sdram_n6129: Std_logic;
+    signal u_sdram_n6752: Std_logic;
     signal u_sdram_n6350: Std_logic;
     signal u_sdram_n5453: Std_logic;
-    signal u_sdram_n6356: Std_logic;
     signal u_sdram_n5595: Std_logic;
+    signal u_sdram_n6356: Std_logic;
     signal u_sdram_n6316: Std_logic;
     signal u_sdram_n6746: Std_logic;
     signal u_sdram_n6: Std_logic;
@@ -8601,38 +8639,38 @@
     signal u_sdram_n6734: Std_logic;
     signal u_sdram_n6348: Std_logic;
     signal u_sdram_n6739: Std_logic;
-    signal u_sdram_n6741: Std_logic;
     signal u_sdram_n4884: Std_logic;
+    signal u_sdram_n6741: Std_logic;
     signal u_sdram_n6274: Std_logic;
     signal u_sdram_n6_adj_1314: Std_logic;
     signal u_sdram_n8: Std_logic;
     signal u_sdram_n5765: Std_logic;
     signal u_sdram_n6326: Std_logic;
     signal u_sdram_n6744: Std_logic;
-    signal u_sdram_n13: Std_logic;
     signal u_sdram_n6077: Std_logic;
+    signal u_sdram_n13: Std_logic;
     signal u_sdram_n6127: Std_logic;
-    signal u_sdram_n6039: Std_logic;
     signal u_sdram_n6029: Std_logic;
+    signal u_sdram_n6039: Std_logic;
     signal u_sdram_n6069: Std_logic;
     signal u_sdram_n4828: Std_logic;
-    signal u_sdram_n6738: Std_logic;
     signal u_sdram_n6740: Std_logic;
+    signal u_sdram_n6738: Std_logic;
     signal u_sdram_n6332: Std_logic;
     signal u_sdram_n6745: Std_logic;
-    signal u_sdram_n5597: Std_logic;
     signal u_sdram_n6318: Std_logic;
-    signal u_sdram_n5693: Std_logic;
+    signal u_sdram_n5597: Std_logic;
     signal u_sdram_n5691: Std_logic;
     signal u_sdram_n5679: Std_logic;
+    signal u_sdram_n5693: Std_logic;
     signal u_sdram_n5669: Std_logic;
     signal u_sdram_n5677: Std_logic;
     signal u_sdram_n5681: Std_logic;
     signal u_sdram_n6742: Std_logic;
     signal wr_full_N_891: Std_logic;
     signal rptr_gray_wr2_9: Std_logic;
-    signal u_spi_n6298: Std_logic;
     signal SSPI_CS_n_c: Std_logic;
+    signal u_spi_n6298: Std_logic;
     signal u_spi_n6364: Std_logic;
     signal u_spi_n6338: Std_logic;
     signal u_spi_n6755: Std_logic;
@@ -8891,8 +8929,8 @@
                 F1=>n37_adj_1352, Q1=>open, F0=>n40, Q0=>open);
     SLICE_4I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"AA00")
-      port map (M1=>'X', A1=>pix_x_10, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
+                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"CC00")
+      port map (M1=>'X', A1=>'X', B1=>pix_x_10, C1=>'X', D1=>'1', DI1=>'X', 
                 DI0=>'X', A0=>'X', B0=>pix_x_9, C0=>'X', D0=>'1', FCI=>n4487, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4488, 
                 F1=>n31_adj_1358, Q1=>open, F0=>n34_adj_1357, Q0=>open);
@@ -8909,8 +8947,8 @@
                 Q1=>pix_y_4, F0=>n52, Q0=>pix_y_3);
     SLICE_6I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"AA00", INIT1_INITVAL=>X"CC00")
-      port map (M1=>'X', A1=>'X', B1=>pix_x_2, C1=>'X', D1=>'1', DI1=>'X', 
+                   INIT0_INITVAL=>X"AA00", INIT1_INITVAL=>X"AA00")
+      port map (M1=>'X', A1=>pix_x_2, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
                 DI0=>'X', A0=>pix_x_1, B0=>'X', C0=>'X', D0=>'1', FCI=>n4483, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4484, 
                 F1=>n55_adj_1355, Q1=>open, F0=>n58_adj_1354, Q0=>open);
@@ -8945,9 +8983,9 @@
                 Q0=>n35);
     SLICE_10I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"AA00", INIT1_INITVAL=>X"0000")
+                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"0000")
       port map (M1=>'X', A1=>'X', B1=>'X', C1=>'X', D1=>'X', DI1=>'X', 
-                DI0=>'X', A0=>pix_x_11, B0=>'X', C0=>'X', D0=>'1', FCI=>n4488, 
+                DI0=>'X', A0=>'X', B0=>pix_x_11, C0=>'X', D0=>'1', FCI=>n4488, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>open, F1=>open, 
                 Q1=>open, F0=>n28_adj_1359, Q0=>open);
     SLICE_11I: SCCU2C
@@ -8974,9 +9012,9 @@
                 Q0=>n41);
     SLICE_13I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"AA00", INIT1_INITVAL=>X"CC00")
-      port map (M1=>'X', A1=>'X', B1=>pix_x_4, C1=>'X', D1=>'1', DI1=>'X', 
-                DI0=>'X', A0=>pix_x_3, B0=>'X', C0=>'X', D0=>'1', FCI=>n4484, 
+                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"AA00")
+      port map (M1=>'X', A1=>pix_x_4, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
+                DI0=>'X', A0=>'X', B0=>pix_x_3, C0=>'X', D0=>'1', FCI=>n4484, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4485, F1=>n49, 
                 Q1=>open, F0=>n52_adj_1356, Q0=>open);
     SLICE_14I: SCCU2C
@@ -9137,19 +9175,19 @@
                 F0=>n36_adj_1378, Q0=>ref_cnt_15);
     SLICE_28I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"33FF", INIT1_INITVAL=>X"55FF")
+                   INIT0_INITVAL=>X"55FF", INIT1_INITVAL=>X"55FF")
       port map (M1=>'X', A1=>timer_14, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
-                DI0=>'X', A0=>'X', B0=>timer_13, C0=>'X', D0=>'1', FCI=>n4495, 
+                DI0=>'X', A0=>timer_13, B0=>'X', C0=>'X', D0=>'1', FCI=>n4495, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4496, F1=>n39, 
                 Q1=>open, F0=>n42, Q0=>open);
     SLICE_29I: SCCU2C
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
                    CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
-                   INIT0_INITVAL=>X"55FF", INIT1_INITVAL=>X"55FF", 
+                   INIT0_INITVAL=>X"33FF", INIT1_INITVAL=>X"55FF", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
       port map (M1=>'X', A1=>ref_cnt_14, B1=>'X', C1=>'X', D1=>'1', 
-                DI1=>n39_adj_1379, DI0=>n42_adj_1380, A0=>ref_cnt_13, B0=>'X', 
+                DI1=>n39_adj_1379, DI0=>n42_adj_1380, A0=>'X', B0=>ref_cnt_13, 
                 C0=>'X', D0=>'1', FCI=>n4543, M0=>'X', 
                 CE=>u_sdram_ref_due_N_811, CLK=>SD_CLK_c, 
                 LSR=>u_sdram_ref_cnt_15_N_577, FCO=>n4544, F1=>n39_adj_1379, 
@@ -9157,10 +9195,10 @@
     SLICE_30I: SCCU2C
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", CCU2_INJECT1_0=>"NO", 
                    CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", SRMODE=>"ASYNC", 
-                   INIT0_INITVAL=>X"AA00", INIT1_INITVAL=>X"0000", 
+                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"0000", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', A1=>'X', B1=>'X', C1=>'X', D1=>'X', DI1=>'X', 
-                DI0=>rptr_gray_9_N_932_9, A0=>n25, B0=>'X', C0=>'X', D0=>'1', 
+                DI0=>rptr_gray_9_N_932_9, A0=>'X', B0=>n25, C0=>'X', D0=>'1', 
                 FCI=>n4512, M0=>'X', CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, 
                 LSR=>'X', FCO=>open, F1=>open, Q1=>open, 
                 F0=>rptr_gray_9_N_932_9, Q0=>n25);
@@ -9178,9 +9216,9 @@
                 F0=>rptr_bin_9_N_922_7, Q0=>n31_adj_1370);
     SLICE_32I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"55FF", INIT1_INITVAL=>X"55FF")
+                   INIT0_INITVAL=>X"33FF", INIT1_INITVAL=>X"55FF")
       port map (M1=>'X', A1=>timer_12, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
-                DI0=>'X', A0=>timer_11, B0=>'X', C0=>'X', D0=>'1', FCI=>n4494, 
+                DI0=>'X', A0=>'X', B0=>timer_11, C0=>'X', D0=>'1', FCI=>n4494, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4495, F1=>n45, 
                 Q1=>open, F0=>n48, Q0=>open);
     SLICE_33I: SCCU2C
@@ -9300,18 +9338,18 @@
                 Q1=>open, F0=>n54, Q0=>open);
     SLICE_43I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"55FF", INIT1_INITVAL=>X"55FF")
-      port map (M1=>'X', A1=>timer_8, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
-                DI0=>'X', A0=>timer_7, B0=>'X', C0=>'X', D0=>'1', FCI=>n4492, 
+                   INIT0_INITVAL=>X"33FF", INIT1_INITVAL=>X"33FF")
+      port map (M1=>'X', A1=>'X', B1=>timer_8, C1=>'X', D1=>'1', DI1=>'X', 
+                DI0=>'X', A0=>'X', B0=>timer_7, C0=>'X', D0=>'1', FCI=>n4492, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4493, F1=>n57, 
                 Q1=>open, F0=>n60, Q0=>open);
     SLICE_44I: SCCU2C
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
                    CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
                    REG0_REGSET=>"SET", GSR=>"DISABLED", INIT0_INITVAL=>X"33FF", 
-                   INIT1_INITVAL=>X"33FF", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   INIT1_INITVAL=>X"55FF", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', A1=>'X', B1=>ref_cnt_2, C1=>'X', D1=>'1', DI1=>'X', 
+      port map (M1=>'X', A1=>ref_cnt_2, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
                 DI0=>ref_cnt_15_N_561_1, A0=>'X', B0=>ref_cnt_1, C0=>'X', 
                 D0=>'1', FCI=>n4537, M0=>'X', CE=>u_sdram_SD_CLK_c_enable_30, 
                 CLK=>SD_CLK_c, LSR=>u_sdram_ref_cnt_15_N_577, FCO=>n4538, 
@@ -9351,9 +9389,9 @@
                 Q0=>wptr_bin_7);
     SLICE_48I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"33FF", INIT1_INITVAL=>X"33FF")
-      port map (M1=>'X', A1=>'X', B1=>timer_6, C1=>'X', D1=>'1', DI1=>'X', 
-                DI0=>'X', A0=>'X', B0=>timer_5, C0=>'X', D0=>'1', FCI=>n4491, 
+                   INIT0_INITVAL=>X"55FF", INIT1_INITVAL=>X"55FF")
+      port map (M1=>'X', A1=>timer_6, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
+                DI0=>'X', A0=>timer_5, B0=>'X', C0=>'X', D0=>'1', FCI=>n4491, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4492, F1=>n63, 
                 Q1=>open, F0=>n66, Q0=>open);
     SLICE_49I: SCCU2C
@@ -9384,8 +9422,8 @@
                 Q1=>open, F0=>n72, Q0=>open);
     SLICE_52I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"33FF", INIT1_INITVAL=>X"55FF")
-      port map (M1=>'X', A1=>timer_2, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
+                   INIT0_INITVAL=>X"33FF", INIT1_INITVAL=>X"33FF")
+      port map (M1=>'X', A1=>'X', B1=>timer_2, C1=>'X', D1=>'1', DI1=>'X', 
                 DI0=>'X', A0=>'X', B0=>timer_1, C0=>'X', D0=>'1', FCI=>n4489, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4490, F1=>n460, 
                 Q1=>open, F0=>n461, Q0=>open);
@@ -9424,16 +9462,16 @@
                 Q1=>open, F0=>open, Q0=>open);
     SLICE_57I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"5555", INIT1_INITVAL=>X"5555")
-      port map (M1=>'X', A1=>pix_x_6, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
+                   INIT0_INITVAL=>X"5555", INIT1_INITVAL=>X"3333")
+      port map (M1=>'X', A1=>'X', B1=>pix_x_6, C1=>'X', D1=>'1', DI1=>'X', 
                 DI0=>'X', A0=>pix_x_5, B0=>'X', C0=>'X', D0=>'1', FCI=>n4533, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4534, F1=>open, 
                 Q1=>open, F0=>open, Q0=>open);
     SLICE_58I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"5555", INIT1_INITVAL=>X"5555")
-      port map (M1=>'X', A1=>pix_x_4, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
-                DI0=>'X', A0=>pix_x_3, B0=>'X', C0=>'X', D0=>'1', FCI=>n4532, 
+                   INIT0_INITVAL=>X"3333", INIT1_INITVAL=>X"3333")
+      port map (M1=>'X', A1=>'X', B1=>pix_x_4, C1=>'X', D1=>'1', DI1=>'X', 
+                DI0=>'X', A0=>'X', B0=>pix_x_3, C0=>'X', D0=>'1', FCI=>n4532, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4533, F1=>open, 
                 Q1=>open, F0=>open, Q0=>open);
     SLICE_59I: SCCU2C
@@ -9460,8 +9498,8 @@
                 F0=>open, Q0=>open);
     SLICE_61I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"CC00")
-      port map (M1=>'X', A1=>'X', B1=>pix_x_6, C1=>'X', D1=>'1', DI1=>'X', 
+                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"AA00")
+      port map (M1=>'X', A1=>pix_x_6, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
                 DI0=>'X', A0=>'X', B0=>pix_x_5, C0=>'X', D0=>'1', FCI=>n4485, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4486, F1=>n43, 
                 Q1=>open, F0=>n46, Q0=>open);
@@ -9517,8 +9555,8 @@
                 Q0=>pix_y_5);
     SLICE_67I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", 
-                   INIT0_INITVAL=>X"00FF", INIT1_INITVAL=>X"5555")
-      port map (M1=>'X', A1=>pix_x_0, B1=>'X', C1=>'X', D1=>'1', DI1=>'X', 
+                   INIT0_INITVAL=>X"00FF", INIT1_INITVAL=>X"3333")
+      port map (M1=>'X', A1=>'X', B1=>pix_x_0, C1=>'X', D1=>'1', DI1=>'X', 
                 DI0=>'X', A0=>'X', B0=>'X', C0=>'X', D0=>'1', FCI=>'X', 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>n4531, F1=>open, 
                 Q1=>open, F0=>open, Q0=>open);
@@ -9539,8 +9577,8 @@
     u_stream_u_dc_SLICE_70I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", INIT0_INITVAL=>X"00FF", 
                    INIT1_INITVAL=>X"9009")
-      port map (M1=>'X', A1=>u_stream_u_dc_rptr_gray_wr2_9, 
-                B1=>u_stream_u_dc_wptr_gray_9, 
+      port map (M1=>'X', A1=>u_stream_u_dc_wptr_gray_9, 
+                B1=>u_stream_u_dc_rptr_gray_wr2_9, 
                 C1=>u_stream_u_dc_rptr_gray_wr2_8, 
                 D1=>u_stream_u_dc_wptr_gray_8, DI1=>'X', DI0=>'X', A0=>'X', 
                 B0=>'X', C0=>'X', D0=>'1', FCI=>'X', M0=>'X', CE=>'X', 
@@ -9555,20 +9593,20 @@
                 FCO=>open, F1=>open, Q1=>open, F0=>u_stream_u_dc_n1781, 
                 Q0=>open);
     u_stream_u_dc_SLICE_72I: SCCU2C
-      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"8241")
-      port map (M1=>'X', A1=>u_stream_u_dc_n1761, B1=>u_stream_u_dc_n1759, 
-                C1=>u_stream_u_dc_n1760, D1=>u_stream_u_dc_n1762, DI1=>'X', 
+      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"8421")
+      port map (M1=>'X', A1=>u_stream_u_dc_n1761, B1=>u_stream_u_dc_n1760, 
+                C1=>u_stream_u_dc_n1762, D1=>u_stream_u_dc_n1759, DI1=>'X', 
                 DI0=>'X', A0=>u_stream_u_dc_n1766, B0=>u_stream_u_dc_n1765, 
-                C0=>u_stream_u_dc_n1764, D0=>u_stream_u_dc_n1763, 
+                C0=>u_stream_u_dc_n1763, D0=>u_stream_u_dc_n1764, 
                 FCI=>u_stream_u_dc_n4454, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 FCO=>u_stream_u_dc_n4455, F1=>open, Q1=>open, F0=>open, 
                 Q0=>open);
     u_stream_u_dc_SLICE_73I: SCCU2C
-      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"8421")
-      port map (M1=>'X', A1=>u_stream_u_dc_n1768, B1=>u_stream_u_dc_n1769, 
-                C1=>u_stream_u_dc_n1767, D1=>u_stream_u_dc_n1770, DI1=>'X', 
-                DI0=>'X', A0=>u_stream_u_dc_n1772, B0=>u_stream_u_dc_n1771, 
-                C0=>u_stream_u_dc_n1773, D0=>u_stream_u_dc_n1774, 
+      generic map (INIT0_INITVAL=>X"8421", INIT1_INITVAL=>X"9009")
+      port map (M1=>'X', A1=>u_stream_u_dc_n1767, B1=>u_stream_u_dc_n1768, 
+                C1=>u_stream_u_dc_n1770, D1=>u_stream_u_dc_n1769, DI1=>'X', 
+                DI0=>'X', A0=>u_stream_u_dc_n1773, B0=>u_stream_u_dc_n1771, 
+                C0=>u_stream_u_dc_n1774, D0=>u_stream_u_dc_n1772, 
                 FCI=>u_stream_u_dc_n4453, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 FCO=>u_stream_u_dc_n4454, F1=>open, Q1=>open, F0=>open, 
                 Q0=>open);
@@ -9617,9 +9655,8 @@
     u_stream_u_dc_SLICE_78I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", INIT0_INITVAL=>X"00FF", 
                    INIT1_INITVAL=>X"9009")
-      port map (M1=>'X', A1=>u_stream_u_dc_rptr_gray_11, 
-                B1=>u_stream_u_dc_wptr_gray_rd2_11, 
-                C1=>u_stream_u_dc_rptr_gray_10, 
+      port map (M1=>'X', A1=>u_stream_u_dc_wptr_gray_rd2_11, 
+                B1=>u_stream_u_dc_rptr_gray_11, C1=>u_stream_u_dc_rptr_gray_10, 
                 D1=>u_stream_u_dc_wptr_gray_rd2_10, DI1=>'X', DI0=>'X', 
                 A0=>'X', B0=>'X', C0=>'X', D0=>'1', FCI=>'X', M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', FCO=>u_stream_u_dc_n4450, F1=>open, 
@@ -9633,26 +9670,27 @@
                 FCO=>open, F1=>open, Q1=>open, 
                 F0=>u_stream_u_dc_wr_full_N_1156, Q0=>open);
     u_stream_u_dc_SLICE_80I: SCCU2C
-      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"8421")
+      generic map (INIT0_INITVAL=>X"8241", INIT1_INITVAL=>X"9009")
       port map (M1=>'X', A1=>u_stream_u_dc_rptr_gray_wr2_1, 
-                B1=>u_stream_u_dc_rptr_gray_wr2_0, 
-                C1=>u_stream_u_dc_wptr_gray_1, D1=>u_stream_u_dc_wptr_gray_0, 
-                DI1=>'X', DI0=>'X', A0=>u_stream_u_dc_rptr_gray_wr2_3, 
-                B0=>u_stream_u_dc_wptr_gray_3, 
-                C0=>u_stream_u_dc_rptr_gray_wr2_2, 
-                D0=>u_stream_u_dc_wptr_gray_2, FCI=>u_stream_u_dc_n4448, 
+                B1=>u_stream_u_dc_wptr_gray_1, 
+                C1=>u_stream_u_dc_rptr_gray_wr2_0, 
+                D1=>u_stream_u_dc_wptr_gray_0, DI1=>'X', DI0=>'X', 
+                A0=>u_stream_u_dc_wptr_gray_2, 
+                B0=>u_stream_u_dc_rptr_gray_wr2_3, 
+                C0=>u_stream_u_dc_wptr_gray_3, 
+                D0=>u_stream_u_dc_rptr_gray_wr2_2, FCI=>u_stream_u_dc_n4448, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>u_stream_u_dc_n4449, 
                 F1=>open, Q1=>open, F0=>open, Q0=>open);
     u_stream_u_dc_SLICE_81I: SCCU2C
-      generic map (INIT0_INITVAL=>X"8241", INIT1_INITVAL=>X"9009")
-      port map (M1=>'X', A1=>u_stream_u_dc_rptr_gray_wr2_5, 
-                B1=>u_stream_u_dc_wptr_gray_5, 
-                C1=>u_stream_u_dc_rptr_gray_wr2_4, 
+      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"8421")
+      port map (M1=>'X', A1=>u_stream_u_dc_wptr_gray_5, 
+                B1=>u_stream_u_dc_rptr_gray_wr2_4, 
+                C1=>u_stream_u_dc_rptr_gray_wr2_5, 
                 D1=>u_stream_u_dc_wptr_gray_4, DI1=>'X', DI0=>'X', 
-                A0=>u_stream_u_dc_wptr_gray_6, 
-                B0=>u_stream_u_dc_rptr_gray_wr2_7, 
-                C0=>u_stream_u_dc_wptr_gray_7, 
-                D0=>u_stream_u_dc_rptr_gray_wr2_6, FCI=>u_stream_u_dc_n4447, 
+                A0=>u_stream_u_dc_rptr_gray_wr2_7, 
+                B0=>u_stream_u_dc_wptr_gray_7, 
+                C0=>u_stream_u_dc_rptr_gray_wr2_6, 
+                D0=>u_stream_u_dc_wptr_gray_6, FCI=>u_stream_u_dc_n4447, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', FCO=>u_stream_u_dc_n4448, 
                 F1=>open, Q1=>open, F0=>open, Q0=>open);
     SLICE_82I: SCCU2C
@@ -9709,11 +9747,11 @@
     u_sdram_SLICE_87I: SCCU2C
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
                    CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
-                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"AA00", 
+                   INIT0_INITVAL=>X"AA00", INIT1_INITVAL=>X"AA00", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
       port map (M1=>'X', A1=>u_sdram_row_6, B1=>'X', C1=>'X', D1=>'1', 
-                DI1=>u_sdram_n64, DI0=>u_sdram_n65, A0=>'X', B0=>u_sdram_row_5, 
+                DI1=>u_sdram_n64, DI0=>u_sdram_n65, A0=>u_sdram_row_5, B0=>'X', 
                 C0=>'X', D0=>'1', FCI=>u_sdram_n4552, M0=>'X', 
                 CE=>u_sdram_SD_CLK_c_enable_24, CLK=>SD_CLK_c, 
                 LSR=>u_sdram_n3161, FCO=>u_sdram_n4553, F1=>u_sdram_n64, 
@@ -9734,10 +9772,10 @@
     u_sdram_SLICE_89I: SCCU2C
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
                    CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
-                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"CC00", 
+                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"AA00", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', A1=>'X', B1=>u_sdram_row_2, C1=>'X', D1=>'1', 
+      port map (M1=>'X', A1=>u_sdram_row_2, B1=>'X', C1=>'X', D1=>'1', 
                 DI1=>u_sdram_n68, DI0=>u_sdram_n69_adj_1316, A0=>'X', 
                 B0=>u_sdram_row_1, C0=>'X', D0=>'1', FCI=>u_sdram_n4550, 
                 M0=>'X', CE=>u_sdram_SD_CLK_c_enable_24, CLK=>SD_CLK_c, 
@@ -9757,11 +9795,11 @@
     u_sdram_SLICE_91I: SCCU2C
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
                    CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
-                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"CC00", 
+                   INIT0_INITVAL=>X"AA00", INIT1_INITVAL=>X"CC00", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
       port map (M1=>'X', A1=>'X', B1=>u_sdram_col_8, C1=>'X', D1=>'1', 
-                DI1=>u_sdram_n42, DI0=>u_sdram_n43, A0=>'X', B0=>u_sdram_col_7, 
+                DI1=>u_sdram_n42, DI0=>u_sdram_n43, A0=>u_sdram_col_7, B0=>'X', 
                 C0=>'X', D0=>'1', FCI=>u_sdram_n4548, M0=>'X', 
                 CE=>u_sdram_SD_CLK_c_enable_29, CLK=>SD_CLK_c, 
                 LSR=>u_sdram_SD_CLK_c_enable_24, FCO=>open, F1=>u_sdram_n42, 
@@ -9795,10 +9833,10 @@
     u_sdram_SLICE_94I: SCCU2C
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
                    CCU2_INJECT1_0=>"NO", CCU2_INJECT1_1=>"NO", GSR=>"DISABLED", 
-                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"CC00", 
+                   INIT0_INITVAL=>X"CC00", INIT1_INITVAL=>X"AA00", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', A1=>'X', B1=>u_sdram_col_2, C1=>'X', D1=>'1', 
+      port map (M1=>'X', A1=>u_sdram_col_2, B1=>'X', C1=>'X', D1=>'1', 
                 DI1=>u_sdram_n48_adj_1315, DI0=>u_sdram_n49, A0=>'X', 
                 B0=>u_sdram_col_1, C0=>'X', D0=>'1', FCI=>u_sdram_n4545, 
                 M0=>'X', CE=>u_sdram_SD_CLK_c_enable_29, CLK=>SD_CLK_c, 
@@ -9837,9 +9875,9 @@
                 LSR=>'X', FCO=>open, F1=>u_sdram_u_fifo_n1839, Q1=>open, 
                 F0=>open, Q0=>open);
     u_sdram_u_fifo_SLICE_98I: SCCU2C
-      generic map (INIT0_INITVAL=>X"8241", INIT1_INITVAL=>X"8241")
-      port map (M1=>'X', A1=>u_sdram_u_fifo_n1827, B1=>u_sdram_u_fifo_n1826, 
-                C1=>u_sdram_u_fifo_n1825, D1=>u_sdram_u_fifo_n1828, DI1=>'X', 
+      generic map (INIT0_INITVAL=>X"8241", INIT1_INITVAL=>X"8421")
+      port map (M1=>'X', A1=>u_sdram_u_fifo_n1825, B1=>u_sdram_u_fifo_n1827, 
+                C1=>u_sdram_u_fifo_n1826, D1=>u_sdram_u_fifo_n1828, DI1=>'X', 
                 DI0=>'X', A0=>u_sdram_u_fifo_n1829, B0=>u_sdram_u_fifo_n1831, 
                 C0=>u_sdram_u_fifo_n1832, D0=>u_sdram_u_fifo_n1830, 
                 FCI=>u_sdram_u_fifo_n4456, M0=>'X', CE=>'X', CLK=>'X', 
@@ -9848,9 +9886,9 @@
     u_sdram_u_fifo_SLICE_99I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", INIT0_INITVAL=>X"0099", 
                    INIT1_INITVAL=>X"9009")
-      port map (M1=>'X', A1=>u_sdram_u_fifo_n1835, B1=>u_sdram_u_fifo_n1836, 
+      port map (M1=>'X', A1=>u_sdram_u_fifo_n1836, B1=>u_sdram_u_fifo_n1835, 
                 C1=>u_sdram_u_fifo_n1834, D1=>u_sdram_u_fifo_n1833, DI1=>'X', 
-                DI0=>'X', A0=>u_sdram_u_fifo_n1838, B0=>u_sdram_u_fifo_n1837, 
+                DI0=>'X', A0=>u_sdram_u_fifo_n1837, B0=>u_sdram_u_fifo_n1838, 
                 C0=>'X', D0=>'1', FCI=>'X', M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', FCO=>u_sdram_u_fifo_n4456, F1=>open, Q1=>open, 
                 F0=>open, Q0=>open);
@@ -9864,38 +9902,39 @@
                 Q0=>open);
     u_sdram_u_fifo_SLICE_101I: SCCU2C
       generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"8241")
-      port map (M1=>'X', A1=>u_sdram_u_fifo_rptr_gray_wr2_3, 
-                B1=>u_sdram_u_fifo_wptr_gray_2, 
-                C1=>u_sdram_u_fifo_rptr_gray_wr2_2, 
-                D1=>u_sdram_u_fifo_wptr_gray_3, DI1=>'X', DI0=>'X', 
+      port map (M1=>'X', A1=>u_sdram_u_fifo_wptr_gray_2, 
+                B1=>u_sdram_u_fifo_rptr_gray_wr2_3, 
+                C1=>u_sdram_u_fifo_wptr_gray_3, 
+                D1=>u_sdram_u_fifo_rptr_gray_wr2_2, DI1=>'X', DI0=>'X', 
                 A0=>u_sdram_u_fifo_wptr_gray_5, 
                 B0=>u_sdram_u_fifo_rptr_gray_wr2_5, 
-                C0=>u_sdram_u_fifo_wptr_gray_4, 
-                D0=>u_sdram_u_fifo_rptr_gray_wr2_4, FCI=>u_sdram_u_fifo_n4442, 
+                C0=>u_sdram_u_fifo_rptr_gray_wr2_4, 
+                D0=>u_sdram_u_fifo_wptr_gray_4, FCI=>u_sdram_u_fifo_n4442, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 FCO=>u_sdram_u_fifo_n4443, F1=>open, Q1=>open, F0=>open, 
                 Q0=>open);
     u_sdram_u_fifo_SLICE_102I: SCCU2C
-      generic map (INIT0_INITVAL=>X"8241", INIT1_INITVAL=>X"9009")
-      port map (M1=>'X', A1=>u_sdram_u_fifo_wptr_gray_rd2_1, 
-                B1=>u_sdram_u_fifo_rptr_gray_1, 
-                C1=>u_sdram_u_fifo_wptr_gray_rd2_0, 
-                D1=>u_sdram_u_fifo_rptr_gray_0, DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_u_fifo_rptr_gray_2, 
+      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"9009")
+      port map (M1=>'X', A1=>u_sdram_u_fifo_rptr_gray_1, 
+                B1=>u_sdram_u_fifo_wptr_gray_rd2_1, 
+                C1=>u_sdram_u_fifo_rptr_gray_0, 
+                D1=>u_sdram_u_fifo_wptr_gray_rd2_0, DI1=>'X', DI0=>'X', 
+                A0=>u_sdram_u_fifo_rptr_gray_3, 
                 B0=>u_sdram_u_fifo_wptr_gray_rd2_3, 
-                C0=>u_sdram_u_fifo_rptr_gray_3, 
-                D0=>u_sdram_u_fifo_wptr_gray_rd2_2, FCI=>u_sdram_u_fifo_n4445, 
+                C0=>u_sdram_u_fifo_wptr_gray_rd2_2, 
+                D0=>u_sdram_u_fifo_rptr_gray_2, FCI=>u_sdram_u_fifo_n4445, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 FCO=>u_sdram_u_fifo_n4446, F1=>open, Q1=>open, F0=>open, 
                 Q0=>open);
     u_sdram_u_fifo_SLICE_103I: SCCU2C
-      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"8241")
+      generic map (INIT0_INITVAL=>X"9009", INIT1_INITVAL=>X"9009")
       port map (M1=>'X', A1=>u_sdram_u_fifo_rptr_gray_5, 
-                B1=>u_sdram_u_fifo_wptr_gray_rd2_4, 
+                B1=>u_sdram_u_fifo_wptr_gray_rd2_5, 
                 C1=>u_sdram_u_fifo_rptr_gray_4, 
-                D1=>u_sdram_u_fifo_wptr_gray_rd2_5, DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_u_fifo_wptr_gray_rd2_7, 
-                B0=>u_sdram_u_fifo_rptr_gray_7, C0=>u_sdram_u_fifo_rptr_gray_6, 
+                D1=>u_sdram_u_fifo_wptr_gray_rd2_4, DI1=>'X', DI0=>'X', 
+                A0=>u_sdram_u_fifo_rptr_gray_7, 
+                B0=>u_sdram_u_fifo_wptr_gray_rd2_7, 
+                C0=>u_sdram_u_fifo_rptr_gray_6, 
                 D0=>u_sdram_u_fifo_wptr_gray_rd2_6, FCI=>u_sdram_u_fifo_n4444, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 FCO=>u_sdram_u_fifo_n4445, F1=>open, Q1=>open, F0=>open, 
@@ -9913,9 +9952,8 @@
     u_sdram_u_fifo_SLICE_105I: SCCU2C
       generic map (CCU2_INJECT1_0=>"NO", INIT0_INITVAL=>X"00FF", 
                    INIT1_INITVAL=>X"9009")
-      port map (M1=>'X', A1=>u_sdram_u_fifo_rptr_gray_9, 
-                B1=>u_sdram_u_fifo_wptr_gray_rd2_9, 
-                C1=>u_sdram_u_fifo_rptr_gray_8, 
+      port map (M1=>'X', A1=>u_sdram_u_fifo_wptr_gray_rd2_9, 
+                B1=>u_sdram_u_fifo_rptr_gray_9, C1=>u_sdram_u_fifo_rptr_gray_8, 
                 D1=>u_sdram_u_fifo_wptr_gray_rd2_8, DI1=>'X', DI0=>'X', 
                 A0=>'X', B0=>'X', C0=>'X', D0=>'1', FCI=>'X', M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', FCO=>u_sdram_u_fifo_n4444, F1=>open, 
@@ -9930,37 +9968,37 @@
                 Q0=>DOUT_c);
     u_sdram_SLICE_107I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   GSR=>"DISABLED", LUT0_INITVAL=>X"0088", 
-                   LUT1_INITVAL=>X"0800", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   GSR=>"DISABLED", LUT0_INITVAL=>X"0808", 
+                   LUT1_INITVAL=>X"0080", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6735, 
-                B1=>u_sdram_n5975, C1=>u_sdram_n6747, D1=>u_sdram_n5877, 
-                DI1=>'X', DI0=>u_sdram_n4753, A0=>u_sdram_ref_due_N_811, 
-                B0=>u_sdram_row_0, C0=>'X', D0=>u_sdram_rd_empty, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5975, 
+                B1=>u_sdram_n5877, C1=>u_sdram_n6735, D1=>u_sdram_n6747, 
+                DI1=>'X', DI0=>u_sdram_n4753, A0=>u_sdram_row_0, 
+                B0=>u_sdram_ref_due_N_811, C0=>u_sdram_rd_empty, D0=>'X', 
                 M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n4753, F0=>open, 
                 Q0=>SD_A_c_0);
     u_sdram_SLICE_108I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   GSR=>"DISABLED", LUT0_INITVAL=>X"0088", 
-                   LUT1_INITVAL=>X"0080", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   GSR=>"DISABLED", LUT0_INITVAL=>X"0A00", 
+                   LUT1_INITVAL=>X"2000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5877, 
-                B1=>u_sdram_n6735, C1=>u_sdram_n5915, D1=>u_sdram_n6747, 
-                DI1=>'X', DI0=>u_sdram_n4751, A0=>u_sdram_row_1, 
-                B0=>u_sdram_ref_due_N_811, C0=>'X', D0=>u_sdram_rd_empty, 
+                B1=>u_sdram_n6747, C1=>u_sdram_n5915, D1=>u_sdram_n6735, 
+                DI1=>'X', DI0=>u_sdram_n4751, A0=>u_sdram_ref_due_N_811, 
+                B0=>'X', C0=>u_sdram_rd_empty, D0=>u_sdram_row_1, 
                 M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n4751, F0=>open, 
                 Q0=>SD_A_c_1);
     u_sdram_SLICE_109I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   GSR=>"DISABLED", LUT0_INITVAL=>X"0088", 
+                   GSR=>"DISABLED", LUT0_INITVAL=>X"00A0", 
                    LUT1_INITVAL=>X"0800", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6735, 
-                B1=>u_sdram_n5835, C1=>u_sdram_n6747, D1=>u_sdram_n5877, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5835, 
+                B1=>u_sdram_n5877, C1=>u_sdram_n6747, D1=>u_sdram_n6735, 
                 DI1=>'X', DI0=>u_sdram_n1341, A0=>u_sdram_ref_due_N_811, 
-                B0=>u_sdram_row_2, C0=>'X', D0=>u_sdram_rd_empty, 
+                B0=>'X', C0=>u_sdram_row_2, D0=>u_sdram_rd_empty, 
                 M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n1341, F0=>open, 
                 Q0=>SD_A_c_2);
@@ -9970,7 +10008,7 @@
                    LUT1_INITVAL=>X"4000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6747, 
-                B1=>u_sdram_n6735, C1=>u_sdram_n5875, D1=>u_sdram_n5877, 
+                B1=>u_sdram_n5875, C1=>u_sdram_n5877, D1=>u_sdram_n6735, 
                 DI1=>'X', DI0=>u_sdram_n1340, A0=>u_sdram_ref_due_N_811, 
                 B0=>'X', C0=>u_sdram_row_3, D0=>u_sdram_rd_empty, 
                 M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
@@ -9978,86 +10016,86 @@
                 Q0=>SD_A_c_3);
     u_sdram_SLICE_111I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   GSR=>"DISABLED", LUT0_INITVAL=>X"0808", 
-                   LUT1_INITVAL=>X"0800", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
-                   CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5877, 
-                B1=>u_sdram_n6735, C1=>u_sdram_n6747, D1=>u_sdram_n5855, 
-                DI1=>'X', DI0=>u_sdram_n4749, A0=>u_sdram_row_4, 
-                B0=>u_sdram_ref_due_N_811, C0=>u_sdram_rd_empty, D0=>'X', 
-                M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
-                OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n4749, F0=>open, 
-                Q0=>SD_A_c_4);
-    u_sdram_SLICE_112I: SLOGICB
-      generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   GSR=>"DISABLED", LUT0_INITVAL=>X"0088", 
+                   GSR=>"DISABLED", LUT0_INITVAL=>X"0C00", 
                    LUT1_INITVAL=>X"0080", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6735, 
-                B1=>u_sdram_n5877, C1=>u_sdram_n5955, D1=>u_sdram_n6747, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5855, 
+                B1=>u_sdram_n5877, C1=>u_sdram_n6735, D1=>u_sdram_n6747, 
+                DI1=>'X', DI0=>u_sdram_n4749, A0=>'X', 
+                B0=>u_sdram_ref_due_N_811, C0=>u_sdram_rd_empty, 
+                D0=>u_sdram_row_4, M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, 
+                LSR=>u_sdram_n3139, OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>u_sdram_n4749, F0=>open, Q0=>SD_A_c_4);
+    u_sdram_SLICE_112I: SLOGICB
+      generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
+                   GSR=>"DISABLED", LUT0_INITVAL=>X"00A0", 
+                   LUT1_INITVAL=>X"0800", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   CHECK_LSR=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5955, 
+                B1=>u_sdram_n5877, C1=>u_sdram_n6747, D1=>u_sdram_n6735, 
                 DI1=>'X', DI0=>u_sdram_n1338, A0=>u_sdram_ref_due_N_811, 
-                B0=>u_sdram_row_5, C0=>'X', D0=>u_sdram_rd_empty, 
+                B0=>'X', C0=>u_sdram_row_5, D0=>u_sdram_rd_empty, 
                 M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n1338, F0=>open, 
                 Q0=>SD_A_c_5);
     u_sdram_SLICE_113I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   GSR=>"DISABLED", LUT0_INITVAL=>X"3000", 
-                   LUT1_INITVAL=>X"2000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   GSR=>"DISABLED", LUT0_INITVAL=>X"0088", 
+                   LUT1_INITVAL=>X"0800", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6735, 
-                B1=>u_sdram_n6747, C1=>u_sdram_n5877, D1=>u_sdram_n5935, 
-                DI1=>'X', DI0=>u_sdram_n4755, A0=>'X', B0=>u_sdram_rd_empty, 
-                C0=>u_sdram_row_6, D0=>u_sdram_ref_due_N_811, M0=>u_sdram_n635, 
-                CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>u_sdram_n4755, F0=>open, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5877, 
+                B1=>u_sdram_n5935, C1=>u_sdram_n6747, D1=>u_sdram_n6735, 
+                DI1=>'X', DI0=>u_sdram_n4755, A0=>u_sdram_ref_due_N_811, 
+                B0=>u_sdram_row_6, C0=>'X', D0=>u_sdram_rd_empty, 
+                M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n4755, F0=>open, 
                 Q0=>SD_A_c_6);
     u_sdram_SLICE_114I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   GSR=>"DISABLED", LUT0_INITVAL=>X"00A0", 
-                   LUT1_INITVAL=>X"2000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   GSR=>"DISABLED", LUT0_INITVAL=>X"0A00", 
+                   LUT1_INITVAL=>X"4000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6735, 
-                B1=>u_sdram_n6747, C1=>u_sdram_n5877, D1=>u_sdram_n5995, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6747, 
+                B1=>u_sdram_n5877, C1=>u_sdram_n5995, D1=>u_sdram_n6735, 
                 DI1=>'X', DI0=>u_sdram_n1336, A0=>u_sdram_ref_due_N_811, 
-                B0=>'X', C0=>u_sdram_row_7, D0=>u_sdram_rd_empty, 
+                B0=>'X', C0=>u_sdram_rd_empty, D0=>u_sdram_row_7, 
                 M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n1336, F0=>open, 
                 Q0=>SD_A_c_7);
     u_sdram_SLICE_115I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
                    GSR=>"DISABLED", LUT0_INITVAL=>X"0808", 
-                   LUT1_INITVAL=>X"4000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   LUT1_INITVAL=>X"0800", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6747, 
-                B1=>u_sdram_n6735, C1=>u_sdram_n5895, D1=>u_sdram_n5877, 
-                DI1=>'X', DI0=>u_sdram_n1335, A0=>u_sdram_row_8, 
-                B0=>u_sdram_ref_due_N_811, C0=>u_sdram_rd_empty, D0=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5877, 
+                B1=>u_sdram_n5895, C1=>u_sdram_n6747, D1=>u_sdram_n6735, 
+                DI1=>'X', DI0=>u_sdram_n1335, A0=>u_sdram_ref_due_N_811, 
+                B0=>u_sdram_row_8, C0=>u_sdram_rd_empty, D0=>'X', 
                 M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n3139, 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_n1335, F0=>open, 
                 Q0=>SD_A_c_8);
     u_sdram_SLICE_116I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"INV", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"0008", LUT1_INITVAL=>X"8000", 
+                   LUT0_INITVAL=>X"0040", LUT1_INITVAL=>X"8000", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n636, 
-                B1=>u_sdram_ref_due_N_811, C1=>u_sdram_rd_empty, D1=>timer_11, 
-                DI1=>'X', DI0=>u_sdram_n2895, A0=>u_sdram_n636, 
-                B0=>u_sdram_ref_due_N_811, C0=>u_sdram_rd_empty, 
-                D0=>u_sdram_n635, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_11, 
+                B1=>u_sdram_ref_due_N_811, C1=>u_sdram_n636, 
+                D1=>u_sdram_rd_empty, DI1=>'X', DI0=>u_sdram_n2895, 
+                A0=>u_sdram_n635, B0=>u_sdram_ref_due_N_811, C0=>u_sdram_n636, 
+                D0=>u_sdram_rd_empty, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
                 LSR=>u_sdram_row_9, OFX1=>open, F1=>u_sdram_n5091, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_n2895, Q0=>SD_A_c_9);
     u_sdram_SLICE_117I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"0001", 
                    LUT1_INITVAL=>X"0008", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_row_10, 
-                B1=>u_sdram_ref_due_N_811, C1=>u_sdram_n635, 
-                D1=>u_sdram_rd_empty, DI1=>'X', DI0=>u_sdram_SD_A_12_N_482_10, 
-                A0=>u_sdram_n28, B0=>u_sdram_n6747, C0=>u_sdram_n6758, 
-                D0=>u_sdram_n6043, M0=>u_sdram_n6757, CE=>'X', CLK=>SD_CLK_c, 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>u_sdram_SD_A_12_N_482_10, F0=>open, Q0=>SD_A_c_10);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_ref_due_N_811, 
+                B1=>u_sdram_row_10, C1=>u_sdram_n635, D1=>u_sdram_rd_empty, 
+                DI1=>'X', DI0=>u_sdram_SD_A_12_N_482_10, A0=>u_sdram_n6758, 
+                B0=>u_sdram_n6747, C0=>u_sdram_n6043, D0=>u_sdram_n28, 
+                M0=>u_sdram_n6757, CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>u_sdram_SD_A_12_N_482_10, 
+                F0=>open, Q0=>SD_A_c_10);
     u_sdram_SLICE_118I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"INV", 
                    GSR=>"DISABLED", CHECK_M0=>TRUE, CHECK_LSR=>TRUE)
@@ -10085,131 +10123,131 @@
                 F0=>open, Q0=>SD_BA_c_0);
     u_sdram_SLICE_121I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FC0C", 
-                   LUT1_INITVAL=>X"FFF0", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>ref_cnt_11, 
-                D1=>ref_cnt_5, DI1=>'X', DI0=>u_sdram_SD_CAS_N_N_809, A0=>'X', 
-                B0=>u_sdram_SD_DQM_1_N_499_0, C0=>u_sdram_n636, 
-                D0=>u_sdram_ref_due_N_811, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
-                LSR=>'X', OFX1=>open, F1=>u_sdram_n5589, Q1=>open, OFX0=>open, 
-                F0=>u_sdram_SD_CAS_N_N_809, Q0=>SD_CAS_N_c);
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"B8B8", 
+                   LUT1_INITVAL=>X"FCFC", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>ref_cnt_5, 
+                C1=>ref_cnt_11, D1=>'X', DI1=>'X', DI0=>u_sdram_SD_CAS_N_N_809, 
+                A0=>u_sdram_ref_due_N_811, B0=>u_sdram_n636, 
+                C0=>u_sdram_SD_DQM_1_N_499_0, D0=>'X', M0=>'X', CE=>'X', 
+                CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>u_sdram_n5589, 
+                Q1=>open, OFX0=>open, F0=>u_sdram_SD_CAS_N_N_809, 
+                Q0=>SD_CAS_N_c);
     u_sdram_SLICE_122I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FFFD", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FEFF", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_SD_DQM_1_N_499_0, 
-                A0=>u_sdram_n635, B0=>u_sdram_n6732, C0=>u_sdram_n6137, 
-                D0=>u_sdram_n28, M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
+                A0=>u_sdram_n28, B0=>u_sdram_n6137, C0=>u_sdram_n6732, 
+                D0=>u_sdram_n635, M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_SD_DQM_1_N_499_0, Q0=>SD_DQM_c_0);
     u_sdram_SLICE_123I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"CA0A", 
+                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"E222", 
                    LUT1_INITVAL=>X"8000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_ref_due_N_811, 
-                B1=>u_sdram_n636, C1=>timer_10, D1=>u_sdram_rd_empty, DI1=>'X', 
+                B1=>timer_10, C1=>u_sdram_rd_empty, D1=>u_sdram_n636, DI1=>'X', 
                 DI0=>u_sdram_n767, A0=>u_sdram_SD_DQM_1_N_802_1, 
-                B0=>u_sdram_ref_due_N_811, C0=>u_sdram_n636, 
-                D0=>u_sdram_rd_empty, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
+                B0=>u_sdram_n636, C0=>u_sdram_rd_empty, 
+                D0=>u_sdram_ref_due_N_811, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
                 LSR=>u_sdram_n87, OFX1=>open, F1=>u_sdram_n5093, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_n767, Q0=>SD_RAS_N_c);
     u_sdram_SLICE_124I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"3333", 
+                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"00FF", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_sdram_n3138, A0=>'X', 
-                B0=>u_sdram_n1058, C0=>'X', D0=>'X', M0=>'X', CE=>'X', 
-                CLK=>SD_CLK_c, LSR=>u_sdram_SD_DQM_1_N_802_1, OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n3138, 
-                Q0=>SD_WE_N_c);
+                D1=>'X', DI1=>'X', DI0=>u_sdram_n3138, A0=>'X', B0=>'X', 
+                C0=>'X', D0=>u_sdram_n1058, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
+                LSR=>u_sdram_SD_DQM_1_N_802_1, OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n3138, Q0=>SD_WE_N_c);
     u_cam_SLICE_125I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"55AA", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   LUT0_INITVAL=>X"33CC", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_cam_byte_sel_N_202, A0=>HREF_c, 
-                B0=>'X', C0=>'X', D0=>byte_sel, M0=>'X', CE=>'X', CLK=>PCLK_c, 
-                LSR=>VSYNC_c, OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
-                F0=>u_cam_byte_sel_N_202, Q0=>byte_sel);
+                D1=>'X', DI1=>'X', DI0=>u_cam_byte_sel_N_202, A0=>'X', 
+                B0=>HREF_c, C0=>'X', D0=>byte_sel, M0=>'X', CE=>'X', 
+                CLK=>PCLK_c, LSR=>VSYNC_c, OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>open, F0=>u_cam_byte_sel_N_202, Q0=>byte_sel);
     u_sdram_u_fifo_SLICE_126I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F870", 
-                   LUT1_INITVAL=>X"E2AA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"BF80", 
+                   LUT1_INITVAL=>X"BF80", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1844, 
-                B1=>u_sdram_u_fifo_n1840, C1=>u_sdram_u_fifo_n1845, 
-                D1=>u_sdram_u_fifo_n1839, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1845, 
+                B1=>u_sdram_u_fifo_n1839, C1=>u_sdram_u_fifo_n1840, 
+                D1=>u_sdram_u_fifo_n1844, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_1, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_0, 
-                A0=>u_sdram_u_fifo_n1839, B0=>u_sdram_u_fifo_n1840, 
-                C0=>u_sdram_u_fifo_n1842, D0=>u_sdram_u_fifo_n1843, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1843, B0=>u_sdram_u_fifo_n1839, 
+                C0=>u_sdram_u_fifo_n1840, D0=>u_sdram_u_fifo_n1842, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_1, Q1=>fifo_dout_1, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_0, 
                 Q0=>fifo_dout_0);
     u_sdram_u_fifo_SLICE_127I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"B8F0", 
-                   LUT1_INITVAL=>X"E2AA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F780", 
+                   LUT1_INITVAL=>X"E4CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1848, 
-                B1=>u_sdram_u_fifo_n1840, C1=>u_sdram_u_fifo_n1849, 
-                D1=>u_sdram_u_fifo_n1839, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1839, 
+                B1=>u_sdram_u_fifo_n1848, C1=>u_sdram_u_fifo_n1849, 
+                D1=>u_sdram_u_fifo_n1840, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_3, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_2, 
-                A0=>u_sdram_u_fifo_n1847, B0=>u_sdram_u_fifo_n1840, 
-                C0=>u_sdram_u_fifo_n1846, D0=>u_sdram_u_fifo_n1839, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1839, B0=>u_sdram_u_fifo_n1840, 
+                C0=>u_sdram_u_fifo_n1847, D0=>u_sdram_u_fifo_n1846, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_3, Q1=>fifo_dout_3, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_2, 
                 Q0=>fifo_dout_2);
     u_sdram_u_fifo_SLICE_128I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F780", 
-                   LUT1_INITVAL=>X"E4CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"E2AA", 
+                   LUT1_INITVAL=>X"E2AA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1840, 
-                B1=>u_sdram_u_fifo_n1852, C1=>u_sdram_u_fifo_n1853, 
-                D1=>u_sdram_u_fifo_n1839, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1852, 
+                B1=>u_sdram_u_fifo_n1839, C1=>u_sdram_u_fifo_n1853, 
+                D1=>u_sdram_u_fifo_n1840, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_5, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_4, 
-                A0=>u_sdram_u_fifo_n1839, B0=>u_sdram_u_fifo_n1840, 
-                C0=>u_sdram_u_fifo_n1851, D0=>u_sdram_u_fifo_n1850, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1850, B0=>u_sdram_u_fifo_n1839, 
+                C0=>u_sdram_u_fifo_n1851, D0=>u_sdram_u_fifo_n1840, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_5, Q1=>fifo_dout_5, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_4, 
                 Q0=>fifo_dout_4);
     u_sdram_u_fifo_SLICE_129I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"BF80", 
-                   LUT1_INITVAL=>X"ACCC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F780", 
+                   LUT1_INITVAL=>X"E4CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1857, 
-                B1=>u_sdram_u_fifo_n1856, C1=>u_sdram_u_fifo_n1839, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1839, 
+                B1=>u_sdram_u_fifo_n1856, C1=>u_sdram_u_fifo_n1857, 
                 D1=>u_sdram_u_fifo_n1840, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_7, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_6, 
-                A0=>u_sdram_u_fifo_n1855, B0=>u_sdram_u_fifo_n1840, 
-                C0=>u_sdram_u_fifo_n1839, D0=>u_sdram_u_fifo_n1854, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1839, B0=>u_sdram_u_fifo_n1840, 
+                C0=>u_sdram_u_fifo_n1855, D0=>u_sdram_u_fifo_n1854, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_7, Q1=>fifo_dout_7, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_6, 
                 Q0=>fifo_dout_6);
     u_sdram_u_fifo_SLICE_130I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8F0", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"EA2A", 
                    LUT1_INITVAL=>X"CAAA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1860, 
-                B1=>u_sdram_u_fifo_n1861, C1=>u_sdram_u_fifo_n1840, 
-                D1=>u_sdram_u_fifo_n1839, 
+                B1=>u_sdram_u_fifo_n1861, C1=>u_sdram_u_fifo_n1839, 
+                D1=>u_sdram_u_fifo_n1840, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_9, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_8, 
-                A0=>u_sdram_u_fifo_n1840, B0=>u_sdram_u_fifo_n1859, 
-                C0=>u_sdram_u_fifo_n1858, D0=>u_sdram_u_fifo_n1839, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1858, B0=>u_sdram_u_fifo_n1840, 
+                C0=>u_sdram_u_fifo_n1839, D0=>u_sdram_u_fifo_n1859, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_9, Q1=>fifo_dout_9, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_8, 
@@ -10217,47 +10255,47 @@
     u_sdram_u_fifo_SLICE_131I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"B8F0", 
-                   LUT1_INITVAL=>X"E2AA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   LUT1_INITVAL=>X"CAAA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1864, 
-                B1=>u_sdram_u_fifo_n1839, C1=>u_sdram_u_fifo_n1865, 
-                D1=>u_sdram_u_fifo_n1840, 
+                B1=>u_sdram_u_fifo_n1865, C1=>u_sdram_u_fifo_n1840, 
+                D1=>u_sdram_u_fifo_n1839, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_11, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_10, 
-                A0=>u_sdram_u_fifo_n1863, B0=>u_sdram_u_fifo_n1839, 
-                C0=>u_sdram_u_fifo_n1862, D0=>u_sdram_u_fifo_n1840, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1863, B0=>u_sdram_u_fifo_n1840, 
+                C0=>u_sdram_u_fifo_n1862, D0=>u_sdram_u_fifo_n1839, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_11, Q1=>fifo_dout_11, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_10, 
                 Q0=>fifo_dout_10);
     u_sdram_u_fifo_SLICE_132I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F870", 
-                   LUT1_INITVAL=>X"CAAA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"ACCC", 
+                   LUT1_INITVAL=>X"E4CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1868, 
-                B1=>u_sdram_u_fifo_n1869, C1=>u_sdram_u_fifo_n1839, 
-                D1=>u_sdram_u_fifo_n1840, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1840, 
+                B1=>u_sdram_u_fifo_n1868, C1=>u_sdram_u_fifo_n1869, 
+                D1=>u_sdram_u_fifo_n1839, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_13, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_12, 
-                A0=>u_sdram_u_fifo_n1840, B0=>u_sdram_u_fifo_n1839, 
-                C0=>u_sdram_u_fifo_n1866, D0=>u_sdram_u_fifo_n1867, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1867, B0=>u_sdram_u_fifo_n1866, 
+                C0=>u_sdram_u_fifo_n1840, D0=>u_sdram_u_fifo_n1839, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_13, Q1=>fifo_dout_13, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_12, 
                 Q0=>fifo_dout_12);
     u_sdram_u_fifo_SLICE_133I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F780", 
-                   LUT1_INITVAL=>X"EC4C", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"ACCC", 
+                   LUT1_INITVAL=>X"ACCC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1840, 
-                B1=>u_sdram_u_fifo_n1872, C1=>u_sdram_u_fifo_n1839, 
-                D1=>u_sdram_u_fifo_n1873, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_u_fifo_n1873, 
+                B1=>u_sdram_u_fifo_n1872, C1=>u_sdram_u_fifo_n1840, 
+                D1=>u_sdram_u_fifo_n1839, 
                 DI1=>u_sdram_u_fifo_rd_data_15_N_903_15, 
                 DI0=>u_sdram_u_fifo_rd_data_15_N_903_14, 
-                A0=>u_sdram_u_fifo_n1840, B0=>u_sdram_u_fifo_n1839, 
-                C0=>u_sdram_u_fifo_n1871, D0=>u_sdram_u_fifo_n1870, M0=>'X', 
+                A0=>u_sdram_u_fifo_n1871, B0=>u_sdram_u_fifo_n1870, 
+                C0=>u_sdram_u_fifo_n1840, D0=>u_sdram_u_fifo_n1839, M0=>'X', 
                 CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_u_fifo_rd_data_15_N_903_15, Q1=>fifo_dout_15, 
                 OFX0=>open, F0=>u_sdram_u_fifo_rd_data_15_N_903_14, 
@@ -10348,98 +10386,98 @@
                 Q0=>pix_rgb565_14);
     u_cam_SLICE_143I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"INV", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"0A0A", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   LUT0_INITVAL=>X"3300", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_cam_n6754, A0=>HREF_c, B0=>'X', 
-                C0=>VSYNC_c, D0=>'X', M0=>'X', CE=>'X', CLK=>PCLK_c, 
+                D1=>'X', DI1=>'X', DI0=>u_cam_n6754, A0=>'X', B0=>VSYNC_c, 
+                C0=>'X', D0=>HREF_c, M0=>'X', CE=>'X', CLK=>PCLK_c, 
                 LSR=>byte_sel, OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_cam_n6754, Q0=>pix_valid_rgb);
     u_cam_SLICE_144I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"A000", LUT1_INITVAL=>X"C000", 
+                   LUT0_INITVAL=>X"8800", LUT1_INITVAL=>X"C000", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>byte_sel, 
-                C1=>n58_adj_1354, D1=>HREF_c, DI1=>u_cam_n893, DI0=>u_cam_n892, 
-                A0=>n61_adj_1353, B0=>'X', C0=>byte_sel, D0=>HREF_c, M0=>'X', 
-                CE=>PCLK_c_enable_39, CLK=>PCLK_c, LSR=>VSYNC_c, OFX1=>open, 
-                F1=>u_cam_n893, Q1=>pix_x_1, OFX0=>open, F0=>u_cam_n892, 
-                Q0=>pix_x_0);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>HREF_c, 
+                C1=>n58_adj_1354, D1=>byte_sel, DI1=>u_cam_n893, 
+                DI0=>u_cam_n892, A0=>n61_adj_1353, B0=>HREF_c, C0=>'X', 
+                D0=>byte_sel, M0=>'X', CE=>PCLK_c_enable_39, CLK=>PCLK_c, 
+                LSR=>VSYNC_c, OFX1=>open, F1=>u_cam_n893, Q1=>pix_x_1, 
+                OFX0=>open, F0=>u_cam_n892, Q0=>pix_x_0);
     u_cam_SLICE_145I: SLOGICB
+      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", GSR=>"DISABLED", 
+                   LUT0_INITVAL=>X"C000", LUT1_INITVAL=>X"C000", 
+                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
+                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>HREF_c, 
+                C1=>n52_adj_1356, D1=>byte_sel, DI1=>u_cam_n895, 
+                DI0=>u_cam_n894, A0=>'X', B0=>n55_adj_1355, C0=>HREF_c, 
+                D0=>byte_sel, M0=>'X', CE=>PCLK_c_enable_39, CLK=>PCLK_c, 
+                LSR=>VSYNC_c, OFX1=>open, F1=>u_cam_n895, Q1=>pix_x_3, 
+                OFX0=>open, F0=>u_cam_n894, Q0=>pix_x_2);
+    u_cam_SLICE_146I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", GSR=>"DISABLED", 
                    LUT0_INITVAL=>X"8800", LUT1_INITVAL=>X"C000", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>byte_sel, 
-                C1=>n52_adj_1356, D1=>HREF_c, DI1=>u_cam_n895, DI0=>u_cam_n894, 
-                A0=>byte_sel, B0=>n55_adj_1355, C0=>'X', D0=>HREF_c, M0=>'X', 
-                CE=>PCLK_c_enable_39, CLK=>PCLK_c, LSR=>VSYNC_c, OFX1=>open, 
-                F1=>u_cam_n895, Q1=>pix_x_3, OFX0=>open, F0=>u_cam_n894, 
-                Q0=>pix_x_2);
-    u_cam_SLICE_146I: SLOGICB
-      generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"C000", LUT1_INITVAL=>X"A000", 
-                   REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
-                   CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>'X', C1=>byte_sel, 
-                D1=>n46, DI1=>u_cam_n897, DI0=>u_cam_n896, A0=>'X', B0=>n49, 
-                C0=>byte_sel, D0=>HREF_c, M0=>'X', CE=>PCLK_c_enable_39, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>byte_sel, C1=>HREF_c, 
+                D1=>n46, DI1=>u_cam_n897, DI0=>u_cam_n896, A0=>HREF_c, B0=>n49, 
+                C0=>'X', D0=>byte_sel, M0=>'X', CE=>PCLK_c_enable_39, 
                 CLK=>PCLK_c, LSR=>VSYNC_c, OFX1=>open, F1=>u_cam_n897, 
                 Q1=>pix_x_5, OFX0=>open, F0=>u_cam_n896, Q0=>pix_x_4);
     u_cam_SLICE_147I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"8080", LUT1_INITVAL=>X"A000", 
+                   LUT0_INITVAL=>X"8080", LUT1_INITVAL=>X"8080", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>'X', C1=>byte_sel, 
-                D1=>n40, DI1=>u_cam_n899, DI0=>u_cam_n898, A0=>n43, B0=>HREF_c, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>byte_sel, C1=>n40, 
+                D1=>'X', DI1=>u_cam_n899, DI0=>u_cam_n898, A0=>HREF_c, B0=>n43, 
                 C0=>byte_sel, D0=>'X', M0=>'X', CE=>PCLK_c_enable_39, 
                 CLK=>PCLK_c, LSR=>VSYNC_c, OFX1=>open, F1=>u_cam_n899, 
                 Q1=>pix_x_7, OFX0=>open, F0=>u_cam_n898, Q0=>pix_x_6);
     u_cam_SLICE_148I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"8080", LUT1_INITVAL=>X"A000", 
+                   LUT0_INITVAL=>X"C000", LUT1_INITVAL=>X"8800", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>'X', C1=>byte_sel, 
-                D1=>n34_adj_1357, DI1=>u_cam_n901, DI0=>u_cam_n900, A0=>HREF_c, 
-                B0=>n37_adj_1352, C0=>byte_sel, D0=>'X', M0=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>byte_sel, B1=>HREF_c, C1=>'X', 
+                D1=>n34_adj_1357, DI1=>u_cam_n901, DI0=>u_cam_n900, A0=>'X', 
+                B0=>n37_adj_1352, C0=>HREF_c, D0=>byte_sel, M0=>'X', 
                 CE=>PCLK_c_enable_39, CLK=>PCLK_c, LSR=>VSYNC_c, OFX1=>open, 
                 F1=>u_cam_n901, Q1=>pix_x_9, OFX0=>open, F0=>u_cam_n900, 
                 Q0=>pix_x_8);
     u_cam_SLICE_149I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"8080", LUT1_INITVAL=>X"A000", 
+                   LUT0_INITVAL=>X"C000", LUT1_INITVAL=>X"8080", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>'X', 
-                C1=>n28_adj_1359, D1=>byte_sel, DI1=>u_cam_n903, 
-                DI0=>u_cam_n902, A0=>HREF_c, B0=>n31_adj_1358, C0=>byte_sel, 
-                D0=>'X', M0=>'X', CE=>PCLK_c_enable_39, CLK=>PCLK_c, 
-                LSR=>VSYNC_c, OFX1=>open, F1=>u_cam_n903, Q1=>pix_x_11, 
-                OFX0=>open, F0=>u_cam_n902, Q0=>pix_x_10);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>byte_sel, B1=>HREF_c, 
+                C1=>n28_adj_1359, D1=>'X', DI1=>u_cam_n903, DI0=>u_cam_n902, 
+                A0=>'X', B0=>n31_adj_1358, C0=>byte_sel, D0=>HREF_c, M0=>'X', 
+                CE=>PCLK_c_enable_39, CLK=>PCLK_c, LSR=>VSYNC_c, OFX1=>open, 
+                F1=>u_cam_n903, Q1=>pix_x_11, OFX0=>open, F0=>u_cam_n902, 
+                Q0=>pix_x_10);
     SLICE_152I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"FAF0", LUT1_INITVAL=>X"0200", 
+                   LUT0_INITVAL=>X"F8F8", LUT1_INITVAL=>X"0008", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_shift_in_1, 
-                B1=>u_spi_shift_in_0, C1=>u_spi_shift_in_6, 
-                D1=>u_spi_stream_arm_N_1307, DI1=>'X', DI0=>n6380, A0=>n6201, 
-                B0=>'X', C0=>stream_arm_spi, D0=>n6203, M0=>'X', 
+                B1=>u_spi_stream_arm_N_1307, C1=>u_spi_shift_in_0, 
+                D1=>u_spi_shift_in_6, DI1=>'X', DI0=>n6380, A0=>n6201, 
+                B0=>n6203, C0=>stream_arm_spi, D0=>'X', M0=>'X', 
                 CE=>u_spi_CCLK_c_enable_5, CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>n6201, Q1=>open, OFX0=>open, F0=>n6380, Q0=>stream_arm_spi);
     u_stream_u_dc_SLICE_153I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"BF80", 
-                   LUT1_INITVAL=>X"DF80", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"E2AA", 
+                   LUT1_INITVAL=>X"E2AA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n1781, 
-                B1=>u_stream_u_dc_n1787, C1=>u_stream_u_dc_n1782, 
-                D1=>u_stream_u_dc_n1786, DI1=>u_stream_u_dc_rd_data_7_N_1169_1, 
-                DI0=>u_stream_u_dc_rd_data_7_N_1169_0, A0=>u_stream_u_dc_n1785, 
-                B0=>u_stream_u_dc_n1781, C0=>u_stream_u_dc_n1782, 
-                D0=>u_stream_u_dc_n1784, M0=>'X', CE=>rd_data_7_N_1177, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n1786, 
+                B1=>u_stream_u_dc_n1781, C1=>u_stream_u_dc_n1787, 
+                D1=>u_stream_u_dc_n1782, DI1=>u_stream_u_dc_rd_data_7_N_1169_1, 
+                DI0=>u_stream_u_dc_rd_data_7_N_1169_0, A0=>u_stream_u_dc_n1784, 
+                B0=>u_stream_u_dc_n1781, C0=>u_stream_u_dc_n1785, 
+                D0=>u_stream_u_dc_n1782, M0=>'X', CE=>rd_data_7_N_1177, 
                 CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_stream_u_dc_rd_data_7_N_1169_1, 
                 Q1=>stream_fifo_rd_data_1, OFX0=>open, 
@@ -10447,15 +10485,15 @@
                 Q0=>stream_fifo_rd_data_0);
     u_stream_u_dc_SLICE_154I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"EC4C", 
-                   LUT1_INITVAL=>X"E4CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8F0", 
+                   LUT1_INITVAL=>X"EA2A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n1781, 
-                B1=>u_stream_u_dc_n1790, C1=>u_stream_u_dc_n1791, 
-                D1=>u_stream_u_dc_n1782, DI1=>u_stream_u_dc_rd_data_7_N_1169_3, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n1790, 
+                B1=>u_stream_u_dc_n1782, C1=>u_stream_u_dc_n1781, 
+                D1=>u_stream_u_dc_n1791, DI1=>u_stream_u_dc_rd_data_7_N_1169_3, 
                 DI0=>u_stream_u_dc_rd_data_7_N_1169_2, A0=>u_stream_u_dc_n1781, 
-                B0=>u_stream_u_dc_n1788, C0=>u_stream_u_dc_n1782, 
-                D0=>u_stream_u_dc_n1789, M0=>'X', CE=>rd_data_7_N_1177, 
+                B0=>u_stream_u_dc_n1789, C0=>u_stream_u_dc_n1788, 
+                D0=>u_stream_u_dc_n1782, M0=>'X', CE=>rd_data_7_N_1177, 
                 CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_stream_u_dc_rd_data_7_N_1169_3, 
                 Q1=>stream_fifo_rd_data_3, OFX0=>open, 
@@ -10463,15 +10501,15 @@
                 Q0=>stream_fifo_rd_data_2);
     u_stream_u_dc_SLICE_155I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8F0", 
-                   LUT1_INITVAL=>X"EA2A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F780", 
+                   LUT1_INITVAL=>X"ACCC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n1794, 
-                B1=>u_stream_u_dc_n1782, C1=>u_stream_u_dc_n1781, 
-                D1=>u_stream_u_dc_n1795, DI1=>u_stream_u_dc_rd_data_7_N_1169_5, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n1795, 
+                B1=>u_stream_u_dc_n1794, C1=>u_stream_u_dc_n1782, 
+                D1=>u_stream_u_dc_n1781, DI1=>u_stream_u_dc_rd_data_7_N_1169_5, 
                 DI0=>u_stream_u_dc_rd_data_7_N_1169_4, A0=>u_stream_u_dc_n1781, 
-                B0=>u_stream_u_dc_n1793, C0=>u_stream_u_dc_n1792, 
-                D0=>u_stream_u_dc_n1782, M0=>'X', CE=>rd_data_7_N_1177, 
+                B0=>u_stream_u_dc_n1782, C0=>u_stream_u_dc_n1793, 
+                D0=>u_stream_u_dc_n1792, M0=>'X', CE=>rd_data_7_N_1177, 
                 CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_stream_u_dc_rd_data_7_N_1169_5, 
                 Q1=>stream_fifo_rd_data_5, OFX0=>open, 
@@ -10479,15 +10517,15 @@
                 Q0=>stream_fifo_rd_data_4);
     u_stream_u_dc_SLICE_156I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8F0", 
-                   LUT1_INITVAL=>X"EA2A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F870", 
+                   LUT1_INITVAL=>X"CAAA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n1798, 
-                B1=>u_stream_u_dc_n1781, C1=>u_stream_u_dc_n1782, 
-                D1=>u_stream_u_dc_n1799, DI1=>u_stream_u_dc_rd_data_7_N_1169_7, 
+                B1=>u_stream_u_dc_n1799, C1=>u_stream_u_dc_n1782, 
+                D1=>u_stream_u_dc_n1781, DI1=>u_stream_u_dc_rd_data_7_N_1169_7, 
                 DI0=>u_stream_u_dc_rd_data_7_N_1169_6, A0=>u_stream_u_dc_n1781, 
-                B0=>u_stream_u_dc_n1797, C0=>u_stream_u_dc_n1796, 
-                D0=>u_stream_u_dc_n1782, M0=>'X', CE=>rd_data_7_N_1177, 
+                B0=>u_stream_u_dc_n1782, C0=>u_stream_u_dc_n1796, 
+                D0=>u_stream_u_dc_n1797, M0=>'X', CE=>rd_data_7_N_1177, 
                 CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_stream_u_dc_rd_data_7_N_1169_7, 
                 Q1=>stream_fifo_rd_data_7, OFX0=>open, 
@@ -10495,36 +10533,35 @@
                 Q0=>stream_fifo_rd_data_6);
     u_sdram_SLICE_157I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"EFAA", 
-                   LUT1_INITVAL=>X"CC00", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>timer_0, C1=>'X', 
-                D1=>u_sdram_rd_empty, DI1=>'X', DI0=>u_sdram_timer_15_N_529_0, 
-                A0=>u_sdram_n6724, B0=>u_sdram_n3_adj_1331, 
-                C0=>u_sdram_ref_due_N_811, D0=>u_sdram_n636, M0=>'X', CE=>'X', 
-                CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>u_sdram_n3_adj_1331, 
-                Q1=>open, OFX0=>open, F0=>u_sdram_timer_15_N_529_0, 
-                Q0=>timer_0);
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FDF0", 
+                   LUT1_INITVAL=>X"C0C0", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>timer_0, 
+                C1=>u_sdram_rd_empty, D1=>'X', DI1=>'X', 
+                DI0=>u_sdram_timer_15_N_529_0, A0=>u_sdram_ref_due_N_811, 
+                B0=>u_sdram_n3_adj_1331, C0=>u_sdram_n6724, D0=>u_sdram_n636, 
+                M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
+                F1=>u_sdram_n3_adj_1331, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_timer_15_N_529_0, Q0=>timer_0);
     u_sdram_SLICE_158I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"EFCC", 
-                   LUT1_INITVAL=>X"FF0F", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"FFD0", 
+                   LUT1_INITVAL=>X"F5F5", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
-                C1=>u_sdram_ref_due_N_811, D1=>timer_1, DI1=>'X', 
-                DI0=>u_sdram_n4741, A0=>u_sdram_n5491, B0=>u_sdram_n6725, 
-                C0=>u_sdram_rd_empty, D0=>u_sdram_n636, M0=>'X', CE=>'X', 
-                CLK=>SD_CLK_c, LSR=>u_sdram_n634, OFX1=>open, 
-                F1=>u_sdram_n5491, Q1=>open, OFX0=>open, F0=>u_sdram_n4741, 
-                Q0=>timer_1);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_ref_due_N_811, 
+                B1=>'X', C1=>timer_1, D1=>'X', DI1=>'X', DI0=>u_sdram_n4741, 
+                A0=>u_sdram_rd_empty, B0=>u_sdram_n5491, C0=>u_sdram_n636, 
+                D0=>u_sdram_n6725, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
+                LSR=>u_sdram_n634, OFX1=>open, F1=>u_sdram_n5491, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n4741, Q0=>timer_1);
     u_sdram_SLICE_159I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"EFCC", 
-                   LUT1_INITVAL=>X"F888", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FDCC", 
+                   LUT1_INITVAL=>X"ECA0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_3, B1=>u_sdram_n16, 
-                C1=>u_sdram_n5779, D1=>u_sdram_n6737, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_3, B1=>u_sdram_n5779, 
+                C1=>u_sdram_n16, D1=>u_sdram_n6737, 
                 DI1=>u_sdram_timer_15_N_529_3, DI0=>u_sdram_timer_15_N_529_2, 
-                A0=>u_sdram_n3, B0=>u_sdram_n6723, C0=>u_sdram_ref_due_N_811, 
+                A0=>u_sdram_ref_due_N_811, B0=>u_sdram_n6723, C0=>u_sdram_n3, 
                 D0=>u_sdram_n636, M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_timer_15_N_529_3, Q1=>timer_3, 
                 OFX0=>open, F0=>u_sdram_timer_15_N_529_2, Q0=>timer_2);
@@ -10533,34 +10570,35 @@
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"FF80", 
                    LUT1_INITVAL=>X"EAC0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6737, B1=>timer_5, 
-                C1=>u_sdram_n16, D1=>u_sdram_n5787, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_5, B1=>u_sdram_n5787, 
+                C1=>u_sdram_n6737, D1=>u_sdram_n16, 
                 DI1=>u_sdram_timer_15_N_529_5, DI0=>u_sdram_timer_15_N_529_4, 
-                A0=>u_sdram_n6737, B0=>u_sdram_SD_DQM_1_N_802_1, C0=>n69, 
+                A0=>u_sdram_SD_DQM_1_N_802_1, B0=>n69, C0=>u_sdram_n6737, 
                 D0=>u_sdram_n5094, M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_timer_15_N_529_5, Q1=>timer_5, 
                 OFX0=>open, F0=>u_sdram_timer_15_N_529_4, Q0=>timer_4);
     u_sdram_SLICE_161I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"EAC0", 
-                   LUT1_INITVAL=>X"FF80", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F888", 
+                   LUT1_INITVAL=>X"F8F0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_SD_DQM_1_N_802_1, 
-                B1=>u_sdram_n6737, C1=>n60, D1=>u_sdram_n11, 
+                B1=>n60, C1=>u_sdram_n11, D1=>u_sdram_n6737, 
                 DI1=>u_sdram_timer_15_N_529_7, DI0=>u_sdram_timer_15_N_529_6, 
-                A0=>u_sdram_n5783, B0=>timer_6, C0=>u_sdram_n16, 
-                D0=>u_sdram_n6737, M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
+                A0=>u_sdram_n6737, B0=>u_sdram_n5783, C0=>u_sdram_n16, 
+                D0=>timer_6, M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_timer_15_N_529_7, Q1=>timer_7, 
                 OFX0=>open, F0=>u_sdram_timer_15_N_529_6, Q0=>timer_6);
     u_sdram_SLICE_162I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"FF80", 
-                   LUT1_INITVAL=>X"F888", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   LUT1_INITVAL=>X"ECA0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_SD_DQM_1_N_802_1, 
-                B1=>u_sdram_n5801, C1=>u_sdram_n16, D1=>timer_9, 
-                DI1=>u_sdram_timer_15_N_529_9, DI0=>u_sdram_timer_15_N_529_8, 
-                A0=>u_sdram_SD_DQM_1_N_802_1, B0=>u_sdram_n6737, C0=>n57, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_9, 
+                B1=>u_sdram_SD_DQM_1_N_802_1, C1=>u_sdram_n16, 
+                D1=>u_sdram_n5801, DI1=>u_sdram_timer_15_N_529_9, 
+                DI0=>u_sdram_timer_15_N_529_8, A0=>n57, 
+                B0=>u_sdram_SD_DQM_1_N_802_1, C0=>u_sdram_n6737, 
                 D0=>u_sdram_n11_adj_1309, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
                 LSR=>'X', OFX1=>open, F1=>u_sdram_timer_15_N_529_9, 
                 Q1=>timer_9, OFX0=>open, F0=>u_sdram_timer_15_N_529_8, 
@@ -10568,13 +10606,13 @@
     u_sdram_SLICE_163I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"EAAA", 
-                   LUT1_INITVAL=>X"F8F0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   LUT1_INITVAL=>X"EAAA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6737, 
-                B1=>u_sdram_SD_DQM_1_N_802_1, C1=>u_sdram_n5091, D1=>n48, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5091, B1=>n48, 
+                C1=>u_sdram_n6737, D1=>u_sdram_SD_DQM_1_N_802_1, 
                 DI1=>u_sdram_timer_15_N_529_11, DI0=>u_sdram_timer_15_N_529_10, 
-                A0=>u_sdram_n5093, B0=>u_sdram_SD_DQM_1_N_802_1, 
-                C0=>u_sdram_n6737, D0=>n51, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
+                A0=>u_sdram_n5093, B0=>n51, C0=>u_sdram_n6737, 
+                D0=>u_sdram_SD_DQM_1_N_802_1, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
                 LSR=>'X', OFX1=>open, F1=>u_sdram_timer_15_N_529_11, 
                 Q1=>timer_11, OFX0=>open, F0=>u_sdram_timer_15_N_529_10, 
                 Q0=>timer_10);
@@ -10596,10 +10634,11 @@
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"FF80", 
                    LUT1_INITVAL=>X"F8F0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_SD_DQM_1_N_802_1, 
-                B1=>u_sdram_n6737, C1=>u_sdram_n11_adj_1313, D1=>n36, 
-                DI1=>u_sdram_timer_15_N_529_15, DI0=>u_sdram_timer_15_N_529_14, 
-                A0=>n39, B0=>u_sdram_n6737, C0=>u_sdram_SD_DQM_1_N_802_1, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6737, 
+                B1=>u_sdram_SD_DQM_1_N_802_1, C1=>u_sdram_n11_adj_1313, 
+                D1=>n36, DI1=>u_sdram_timer_15_N_529_15, 
+                DI0=>u_sdram_timer_15_N_529_14, A0=>n39, 
+                B0=>u_sdram_SD_DQM_1_N_802_1, C0=>u_sdram_n6737, 
                 D0=>u_sdram_n11_adj_1312, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
                 LSR=>'X', OFX1=>open, F1=>u_sdram_timer_15_N_529_15, 
                 Q1=>timer_15, OFX0=>open, F0=>u_sdram_timer_15_N_529_14, 
@@ -10642,23 +10681,23 @@
                 F0=>open, Q0=>u_cam_byte0_6);
     u_sdram_SLICE_170I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"6A00", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"7080", 
                    LUT1_INITVAL=>X"0011", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n28, B1=>timer_15, 
                 C1=>'X', D1=>timer_11, DI1=>'X', DI0=>u_sdram_bank_1_N_523_0, 
-                A0=>u_sdram_bank_0, B0=>u_sdram_n5653, C0=>u_sdram_n6735, 
-                D0=>u_sdram_n632, M0=>'X', CE=>u_sdram_SD_CLK_c_enable_1, 
+                A0=>u_sdram_n6735, B0=>u_sdram_n5653, C0=>u_sdram_n632, 
+                D0=>u_sdram_bank_0, M0=>'X', CE=>u_sdram_SD_CLK_c_enable_1, 
                 CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>u_sdram_n6735, 
                 Q1=>open, OFX0=>open, F0=>u_sdram_bank_1_N_523_0, 
                 Q0=>u_sdram_bank_0);
     u_sdram_SLICE_171I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"2288", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"4488", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_bank_1_N_523_1, 
-                A0=>u_sdram_n632, B0=>u_sdram_bank_0, C0=>'X', 
+                A0=>u_sdram_bank_0, B0=>u_sdram_n632, C0=>'X', 
                 D0=>u_sdram_bank_1, M0=>'X', CE=>u_sdram_SD_CLK_c_enable_28, 
                 CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_bank_1_N_523_1, Q0=>u_sdram_bank_1);
@@ -10666,11 +10705,11 @@
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"INV", GSR=>"DISABLED", 
                    LUT0_INITVAL=>X"0001", LUT1_INITVAL=>X"FFFE", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_15, B1=>timer_14, 
-                C1=>timer_8, D1=>timer_11, DI1=>'X', 
-                DI0=>u_sdram_SD_A_12_N_789_6, A0=>u_sdram_n6330, 
-                B0=>u_sdram_n28, C0=>u_sdram_n6137, D0=>u_sdram_n6733, M0=>'X', 
-                CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n635, OFX1=>open, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_8, B1=>timer_11, 
+                C1=>timer_14, D1=>timer_15, DI1=>'X', 
+                DI0=>u_sdram_SD_A_12_N_789_6, A0=>u_sdram_n28, 
+                B0=>u_sdram_n6137, C0=>u_sdram_n6733, D0=>u_sdram_n6330, 
+                M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n635, OFX1=>open, 
                 F1=>u_sdram_n6137, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_SD_A_12_N_789_6, Q0=>u_sdram_dq_oe);
     u_sdram_SLICE_174I: SLOGICB
@@ -10684,45 +10723,45 @@
                 F0=>open, Q0=>u_sdram_fs_sync);
     u_sdram_SLICE_177I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F444", 
-                   LUT1_INITVAL=>X"CECC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"CE0A", 
+                   LUT1_INITVAL=>X"DCCC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6017, 
-                B1=>u_sdram_n5322, C1=>u_sdram_n6352, D1=>u_sdram_n6735, 
-                DI1=>u_sdram_n2750, DI0=>u_sdram_n2748, A0=>u_sdram_rd_empty, 
-                B0=>u_sdram_n6731, C0=>u_sdram_SD_DQM_1_N_802_1, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6352, 
+                B1=>u_sdram_n5322, C1=>u_sdram_n6017, D1=>u_sdram_n6735, 
+                DI1=>u_sdram_n2750, DI0=>u_sdram_n2748, A0=>u_sdram_n6731, 
+                B0=>u_sdram_SD_DQM_1_N_802_1, C0=>u_sdram_rd_empty, 
                 D0=>u_sdram_n635, M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_n2750, Q1=>u_sdram_n636, OFX0=>open, 
                 F0=>u_sdram_n2748, Q0=>u_sdram_n635);
     u_sdram_SLICE_178I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"CC00", 
+                   REG0_REGSET=>"SET", GSR=>"DISABLED", LUT0_INITVAL=>X"AA00", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_sdram_n62_adj_1318, A0=>'X', 
-                B0=>u_sdram_SD_DQM_1_N_802_1, C0=>'X', D0=>u_sdram_n1058, 
-                M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>u_sdram_n634, OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n62_adj_1318, 
-                Q0=>u_sdram_n1058);
+                D1=>'X', DI1=>'X', DI0=>u_sdram_n62_adj_1318, 
+                A0=>u_sdram_SD_DQM_1_N_802_1, B0=>'X', C0=>'X', 
+                D0=>u_sdram_n1058, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
+                LSR=>u_sdram_n634, OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n62_adj_1318, Q0=>u_sdram_n1058);
     u_sdram_SLICE_179I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F444", 
-                   LUT1_INITVAL=>X"0002", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6187, B1=>ref_cnt_8, 
-                C1=>u_sdram_n6312, D1=>u_sdram_n6262, DI1=>'X', 
-                DI0=>u_sdram_n2738, A0=>u_sdram_n6346, B0=>u_sdram_n6193, 
-                C0=>u_sdram_SD_DQM_1_N_802_1, D0=>u_sdram_ref_cnt_15_N_577, 
-                M0=>'X', CE=>'X', CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
-                F1=>u_sdram_n6193, Q1=>open, OFX0=>open, F0=>u_sdram_n2738, 
-                Q0=>u_sdram_ref_cnt_15_N_577);
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"DC50", 
+                   LUT1_INITVAL=>X"0100", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6312, B1=>ref_cnt_8, 
+                C1=>u_sdram_n6262, D1=>u_sdram_n6187, DI1=>'X', 
+                DI0=>u_sdram_n2738, A0=>u_sdram_n6346, 
+                B0=>u_sdram_ref_cnt_15_N_577, C0=>u_sdram_n6193, 
+                D0=>u_sdram_SD_DQM_1_N_802_1, M0=>'X', CE=>'X', CLK=>SD_CLK_c, 
+                LSR=>'X', OFX1=>open, F1=>u_sdram_n6193, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n2738, Q0=>u_sdram_ref_cnt_15_N_577);
     u_sdram_u_fifo_SLICE_180I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"ACAA", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"E4F0", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1809, 
-                A0=>u_sdram_u_fifo_n1717, B0=>rptr_bin_9_N_922_0, 
-                C0=>u_sdram_rd_empty, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
+                A0=>u_sdram_rd_empty, B0=>rptr_bin_9_N_922_0, 
+                C0=>u_sdram_u_fifo_n1717, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
                 CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_u_fifo_n1809, Q0=>u_sdram_u_fifo_n1717);
     u_sdram_u_fifo_SLICE_181I: SLOGICB
@@ -10736,12 +10775,12 @@
                 F0=>open, Q0=>u_sdram_u_fifo_n1821);
     u_sdram_u_fifo_SLICE_182I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"ACAA", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8CC", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1808, 
-                A0=>u_sdram_u_fifo_n1824, B0=>rptr_bin_9_N_922_1, 
-                C0=>u_sdram_rd_empty, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
+                A0=>u_sdram_rd_empty, B0=>u_sdram_u_fifo_n1824, 
+                C0=>rptr_bin_9_N_922_1, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
                 CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_u_fifo_n1808, Q0=>u_sdram_u_fifo_n1824);
     u_sdram_u_fifo_SLICE_183I: SLOGICB
@@ -10754,12 +10793,12 @@
                 Q0=>u_sdram_u_fifo_n1825);
     u_sdram_u_fifo_SLICE_184I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FB08", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F4B0", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1807, 
-                A0=>rptr_bin_9_N_922_2, B0=>u_sdram_dq_oe, 
-                C0=>u_sdram_rd_empty, D0=>u_sdram_u_fifo_n1826, M0=>'X', 
+                A0=>u_sdram_rd_empty, B0=>u_sdram_dq_oe, 
+                C0=>u_sdram_u_fifo_n1826, D0=>rptr_bin_9_N_922_2, M0=>'X', 
                 CE=>'X', CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, 
                 Q1=>open, OFX0=>open, F0=>u_sdram_u_fifo_n1807, 
                 Q0=>u_sdram_u_fifo_n1826);
@@ -10773,12 +10812,12 @@
                 Q0=>u_sdram_u_fifo_n1827);
     u_sdram_u_fifo_SLICE_186I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AEA2", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8CC", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1806, 
-                A0=>u_sdram_u_fifo_n1828, B0=>u_sdram_dq_oe, 
-                C0=>u_sdram_rd_empty, D0=>rptr_bin_9_N_922_3, M0=>'X', CE=>'X', 
+                A0=>u_sdram_rd_empty, B0=>u_sdram_u_fifo_n1828, 
+                C0=>rptr_bin_9_N_922_3, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
                 CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_u_fifo_n1806, Q0=>u_sdram_u_fifo_n1828);
     u_sdram_u_fifo_SLICE_187I: SLOGICB
@@ -10791,14 +10830,15 @@
                 Q0=>u_sdram_u_fifo_n1829);
     u_sdram_u_fifo_SLICE_188I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"ACAA", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FB40", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1805, 
-                A0=>u_sdram_u_fifo_n1830, B0=>rptr_bin_9_N_922_4, 
-                C0=>u_sdram_rd_empty, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
-                CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>open, F0=>u_sdram_u_fifo_n1805, Q0=>u_sdram_u_fifo_n1830);
+                A0=>u_sdram_rd_empty, B0=>u_sdram_dq_oe, 
+                C0=>rptr_bin_9_N_922_4, D0=>u_sdram_u_fifo_n1830, M0=>'X', 
+                CE=>'X', CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, 
+                Q1=>open, OFX0=>open, F0=>u_sdram_u_fifo_n1805, 
+                Q0=>u_sdram_u_fifo_n1830);
     u_sdram_u_fifo_SLICE_189I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", CHECK_M0=>TRUE)
@@ -10809,12 +10849,12 @@
                 Q0=>u_sdram_u_fifo_n1831);
     u_sdram_u_fifo_SLICE_190I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AEA2", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8CC", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1804, 
-                A0=>u_sdram_u_fifo_n1832, B0=>u_sdram_dq_oe, 
-                C0=>u_sdram_rd_empty, D0=>rptr_bin_9_N_922_5, M0=>'X', CE=>'X', 
+                A0=>u_sdram_rd_empty, B0=>u_sdram_u_fifo_n1832, 
+                C0=>rptr_bin_9_N_922_5, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
                 CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_u_fifo_n1804, Q0=>u_sdram_u_fifo_n1832);
     u_sdram_u_fifo_SLICE_191I: SLOGICB
@@ -10827,12 +10867,12 @@
                 Q0=>u_sdram_u_fifo_n1833);
     u_sdram_u_fifo_SLICE_192I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FB08", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FB40", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1803, 
-                A0=>rptr_bin_9_N_922_6, B0=>u_sdram_dq_oe, 
-                C0=>u_sdram_rd_empty, D0=>u_sdram_u_fifo_n1834, M0=>'X', 
+                A0=>u_sdram_rd_empty, B0=>u_sdram_dq_oe, 
+                C0=>rptr_bin_9_N_922_6, D0=>u_sdram_u_fifo_n1834, M0=>'X', 
                 CE=>'X', CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, 
                 Q1=>open, OFX0=>open, F0=>u_sdram_u_fifo_n1803, 
                 Q0=>u_sdram_u_fifo_n1834);
@@ -10846,14 +10886,15 @@
                 Q0=>u_sdram_u_fifo_n1835);
     u_sdram_u_fifo_SLICE_194I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"CEC4", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F4B0", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_sdram_u_fifo_n1802, 
-                A0=>u_sdram_dq_oe, B0=>u_sdram_u_fifo_n1836, 
-                C0=>u_sdram_rd_empty, D0=>rptr_bin_9_N_922_7, M0=>'X', CE=>'X', 
-                CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>open, F0=>u_sdram_u_fifo_n1802, Q0=>u_sdram_u_fifo_n1836);
+                A0=>u_sdram_rd_empty, B0=>u_sdram_dq_oe, 
+                C0=>u_sdram_u_fifo_n1836, D0=>rptr_bin_9_N_922_7, M0=>'X', 
+                CE=>'X', CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>open, 
+                Q1=>open, OFX0=>open, F0=>u_sdram_u_fifo_n1802, 
+                Q0=>u_sdram_u_fifo_n1836);
     u_sdram_u_fifo_SLICE_195I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", CHECK_M0=>TRUE)
@@ -10864,17 +10905,17 @@
                 Q0=>u_sdram_u_fifo_n1837);
     SLICE_196I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"ACAA", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F4B0", 
                    LUT1_INITVAL=>X"0008", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_valid_rgb, 
-                B1=>u_spi_mode_req_1, C1=>u_spi_mode_req_0, D1=>u_spi_n5323, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_mode_req_1, 
+                B1=>pix_valid_rgb, C1=>u_spi_mode_req_0, D1=>u_spi_n5323, 
                 DI1=>wptr_bin_9_N_886, DI0=>u_sdram_u_fifo_n1801, 
-                A0=>u_sdram_u_fifo_n1838, B0=>rptr_bin_9_N_922_8, 
-                C0=>u_sdram_rd_empty, D0=>u_sdram_dq_oe, M0=>'X', CE=>'X', 
-                CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, F1=>wptr_bin_9_N_886, 
-                Q1=>u_sdram_u_fifo_n1840, OFX0=>open, F0=>u_sdram_u_fifo_n1801, 
-                Q0=>u_sdram_u_fifo_n1838);
+                A0=>u_sdram_rd_empty, B0=>u_sdram_dq_oe, 
+                C0=>u_sdram_u_fifo_n1838, D0=>rptr_bin_9_N_922_8, M0=>'X', 
+                CE=>'X', CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
+                F1=>wptr_bin_9_N_886, Q1=>u_sdram_u_fifo_n1840, OFX0=>open, 
+                F0=>u_sdram_u_fifo_n1801, Q0=>u_sdram_u_fifo_n1838);
     u_sdram_u_fifo_SLICE_197I: SLOGICB
       generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", 
                    GSR=>"DISABLED", SRMODE=>"ASYNC", CHECK_M1=>TRUE, 
@@ -10949,62 +10990,62 @@
                 OFX0=>open, F0=>open, Q0=>u_sdram_u_fifo_n1871);
     u_sdram_u_fifo_SLICE_205I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
-                   LUT1_INITVAL=>X"55AA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"55AA", 
+                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>rptr_bin_9_N_922_2, B1=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>rptr_bin_9_N_922_2, 
                 C1=>'X', D1=>rptr_bin_9_N_922_1, 
                 DI1=>u_sdram_u_fifo_rptr_gray_9_N_932_1, 
-                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_0, A0=>'X', 
-                B0=>rptr_bin_9_N_922_0, C0=>'X', D0=>rptr_bin_9_N_922_1, 
-                M0=>'X', CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', 
-                OFX1=>open, F1=>u_sdram_u_fifo_rptr_gray_9_N_932_1, 
+                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_0, 
+                A0=>rptr_bin_9_N_922_0, B0=>'X', C0=>'X', 
+                D0=>rptr_bin_9_N_922_1, M0=>'X', CE=>SD_CLK_c_enable_63, 
+                CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
+                F1=>u_sdram_u_fifo_rptr_gray_9_N_932_1, 
                 Q1=>u_sdram_u_fifo_rptr_gray_1, OFX0=>open, 
                 F0=>u_sdram_u_fifo_rptr_gray_9_N_932_0, 
                 Q0=>u_sdram_u_fifo_rptr_gray_0);
     u_sdram_u_fifo_SLICE_206I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"5A5A", 
-                   LUT1_INITVAL=>X"0FF0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3C3C", 
+                   LUT1_INITVAL=>X"5A5A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
-                C1=>rptr_bin_9_N_922_3, D1=>rptr_bin_9_N_922_4, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>rptr_bin_9_N_922_4, B1=>'X', 
+                C1=>rptr_bin_9_N_922_3, D1=>'X', 
                 DI1=>u_sdram_u_fifo_rptr_gray_9_N_932_3, 
-                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_2, 
-                A0=>rptr_bin_9_N_922_2, B0=>'X', C0=>rptr_bin_9_N_922_3, 
-                D0=>'X', M0=>'X', CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, 
-                LSR=>'X', OFX1=>open, F1=>u_sdram_u_fifo_rptr_gray_9_N_932_3, 
+                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_2, A0=>'X', 
+                B0=>rptr_bin_9_N_922_2, C0=>rptr_bin_9_N_922_3, D0=>'X', 
+                M0=>'X', CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', 
+                OFX1=>open, F1=>u_sdram_u_fifo_rptr_gray_9_N_932_3, 
                 Q1=>u_sdram_u_fifo_rptr_gray_3, OFX0=>open, 
                 F0=>u_sdram_u_fifo_rptr_gray_9_N_932_2, 
                 Q0=>u_sdram_u_fifo_rptr_gray_2);
     u_sdram_u_fifo_SLICE_207I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"0FF0", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
                    LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>rptr_bin_9_N_922_6, 
                 C1=>'X', D1=>rptr_bin_9_N_922_5, 
                 DI1=>u_sdram_u_fifo_rptr_gray_9_N_932_5, 
-                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_4, A0=>'X', B0=>'X', 
-                C0=>rptr_bin_9_N_922_4, D0=>rptr_bin_9_N_922_5, M0=>'X', 
-                CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
-                F1=>u_sdram_u_fifo_rptr_gray_9_N_932_5, 
+                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_4, A0=>'X', 
+                B0=>rptr_bin_9_N_922_4, C0=>'X', D0=>rptr_bin_9_N_922_5, 
+                M0=>'X', CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', 
+                OFX1=>open, F1=>u_sdram_u_fifo_rptr_gray_9_N_932_5, 
                 Q1=>u_sdram_u_fifo_rptr_gray_5, OFX0=>open, 
                 F0=>u_sdram_u_fifo_rptr_gray_9_N_932_4, 
                 Q0=>u_sdram_u_fifo_rptr_gray_4);
     u_sdram_u_fifo_SLICE_208I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"55AA", 
-                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3C3C", 
+                   LUT1_INITVAL=>X"5A5A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>rptr_bin_9_N_922_8, 
-                C1=>'X', D1=>rptr_bin_9_N_922_7, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>rptr_bin_9_N_922_8, B1=>'X', 
+                C1=>rptr_bin_9_N_922_7, D1=>'X', 
                 DI1=>u_sdram_u_fifo_rptr_gray_9_N_932_7, 
-                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_6, 
-                A0=>rptr_bin_9_N_922_6, B0=>'X', C0=>'X', 
-                D0=>rptr_bin_9_N_922_7, M0=>'X', CE=>SD_CLK_c_enable_63, 
-                CLK=>SD_CLK_c, LSR=>'X', OFX1=>open, 
-                F1=>u_sdram_u_fifo_rptr_gray_9_N_932_7, 
+                DI0=>u_sdram_u_fifo_rptr_gray_9_N_932_6, A0=>'X', 
+                B0=>rptr_bin_9_N_922_6, C0=>rptr_bin_9_N_922_7, D0=>'X', 
+                M0=>'X', CE=>SD_CLK_c_enable_63, CLK=>SD_CLK_c, LSR=>'X', 
+                OFX1=>open, F1=>u_sdram_u_fifo_rptr_gray_9_N_932_7, 
                 Q1=>u_sdram_u_fifo_rptr_gray_7, OFX0=>open, 
                 F0=>u_sdram_u_fifo_rptr_gray_9_N_932_6, 
                 Q0=>u_sdram_u_fifo_rptr_gray_6);
@@ -11124,15 +11165,15 @@
                 OFX0=>open, F0=>open, Q0=>u_sdram_u_fifo_rptr_gray_wr2_8);
     u_sdram_u_fifo_SLICE_220I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
-                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"5A5A", 
+                   LUT1_INITVAL=>X"5A5A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>wptr_bin_9_N_876_2, 
-                C1=>'X', D1=>wptr_bin_9_N_876_1, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>wptr_bin_9_N_876_2, B1=>'X', 
+                C1=>wptr_bin_9_N_876_1, D1=>'X', 
                 DI1=>u_sdram_u_fifo_wptr_gray_9_N_893_1, 
-                DI0=>u_sdram_u_fifo_wptr_gray_9_N_893_0, A0=>'X', 
-                B0=>wptr_bin_9_N_876_0, C0=>'X', D0=>wptr_bin_9_N_876_1, 
-                M0=>'X', CE=>wptr_bin_9_N_886, CLK=>PCLK_c, LSR=>'X', 
+                DI0=>u_sdram_u_fifo_wptr_gray_9_N_893_0, 
+                A0=>wptr_bin_9_N_876_0, B0=>'X', C0=>wptr_bin_9_N_876_1, 
+                D0=>'X', M0=>'X', CE=>wptr_bin_9_N_886, CLK=>PCLK_c, LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_u_fifo_wptr_gray_9_N_893_1, 
                 Q1=>u_sdram_u_fifo_wptr_gray_1, OFX0=>open, 
                 F0=>u_sdram_u_fifo_wptr_gray_9_N_893_0, 
@@ -11169,17 +11210,16 @@
                 Q0=>u_sdram_u_fifo_wptr_gray_4);
     u_sdram_u_fifo_SLICE_223I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"55AA", 
-                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3C3C", 
+                   LUT1_INITVAL=>X"3C3C", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>wptr_bin_9_N_876_8, 
-                C1=>'X', D1=>wptr_bin_9_N_876_7, 
+                C1=>wptr_bin_9_N_876_7, D1=>'X', 
                 DI1=>u_sdram_u_fifo_wptr_gray_9_N_893_7, 
-                DI0=>u_sdram_u_fifo_wptr_gray_9_N_893_6, 
-                A0=>wptr_bin_9_N_876_6, B0=>'X', C0=>'X', 
-                D0=>wptr_bin_9_N_876_7, M0=>'X', CE=>wptr_bin_9_N_886, 
-                CLK=>PCLK_c, LSR=>'X', OFX1=>open, 
-                F1=>u_sdram_u_fifo_wptr_gray_9_N_893_7, 
+                DI0=>u_sdram_u_fifo_wptr_gray_9_N_893_6, A0=>'X', 
+                B0=>wptr_bin_9_N_876_6, C0=>wptr_bin_9_N_876_7, D0=>'X', 
+                M0=>'X', CE=>wptr_bin_9_N_886, CLK=>PCLK_c, LSR=>'X', 
+                OFX1=>open, F1=>u_sdram_u_fifo_wptr_gray_9_N_893_7, 
                 Q1=>u_sdram_u_fifo_wptr_gray_7, OFX0=>open, 
                 F0=>u_sdram_u_fifo_wptr_gray_9_N_893_6, 
                 Q0=>u_sdram_u_fifo_wptr_gray_6);
@@ -11301,25 +11341,26 @@
                 Q0=>u_sdram_u_fifo_wptr_gray_rd2_8);
     u_spi_SLICE_235I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"00FF", LUT1_INITVAL=>X"3C3C", 
+                   LUT0_INITVAL=>X"0F0F", LUT1_INITVAL=>X"6666", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>u_spi_bit_cnt_0, 
-                C1=>u_spi_bit_cnt_1, D1=>'X', DI1=>u_spi_n19, DI0=>u_spi_n20, 
-                A0=>'X', B0=>'X', C0=>'X', D0=>u_spi_bit_cnt_0, M0=>'X', 
-                CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>u_spi_n19, 
-                Q1=>u_spi_bit_cnt_1, OFX0=>open, F0=>u_spi_n20, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_1, 
+                B1=>u_spi_bit_cnt_0, C1=>'X', D1=>'X', DI1=>u_spi_n19, 
+                DI0=>u_spi_n20, A0=>'X', B0=>'X', C0=>u_spi_bit_cnt_0, D0=>'X', 
+                M0=>'X', CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
+                F1=>u_spi_n19, Q1=>u_spi_bit_cnt_1, OFX0=>open, F0=>u_spi_n20, 
                 Q0=>u_spi_bit_cnt_0);
     u_spi_SLICE_236I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"3CF0", LUT1_INITVAL=>X"8000", 
+                   LUT0_INITVAL=>X"5FA0", LUT1_INITVAL=>X"8000", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_stream_arm_N_1307, 
-                B1=>u_spi_bit_cnt_0, C1=>u_spi_bit_cnt_1, D1=>u_spi_bit_cnt_2, 
-                DI1=>'X', DI0=>u_spi_n18, A0=>'X', B0=>u_spi_bit_cnt_0, 
-                C0=>u_spi_bit_cnt_2, D0=>u_spi_bit_cnt_1, M0=>'X', CE=>'X', 
-                CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>u_spi_CCLK_c_enable_20, 
-                Q1=>open, OFX0=>open, F0=>u_spi_n18, Q0=>u_spi_bit_cnt_2);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_1, 
+                B1=>u_spi_bit_cnt_2, C1=>u_spi_bit_cnt_0, 
+                D1=>u_spi_stream_arm_N_1307, DI1=>'X', DI0=>u_spi_n18, 
+                A0=>u_spi_bit_cnt_1, B0=>'X', C0=>u_spi_bit_cnt_0, 
+                D0=>u_spi_bit_cnt_2, M0=>'X', CE=>'X', CLK=>CCLK_c, LSR=>'X', 
+                OFX1=>open, F1=>u_spi_CCLK_c_enable_20, Q1=>open, OFX0=>open, 
+                F0=>u_spi_n18, Q0=>u_spi_bit_cnt_2);
     u_spi_SLICE_237I: SLOGICB
       generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"SIG", 
                    SRMODE=>"ASYNC", CHECK_M1=>TRUE, CHECK_M0=>TRUE, 
@@ -11477,80 +11518,81 @@
                 Q0=>u_spi_shift_in_6);
     u_spi_SLICE_256I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
-                   LUT0_INITVAL=>X"00EC", LUT1_INITVAL=>X"000C", 
+                   LUT0_INITVAL=>X"5450", LUT1_INITVAL=>X"0404", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', 
-                B1=>stream_fifo_rd_data_0, C1=>stream_fifo_empty, 
-                D1=>u_spi_n6368, DI1=>'X', DI0=>u_spi_shift_out_7_N_1277_0, 
-                A0=>u_spi_out_byte_7_N_1258, B0=>u_spi_out_byte_7_N_1257, 
-                C0=>u_spi_mode_req_0, D0=>u_spi_n6368, M0=>u_spi_cmd_2, 
-                CE=>'X', CLK=>CCLK_c, LSR=>u_spi_n5, OFX1=>open, F1=>open, 
-                Q1=>open, OFX0=>u_spi_shift_out_7_N_1277_0, F0=>open, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n6368, 
+                B1=>stream_fifo_rd_data_0, C1=>stream_fifo_empty, D1=>'X', 
+                DI1=>'X', DI0=>u_spi_shift_out_7_N_1277_0, A0=>u_spi_n6368, 
+                B0=>u_spi_mode_req_0, C0=>u_spi_out_byte_7_N_1257, 
+                D0=>u_spi_out_byte_7_N_1258, M0=>u_spi_cmd_2, CE=>'X', 
+                CLK=>CCLK_c, LSR=>u_spi_n5, OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>u_spi_shift_out_7_N_1277_0, F0=>open, 
                 Q0=>u_spi_shift_out_0);
     u_spi_SLICE_257I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"88B8", LUT1_INITVAL=>X"CC50", 
+                   LUT0_INITVAL=>X"8D88", LUT1_INITVAL=>X"88B8", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n6378, 
-                B1=>u_spi_shift_out_1, C1=>u_spi_n6597, D1=>u_spi_n5, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_shift_out_1, 
+                B1=>u_spi_n5, C1=>u_spi_n6597, D1=>u_spi_n6378, 
                 DI1=>u_spi_shift_out_7_N_1209_2, 
-                DI0=>u_spi_shift_out_7_N_1209_1, A0=>u_spi_shift_out_0, 
-                B0=>u_spi_n5, C0=>u_spi_n6581, D0=>u_spi_n6368, M0=>'X', 
-                CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
+                DI0=>u_spi_shift_out_7_N_1209_1, A0=>u_spi_n5, 
+                B0=>u_spi_shift_out_0, C0=>u_spi_n6368, D0=>u_spi_n6581, 
+                M0=>'X', CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_spi_shift_out_7_N_1209_2, Q1=>u_spi_shift_out_2, 
                 OFX0=>open, F0=>u_spi_shift_out_7_N_1209_1, 
                 Q0=>u_spi_shift_out_1);
     u_spi_SLICE_258I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"CCA0", LUT1_INITVAL=>X"B888", 
+                   LUT0_INITVAL=>X"D888", LUT1_INITVAL=>X"D888", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_shift_out_3, 
-                B1=>u_spi_n5, C1=>u_spi_n5533, D1=>u_spi_n4, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n5, 
+                B1=>u_spi_shift_out_3, C1=>u_spi_n5533, D1=>u_spi_n4, 
                 DI1=>u_spi_shift_out_7_N_1209_4, 
-                DI0=>u_spi_shift_out_7_N_1209_3, A0=>u_spi_n4, 
-                B0=>u_spi_shift_out_2, C0=>u_spi_n5581, D0=>u_spi_n5, M0=>'X', 
+                DI0=>u_spi_shift_out_7_N_1209_3, A0=>u_spi_n5, 
+                B0=>u_spi_shift_out_2, C0=>u_spi_n5581, D0=>u_spi_n4, M0=>'X', 
                 CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_spi_shift_out_7_N_1209_4, Q1=>u_spi_shift_out_4, 
                 OFX0=>open, F0=>u_spi_shift_out_7_N_1209_3, 
                 Q0=>u_spi_shift_out_3);
     u_spi_SLICE_259I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"F808", LUT1_INITVAL=>X"E2C0", 
+                   LUT0_INITVAL=>X"D888", LUT1_INITVAL=>X"E4A0", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n4, B1=>u_spi_n5, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n5, B1=>u_spi_n4, 
                 C1=>u_spi_shift_out_5, D1=>u_spi_n5569, 
                 DI1=>u_spi_shift_out_7_N_1209_6, 
-                DI0=>u_spi_shift_out_7_N_1209_5, A0=>u_spi_n4, B0=>u_spi_n5545, 
-                C0=>u_spi_n5, D0=>u_spi_shift_out_4, M0=>'X', CE=>'X', 
-                CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
+                DI0=>u_spi_shift_out_7_N_1209_5, A0=>u_spi_n5, 
+                B0=>u_spi_shift_out_4, C0=>u_spi_n4, D0=>u_spi_n5545, M0=>'X', 
+                CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_spi_shift_out_7_N_1209_6, Q1=>u_spi_shift_out_6, 
                 OFX0=>open, F0=>u_spi_shift_out_7_N_1209_5, 
                 Q0=>u_spi_shift_out_5);
     u_spi_SLICE_260I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"EC20", LUT1_INITVAL=>X"FEFE", 
+                   LUT0_INITVAL=>X"F808", LUT1_INITVAL=>X"FEFE", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_2, 
-                B1=>u_spi_bit_cnt_0, C1=>u_spi_bit_cnt_1, D1=>'X', DI1=>'X', 
-                DI0=>u_spi_shift_out_7_N_1209_7, A0=>u_spi_n5557, B0=>u_spi_n5, 
-                C0=>u_spi_n4, D0=>u_spi_shift_out_6, M0=>'X', CE=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_0, 
+                B1=>u_spi_bit_cnt_1, C1=>u_spi_bit_cnt_2, D1=>'X', DI1=>'X', 
+                DI0=>u_spi_shift_out_7_N_1209_7, A0=>u_spi_n5557, B0=>u_spi_n4, 
+                C0=>u_spi_n5, D0=>u_spi_shift_out_6, M0=>'X', CE=>'X', 
                 CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>u_spi_n5, Q1=>open, 
                 OFX0=>open, F0=>u_spi_shift_out_7_N_1209_7, 
                 Q0=>u_spi_shift_out_7);
     u_spi_SLICE_261I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", REG0_REGSET=>"SET", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"0100", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"0010", 
                    LUT1_INITVAL=>X"FFFE", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_1, B1=>u_spi_n6147, 
-                C1=>u_spi_cmd_7, D1=>u_spi_n7, DI1=>'X', DI0=>u_spi_n5379, 
-                A0=>u_spi_stream_arm_N_1307, B0=>u_spi_n4968, C0=>u_spi_n5334, 
-                D0=>u_spi_n499, M0=>'X', CE=>u_spi_CCLK_c_enable_29, 
-                CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>u_spi_n4968, Q1=>open, 
-                OFX0=>open, F0=>u_spi_n5379, Q0=>u_spi_stream_arm_N_1307);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_7, B1=>u_spi_n6147, 
+                C1=>u_spi_n7, D1=>u_spi_cmd_1, DI1=>'X', DI0=>u_spi_n5379, 
+                A0=>u_spi_n5334, B0=>u_spi_n4968, C0=>u_spi_n499, 
+                D0=>u_spi_stream_arm_N_1307, M0=>'X', 
+                CE=>u_spi_CCLK_c_enable_29, CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
+                F1=>u_spi_n4968, Q1=>open, OFX0=>open, F0=>u_spi_n5379, 
+                Q0=>u_spi_stream_arm_N_1307);
     u_stream_SLICE_263I: SLOGICB
       generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", 
                    GSR=>"DISABLED", SRMODE=>"ASYNC", CHECK_M1=>TRUE, 
@@ -11562,36 +11604,35 @@
                 OFX0=>open, F0=>open, Q0=>u_stream_arm_pclk);
     u_stream_SLICE_264I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"8703", 
-                   LUT1_INITVAL=>X"6000", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"8075", 
+                   LUT1_INITVAL=>X"2800", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', 
-                A1=>u_stream_u_dc_rptr_gray_wr2_11, B1=>wptr_gray_11, 
-                C1=>u_stream_u_dc_wr_full_N_1155, 
-                D1=>u_stream_u_dc_wr_full_N_1156, DI1=>'X', 
-                DI0=>u_stream_state_2_N_943_0, A0=>u_stream_fifo_full, 
-                B0=>u_stream_state_2, C0=>u_stream_state_0, 
-                D0=>u_stream_state_1, M0=>'X', CE=>u_stream_PCLK_c_enable_28, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_wr_full_N_1156, 
+                B1=>u_stream_u_dc_rptr_gray_wr2_11, C1=>wptr_gray_11, 
+                D1=>u_stream_u_dc_wr_full_N_1155, DI1=>'X', 
+                DI0=>u_stream_state_2_N_943_0, A0=>u_stream_state_2, 
+                B0=>u_stream_fifo_full, C0=>u_stream_state_1, 
+                D0=>u_stream_state_0, M0=>'X', CE=>u_stream_PCLK_c_enable_28, 
                 CLK=>PCLK_c, LSR=>'X', OFX1=>open, F1=>u_stream_fifo_full, 
                 Q1=>open, OFX0=>open, F0=>u_stream_state_2_N_943_0, 
                 Q0=>u_stream_state_0);
     u_stream_SLICE_265I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"33C0", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"5A50", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_stream_state_2_N_943_1, A0=>'X', 
-                B0=>u_stream_state_1, C0=>u_stream_state_2, 
-                D0=>u_stream_state_0, M0=>'X', CE=>u_stream_PCLK_c_enable_5, 
+                D1=>'X', DI1=>'X', DI0=>u_stream_state_2_N_943_1, 
+                A0=>u_stream_state_1, B0=>'X', C0=>u_stream_state_0, 
+                D0=>u_stream_state_2, M0=>'X', CE=>u_stream_PCLK_c_enable_5, 
                 CLK=>PCLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_stream_state_2_N_943_1, Q0=>u_stream_state_1);
     u_stream_SLICE_266I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3CF0", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3CCC", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_state_2_N_943_2, A0=>'X', 
-                B0=>u_stream_state_0, C0=>u_stream_state_1, 
+                B0=>u_stream_state_1, C0=>u_stream_state_0, 
                 D0=>u_stream_state_2, M0=>'X', CE=>u_stream_PCLK_c_enable_4, 
                 CLK=>PCLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_stream_state_2_N_943_2, Q0=>u_stream_state_2);
@@ -11605,14 +11646,14 @@
                 Q0=>u_stream_u_dc_n1759);
     u_stream_u_dc_SLICE_268I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FA50", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D8D8", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1745, 
-                A0=>rd_data_7_N_1177, B0=>'X', C0=>u_stream_u_dc_n1760, 
-                D0=>rptr_bin_11_N_1180_0, M0=>'X', CE=>'X', CLK=>CCLK_c, 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
-                F0=>u_stream_u_dc_n1745, Q0=>u_stream_u_dc_n1760);
+                A0=>rd_data_7_N_1177, B0=>rptr_bin_11_N_1180_0, 
+                C0=>u_stream_u_dc_n1760, D0=>'X', M0=>'X', CE=>'X', 
+                CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>open, F0=>u_stream_u_dc_n1745, Q0=>u_stream_u_dc_n1760);
     u_stream_u_dc_SLICE_269I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", CHECK_M0=>TRUE)
@@ -11623,12 +11664,12 @@
                 Q0=>u_stream_u_dc_n1761);
     u_stream_u_dc_SLICE_270I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"DD88", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FC30", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1744, 
-                A0=>rd_data_7_N_1177, B0=>rptr_bin_11_N_1180_1, C0=>'X', 
-                D0=>u_stream_u_dc_n1762, M0=>'X', CE=>'X', CLK=>CCLK_c, 
+                D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1744, A0=>'X', 
+                B0=>rd_data_7_N_1177, C0=>u_stream_u_dc_n1762, 
+                D0=>rptr_bin_11_N_1180_1, M0=>'X', CE=>'X', CLK=>CCLK_c, 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1744, Q0=>u_stream_u_dc_n1762);
     u_stream_u_dc_SLICE_271I: SLOGICB
@@ -11641,13 +11682,13 @@
                 Q0=>u_stream_u_dc_n1763);
     u_stream_u_dc_SLICE_272I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AAF0", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"DD88", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1743, 
-                A0=>rptr_bin_11_N_1180_2, B0=>'X', C0=>u_stream_u_dc_n1764, 
-                D0=>rd_data_7_N_1177, M0=>'X', CE=>'X', CLK=>CCLK_c, LSR=>'X', 
-                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                A0=>rd_data_7_N_1177, B0=>rptr_bin_11_N_1180_2, C0=>'X', 
+                D0=>u_stream_u_dc_n1764, M0=>'X', CE=>'X', CLK=>CCLK_c, 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1743, Q0=>u_stream_u_dc_n1764);
     u_stream_u_dc_SLICE_273I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
@@ -11659,12 +11700,12 @@
                 Q0=>u_stream_u_dc_n1765);
     u_stream_u_dc_SLICE_274I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FA50", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F3C0", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1742, 
-                A0=>rd_data_7_N_1177, B0=>'X', C0=>u_stream_u_dc_n1766, 
-                D0=>rptr_bin_11_N_1180_3, M0=>'X', CE=>'X', CLK=>CCLK_c, 
+                D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1742, A0=>'X', 
+                B0=>rd_data_7_N_1177, C0=>rptr_bin_11_N_1180_3, 
+                D0=>u_stream_u_dc_n1766, M0=>'X', CE=>'X', CLK=>CCLK_c, 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1742, Q0=>u_stream_u_dc_n1766);
     u_stream_u_dc_SLICE_275I: SLOGICB
@@ -11677,11 +11718,11 @@
                 Q0=>u_stream_u_dc_n1767);
     u_stream_u_dc_SLICE_276I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"BB88", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AFA0", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1741, 
-                A0=>rptr_bin_11_N_1180_4, B0=>rd_data_7_N_1177, C0=>'X', 
+                A0=>rptr_bin_11_N_1180_4, B0=>'X', C0=>rd_data_7_N_1177, 
                 D0=>u_stream_u_dc_n1768, M0=>'X', CE=>'X', CLK=>CCLK_c, 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1741, Q0=>u_stream_u_dc_n1768);
@@ -11695,14 +11736,14 @@
                 Q0=>u_stream_u_dc_n1769);
     u_stream_u_dc_SLICE_278I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"F5A0", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"B8B8", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1740, 
-                A0=>rd_data_7_N_1177, B0=>'X', C0=>rptr_bin_11_N_1180_5, 
-                D0=>u_stream_u_dc_n1770, M0=>'X', CE=>'X', CLK=>CCLK_c, 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
-                F0=>u_stream_u_dc_n1740, Q0=>u_stream_u_dc_n1770);
+                A0=>rptr_bin_11_N_1180_5, B0=>rd_data_7_N_1177, 
+                C0=>u_stream_u_dc_n1770, D0=>'X', M0=>'X', CE=>'X', 
+                CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>open, F0=>u_stream_u_dc_n1740, Q0=>u_stream_u_dc_n1770);
     u_stream_u_dc_SLICE_279I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", CHECK_M0=>TRUE)
@@ -11713,11 +11754,11 @@
                 Q0=>u_stream_u_dc_n1771);
     u_stream_u_dc_SLICE_280I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"BB88", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AFA0", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1739, 
-                A0=>rptr_bin_11_N_1180_6, B0=>rd_data_7_N_1177, C0=>'X', 
+                A0=>rptr_bin_11_N_1180_6, B0=>'X', C0=>rd_data_7_N_1177, 
                 D0=>u_stream_u_dc_n1772, M0=>'X', CE=>'X', CLK=>CCLK_c, 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1739, Q0=>u_stream_u_dc_n1772);
@@ -11731,12 +11772,12 @@
                 Q0=>u_stream_u_dc_n1773);
     u_stream_u_dc_SLICE_282I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AFA0", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FA50", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1738, 
-                A0=>rptr_bin_11_N_1180_7, B0=>'X', C0=>rd_data_7_N_1177, 
-                D0=>u_stream_u_dc_n1774, M0=>'X', CE=>'X', CLK=>CCLK_c, 
+                A0=>rd_data_7_N_1177, B0=>'X', C0=>u_stream_u_dc_n1774, 
+                D0=>rptr_bin_11_N_1180_7, M0=>'X', CE=>'X', CLK=>CCLK_c, 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1738, Q0=>u_stream_u_dc_n1774);
     u_stream_u_dc_SLICE_283I: SLOGICB
@@ -11749,13 +11790,13 @@
                 Q0=>u_stream_u_dc_n1775);
     u_stream_u_dc_SLICE_284I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AAF0", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"DD88", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1737, 
-                A0=>rptr_bin_11_N_1180_8, B0=>'X', C0=>u_stream_u_dc_n1776, 
-                D0=>rd_data_7_N_1177, M0=>'X', CE=>'X', CLK=>CCLK_c, LSR=>'X', 
-                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                A0=>rd_data_7_N_1177, B0=>rptr_bin_11_N_1180_8, C0=>'X', 
+                D0=>u_stream_u_dc_n1776, M0=>'X', CE=>'X', CLK=>CCLK_c, 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1737, Q0=>u_stream_u_dc_n1776);
     u_stream_u_dc_SLICE_285I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
@@ -11767,13 +11808,13 @@
                 Q0=>u_stream_u_dc_n1777);
     u_stream_u_dc_SLICE_286I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"AAF0", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"FC30", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1736, 
-                A0=>rptr_bin_11_N_1180_9, B0=>'X', C0=>u_stream_u_dc_n1778, 
-                D0=>rd_data_7_N_1177, M0=>'X', CE=>'X', CLK=>CCLK_c, LSR=>'X', 
-                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_n1736, A0=>'X', 
+                B0=>rd_data_7_N_1177, C0=>u_stream_u_dc_n1778, 
+                D0=>rptr_bin_11_N_1180_9, M0=>'X', CE=>'X', CLK=>CCLK_c, 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_u_dc_n1736, Q0=>u_stream_u_dc_n1778);
     u_stream_u_dc_SLICE_287I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
@@ -11785,16 +11826,16 @@
                 Q0=>u_stream_u_dc_n1779);
     u_stream_u_dc_SLICE_288I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"DD88", 
-                   LUT1_INITVAL=>X"70F0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"CFC0", 
+                   LUT1_INITVAL=>X"4CCC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_wr_full_N_1156, 
-                B1=>u_stream_u_dc_n6750, C1=>u_stream_wr_en, 
+                B1=>u_stream_wr_en, C1=>u_stream_u_dc_n6750, 
                 D1=>u_stream_u_dc_wr_full_N_1155, 
                 DI1=>u_stream_u_dc_wptr_bin_11_N_1150, 
-                DI0=>u_stream_u_dc_n1735, A0=>rd_data_7_N_1177, 
-                B0=>rptr_bin_11_N_1180_10, C0=>'X', D0=>u_stream_u_dc_n1780, 
-                M0=>'X', CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
+                DI0=>u_stream_u_dc_n1735, A0=>'X', B0=>rptr_bin_11_N_1180_10, 
+                C0=>rd_data_7_N_1177, D0=>u_stream_u_dc_n1780, M0=>'X', 
+                CE=>'X', CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
                 F1=>u_stream_u_dc_wptr_bin_11_N_1150, Q1=>u_stream_u_dc_n1782, 
                 OFX0=>open, F0=>u_stream_u_dc_n1735, Q0=>u_stream_u_dc_n1780);
     u_stream_u_dc_SLICE_289I: SLOGICB
@@ -11850,16 +11891,17 @@
                 Q0=>u_stream_u_dc_rptr_gray_0);
     u_stream_u_dc_SLICE_294I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3C3C", 
-                   LUT1_INITVAL=>X"5A5A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"55AA", 
+                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>rptr_bin_11_N_1180_4, B1=>'X', 
-                C1=>rptr_bin_11_N_1180_3, D1=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>rptr_bin_11_N_1180_4, 
+                C1=>'X', D1=>rptr_bin_11_N_1180_3, 
                 DI1=>u_stream_u_dc_rptr_gray_11_N_1192_3, 
-                DI0=>u_stream_u_dc_rptr_gray_11_N_1192_2, A0=>'X', 
-                B0=>rptr_bin_11_N_1180_2, C0=>rptr_bin_11_N_1180_3, D0=>'X', 
-                M0=>'X', CE=>rd_data_7_N_1177, CLK=>CCLK_c, LSR=>'X', 
-                OFX1=>open, F1=>u_stream_u_dc_rptr_gray_11_N_1192_3, 
+                DI0=>u_stream_u_dc_rptr_gray_11_N_1192_2, 
+                A0=>rptr_bin_11_N_1180_2, B0=>'X', C0=>'X', 
+                D0=>rptr_bin_11_N_1180_3, M0=>'X', CE=>rd_data_7_N_1177, 
+                CLK=>CCLK_c, LSR=>'X', OFX1=>open, 
+                F1=>u_stream_u_dc_rptr_gray_11_N_1192_3, 
                 Q1=>u_stream_u_dc_rptr_gray_3, OFX0=>open, 
                 F0=>u_stream_u_dc_rptr_gray_11_N_1192_2, 
                 Q0=>u_stream_u_dc_rptr_gray_2);
@@ -11911,16 +11953,15 @@
                 Q0=>u_stream_u_dc_rptr_gray_8);
     u_stream_u_dc_SLICE_298I: SLOGICB
       generic map (M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"55AA", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3C3C", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE, CHECK_M1=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>rptr_gray_11_N_1192_11, FXA=>'X', FXB=>'X', A1=>'X', 
                 B1=>'X', C1=>'X', D1=>'X', DI1=>'X', 
-                DI0=>u_stream_u_dc_rptr_gray_11_N_1192_10, 
-                A0=>rptr_bin_11_N_1180_10, B0=>'X', C0=>'X', 
-                D0=>rptr_gray_11_N_1192_11, M0=>'X', CE=>rd_data_7_N_1177, 
-                CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>open, 
-                Q1=>u_stream_u_dc_rptr_gray_11, OFX0=>open, 
-                F0=>u_stream_u_dc_rptr_gray_11_N_1192_10, 
+                DI0=>u_stream_u_dc_rptr_gray_11_N_1192_10, A0=>'X', 
+                B0=>rptr_bin_11_N_1180_10, C0=>rptr_gray_11_N_1192_11, D0=>'X', 
+                M0=>'X', CE=>rd_data_7_N_1177, CLK=>CCLK_c, LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>u_stream_u_dc_rptr_gray_11, 
+                OFX0=>open, F0=>u_stream_u_dc_rptr_gray_11_N_1192_10, 
                 Q0=>u_stream_u_dc_rptr_gray_10);
     u_stream_u_dc_SLICE_299I: SLOGICB
       generic map (M0MUX=>"SIG", M1MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", 
@@ -12045,72 +12086,74 @@
                 Q0=>u_stream_u_dc_rptr_gray_wr2_10);
     u_stream_u_dc_SLICE_311I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
-                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"5A5A", 
+                   LUT1_INITVAL=>X"6666", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>wptr_bin_11_N_1138_2, 
-                C1=>'X', D1=>wptr_bin_11_N_1138_1, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>wptr_bin_11_N_1138_1, 
+                B1=>wptr_bin_11_N_1138_2, C1=>'X', D1=>'X', 
                 DI1=>u_stream_u_dc_wptr_gray_11_N_1157_1, 
-                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_0, A0=>'X', 
-                B0=>wptr_bin_11_N_1138_0, C0=>'X', D0=>wptr_bin_11_N_1138_1, 
-                M0=>'X', CE=>u_stream_u_dc_wptr_bin_11_N_1150, CLK=>PCLK_c, 
-                LSR=>'X', OFX1=>open, F1=>u_stream_u_dc_wptr_gray_11_N_1157_1, 
+                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_0, 
+                A0=>wptr_bin_11_N_1138_1, B0=>'X', C0=>wptr_bin_11_N_1138_0, 
+                D0=>'X', M0=>'X', CE=>u_stream_u_dc_wptr_bin_11_N_1150, 
+                CLK=>PCLK_c, LSR=>'X', OFX1=>open, 
+                F1=>u_stream_u_dc_wptr_gray_11_N_1157_1, 
                 Q1=>u_stream_u_dc_wptr_gray_1, OFX0=>open, 
                 F0=>u_stream_u_dc_wptr_gray_11_N_1157_0, 
                 Q0=>u_stream_u_dc_wptr_gray_0);
     u_stream_u_dc_SLICE_312I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3C3C", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"5A5A", 
                    LUT1_INITVAL=>X"5A5A", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>wptr_bin_11_N_1138_4, B1=>'X', 
                 C1=>wptr_bin_11_N_1138_3, D1=>'X', 
                 DI1=>u_stream_u_dc_wptr_gray_11_N_1157_3, 
-                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_2, A0=>'X', 
-                B0=>wptr_bin_11_N_1138_2, C0=>wptr_bin_11_N_1138_3, D0=>'X', 
-                M0=>'X', CE=>u_stream_u_dc_wptr_bin_11_N_1150, CLK=>PCLK_c, 
-                LSR=>'X', OFX1=>open, F1=>u_stream_u_dc_wptr_gray_11_N_1157_3, 
+                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_2, 
+                A0=>wptr_bin_11_N_1138_2, B0=>'X', C0=>wptr_bin_11_N_1138_3, 
+                D0=>'X', M0=>'X', CE=>u_stream_u_dc_wptr_bin_11_N_1150, 
+                CLK=>PCLK_c, LSR=>'X', OFX1=>open, 
+                F1=>u_stream_u_dc_wptr_gray_11_N_1157_3, 
                 Q1=>u_stream_u_dc_wptr_gray_3, OFX0=>open, 
                 F0=>u_stream_u_dc_wptr_gray_11_N_1157_2, 
                 Q0=>u_stream_u_dc_wptr_gray_2);
     u_stream_u_dc_SLICE_313I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
-                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"55AA", 
+                   LUT1_INITVAL=>X"55AA", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>wptr_bin_11_N_1138_6, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>wptr_bin_11_N_1138_6, B1=>'X', 
                 C1=>'X', D1=>wptr_bin_11_N_1138_5, 
                 DI1=>u_stream_u_dc_wptr_gray_11_N_1157_5, 
-                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_4, A0=>'X', 
-                B0=>wptr_bin_11_N_1138_4, C0=>'X', D0=>wptr_bin_11_N_1138_5, 
-                M0=>'X', CE=>u_stream_u_dc_wptr_bin_11_N_1150, CLK=>PCLK_c, 
-                LSR=>'X', OFX1=>open, F1=>u_stream_u_dc_wptr_gray_11_N_1157_5, 
+                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_4, 
+                A0=>wptr_bin_11_N_1138_4, B0=>'X', C0=>'X', 
+                D0=>wptr_bin_11_N_1138_5, M0=>'X', 
+                CE=>u_stream_u_dc_wptr_bin_11_N_1150, CLK=>PCLK_c, LSR=>'X', 
+                OFX1=>open, F1=>u_stream_u_dc_wptr_gray_11_N_1157_5, 
                 Q1=>u_stream_u_dc_wptr_gray_5, OFX0=>open, 
                 F0=>u_stream_u_dc_wptr_gray_11_N_1157_4, 
                 Q0=>u_stream_u_dc_wptr_gray_4);
     u_stream_u_dc_SLICE_314I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"55AA", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
                    LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>wptr_bin_11_N_1138_8, 
                 C1=>'X', D1=>wptr_bin_11_N_1138_7, 
                 DI1=>u_stream_u_dc_wptr_gray_11_N_1157_7, 
-                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_6, 
-                A0=>wptr_bin_11_N_1138_6, B0=>'X', C0=>'X', 
-                D0=>wptr_bin_11_N_1138_7, M0=>'X', 
-                CE=>u_stream_u_dc_wptr_bin_11_N_1150, CLK=>PCLK_c, LSR=>'X', 
-                OFX1=>open, F1=>u_stream_u_dc_wptr_gray_11_N_1157_7, 
+                DI0=>u_stream_u_dc_wptr_gray_11_N_1157_6, A0=>'X', 
+                B0=>wptr_bin_11_N_1138_6, C0=>'X', D0=>wptr_bin_11_N_1138_7, 
+                M0=>'X', CE=>u_stream_u_dc_wptr_bin_11_N_1150, CLK=>PCLK_c, 
+                LSR=>'X', OFX1=>open, F1=>u_stream_u_dc_wptr_gray_11_N_1157_7, 
                 Q1=>u_stream_u_dc_wptr_gray_7, OFX0=>open, 
                 F0=>u_stream_u_dc_wptr_gray_11_N_1157_6, 
                 Q0=>u_stream_u_dc_wptr_gray_6);
     u_stream_u_dc_SLICE_315I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
-                   LUT1_INITVAL=>X"33CC", REG1_SD=>"VHI", REG0_SD=>"VHI", 
+                   LUT1_INITVAL=>X"0FF0", REG1_SD=>"VHI", REG0_SD=>"VHI", 
                    CHECK_DI1=>TRUE, CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', 
-                B1=>wptr_bin_11_N_1138_10, C1=>'X', D1=>wptr_bin_11_N_1138_9, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
+                C1=>wptr_bin_11_N_1138_10, D1=>wptr_bin_11_N_1138_9, 
                 DI1=>u_stream_u_dc_wptr_gray_11_N_1157_9, 
                 DI0=>u_stream_u_dc_wptr_gray_11_N_1157_8, A0=>'X', 
                 B0=>wptr_bin_11_N_1138_8, C0=>'X', D0=>wptr_bin_11_N_1138_9, 
@@ -12121,11 +12164,11 @@
                 Q0=>u_stream_u_dc_wptr_gray_8);
     u_stream_u_dc_SLICE_316I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"3C3C", REG0_SD=>"VHI", 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"5A5A", REG0_SD=>"VHI", 
                    CHECK_DI0=>TRUE, CHECK_CE=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_u_dc_wptr_gray_11_N_1157_10, 
-                A0=>'X', B0=>wptr_bin_11_N_1138_10, C0=>wptr_gray_11_N_1157_11, 
+                A0=>wptr_bin_11_N_1138_10, B0=>'X', C0=>wptr_gray_11_N_1157_11, 
                 D0=>'X', M0=>'X', CE=>u_stream_u_dc_wptr_bin_11_N_1150, 
                 CLK=>PCLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_stream_u_dc_wptr_gray_11_N_1157_10, 
@@ -12261,14 +12304,15 @@
                 OFX0=>open, F0=>open, Q0=>u_stream_wr_data_0);
     u_stream_SLICE_330I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"B030", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   LUT0_INITVAL=>X"80F0", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>u_stream_n6291, A0=>pix_rgb565_1, 
-                B0=>u_stream_state_0, C0=>u_stream_n6728, 
-                D0=>u_stream_wr_en_N_1072, M0=>'X', CE=>'X', CLK=>PCLK_c, 
-                LSR=>u_stream_n3168, OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>open, F0=>u_stream_n6291, Q0=>u_stream_wr_data_1);
+                D1=>'X', DI1=>'X', DI0=>u_stream_n6291, 
+                A0=>u_stream_wr_en_N_1072, B0=>pix_rgb565_1, 
+                C0=>u_stream_n6728, D0=>u_stream_state_0, M0=>'X', CE=>'X', 
+                CLK=>PCLK_c, LSR=>u_stream_n3168, OFX1=>open, F1=>open, 
+                Q1=>open, OFX0=>open, F0=>u_stream_n6291, 
+                Q0=>u_stream_wr_data_1);
     u_stream_SLICE_331I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
                    GSR=>"DISABLED", CHECK_M0=>TRUE, CHECK_LSR=>TRUE)
@@ -12279,27 +12323,27 @@
                 OFX0=>open, F0=>open, Q0=>u_stream_wr_data_2);
     u_stream_SLICE_332I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"B030", LUT1_INITVAL=>X"B030", 
+                   LUT0_INITVAL=>X"80F0", LUT1_INITVAL=>X"80F0", 
                    REG1_SD=>"VHI", REG0_SD=>"VHI", CHECK_DI1=>TRUE, 
                    CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_rgb565_5, 
-                B1=>u_stream_state_0, C1=>u_stream_n6728, 
-                D1=>u_stream_wr_en_N_1072, DI1=>u_stream_n6295, 
-                DI0=>u_stream_n6293, A0=>pix_rgb565_3, B0=>u_stream_state_0, 
-                C0=>u_stream_n6728, D0=>u_stream_wr_en_N_1072, M0=>'X', 
-                CE=>'X', CLK=>PCLK_c, LSR=>u_stream_n3168, OFX1=>open, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_wr_en_N_1072, 
+                B1=>pix_rgb565_5, C1=>u_stream_n6728, D1=>u_stream_state_0, 
+                DI1=>u_stream_n6295, DI0=>u_stream_n6293, 
+                A0=>u_stream_wr_en_N_1072, B0=>pix_rgb565_3, 
+                C0=>u_stream_n6728, D0=>u_stream_state_0, M0=>'X', CE=>'X', 
+                CLK=>PCLK_c, LSR=>u_stream_n3168, OFX1=>open, 
                 F1=>u_stream_n6295, Q1=>u_stream_wr_data_5, OFX0=>open, 
                 F0=>u_stream_n6293, Q0=>u_stream_wr_data_3);
     u_stream_SLICE_333I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"8000", 
-                   LUT1_INITVAL=>X"0022", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_state_1, 
-                B1=>u_stream_fifo_full, C1=>'X', D1=>u_stream_state_0, 
-                DI1=>'X', DI0=>u_stream_wr_data_7_N_946_4, A0=>u_stream_n5423, 
-                B0=>u_stream_state_0, C0=>u_stream_wr_en_N_1072, 
-                D0=>u_stream_n6728, M0=>u_stream_state_2, CE=>'X', CLK=>PCLK_c, 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
+                   LUT1_INITVAL=>X"0044", REG0_SD=>"VHI", CHECK_DI0=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_fifo_full, 
+                B1=>u_stream_state_1, C1=>'X', D1=>u_stream_state_0, DI1=>'X', 
+                DI0=>u_stream_wr_data_7_N_946_4, A0=>u_stream_n5423, 
+                B0=>u_stream_wr_en_N_1072, C0=>u_stream_n6728, 
+                D0=>u_stream_state_0, M0=>u_stream_state_2, CE=>'X', 
+                CLK=>PCLK_c, LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>u_stream_wr_data_7_N_946_4, F0=>open, 
                 Q0=>u_stream_wr_data_4);
     u_stream_SLICE_334I: SLOGICB
@@ -12312,37 +12356,38 @@
                 OFX0=>open, F0=>open, Q0=>u_stream_wr_data_6);
     u_stream_SLICE_335I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"8F00", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
+                   LUT0_INITVAL=>X"B030", REG0_SD=>"VHI", CHECK_DI0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
                 D1=>'X', DI1=>'X', DI0=>u_stream_n6297, 
-                A0=>u_stream_wr_en_N_1072, B0=>pix_rgb565_7, 
-                C0=>u_stream_state_0, D0=>u_stream_n6728, M0=>'X', CE=>'X', 
+                A0=>u_stream_wr_en_N_1072, B0=>u_stream_state_0, 
+                C0=>u_stream_n6728, D0=>pix_rgb565_7, M0=>'X', CE=>'X', 
                 CLK=>PCLK_c, LSR=>u_stream_n3168, OFX1=>open, F1=>open, 
                 Q1=>open, OFX0=>open, F0=>u_stream_n6297, 
                 Q0=>u_stream_wr_data_7);
     u_stream_SLICE_336I: SLOGICB
       generic map (CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", GSR=>"DISABLED", 
-                   LUT0_INITVAL=>X"D7FF", LUT1_INITVAL=>X"BFFF", 
+                   LUT0_INITVAL=>X"9FFF", LUT1_INITVAL=>X"BFFF", 
                    REG0_SD=>"VHI", CHECK_DI0=>TRUE, CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_state_2, 
-                B1=>u_stream_n6728, C1=>u_stream_wr_en_N_1072, 
+                B1=>u_stream_wr_en_N_1072, C1=>u_stream_n6728, 
                 D1=>u_stream_n5399, DI1=>'X', DI0=>u_stream_n6728, 
-                A0=>u_stream_u_dc_wr_full_N_1156, 
-                B0=>u_stream_u_dc_rptr_gray_wr2_11, C0=>wptr_gray_11, 
-                D0=>u_stream_u_dc_wr_full_N_1155, M0=>'X', CE=>'X', 
+                A0=>u_stream_u_dc_rptr_gray_wr2_11, B0=>wptr_gray_11, 
+                C0=>u_stream_u_dc_wr_full_N_1155, 
+                D0=>u_stream_u_dc_wr_full_N_1156, M0=>'X', CE=>'X', 
                 CLK=>PCLK_c, LSR=>u_stream_n2796, OFX1=>open, 
                 F1=>u_stream_n3142, Q1=>open, OFX0=>open, F0=>u_stream_n6728, 
                 Q0=>u_stream_wr_en);
     u_stream_i4607_SLICE_337I: SLOGICB
-      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"A6F6", LUT1_INITVAL=>X"E4EE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_state_2, 
-                B1=>frame_start, C1=>u_stream_state_1, D1=>u_stream_fifo_full, 
-                DI1=>'X', DI0=>'X', A0=>u_stream_state_2, 
-                B0=>u_stream_arm_pclk, C0=>u_stream_state_1, 
-                D0=>u_stream_fifo_full, M0=>u_stream_state_0, CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>u_stream_PCLK_c_enable_28, F0=>open, Q0=>open);
+      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"C6F6", LUT1_INITVAL=>X"E2EE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>frame_start, 
+                B1=>u_stream_state_2, C1=>u_stream_state_1, 
+                D1=>u_stream_fifo_full, DI1=>'X', DI0=>'X', 
+                A0=>u_stream_arm_pclk, B0=>u_stream_state_2, 
+                C0=>u_stream_state_1, D0=>u_stream_fifo_full, 
+                M0=>u_stream_state_0, CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>open, Q1=>open, OFX0=>u_stream_PCLK_c_enable_28, F0=>open, 
+                Q0=>open);
     u_stream_i4624_SLICE_338I: SLOGICB
       generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"5154", LUT1_INITVAL=>X"5544")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_n34, B1=>frame_start, 
@@ -12352,128 +12397,128 @@
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>u_stream_PCLK_c_enable_5, F0=>open, Q0=>open);
     u_stream_i4622_SLICE_339I: SLOGICB
-      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"2332", LUT1_INITVAL=>X"3330")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>u_stream_n34, 
-                C1=>u_stream_state_2, D1=>frame_start, DI1=>'X', DI0=>'X', 
-                A0=>u_stream_state_1, B0=>u_stream_n34, C0=>u_stream_state_2, 
-                D0=>u_stream_arm_pclk, M0=>u_stream_state_0, CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>u_stream_PCLK_c_enable_4, F0=>open, Q0=>open);
+      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"5514", LUT1_INITVAL=>X"5454")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_n34, 
+                B1=>u_stream_state_2, C1=>frame_start, D1=>'X', DI1=>'X', 
+                DI0=>'X', A0=>u_stream_n34, B0=>u_stream_state_2, 
+                C0=>u_stream_arm_pclk, D0=>u_stream_state_1, 
+                M0=>u_stream_state_0, CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>open, Q1=>open, OFX0=>u_stream_PCLK_c_enable_4, F0=>open, 
+                Q0=>open);
     u_sdram_i21_SLICE_340I: SLOGICB
-      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"AAA8", LUT1_INITVAL=>X"CC88")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n632, B1=>timer_13, 
-                C1=>'X', D1=>u_sdram_ref_cnt_15_N_577, DI1=>'X', DI0=>'X', 
-                A0=>n42, B0=>u_sdram_n1058, C0=>u_sdram_n6758, 
-                D0=>u_sdram_n635, M0=>u_sdram_SD_A_12_N_789_6, CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
+      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"F0E0", LUT1_INITVAL=>X"AA88")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_13, 
+                B1=>u_sdram_ref_cnt_15_N_577, C1=>'X', D1=>u_sdram_n632, 
+                DI1=>'X', DI0=>'X', A0=>u_sdram_n6758, B0=>u_sdram_n1058, 
+                C0=>n42, D0=>u_sdram_n635, M0=>u_sdram_SD_A_12_N_789_6, 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>u_sdram_n15, F0=>open, Q0=>open);
     u_spi_i4561_SLICE_341I: SLOGICB
-      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"F8A8", LUT1_INITVAL=>X"2222")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>stream_fifo_rd_data_1, 
-                B1=>stream_fifo_empty, C1=>'X', D1=>'X', DI1=>'X', DI0=>'X', 
-                A0=>u_spi_out_byte_7_N_1257, B0=>u_spi_mode_req_0, 
-                C0=>u_spi_mode_req_1, D0=>u_spi_out_byte_7_N_1258, 
+      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"FC88", LUT1_INITVAL=>X"0F00")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
+                C1=>stream_fifo_empty, D1=>stream_fifo_rd_data_1, DI1=>'X', 
+                DI0=>'X', A0=>u_spi_out_byte_7_N_1258, B0=>u_spi_mode_req_1, 
+                C0=>u_spi_mode_req_0, D0=>u_spi_out_byte_7_N_1257, 
                 M0=>u_spi_cmd_2, CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>open, Q1=>open, OFX0=>u_spi_n6581, F0=>open, Q0=>open);
     u_spi_i4564_SLICE_342I: SLOGICB
-      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"4040", LUT1_INITVAL=>X"2222")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>stream_fifo_rd_data_2, 
-                B1=>stream_fifo_empty, C1=>'X', D1=>'X', DI1=>'X', DI0=>'X', 
-                A0=>u_spi_mode_req_0, B0=>u_spi_out_byte_7_N_1257, 
-                C0=>u_spi_mode_req_1, D0=>'X', M0=>u_spi_cmd_2, CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>u_spi_n6597, F0=>open, Q0=>open);
+      generic map (M0MUX=>"SIG", LUT0_INITVAL=>X"00C0", LUT1_INITVAL=>X"00F0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
+                C1=>stream_fifo_rd_data_2, D1=>stream_fifo_empty, DI1=>'X', 
+                DI0=>'X', A0=>'X', B0=>u_spi_mode_req_1, 
+                C0=>u_spi_out_byte_7_N_1257, D0=>u_spi_mode_req_0, 
+                M0=>u_spi_cmd_2, CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>open, Q1=>open, OFX0=>u_spi_n6597, F0=>open, Q0=>open);
     u_sdram_SLICE_343I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"SIG", GSR=>"DISABLED", 
-                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"B380", 
-                   LUT1_INITVAL=>X"44F0", CHECK_M0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n632, 
-                B1=>u_sdram_n6751, C1=>u_sdram_n3409, 
+                   SRMODE=>"ASYNC", LUT0_INITVAL=>X"D850", 
+                   LUT1_INITVAL=>X"30AA", CHECK_M0=>TRUE, CHECK_CE=>TRUE)
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n3409, 
+                B1=>u_sdram_n632, C1=>u_sdram_n6751, 
                 D1=>u_sdram_SD_DQM_1_N_802_1, DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_n15_adj_1319, B0=>u_sdram_n632, C0=>u_sdram_n5501, 
-                D0=>u_sdram_n6751, M0=>u_sdram_n1058, 
+                A0=>u_sdram_n632, B0=>u_sdram_n15_adj_1319, C0=>u_sdram_n6751, 
+                D0=>u_sdram_n5501, M0=>u_sdram_n1058, 
                 CE=>u_sdram_SD_A_12_N_789_6, CLK=>SD_CLK_c, LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_SD_CLK_c_enable_24, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_n3409, Q0=>u_sdram_n632);
     u_cam_SLICE_344I: SLOGICB
       generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_x_2, B1=>pix_x_7, 
-                C1=>pix_x_1, D1=>pix_x_6, DI1=>'X', DI0=>'X', A0=>u_cam_n14, 
-                B0=>u_cam_n10, C0=>pix_x_0, D0=>pix_x_4, M0=>'X', CE=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_x_2, B1=>pix_x_6, 
+                C1=>pix_x_7, D1=>pix_x_1, DI1=>'X', DI0=>'X', A0=>u_cam_n10, 
+                B0=>u_cam_n14, C0=>pix_x_4, D0=>pix_x_0, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_cam_n14, Q1=>open, 
                 OFX0=>open, F0=>n5350, Q0=>open);
     SLICE_345I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFD8")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>byte_sel, 
-                C1=>line_end_N_200, D1=>VSYNC_c, DI1=>'X', DI0=>'X', 
-                A0=>u_cam_n6085, B0=>u_cam_n6753, C0=>n4889, D0=>u_cam_n6091, 
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FEDC")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>VSYNC_c, 
+                C1=>line_end_N_200, D1=>byte_sel, DI1=>'X', DI0=>'X', 
+                A0=>u_cam_n6753, B0=>u_cam_n6091, C0=>n4889, D0=>u_cam_n6085, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>PCLK_c_enable_39, Q1=>open, OFX0=>open, F0=>line_end_N_200, 
                 Q0=>open);
     u_stream_SLICE_346I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0733", LUT1_INITVAL=>X"C000")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>wr_en_N_1077, 
-                C1=>pix_valid_rgb, D1=>wr_en_N_1079, DI1=>'X', DI0=>'X', 
-                A0=>u_stream_wr_en_N_1072, B0=>u_stream_state_1, 
+      generic map (LUT0_INITVAL=>X"0733", LUT1_INITVAL=>X"8800")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_valid_rgb, 
+                B1=>wr_en_N_1079, C1=>'X', D1=>wr_en_N_1077, DI1=>'X', 
+                DI0=>'X', A0=>u_stream_wr_en_N_1072, B0=>u_stream_state_1, 
                 C0=>u_stream_state_2, D0=>u_stream_state_0, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_stream_wr_en_N_1072, 
                 Q1=>open, OFX0=>open, F0=>u_stream_n2796, Q0=>open);
     u_stream_SLICE_347I: SLOGICB
-      generic map (LUT0_INITVAL=>X"E2E2", LUT1_INITVAL=>X"2800")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_n6730, 
-                B1=>u_stream_u_dc_rptr_gray_wr2_10, 
-                C1=>u_stream_u_dc_wptr_gray_10, D1=>u_stream_n27, DI1=>'X', 
-                DI0=>'X', A0=>u_stream_state_1, B0=>u_stream_state_0, 
-                C0=>u_stream_state_2, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>u_stream_n34, Q1=>open, OFX0=>open, 
-                F0=>u_stream_n27, Q0=>open);
+      generic map (LUT0_INITVAL=>X"EE44", LUT1_INITVAL=>X"4800")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_wptr_gray_10, 
+                B1=>u_stream_u_dc_n6730, C1=>u_stream_u_dc_rptr_gray_wr2_10, 
+                D1=>u_stream_n27, DI1=>'X', DI0=>'X', A0=>u_stream_state_0, 
+                B0=>u_stream_state_1, C0=>'X', D0=>u_stream_state_2, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_stream_n34, 
+                Q1=>open, OFX0=>open, F0=>u_stream_n27, Q0=>open);
     u_sdram_SLICE_348I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFCC", LUT1_INITVAL=>X"FFEF")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n28, 
-                B1=>u_sdram_n6747, C1=>u_sdram_col_7, D1=>u_sdram_n6749, 
-                DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_15, C0=>'X', 
-                D0=>timer_11, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+      generic map (LUT0_INITVAL=>X"EEEE", LUT1_INITVAL=>X"FEFF")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6747, 
+                B1=>u_sdram_n28, C1=>u_sdram_n6749, D1=>u_sdram_col_7, 
+                DI1=>'X', DI0=>'X', A0=>timer_15, B0=>timer_11, C0=>'X', 
+                D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n6071, Q1=>open, OFX0=>open, F0=>u_sdram_n6749, 
                 Q0=>open);
     u_sdram_SLICE_349I: SLOGICB
-      generic map (LUT0_INITVAL=>X"C0C0", LUT1_INITVAL=>X"FFFE")
+      generic map (LUT0_INITVAL=>X"AA00", LUT1_INITVAL=>X"FFFE")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n28, 
-                B1=>u_sdram_n6733, C1=>u_sdram_n5625, D1=>u_sdram_n6137, 
-                DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_SD_DQM_1_N_802_1, 
-                C0=>n72, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                B1=>u_sdram_n6137, C1=>u_sdram_n5625, D1=>u_sdram_n6733, 
+                DI1=>'X', DI0=>'X', A0=>u_sdram_SD_DQM_1_N_802_1, B0=>'X', 
+                C0=>'X', D0=>n72, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_SD_DQM_1_N_802_1, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5779, Q0=>open);
     u_sdram_SLICE_350I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FF08", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_14, B1=>u_sdram_n6129, 
-                C1=>timer_8, D1=>u_sdram_n6752, DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_n5453, B0=>u_sdram_n6735, C0=>u_sdram_n6350, 
-                D0=>u_sdram_n5322, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+      generic map (LUT0_INITVAL=>X"AAEA", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6752, B1=>timer_14, 
+                C1=>timer_8, D1=>u_sdram_n6129, DI1=>'X', DI0=>'X', 
+                A0=>u_sdram_n5322, B0=>u_sdram_n6735, C0=>u_sdram_n5453, 
+                D0=>u_sdram_n6350, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_n6350, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n16, Q0=>open);
     u_sdram_SLICE_351I: SLOGICB
       generic map (LUT0_INITVAL=>X"8000", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5589, 
-                B1=>u_sdram_n6316, C1=>u_sdram_n5595, D1=>u_sdram_n6356, 
-                DI1=>'X', DI0=>'X', A0=>timer_4, B0=>u_sdram_n636, 
-                C0=>u_sdram_ref_due_N_811, D0=>u_sdram_rd_empty, M0=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6316, 
+                B1=>u_sdram_n6356, C1=>u_sdram_n5595, D1=>u_sdram_n5589, 
+                DI1=>'X', DI0=>'X', A0=>u_sdram_ref_due_N_811, 
+                B0=>u_sdram_n636, C0=>u_sdram_rd_empty, D0=>timer_4, M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_ref_due_N_811, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5094, Q0=>open);
     u_sdram_SLICE_352I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFCC", LUT1_INITVAL=>X"0010")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6746, B1=>timer_7, 
-                C1=>u_sdram_n6758, D1=>timer_12, DI1=>'X', DI0=>'X', A0=>'X', 
+      generic map (LUT0_INITVAL=>X"FFCC", LUT1_INITVAL=>X"0100")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_7, B1=>u_sdram_n6746, 
+                C1=>timer_12, D1=>u_sdram_n6758, DI1=>'X', DI0=>'X', A0=>'X', 
                 B0=>u_sdram_n632, C0=>'X', D0=>u_sdram_ref_cnt_15_N_577, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n6017, Q1=>open, OFX0=>open, F0=>u_sdram_n6758, 
                 Q0=>open);
     u_sdram_SLICE_353I: SLOGICB
-      generic map (LUT0_INITVAL=>X"CC88", LUT1_INITVAL=>X"AC0C")
+      generic map (LUT0_INITVAL=>X"A8A8", LUT1_INITVAL=>X"A0CC")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>n462, B1=>u_sdram_n6, 
-                C1=>u_sdram_SD_DQM_1_N_802_1, D1=>u_sdram_n6737, DI1=>'X', 
-                DI0=>'X', A0=>u_sdram_n632, B0=>timer_0, C0=>'X', 
-                D0=>u_sdram_ref_cnt_15_N_577, M0=>'X', CE=>'X', CLK=>'X', 
+                C1=>u_sdram_n6737, D1=>u_sdram_SD_DQM_1_N_802_1, DI1=>'X', 
+                DI0=>'X', A0=>timer_0, B0=>u_sdram_ref_cnt_15_N_577, 
+                C0=>u_sdram_n632, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>u_sdram_n6724, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n6, Q0=>open);
     u_sdram_SLICE_354I: SLOGICB
@@ -12485,323 +12530,321 @@
                 F1=>u_sdram_n28, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_SD_CLK_c_enable_28, Q0=>open);
     u_sdram_SLICE_355I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0020", LUT1_INITVAL=>X"FCFC")
+      generic map (LUT0_INITVAL=>X"0400", LUT1_INITVAL=>X"FCFC")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>timer_1, C1=>timer_2, 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n4884, 
-                B0=>u_sdram_n6741, C0=>u_sdram_n6739, D0=>u_sdram_n6137, 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n6741, 
+                B0=>u_sdram_n4884, C0=>u_sdram_n6137, D0=>u_sdram_n6739, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n6741, Q1=>open, OFX0=>open, F0=>u_sdram_n5823, 
                 Q0=>open);
     u_sdram_SLICE_356I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FCFC")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>timer_10, 
-                C1=>timer_12, D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_0, 
-                B0=>u_sdram_n6274, C0=>timer_13, D0=>timer_4, M0=>'X', CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6274, Q1=>open, 
-                OFX0=>open, F0=>u_sdram_n6348, Q0=>open);
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFF0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>timer_12, 
+                D1=>timer_10, DI1=>'X', DI0=>'X', A0=>timer_0, B0=>timer_13, 
+                C0=>timer_4, D0=>u_sdram_n6274, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>u_sdram_n6274, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n6348, Q0=>open);
     u_sdram_SLICE_357I: SLOGICB
-      generic map (LUT0_INITVAL=>X"F0A0", LUT1_INITVAL=>X"C0AA")
+      generic map (LUT0_INITVAL=>X"F0C0", LUT1_INITVAL=>X"CA0A")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6_adj_1314, B1=>n460, 
-                C1=>u_sdram_n6737, D1=>u_sdram_SD_DQM_1_N_802_1, DI1=>'X', 
-                DI0=>'X', A0=>u_sdram_n632, B0=>'X', C0=>timer_2, 
-                D0=>u_sdram_ref_cnt_15_N_577, M0=>'X', CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>u_sdram_n6723, Q1=>open, OFX0=>open, 
+                C1=>u_sdram_SD_DQM_1_N_802_1, D1=>u_sdram_n6737, DI1=>'X', 
+                DI0=>'X', A0=>'X', B0=>u_sdram_ref_cnt_15_N_577, C0=>timer_2, 
+                D0=>u_sdram_n632, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>u_sdram_n6723, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n6_adj_1314, Q0=>open);
     u_sdram_SLICE_358I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"E2C0")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>n461, 
-                B1=>u_sdram_SD_A_12_N_789_6, C1=>u_sdram_n8, D1=>u_sdram_n6737, 
-                DI1=>'X', DI0=>'X', A0=>u_sdram_n635, B0=>u_sdram_n1058, 
-                C0=>u_sdram_n632, D0=>u_sdram_ref_cnt_15_N_577, M0=>'X', 
-                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6725, 
-                Q1=>open, OFX0=>open, F0=>u_sdram_n6737, Q0=>open);
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"AAC0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n8, B1=>n461, 
+                C1=>u_sdram_n6737, D1=>u_sdram_SD_A_12_N_789_6, DI1=>'X', 
+                DI0=>'X', A0=>u_sdram_n1058, B0=>u_sdram_ref_cnt_15_N_577, 
+                C0=>u_sdram_n635, D0=>u_sdram_n632, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>u_sdram_n6725, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n6737, Q0=>open);
     u_sdram_SLICE_359I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0400", LUT1_INITVAL=>X"EAAA")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6734, 
-                B1=>u_sdram_n6735, C1=>u_sdram_n5877, D1=>u_sdram_n5765, 
+      generic map (LUT0_INITVAL=>X"0400", LUT1_INITVAL=>X"FF80")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5765, 
+                B1=>u_sdram_n6735, C1=>u_sdram_n5877, D1=>u_sdram_n6734, 
                 DI1=>'X', DI0=>'X', A0=>u_sdram_fs_sync, B0=>u_sdram_fs_meta, 
                 C0=>u_sdram_n632, D0=>u_sdram_n636, M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>u_sdram_SD_CLK_c_enable_29, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_n6734, Q0=>open);
     u_sdram_SLICE_360I: SLOGICB
       generic map (LUT0_INITVAL=>X"FEFE", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>ref_cnt_0, B1=>ref_cnt_3, 
-                C1=>ref_cnt_9, D1=>ref_cnt_6, DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_n6326, B0=>ref_cnt_10, C0=>ref_cnt_7, D0=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>ref_cnt_6, B1=>ref_cnt_0, 
+                C1=>ref_cnt_9, D1=>ref_cnt_3, DI1=>'X', DI0=>'X', 
+                A0=>ref_cnt_7, B0=>ref_cnt_10, C0=>u_sdram_n6326, D0=>'X', 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n6326, Q1=>open, OFX0=>open, F0=>u_sdram_n6346, 
                 Q0=>open);
     u_sdram_SLICE_361I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FCFC", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6747, B1=>timer_10, 
-                C1=>u_sdram_n6744, D1=>timer_4, DI1=>'X', DI0=>'X', A0=>'X', 
-                B0=>timer_13, C0=>timer_2, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>u_sdram_n6352, Q1=>open, OFX0=>open, 
-                F0=>u_sdram_n6744, Q0=>open);
+      generic map (LUT0_INITVAL=>X"FFAA", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_10, B1=>u_sdram_n6744, 
+                C1=>timer_4, D1=>u_sdram_n6747, DI1=>'X', DI0=>'X', 
+                A0=>timer_13, B0=>'X', C0=>'X', D0=>timer_2, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6352, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n6744, Q0=>open);
     u_sdram_SLICE_362I: SLOGICB
-      generic map (LUT0_INITVAL=>X"A8AA", LUT1_INITVAL=>X"F000")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
-                C1=>u_sdram_col_5, D1=>u_sdram_col_0, DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_SD_CLK_c_enable_24, B0=>u_sdram_n6071, 
-                C0=>u_sdram_n6077, D0=>u_sdram_n13, M0=>'X', CE=>'X', CLK=>'X', 
+      generic map (LUT0_INITVAL=>X"CC8C", LUT1_INITVAL=>X"AA00")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_col_0, B1=>'X', 
+                C1=>'X', D1=>u_sdram_col_5, DI1=>'X', DI0=>'X', 
+                A0=>u_sdram_n6071, B0=>u_sdram_SD_CLK_c_enable_24, 
+                C0=>u_sdram_n13, D0=>u_sdram_n6077, M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>u_sdram_n13, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n3161, Q0=>open);
     u_sdram_SLICE_363I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0010", LUT1_INITVAL=>X"FFF0")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>timer_2, 
-                D1=>timer_0, DI1=>'X', DI0=>'X', A0=>timer_7, 
-                B0=>u_sdram_n6127, C0=>u_sdram_n6758, D0=>timer_10, M0=>'X', 
-                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6127, 
-                Q1=>open, OFX0=>open, F0=>u_sdram_n5453, Q0=>open);
+      generic map (LUT0_INITVAL=>X"0100", LUT1_INITVAL=>X"FAFA")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_0, B1=>'X', C1=>timer_2, 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n6127, B0=>timer_7, 
+                C0=>timer_10, D0=>u_sdram_n6758, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>u_sdram_n6127, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n5453, Q0=>open);
     u_sdram_SLICE_364I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFF0", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6029, 
-                B1=>u_sdram_n6752, C1=>u_sdram_n6039, D1=>timer_0, DI1=>'X', 
-                DI0=>'X', A0=>'X', B0=>'X', C0=>timer_12, D0=>timer_4, M0=>'X', 
+      generic map (LUT0_INITVAL=>X"FFCC", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6039, 
+                B1=>u_sdram_n6029, C1=>timer_0, D1=>u_sdram_n6752, DI1=>'X', 
+                DI0=>'X', A0=>'X', B0=>timer_12, C0=>'X', D0=>timer_4, M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6043, 
                 Q1=>open, OFX0=>open, F0=>u_sdram_n6752, Q0=>open);
     u_sdram_SLICE_365I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FDFF", LUT1_INITVAL=>X"8000")
+      generic map (LUT0_INITVAL=>X"EFFF", LUT1_INITVAL=>X"8000")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_col_6, 
-                B1=>u_sdram_col_2, C1=>u_sdram_col_4, D1=>u_sdram_col_1, 
-                DI1=>'X', DI0=>'X', A0=>u_sdram_n15_adj_1319, 
-                B0=>u_sdram_n4828, C0=>u_sdram_n6069, D0=>u_sdram_n632, 
-                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>u_sdram_n15_adj_1319, Q1=>open, OFX0=>open, 
-                F0=>u_sdram_n6077, Q0=>open);
+                B1=>u_sdram_col_1, C1=>u_sdram_col_2, D1=>u_sdram_col_4, 
+                DI1=>'X', DI0=>'X', A0=>u_sdram_n4828, B0=>u_sdram_n6069, 
+                C0=>u_sdram_n632, D0=>u_sdram_n15_adj_1319, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n15_adj_1319, 
+                Q1=>open, OFX0=>open, F0=>u_sdram_n6077, Q0=>open);
     u_sdram_SLICE_366I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FCFC", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6740, 
-                B1=>u_sdram_n6127, C1=>u_sdram_n6738, D1=>u_sdram_n6129, 
-                DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_13, C0=>timer_1, 
+      generic map (LUT0_INITVAL=>X"EEEE", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6127, 
+                B1=>u_sdram_n6738, C1=>u_sdram_n6740, D1=>u_sdram_n6129, 
+                DI1=>'X', DI0=>'X', A0=>timer_13, B0=>timer_1, C0=>'X', 
                 D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n6732, Q1=>open, OFX0=>open, F0=>u_sdram_n6129, 
                 Q0=>open);
     u_sdram_SLICE_367I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"0010")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6330, 
-                B1=>u_sdram_n6747, C1=>u_sdram_n4884, D1=>u_sdram_n6332, 
-                DI1=>'X', DI0=>'X', A0=>timer_7, B0=>timer_10, C0=>timer_12, 
-                D0=>timer_4, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"0002")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n4884, 
+                B1=>u_sdram_n6747, C1=>u_sdram_n6332, D1=>u_sdram_n6330, 
+                DI1=>'X', DI0=>'X', A0=>timer_10, B0=>timer_12, C0=>timer_4, 
+                D0=>timer_7, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n5653, Q1=>open, OFX0=>open, F0=>u_sdram_n6332, 
                 Q0=>open);
     u_sdram_SLICE_368I: SLOGICB
-      generic map (LUT0_INITVAL=>X"C0C0", LUT1_INITVAL=>X"FFEF")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6129, 
-                B1=>u_sdram_n6127, C1=>u_sdram_n6745, D1=>u_sdram_n6733, 
+      generic map (LUT0_INITVAL=>X"C0C0", LUT1_INITVAL=>X"FFFD")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6745, 
+                B1=>u_sdram_n6129, C1=>u_sdram_n6733, D1=>u_sdram_n6127, 
                 DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_col_8, 
                 C0=>u_sdram_col_3, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>u_sdram_n6069, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n6745, Q0=>open);
     u_sdram_SLICE_369I: SLOGICB
       generic map (LUT0_INITVAL=>X"FFAA", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n6318, 
-                B1=>u_sdram_n5597, C1=>ref_cnt_13, D1=>ref_cnt_7, DI1=>'X', 
-                DI0=>'X', A0=>ref_cnt_14, B0=>'X', C0=>'X', D0=>ref_cnt_9, 
-                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>u_sdram_n6356, Q1=>open, OFX0=>open, F0=>u_sdram_n5597, 
-                Q0=>open);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5597, B1=>ref_cnt_7, 
+                C1=>ref_cnt_13, D1=>u_sdram_n6318, DI1=>'X', DI0=>'X', 
+                A0=>ref_cnt_14, B0=>'X', C0=>'X', D0=>ref_cnt_9, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6356, 
+                Q1=>open, OFX0=>open, F0=>u_sdram_n5597, Q0=>open);
     u_sdram_SLICE_370I: SLOGICB
       generic map (LUT0_INITVAL=>X"8000", LUT1_INITVAL=>X"8000")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_row_3, 
-                B1=>u_sdram_n5679, C1=>u_sdram_n5691, D1=>u_sdram_n5693, 
-                DI1=>'X', DI0=>'X', A0=>u_sdram_n4828, 
-                B0=>u_sdram_n15_adj_1319, C0=>u_sdram_n5669, D0=>u_sdram_n13, 
-                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>u_sdram_n4828, Q1=>open, OFX0=>open, F0=>u_sdram_n4884, 
-                Q0=>open);
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n5693, 
+                B1=>u_sdram_n5679, C1=>u_sdram_n5691, D1=>u_sdram_row_3, 
+                DI1=>'X', DI0=>'X', A0=>u_sdram_n15_adj_1319, B0=>u_sdram_n13, 
+                C0=>u_sdram_n5669, D0=>u_sdram_n4828, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n4828, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n4884, Q0=>open);
     u_sdram_SLICE_371I: SLOGICB
       generic map (LUT0_INITVAL=>X"8000", LUT1_INITVAL=>X"A0A0")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_row_4, B1=>'X', 
                 C1=>u_sdram_row_5, D1=>'X', DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_row_12, B0=>u_sdram_n5681, C0=>u_sdram_row_0, 
+                A0=>u_sdram_n5681, B0=>u_sdram_row_12, C0=>u_sdram_row_0, 
                 D0=>u_sdram_n5677, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>u_sdram_n5681, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5693, Q0=>open);
     u_sdram_SLICE_372I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0010", LUT1_INITVAL=>X"FFF0")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>timer_8, 
-                D1=>timer_14, DI1=>'X', DI0=>'X', A0=>u_sdram_n6742, 
-                B0=>u_sdram_n6747, C0=>u_sdram_n632, D0=>timer_7, M0=>'X', 
+      generic map (LUT0_INITVAL=>X"0010", LUT1_INITVAL=>X"FFCC")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>timer_8, C1=>'X', 
+                D1=>timer_14, DI1=>'X', DI0=>'X', A0=>u_sdram_n6747, 
+                B0=>timer_7, C0=>u_sdram_n632, D0=>u_sdram_n6742, M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6747, 
                 Q1=>open, OFX0=>open, F0=>u_sdram_n5765, Q0=>open);
     SLICE_373I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", GSR=>"DISABLED", 
                    SRMODE=>"ASYNC", LUT0_INITVAL=>X"33CC", 
-                   LUT1_INITVAL=>X"2800", CHECK_M0=>TRUE)
+                   LUT1_INITVAL=>X"2080", CHECK_M0=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>wr_full_N_892, 
-                B1=>wptr_gray_9, C1=>rptr_gray_wr2_9, D1=>wr_full_N_891, 
+                B1=>rptr_gray_wr2_9, C1=>wr_full_N_891, D1=>wptr_gray_9, 
                 DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_u_fifo_wptr_gray_8, 
                 C0=>'X', D0=>u_sdram_u_fifo_rptr_gray_wr2_8, 
                 M0=>u_sdram_u_fifo_rptr_gray_wr1_9, CE=>'X', CLK=>PCLK_c, 
                 LSR=>'X', OFX1=>open, F1=>u_spi_n5323, Q1=>open, OFX0=>open, 
                 F0=>wr_full_N_891, Q0=>rptr_gray_wr2_9);
     u_spi_SLICE_374I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FCFC", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_7, B1=>SSPI_CS_n_c, 
-                C1=>u_spi_n6298, D1=>u_spi_bit_cnt_2, DI1=>'X', DI0=>'X', 
-                A0=>'X', B0=>u_spi_cmd_5, C0=>u_spi_cmd_0, D0=>'X', M0=>'X', 
+      generic map (LUT0_INITVAL=>X"FAFA", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_7, B1=>u_spi_n6298, 
+                C1=>SSPI_CS_n_c, D1=>u_spi_bit_cnt_2, DI1=>'X', DI0=>'X', 
+                A0=>u_spi_cmd_5, B0=>'X', C0=>u_spi_cmd_0, D0=>'X', M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_n6364, 
                 Q1=>open, OFX0=>open, F0=>u_spi_n6298, Q0=>open);
     u_spi_SLICE_375I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFCC", LUT1_INITVAL=>X"0010")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n6364, B1=>u_spi_n6338, 
+      generic map (LUT0_INITVAL=>X"FFF0", LUT1_INITVAL=>X"0010")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n6338, B1=>u_spi_n6364, 
                 C1=>u_spi_n4, D1=>u_spi_n7, DI1=>'X', DI0=>'X', A0=>'X', 
-                B0=>u_spi_cmd_3, C0=>'X', D0=>u_spi_cmd_6, M0=>'X', CE=>'X', 
+                B0=>'X', C0=>u_spi_cmd_6, D0=>u_spi_cmd_3, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>rd_data_7_N_1177, Q1=>open, 
                 OFX0=>open, F0=>u_spi_n7, Q0=>open);
     u_spi_SLICE_376I: SLOGICB
-      generic map (LUT0_INITVAL=>X"CC00", LUT1_INITVAL=>X"0020")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n6755, 
-                B1=>u_spi_shift_in_2, C1=>u_spi_bit_cnt_2, 
-                D1=>u_spi_shift_in_4, DI1=>'X', DI0=>'X', A0=>'X', 
-                B0=>u_spi_bit_cnt_1, C0=>'X', D0=>u_spi_bit_cnt_0, M0=>'X', 
-                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>n6203, Q1=>open, 
-                OFX0=>open, F0=>u_spi_n6755, Q0=>open);
-    u_spi_SLICE_377I: SLOGICB
-      generic map (LUT0_INITVAL=>X"A000", LUT1_INITVAL=>X"AA02")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_CCLK_c_enable_27, 
-                B1=>u_spi_n4968, C1=>u_spi_n5334, D1=>u_spi_stream_arm_N_1307, 
+      generic map (LUT0_INITVAL=>X"A0A0", LUT1_INITVAL=>X"0008")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_2, 
+                B1=>u_spi_n6755, C1=>u_spi_shift_in_4, D1=>u_spi_shift_in_2, 
                 DI1=>'X', DI0=>'X', A0=>u_spi_bit_cnt_1, B0=>'X', 
-                C0=>u_spi_bit_cnt_2, D0=>u_spi_bit_cnt_0, M0=>'X', CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_CCLK_c_enable_29, 
-                Q1=>open, OFX0=>open, F0=>u_spi_CCLK_c_enable_27, Q0=>open);
+                C0=>u_spi_bit_cnt_0, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>n6203, Q1=>open, OFX0=>open, 
+                F0=>u_spi_n6755, Q0=>open);
+    u_spi_SLICE_377I: SLOGICB
+      generic map (LUT0_INITVAL=>X"C000", LUT1_INITVAL=>X"C0D0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n4968, 
+                B1=>u_spi_stream_arm_N_1307, C1=>u_spi_CCLK_c_enable_27, 
+                D1=>u_spi_n5334, DI1=>'X', DI0=>'X', A0=>'X', 
+                B0=>u_spi_bit_cnt_1, C0=>u_spi_bit_cnt_0, D0=>u_spi_bit_cnt_2, 
+                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>u_spi_CCLK_c_enable_29, Q1=>open, OFX0=>open, 
+                F0=>u_spi_CCLK_c_enable_27, Q0=>open);
     u_spi_SLICE_378I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FAFA", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n6298, B1=>u_spi_cmd_7, 
-                C1=>u_spi_n7, D1=>u_spi_n6756, DI1=>'X', DI0=>'X', 
-                A0=>u_spi_cmd_1, B0=>'X', C0=>u_spi_cmd_4, D0=>'X', M0=>'X', 
+      generic map (LUT0_INITVAL=>X"FFAA", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_7, B1=>u_spi_n7, 
+                C1=>u_spi_n6756, D1=>u_spi_n6298, DI1=>'X', DI0=>'X', 
+                A0=>u_spi_cmd_1, B0=>'X', C0=>'X', D0=>u_spi_cmd_4, M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_n6378, 
                 Q1=>open, OFX0=>open, F0=>u_spi_n6756, Q0=>open);
     u_spi_SLICE_379I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0100", LUT1_INITVAL=>X"FFAA")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_4, B1=>'X', C1=>'X', 
+      generic map (LUT0_INITVAL=>X"0100", LUT1_INITVAL=>X"FFF0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>u_spi_cmd_4, 
                 D1=>u_spi_cmd_0, DI1=>'X', DI0=>'X', A0=>u_spi_n6284, 
                 B0=>u_spi_n7, C0=>u_spi_n6286, D0=>u_spi_n5571, M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_n6284, 
                 Q1=>open, OFX0=>open, F0=>u_spi_n5581, Q0=>open);
     u_spi_SLICE_380I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FCFC", LUT1_INITVAL=>X"0010")
+      generic map (LUT0_INITVAL=>X"FFCC", LUT1_INITVAL=>X"0010")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_n6284, B1=>u_spi_n7, 
                 C1=>u_spi_n5547, D1=>u_spi_n6286, DI1=>'X', DI0=>'X', A0=>'X', 
-                B0=>u_spi_cmd_7, C0=>u_spi_cmd_5, D0=>'X', M0=>'X', CE=>'X', 
+                B0=>u_spi_cmd_7, C0=>'X', D0=>u_spi_cmd_5, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_n5557, Q1=>open, 
                 OFX0=>open, F0=>u_spi_n6286, Q0=>open);
     u_spi_SLICE_381I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0002", LUT1_INITVAL=>X"0C0C")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', 
-                B1=>stream_fifo_rd_data_4, C1=>u_spi_cmd_1, D1=>'X', DI1=>'X', 
-                DI0=>'X', A0=>u_spi_n5523, B0=>u_spi_n7, C0=>u_spi_n6286, 
+      generic map (LUT0_INITVAL=>X"0002", LUT1_INITVAL=>X"0A0A")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>stream_fifo_rd_data_4, 
+                B1=>'X', C1=>u_spi_cmd_1, D1=>'X', DI1=>'X', DI0=>'X', 
+                A0=>u_spi_n5523, B0=>u_spi_n6286, C0=>u_spi_n7, 
                 D0=>u_spi_n6284, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>u_spi_n5523, Q1=>open, OFX0=>open, 
                 F0=>u_spi_n5533, Q0=>open);
     u_spi_SLICE_382I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0004", LUT1_INITVAL=>X"00AA")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>stream_fifo_rd_data_5, 
-                B1=>'X', C1=>'X', D1=>u_spi_cmd_1, DI1=>'X', DI0=>'X', 
-                A0=>u_spi_n6286, B0=>u_spi_n5535, C0=>u_spi_n6284, 
-                D0=>u_spi_n7, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>u_spi_n5535, Q1=>open, OFX0=>open, F0=>u_spi_n5545, 
-                Q0=>open);
+      generic map (LUT0_INITVAL=>X"0004", LUT1_INITVAL=>X"5500")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_1, B1=>'X', C1=>'X', 
+                D1=>stream_fifo_rd_data_5, DI1=>'X', DI0=>'X', A0=>u_spi_n6284, 
+                B0=>u_spi_n5535, C0=>u_spi_n6286, D0=>u_spi_n7, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_n5535, 
+                Q1=>open, OFX0=>open, F0=>u_spi_n5545, Q0=>open);
     u_spi_SLICE_383I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0002", LUT1_INITVAL=>X"00F0")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', 
-                C1=>stream_fifo_rd_data_6, D1=>u_spi_cmd_1, DI1=>'X', DI0=>'X', 
-                A0=>u_spi_n5559, B0=>u_spi_n6284, C0=>u_spi_n6286, 
-                D0=>u_spi_n7, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>u_spi_n5559, Q1=>open, OFX0=>open, F0=>u_spi_n5569, 
-                Q0=>open);
+      generic map (LUT0_INITVAL=>X"0004", LUT1_INITVAL=>X"00CC")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', 
+                B1=>stream_fifo_rd_data_6, C1=>'X', D1=>u_spi_cmd_1, DI1=>'X', 
+                DI0=>'X', A0=>u_spi_n7, B0=>u_spi_n5559, C0=>u_spi_n6284, 
+                D0=>u_spi_n6286, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>u_spi_n5559, Q1=>open, OFX0=>open, 
+                F0=>u_spi_n5569, Q0=>open);
     u_spi_SLICE_384I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"SIG", SRMODE=>"ASYNC", 
-                   LUT0_INITVAL=>X"0040", LUT1_INITVAL=>X"FF7F", 
+                   LUT0_INITVAL=>X"1000", LUT1_INITVAL=>X"F7FF", 
                    CHECK_M0=>TRUE, CHECK_CE=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_0, 
-                B1=>u_spi_bit_cnt_1, C1=>u_spi_bit_cnt_2, D1=>u_spi_n6153, 
-                DI1=>'X', DI0=>'X', A0=>u_spi_n6163, B0=>u_spi_cmd_1, 
-                C0=>u_spi_out_byte_7_N_1257, D0=>u_spi_n7, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_1, 
+                B1=>u_spi_bit_cnt_0, C1=>u_spi_n6153, D1=>u_spi_bit_cnt_2, 
+                DI1=>'X', DI0=>'X', A0=>u_spi_n6163, B0=>u_spi_n7, 
+                C0=>u_spi_out_byte_7_N_1257, D0=>u_spi_cmd_1, 
                 M0=>u_spi_stream_arm_N_1307, CE=>u_spi_CCLK_c_enable_29, 
                 CLK=>CCLK_c, LSR=>'X', OFX1=>open, F1=>u_spi_n6163, Q1=>open, 
                 OFX0=>open, F0=>u_spi_CCLK_c_enable_26, 
                 Q0=>u_spi_out_byte_7_N_1257);
     u_spi_SLICE_385I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFAA")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_4, B1=>'X', C1=>'X', 
-                D1=>u_spi_cmd_5, DI1=>'X', DI0=>'X', A0=>u_spi_n6149, 
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFCC")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>u_spi_cmd_5, C1=>'X', 
+                D1=>u_spi_cmd_4, DI1=>'X', DI0=>'X', A0=>u_spi_n6149, 
                 B0=>u_spi_n6147, C0=>u_spi_cmd_7, D0=>u_spi_cmd_0, M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_n6147, 
                 Q1=>open, OFX0=>open, F0=>u_spi_n6153, Q0=>open);
     u_spi_SLICE_386I: SLOGICB
       generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FAFA")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_1, B1=>'X', 
-                C1=>u_spi_cmd_0, D1=>'X', DI1=>'X', DI0=>'X', A0=>u_spi_n7, 
-                B0=>u_spi_n6218, C0=>u_spi_cmd_7, D0=>u_spi_n6147, M0=>'X', 
+                C1=>u_spi_cmd_0, D1=>'X', DI1=>'X', DI0=>'X', A0=>u_spi_n6147, 
+                B0=>u_spi_n6218, C0=>u_spi_n7, D0=>u_spi_cmd_7, M0=>'X', 
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_spi_n6218, 
                 Q1=>open, OFX0=>open, F0=>u_spi_n6368, Q0=>open);
     u_sdram_SLICE_387I: SLOGICB
       generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_13, B1=>timer_2, 
-                C1=>timer_0, D1=>timer_1, DI1=>'X', DI0=>'X', A0=>timer_13, 
-                B0=>timer_2, C0=>timer_0, D0=>timer_1, M0=>'X', CE=>'X', 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_13, B1=>timer_0, 
+                C1=>timer_1, D1=>timer_2, DI1=>'X', DI0=>'X', A0=>timer_2, 
+                B0=>timer_0, C0=>timer_13, D0=>timer_1, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6330, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_n5625, Q0=>open);
     u_cam_SLICE_388I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0022", LUT1_INITVAL=>X"0088")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>HREF_c, B1=>byte_sel, C1=>'X', 
-                D1=>VSYNC_c, DI1=>'X', DI0=>'X', A0=>HREF_c, B0=>byte_sel, 
-                C0=>'X', D0=>VSYNC_c, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+      generic map (LUT0_INITVAL=>X"0030", LUT1_INITVAL=>X"3000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>VSYNC_c, C1=>HREF_c, 
+                D1=>byte_sel, DI1=>'X', DI0=>'X', A0=>'X', B0=>VSYNC_c, 
+                C0=>HREF_c, D0=>byte_sel, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>u_cam_PCLK_c_enable_51, Q1=>open, OFX0=>open, 
                 F0=>u_cam_PCLK_c_enable_12, Q0=>open);
     u_sdram_SLICE_389I: SLOGICB
-      generic map (LUT0_INITVAL=>X"8000", LUT1_INITVAL=>X"8800")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n636, 
-                B1=>u_sdram_ref_due_N_811, C1=>'X', D1=>u_sdram_rd_empty, 
-                DI1=>'X', DI0=>'X', A0=>timer_12, B0=>u_sdram_n636, 
-                C0=>u_sdram_ref_due_N_811, D0=>u_sdram_rd_empty, M0=>'X', 
-                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n5322, 
-                Q1=>open, OFX0=>open, F0=>u_sdram_n5090, Q0=>open);
+      generic map (LUT0_INITVAL=>X"8000", LUT1_INITVAL=>X"A000")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_ref_due_N_811, 
+                B1=>'X', C1=>u_sdram_rd_empty, D1=>u_sdram_n636, DI1=>'X', 
+                DI0=>'X', A0=>u_sdram_ref_due_N_811, B0=>timer_12, 
+                C0=>u_sdram_rd_empty, D0=>u_sdram_n636, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n5322, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n5090, Q0=>open);
     u_sdram_SLICE_390I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0A00", LUT1_INITVAL=>X"CECC")
+      generic map (LUT0_INITVAL=>X"2200", LUT1_INITVAL=>X"F2F0")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_fs_meta, 
-                B1=>u_sdram_n632, C1=>u_sdram_fs_sync, D1=>u_sdram_n636, 
-                DI1=>'X', DI0=>'X', A0=>u_sdram_fs_meta, B0=>'X', 
-                C0=>u_sdram_fs_sync, D0=>u_sdram_n636, M0=>'X', CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_SD_CLK_c_enable_1, 
-                Q1=>open, OFX0=>open, F0=>u_sdram_n6751, Q0=>open);
+                B1=>u_sdram_fs_sync, C1=>u_sdram_n632, D1=>u_sdram_n636, 
+                DI1=>'X', DI0=>'X', A0=>u_sdram_fs_meta, B0=>u_sdram_fs_sync, 
+                C0=>'X', D0=>u_sdram_n636, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>u_sdram_SD_CLK_c_enable_1, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n6751, Q0=>open);
     u_sdram_SLICE_391I: SLOGICB
-      generic map (LUT0_INITVAL=>X"C000", LUT1_INITVAL=>X"8000")
+      generic map (LUT0_INITVAL=>X"8080", LUT1_INITVAL=>X"8000")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_col_8, 
-                B1=>u_sdram_col_3, C1=>u_sdram_col_7, D1=>u_sdram_n13, 
-                DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_col_3, 
-                C0=>u_sdram_col_7, D0=>u_sdram_col_8, M0=>'X', CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n5501, Q1=>open, 
-                OFX0=>open, F0=>u_sdram_n5669, Q0=>open);
+                B1=>u_sdram_col_7, C1=>u_sdram_col_3, D1=>u_sdram_n13, 
+                DI1=>'X', DI0=>'X', A0=>u_sdram_col_3, B0=>u_sdram_col_7, 
+                C0=>u_sdram_col_8, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>u_sdram_n5501, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n5669, Q0=>open);
     u_sdram_SLICE_392I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0004", LUT1_INITVAL=>X"0004")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_0, B1=>u_sdram_col_4, 
-                C1=>timer_13, D1=>timer_7, DI1=>'X', DI0=>'X', A0=>timer_0, 
-                B0=>u_sdram_col_0, C0=>timer_13, D0=>timer_7, M0=>'X', CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n5855, Q1=>open, 
-                OFX0=>open, F0=>u_sdram_n5975, Q0=>open);
+      generic map (LUT0_INITVAL=>X"0004", LUT1_INITVAL=>X"0010")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_0, B1=>timer_13, 
+                C1=>u_sdram_col_4, D1=>timer_7, DI1=>'X', DI0=>'X', 
+                A0=>timer_13, B0=>u_sdram_col_0, C0=>timer_7, D0=>timer_0, 
+                M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                F1=>u_sdram_n5855, Q1=>open, OFX0=>open, F0=>u_sdram_n5975, 
+                Q0=>open);
     u_sdram_SLICE_393I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0002", LUT1_INITVAL=>X"0002")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_col_1, B1=>timer_0, 
-                C1=>timer_7, D1=>timer_13, DI1=>'X', DI0=>'X', 
-                A0=>u_sdram_col_6, B0=>timer_0, C0=>timer_7, D0=>timer_13, 
+      generic map (LUT0_INITVAL=>X"0004", LUT1_INITVAL=>X"0010")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_0, B1=>timer_7, 
+                C1=>u_sdram_col_1, D1=>timer_13, DI1=>'X', DI0=>'X', 
+                A0=>timer_0, B0=>u_sdram_col_6, C0=>timer_7, D0=>timer_13, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n5915, Q1=>open, OFX0=>open, F0=>u_sdram_n5935, 
                 Q0=>open);
     u_sdram_SLICE_394I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0004", LUT1_INITVAL=>X"0004")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_0, B1=>u_sdram_col_2, 
-                C1=>timer_13, D1=>timer_7, DI1=>'X', DI0=>'X', A0=>timer_0, 
-                B0=>u_sdram_col_8, C0=>timer_13, D0=>timer_7, M0=>'X', CE=>'X', 
+      generic map (LUT0_INITVAL=>X"0010", LUT1_INITVAL=>X"0002")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_col_2, B1=>timer_13, 
+                C1=>timer_0, D1=>timer_7, DI1=>'X', DI0=>'X', A0=>timer_0, 
+                B0=>timer_13, C0=>u_sdram_col_8, D0=>timer_7, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n5835, Q1=>open, 
                 OFX0=>open, F0=>u_sdram_n5895, Q0=>open);
     u_sdram_SLICE_395I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0100", LUT1_INITVAL=>X"0100")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_7, B1=>timer_0, 
-                C1=>timer_13, D1=>u_sdram_col_3, DI1=>'X', DI0=>'X', 
-                A0=>timer_0, B0=>timer_13, C0=>timer_7, D0=>u_sdram_col_7, 
+      generic map (LUT0_INITVAL=>X"0100", LUT1_INITVAL=>X"0010")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>timer_13, B1=>timer_0, 
+                C1=>u_sdram_col_3, D1=>timer_7, DI1=>'X', DI0=>'X', 
+                A0=>timer_13, B0=>timer_0, C0=>timer_7, D0=>u_sdram_col_7, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n5875, Q1=>open, OFX0=>open, F0=>u_sdram_n5995, 
                 Q0=>open);
@@ -12814,83 +12857,83 @@
                 OFX1=>open, F1=>u_sdram_n5679, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5691, Q0=>open);
     u_cam_SLICE_397I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFAA")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_x_2, B1=>'X', C1=>'X', 
-                D1=>pix_x_6, DI1=>'X', DI0=>'X', A0=>pix_x_11, B0=>pix_x_8, 
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"FFF0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>pix_x_6, 
+                D1=>pix_x_2, DI1=>'X', DI0=>'X', A0=>pix_x_11, B0=>pix_x_8, 
                 C0=>pix_x_10, D0=>pix_x_5, M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>u_cam_n6753, Q1=>open, OFX0=>open, 
                 F0=>n4889, Q0=>open);
     u_stream_u_dc_SLICE_398I: SLOGICB
-      generic map (LUT0_INITVAL=>X"6666", LUT1_INITVAL=>X"0AA0")
+      generic map (LUT0_INITVAL=>X"33CC", LUT1_INITVAL=>X"2828")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_stream_u_dc_wr_full_N_1156, 
-                B1=>'X', C1=>u_stream_u_dc_rptr_gray_wr2_11, D1=>wptr_gray_11, 
-                DI1=>'X', DI0=>'X', A0=>u_stream_u_dc_wptr_gray_10, 
-                B0=>u_stream_u_dc_rptr_gray_wr2_10, C0=>'X', D0=>'X', M0=>'X', 
-                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>u_stream_u_dc_n6730, Q1=>open, OFX0=>open, 
-                F0=>u_stream_u_dc_wr_full_N_1155, Q0=>open);
+                B1=>u_stream_u_dc_rptr_gray_wr2_11, C1=>wptr_gray_11, D1=>'X', 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>u_stream_u_dc_wptr_gray_10, 
+                C0=>'X', D0=>u_stream_u_dc_rptr_gray_wr2_10, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_stream_u_dc_n6730, 
+                Q1=>open, OFX0=>open, F0=>u_stream_u_dc_wr_full_N_1155, 
+                Q0=>open);
     u_spi_SLICE_399I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0A0A", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_bit_cnt_0, 
-                B1=>u_spi_cmd_1, C1=>u_spi_bit_cnt_1, D1=>u_spi_cmd_4, 
-                DI1=>'X', DI0=>'X', A0=>u_spi_cmd_2, B0=>'X', 
-                C0=>stream_fifo_empty, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>u_spi_n6338, Q1=>open, OFX0=>open, 
+      generic map (LUT0_INITVAL=>X"3030", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_1, 
+                B1=>u_spi_bit_cnt_1, C1=>u_spi_bit_cnt_0, D1=>u_spi_cmd_4, 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>stream_fifo_empty, 
+                C0=>u_spi_cmd_2, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>u_spi_n6338, Q1=>open, OFX0=>open, 
                 F0=>u_spi_n4, Q0=>open);
     u_sdram_SLICE_400I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"SIG", LSRMUX=>"SIG", 
                    GSR=>"DISABLED", LUT0_INITVAL=>X"FCFC", 
-                   LUT1_INITVAL=>X"FCFC", CHECK_M0=>TRUE, CHECK_CE=>TRUE, 
+                   LUT1_INITVAL=>X"FFAA", CHECK_M0=>TRUE, CHECK_CE=>TRUE, 
                    CHECK_LSR=>TRUE)
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', 
-                B1=>u_sdram_ref_due_N_811, C1=>u_sdram_ref_cnt_15_N_577, 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>ref_cnt_6, 
-                C0=>ref_cnt_2, D0=>'X', M0=>n75, CE=>u_sdram_ref_due_N_811, 
-                CLK=>SD_CLK_c, LSR=>u_sdram_ref_cnt_15_N_577, OFX1=>open, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_ref_due_N_811, 
+                B1=>'X', C1=>'X', D1=>u_sdram_ref_cnt_15_N_577, DI1=>'X', 
+                DI0=>'X', A0=>'X', B0=>ref_cnt_6, C0=>ref_cnt_2, D0=>'X', 
+                M0=>n75, CE=>u_sdram_ref_due_N_811, CLK=>SD_CLK_c, 
+                LSR=>u_sdram_ref_cnt_15_N_577, OFX1=>open, 
                 F1=>u_sdram_SD_CLK_c_enable_30, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5595, Q0=>ref_cnt_2);
     u_sdram_SLICE_401I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FAFA", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>ref_cnt_14, B1=>ref_cnt_1, 
-                C1=>ref_cnt_4, D1=>ref_cnt_15, DI1=>'X', DI0=>'X', 
-                A0=>ref_cnt_13, B0=>'X', C0=>ref_cnt_5, D0=>'X', M0=>'X', 
-                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6312, 
-                Q1=>open, OFX0=>open, F0=>u_sdram_n6262, Q0=>open);
+      generic map (LUT0_INITVAL=>X"FFF0", LUT1_INITVAL=>X"FFFE")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>ref_cnt_4, B1=>ref_cnt_14, 
+                C1=>ref_cnt_1, D1=>ref_cnt_15, DI1=>'X', DI0=>'X', A0=>'X', 
+                B0=>'X', C0=>ref_cnt_5, D0=>ref_cnt_13, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>u_sdram_n6312, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n6262, Q0=>open);
     u_cam_SLICE_402I: SLOGICB
       generic map (LUT0_INITVAL=>X"EEEE", LUT1_INITVAL=>X"FFFE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_x_1, B1=>pix_x_9, 
-                C1=>pix_x_4, D1=>pix_x_0, DI1=>'X', DI0=>'X', A0=>pix_x_7, 
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>pix_x_1, B1=>pix_x_4, 
+                C1=>pix_x_9, D1=>pix_x_0, DI1=>'X', DI0=>'X', A0=>pix_x_7, 
                 B0=>pix_x_3, C0=>'X', D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>u_cam_n6091, Q1=>open, OFX0=>open, 
                 F0=>u_cam_n6085, Q0=>open);
     u_sdram_SLICE_403I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"C0C0")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', 
-                B1=>u_sdram_ref_due_N_811, C1=>u_sdram_n636, D1=>'X', DI1=>'X', 
-                DI0=>'X', A0=>ref_cnt_12, B0=>ref_cnt_15, C0=>ref_cnt_1, 
-                D0=>ref_cnt_3, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
-                OFX1=>open, F1=>u_sdram_n6731, Q1=>open, OFX0=>open, 
-                F0=>u_sdram_n6316, Q0=>open);
-    u_spi_SLICE_404I: SLOGICB
-      generic map (LUT0_INITVAL=>X"8888", LUT1_INITVAL=>X"EEEE")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_spi_cmd_2, 
-                B1=>u_spi_stream_arm_N_1307, C1=>'X', D1=>'X', DI1=>'X', 
-                DI0=>'X', A0=>u_spi_cmd_2, B0=>u_spi_cmd_0, C0=>'X', D0=>'X', 
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"8888")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_ref_due_N_811, 
+                B1=>u_sdram_n636, C1=>'X', D1=>'X', DI1=>'X', DI0=>'X', 
+                A0=>ref_cnt_12, B0=>ref_cnt_15, C0=>ref_cnt_1, D0=>ref_cnt_3, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>u_spi_n6149, Q1=>open, OFX0=>open, F0=>u_spi_n5334, 
+                F1=>u_sdram_n6731, Q1=>open, OFX0=>open, F0=>u_sdram_n6316, 
                 Q0=>open);
+    u_spi_SLICE_404I: SLOGICB
+      generic map (LUT0_INITVAL=>X"CC00", LUT1_INITVAL=>X"FFCC")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', 
+                B1=>u_spi_stream_arm_N_1307, C1=>'X', D1=>u_spi_cmd_2, 
+                DI1=>'X', DI0=>'X', A0=>'X', B0=>u_spi_cmd_0, C0=>'X', 
+                D0=>u_spi_cmd_2, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>u_spi_n6149, Q1=>open, OFX0=>open, 
+                F0=>u_spi_n5334, Q0=>open);
     u_sdram_SLICE_405I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"0002")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>u_sdram_n636, B1=>ref_cnt_11, 
-                C1=>ref_cnt_12, D1=>ref_cnt_2, DI1=>'X', DI0=>'X', 
-                A0=>ref_cnt_0, B0=>ref_cnt_10, C0=>ref_cnt_8, D0=>ref_cnt_4, 
+      generic map (LUT0_INITVAL=>X"FFFE", LUT1_INITVAL=>X"0004")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>ref_cnt_12, B1=>u_sdram_n636, 
+                C1=>ref_cnt_11, D1=>ref_cnt_2, DI1=>'X', DI0=>'X', 
+                A0=>ref_cnt_4, B0=>ref_cnt_10, C0=>ref_cnt_8, D0=>ref_cnt_0, 
                 M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>u_sdram_n6187, Q1=>open, OFX0=>open, F0=>u_sdram_n6318, 
                 Q0=>open);
     u_cam_SLICE_406I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FCFC")
+      generic map (LUT0_INITVAL=>X"EEEE")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>pix_x_9, C0=>pix_x_3, 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>pix_x_3, B0=>pix_x_9, C0=>'X', 
                 D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>open, Q1=>open, OFX0=>open, F0=>u_cam_n10, Q0=>open);
     u_cam_SLICE_407I: SLOGICB
@@ -12915,10 +12958,10 @@
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_n3168, Q0=>open);
     u_stream_SLICE_410I: SLOGICB
-      generic map (LUT0_INITVAL=>X"C0C0")
+      generic map (LUT0_INITVAL=>X"A0A0")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_stream_state_0, 
-                C0=>u_stream_state_1, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_stream_state_1, B0=>'X', 
+                C0=>u_stream_state_0, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_stream_n5399, Q0=>open);
     u_stream_u_dc_SLICE_411I: SLOGICB
@@ -12929,19 +12972,19 @@
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_stream_u_dc_n6750, Q0=>open);
     u_sdram_SLICE_412I: SLOGICB
-      generic map (LUT0_INITVAL=>X"F000")
-      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', 
-                C0=>u_sdram_rd_empty, D0=>timer_2, M0=>'X', CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
-                F0=>u_sdram_n3, Q0=>open);
-    u_sdram_SLICE_413I: SLOGICB
       generic map (LUT0_INITVAL=>X"8888")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>n66, 
-                B0=>u_sdram_SD_DQM_1_N_802_1, C0=>'X', D0=>'X', M0=>'X', 
-                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
-                OFX0=>open, F0=>u_sdram_n5787, Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_rd_empty, B0=>timer_2, 
+                C0=>'X', D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n3, 
+                Q0=>open);
+    u_sdram_SLICE_413I: SLOGICB
+      generic map (LUT0_INITVAL=>X"A0A0")
+      port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_SD_DQM_1_N_802_1, 
+                B0=>'X', C0=>n66, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n5787, Q0=>open);
     u_sdram_SLICE_414I: SLOGICB
       generic map (LUT0_INITVAL=>X"8888")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
@@ -12950,111 +12993,113 @@
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5783, Q0=>open);
     u_sdram_SLICE_415I: SLOGICB
-      generic map (LUT0_INITVAL=>X"AA00")
+      generic map (LUT0_INITVAL=>X"A0A0")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_7, B0=>'X', C0=>'X', 
-                D0=>u_sdram_n16, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_7, B0=>'X', 
+                C0=>u_sdram_n16, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n11, 
                 Q0=>open);
     u_sdram_SLICE_416I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FAFA")
+      generic map (LUT0_INITVAL=>X"FFCC")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n636, B0=>'X', 
-                C0=>u_sdram_n635, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_n635, 
+                C0=>'X', D0=>u_sdram_n636, M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n6757, Q0=>open);
     u_sdram_SLICE_417I: SLOGICB
-      generic map (LUT0_INITVAL=>X"A0A0")
+      generic map (LUT0_INITVAL=>X"C0C0")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_8, B0=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_8, 
                 C0=>u_sdram_n16, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n11_adj_1309, Q0=>open);
     u_sdram_SLICE_418I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0505")
+      generic map (LUT0_INITVAL=>X"0303")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n636, B0=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_n636, 
                 C0=>u_sdram_n635, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n3139, Q0=>open);
     u_sdram_SLICE_419I: SLOGICB
       generic map (LUT0_INITVAL=>X"CC00")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_13, C0=>'X', 
-                D0=>u_sdram_n636, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_n636, 
+                C0=>'X', D0=>timer_13, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6111, 
                 Q0=>open);
     u_sdram_SLICE_420I: SLOGICB
-      generic map (LUT0_INITVAL=>X"8888")
+      generic map (LUT0_INITVAL=>X"A0A0")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n16, B0=>timer_14, 
-                C0=>'X', D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_14, B0=>'X', 
+                C0=>u_sdram_n16, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n11_adj_1312, Q0=>open);
     u_sdram_SLICE_421I: SLOGICB
-      generic map (LUT0_INITVAL=>X"AA00")
+      generic map (LUT0_INITVAL=>X"CC00")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n16, B0=>'X', C0=>'X', 
-                D0=>timer_15, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n11_adj_1313, 
-                Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_15, C0=>'X', 
+                D0=>u_sdram_n16, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n11_adj_1313, Q0=>open);
     u_sdram_SLICE_422I: SLOGICB
-      generic map (LUT0_INITVAL=>X"CCEC")
+      generic map (LUT0_INITVAL=>X"AEAA")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_1, B0=>u_sdram_n1058, 
-                C0=>u_sdram_n6758, D0=>u_sdram_n636, M0=>'X', CE=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n1058, B0=>timer_1, 
+                C0=>u_sdram_n636, D0=>u_sdram_n6758, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n8, Q0=>open);
     u_sdram_SLICE_423I: SLOGICB
       generic map (LUT0_INITVAL=>X"0001")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_1, B0=>u_sdram_n6274, 
-                C0=>timer_2, D0=>timer_4, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
-                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n5877, 
-                Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_2, B0=>timer_1, 
+                C0=>timer_4, D0=>u_sdram_n6274, M0=>'X', CE=>'X', CLK=>'X', 
+                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                F0=>u_sdram_n5877, Q0=>open);
     u_sdram_SLICE_424I: SLOGICB
       generic map (M0MUX=>"SIG", CLKMUX=>"SIG", CEMUX=>"VHI", LSRMUX=>"SIG", 
                    GSR=>"DISABLED", LUT0_INITVAL=>X"FFFE", CHECK_M0=>TRUE, 
                    CHECK_LSR=>TRUE)
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_7, B0=>u_sdram_n6749, 
-                C0=>u_sdram_n634, D0=>u_sdram_n6744, M0=>u_sdram_n635, CE=>'X', 
-                CLK=>SD_CLK_c, LSR=>u_sdram_SD_DQM_1_N_802_1, OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6039, 
-                Q0=>u_sdram_n634);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n634, 
+                B0=>u_sdram_n6744, C0=>u_sdram_n6749, D0=>timer_7, 
+                M0=>u_sdram_n635, CE=>'X', CLK=>SD_CLK_c, 
+                LSR=>u_sdram_SD_DQM_1_N_802_1, OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>open, F0=>u_sdram_n6039, Q0=>u_sdram_n634);
     u_sdram_SLICE_425I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFCC")
+      generic map (LUT0_INITVAL=>X"FCFC")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_10, C0=>'X', 
-                D0=>timer_1, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6029, Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_10, 
+                C0=>timer_1, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6029, 
+                Q0=>open);
     u_sdram_SLICE_426I: SLOGICB
       generic map (LUT0_INITVAL=>X"FE00")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n6758, 
-                B0=>u_sdram_n1058, C0=>u_sdram_n635, D0=>n54, M0=>'X', CE=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_n1058, 
+                B0=>u_sdram_n635, C0=>u_sdram_n6758, D0=>n54, M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5801, Q0=>open);
     u_sdram_SLICE_427I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0033")
+      generic map (LUT0_INITVAL=>X"000F")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_n1058, 
-                C0=>'X', D0=>u_sdram_n636, M0=>'X', CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', 
+                C0=>u_sdram_n636, D0=>u_sdram_n1058, M0=>'X', CE=>'X', 
+                CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n87, Q0=>open);
     u_sdram_SLICE_428I: SLOGICB
       generic map (LUT0_INITVAL=>X"CC00")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_row_2, 
-                C0=>'X', D0=>u_sdram_row_9, M0=>'X', CE=>'X', CLK=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_sdram_row_9, 
+                C0=>'X', D0=>u_sdram_row_2, M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5677, Q0=>open);
     u_sdram_SLICE_429I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFCC")
+      generic map (LUT0_INITVAL=>X"EEEE")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_7, C0=>'X', 
-                D0=>timer_12, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6738, Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_12, B0=>timer_7, 
+                C0=>'X', D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6738, 
+                Q0=>open);
     u_sdram_SLICE_430I: SLOGICB
       generic map (LUT0_INITVAL=>X"3300")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
@@ -13063,52 +13108,53 @@
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6739, 
                 Q0=>open);
     u_sdram_SLICE_431I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FFF0")
+      generic map (LUT0_INITVAL=>X"FCFC")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', C0=>timer_10, 
-                D0=>timer_4, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
-                F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6740, Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_10, 
+                C0=>timer_4, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6740, 
+                Q0=>open);
     u_sdram_SLICE_432I: SLOGICB
       generic map (LUT0_INITVAL=>X"FFFE")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_7, B0=>timer_4, 
-                C0=>timer_12, D0=>timer_10, M0=>'X', CE=>'X', CLK=>'X', 
-                LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
-                F0=>u_sdram_n6733, Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_10, B0=>timer_12, 
+                C0=>timer_4, D0=>timer_7, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6733, 
+                Q0=>open);
     u_sdram_SLICE_433I: SLOGICB
       generic map (LUT0_INITVAL=>X"FAFA")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_13, B0=>'X', 
-                C0=>timer_0, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_0, B0=>'X', 
+                C0=>timer_13, D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', 
                 OFX1=>open, F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6742, 
                 Q0=>open);
     u_sdram_SLICE_434I: SLOGICB
       generic map (LUT0_INITVAL=>X"0010")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_7, B0=>timer_0, 
-                C0=>u_sdram_col_5, D0=>timer_13, M0=>'X', CE=>'X', CLK=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_7, B0=>timer_13, 
+                C0=>u_sdram_col_5, D0=>timer_0, M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_sdram_n5955, Q0=>open);
     u_sdram_SLICE_435I: SLOGICB
-      generic map (LUT0_INITVAL=>X"FCFC")
+      generic map (LUT0_INITVAL=>X"FFAA")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>timer_1, C0=>timer_0, 
-                D0=>'X', M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>timer_0, B0=>'X', C0=>'X', 
+                D0=>timer_1, M0=>'X', CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, 
                 F1=>open, Q1=>open, OFX0=>open, F0=>u_sdram_n6746, Q0=>open);
     u_sdram_u_fifo_SLICE_436I: SLOGICB
-      generic map (LUT0_INITVAL=>X"00F0")
+      generic map (LUT0_INITVAL=>X"4444")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>'X', 
-                C0=>u_sdram_dq_oe, D0=>u_sdram_rd_empty, M0=>'X', CE=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_sdram_rd_empty, 
+                B0=>u_sdram_dq_oe, C0=>'X', D0=>'X', M0=>'X', CE=>'X', 
                 CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>SD_CLK_c_enable_63, Q0=>open);
     u_spi_SLICE_437I: SLOGICB
-      generic map (LUT0_INITVAL=>X"4444")
+      generic map (LUT0_INITVAL=>X"00CC")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_spi_cmd_1, 
-                B0=>stream_fifo_rd_data_3, C0=>'X', D0=>'X', M0=>'X', CE=>'X', 
-                CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
-                F0=>u_spi_n5571, Q0=>open);
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', 
+                B0=>stream_fifo_rd_data_3, C0=>'X', D0=>u_spi_cmd_1, M0=>'X', 
+                CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
+                OFX0=>open, F0=>u_spi_n5571, Q0=>open);
     u_spi_SLICE_438I: SLOGICB
       generic map (LUT0_INITVAL=>X"00CC")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
@@ -13117,10 +13163,10 @@
                 CE=>'X', CLK=>'X', LSR=>'X', OFX1=>open, F1=>open, Q1=>open, 
                 OFX0=>open, F0=>u_spi_n5547, Q0=>open);
     u_spi_SLICE_439I: SLOGICB
-      generic map (LUT0_INITVAL=>X"0003")
+      generic map (LUT0_INITVAL=>X"0011")
       port map (M1=>'X', FXA=>'X', FXB=>'X', A1=>'X', B1=>'X', C1=>'X', 
-                D1=>'X', DI1=>'X', DI0=>'X', A0=>'X', B0=>u_spi_shift_in_3, 
-                C0=>u_spi_shift_in_5, D0=>DIN_c, M0=>'X', CE=>'X', CLK=>'X', 
+                D1=>'X', DI1=>'X', DI0=>'X', A0=>u_spi_shift_in_5, B0=>DIN_c, 
+                C0=>'X', D0=>u_spi_shift_in_3, M0=>'X', CE=>'X', CLK=>'X', 
                 LSR=>'X', OFX1=>open, F1=>open, Q1=>open, OFX0=>open, 
                 F0=>u_spi_CCLK_c_enable_5, Q0=>open);
     SLICE_440I: SLOGICB

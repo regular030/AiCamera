@@ -33,12 +33,6 @@
             <Dynamic>0</Dynamic>
         </Message>
     </Task>
-    <Task name="IBIS">
-        <Message>
-            <ID>1191031</ID>
-            <Severity>Info</Severity>
-        </Message>
-    </Task>
     <Task name="MapVHDLSimFile">
         <Message>
             <ID>35400250</ID>
@@ -46,98 +40,115 @@
             <Dynamic>0</Dynamic>
         </Message>
     </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
     <Task name="Map">
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(28): Semantic error in &quot;IOBUF PORT &quot;FSCL&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>FSCL</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(23): Syntax error in &quot;LOCATE COMP &quot;cam_scl&quot; SITE &quot;A10&quot; ; IO_TYPE PORT &quot;cam_scl&quot; IO_TYPE=LVCMOS18 DRIVE=4 SLEWRATE=SLOW ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>28</Navigation>
+            <Navigation>23</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(29): Semantic error in &quot;IOBUF PORT &quot;FSDA&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>FSDA</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(24): Syntax error in &quot;LOCATE COMP &quot;cam_sda&quot; SITE &quot;B9&quot; ; IO_TYPE PORT &quot;cam_sda&quot; IO_TYPE=LVCMOS18 OPENDRAIN=ON ; &quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>29</Navigation>
+            <Navigation>24</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(93): Semantic error in &quot;IOBUF PORT &quot;ESP_D[0]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[0]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(80): Syntax error in &quot;LOCATE COMP &quot;ESP_D[0]&quot; SITE &quot;E2&quot; ;IO_TYPE PORT &quot;ESP_D[0]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>93</Navigation>
+            <Navigation>80</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(94): Semantic error in &quot;IOBUF PORT &quot;ESP_D[1]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[1]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(81): Syntax error in &quot;LOCATE COMP &quot;ESP_D[1]&quot; SITE &quot;E1&quot; ;IO_TYPE PORT &quot;ESP_D[1]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>94</Navigation>
+            <Navigation>81</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(95): Semantic error in &quot;IOBUF PORT &quot;ESP_D[2]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[2]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(82): Syntax error in &quot;LOCATE COMP &quot;ESP_D[2]&quot; SITE &quot;F2&quot; ;IO_TYPE PORT &quot;ESP_D[2]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>95</Navigation>
+            <Navigation>82</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(96): Semantic error in &quot;IOBUF PORT &quot;ESP_D[3]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[3]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(83): Syntax error in &quot;LOCATE COMP &quot;ESP_D[3]&quot; SITE &quot;F3&quot; ;IO_TYPE PORT &quot;ESP_D[3]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>96</Navigation>
+            <Navigation>83</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(97): Semantic error in &quot;IOBUF PORT &quot;ESP_D[4]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[4]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(84): Syntax error in &quot;LOCATE COMP &quot;ESP_D[4]&quot; SITE &quot;G2&quot; ;IO_TYPE PORT &quot;ESP_D[4]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>97</Navigation>
+            <Navigation>84</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(98): Semantic error in &quot;IOBUF PORT &quot;ESP_D[5]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[5]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(85): Syntax error in &quot;LOCATE COMP &quot;ESP_D[5]&quot; SITE &quot;G1&quot; ;IO_TYPE PORT &quot;ESP_D[5]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>98</Navigation>
+            <Navigation>85</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(99): Semantic error in &quot;IOBUF PORT &quot;ESP_D[6]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[6]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(86): Syntax error in &quot;LOCATE COMP &quot;ESP_D[6]&quot; SITE &quot;J1&quot; ;IO_TYPE PORT &quot;ESP_D[6]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>99</Navigation>
+            <Navigation>86</Navigation>
         </Message>
         <Message>
-            <ID>1100644</ID>
+            <ID>1101060</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(100): Semantic error in &quot;IOBUF PORT &quot;ESP_D[7]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>ESP_D[7]</Dynamic>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(87): Syntax error in &quot;LOCATE COMP &quot;ESP_D[7]&quot; SITE &quot;J2&quot; ;IO_TYPE PORT &quot;ESP_D[7]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>IO_TYPE</Dynamic>
             <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>100</Navigation>
+            <Navigation>87</Navigation>
+        </Message>
+        <Message>
+            <ID>1104062</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>10 syntax errors</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001209</ID>
+            <Severity>Error</Severity>
+            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Dynamic>
         </Message>
         <Message>
             <ID>1166064</ID>
             <Severity>Warning</Severity>
             <Dynamic>input</Dynamic>
-            <Dynamic>FSDA</Dynamic>
+            <Dynamic>cam_scl</Dynamic>
         </Message>
         <Message>
             <ID>1166064</ID>
             <Severity>Warning</Severity>
             <Dynamic>input</Dynamic>
-            <Dynamic>FSCL</Dynamic>
+            <Dynamic>cam_sda</Dynamic>
         </Message>
         <Message>
             <ID>1166064</ID>
@@ -206,69 +217,8 @@
             <Dynamic>DONE</Dynamic>
         </Message>
         <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>FSDA</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>FSCL</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](7)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](6)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](5)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](4)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](3)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](2)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](1)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7:0](0)</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>PROGRAMN</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>INITN</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DONE</Dynamic>
+            <ID>51001088</ID>
+            <Severity>Info</Severity>
         </Message>
     </Task>
     <Task name="Lattice_Synthesis">
@@ -419,12 +369,7 @@
         <Message>
             <ID>35002005</ID>
             <Severity>Warning</Severity>
-            <Dynamic>FSDA</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>FSCL</Dynamic>
+            <Dynamic>cam_scl</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -516,12 +461,12 @@
         <Message>
             <ID>35002005</ID>
             <Severity>Warning</Severity>
-            <Dynamic>FSDA</Dynamic>
+            <Dynamic>cam_scl</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
             <Severity>Warning</Severity>
-            <Dynamic>FSCL</Dynamic>
+            <Dynamic>cam_sda</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -623,27 +568,27 @@
             <ID>1166052</ID>
             <Severity>Warning</Severity>
             <Dynamic>logical</Dynamic>
-            <Dynamic>FSDA</Dynamic>
-            <Navigation>FSDA</Navigation>
+            <Dynamic>cam_scl</Dynamic>
+            <Navigation>cam_scl</Navigation>
         </Message>
         <Message>
             <ID>1166064</ID>
             <Severity>Warning</Severity>
             <Dynamic>input</Dynamic>
-            <Dynamic>FSDA</Dynamic>
+            <Dynamic>cam_scl</Dynamic>
         </Message>
         <Message>
             <ID>1166052</ID>
             <Severity>Warning</Severity>
             <Dynamic>logical</Dynamic>
-            <Dynamic>FSCL</Dynamic>
-            <Navigation>FSCL</Navigation>
+            <Dynamic>cam_sda</Dynamic>
+            <Navigation>cam_sda</Navigation>
         </Message>
         <Message>
             <ID>1166064</ID>
             <Severity>Warning</Severity>
             <Dynamic>input</Dynamic>
-            <Dynamic>FSCL</Dynamic>
+            <Dynamic>cam_sda</Dynamic>
         </Message>
         <Message>
             <ID>1166052</ID>
@@ -792,26 +737,6 @@
             <ID>1163101</ID>
             <Severity>Warning</Severity>
             <Dynamic>26</Dynamic>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>61121012</ID>
-            <Severity>Error</Severity>
-            <Dynamic>PCLK</Dynamic>
-            <Dynamic>B13</Dynamic>
-            <Dynamic>PCLK_c</Dynamic>
-        </Message>
-        <Message>
-            <ID>60001137</ID>
-            <Severity>Info</Severity>
-            <Dynamic>Iteration 5_1</Dynamic>
-        </Message>
-        <Message>
-            <ID>60001141</ID>
-            <Severity>Error</Severity>
-            <Dynamic>1</Dynamic>
-            <Dynamic>C:\Users\kunsh\Desktop\AiCamera\Lattice Diamond\impl1\AICAM_impl1.dir</Dynamic>
         </Message>
     </Task>
     <Task name="TimingSimFileVHD">

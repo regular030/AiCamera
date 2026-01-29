@@ -9,7 +9,7 @@
 <PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Jan 28 06:55:09 2026
+Wed Jan 28 20:15:21 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -64,8 +64,8 @@ LUT4        ---     0.166              A to Z              \u_spi/i1_2_lut
 Route         6   e 1.378                                  \u_spi/n4
 LUT4        ---     0.166              B to Z              \u_spi/i1_4_lut_adj_30
 Route        43   e 1.772                                  rd_data_7__N_1177
-LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i11_3_lut
-Route         2   e 1.158                                  \u_stream/u_dc/n1735
+LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i8_3_lut
+Route         2   e 1.158                                  \u_stream/u_dc/n1738
                   --------
                     8.639  (18.7% logic, 81.3% route), 8 logic levels.
 
@@ -140,8 +140,8 @@ LUT4        ---     0.166              A to Z              \u_spi/i1_2_lut
 Route         6   e 1.378                                  \u_spi/n4
 LUT4        ---     0.166              B to Z              \u_spi/i1_4_lut_adj_30
 Route        43   e 1.772                                  rd_data_7__N_1177
-LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i8_3_lut
-Route         2   e 1.158                                  \u_stream/u_dc/n1738
+LUT4        ---     0.166              C to Z              \u_stream/u_dc/mux_607_i6_3_lut
+Route         2   e 1.158                                  \u_stream/u_dc/n1740
                   --------
                     8.639  (18.7% logic, 81.3% route), 8 logic levels.
 
@@ -187,9 +187,9 @@ LUT4        ---     0.166              C to Z              \u_stream/u_dc/i1_2_l
 Route         1   e 1.020                                  \u_stream/u_dc/n6730
 LUT4        ---     0.166              B to Z              \u_stream/u_dc/i1_4_lut
 Route         4   e 1.297                                  \u_stream/n34
-LUT4        ---     0.166              B to Z              \u_stream/n6606_bdd_4_lut_then_3_lut
-Route         1   e 0.020                                  \u_stream/n6760
-MUXL5       ---     0.116           ALUT to Z              \u_stream/i4622
+LUT4        ---     0.166              B to Z              \u_stream/n6606_bdd_4_lut_else_3_lut
+Route         1   e 0.020                                  \u_stream/n6759
+MUXL5       ---     0.116           BLUT to Z              \u_stream/i4622
 Route         1   e 1.020                                  \u_stream/PCLK_c_enable_4
                   --------
                     7.804  (22.2% logic, 77.8% route), 9 logic levels.
@@ -227,9 +227,9 @@ LUT4        ---     0.166              C to Z              \u_stream/u_dc/i1_2_l
 Route         1   e 1.020                                  \u_stream/u_dc/n6730
 LUT4        ---     0.166              B to Z              \u_stream/u_dc/i1_4_lut
 Route         4   e 1.297                                  \u_stream/n34
-LUT4        ---     0.166              B to Z              \u_stream/n6606_bdd_4_lut_else_3_lut
-Route         1   e 0.020                                  \u_stream/n6759
-MUXL5       ---     0.116           BLUT to Z              \u_stream/i4622
+LUT4        ---     0.166              B to Z              \u_stream/n6606_bdd_4_lut_then_3_lut
+Route         1   e 0.020                                  \u_stream/n6760
+MUXL5       ---     0.116           ALUT to Z              \u_stream/i4622
 Route         1   e 1.020                                  \u_stream/PCLK_c_enable_4
                   --------
                     7.804  (22.2% logic, 77.8% route), 9 logic levels.
@@ -444,7 +444,7 @@ Timing errors: 2783  Score: 6009546
 Constraints cover  12231 paths, 1005 nets, and 2556 connections (86.9% coverage)
 
 
-Peak memory: 99684352 bytes, TRCE: 1069056 bytes, DLYMAN: 0 bytes
+Peak memory: 99639296 bytes, TRCE: 1011712 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
 
 

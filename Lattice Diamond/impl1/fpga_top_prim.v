@@ -1,19 +1,19 @@
 // Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.14.0.75.2
-// Netlist written on Wed Jan 28 06:55:09 2026
+// Netlist written on Wed Jan 28 20:15:21 2026
 //
 // Verilog Description of module fpga_top
 //
 
-module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, FSDA, FSCL, Y9, Y8, 
-            Y7, Y6, Y5, Y4, Y3, Y2, MCLK, CCLK, SSPI_CS_n, 
+module fpga_top (CRYSTAL, PCLK, VSYNC, HREF, cam_scl, cam_sda, Y9, 
+            Y8, Y7, Y6, Y5, Y4, Y3, Y2, MCLK, CCLK, SSPI_CS_n, 
             DIN, DOUT, ESP_D, PROGRAMN, INITN, DONE, SD_CLK, SD_CS_N, 
             SD_WE_N, SD_RAS_N, SD_CAS_N, SD_A, SD_BA, SD_DQ, SD_DQM) /* synthesis syn_module_defined=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(5[8:16])
     input CRYSTAL /* synthesis black_box_pad_pin=1 */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(7[25:32])
     input PCLK;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(10[25:29])
     input VSYNC;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(11[25:30])
     input HREF;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(12[25:29])
-    input FSDA;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[17:21])
-    input FSCL;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(14[17:21])
+    input cam_scl;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13[17:24])
+    input cam_sda /* synthesis .original_dir=IN_OUT */ ;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(14[17:24])
     input Y9;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[25:27])
     input Y8;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[29:31])
     input Y7;   // c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(15[33:35])

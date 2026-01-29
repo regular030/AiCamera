@@ -1,8 +1,8 @@
 <top name = "fpga_top"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "PCLK"  type = "port" />
     <clockitem name = "CCLK"  type = "port" />
+    <clockitem name = "PCLK"  type = "port" />
     <clockitem name = "clk_96m"  type = "port" />
     <clockitem name = "u_pll/buf_CLKI"  type = "net" />
 </clocks>
@@ -30,8 +30,8 @@
         <pitem  name = "PCLK"  direction = "in"  />
         <pitem  name = "VSYNC"  direction = "in"  />
         <pitem  name = "HREF"  direction = "in"  />
-        <pitem  name = "FSDA"  direction = "in"  />
-        <pitem  name = "FSCL"  direction = "in"  />
+        <pitem  name = "cam_scl"  direction = "in"  />
+        <pitem  name = "cam_sda"  direction = "inout"  />
         <pitem  name = "Y9"  direction = "in"  />
         <pitem  name = "Y8"  direction = "in"  />
         <pitem  name = "Y7"  direction = "in"  />

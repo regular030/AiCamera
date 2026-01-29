@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 28 06:55:07 2026
+Wed Jan 28 20:15:19 2026
 
 
 Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
@@ -117,8 +117,8 @@ Loading device for application map from file 'sa5p25.nph' in environment: C:/lsc
 Package Status:                     Final          Version 1.44.
 Top-level module name = fpga_top.
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(184): Register roi_valid_spi_42 is stuck at One. VDB-5014
-WARNING - synthesis: I/O Port FSDA 's net has no driver and is unused.
-WARNING - synthesis: I/O Port FSCL 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cam_scl 's net has no driver and is unused.
+######## Converting I/O port cam_sda to input.
 WARNING - synthesis: I/O Port ESP_D[7] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[6] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[5] 's net has no driver and is unused.
@@ -219,8 +219,8 @@ original encoding -> new encoding (one-hot encoding)
 
 ######## Mapping RTL RAM \u_sdram/u_fifo/mem to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
 
-WARNING - synthesis: I/O Port FSDA 's net has no driver and is unused.
-WARNING - synthesis: I/O Port FSCL 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cam_scl 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cam_sda 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[7] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[6] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ESP_D[5] 's net has no driver and is unused.
@@ -269,10 +269,10 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'FSDA' has no load.
-WARNING - synthesis: input pad net 'FSDA' has no legal load.
-WARNING - synthesis: logical net 'FSCL' has no load.
-WARNING - synthesis: input pad net 'FSCL' has no legal load.
+WARNING - synthesis: logical net 'cam_scl' has no load.
+WARNING - synthesis: input pad net 'cam_scl' has no legal load.
+WARNING - synthesis: logical net 'cam_sda' has no load.
+WARNING - synthesis: input pad net 'cam_sda' has no legal load.
 WARNING - synthesis: logical net 'ESP_D[7]' has no load.
 WARNING - synthesis: input pad net 'ESP_D[7]' has no legal load.
 WARNING - synthesis: logical net 'ESP_D[6]' has no load.
@@ -375,8 +375,8 @@ clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   90.041 MHz|     8 *
 3 constraints not met.
 
 
-Peak Memory Usage: 95.203  MB
+Peak Memory Usage: 95.070  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.563  secs
+Elapsed CPU time for LSE flow : 1.359  secs
 --------------------------------------------------------------

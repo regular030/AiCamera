@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "AICAM_impl1_map.ncd"
-Wed Jan 28 07:05:15 2026
+Wed Jan 28 20:07:45 2026
 
 PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 AICAM_impl1_map.ncd AICAM_impl1.dir/5_1.ncd AICAM_impl1.prf
@@ -40,24 +40,219 @@ Number of Connections: 2586
 Pin Constraint Summary:
    55 out of 55 pins locked (100% locked).
 
-ERROR - par: USER LOCATE of clock driver 'PCLK' at an illegal pin 'B13'. Unable to reach a CIB entry point for general route clock PCLK_c in the minimum required distance of 1 PLC.
-Please check if the pin is a legal clock pin (e.g. dedicated clock pin, GR pin) by
-1) Opening 'Tools->Spreadsheet View' on the top
-2) Choosing 'Pin Assgnments' tab in the middle
-3) Checking 'Dual Function' column (PCLK*, GR*, etc.) for the pin
+The following 11 signals are selected to use the primary clock routing resources:
+    SD_CLK_c (driver: u_pll/PLLInst_0, clk/ce/sr load #: 98/0/0)
+    PCLK_c (driver: PCLK, clk/ce/sr load #: 120/0/0)
+    CCLK_c (driver: CCLK, clk/ce/sr load #: 69/0/0)
+    SD_CLK_c_enable_63 (driver: u_sdram/u_fifo/SLICE_436, clk/ce/sr load #: 0/19/0)
+    rd_data_7__N_1177 (driver: u_spi/SLICE_375, clk/ce/sr load #: 0/17/0)
+    VSYNC_c (driver: VSYNC, clk/ce/sr load #: 0/0/14)
+    u_stream/u_dc/wptr_bin_11__N_1150 (driver: u_stream/u_dc/SLICE_288, clk/ce/sr load #: 0/13/0)
+    u_sdram/SD_CLK_c_enable_24 (driver: u_sdram/SLICE_343, clk/ce/sr load #: 0/7/5)
+    wptr_bin_9__N_886 (driver: SLICE_196, clk/ce/sr load #: 0/11/0)
+    u_spi/CCLK_c_enable_20 (driver: u_spi/SLICE_236, clk/ce/sr load #: 0/4/7)
+    u_sdram/ref_cnt_15__N_577 (driver: u_sdram/SLICE_179, clk/ce/sr load #: 0/0/10)
+
+
+Signal SSPI_CS_n_c is selected as Global Set/Reset.
+Starting Placer Phase 0.
+............
+Finished Placer Phase 0.  REAL time: 2 secs 
+
+Starting Placer Phase 1.
+.....................
+Placer score = 218291.
+Finished Placer Phase 1.  REAL time: 11 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  215842
+Finished Placer Phase 2.  REAL time: 11 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 12 (8%)
+  GR_PCLK    : 2 out of 12 (16%)
+  PLL        : 1 out of 2 (50%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 1
+  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 1
+
+  PRIMARY  : 2 out of 16 (12%)
+
+Quadrant TR Clocks:
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 5
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 32
+  PRIMARY "SD_CLK_c_enable_63" from F0 on comp "u_sdram/u_fifo/SLICE_436" on site "R33C49A", CLK/CE/SR load = 4
+  PRIMARY "VSYNC_c" from comp "VSYNC" on PIO site "B10 (PT44A)", CLK/CE/SR load = 14
+
+  PRIMARY  : 4 out of 16 (25%)
+
+Quadrant BL Clocks:
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 1
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 27
+  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 45
+  PRIMARY "rd_data_7__N_1177" from F1 on comp "u_spi/SLICE_375" on site "R35C29D", CLK/CE/SR load = 11
+  PRIMARY "u_stream/u_dc/wptr_bin_11__N_1150" from F1 on comp "u_stream/u_dc/SLICE_288" on site "R27C33A", CLK/CE/SR load = 11
+  PRIMARY "u_spi/CCLK_c_enable_20" from F1 on comp "u_spi/SLICE_236" on site "R36C29A", CLK/CE/SR load = 7
+
+  PRIMARY  : 6 out of 16 (37%)
+
+Quadrant BR Clocks:
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 92
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 60
+  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 23
+  PRIMARY "SD_CLK_c_enable_63" from F0 on comp "u_sdram/u_fifo/SLICE_436" on site "R33C49A", CLK/CE/SR load = 15
+  PRIMARY "rd_data_7__N_1177" from F1 on comp "u_spi/SLICE_375" on site "R35C29D", CLK/CE/SR load = 6
+  PRIMARY "u_stream/u_dc/wptr_bin_11__N_1150" from F1 on comp "u_stream/u_dc/SLICE_288" on site "R27C33A", CLK/CE/SR load = 2
+  PRIMARY "u_sdram/SD_CLK_c_enable_24" from F1 on comp "u_sdram/SLICE_343" on site "R43C42A", CLK/CE/SR load = 12
+  PRIMARY "wptr_bin_9__N_886" from F1 on comp "SLICE_196" on site "R33C52A", CLK/CE/SR load = 11
+  PRIMARY "u_spi/CCLK_c_enable_20" from F1 on comp "u_spi/SLICE_236" on site "R36C29A", CLK/CE/SR load = 4
+  PRIMARY "u_sdram/ref_cnt_15__N_577" from Q0 on comp "u_sdram/SLICE_179" on site "R43C49A", CLK/CE/SR load = 10
+
+  PRIMARY  : 10 out of 16 (62%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   55 out of 197 (27.9%) PIO sites used.
+   55 out of 197 (27.9%) bonded PIO sites used.
+   Number of PIO comps: 55; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 8 / 24 ( 33%)  | 3.3V       | -          | -          |
+| 1        | 12 / 32 ( 37%) | 1.8V       | -          | -          |
+| 2        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
+| 3        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
+| 6        | 5 / 32 ( 15%)  | 3.3V       | -          | -          |
+| 7        | 0 / 32 (  0%)  | -          | -          | -          |
+| 8        | 4 / 13 ( 30%)  | 2.5V       | -          | -          |
++----------+----------------+------------+------------+------------+
+
+Total placer CPU time: 10 secs 
+
+Dumping design to file AICAM_impl1.dir/5_1.ncd.
+
+0 connections routed; 2586 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 16 secs 
+
+Start NBR router at 20:08:01 01/28/26
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 20:08:01 01/28/26
+
+Start NBR section for initial routing at 20:08:01 01/28/26
+Level 1, iteration 1
+0(0.00%) conflict; 1847(71.42%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.649ns/0.000ns; real time: 16 secs 
+Level 2, iteration 1
+1(0.00%) conflict; 1836(71.00%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.680ns/0.000ns; real time: 16 secs 
+Level 3, iteration 1
+7(0.00%) conflicts; 1615(62.45%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.106ns/0.000ns; real time: 16 secs 
+Level 4, iteration 1
+44(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.078ns/0.000ns; real time: 16 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 20:08:01 01/28/26
+Level 1, iteration 1
+3(0.00%) conflicts; 44(1.70%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.078ns/0.000ns; real time: 16 secs 
+Level 4, iteration 1
+17(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.078ns/0.000ns; real time: 16 secs 
+Level 4, iteration 2
+11(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.068ns/0.000ns; real time: 16 secs 
+Level 4, iteration 3
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.951ns/0.000ns; real time: 16 secs 
+Level 4, iteration 4
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.951ns/0.000ns; real time: 16 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 20:08:01 01/28/26
+
+Start NBR section for re-routing at 20:08:02 01/28/26
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.894ns/0.000ns; real time: 17 secs 
+
+Start NBR section for post-routing at 20:08:02 01/28/26
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 1.894ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-PAR_SUMMARY::Run status = Failed
-PAR_SUMMARY::Number of unrouted conns = <n/a>
-PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
-PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
-PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
-PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
-PAR_SUMMARY::Number of errors = 1
+Total CPU time 16 secs 
+Total REAL time: 17 secs 
+Completely routed.
+End of route.  2586 routed (100.00%); 0 unrouted.
 
-Total CPU  time to completion: 1 secs 
-Total REAL time to completion: 0 secs 
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file AICAM_impl1.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 1.894
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.174
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 16 secs 
+Total REAL time to completion: 17 secs 
 
 par done!
 

@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 28 07:05:15 2026
+Wed Jan 28 20:07:45 2026
 
 C:/lscc/diamond/3.14/ispfpga\bin\nt64\par -f AICAM_impl1.p2t
 AICAM_impl1_map.ncd AICAM_impl1.dir AICAM_impl1.prf -gui -msgset
@@ -16,14 +16,12 @@ Preference file: AICAM_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1          -            -            -            -            -            00           Failed
+5_1   *      0            1.894        0            0.174        0            17           Completed
 
 * : Design saved.
 
-INFO - par: Iteration 5_1 failed due to design error(s).
+Total (real) run time for 1-seed: 17 secs 
 
-ERROR - par: All 1 iterations failed with design error(s). It is recommended to correct all design errors before running multiple iterations. Please check the Place and Route reports (.par) for the individual iterations under the directory "C:\Users\kunsh\Desktop\AiCamera\Lattice Diamond\impl1\AICAM_impl1.dir".
+par done!
 
-Total (real) run time for 1-seed: 0 secs 
-
-par failed!
+Note: user must run 'Trace' for timing closure signoff.

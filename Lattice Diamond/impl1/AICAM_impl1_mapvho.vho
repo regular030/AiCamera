@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.14.0.75.2
 
 -- ldbanno -n VHDL -o AICAM_impl1_mapvho.vho -w -neg -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd 
--- Netlist created on Wed Jan 28 06:55:10 2026
--- Netlist written on Wed Jan 28 06:55:14 2026
+-- Netlist created on Wed Jan 28 20:07:36 2026
+-- Netlist written on Wed Jan 28 20:07:44 2026
 -- Design is for device LFE5U-25F
 -- Design is for package CABGA256
 -- Design is for performance grade 6
@@ -7609,7 +7609,7 @@
 
   entity fpga_top is
     port (CRYSTAL: in Std_logic; PCLK: in Std_logic; VSYNC: in Std_logic; 
-          HREF: in Std_logic; FSDA: in Std_logic; FSCL: in Std_logic; 
+          HREF: in Std_logic; cam_scl: in Std_logic; cam_sda: in Std_logic; 
           Y9: in Std_logic; Y8: in Std_logic; Y7: in Std_logic; 
           Y6: in Std_logic; Y5: in Std_logic; Y4: in Std_logic; 
           Y3: in Std_logic; Y2: in Std_logic; MCLK: out Std_logic; 
