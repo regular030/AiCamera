@@ -1,0 +1,19 @@
+--------------------- Wed Feb  4 06:31:07 2026 ---------------------
+
+Creating SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.log
+Ansys(R) SIwave 2025 R2 (Build 2025-05-16 12:03:40)
+OS: Windows Server 2025 Standard  (Build 26100)
+
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.siw
+
+
+--------------------- Wed Feb  4 06:35:40 2026 ---------------------
+
+Appending to SIwave session log main.log
+Reading DC solution data...
+Reading voltage probe data...done.
+Reading element data...done.
+Read DC coefficient file C:\Program Files\AnsysEM\v242\Win64\dc_coeff.txt
+Read DC coefficient file C:\Program Files\AnsysEM\v242\Win64\dc_coeff.txt
+Read DC coefficient file C:\Program Files\AnsysEM\v242\Win64\dc_coeff.txt
+Building near field surface plot(s)...

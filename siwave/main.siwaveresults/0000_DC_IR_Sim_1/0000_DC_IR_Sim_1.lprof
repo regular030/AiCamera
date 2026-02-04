@@ -1,0 +1,40 @@
+   Module        Real Time   CPU Time     Memory          Size
+_______________________________________________________________________
+            siwave_ng 2024 R2 (Built: May 23 2024 03:46:15)
+    Commenced on host ME5159-UGRAD-05 at Wed Feb  4 06:46:11 2026
+
+------------------------------------------------------------------------
+|               |   Real   |   Cpu    |  Memory  |                     |
+|    Command    |   Time   |   Time   |          |                     |
+| solve_setup   | 00:00:09 | 00:00:12 |  218500K |        1 project    |
+------------------------------------------------------------------------
+         Finished on ME5159-UGRAD-05 at 02/04/2026 06:46:20
+
+
+     SIwave DC IR solver 2024 R2 May 23 2024 at 03:42:08 beginning
+        C:\Program Files\AnsysEM\v242\Win64\sidirect_solver.exe
+               on ME5159-UGRAD-05 at 02/04/2026 06:46:21
+------------------------------------------------------------------------
+|               |   Real   |   Cpu    |  Memory  |                     |
+|    Command    |   Time   |   Time   |          | Number of Elements  |
+| InitMesh      | 00:00:12 | 00:00:23 |     345M |    85792 triangles  |
+| PreProc       | 00:00:00 | 00:00:00 |     345M |    85792 triangles  |
+| AdaptMesh_1   | 00:00:03 | 00:00:02 |     345M |    96057 triangles  |
+| Solve(4p)_1   | 00:00:00 | 00:00:00 |     345M |    80547 unknowns   |
+| ErrorCalc_1   | 00:00:01 | 00:00:00 |     345M |    96057 triangles  |
+| AdaptMesh_2   | 00:00:03 | 00:00:03 |     345M |   121037 triangles  |
+| Solve(4p)_2   | 00:00:00 | 00:00:00 |     345M |    93531 unknowns   |
+| ErrorCalc_2   | 00:00:01 | 00:00:00 |     345M |   121037 triangles  |
+| AdaptMesh_3   | 00:00:02 | 00:00:02 |     351M |   152509 triangles  |
+| Solve(4p)_3   | 00:00:01 | 00:00:00 |     376M |   109847 unknowns   |
+| ErrorCalc_3   | 00:00:01 | 00:00:00 |     376M |   152509 triangles  |
+| PostProc      | 00:00:01 | 00:00:01 |     376M |      518 elements   |
+| PowerMap      | 00:00:01 | 00:00:02 |     421M |   152509 triangles  |
+| ResCalc       | 00:00:01 | 00:00:02 |     454M |       66 terminals  |
+------------------------------------------------------------------------
+          Finished on ME5159-UGRAD-05 at 02/04/2026 06:46:51
+
+_______________________________________________________________________
+
+
+

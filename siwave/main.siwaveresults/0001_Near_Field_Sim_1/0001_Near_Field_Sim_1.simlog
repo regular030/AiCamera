@@ -1,0 +1,201 @@
+[Wed Feb  4 06:54:22 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 siwave_ng 2024 R2 (Built: May 23 2024 03:46:15):
+[Wed Feb  4 06:54:23 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Loading project...:
+[Wed Feb  4 06:54:24 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Initializing layout database...:
+[Wed Feb  4 06:54:24 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Database load complete:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Commencing simulation...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 [Simulation Directory]: "C:/Users/kunshpreetbaweja/github/AiCamera/siwave/main.siwaveresults/0001_Near_Field_Sim_1/":
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 [Simulation Log File]: "C:/Users/kunshpreetbaweja/github/AiCamera/siwave/main.siwaveresults/0001_Near_Field_Sim_1/0001_Near_Field_Sim_1.simlog":
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Simulation "Near Field Sim 1" started on host ME5159-UGRAD-05 at Wed Feb  4 06:54:25 2026:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Generating solver input files...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  5.000000:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0117 All geometry on net "DUMMY" will be ignored:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  10.000000:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying nets for inclusion in simulation...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N11348:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N11975:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N14567:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N16832:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N16833:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N16834:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N17349:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N29790:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N30002:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N60669:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N60670:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N63772:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 $1N64403:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +1V1:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +1V8:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +2V5:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +2V8:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +3V3:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 +5V:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 CCLK:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 D4:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 DN:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 DONE:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 GND:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 INITN:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 M_CMD:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 M_D2:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 PROGRAMN:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 SCL:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 SD_A12:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 SD_DQ1:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 SD_DQ3:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 SD_DQ12:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 TCK:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0051 TDO:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  15.000000:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Performing basic DRC...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Merging appropriate traces...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying traces to process...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying planes to process...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  17.000000:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Generating antipads in planes...:
+[Wed Feb  4 06:54:25 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Modeling appropriate pads as planes...:
+[Wed Feb  4 06:54:26 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  20.000000:
+[Wed Feb  4 06:54:26 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  24.000000:
+[Wed Feb  4 06:54:26 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Uniting geometry...:
+[Wed Feb  4 06:54:33 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  30.000000:
+[Wed Feb  4 06:54:33 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  31.000000:
+[Wed Feb  4 06:54:33 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  32.000000:
+[Wed Feb  4 06:54:33 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  33.000000:
+[Wed Feb  4 06:54:33 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  34.000000:
+[Wed Feb  4 06:54:33 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  35.000000:
+[Wed Feb  4 06:54:33 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Running geometry preprocessor...:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Processing facets...:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  50.000000:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Identifying traces to process...:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Processing traces...:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  51.000000:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  52.000000:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  53.000000:
+[Wed Feb  4 06:54:48 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  54.000000:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  55.000000:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  56.000000:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  57.000000:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  58.000000:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  59.000000:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  60.000000:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Processing circuit elements...:
+[Wed Feb  4 06:54:54 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0100 C18: positive node at (96.266000,102.039928)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0100 C64: positive node at (112.776000,96.461072)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0100 C69: positive node at (125.915928,93.599000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0101 L1: positive node at (96.187108,96.901000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0101 L4: positive node at (127.002997,91.821000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R1: positive node at (133.731000,159.968184)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R2: negative node at (116.026184,153.289000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R9: negative node at (93.980000,98.814636)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R10: negative node at (91.956636,96.901000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R17: positive node at (94.225364,160.909000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R18: positive node at (90.043000,166.234364)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R19: positive node at (88.646000,165.726364)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R22: positive node at (105.156000,105.842816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R23: negative node at (91.237816,151.130000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R24: negative node at (93.396816,153.670000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R25: negative node at (104.648000,142.545816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R26: positive node at (85.344000,149.657816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R27: positive node at (86.487000,149.657816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R28: positive node at (87.630000,149.657816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R29: positive node at (88.773000,149.657816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R30: negative node at (89.916000,148.792184)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R31: positive node at (91.059000,149.657816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R32: positive node at (92.202000,149.657816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R34: positive node at (93.345000,149.657816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R35: positive node at (117.094000,173.787816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R36: positive node at (136.652000,131.520184)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R37: positive node at (136.525000,126.901448)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R38: positive node at (113.665000,173.533816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R39: positive node at (115.062000,173.660816)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R43: positive node at (99.305364,90.170000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R44: positive node at (104.775000,96.003364)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:warning 0104 R45: negative node at (106.053636,97.155000)mm on layer Top Layer is not attached to any net included in this simulation:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  70.000000:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  80.000000:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Writing solver input files...:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  90.000000:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  95.000000:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:progress  100.000000:
+[Wed Feb  4 06:54:55 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:message Solving near fields... :
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing solution setup: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 1.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 2.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Creating initial mesh: 
+C:\Program Files\AnsysEM\v242\Win64\geomproc.exe:PID 74212: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 5.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Reading solver input files: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing material definitions: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing stackup definition: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing multi-port S model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing multi-port S model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing multi-port S model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing model information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Importing circuit information: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing transmission lines: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 6.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing vias: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing Bondwires: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Identifying nets: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Processing circuit nodes: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing plane edges: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 7.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Identifying metal edges...: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Computing plane extent: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Performing smart coupling detection...: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Detecting coupled vias: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 10.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up cavities: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Processing defeatured voids: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 11.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Processing split plane cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Processing trace cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 12.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Solving cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up resolve cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Setting up split cross sections: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 15.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Extracting via parameters: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 20.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Refining mesh: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 21.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Initializing unknowns: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 22.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Constructing system matrix: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Filling finite element matrix: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 23.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message   Adding circuit elements to the matrix: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 25.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Computing near-field on shared-memory systems: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message Determining observation points: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 30.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 32.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 35.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 38.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 41.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 44.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 46.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 49.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 52.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 55.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 58.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 60.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 63.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 66.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 69.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 72.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 74.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 77.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 80.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 83.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 86.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 88.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 91.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 94.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 97.000000: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:message SIwave finished: 
+C:\Program Files\AnsysEM\v242\Win64\siwave_solver.exe:progress 100.000000: 
+[Wed Feb  4 07:44:22 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Nearfield solver completed with return code 0:
+[Wed Feb  4 07:44:22 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Simulation "Near Field Sim 1" completed on host ME5159-UGRAD-05 at Wed Feb  4 07:44:22 2026:
+[Wed Feb  4 07:44:22 2026] C:\Program Files\AnsysEM\v242\Win64\siwave_ng.exe:information 0050 Saved "C:/Users/kunshpreetbaweja/github/AiCamera/siwave/main.siwaveresults/0001_Near_Field_Sim_1/0001_Near_Field_Sim_1.siw":

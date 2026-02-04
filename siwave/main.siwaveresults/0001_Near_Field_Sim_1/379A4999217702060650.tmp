@@ -1,0 +1,17 @@
+$begin 'ProfileUpdate'
+	Id=''
+	Type='Start'
+	$begin 'ProfileItem'
+		Name='Generating solver input'
+		RealTime=0
+		RealTimeUsecs=0
+		CpuTime=0
+		CpuTimeUsecs=0
+		MemoryInK=0
+		HasData=false
+		UseData=true
+	$end 'ProfileItem'
+	Parents[0:]
+	GroupOptions=0
+	TaskDataOptions()
+$end 'ProfileUpdate'
