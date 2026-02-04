@@ -3,29 +3,8 @@
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
         <Options def_top="fpga_top"/>
-        <Source name="spi_bridge.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
         <Source name="fpga_top.v" type="Verilog" type_short="Verilog">
             <Options top_module="fpga_top"/>
-        </Source>
-        <Source name="pll_24m/pll_24m.sbx" type="sbx" type_short="SBX">
-            <Options/>
-        </Source>
-        <Source name="sdram_ctrl_min.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="dc_fifo.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="pixel_assemble_rgb565.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="roi_tracker_motion.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="roi_streamer_rgb565.v" type="Verilog" type_short="Verilog">
-            <Options/>
         </Source>
         <Source name="AICAM.lpf" type="Logic Preference" type_short="LPF">
             <Options/>

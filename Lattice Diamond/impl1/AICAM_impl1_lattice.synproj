@@ -32,14 +32,7 @@
 
 -lpf 1
 -p "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond"
--ver "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/spi_bridge.v"
-"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v"
-"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.v"
-"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_min.v"
-"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/dc_fifo.v"
-"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pixel_assemble_rgb565.v"
-"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker_motion.v"
-"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_streamer_rgb565.v"
+-ver "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v"
 -top fpga_top
 
 

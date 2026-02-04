@@ -3,83 +3,37 @@ Report for cell fpga_top
    Instance path: fpga_top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     433.00        100.0
-                                  LUT4	     359.00        100.0
-                                 IOBUF	         55        100.0
-                                PFUREG	        461        100.0
-                                RIPPLE	        106        100.0
-                                   EBR	          2        100.0
+                                  SLIC	      39.00        100.0
+                                  LUT4	      22.00        100.0
+                                 IOBUF	         65        100.0
+                                PFUREG	         56        100.0
+                                RIPPLE	          9        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                            spi_bridge	          1        10.9
-                        sdram_ctrl_min	          1        44.7
-                   roi_streamer_rgb565	          1        24.1
-                 pixel_assemble_rgb565	          1         7.4
-                               pll_24m	          1         0.0
+                 sdram_controller_stub	          1        12.8
+                   camera_capture_stub	          1        15.4
+                       esp32_link_stub	          1        29.5
 ---------------------------------------------------
-Report for cell pixel_assemble_rgb565
-   Instance path: fpga_top/u_cam
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      31.83         7.4
-                                  LUT4	      25.00         7.0
-                                PFUREG	         51        11.1
----------------------------------------------------
-Report for cell roi_streamer_rgb565
-   Instance path: fpga_top/u_stream
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	     104.33        24.1
-                                  LUT4	      70.00        19.5
-                                PFUREG	        136        29.5
-                                RIPPLE	         12        11.3
-                                   EBR	          1        50.0
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-                   dc_fifo(DEPTH=2048)	          1        19.7
----------------------------------------------------
-Report for cell dc_fifo(DEPTH=2048)
-   Instance path: fpga_top/u_stream/u_dc
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      85.50        19.7
-                                  LUT4	      48.00        13.4
-                                PFUREG	        122        26.5
-                                RIPPLE	         12        11.3
-                                   EBR	          1        50.0
----------------------------------------------------
-Report for cell pll_24m
-   Instance path: fpga_top/u_pll
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
----------------------------------------------------
-Report for cell sdram_ctrl_min
+Report for cell sdram_controller_stub
    Instance path: fpga_top/u_sdram
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     193.58        44.7
-                                  LUT4	     205.00        57.1
-                                PFUREG	        204        44.3
-                                RIPPLE	         22        20.8
-                                   EBR	          1        50.0
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-           dc_fifo(WIDTH=16,DEPTH=512)	          1        18.7
+                                  SLIC	       5.00        12.8
+                                  LUT4	       1.00         4.5
+                                PFUREG	          9        16.1
 ---------------------------------------------------
-Report for cell dc_fifo(WIDTH=16,DEPTH=512)
-   Instance path: fpga_top/u_sdram/u_fifo
+Report for cell esp32_link_stub
+   Instance path: fpga_top/u_esp
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      80.92        18.7
-                                  LUT4	      53.00        14.8
-                                PFUREG	        120        26.0
-                                RIPPLE	         10         9.4
-                                   EBR	          1        50.0
+                                  SLIC	      11.50        29.5
+                                  LUT4	       8.00        36.4
+                                PFUREG	         17        30.4
 ---------------------------------------------------
-Report for cell spi_bridge
-   Instance path: fpga_top/u_spi
+Report for cell camera_capture_stub
+   Instance path: fpga_top/u_cam_cap
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      47.25        10.9
-                                  LUT4	      56.00        15.6
-                                PFUREG	         48        10.4
+                                  SLIC	       6.00        15.4
+                                  LUT4	       2.00         9.1
+                                PFUREG	         10        17.9

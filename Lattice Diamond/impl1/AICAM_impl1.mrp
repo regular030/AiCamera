@@ -15,119 +15,317 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  02/04/26  02:35:27
+Mapped on:  02/04/26  08:15:35
 
+Design Summary
+--------------
 
+   Number of registers:     56 out of 24879 (0%)
+      PFU registers:           56 out of 24288 (0%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:        39 out of 12144 (0%)
+      SLICEs as Logic/ROM:     39 out of 12144 (0%)
+      SLICEs as RAM:            0 out of  9108 (0%)
+      SLICEs as Carry:          9 out of 12144 (0%)
+   Number of LUT4s:         40 out of 24288 (0%)
+      Number used as logic LUTs:         22
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       18
+      Number used as shift registers:     0
+   Number of PIO sites used: 65 out of 197 (33%)
+   Number of block RAMs:  0 out of 56 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
 
-
-   Number of warnings:  24
-   Number of errors:    1
-     
-
-Design Errors/Warnings
-----------------------
-
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(23):
-     Syntax error in "LOCATE COMP "cam_scl" SITE "A10" ; IO_TYPE PORT "cam_scl"
-     IO_TYPE=LVCMOS18 DRIVE=4 SLEWRATE=SLOW ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(24):
-     Syntax error in "LOCATE COMP "cam_sda" SITE "B9" ; IO_TYPE PORT "cam_sda"
-     IO_TYPE=LVCMOS18 OPENDRAIN=ON ; ": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(80):
-     Syntax error in "LOCATE COMP "ESP_D[0]" SITE "E2" ;IO_TYPE PORT "ESP_D[0]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(81):
-     Syntax error in "LOCATE COMP "ESP_D[1]" SITE "E1" ;IO_TYPE PORT "ESP_D[1]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(82):
-     Syntax error in "LOCATE COMP "ESP_D[2]" SITE "F2" ;IO_TYPE PORT "ESP_D[2]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(83):
-     Syntax error in "LOCATE COMP "ESP_D[3]" SITE "F3" ;IO_TYPE PORT "ESP_D[3]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(84):
-     Syntax error in "LOCATE COMP "ESP_D[4]" SITE "G2" ;IO_TYPE PORT "ESP_D[4]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(85):
-     Syntax error in "LOCATE COMP "ESP_D[5]" SITE "G1" ;IO_TYPE PORT "ESP_D[5]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(86):
-     Syntax error in "LOCATE COMP "ESP_D[6]" SITE "J1" ;IO_TYPE PORT "ESP_D[6]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(87):
-     Syntax error in "LOCATE COMP "ESP_D[7]" SITE "J2" ;IO_TYPE PORT "ESP_D[7]"
-     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Error on token "IO_TYPE".
-WARNING - map: Preference parsing results:  10 syntax errors detected.
-ERROR - map: There are syntax errors in the preference file,
-     "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf".
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
 
                                     Page 1
 
 
 
 
-Design:  fpga_top                                      Date:  02/04/26  02:35:27
+Design:  fpga_top                                      Date:  02/04/26  08:15:35
 
-Design Errors/Warnings (cont)
------------------------------
-WARNING - map: input pad net 'cam_scl' has no legal load.
-WARNING - map: input pad net 'cam_sda' has no legal load.
-WARNING - map: input pad net 'ESP_D[7]' has no legal load.
-WARNING - map: input pad net 'ESP_D[6]' has no legal load.
-WARNING - map: input pad net 'ESP_D[5]' has no legal load.
-WARNING - map: input pad net 'ESP_D[4]' has no legal load.
-WARNING - map: input pad net 'ESP_D[3]' has no legal load.
-WARNING - map: input pad net 'ESP_D[2]' has no legal load.
-WARNING - map: input pad net 'ESP_D[1]' has no legal load.
-WARNING - map: input pad net 'ESP_D[0]' has no legal load.
-WARNING - map: input pad net 'PROGRAMN' has no legal load.
-WARNING - map: input pad net 'INITN' has no legal load.
-WARNING - map: input pad net 'DONE' has no legal load.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Design Summary (cont)
+---------------------
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  3
+     Net CRYSTAL_c: 22 loads, 22 rising, 0 falling (Driver: PIO CRYSTAL )
+     Net CCLK_c: 6 loads, 6 rising, 0 falling (Driver: PIO CCLK )
+     Net PCLK_c: 6 loads, 6 rising, 0 falling (Driver: PIO PCLK )
+   Number of Clock Enables:  4
+     Net cam_pixel_valid: 4 loads, 4 LSLICEs
+     Net rst_n_N_38: 1 loads, 1 LSLICEs
+     Net rst_n: 9 loads, 9 LSLICEs
+     Net PCLK_c_enable_8: 4 loads, 4 LSLICEs
+   Number of LSRs:  3
+     Net rst_n: 17 loads, 17 LSLICEs
+     Net n367: 1 loads, 1 LSLICEs
+     Net SSPI_CS_n_c: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net rst_n: 29 loads
+     Net esp_d_oe: 8 loads
+     Net SSPI_CS_n_c: 8 loads
+     Net cam_pixel_valid: 6 loads
+     Net mclk_div_cnt_0: 4 loads
+     Net PCLK_c_enable_8: 4 loads
+     Net cam_pixel_0: 3 loads
+     Net cam_pixel_1: 3 loads
+     Net cam_pixel_2: 3 loads
+     Net cam_pixel_3: 3 loads
 
 
 
 
+   Number of warnings:  0
+   Number of errors:    0
+     
 
+Design Errors/Warnings
+----------------------
 
+   No errors or warnings present.
 
+IO (PIO) Attributes
+-------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| cam_sda             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| cam_scl             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
 
                                     Page 2
+
+
+
+
+Design:  fpga_top                                      Date:  02/04/26  08:15:35
+
+IO (PIO) Attributes (cont)
+--------------------------
+| MCLK                | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[15]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[14]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[13]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[12]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[11]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[10]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[9]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[8]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[1]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[0]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CLK              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CS_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_WE_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_RAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[12]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[11]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[10]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[9]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  fpga_top                                      Date:  02/04/26  08:15:35
+
+IO (PIO) Attributes (cont)
+--------------------------
+| SD_A[8]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DOUT                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CRYSTAL             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| VSYNC               | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| HREF                | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| PCLK                | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y9                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y8                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y7                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y6                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 4
+
+
+
+
+Design:  fpga_top                                      Date:  02/04/26  08:15:35
+
+IO (PIO) Attributes (cont)
+--------------------------
+| Y5                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y4                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y3                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y2                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| DIN                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CCLK                | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SSPI_CS_n           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal CRYSTAL_c_enable_16 was merged into signal rst_n
+Signal n338 was merged into signal esp_d_oe
+Signal por_cnt_130_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal por_cnt_130_add_4_1/CI undriven or does not drive anything - clipped.
+Signal por_cnt_130_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal por_cnt_130_add_4_17/CO undriven or does not drive anything - clipped.
+Block u_esp/rst_n_I_0_1_lut_rep_4 was optimized away.
+Block i173_1_lut was optimized away.
+
+     
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 112 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 5
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

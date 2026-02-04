@@ -1,160 +1,21 @@
 [ START MERGED ]
-u_cam/n2 byte_sel
-n2611 u_sdram/dq_oe
-u_sdram/n6743 u_sdram/n635
-u_sdram/n3162 u_sdram/row_9
-u_sdram/n3163 u_sdram/row_11
-u_sdram/n3164 u_sdram/row_12
+CRYSTAL_c_enable_16 rst_n
+n338 esp_d_oe
 [ END MERGED ]
 [ START CLIPPED ]
-VCC_net
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_0/S1
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_0/S0
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_0/CI
-u_sdram/u_fifo/wptr_gray_7__I_0_0/S1
-u_sdram/u_fifo/wptr_gray_7__I_0_0/S0
-u_sdram/u_fifo/wptr_gray_7__I_0_0/CI
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_8/S1
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_8/S0
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_10_2640/S1
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_10_2640/S0
-u_sdram/u_fifo/wptr_gray_7__I_0_7/S1
-u_sdram/u_fifo/wptr_gray_7__I_0_7/S0
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_10/S1
-u_sdram/u_fifo/wptr_gray_rd2_9__I_0_10/CO
-u_sdram/u_fifo/equal_659_0/S1
-u_sdram/u_fifo/equal_659_0/S0
-u_sdram/u_fifo/equal_659_0/CI
-u_sdram/u_fifo/equal_659_8/S1
-u_sdram/u_fifo/equal_659_8/S0
-u_sdram/u_fifo/equal_659_9/S0
-u_sdram/u_fifo/equal_659_9/CO
-u_sdram/u_fifo/wptr_gray_7__I_0_8/S0
-u_sdram/u_fifo/wptr_gray_7__I_0_8/CO
-u_sdram/col_531_add_4_1/S0
-u_sdram/col_531_add_4_1/CI
-u_sdram/col_531_add_4_9/CO
-u_sdram/row_530_add_4_1/S0
-u_sdram/row_530_add_4_1/CI
-u_sdram/row_530_add_4_13/CO
-_add_1_830_add_4_10/S1
-_add_1_830_add_4_10/S0
-_add_1_830_add_4_12/S1
-_add_1_830_add_4_12/S0
-u_stream/u_dc/wptr_gray_9__I_0_8/S1
-u_stream/u_dc/wptr_gray_9__I_0_8/S0
-u_stream/u_dc/wptr_gray_9__I_0_10_2641/S1
-u_stream/u_dc/wptr_gray_9__I_0_10_2641/S0
-u_stream/u_dc/wptr_gray_9__I_0_10/S1
-u_stream/u_dc/wptr_gray_9__I_0_10/CO
-u_stream/u_dc/wptr_gray_rd2_11__I_0_0/S1
-u_stream/u_dc/wptr_gray_rd2_11__I_0_0/S0
-u_stream/u_dc/wptr_gray_rd2_11__I_0_0/CI
-u_stream/u_dc/wptr_gray_rd2_11__I_0_9/S1
-u_stream/u_dc/wptr_gray_rd2_11__I_0_9/S0
-u_stream/u_dc/wptr_gray_rd2_11__I_0_11/S1
-u_stream/u_dc/wptr_gray_rd2_11__I_0_11/S0
-u_stream/u_dc/wptr_gray_rd2_11__I_0_12/S0
-u_stream/u_dc/wptr_gray_rd2_11__I_0_12/CO
-u_stream/u_dc/equal_629_0/S1
-u_stream/u_dc/equal_629_0/S0
-u_stream/u_dc/equal_629_0/CI
-u_stream/u_dc/equal_629_9/S1
-u_stream/u_dc/equal_629_9/S0
-u_stream/u_dc/equal_629_11_2642/S1
-u_stream/u_dc/equal_629_11_2642/S0
-u_stream/u_dc/equal_629_11/S1
-u_stream/u_dc/equal_629_11/CO
-u_stream/u_dc/wptr_gray_9__I_0_0/S1
-u_stream/u_dc/wptr_gray_9__I_0_0/S0
-u_stream/u_dc/wptr_gray_9__I_0_0/CI
-_add_1_830_add_4_14/S0
-_add_1_830_add_4_14/CO
-_add_1_775_add_4_1/S0
-_add_1_775_add_4_1/CI
-_add_1_812_add_4_2/S1
-_add_1_812_add_4_2/S0
-_add_1_812_add_4_2/CI
-_add_1_812_add_4_4/S1
-_add_1_812_add_4_4/S0
-_add_1_778_add_4_13/S1
-_add_1_778_add_4_13/CO
-_add_1_791_add_4_1/S0
-_add_1_791_add_4_1/CI
-_add_1_812_add_4_6/S1
-_add_1_812_add_4_6/S0
-_add_1_812_add_4_8/S1
-_add_1_812_add_4_8/S0
-_add_1_812_add_4_10/S1
-_add_1_812_add_4_10/S0
-_add_1_812_add_4_12/S1
-_add_1_812_add_4_12/S0
-_add_1_827_add_4_1/S0
-_add_1_827_add_4_1/CI
-_add_1_812_add_4_14/S0
-_add_1_812_add_4_14/CO
-_add_1_791_add_4_11/S1
-_add_1_791_add_4_11/CO
-_add_1_824_add_4_1/S0
-_add_1_824_add_4_1/CI
-_add_1_797_add_4_1/S0
-_add_1_797_add_4_1/CI
-_add_1_797_add_4_11/S1
-_add_1_797_add_4_11/CO
-_add_1_824_add_4_17/S1
-_add_1_824_add_4_17/CO
-_add_1_827_add_4_17/S1
-_add_1_827_add_4_17/CO
-_add_1_800_add_4_1/S0
-_add_1_800_add_4_1/CI
-_add_1_800_add_4_13/S1
-_add_1_800_add_4_13/CO
-_add_1_803_add_4_1/S0
-_add_1_803_add_4_1/CI
-_add_1_778_add_4_1/S0
-_add_1_778_add_4_1/CI
-_add_1_775_add_4_13/S1
-_add_1_775_add_4_13/CO
-_add_1_803_add_4_13/S1
-_add_1_803_add_4_13/CO
-_add_1_830_add_4_2/S1
-_add_1_830_add_4_2/S0
-_add_1_830_add_4_2/CI
-_add_1_830_add_4_4/S1
-_add_1_830_add_4_4/S0
-_add_1_830_add_4_6/S1
-_add_1_830_add_4_6/S0
-_add_1_830_add_4_8/S1
-_add_1_830_add_4_8/S0
+por_cnt_130_add_4_1/S0
+por_cnt_130_add_4_1/CI
+por_cnt_130_add_4_17/S1
+por_cnt_130_add_4_17/CO
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Wed Jan 28 20:07:36 2026
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Wed Feb 04 08:15:36 2026
 
 SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
-LOCATE COMP "CRYSTAL" SITE "M1" ;
-LOCATE COMP "SD_WE_N" SITE "N13" ;
-LOCATE COMP "SD_CS_N" SITE "R15" ;
-LOCATE COMP "SD_CLK" SITE "J15" ;
-LOCATE COMP "SD_RAS_N" SITE "T14" ;
-LOCATE COMP "DOUT" SITE "M8" ;
+LOCATE COMP "cam_sda" SITE "B9" ;
+LOCATE COMP "cam_scl" SITE "A10" ;
 LOCATE COMP "MCLK" SITE "A12" ;
-LOCATE COMP "SD_CAS_N" SITE "R13" ;
-LOCATE COMP "SD_A[12]" SITE "B7" ;
-LOCATE COMP "SD_A[11]" SITE "A8" ;
-LOCATE COMP "SD_A[10]" SITE "T7" ;
-LOCATE COMP "SD_A[9]" SITE "A7" ;
-LOCATE COMP "SD_A[8]" SITE "A6" ;
-LOCATE COMP "SD_A[7]" SITE "A5" ;
-LOCATE COMP "SD_A[6]" SITE "A4" ;
-LOCATE COMP "SD_A[5]" SITE "A3" ;
-LOCATE COMP "SD_A[4]" SITE "A2" ;
-LOCATE COMP "SD_A[3]" SITE "T2" ;
-LOCATE COMP "SD_A[2]" SITE "T3" ;
-LOCATE COMP "SD_A[1]" SITE "T4" ;
-LOCATE COMP "SD_A[0]" SITE "T6" ;
-LOCATE COMP "SD_BA[1]" SITE "L12" ;
-LOCATE COMP "SD_BA[0]" SITE "K12" ;
 LOCATE COMP "SD_DQ[15]" SITE "H15" ;
 LOCATE COMP "SD_DQ[14]" SITE "G16" ;
 LOCATE COMP "SD_DQ[13]" SITE "G15" ;
@@ -173,9 +34,39 @@ LOCATE COMP "SD_DQ[1]" SITE "M16" ;
 LOCATE COMP "SD_DQ[0]" SITE "L15" ;
 LOCATE COMP "SD_DQM[1]" SITE "D14" ;
 LOCATE COMP "SD_DQM[0]" SITE "T15" ;
-LOCATE COMP "PCLK" SITE "C8" ;
+LOCATE COMP "SD_CLK" SITE "J15" ;
+LOCATE COMP "SD_CS_N" SITE "R15" ;
+LOCATE COMP "SD_WE_N" SITE "N13" ;
+LOCATE COMP "SD_RAS_N" SITE "T14" ;
+LOCATE COMP "SD_CAS_N" SITE "R13" ;
+LOCATE COMP "SD_A[12]" SITE "B7" ;
+LOCATE COMP "SD_A[11]" SITE "A8" ;
+LOCATE COMP "SD_A[10]" SITE "T7" ;
+LOCATE COMP "SD_A[9]" SITE "A7" ;
+LOCATE COMP "SD_A[8]" SITE "A6" ;
+LOCATE COMP "SD_A[7]" SITE "A5" ;
+LOCATE COMP "SD_A[6]" SITE "A4" ;
+LOCATE COMP "SD_A[5]" SITE "A3" ;
+LOCATE COMP "SD_A[4]" SITE "A2" ;
+LOCATE COMP "SD_A[3]" SITE "T2" ;
+LOCATE COMP "SD_A[2]" SITE "T3" ;
+LOCATE COMP "SD_A[1]" SITE "T4" ;
+LOCATE COMP "SD_A[0]" SITE "T6" ;
+LOCATE COMP "SD_BA[1]" SITE "L12" ;
+LOCATE COMP "SD_BA[0]" SITE "K12" ;
+LOCATE COMP "DOUT" SITE "M8" ;
+LOCATE COMP "ESP_D[7]" SITE "J2" ;
+LOCATE COMP "ESP_D[6]" SITE "J1" ;
+LOCATE COMP "ESP_D[5]" SITE "G1" ;
+LOCATE COMP "ESP_D[4]" SITE "G2" ;
+LOCATE COMP "ESP_D[3]" SITE "F3" ;
+LOCATE COMP "ESP_D[2]" SITE "F2" ;
+LOCATE COMP "ESP_D[1]" SITE "E1" ;
+LOCATE COMP "ESP_D[0]" SITE "E2" ;
+LOCATE COMP "CRYSTAL" SITE "M1" ;
 LOCATE COMP "VSYNC" SITE "B10" ;
 LOCATE COMP "HREF" SITE "A11" ;
+LOCATE COMP "PCLK" SITE "C8" ;
 LOCATE COMP "Y9" SITE "B11" ;
 LOCATE COMP "Y8" SITE "B12" ;
 LOCATE COMP "Y7" SITE "A13" ;
@@ -184,11 +75,8 @@ LOCATE COMP "Y5" SITE "A15" ;
 LOCATE COMP "Y4" SITE "C13" ;
 LOCATE COMP "Y3" SITE "C12" ;
 LOCATE COMP "Y2" SITE "B14" ;
+LOCATE COMP "DIN" SITE "T8" ;
 LOCATE COMP "CCLK" SITE "J14" ;
 LOCATE COMP "SSPI_CS_n" SITE "R1" ;
-LOCATE COMP "DIN" SITE "T8" ;
-FREQUENCY NET "buf_CLKI" 24.000000 MHz ;
-FREQUENCY NET "SD_CLK_c" 96.000000 MHz ;
-FREQUENCY NET "MCLK_c" 24.000000 MHz ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

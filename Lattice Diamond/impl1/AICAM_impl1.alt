@@ -1,32 +1,12 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Wed Jan 28 20:08:17 2026 *
+NOTE DATE CREATED: Wed Feb 04 08:17:27 2026 *
 NOTE DESIGN NAME: fpga_top *
 NOTE DEVICE NAME: LFE5U-25F-6CABGA256 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS CRYSTAL : M1 : in *
-NOTE PINS SD_WE_N : N13 : out *
-NOTE PINS SD_CS_N : R15 : out *
-NOTE PINS SD_CLK : J15 : out *
-NOTE PINS SD_RAS_N : T14 : out *
-NOTE PINS DOUT : M8 : out *
+NOTE PINS cam_sda : B9 : out *
+NOTE PINS cam_scl : A10 : out *
 NOTE PINS MCLK : A12 : out *
-NOTE PINS SD_CAS_N : R13 : out *
-NOTE PINS SD_A[12] : B7 : out *
-NOTE PINS SD_A[11] : A8 : out *
-NOTE PINS SD_A[10] : T7 : out *
-NOTE PINS SD_A[9] : A7 : out *
-NOTE PINS SD_A[8] : A6 : out *
-NOTE PINS SD_A[7] : A5 : out *
-NOTE PINS SD_A[6] : A4 : out *
-NOTE PINS SD_A[5] : A3 : out *
-NOTE PINS SD_A[4] : A2 : out *
-NOTE PINS SD_A[3] : T2 : out *
-NOTE PINS SD_A[2] : T3 : out *
-NOTE PINS SD_A[1] : T4 : out *
-NOTE PINS SD_A[0] : T6 : out *
-NOTE PINS SD_BA[1] : L12 : out *
-NOTE PINS SD_BA[0] : K12 : out *
 NOTE PINS SD_DQ[15] : H15 : out *
 NOTE PINS SD_DQ[14] : G16 : out *
 NOTE PINS SD_DQ[13] : G15 : out *
@@ -45,9 +25,39 @@ NOTE PINS SD_DQ[1] : M16 : out *
 NOTE PINS SD_DQ[0] : L15 : out *
 NOTE PINS SD_DQM[1] : D14 : out *
 NOTE PINS SD_DQM[0] : T15 : out *
-NOTE PINS PCLK : C8 : in *
+NOTE PINS SD_CLK : J15 : out *
+NOTE PINS SD_CS_N : R15 : out *
+NOTE PINS SD_WE_N : N13 : out *
+NOTE PINS SD_RAS_N : T14 : out *
+NOTE PINS SD_CAS_N : R13 : out *
+NOTE PINS SD_A[12] : B7 : out *
+NOTE PINS SD_A[11] : A8 : out *
+NOTE PINS SD_A[10] : T7 : out *
+NOTE PINS SD_A[9] : A7 : out *
+NOTE PINS SD_A[8] : A6 : out *
+NOTE PINS SD_A[7] : A5 : out *
+NOTE PINS SD_A[6] : A4 : out *
+NOTE PINS SD_A[5] : A3 : out *
+NOTE PINS SD_A[4] : A2 : out *
+NOTE PINS SD_A[3] : T2 : out *
+NOTE PINS SD_A[2] : T3 : out *
+NOTE PINS SD_A[1] : T4 : out *
+NOTE PINS SD_A[0] : T6 : out *
+NOTE PINS SD_BA[1] : L12 : out *
+NOTE PINS SD_BA[0] : K12 : out *
+NOTE PINS DOUT : M8 : out *
+NOTE PINS ESP_D[7] : J2 : out *
+NOTE PINS ESP_D[6] : J1 : out *
+NOTE PINS ESP_D[5] : G1 : out *
+NOTE PINS ESP_D[4] : G2 : out *
+NOTE PINS ESP_D[3] : F3 : out *
+NOTE PINS ESP_D[2] : F2 : out *
+NOTE PINS ESP_D[1] : E1 : out *
+NOTE PINS ESP_D[0] : E2 : out *
+NOTE PINS CRYSTAL : M1 : in *
 NOTE PINS VSYNC : B10 : in *
 NOTE PINS HREF : A11 : in *
+NOTE PINS PCLK : C8 : in *
 NOTE PINS Y9 : B11 : in *
 NOTE PINS Y8 : B12 : in *
 NOTE PINS Y7 : A13 : in *
@@ -56,8 +66,8 @@ NOTE PINS Y5 : A15 : in *
 NOTE PINS Y4 : C13 : in *
 NOTE PINS Y3 : C12 : in *
 NOTE PINS Y2 : B14 : in *
+NOTE PINS DIN : T8 : in *
 NOTE PINS CCLK : J14 : in *
 NOTE PINS SSPI_CS_n : R1 : in *
-NOTE PINS DIN : T8 : in *
 NOTE CONFIGURATION MODE: JTAG *
 NOTE COMPRESSION: off *

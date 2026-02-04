@@ -38,7 +38,7 @@ Performance Hardware Data Status:   Final          Version 55.1.
 // Package: CABGA256
 // ncd File: aicam_impl1.ncd
 // Version: Diamond (64-bit) 3.14.0.75.2
-// Written on Wed Jan 28 20:08:06 2026
+// Written on Wed Feb 04 08:15:50 2026
 // M: Minimum Performance Grade
 // iotiming AICAM_impl1.ncd AICAM_impl1.prf -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml
 
@@ -50,60 +50,42 @@ Worst Case Results across Performance Grades (M, 9, 8, 7, 6):
 
 Port      Clock Edge  Setup Performance_Grade  Hold Performance_Grade
 ----------------------------------------------------------------------
-DIN       CCLK  R     1.302      6       1.310     6
-HREF      PCLK  R     2.245      6       1.203     6
-SSPI_CS_n CCLK  R     4.420      6      -0.179     6
-VSYNC     PCLK  R     3.136      6      -0.172     M
-Y2        PCLK  R     0.845      6       0.508     6
-Y3        PCLK  R     0.366      M       1.241     6
-Y4        PCLK  R     0.193      M       1.228     6
-Y5        PCLK  R     0.843      6       0.823     6
-Y6        PCLK  R     0.326      M       0.982     6
-Y7        PCLK  R     0.306      M       1.022     6
-Y8        PCLK  R     0.098      M       1.439     6
-Y9        PCLK  R     0.288      M       1.233     6
+DIN       CCLK  R     1.745      6      -0.101     6
+HREF      PCLK  R     0.888      6       1.773     6
+SSPI_CS_n CCLK  R     2.887      6      -0.348     6
+VSYNC     PCLK  R     1.801      6       1.316     6
+Y2        PCLK  R     0.159      M       1.277     6
+Y3        PCLK  R    -0.071      M       1.700     6
+Y4        PCLK  R     0.049      M       1.488     6
+Y5        PCLK  R     0.184      M       1.246     6
+Y6        PCLK  R     0.135      M       1.313     6
+Y7        PCLK  R     0.058      M       1.453     6
+Y8        PCLK  R    -0.168      M       1.868     6
+Y9        PCLK  R     0.042      M       1.491     6
 
 
 // Clock to Output Delay
 
-Port      Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+Port     Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
 ------------------------------------------------------------------------
-DOUT      CCLK    R     7.406         6        3.023          M
-SD_A[0]   CRYSTAL R     6.511         6        3.006          M
-SD_A[10]  CRYSTAL R     6.493         6        2.987          M
-SD_A[11]  CRYSTAL R     7.969         6        3.529          M
-SD_A[12]  CRYSTAL R     8.190         6        3.611          M
-SD_A[1]   CRYSTAL R     7.215         6        3.259          M
-SD_A[2]   CRYSTAL R     7.215         6        3.259          M
-SD_A[3]   CRYSTAL R     7.020         6        3.204          M
-SD_A[4]   CRYSTAL R     9.066         6        3.979          M
-SD_A[5]   CRYSTAL R     9.053         6        3.970          M
-SD_A[6]   CRYSTAL R     8.985         6        3.932          M
-SD_A[7]   CRYSTAL R     8.512         6        3.749          M
-SD_A[8]   CRYSTAL R     8.477         6        3.730          M
-SD_A[9]   CRYSTAL R     8.004         6        3.548          M
-SD_BA[0]  CRYSTAL R     7.031         6        3.189          M
-SD_BA[1]  CRYSTAL R     6.987         6        3.187          M
-SD_CAS_N  CRYSTAL R     6.188         6        2.883          M
-SD_DQM[0] CRYSTAL R     7.913         6        3.532          M
-SD_DQM[1] CRYSTAL R     8.486         6        3.759          M
-SD_DQ[0]  CRYSTAL R     8.699         6        2.682          M
-SD_DQ[10] CRYSTAL R     8.819         6        3.049          M
-SD_DQ[11] CRYSTAL R     8.819         6        3.120          M
-SD_DQ[12] CRYSTAL R     8.810         6        3.092          M
-SD_DQ[13] CRYSTAL R     8.810         6        3.102          M
-SD_DQ[14] CRYSTAL R     8.322         6        2.883          M
-SD_DQ[15] CRYSTAL R     8.322         6        2.882          M
-SD_DQ[1]  CRYSTAL R     7.934         6        2.835          M
-SD_DQ[2]  CRYSTAL R     8.541         6        2.882          M
-SD_DQ[3]  CRYSTAL R     7.934         6        2.847          M
-SD_DQ[4]  CRYSTAL R     8.186         6        2.883          M
-SD_DQ[5]  CRYSTAL R     8.200         6        3.014          M
-SD_DQ[6]  CRYSTAL R     8.200         6        3.099          M
-SD_DQ[7]  CRYSTAL R     8.308         6        2.998          M
-SD_DQ[8]  CRYSTAL R     9.594         6        3.149          M
-SD_DQ[9]  CRYSTAL R     9.594         6        3.066          M
-SD_RAS_N  CRYSTAL R     6.409         6        2.965          M
-SD_WE_N   CRYSTAL R     6.553         6        3.015          M
+DOUT     CCLK    R    10.427         6        4.168          M
+ESP_D[0] CRYSTAL R    11.563         6        4.132          M
+ESP_D[1] CRYSTAL R    11.245         6        4.005          M
+ESP_D[2] CRYSTAL R    11.245         6        4.078          M
+ESP_D[3] CRYSTAL R    11.563         6        4.126          M
+ESP_D[4] CRYSTAL R    11.233         6        4.005          M
+ESP_D[5] CRYSTAL R    10.958         6        4.033          M
+ESP_D[6] CRYSTAL R    10.705         6        4.137          M
+ESP_D[7] CRYSTAL R    10.705         6        4.065          M
+MCLK     CRYSTAL R     7.746         6        3.041          M
+SD_CLK   CRYSTAL R     8.455         6        3.466          M
+SD_DQ[0] CRYSTAL R     8.407         6        3.443          M
+SD_DQ[1] CRYSTAL R     8.628         6        3.515          M
+SD_DQ[2] CRYSTAL R     8.407         6        3.437          M
+SD_DQ[3] CRYSTAL R     8.587         6        3.514          M
+SD_DQ[4] CRYSTAL R     9.139         6        3.717          M
+SD_DQ[5] CRYSTAL R     9.277         6        3.775          M
+SD_DQ[6] CRYSTAL R     9.039         6        3.679          M
+SD_DQ[7] CRYSTAL R     8.404         6        3.442          M
 WARNING: you must also run trce with hold speed: 6
 WARNING: you must also run trce with setup speed: M

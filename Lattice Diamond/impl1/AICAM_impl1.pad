@@ -6,7 +6,7 @@ Performance Grade:      6
 PACKAGE:          CABGA256
 Package Status:                     Final          Version 1.44
 
-Wed Jan 28 20:07:56 2026
+Wed Feb 04 08:15:44 2026
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
@@ -16,6 +16,14 @@ Pinout by Port Name:
 | CRYSTAL   | M1/6     | LVCMOS33_IN  | PL26C |           | CLAMP:ON HYSTERESIS:ON            |
 | DIN       | T8/8     | LVCMOS33_IN  | PB11B |           | HYSTERESIS:ON                     |
 | DOUT      | M8/8     | LVCMOS33_OUT | PB15B |           | DRIVE:8mA OPENDRAIN:ON SLEW:SLOW  |
+| ESP_D[0]  | E2/7     | LVCMOS33_OUT | PL8B  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| ESP_D[1]  | E1/7     | LVCMOS33_OUT | PL11D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| ESP_D[2]  | F2/7     | LVCMOS33_OUT | PL11C |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| ESP_D[3]  | F3/7     | LVCMOS33_OUT | PL5D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| ESP_D[4]  | G2/7     | LVCMOS33_OUT | PL14B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| ESP_D[5]  | G1/7     | LVCMOS33_OUT | PL20A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| ESP_D[6]  | J1/7     | LVCMOS33_OUT | PL23A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| ESP_D[7]  | J2/7     | LVCMOS33_OUT | PL23B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | HREF      | A11/1    | LVCMOS18_IN  | PT53A |           | CLAMP:ON                          |
 | MCLK      | A12/1    | LVCMOS18_OUT | PT53B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | PCLK      | C8/1     | LVCMOS18_IN  | PT35A |           | CLAMP:ON                          |
@@ -67,6 +75,8 @@ Pinout by Port Name:
 | Y7        | A13/1    | LVCMOS18_IN  | PT65A |           | CLAMP:ON                          |
 | Y8        | B12/1    | LVCMOS18_IN  | PT56A |           | CLAMP:ON                          |
 | Y9        | B11/1    | LVCMOS18_IN  | PT49A |           | CLAMP:ON                          |
+| cam_scl   | A10/1    | LVCMOS18_OUT | PT42B |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| cam_sda   | B9/1     | LVCMOS18_OUT | PT38A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
 
 Vccio by Bank:
@@ -78,6 +88,7 @@ Vccio by Bank:
 | 2    | 3.3V  |
 | 3    | 3.3V  |
 | 6    | 3.3V  |
+| 7    | 3.3V  |
 | 8    | 2.5V  |
 +------+-------+
 
@@ -99,7 +110,7 @@ Pinout by Pin Number:
 | A7/0     | SD_A[9]               | LOCATED    | LVCMOS33_OUT | PT29A | PCLKT0_0                 |           |
 | A8/0     | SD_A[11]              | LOCATED    | LVCMOS33_OUT | PT29B |                          |           |
 | A9/1     |     unused, PULL:DOWN |            |              | PT42A |                          |           |
-| A10/1    |     unused, PULL:DOWN |            |              | PT42B |                          |           |
+| A10/1    | cam_scl               | LOCATED    | LVCMOS18_OUT | PT42B |                          |           |
 | A11/1    | HREF                  | LOCATED    | LVCMOS18_IN  | PT53A |                          |           |
 | A12/1    | MCLK                  | LOCATED    | LVCMOS18_OUT | PT53B |                          |           |
 | A13/1    | Y7                    | LOCATED    | LVCMOS18_IN  | PT65A |                          |           |
@@ -113,7 +124,7 @@ Pinout by Pin Number:
 | B6/0     |     unused, PULL:DOWN |            |              | PT22B |                          |           |
 | B7/0     | SD_A[12]              | LOCATED    | LVCMOS33_OUT | PT27B |                          |           |
 | B8/1     |     unused, PULL:DOWN |            |              | PT35B |                          |           |
-| B9/1     |     unused, PULL:DOWN |            |              | PT38A | GR_PCLK1_0               |           |
+| B9/1     | cam_sda               | LOCATED    | LVCMOS18_OUT | PT38A | GR_PCLK1_0               |           |
 | B10/1    | VSYNC                 | LOCATED    | LVCMOS18_IN  | PT44A |                          |           |
 | B11/1    | Y9                    | LOCATED    | LVCMOS18_IN  | PT49A |                          |           |
 | B12/1    | Y8                    | LOCATED    | LVCMOS18_IN  | PT56A |                          |           |
@@ -152,8 +163,8 @@ Pinout by Pin Number:
 | D13/1    |     unused, PULL:DOWN |            |              | PT62A |                          |           |
 | D14/2    | SD_DQM[1]             | LOCATED    | LVCMOS33_OUT | PR2D  | RDQ8                     |           |
 | D16/2    | SD_DQ[8]              | LOCATED    | LVCMOS33_OUT | PR8A  | RDQS8                    |           |
-| E1/7     |     unused, PULL:DOWN |            |              | PL11D | LDQ8                     |           |
-| E2/7     |     unused, PULL:DOWN |            |              | PL8B  | LDQSN8                   |           |
+| E1/7     | ESP_D[1]              | LOCATED    | LVCMOS33_OUT | PL11D | LDQ8                     |           |
+| E2/7     | ESP_D[0]              | LOCATED    | LVCMOS33_OUT | PL8B  | LDQSN8                   |           |
 | E3/7     |     unused, PULL:DOWN |            |              | PL5C  | LDQ8                     |           |
 | E4/0     |     unused, PULL:DOWN |            |              | PT9A  |                          |           |
 | E5/0     |     unused, PULL:DOWN |            |              | PT13A |                          |           |
@@ -169,8 +180,8 @@ Pinout by Pin Number:
 | E15/2    | SD_DQ[9]              | LOCATED    | LVCMOS33_OUT | PR8B  | RDQSN8                   |           |
 | E16/2    | SD_DQ[10]             | LOCATED    | LVCMOS33_OUT | PR11D | RDQ8                     |           |
 | F1/7     |     unused, PULL:DOWN |            |              | PL14A | LDQ20                    |           |
-| F2/7     |     unused, PULL:DOWN |            |              | PL11C | LDQ8                     |           |
-| F3/7     |     unused, PULL:DOWN |            |              | PL5D  | LDQ8                     |           |
+| F2/7     | ESP_D[2]              | LOCATED    | LVCMOS33_OUT | PL11C | LDQ8                     |           |
+| F3/7     | ESP_D[3]              | LOCATED    | LVCMOS33_OUT | PL5D  | LDQ8                     |           |
 | F4/7     |     unused, PULL:DOWN |            |              | PL8C  | LDQ8                     |           |
 | F5/7     |     unused, PULL:DOWN |            |              | PL8D  | LDQ8                     |           |
 | F12/2    |     unused, PULL:DOWN |            |              | PR8D  | RDQ8                     |           |
@@ -178,8 +189,8 @@ Pinout by Pin Number:
 | F14/2    |     unused, PULL:DOWN |            |              | PR5D  | RDQ8                     |           |
 | F15/2    | SD_DQ[11]             | LOCATED    | LVCMOS33_OUT | PR11C | RDQ8                     |           |
 | F16/2    | SD_DQ[12]             | LOCATED    | LVCMOS33_OUT | PR14A | RDQ20                    |           |
-| G1/7     |     unused, PULL:DOWN |            |              | PL20A | GR_PCLK7_1/LDQS20        |           |
-| G2/7     |     unused, PULL:DOWN |            |              | PL14B | LDQ20                    |           |
+| G1/7     | ESP_D[5]              | LOCATED    | LVCMOS33_OUT | PL20A | GR_PCLK7_1/LDQS20        |           |
+| G2/7     | ESP_D[4]              | LOCATED    | LVCMOS33_OUT | PL14B | LDQ20                    |           |
 | G3/7     |     unused, PULL:DOWN |            |              | PL14C | VREF1_7/LDQ20            |           |
 | G4/7     |     unused, PULL:DOWN |            |              | PL11B | LDQ8                     |           |
 | G5/7     |     unused, PULL:DOWN |            |              | PL11A | LDQ8                     |           |
@@ -196,8 +207,8 @@ Pinout by Pin Number:
 | H13/2    |     unused, PULL:DOWN |            |              | PR17B | RDQ20                    |           |
 | H14/2    |     unused, PULL:DOWN |            |              | PR14D | RDQ20                    |           |
 | H15/2    | SD_DQ[15]             | LOCATED    | LVCMOS33_OUT | PR20B | RDQSN20                  |           |
-| J1/7     |     unused, PULL:DOWN |            |              | PL23A | PCLKT7_1/LDQ20           |           |
-| J2/7     |     unused, PULL:DOWN |            |              | PL23B | PCLKC7_1/LDQ20           |           |
+| J1/7     | ESP_D[6]              | LOCATED    | LVCMOS33_OUT | PL23A | PCLKT7_1/LDQ20           |           |
+| J2/7     | ESP_D[7]              | LOCATED    | LVCMOS33_OUT | PL23B | PCLKC7_1/LDQ20           |           |
 | J3/7     |     unused, PULL:DOWN |            |              | PL20C | GR_PCLK7_0/LDQ20         |           |
 | J4/7     |     unused, PULL:DOWN |            |              | PL17C | LDQ20                    |           |
 | J5/7     |     unused, PULL:DOWN |            |              | PL17D | LDQ20                    |           |
@@ -305,6 +316,14 @@ LOCATE  COMP  "CCLK"  SITE  "J14";
 LOCATE  COMP  "CRYSTAL"  SITE  "M1";
 LOCATE  COMP  "DIN"  SITE  "T8";
 LOCATE  COMP  "DOUT"  SITE  "M8";
+LOCATE  COMP  "ESP_D[0]"  SITE  "E2";
+LOCATE  COMP  "ESP_D[1]"  SITE  "E1";
+LOCATE  COMP  "ESP_D[2]"  SITE  "F2";
+LOCATE  COMP  "ESP_D[3]"  SITE  "F3";
+LOCATE  COMP  "ESP_D[4]"  SITE  "G2";
+LOCATE  COMP  "ESP_D[5]"  SITE  "G1";
+LOCATE  COMP  "ESP_D[6]"  SITE  "J1";
+LOCATE  COMP  "ESP_D[7]"  SITE  "J2";
 LOCATE  COMP  "HREF"  SITE  "A11";
 LOCATE  COMP  "MCLK"  SITE  "A12";
 LOCATE  COMP  "PCLK"  SITE  "C8";
@@ -356,9 +375,9 @@ LOCATE  COMP  "Y6"  SITE  "A14";
 LOCATE  COMP  "Y7"  SITE  "A13";
 LOCATE  COMP  "Y8"  SITE  "B12";
 LOCATE  COMP  "Y9"  SITE  "B11";
+LOCATE  COMP  "cam_scl"  SITE  "A10";
+LOCATE  COMP  "cam_sda"  SITE  "B9";
 
-#PLL
-LOCATE  COMP  "u_pll/PLLInst_0"  SITE  "PLL_BL0" ;
 
 
 
@@ -369,5 +388,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 28 20:07:56 2026
+Wed Feb 04 08:15:44 2026
 

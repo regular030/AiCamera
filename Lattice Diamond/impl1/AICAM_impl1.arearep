@@ -1,117 +1,52 @@
 ----------------------------------------------------------------------
 Report for cell fpga_top.TECH
-Register bits:  461 of 24879 (1.853%)
-I/O cells:      55
+Register bits:  56 of 24879 (0.225%)
+I/O cells:      65
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C       106          100.0
-                             DP16KD         2          100.0
-                            EHXPLLL         1          100.0
-                            FD1P3AX       154          100.0
-                            FD1P3AY         1          100.0
-                            FD1P3IX        73          100.0
-                            FD1P3JX         3          100.0
-                            FD1S3AX       201          100.0
-                            FD1S3IX        25          100.0
-                            FD1S3JX         4          100.0
+                              CCU2C         9          100.0
+                            FD1P3AX        17          100.0
+                            FD1P3IX        16          100.0
+                            FD1S3AX         4          100.0
+                            FD1S3AY         3          100.0
+                            FD1S3IX        15          100.0
+                            FD1S3JX         1          100.0
                                 GSR         1          100.0
                                  IB        15          100.0
-                               LUT4       364          100.0
-                                 OB        24          100.0
-                                OBZ        16          100.0
-                              PFUMX        18          100.0
+                               LUT4        23          100.0
+                                 OB        25          100.0
+                                OBZ        25          100.0
 SUB MODULES
-                dc_fifo(DEPTH=2048)         1
-        dc_fifo(WIDTH=16,DEPTH=512)         1
-              pixel_assemble_rgb565         1
-                            pll_24m         1
-                roi_streamer_rgb565         1
-                     sdram_ctrl_min         1
-                         spi_bridge         1
-                              TOTAL      1015
+                camera_capture_stub         1
+                    esp32_link_stub         1
+              sdram_controller_stub         1
+                              TOTAL       157
 ----------------------------------------------------------------------
-Report for cell pixel_assemble_rgb565.v1
-Instance Path : u_cam
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3AX        24           15.6
-                            FD1P3IX        24           32.9
-                            FD1S3AX         1            0.5
-                            FD1S3IX         2            8.0
-                               LUT4        26            7.1
-                              TOTAL        77
-----------------------------------------------------------------------
-Report for cell roi_streamer_rgb565.v1
-Instance Path : u_stream
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C        12           11.3
-                             DP16KD         1           50.0
-                            FD1P3AX        46           29.9
-                            FD1S3AX        82           40.8
-                            FD1S3IX         8           32.0
-                               LUT4        70           19.2
-                              PFUMX         4           22.2
-SUB MODULES
-                dc_fifo(DEPTH=2048)         1
-                              TOTAL       224
-----------------------------------------------------------------------
-Report for cell dc_fifo(DEPTH=2048).v1
-Instance Path : u_stream.u_dc
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C        12           11.3
-                             DP16KD         1           50.0
-                            FD1P3AX        43           27.9
-                            FD1S3AX        79           39.3
-                               LUT4        48           13.2
-                              TOTAL       183
-----------------------------------------------------------------------
-Report for cell pll_24m.v1
-Instance Path : u_pll
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            EHXPLLL         1          100.0
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell sdram_ctrl_min.v1
+Report for cell sdram_controller_stub.v1
 Instance Path : u_sdram
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C        22           20.8
-                             DP16KD         1           50.0
-                            FD1P3AX        48           31.2
-                            FD1P3IX        35           47.9
-                            FD1P3JX         3          100.0
-                            FD1S3AX       100           49.8
-                            FD1S3IX        14           56.0
-                            FD1S3JX         4          100.0
-                               LUT4       210           57.7
-                              PFUMX        11           61.1
-SUB MODULES
-        dc_fifo(WIDTH=16,DEPTH=512)         1
-                              TOTAL       449
+                            FD1P3IX         8           50.0
+                            FD1S3IX         1            6.7
+                               LUT4         1            4.3
+                              TOTAL        10
 ----------------------------------------------------------------------
-Report for cell dc_fifo(WIDTH=16,DEPTH=512).v1
-Instance Path : u_sdram.u_fifo
+Report for cell esp32_link_stub.v1
+Instance Path : u_esp
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C        10            9.4
-                             DP16KD         1           50.0
-                            FD1P3AX        45           29.2
-                            FD1S3AX        75           37.3
-                               LUT4        56           15.4
-                              TOTAL       187
+                            FD1S3AX         4          100.0
+                            FD1S3AY         3          100.0
+                            FD1S3IX         9           60.0
+                            FD1S3JX         1          100.0
+                               LUT4         9           39.1
+                              TOTAL        26
 ----------------------------------------------------------------------
-Report for cell spi_bridge.v1
-Instance Path : u_spi
+Report for cell camera_capture_stub.v1
+Instance Path : u_cam_cap
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3AX        14            9.1
-                            FD1P3AY         1          100.0
-                            FD1P3IX        14           19.2
-                            FD1S3AX        18            9.0
-                            FD1S3IX         1            4.0
-                               LUT4        56           15.4
-                              PFUMX         3           16.7
-                              TOTAL       107
+                            FD1P3IX         8           50.0
+                            FD1S3IX         2           13.3
+                               LUT4         2            8.7
+                              TOTAL        12

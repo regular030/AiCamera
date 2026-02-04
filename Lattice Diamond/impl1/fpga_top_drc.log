@@ -7,36 +7,10 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
-WARNING - synthesis: logical net 'cam_scl' has no load.
-WARNING - synthesis: input pad net 'cam_scl' has no legal load.
-WARNING - synthesis: logical net 'cam_sda' has no load.
-WARNING - synthesis: input pad net 'cam_sda' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[7]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[7]' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[6]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[6]' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[5]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[5]' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[4]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[4]' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[3]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[3]' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[2]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[2]' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[1]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[1]' has no legal load.
-WARNING - synthesis: logical net 'ESP_D[0]' has no load.
-WARNING - synthesis: input pad net 'ESP_D[0]' has no legal load.
-WARNING - synthesis: logical net 'PROGRAMN' has no load.
-WARNING - synthesis: input pad net 'PROGRAMN' has no legal load.
-WARNING - synthesis: logical net 'INITN' has no load.
-WARNING - synthesis: input pad net 'INITN' has no legal load.
-WARNING - synthesis: logical net 'DONE' has no load.
-WARNING - synthesis: input pad net 'DONE' has no legal load.
-WARNING - synthesis: DRC complete with 26 warnings.
+DRC complete with no errors or warnings
 
 Design Results:
-   1011 blocks expanded
+    157 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.

@@ -46,181 +46,6 @@
             <Severity>Info</Severity>
         </Message>
     </Task>
-    <Task name="Map">
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(23): Syntax error in &quot;LOCATE COMP &quot;cam_scl&quot; SITE &quot;A10&quot; ; IO_TYPE PORT &quot;cam_scl&quot; IO_TYPE=LVCMOS18 DRIVE=4 SLEWRATE=SLOW ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>23</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(24): Syntax error in &quot;LOCATE COMP &quot;cam_sda&quot; SITE &quot;B9&quot; ; IO_TYPE PORT &quot;cam_sda&quot; IO_TYPE=LVCMOS18 OPENDRAIN=ON ; &quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>24</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(80): Syntax error in &quot;LOCATE COMP &quot;ESP_D[0]&quot; SITE &quot;E2&quot; ;IO_TYPE PORT &quot;ESP_D[0]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>80</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(81): Syntax error in &quot;LOCATE COMP &quot;ESP_D[1]&quot; SITE &quot;E1&quot; ;IO_TYPE PORT &quot;ESP_D[1]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>81</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(82): Syntax error in &quot;LOCATE COMP &quot;ESP_D[2]&quot; SITE &quot;F2&quot; ;IO_TYPE PORT &quot;ESP_D[2]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>82</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(83): Syntax error in &quot;LOCATE COMP &quot;ESP_D[3]&quot; SITE &quot;F3&quot; ;IO_TYPE PORT &quot;ESP_D[3]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>83</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(84): Syntax error in &quot;LOCATE COMP &quot;ESP_D[4]&quot; SITE &quot;G2&quot; ;IO_TYPE PORT &quot;ESP_D[4]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>84</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(85): Syntax error in &quot;LOCATE COMP &quot;ESP_D[5]&quot; SITE &quot;G1&quot; ;IO_TYPE PORT &quot;ESP_D[5]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>85</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(86): Syntax error in &quot;LOCATE COMP &quot;ESP_D[6]&quot; SITE &quot;J1&quot; ;IO_TYPE PORT &quot;ESP_D[6]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>86</Navigation>
-        </Message>
-        <Message>
-            <ID>1101060</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(87): Syntax error in &quot;LOCATE COMP &quot;ESP_D[7]&quot; SITE &quot;J2&quot; ;IO_TYPE PORT &quot;ESP_D[7]&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
-            <Dynamic>IO_TYPE</Dynamic>
-            <Navigation>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Navigation>
-            <Navigation>87</Navigation>
-        </Message>
-        <Message>
-            <ID>1104062</ID>
-            <Severity>Warning</Severity>
-            <Dynamic></Dynamic>
-            <Dynamic>10 syntax errors</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001209</ID>
-            <Severity>Error</Severity>
-            <Dynamic>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>cam_scl</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>cam_sda</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[7]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[6]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[5]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[4]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[3]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[2]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[1]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>PROGRAMN</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>INITN</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>DONE</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001088</ID>
-            <Severity>Info</Severity>
-        </Message>
-    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -231,512 +56,230 @@
             <Severity>Info</Severity>
         </Message>
         <Message>
-            <ID>35901208</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(75): </Dynamic>
-            <Dynamic>3</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v</Navigation>
-            <Navigation>75</Navigation>
-        </Message>
-        <Message>
-            <ID>35901208</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(76): </Dynamic>
-            <Dynamic>3</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v</Navigation>
-            <Navigation>76</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(5): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13): </Dynamic>
             <Dynamic>fpga_top</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>5</Navigation>
+            <Navigation>13</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/pll_24m/pll_24m.v(8): </Dynamic>
-            <Dynamic>pll_24m</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/pll_24m/pll_24m.v</Navigation>
-            <Navigation>8</Navigation>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(238): </Dynamic>
+            <Dynamic>camera_capture_stub</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>238</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(278): </Dynamic>
-            <Dynamic>IB</Dynamic>
-            <Navigation>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>278</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(757): </Dynamic>
-            <Dynamic>VHI</Dynamic>
-            <Navigation>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>757</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(761): </Dynamic>
-            <Dynamic>VLO</Dynamic>
-            <Navigation>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>761</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(1696): </Dynamic>
-            <Dynamic>EHXPLLL(CLKFB_DIV=4,CLKOP_DIV=6,CLKOS_DIV=24,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOS_ENABLE=&quot;ENABLED&quot;,CLKOP_CPHASE=5,CLKOS_CPHASE=23,CLKOP_TRIM_POL=&quot;FALLING&quot;,CLKOS_TRIM_POL=&quot;FALLING&quot;)</Dynamic>
-            <Navigation>C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>1696</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(2): </Dynamic>
-            <Dynamic>pixel_assemble_rgb565</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v</Navigation>
-            <Navigation>2</Navigation>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(271): </Dynamic>
+            <Dynamic>sccb_i2c_master_stub</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>271</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v(52): </Dynamic>
-            <Dynamic>frame_end_38</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/pixel_assemble_rgb565.v</Navigation>
-            <Navigation>52</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_tracker_motion.v(4): </Dynamic>
-            <Dynamic>roi_tracker_motion</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_tracker_motion.v</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(7): </Dynamic>
-            <Dynamic>sdram_ctrl_min</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v</Navigation>
-            <Navigation>7</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/dc_fifo.v(4): </Dynamic>
-            <Dynamic>dc_fifo(WIDTH=16,DEPTH=512)</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/dc_fifo.v</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v(2): </Dynamic>
-            <Dynamic>roi_streamer_rgb565</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_streamer_rgb565.v</Navigation>
-            <Navigation>2</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/dc_fifo.v(4): </Dynamic>
-            <Dynamic>dc_fifo(DEPTH=2048)</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/dc_fifo.v</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v(4): </Dynamic>
-            <Dynamic>spi_bridge</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/spi_bridge.v</Navigation>
-            <Navigation>4</Navigation>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(294): </Dynamic>
+            <Dynamic>sda_oe_9</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>294</Navigation>
         </Message>
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(184): </Dynamic>
-            <Dynamic>roi_valid_spi_42</Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(294): </Dynamic>
+            <Dynamic>scl_8</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>184</Navigation>
+            <Navigation>294</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>cam_scl</Dynamic>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(300): </Dynamic>
+            <Dynamic>sdram_controller_stub</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>300</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7]</Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(357): </Dynamic>
+            <Dynamic>sd_cs_n_23</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>357</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[6]</Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(357): </Dynamic>
+            <Dynamic>sd_dq_oe_31</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>357</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>ESP_D[5]</Dynamic>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(363): </Dynamic>
+            <Dynamic>esp32_link_stub</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>363</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[4]</Dynamic>
+            <Dynamic>12</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[3]</Dynamic>
+            <Dynamic>11</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[2]</Dynamic>
+            <Dynamic>10</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[1]</Dynamic>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>PROGRAMN</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>INITN</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DONE</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
             <Dynamic>7</Dynamic>
-            <Dynamic>\u_roi/lastY</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
             <Dynamic>6</Dynamic>
-            <Dynamic>\u_roi/lastY</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35935014</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(224): </Dynamic>
-            <Dynamic>\u_sdram/SD_CS_N_168</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v</Navigation>
-            <Navigation>224</Navigation>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35001774</ID>
-            <Severity>Info</Severity>
-            <Dynamic>\u_spi/byte_phase</Dynamic>
-            <Dynamic>one-hot</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001774</ID>
-            <Severity>Info</Severity>
-            <Dynamic>\u_sdram/state</Dynamic>
-            <Dynamic>one-hot</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>cam_scl</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>cam_sda</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[7]</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[6]</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[5]</Dynamic>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\u_sdram/sd_a</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[4]</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\u_sdram/sd_ba</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[3]</Dynamic>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\u_sdram/sd_ba</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[2]</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\u_sdram/sd_dqm</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[1]</Dynamic>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\u_sdram/sd_dqm</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>ESP_D[0]</Dynamic>
+            <Dynamic>15</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>PROGRAMN</Dynamic>
+            <Dynamic>14</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>INITN</Dynamic>
+            <Dynamic>13</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>DONE</Dynamic>
+            <Dynamic>12</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
-            <ID>35001263</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>CRYSTAL</Dynamic>
+            <Dynamic>11</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
-            <ID>35935013</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_tracker_motion.v(69): </Dynamic>
-            <Dynamic>\u_roi/roi_xmin_i0</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/roi_tracker_motion.v</Navigation>
-            <Navigation>69</Navigation>
+            <Dynamic>10</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
-            <ID>35935013</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v(223): </Dynamic>
-            <Dynamic>\u_sdram/state_FSM_i1</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_min.v</Navigation>
-            <Navigation>223</Navigation>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
-            <ID>35935013</ID>
+            <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(165): </Dynamic>
-            <Dynamic>roi_xmax_lat_i0_i0</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>165</Navigation>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(184): </Dynamic>
-            <Dynamic>roi_xmin_spi_i0_i11</Dynamic>
-            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>184</Navigation>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\u_sdram/sd_dq_out</Dynamic>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>cam_scl</Dynamic>
-            <Navigation>cam_scl</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>cam_scl</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>cam_sda</Dynamic>
-            <Navigation>cam_sda</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>cam_sda</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[7]</Dynamic>
-            <Navigation>ESP_D[7]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[7]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[6]</Dynamic>
-            <Navigation>ESP_D[6]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[6]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[5]</Dynamic>
-            <Navigation>ESP_D[5]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[5]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[4]</Dynamic>
-            <Navigation>ESP_D[4]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[4]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[3]</Dynamic>
-            <Navigation>ESP_D[3]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[3]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[2]</Dynamic>
-            <Navigation>ESP_D[2]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[2]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[1]</Dynamic>
-            <Navigation>ESP_D[1]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[1]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>ESP_D[0]</Dynamic>
-            <Navigation>ESP_D[0]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>ESP_D[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>PROGRAMN</Dynamic>
-            <Navigation>PROGRAMN</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>PROGRAMN</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>INITN</Dynamic>
-            <Navigation>INITN</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>INITN</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>DONE</Dynamic>
-            <Navigation>DONE</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>DONE</Dynamic>
-        </Message>
-        <Message>
-            <ID>1163101</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>26</Dynamic>
         </Message>
     </Task>
     <Task name="TimingSimFileVHD">
