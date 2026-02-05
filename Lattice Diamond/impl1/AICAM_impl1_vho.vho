@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.14.0.75.2
 
 -- ldbanno -n VHDL -o AICAM_impl1_vho.vho -w -neg -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1.ncd 
--- Netlist created on Wed Feb 04 08:15:35 2026
--- Netlist written on Wed Feb 04 08:15:53 2026
+-- Netlist created on Wed Feb 04 22:56:27 2026
+-- Netlist written on Wed Feb 04 22:57:00 2026
 -- Design is for device LFE5U-25F
 -- Design is for package CABGA256
 -- Design is for performance grade 6

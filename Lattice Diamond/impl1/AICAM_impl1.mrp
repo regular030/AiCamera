@@ -15,7 +15,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  02/04/26  08:15:35
+Mapped on:  02/04/26  22:56:27
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  fpga_top                                      Date:  02/04/26  08:15:35
+Design:  fpga_top                                      Date:  02/04/26  22:56:27
 
 Design Summary (cont)
 ---------------------
@@ -106,25 +106,25 @@ Design Summary (cont)
 
 
 
-   Number of warnings:  0
+   Number of warnings:  4
    Number of errors:    0
      
 
 Design Errors/Warnings
 ----------------------
 
-   No errors or warnings present.
+WARNING - map: SD_A_pad_10/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: SD_A_pad_0/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: DOUT_pad/IOBUF has conflicing BANK and VCCIO settings, which will
+     be ignored
+WARNING - map: DIN_pad/IOBUF has conflicing BANK and VCCIO settings, which will
+     be ignored
 
 IO (PIO) Attributes
 -------------------
 
-+---------------------+-----------+-----------+------------+
-| IO Name             | Direction | Levelmode | IO         |
-|                     |           |  IO_TYPE  | Register   |
-+---------------------+-----------+-----------+------------+
-| cam_sda             | OUTPUT    | LVCMOS18  |            |
-+---------------------+-----------+-----------+------------+
-| cam_scl             | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 
                                     Page 2
@@ -132,10 +132,17 @@ IO (PIO) Attributes
 
 
 
-Design:  fpga_top                                      Date:  02/04/26  08:15:35
+Design:  fpga_top                                      Date:  02/04/26  22:56:27
 
 IO (PIO) Attributes (cont)
 --------------------------
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| cam_sda             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| cam_scl             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
 | MCLK                | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | SD_DQ[15]           | OUTPUT    | LVCMOS33  |            |
@@ -185,6 +192,16 @@ IO (PIO) Attributes (cont)
 | SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_A[12]            | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 3
+
+
+
+
+Design:  fpga_top                                      Date:  02/04/26  22:56:27
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | SD_A[11]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -192,16 +209,6 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | SD_A[9]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
-                                    Page 3
-
-
-
-
-Design:  fpga_top                                      Date:  02/04/26  08:15:35
-
-IO (PIO) Attributes (cont)
---------------------------
 | SD_A[8]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_A[7]             | OUTPUT    | LVCMOS33  |            |
@@ -251,6 +258,16 @@ IO (PIO) Attributes (cont)
 | PCLK                | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | Y9                  | INPUT     | LVCMOS18  |            |
+
+                                    Page 4
+
+
+
+
+Design:  fpga_top                                      Date:  02/04/26  22:56:27
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | Y8                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
@@ -258,16 +275,6 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | Y6                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
-
-                                    Page 4
-
-
-
-
-Design:  fpga_top                                      Date:  02/04/26  08:15:35
-
-IO (PIO) Attributes (cont)
---------------------------
 | Y5                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | Y4                  | INPUT     | LVCMOS18  |            |
@@ -302,16 +309,9 @@ Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
-   Total REAL Time: 0 secs  
-   Peak Memory Usage: 112 MB
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 113 MB
         
-
-
-
-
-
-
-
 
 
 

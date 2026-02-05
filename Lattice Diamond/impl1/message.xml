@@ -46,6 +46,28 @@
             <Severity>Info</Severity>
         </Message>
     </Task>
+    <Task name="Map">
+        <Message>
+            <ID>52101276</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>SD_A_pad_10/IOBUF</Dynamic>
+        </Message>
+        <Message>
+            <ID>52101276</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>SD_A_pad_0/IOBUF</Dynamic>
+        </Message>
+        <Message>
+            <ID>52101276</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>DOUT_pad/IOBUF</Dynamic>
+        </Message>
+        <Message>
+            <ID>52101276</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>DIN_pad/IOBUF</Dynamic>
+        </Message>
+    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
