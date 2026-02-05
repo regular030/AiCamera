@@ -1,0 +1,4 @@
+Time for reading traces: 0.405
+Memory usage for storing traces: 11832
+Time for reading plane edges: 0.498
+Memory usage for storing plane edges: 19660

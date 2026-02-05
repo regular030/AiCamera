@@ -1,0 +1,53 @@
+$begin 'ProfileUpdate'
+	Id=''
+	Type='Start'
+	$begin 'ProfileItem'
+		Name='Postprocessing'
+		RealTime=0
+		RealTimeUsecs=0
+		CpuTime=0
+		CpuTimeUsecs=0
+		MemoryInK=0
+		HasData=false
+		UseData=true
+	$end 'ProfileItem'
+	Parents[0:]
+	GroupOptions=0
+	TaskDataOptions()
+$end 'ProfileUpdate'
+$begin 'ProfileUpdate'
+	Id=''
+	Type='Task'
+	$begin 'ProfileItem'
+		Name='Passivity enforcement only'
+		RealTime=0
+		RealTimeUsecs=0
+		CpuTime=1
+		CpuTimeUsecs=0
+		MemoryInK=3209076
+		I(0, '')
+		HasData=true
+		UseData=true
+	$end 'ProfileItem'
+	Parents[1: 'Postprocessing']
+	GroupOptions=0
+	TaskDataOptions()
+$end 'ProfileUpdate'
+$begin 'ProfileUpdate'
+	Id=''
+	Type='Stop'
+	$begin 'ProfileItem'
+		Name=''
+		RealTime=0
+		RealTimeUsecs=0
+		CpuTime=0
+		CpuTimeUsecs=0
+		MemoryInK=0
+		I(0, '')
+		HasData=false
+		UseData=true
+	$end 'ProfileItem'
+	Parents[1: 'Postprocessing']
+	GroupOptions=0
+	TaskDataOptions()
+$end 'ProfileUpdate'

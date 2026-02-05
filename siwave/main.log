@@ -1,19 +1,93 @@
---------------------- Wed Feb  4 06:31:07 2026 ---------------------
+--------------------- Thu Feb  5 05:16:00 2026 ---------------------
 
 Creating SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.log
 Ansys(R) SIwave 2025 R2 (Build 2025-05-16 12:03:40)
 OS: Windows Server 2025 Standard  (Build 26100)
 
 Saved C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.siw
+Launching Ansys Electronics Desktop; please wait...done.
+Launching Ansys Electronics Desktop; please wait...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+Simulating data for S-parameter link...
 
 
---------------------- Wed Feb  4 06:35:40 2026 ---------------------
+--------------------- Thu Feb  5 05:59:53 2026 ---------------------
 
-Appending to SIwave session log main.log
-Reading DC solution data...
-Reading voltage probe data...done.
-Reading element data...done.
-Read DC coefficient file C:\Program Files\AnsysEM\v242\Win64\dc_coeff.txt
-Read DC coefficient file C:\Program Files\AnsysEM\v242\Win64\dc_coeff.txt
-Read DC coefficient file C:\Program Files\AnsysEM\v242\Win64\dc_coeff.txt
-Building near field surface plot(s)...
+Appending to SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.log
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.siw
+SIwave GUI is running in interactive mode.
+Launching Ansys Electronics Desktop; please wait...done.
+Launching Ansys Electronics Desktop; please wait...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+Simulating data for S-parameter link...
+
+
+--------------------- Thu Feb  5 06:34:05 2026 ---------------------
+
+Appending to SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.log
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.siw
+SIwave GUI is running in interactive mode.
+Launching Ansys Electronics Desktop; please wait...done.
+Launching Ansys Electronics Desktop; please wait...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+Simulating data for S-parameter link...
+
+
+--------------------- Thu Feb  5 07:09:27 2026 ---------------------
+
+Appending to SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.log
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.siw
+SIwave GUI is running in interactive mode.
+Launching Ansys Electronics Desktop; please wait...done.
+Launching Ansys Electronics Desktop; please wait...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+Simulating data for S-parameter link...
+
+
+--------------------- Thu Feb  5 07:47:28 2026 ---------------------
+
+Appending to SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.log
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.siw
+SIwave GUI is running in interactive mode.
+CE element data saved to C:\Users\kunshpreetbaweja\github\AiCamera\siwave\CED- 8am.ce
+Launching Ansys Electronics Desktop; please wait...done.
+Launching Ansys Electronics Desktop; please wait...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+Sending configurable data for sparam link...done.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+SIwave GUI is running in interactive mode.
+Simulating data for S-parameter link...
+
+
+--------------------- Thu Feb  5 08:11:05 2026 ---------------------
+
+Appending to SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.log
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\siwave\main.siw
+SIwave GUI is running in interactive mode.

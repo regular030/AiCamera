@@ -17,7 +17,7 @@ B_FLOW_GEN_CIRCUIT_ELEMENTS
   "AP63200WU-7" "U7" "Current Source" "Distributed Current" "0.4A" "+5V" "GND"
   "AMS1117-1.8_C6185" "U8" "Voltage Source" "NA" "1.8V" "+1V8" "GND"
   "AMS1117-1.8_C6185" "U8" "Current Source" "Distributed Current" "0.4A" "+5V" "GND"
-  "XOS32024000LT00351005" "U9" "Current Source" "Distributed Current" "1A" "+3V3" "GND"
+  "XOS32024000LT00351005" "U9" "Current Source" "Distributed Current" "0.05A" "+3V3" "GND"
   "AP63200WU-7" "U12" "Current Source" "Distributed Current" "0.16A" "+5V" "GND"
   "TYPE-C16PIN" "USB1" "Voltage Source" "NA" "5V" "+5V" "GND"
 E_FLOW_GEN_CIRCUIT_ELEMENTS

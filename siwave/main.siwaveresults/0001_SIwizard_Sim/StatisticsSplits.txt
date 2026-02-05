@@ -1,0 +1,11 @@
+-------
+GENERAL
+-------
+
+Number of splits    : 78
+
+----------------
+SPLIT STATISTICS
+----------------
+
+78 splits have 2 planes
