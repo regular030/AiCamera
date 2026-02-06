@@ -88,66 +88,74 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(238): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(334): </Dynamic>
             <Dynamic>camera_capture_stub</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>238</Navigation>
+            <Navigation>334</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(271): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(367): </Dynamic>
             <Dynamic>sccb_i2c_master_stub</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>271</Navigation>
+            <Navigation>367</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(294): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): </Dynamic>
             <Dynamic>sda_oe_9</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>294</Navigation>
+            <Navigation>390</Navigation>
         </Message>
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(294): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): </Dynamic>
             <Dynamic>scl_8</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>294</Navigation>
+            <Navigation>390</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(300): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(396): </Dynamic>
             <Dynamic>sdram_controller_stub</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>300</Navigation>
+            <Navigation>396</Navigation>
         </Message>
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(357): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): </Dynamic>
             <Dynamic>sd_cs_n_23</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>357</Navigation>
+            <Navigation>453</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(357): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): </Dynamic>
             <Dynamic>sd_dq_oe_31</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>357</Navigation>
+            <Navigation>453</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(363): </Dynamic>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(459): </Dynamic>
             <Dynamic>esp32_link_stub</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
-            <Navigation>363</Navigation>
+            <Navigation>459</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(508): </Dynamic>
+            <Dynamic>sdio_cam_writer_example</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>508</Navigation>
         </Message>
         <Message>
             <ID>35001747</ID>
@@ -252,6 +260,74 @@
             <Dynamic>\u_sdram/sd_dqm</Dynamic>
         </Message>
         <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): </Dynamic>
+            <Dynamic>\u_sdio_cam/d1_out_205</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>765</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\u_sdio_cam/state</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>47</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>46</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>45</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>44</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>43</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>42</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>41</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>40</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\u_sdio_cam/cmd_frame</Dynamic>
+        </Message>
+        <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
             <Dynamic>15</Dynamic>
@@ -298,6 +374,22 @@
             <Severity>Warning</Severity>
             <Dynamic>8</Dynamic>
             <Dynamic>\u_sdram/sd_dq_out</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): </Dynamic>
+            <Dynamic>\u_sdio_cam/d3_oe_208</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>765</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(763): </Dynamic>
+            <Dynamic>\u_sdio_cam/state_FSM_i1</Dynamic>
+            <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v</Navigation>
+            <Navigation>763</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

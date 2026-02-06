@@ -15,24 +15,24 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  02/04/26  22:56:27
+Mapped on:  02/06/26  05:11:04
 
 Design Summary
 --------------
 
-   Number of registers:     56 out of 24879 (0%)
-      PFU registers:           56 out of 24288 (0%)
+   Number of registers:   4284 out of 24879 (17%)
+      PFU registers:         4284 out of 24288 (18%)
       PIO registers:            0 out of   591 (0%)
-   Number of SLICEs:        39 out of 12144 (0%)
-      SLICEs as Logic/ROM:     39 out of 12144 (0%)
+   Number of SLICEs:      3641 out of 12144 (30%)
+      SLICEs as Logic/ROM:   3641 out of 12144 (30%)
       SLICEs as RAM:            0 out of  9108 (0%)
-      SLICEs as Carry:          9 out of 12144 (0%)
-   Number of LUT4s:         40 out of 24288 (0%)
-      Number used as logic LUTs:         22
+      SLICEs as Carry:         35 out of 12144 (0%)
+   Number of LUT4s:        3038 out of 24288 (13%)
+      Number used as logic LUTs:        2968
       Number used as distributed RAM:     0
-      Number used as ripple logic:       18
+      Number used as ripple logic:       70
       Number used as shift registers:     0
-   Number of PIO sites used: 65 out of 197 (33%)
+   Number of PIO sites used: 71 out of 197 (36%)
    Number of block RAMs:  0 out of 56 (0%)
    Number of GSRs:  0 out of 1 (0%)
    JTAG used :      No
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  fpga_top                                      Date:  02/04/26  22:56:27
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
 
 Design Summary (cont)
 ---------------------
@@ -78,30 +78,656 @@ Design Summary (cont)
    Number of Used DSP ALU Sites:  0 out of 28 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
    Number of clocks:  3
-     Net CRYSTAL_c: 22 loads, 22 rising, 0 falling (Driver: PIO CRYSTAL )
+     Net CRYSTAL_c: 2140 loads, 2140 rising, 0 falling (Driver: PIO CRYSTAL )
+     Net PCLK_c: 11 loads, 11 rising, 0 falling (Driver: PIO PCLK )
      Net CCLK_c: 6 loads, 6 rising, 0 falling (Driver: PIO CCLK )
-     Net PCLK_c: 6 loads, 6 rising, 0 falling (Driver: PIO PCLK )
-   Number of Clock Enables:  4
+   Number of Clock Enables:  530
      Net cam_pixel_valid: 4 loads, 4 LSLICEs
-     Net rst_n_N_38: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_16: 4 loads, 4 LSLICEs
+     Net rst_n_N_46: 1 loads, 1 LSLICEs
      Net rst_n: 9 loads, 9 LSLICEs
-     Net PCLK_c_enable_8: 4 loads, 4 LSLICEs
-   Number of LSRs:  3
-     Net rst_n: 17 loads, 17 LSLICEs
-     Net n367: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_9: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_4166: 3 loads, 3 LSLICEs
+     Net CRYSTAL_c_enable_4110: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_1: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_4205: 17 loads, 17 LSLICEs
+     Net CRYSTAL_c_enable_4228: 7 loads, 7 LSLICEs
+     Net CRYSTAL_c_enable_4174: 6 loads, 6 LSLICEs
+     Net CRYSTAL_c_enable_4224: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_4225: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_4222: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_4162: 3 loads, 3 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2: 1 loads, 1 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4223: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4149: 20 loads, 20 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_25: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_33: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_41: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_49: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_57: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_65: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_73: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_81: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_89: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_97: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_121: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_225: 4 loads, 4 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_361: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_457: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_561: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_673: 4 loads, 4 LSLICEs
+
+                                    Page 3
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_809: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_905: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1009: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1121: 4 loads, 4 LSLICEs
+
+                                    Page 4
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_1129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1225: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1361: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1457: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1561: 4 loads, 4 LSLICEs
+
+                                    Page 5
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_1569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1673: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1809: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1905: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2009: 4 loads, 4 LSLICEs
+
+                                    Page 6
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_2017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2121: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2225: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2361: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2457: 4 loads, 4 LSLICEs
+
+                                    Page 7
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_2465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2561: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2673: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2809: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2905: 4 loads, 4 LSLICEs
+
+                                    Page 8
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_2913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3009: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3121: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3225: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3361: 4 loads, 4 LSLICEs
+
+                                    Page 9
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_3369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3457: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3561: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3673: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3809: 4 loads, 4 LSLICEs
+
+                                   Page 10
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+Design Summary (cont)
+---------------------
+     Net u_sdio_cam/CRYSTAL_c_enable_3817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3905: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4009: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4112: 1 loads, 1 LSLICEs
+   Number of LSRs:  5
+     Net n4063: 1 loads, 1 LSLICEs
+     Net rst_n: 64 loads, 64 LSLICEs
      Net SSPI_CS_n_c: 1 loads, 1 LSLICEs
+     Net n3512: 2 loads, 2 LSLICEs
+     Net u_sdio_cam/n733: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net rst_n: 29 loads
-     Net esp_d_oe: 8 loads
-     Net SSPI_CS_n_c: 8 loads
-     Net cam_pixel_valid: 6 loads
-     Net mclk_div_cnt_0: 4 loads
-     Net PCLK_c_enable_8: 4 loads
-     Net cam_pixel_0: 3 loads
-     Net cam_pixel_1: 3 loads
-     Net cam_pixel_2: 3 loads
-     Net cam_pixel_3: 3 loads
+     Net rd_byte_0: 1000 loads
+     Net rd_byte_1: 1000 loads
+     Net u_sdio_cam/maxfan_replicated_net_999: 1000 loads
+     Net rd_byte_2: 516 loads
+     Net cam_byte_hold_0: 512 loads
+     Net cam_byte_hold_1: 512 loads
+     Net cam_byte_hold_2: 512 loads
+     Net cam_byte_hold_3: 512 loads
+     Net cam_byte_hold_4: 512 loads
+     Net cam_byte_hold_5: 512 loads
+
+                                   Page 11
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
 
 
 
@@ -126,16 +752,6 @@ IO (PIO) Attributes
 -------------------
 
 +---------------------+-----------+-----------+------------+
-
-                                    Page 2
-
-
-
-
-Design:  fpga_top                                      Date:  02/04/26  22:56:27
-
-IO (PIO) Attributes (cont)
---------------------------
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
@@ -144,6 +760,8 @@ IO (PIO) Attributes (cont)
 | cam_scl             | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | MCLK                | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| M_D0                | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_DQ[15]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -168,6 +786,16 @@ IO (PIO) Attributes (cont)
 | SD_DQ[5]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_DQ[4]            | OUTPUT    | LVCMOS33  |            |
+
+                                   Page 12
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | SD_DQ[3]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -192,16 +820,6 @@ IO (PIO) Attributes (cont)
 | SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_A[12]            | OUTPUT    | LVCMOS33  |            |
-
-                                    Page 3
-
-
-
-
-Design:  fpga_top                                      Date:  02/04/26  22:56:27
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | SD_A[11]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -234,6 +852,16 @@ IO (PIO) Attributes (cont)
 | DOUT                | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | ESP_D[7]            | OUTPUT    | LVCMOS33  |            |
+
+                                   Page 13
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | ESP_D[6]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -249,6 +877,16 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | ESP_D[0]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| M_CMD               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_D1                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_D2                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_D3                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_CLK               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
 | CRYSTAL             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | VSYNC               | INPUT     | LVCMOS18  |            |
@@ -258,16 +896,6 @@ IO (PIO) Attributes (cont)
 | PCLK                | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | Y9                  | INPUT     | LVCMOS18  |            |
-
-                                    Page 4
-
-
-
-
-Design:  fpga_top                                      Date:  02/04/26  22:56:27
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | Y8                  | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
@@ -290,27 +918,52 @@ IO (PIO) Attributes (cont)
 | SSPI_CS_n           | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 
+
+                                   Page 14
+
+
+
+
+Design:  fpga_top                                      Date:  02/06/26  05:11:04
+
 Removed logic
 -------------
 
 Block GSR_INST undriven or does not drive anything - clipped.
-Signal CRYSTAL_c_enable_16 was merged into signal rst_n
-Signal n338 was merged into signal esp_d_oe
-Signal por_cnt_130_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal por_cnt_130_add_4_1/CI undriven or does not drive anything - clipped.
-Signal por_cnt_130_add_4_17/S1 undriven or does not drive anything - clipped.
-Signal por_cnt_130_add_4_17/CO undriven or does not drive anything - clipped.
-Block u_esp/rst_n_I_0_1_lut_rep_4 was optimized away.
-Block i173_1_lut was optimized away.
+Signal u_sdio_cam/n21475 was merged into signal u_sdio_cam/cmd_bit_1
+Signal CRYSTAL_c_enable_4220 was merged into signal rst_n
+Signal n1248 was merged into signal cmd_oe
+Signal n1242 was merged into signal esp_d_oe
+Signal n1222 was merged into signal d0_oe
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal _add_1_663_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_663_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_32/CO undriven or does not drive anything - clipped.
+Signal _add_1_660_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_660_add_4_1/CI undriven or does not drive anything - clipped.
+Signal por_cnt_383_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal por_cnt_383_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_660_add_4_9/CO undriven or does not drive anything - clipped.
+Signal por_cnt_383_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal por_cnt_383_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_663_add_4_9/CO undriven or does not drive anything - clipped.
+Block u_sdio_cam/i626_1_lut_rep_192 was optimized away.
+Block i2886_1_lut_rep_212 was optimized away.
+Block i698_1_lut was optimized away.
+Block i697_1_lut was optimized away.
+Block i672_1_lut was optimized away.
+Block i2 was optimized away.
 
      
 
 Run Time and Memory Usage
 -------------------------
 
-   Total CPU Time: 0 secs  
-   Total REAL Time: 2 secs  
-   Peak Memory Usage: 113 MB
+   Total CPU Time: 2 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 154 MB
         
 
 
@@ -325,7 +978,14 @@ Run Time and Memory Usage
 
 
 
-                                    Page 5
+
+
+
+
+
+
+
+                                   Page 15
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

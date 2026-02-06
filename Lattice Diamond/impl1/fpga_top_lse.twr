@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Feb 04 08:11:48 2026
+Fri Feb 06 05:11:02 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -44,7 +44,7 @@ Passed:  The following path meets requirements by 2.604ns
 L_CO        ---     0.365             CK to Q              \u_esp/shift_i0 (from CCLK_c)
 Route         1   e 1.020                                  \u_esp/shift[0]
 LUT4        ---     0.166              A to Z              \u_esp/shift_6__I_0_i2_3_lut
-Route         1   e 1.020                                  \u_esp/shift_6__N_133[1]
+Route         1   e 1.020                                  \u_esp/shift_6__N_154[1]
                   --------
                     2.571  (20.7% logic, 79.3% route), 2 logic levels.
 
@@ -70,7 +70,7 @@ Passed:  The following path meets requirements by 2.604ns
 L_CO        ---     0.365             CK to Q              \u_esp/shift_i1 (from CCLK_c)
 Route         1   e 1.020                                  \u_esp/shift[1]
 LUT4        ---     0.166              A to Z              \u_esp/shift_6__I_0_i3_3_lut
-Route         1   e 1.020                                  \u_esp/shift_6__N_133[2]
+Route         1   e 1.020                                  \u_esp/shift_6__N_154[2]
                   --------
                     2.571  (20.7% logic, 79.3% route), 2 logic levels.
 
@@ -96,7 +96,7 @@ Passed:  The following path meets requirements by 2.604ns
 L_CO        ---     0.365             CK to Q              \u_esp/shift_i2 (from CCLK_c)
 Route         1   e 1.020                                  \u_esp/shift[2]
 LUT4        ---     0.166              A to Z              \u_esp/shift_6__I_0_i4_3_lut
-Route         1   e 1.020                                  \u_esp/shift_6__N_133[3]
+Route         1   e 1.020                                  \u_esp/shift_6__N_154[3]
                   --------
                     2.571  (20.7% logic, 79.3% route), 2 logic levels.
 
@@ -105,108 +105,249 @@ Report: 2.396 ns is the maximum delay for this constraint.
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk1 [get_nets CRYSTAL_c]
-            208 items scored, 6 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets PCLK_c]
+            17 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 0.102ns
+Passed:  The following path meets requirements by 1.514ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3AX    CK             por_cnt_130__i4  (from CRYSTAL_c +)
-   Destination:    FD1P3AX    SP             rst_n_103  (to CRYSTAL_c +)
+   Source:         FD1S3IX    CK             \u_cam_cap/pixel_valid_18  (from PCLK_c +)
+   Destination:    FD1P3IX    SP             cam_byte_hold__i7  (to PCLK_c +)
 
-   Delay:                   5.181ns  (16.7% logic, 83.3% route), 4 logic levels.
+   Delay:                   3.565ns  (14.9% logic, 85.1% route), 2 logic levels.
 
  Constraint Details:
 
-      5.181ns data_path por_cnt_130__i4 to rst_n_103 violates
+      3.565ns data_path \u_cam_cap/pixel_valid_18 to cam_byte_hold__i7 meets
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.102ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 1.514ns
 
- Path Details: por_cnt_130__i4 to rst_n_103
+ Path Details: \u_cam_cap/pixel_valid_18 to cam_byte_hold__i7
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              por_cnt_130__i4 (from CRYSTAL_c)
-Route         2   e 1.258                                  por_cnt[4]
-LUT4        ---     0.166              A to Z              i6_2_lut
-Route         1   e 1.020                                  n22
-LUT4        ---     0.166              C to Z              i14_4_lut
-Route         1   e 1.020                                  n30
-LUT4        ---     0.166              C to Z              i201_4_lut
-Route         1   e 1.020                                  rst_n_N_38
+L_CO        ---     0.365             CK to Q              \u_cam_cap/pixel_valid_18 (from PCLK_c)
+Route        11   e 1.599                                  cam_pixel_valid
+LUT4        ---     0.166              B to Z              i391_2_lut_2_lut
+Route         8   e 1.435                                  PCLK_c_enable_16
                   --------
-                    5.181  (16.7% logic, 83.3% route), 4 logic levels.
+                    3.565  (14.9% logic, 85.1% route), 2 logic levels.
 
 
-Error:  The following path violates requirements by 0.102ns
+Passed:  The following path meets requirements by 1.514ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3AX    CK             por_cnt_130__i5  (from CRYSTAL_c +)
-   Destination:    FD1P3AX    SP             rst_n_103  (to CRYSTAL_c +)
+   Source:         FD1S3IX    CK             \u_cam_cap/pixel_valid_18  (from PCLK_c +)
+   Destination:    FD1P3IX    SP             cam_byte_hold__i6  (to PCLK_c +)
 
-   Delay:                   5.181ns  (16.7% logic, 83.3% route), 4 logic levels.
+   Delay:                   3.565ns  (14.9% logic, 85.1% route), 2 logic levels.
 
  Constraint Details:
 
-      5.181ns data_path por_cnt_130__i5 to rst_n_103 violates
+      3.565ns data_path \u_cam_cap/pixel_valid_18 to cam_byte_hold__i6 meets
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.102ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 1.514ns
 
- Path Details: por_cnt_130__i5 to rst_n_103
+ Path Details: \u_cam_cap/pixel_valid_18 to cam_byte_hold__i6
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              por_cnt_130__i5 (from CRYSTAL_c)
-Route         2   e 1.258                                  por_cnt[5]
-LUT4        ---     0.166              B to Z              i12_4_lut
-Route         1   e 1.020                                  n28
-LUT4        ---     0.166              B to Z              i14_4_lut
-Route         1   e 1.020                                  n30
-LUT4        ---     0.166              C to Z              i201_4_lut
-Route         1   e 1.020                                  rst_n_N_38
+L_CO        ---     0.365             CK to Q              \u_cam_cap/pixel_valid_18 (from PCLK_c)
+Route        11   e 1.599                                  cam_pixel_valid
+LUT4        ---     0.166              B to Z              i391_2_lut_2_lut
+Route         8   e 1.435                                  PCLK_c_enable_16
                   --------
-                    5.181  (16.7% logic, 83.3% route), 4 logic levels.
+                    3.565  (14.9% logic, 85.1% route), 2 logic levels.
 
 
-Error:  The following path violates requirements by 0.102ns
+Passed:  The following path meets requirements by 1.514ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3AX    CK             por_cnt_130__i7  (from CRYSTAL_c +)
-   Destination:    FD1P3AX    SP             rst_n_103  (to CRYSTAL_c +)
+   Source:         FD1S3IX    CK             \u_cam_cap/pixel_valid_18  (from PCLK_c +)
+   Destination:    FD1P3IX    SP             cam_byte_hold__i5  (to PCLK_c +)
 
-   Delay:                   5.181ns  (16.7% logic, 83.3% route), 4 logic levels.
+   Delay:                   3.565ns  (14.9% logic, 85.1% route), 2 logic levels.
 
  Constraint Details:
 
-      5.181ns data_path por_cnt_130__i7 to rst_n_103 violates
+      3.565ns data_path \u_cam_cap/pixel_valid_18 to cam_byte_hold__i5 meets
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.102ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 1.514ns
 
- Path Details: por_cnt_130__i7 to rst_n_103
+ Path Details: \u_cam_cap/pixel_valid_18 to cam_byte_hold__i5
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              por_cnt_130__i7 (from CRYSTAL_c)
-Route         2   e 1.258                                  por_cnt[7]
-LUT4        ---     0.166              C to Z              i12_4_lut
-Route         1   e 1.020                                  n28
-LUT4        ---     0.166              B to Z              i14_4_lut
-Route         1   e 1.020                                  n30
-LUT4        ---     0.166              C to Z              i201_4_lut
-Route         1   e 1.020                                  rst_n_N_38
+L_CO        ---     0.365             CK to Q              \u_cam_cap/pixel_valid_18 (from PCLK_c)
+Route        11   e 1.599                                  cam_pixel_valid
+LUT4        ---     0.166              B to Z              i391_2_lut_2_lut
+Route         8   e 1.435                                  PCLK_c_enable_16
                   --------
-                    5.181  (16.7% logic, 83.3% route), 4 logic levels.
+                    3.565  (14.9% logic, 85.1% route), 2 logic levels.
 
-Warning: 5.102 ns is the maximum delay for this constraint.
+Report: 3.486 ns is the maximum delay for this constraint.
 
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets PCLK_c]
-            0 items scored, 0 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets CRYSTAL_c]
+            1166 items scored, 1166 timing errors detected.
 --------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.908ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_sdio_cam/rd_byte__i0_rep_227  (from CRYSTAL_c +)
+   Destination:    FD1P3AX    D              \u_sdio_cam/d0_out_203  (to CRYSTAL_c +)
+
+   Delay:                  13.083ns  (17.4% logic, 82.6% route), 14 logic levels.
+
+ Constraint Details:
+
+     13.083ns data_path \u_sdio_cam/rd_byte__i0_rep_227 to \u_sdio_cam/d0_out_203 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.908ns
+
+ Path Details: \u_sdio_cam/rd_byte__i0_rep_227 to \u_sdio_cam/d0_out_203
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_sdio_cam/rd_byte__i0_rep_227 (from CRYSTAL_c)
+Route       1000   e 1.550                                  \u_sdio_cam/maxfan_replicated_net_999
+LUT4        ---     0.166              C to Z              \u_sdio_cam/i16786_3_lut
+Route         1   e 0.020                                  \u_sdio_cam/n17480
+MUXL5       ---     0.116           BLUT to Z              \u_sdio_cam/i16802
+Route         1   e 0.020                                  \u_sdio_cam/n17496
+MUXL5       ---     0.116             D0 to Z              \u_sdio_cam/i16810
+Route         1   e 1.020                                  \u_sdio_cam/n17504
+MUXL5       ---     0.116             D0 to Z              \u_sdio_cam/i16814
+Route         1   e 1.020                                  \u_sdio_cam/n17508
+LUT4        ---     0.166              A to Z              \u_sdio_cam/i16816_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/n17510
+LUT4        ---     0.166              B to Z              \u_sdio_cam/rd_byte[5]_bdd_4_lut_22436
+Route         1   e 1.020                                  \u_sdio_cam/n21334
+LUT4        ---     0.166              A to Z              \u_sdio_cam/n21334_bdd_4_lut
+Route         1   e 1.020                                  \u_sdio_cam/n21337
+LUT4        ---     0.166              C to Z              \u_sdio_cam/n21325_bdd_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/n21354
+LUT4        ---     0.166              A to Z              \u_sdio_cam/n21352_bdd_3_lut_22500
+Route         1   e 0.020                                  \u_sdio_cam/n21359
+MUXL5       ---     0.116           BLUT to Z              \u_sdio_cam/i22445
+Route         1   e 0.020                                  \u_sdio_cam/n21360
+MUXL5       ---     0.116             D0 to Z              \u_sdio_cam/i22447
+Route         1   e 1.020                                  \u_sdio_cam/n21361
+LUT4        ---     0.166              A to Z              \u_sdio_cam/i16304_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/d0_out_N_426[0]
+LUT4        ---     0.166              C to Z              \u_sdio_cam/i1_4_lut_adj_170
+Route         1   e 1.020                                  \u_sdio_cam/n9501
+                  --------
+                   13.083  (17.4% logic, 82.6% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 7.908ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_sdio_cam/rd_byte__i0_rep_227  (from CRYSTAL_c +)
+   Destination:    FD1P3AX    D              \u_sdio_cam/d0_out_203  (to CRYSTAL_c +)
+
+   Delay:                  13.083ns  (17.4% logic, 82.6% route), 14 logic levels.
+
+ Constraint Details:
+
+     13.083ns data_path \u_sdio_cam/rd_byte__i0_rep_227 to \u_sdio_cam/d0_out_203 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.908ns
+
+ Path Details: \u_sdio_cam/rd_byte__i0_rep_227 to \u_sdio_cam/d0_out_203
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_sdio_cam/rd_byte__i0_rep_227 (from CRYSTAL_c)
+Route       1000   e 1.550                                  \u_sdio_cam/maxfan_replicated_net_999
+LUT4        ---     0.166              C to Z              \u_sdio_cam/i16695_3_lut
+Route         1   e 0.020                                  \u_sdio_cam/n17389
+MUXL5       ---     0.116           BLUT to Z              \u_sdio_cam/i16710
+Route         1   e 0.020                                  \u_sdio_cam/n17404
+MUXL5       ---     0.116             D1 to Z              \u_sdio_cam/i16717
+Route         1   e 1.020                                  \u_sdio_cam/n17411
+MUXL5       ---     0.116             D0 to Z              \u_sdio_cam/i16721
+Route         1   e 1.020                                  \u_sdio_cam/n17415
+LUT4        ---     0.166              A to Z              \u_sdio_cam/i16723_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/n17417
+LUT4        ---     0.166              C to Z              \u_sdio_cam/rd_byte[5]_bdd_4_lut
+Route         1   e 1.020                                  \u_sdio_cam/n21340
+LUT4        ---     0.166              A to Z              \u_sdio_cam/n21340_bdd_4_lut
+Route         1   e 1.020                                  \u_sdio_cam/n21343
+LUT4        ---     0.166              B to Z              \u_sdio_cam/n21325_bdd_3_lut_22440
+Route         1   e 1.020                                  \u_sdio_cam/n21353
+LUT4        ---     0.166              B to Z              \u_sdio_cam/n21352_bdd_3_lut_22500
+Route         1   e 0.020                                  \u_sdio_cam/n21359
+MUXL5       ---     0.116           BLUT to Z              \u_sdio_cam/i22445
+Route         1   e 0.020                                  \u_sdio_cam/n21360
+MUXL5       ---     0.116             D0 to Z              \u_sdio_cam/i22447
+Route         1   e 1.020                                  \u_sdio_cam/n21361
+LUT4        ---     0.166              A to Z              \u_sdio_cam/i16304_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/d0_out_N_426[0]
+LUT4        ---     0.166              C to Z              \u_sdio_cam/i1_4_lut_adj_170
+Route         1   e 1.020                                  \u_sdio_cam/n9501
+                  --------
+                   13.083  (17.4% logic, 82.6% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 7.908ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_sdio_cam/rd_byte__i0_rep_227  (from CRYSTAL_c +)
+   Destination:    FD1P3AX    D              \u_sdio_cam/d0_out_203  (to CRYSTAL_c +)
+
+   Delay:                  13.083ns  (17.4% logic, 82.6% route), 14 logic levels.
+
+ Constraint Details:
+
+     13.083ns data_path \u_sdio_cam/rd_byte__i0_rep_227 to \u_sdio_cam/d0_out_203 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.908ns
+
+ Path Details: \u_sdio_cam/rd_byte__i0_rep_227 to \u_sdio_cam/d0_out_203
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_sdio_cam/rd_byte__i0_rep_227 (from CRYSTAL_c)
+Route       1000   e 1.550                                  \u_sdio_cam/maxfan_replicated_net_999
+LUT4        ---     0.166              C to Z              \u_sdio_cam/i16796_3_lut
+Route         1   e 0.020                                  \u_sdio_cam/n17490
+MUXL5       ---     0.116           BLUT to Z              \u_sdio_cam/i16807
+Route         1   e 0.020                                  \u_sdio_cam/n17501
+MUXL5       ---     0.116             D1 to Z              \u_sdio_cam/i16812
+Route         1   e 1.020                                  \u_sdio_cam/n17506
+MUXL5       ---     0.116             D0 to Z              \u_sdio_cam/i16815
+Route         1   e 1.020                                  \u_sdio_cam/n17509
+LUT4        ---     0.166              B to Z              \u_sdio_cam/i16816_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/n17510
+LUT4        ---     0.166              B to Z              \u_sdio_cam/rd_byte[5]_bdd_4_lut_22436
+Route         1   e 1.020                                  \u_sdio_cam/n21334
+LUT4        ---     0.166              A to Z              \u_sdio_cam/n21334_bdd_4_lut
+Route         1   e 1.020                                  \u_sdio_cam/n21337
+LUT4        ---     0.166              C to Z              \u_sdio_cam/n21325_bdd_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/n21354
+LUT4        ---     0.166              A to Z              \u_sdio_cam/n21352_bdd_3_lut_22500
+Route         1   e 0.020                                  \u_sdio_cam/n21359
+MUXL5       ---     0.116           BLUT to Z              \u_sdio_cam/i22445
+Route         1   e 0.020                                  \u_sdio_cam/n21360
+MUXL5       ---     0.116             D0 to Z              \u_sdio_cam/i22447
+Route         1   e 1.020                                  \u_sdio_cam/n21361
+LUT4        ---     0.166              A to Z              \u_sdio_cam/i16304_3_lut
+Route         1   e 1.020                                  \u_sdio_cam/d0_out_N_426[0]
+LUT4        ---     0.166              C to Z              \u_sdio_cam/i1_4_lut_adj_170
+Route         1   e 1.020                                  \u_sdio_cam/n9501
+                  --------
+                   13.083  (17.4% logic, 82.6% route), 14 logic levels.
+
+Warning: 12.908 ns is the maximum delay for this constraint.
+
 
 Timing Report Summary
 --------------
@@ -218,10 +359,10 @@ create_clock -period 5.000000 -name     |             |             |
 clk2 [get_nets CCLK_c]                  |     5.000 ns|     2.396 ns|     2  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CRYSTAL_c]               |     5.000 ns|     5.102 ns|     4 *
+clk1 [get_nets PCLK_c]                  |     5.000 ns|     3.486 ns|     2  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets PCLK_c]                  |            -|            -|     0  
+clk0 [get_nets CRYSTAL_c]               |     5.000 ns|    12.908 ns|    14 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -231,25 +372,43 @@ clk0 [get_nets PCLK_c]                  |            -|            -|     0
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-n30                                     |       1|       6|     99.00%
+\u_sdio_cam/d0_out_N_426[0]             |       1|    1166|     99.00%
                                         |        |        |
-rst_n_N_38                              |       1|       6|     99.00%
+\u_sdio_cam/n9501                       |       1|    1166|     99.00%
                                         |        |        |
-n28                                     |       1|       4|     66.67%
+\u_sdio_cam/n21310                      |       1|     896|     76.84%
                                         |        |        |
-n22                                     |       1|       2|     33.33%
+\u_sdio_cam/n21313                      |       1|     896|     76.84%
                                         |        |        |
-por_cnt[4]                              |       2|       1|     16.67%
+\u_sdio_cam/n19072                      |       1|     448|     38.42%
                                         |        |        |
-por_cnt[5]                              |       2|       1|     16.67%
+\u_sdio_cam/n19073                      |       1|     448|     38.42%
                                         |        |        |
-por_cnt[7]                              |       2|       1|     16.67%
+\u_sdio_cam/maxfan_replicated_net_999   |    1000|     442|     37.91%
                                         |        |        |
-por_cnt[9]                              |       2|       1|     16.67%
+rd_byte[1]                              |    1000|     320|     27.44%
                                         |        |        |
-por_cnt[14]                             |       2|       1|     16.67%
+\u_sdio_cam/n21359                      |       1|     270|     23.16%
                                         |        |        |
-por_cnt[15]                             |       2|       1|     16.67%
+\u_sdio_cam/n21360                      |       1|     270|     23.16%
+                                        |        |        |
+\u_sdio_cam/n21361                      |       1|     270|     23.16%
+                                        |        |        |
+\u_sdio_cam/n19068                      |       1|     224|     19.21%
+                                        |        |        |
+\u_sdio_cam/n19069                      |       1|     224|     19.21%
+                                        |        |        |
+\u_sdio_cam/n19070                      |       1|     224|     19.21%
+                                        |        |        |
+\u_sdio_cam/n19071                      |       1|     224|     19.21%
+                                        |        |        |
+rd_byte[0]                              |    1000|     198|     16.98%
+                                        |        |        |
+rd_byte[2]                              |     516|     160|     13.72%
+                                        |        |        |
+\u_sdio_cam/n21354                      |       1|     140|     12.01%
+                                        |        |        |
+\u_sdio_cam/n21353                      |       1|     130|     11.15%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -257,10 +416,10 @@ por_cnt[15]                             |       2|       1|     16.67%
 Timing summary:
 ---------------
 
-Timing errors: 6  Score: 612
+Timing errors: 1166  Score: 9060668
 
-Constraints cover  215 paths, 72 nets, and 184 connections (63.9% coverage)
+Constraints cover  63930 paths, 9229 nets, and 24082 connections (85.1% coverage)
 
 
-Peak memory: 83931136 bytes, TRCE: 57344 bytes, DLYMAN: 0 bytes
+Peak memory: 150986752 bytes, TRCE: 7135232 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

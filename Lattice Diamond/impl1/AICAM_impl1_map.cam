@@ -1,21 +1,35 @@
 [ START MERGED ]
-CRYSTAL_c_enable_16 rst_n
-n338 esp_d_oe
+CRYSTAL_c_enable_4220 rst_n
+n1222 d0_oe
+n1242 esp_d_oe
+n1248 cmd_oe
+u_sdio_cam/n21475 u_sdio_cam/cmd_bit_1
 [ END MERGED ]
 [ START CLIPPED ]
-por_cnt_130_add_4_1/S0
-por_cnt_130_add_4_1/CI
-por_cnt_130_add_4_17/S1
-por_cnt_130_add_4_17/CO
+VCC_net
+_add_1_663_add_4_1/S0
+_add_1_663_add_4_1/CI
+_add_1_add_4_32/CO
+_add_1_660_add_4_1/S0
+_add_1_660_add_4_1/CI
+por_cnt_383_add_4_17/S1
+por_cnt_383_add_4_17/CO
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+_add_1_660_add_4_9/CO
+por_cnt_383_add_4_1/S0
+por_cnt_383_add_4_1/CI
+_add_1_663_add_4_9/CO
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Wed Feb 04 22:56:29 2026
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Fri Feb 06 05:11:06 2026
 
 SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
 LOCATE COMP "cam_sda" SITE "B9" ;
 LOCATE COMP "cam_scl" SITE "A10" ;
 LOCATE COMP "MCLK" SITE "A12" ;
+LOCATE COMP "M_D0" SITE "B2" ;
 LOCATE COMP "SD_DQ[15]" SITE "H15" ;
 LOCATE COMP "SD_DQ[14]" SITE "G16" ;
 LOCATE COMP "SD_DQ[13]" SITE "G15" ;
@@ -63,6 +77,11 @@ LOCATE COMP "ESP_D[3]" SITE "F3" ;
 LOCATE COMP "ESP_D[2]" SITE "F2" ;
 LOCATE COMP "ESP_D[1]" SITE "E1" ;
 LOCATE COMP "ESP_D[0]" SITE "E2" ;
+LOCATE COMP "M_CMD" SITE "B4" ;
+LOCATE COMP "M_D1" SITE "B1" ;
+LOCATE COMP "M_D2" SITE "B6" ;
+LOCATE COMP "M_D3" SITE "B5" ;
+LOCATE COMP "M_CLK" SITE "C7" ;
 LOCATE COMP "CRYSTAL" SITE "M1" ;
 LOCATE COMP "VSYNC" SITE "B10" ;
 LOCATE COMP "HREF" SITE "A11" ;

@@ -10,7 +10,7 @@ Running DRC...
 DRC complete with no errors or warnings
 
 Design Results:
-    157 blocks expanded
+   9278 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.

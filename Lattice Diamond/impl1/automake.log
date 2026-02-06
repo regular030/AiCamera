@@ -1,4 +1,288 @@
 
+synthesis -f "AICAM_impl1_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Feb 06 05:10:57 2026
+
+
+Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA256.
+The -d option is LFE5U-25F.
+Using package CABGA256.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-25F
+
+### Package : CABGA256
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Timing
+Top-level module name = fpga_top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond (searchpath added)
+-p C:/lscc/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1 (searchpath added)
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond (searchpath added)
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v
+NGD file = AICAM_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): fpga_top
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13): " arg1="fpga_top" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="13"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(334): " arg1="camera_capture_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="334"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(367): " arg1="sccb_i2c_master_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="367"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): " arg1="sda_oe_9" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="390"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): " arg1="scl_8" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="390"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(396): " arg1="sdram_controller_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="396"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): " arg1="sd_cs_n_23" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="453"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): " arg1="sd_dq_oe_31" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="453"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(459): " arg1="esp32_link_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="459"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(508): " arg1="sdio_cam_writer_example" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="508"  />
+Last elaborated design is fpga_top()
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = fpga_top.
+######## Converting I/O port cam_sda to output.
+######## Converting I/O port SD_DQ[15] to output.
+######## Converting I/O port SD_DQ[14] to output.
+######## Converting I/O port SD_DQ[13] to output.
+######## Converting I/O port SD_DQ[12] to output.
+######## Converting I/O port SD_DQ[11] to output.
+######## Converting I/O port SD_DQ[10] to output.
+######## Converting I/O port SD_DQ[9] to output.
+######## Converting I/O port SD_DQ[8] to output.
+######## Converting I/O port SD_DQ[7] to output.
+######## Converting I/O port SD_DQ[6] to output.
+######## Converting I/O port SD_DQ[5] to output.
+######## Converting I/O port SD_DQ[4] to output.
+######## Converting I/O port SD_DQ[3] to output.
+######## Converting I/O port SD_DQ[2] to output.
+######## Converting I/O port SD_DQ[1] to output.
+######## Converting I/O port SD_DQ[0] to output.
+######## Converting I/O port ESP_D[7] to output.
+######## Converting I/O port ESP_D[6] to output.
+######## Converting I/O port ESP_D[5] to output.
+######## Converting I/O port ESP_D[4] to output.
+######## Converting I/O port ESP_D[3] to output.
+######## Converting I/O port ESP_D[2] to output.
+######## Converting I/O port ESP_D[1] to output.
+######## Converting I/O port ESP_D[0] to output.
+######## Converting I/O port M_CMD to output.
+######## Converting I/O port M_D1 to output.
+######## Converting I/O port M_D2 to output.
+######## Converting I/O port M_D3 to output.
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdram/sd_a"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sdram/sd_ba"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdram/sd_ba"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sdram/sd_dqm"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdram/sd_dqm"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): " arg1="\u_sdio_cam/d1_out_205" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="765"  />
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_sdio_cam/state" arg1="one-hot"  />
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 00001
+
+ 010 -> 00010
+
+ 100 -> 00100
+
+ 101 -> 01000
+
+ 110 -> 10000
+
+
+
+
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="47" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="46" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="45" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="44" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="43" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="42" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="41" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="40" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdio_cam/cmd_frame"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_sdram/sd_dq_out"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): " arg1="\u_sdio_cam/d3_oe_208" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="765"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(763): " arg1="\u_sdio_cam/state_FSM_i1" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="763"  />
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+Applying 200.000000 MHz constraint to all clocks
+
+    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
+Results of NGD DRC are available in fpga_top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+   9278 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file AICAM_impl1.ngd.
+
+################### Begin Area Report (fpga_top)######################
+Number of register bits => 4284 of 24879 (17 % )
+BB => 1
+CCU2C => 35
+FD1P3AX => 4153
+FD1P3IX => 95
+FD1P3JX => 5
+FD1S3AX => 7
+FD1S3AY => 3
+FD1S3IX => 20
+FD1S3JX => 1
+GSR => 1
+IB => 15
+L6MUX21 => 818
+LUT4 => 2972
+OB => 26
+OBZ => 29
+PFUMX => 1094
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : CRYSTAL_c, loads : 4257
+  Net : PCLK_c, loads : 19
+  Net : CCLK_c, loads : 8
+Clock Enable Nets
+Number of Clock Enables: 530
+Top 10 highest fanout Clock Enables:
+  Net : u_sdio_cam/CRYSTAL_c_enable_4149, loads : 39
+  Net : CRYSTAL_c_enable_4220, loads : 31
+  Net : u_sdio_cam/CRYSTAL_c_enable_2025, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2041, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2057, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2065, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_4223, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2073, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_33, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2081, loads : 8
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : u_sdio_cam/maxfan_replicated_net_999, loads : 1000
+  Net : u_sdio_cam/rd_byte_1, loads : 999
+  Net : u_sdio_cam/rd_byte_0, loads : 999
+  Net : u_sdio_cam/rd_byte_2, loads : 515
+  Net : cam_byte_hold_7, loads : 512
+  Net : cam_byte_hold_6, loads : 512
+  Net : cam_byte_hold_5, loads : 512
+  Net : cam_byte_hold_4, loads : 512
+  Net : cam_byte_hold_3, loads : 512
+  Net : cam_byte_hold_2, loads : 512
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets CCLK_c]                  |  200.000 MHz|  417.362 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets PCLK_c]                  |  200.000 MHz|  286.862 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets CRYSTAL_c]               |  200.000 MHz|   77.471 MHz|    14 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 144.238  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 5.828  secs
+--------------------------------------------------------------
+
 map -a "ECP5U" -p LFE5U-25F -t CABGA256 -s 6 -oc Commercial   "AICAM_impl1.ngd" -o "AICAM_impl1_map.ncd" -pr "AICAM_impl1.prf" -mp "AICAM_impl1.mrp" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1/AICAM_impl1.lpf" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf"             
 map:  version Diamond (64-bit) 3.14.0.75.2
 
@@ -33,25 +317,25 @@ Removing unused logic...
 
 Optimizing...
 
-40 CCU2 constant inputs absorbed.
+147 CCU2 constant inputs absorbed.
 
 
 
 
 Design Summary:
-   Number of registers:     56 out of 24879 (0%)
-      PFU registers:           56 out of 24288 (0%)
+   Number of registers:   4284 out of 24879 (17%)
+      PFU registers:         4284 out of 24288 (18%)
       PIO registers:            0 out of   591 (0%)
-   Number of SLICEs:        39 out of 12144 (0%)
-      SLICEs as Logic/ROM:     39 out of 12144 (0%)
+   Number of SLICEs:      3641 out of 12144 (30%)
+      SLICEs as Logic/ROM:   3641 out of 12144 (30%)
       SLICEs as RAM:            0 out of  9108 (0%)
-      SLICEs as Carry:          9 out of 12144 (0%)
-   Number of LUT4s:         40 out of 24288 (0%)
-      Number used as logic LUTs:         22
+      SLICEs as Carry:         35 out of 12144 (0%)
+   Number of LUT4s:        3038 out of 24288 (13%)
+      Number used as logic LUTs:        2968
       Number used as distributed RAM:     0
-      Number used as ripple logic:       18
+      Number used as ripple logic:       70
       Number used as shift registers:     0
-   Number of PIO sites used: 65 out of 197 (33%)
+   Number of PIO sites used: 71 out of 197 (36%)
    Number of block RAMs:  0 out of 56 (0%)
    Number of GSRs:  0 out of 1 (0%)
    JTAG used :      No
@@ -85,30 +369,558 @@ Design Summary:
    Number of Used DSP ALU Sites:  0 out of 28 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
    Number of clocks:  3
-     Net CRYSTAL_c: 22 loads, 22 rising, 0 falling (Driver: PIO CRYSTAL )
+     Net CRYSTAL_c: 2140 loads, 2140 rising, 0 falling (Driver: PIO CRYSTAL )
+     Net PCLK_c: 11 loads, 11 rising, 0 falling (Driver: PIO PCLK )
      Net CCLK_c: 6 loads, 6 rising, 0 falling (Driver: PIO CCLK )
-     Net PCLK_c: 6 loads, 6 rising, 0 falling (Driver: PIO PCLK )
-   Number of Clock Enables:  4
+   Number of Clock Enables:  530
      Net cam_pixel_valid: 4 loads, 4 LSLICEs
-     Net rst_n_N_38: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_16: 4 loads, 4 LSLICEs
+     Net rst_n_N_46: 1 loads, 1 LSLICEs
      Net rst_n: 9 loads, 9 LSLICEs
-     Net PCLK_c_enable_8: 4 loads, 4 LSLICEs
-   Number of LSRs:  3
-     Net rst_n: 17 loads, 17 LSLICEs
-     Net n367: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_9: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_4166: 3 loads, 3 LSLICEs
+     Net CRYSTAL_c_enable_4110: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_1: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_4205: 17 loads, 17 LSLICEs
+     Net CRYSTAL_c_enable_4228: 7 loads, 7 LSLICEs
+     Net CRYSTAL_c_enable_4174: 6 loads, 6 LSLICEs
+     Net CRYSTAL_c_enable_4224: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_4225: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_4222: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_4162: 3 loads, 3 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2: 1 loads, 1 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4223: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4149: 20 loads, 20 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_25: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_33: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_41: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_49: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_57: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_65: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_73: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_81: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_89: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_97: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_121: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_225: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_361: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_457: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_561: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_673: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_809: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_905: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1009: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1121: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1225: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1361: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1457: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1561: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1673: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1809: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1905: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_1993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2009: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2121: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2225: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2257: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2361: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2457: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2561: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2673: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2809: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2905: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_2993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3009: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3113: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3121: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3129: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3137: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3145: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3153: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3161: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3169: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3177: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3185: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3193: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3201: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3209: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3217: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3225: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3233: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3241: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3249: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3265: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3273: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3281: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3289: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3297: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3305: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3313: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3321: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3329: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3337: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3345: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3353: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3361: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3369: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3377: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3385: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3393: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3401: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3409: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3417: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3425: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3433: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3441: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3449: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3457: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3465: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3473: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3481: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3489: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3497: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3505: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3513: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3521: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3529: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3537: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3545: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3553: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3561: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3569: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3577: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3585: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3593: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3601: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3609: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3617: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3625: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3633: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3641: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3649: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3657: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3665: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3673: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3681: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3689: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3697: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3705: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3713: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3721: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3729: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3737: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3745: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3753: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3761: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3769: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3777: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3785: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3793: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3801: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3809: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3817: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3825: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3833: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3841: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3849: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3857: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3865: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3873: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3881: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3889: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3897: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3905: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3913: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3921: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3929: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3937: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3945: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3953: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3961: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3969: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3977: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3985: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_3993: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4001: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4009: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4017: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4025: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4033: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4041: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4049: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4057: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4065: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4073: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4081: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4089: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4097: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4105: 4 loads, 4 LSLICEs
+     Net u_sdio_cam/CRYSTAL_c_enable_4112: 1 loads, 1 LSLICEs
+   Number of LSRs:  5
+     Net n4063: 1 loads, 1 LSLICEs
+     Net rst_n: 64 loads, 64 LSLICEs
      Net SSPI_CS_n_c: 1 loads, 1 LSLICEs
+     Net n3512: 2 loads, 2 LSLICEs
+     Net u_sdio_cam/n733: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net rst_n: 29 loads
-     Net esp_d_oe: 8 loads
-     Net SSPI_CS_n_c: 8 loads
-     Net cam_pixel_valid: 6 loads
-     Net mclk_div_cnt_0: 4 loads
-     Net PCLK_c_enable_8: 4 loads
-     Net cam_pixel_0: 3 loads
-     Net cam_pixel_1: 3 loads
-     Net cam_pixel_2: 3 loads
-     Net cam_pixel_3: 3 loads
+     Net rd_byte_0: 1000 loads
+     Net rd_byte_1: 1000 loads
+     Net u_sdio_cam/maxfan_replicated_net_999: 1000 loads
+     Net rd_byte_2: 516 loads
+     Net cam_byte_hold_0: 512 loads
+     Net cam_byte_hold_1: 512 loads
+     Net cam_byte_hold_2: 512 loads
+     Net cam_byte_hold_3: 512 loads
+     Net cam_byte_hold_4: 512 loads
+     Net cam_byte_hold_5: 512 loads
  
 
    Number of warnings:  4
@@ -116,9 +928,9 @@ Design Summary:
 
 
 
-Total CPU Time: 0 secs  
-Total REAL Time: 2 secs  
-Peak Memory Usage: 113 MB
+Total CPU Time: 2 secs  
+Total REAL Time: 3 secs  
+Peak Memory Usage: 154 MB
 
 Dumping design to file AICAM_impl1_map.ncd.
 
@@ -149,7 +961,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Wed Feb 04 22:56:32 2026
+Fri Feb 06 05:11:08 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -176,14 +988,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 19  Score: 10660
-Cumulative negative slack: 10660
+Timing errors: 4096  Score: 3282467
+Cumulative negative slack: 3282467
 
-Constraints cover 190 paths, 2 nets, and 140 connections (59.07% coverage)
+Constraints cover 36822 paths, 3 nets, and 16981 connections (77.84% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Wed Feb 04 22:56:33 2026
+Fri Feb 06 05:11:08 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -212,23 +1024,23 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 190 paths, 2 nets, and 140 connections (59.07% coverage)
+Constraints cover 36822 paths, 3 nets, and 16412 connections (75.24% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 19 (setup), 0 (hold)
-Score: 10660 (setup), 0 (hold)
-Cumulative negative slack: 10660 (10660+0)
+Timing errors: 4096 (setup), 0 (hold)
+Score: 3282467 (setup), 0 (hold)
+Cumulative negative slack: 3282467 (3282467+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 173 MB
+Peak Memory Usage: 232 MB
 
 
 ldbanno "AICAM_impl1_map.ncd" -n Verilog -o "AICAM_impl1_mapvo.vo" -w -neg
@@ -256,9 +1068,9 @@ Converting design AICAM_impl1_map.ncd into .ldb format.
 Writing Verilog netlist to file AICAM_impl1_mapvo.vo
 Writing SDF timing to file AICAM_impl1_mapvo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 137 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 198 MB
 
 ldbanno "AICAM_impl1_map.ncd" -n VHDL -o "AICAM_impl1_mapvho.vho" -w -neg
 ldbanno: version Diamond (64-bit) 3.14.0.75.2
@@ -285,9 +1097,9 @@ Converting design AICAM_impl1_map.ncd into .ldb format.
 Writing VHDL netlist to file AICAM_impl1_mapvho.vho
 Writing SDF timing to file AICAM_impl1_mapvho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 137 MB
+Total CPU Time: 4 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 198 MB
 
 mpartrce -p "AICAM_impl1.p2t" -f "AICAM_impl1.p3t" -tf "AICAM_impl1.pt" "AICAM_impl1_map.ncd" "AICAM_impl1.ncd"
 
@@ -296,7 +1108,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "AICAM_impl1_map.ncd"
-Wed Feb 04 22:56:37 2026
+Fri Feb 06 05:11:17 2026
 
 PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 AICAM_impl1_map.ncd AICAM_impl1.dir/5_1.ncd AICAM_impl1.prf
@@ -320,40 +1132,42 @@ License checked out.
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)      65/197          32% used
-                     65/197          32% bonded
+   PIO (prelim)      71/197          36% used
+                     71/197          36% bonded
 
-   SLICE             39/12144        <1% used
+   SLICE           3641/12144        29% used
 
 
 
-Number of Signals: 117
-Number of Connections: 237
+Number of Signals: 7088
+Number of Connections: 21814
 
 Pin Constraint Summary:
-   65 out of 65 pins locked (100% locked).
+   71 out of 71 pins locked (100% locked).
 
-The following 4 signals are selected to use the primary clock routing resources:
-    CRYSTAL_c (driver: CRYSTAL, clk/ce/sr load #: 22/0/0)
+The following 6 signals are selected to use the primary clock routing resources:
+    CRYSTAL_c (driver: CRYSTAL, clk/ce/sr load #: 2140/0/0)
+    PCLK_c (driver: PCLK, clk/ce/sr load #: 11/0/0)
     CCLK_c (driver: CCLK, clk/ce/sr load #: 6/0/0)
-    PCLK_c (driver: PCLK, clk/ce/sr load #: 6/0/0)
-    rst_n (driver: SLICE_24, clk/ce/sr load #: 0/9/17)
+    rst_n (driver: SLICE_71, clk/ce/sr load #: 0/9/64)
+    u_sdio_cam/CRYSTAL_c_enable_4149 (driver: u_sdio_cam/SLICE_3283, clk/ce/sr load #: 0/20/0)
+    CRYSTAL_c_enable_4205 (driver: SLICE_3359, clk/ce/sr load #: 0/17/0)
 
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-........
+...........
 Finished Placer Phase 0.  REAL time: 3 secs 
 
 Starting Placer Phase 1.
-....................
-Placer score = 140890.
-Finished Placer Phase 1.  REAL time: 7 secs 
+.............
+Placer score = 89500203.
+Finished Placer Phase 1.  REAL time: 9 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  140848
-Finished Placer Phase 2.  REAL time: 7 secs 
+Placer score =  77535788
+Finished Placer Phase 2.  REAL time: 11 secs 
 
 
 ------------------ Clock Report ------------------
@@ -367,24 +1181,34 @@ Global Clock Resources:
   CLKDIV     : 0 out of 4 (0%)
 
 Quadrant TL Clocks:
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 412
+  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R12C42A", CLK/CE/SR load = 4
 
-  PRIMARY  : 0 out of 16 (0%)
+  PRIMARY  : 2 out of 16 (12%)
 
 Quadrant TR Clocks:
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 22
-  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 6
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 968
   PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 6
-  PRIMARY "rst_n" from Q0 on comp "SLICE_24" on site "R12C56D", CLK/CE/SR load = 26
+  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R12C42A", CLK/CE/SR load = 20
 
-  PRIMARY  : 4 out of 16 (25%)
+  PRIMARY  : 3 out of 16 (18%)
 
 Quadrant BL Clocks:
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 171
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 1
+  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R12C42A", CLK/CE/SR load = 40
+  PRIMARY "u_sdio_cam/CRYSTAL_c_enable_4149" from F0 on comp "u_sdio_cam/SLICE_3283" on site "R24C22A", CLK/CE/SR load = 20
+  PRIMARY "CRYSTAL_c_enable_4205" from F0 on comp "SLICE_3359" on site "R26C27A", CLK/CE/SR load = 17
 
-  PRIMARY  : 0 out of 16 (0%)
+  PRIMARY  : 5 out of 16 (31%)
 
 Quadrant BR Clocks:
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 589
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 4
+  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 6
+  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R12C42A", CLK/CE/SR load = 9
 
-  PRIMARY  : 0 out of 16 (0%)
+  PRIMARY  : 4 out of 16 (25%)
 
 Edge Clocks:
 
@@ -396,34 +1220,34 @@ Edge Clocks:
 
 +
 I/O Usage Summary (final):
-   65 out of 197 (33.0%) PIO sites used.
-   65 out of 197 (33.0%) bonded PIO sites used.
-   Number of PIO comps: 65; differential: 0.
+   71 out of 197 (36.0%) PIO sites used.
+   71 out of 197 (36.0%) bonded PIO sites used.
+   Number of PIO comps: 71; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
 +----------+----------------+------------+------------+------------+
 | I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+----------------+------------+------------+------------+
-| 0        | 8 / 24 ( 33%)  | 3.3V       | -          | -          |
+| 0        | 12 / 24 ( 50%) | 3.3V       | -          | -          |
 | 1        | 14 / 32 ( 43%) | 1.8V       | -          | -          |
 | 2        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
 | 3        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
 | 6        | 5 / 32 ( 15%)  | 3.3V       | -          | -          |
-| 7        | 8 / 32 ( 25%)  | 3.3V       | -          | -          |
+| 7        | 10 / 32 ( 31%) | 3.3V       | -          | -          |
 | 8        | 4 / 13 ( 30%)  | 2.5V       | -          | -          |
 +----------+----------------+------------+------------+------------+
 
-Total placer CPU time: 5 secs 
+Total placer CPU time: 10 secs 
 
 Dumping design to file AICAM_impl1.dir/5_1.ncd.
 
-0 connections routed; 237 unrouted.
+0 connections routed; 21814 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 11 secs 
+Completed router resource preassignment. Real time: 14 secs 
 
-Start NBR router at 22:56:48 02/04/26
+Start NBR router at 05:11:31 02/06/26
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -438,146 +1262,199 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 22:56:48 02/04/26
+Start NBR special constraint process at 05:11:32 02/06/26
 
-Start NBR section for initial routing at 22:56:48 02/04/26
+Start NBR section for initial routing at 05:11:32 02/06/26
 Level 1, iteration 1
-0(0.00%) conflict; 139(58.65%) untouched conns; 86465 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -2.547ns/-86.466ns; real time: 11 secs 
+245(0.02%) conflicts; 16973(77.81%) untouched conns; 36690937 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.009ns/-36690.937ns; real time: 21 secs 
 Level 2, iteration 1
-5(0.00%) conflicts; 129(54.43%) untouched conns; 74122 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -2.547ns/-74.123ns; real time: 11 secs 
+1294(0.11%) conflicts; 14167(64.94%) untouched conns; 26776189 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.777ns/-26776.189ns; real time: 29 secs 
 Level 3, iteration 1
-4(0.00%) conflicts; 102(43.04%) untouched conns; 33109 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.335ns/-33.109ns; real time: 11 secs 
+2449(0.21%) conflicts; 4203(19.27%) untouched conns; 24412414 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.763ns/-24412.414ns; real time: 35 secs 
 Level 4, iteration 1
-7(0.00%) conflicts; 0(0.00%) untouched conn; 29663 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-29.663ns; real time: 11 secs 
+1645(0.14%) conflicts; 0(0.00%) untouched conn; 25854916 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.674ns/-25854.917ns; real time: 42 secs 
 
 Info: Initial congestion level at 75% usage is 0
-Info: Initial congestion area  at 75% usage is 0 (0.00%)
+Info: Initial congestion area  at 75% usage is 40 (1.19%)
 
-Start NBR section for normal routing at 22:56:48 02/04/26
+Start NBR section for normal routing at 05:11:59 02/06/26
 Level 1, iteration 1
-8(0.00%) conflicts; 4(1.69%) untouched conns; 29468 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-29.468ns; real time: 11 secs 
-Level 2, iteration 1
-7(0.00%) conflicts; 4(1.69%) untouched conns; 23574 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-23.575ns; real time: 11 secs 
-Level 3, iteration 1
-6(0.00%) conflicts; 4(1.69%) untouched conns; 23573 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-23.574ns; real time: 11 secs 
+1075(0.09%) conflicts; 2665(12.22%) untouched conns; 25939203 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.775ns/-25939.203ns; real time: 44 secs 
+Level 1, iteration 2
+721(0.06%) conflicts; 3089(14.16%) untouched conns; 26132813 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.755ns/-26132.814ns; real time: 46 secs 
+Level 1, iteration 3
+471(0.04%) conflicts; 3522(16.15%) untouched conns; 26214352 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.755ns/-26214.352ns; real time: 48 secs 
+Level 1, iteration 4
+343(0.03%) conflicts; 3668(16.81%) untouched conns; 26214352 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.755ns/-26214.352ns; real time: 50 secs 
+Level 1, iteration 5
+268(0.02%) conflicts; 3763(17.25%) untouched conns; 27005075 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.769ns/-27005.076ns; real time: 51 secs 
+Level 1, iteration 6
+155(0.01%) conflicts; 3814(17.48%) untouched conns; 27005075 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.769ns/-27005.076ns; real time: 52 secs 
+Level 1, iteration 7
+128(0.01%) conflicts; 3854(17.67%) untouched conns; 27247866 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.754ns/-27247.867ns; real time: 53 secs 
+Level 1, iteration 8
+107(0.01%) conflicts; 4142(18.99%) untouched conns; 27247866 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.754ns/-27247.867ns; real time: 54 secs 
+Level 1, iteration 9
+77(0.01%) conflicts; 4156(19.05%) untouched conns; 28167765 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.946ns/-28167.766ns; real time: 55 secs 
+Level 1, iteration 10
+49(0.00%) conflicts; 4158(19.06%) untouched conns; 28167765 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.946ns/-28167.766ns; real time: 56 secs 
+Level 1, iteration 11
+29(0.00%) conflicts; 4169(19.11%) untouched conns; 29833358 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.948ns/-29833.358ns; real time: 56 secs 
+Level 1, iteration 12
+37(0.00%) conflicts; 4160(19.07%) untouched conns; 29833358 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.948ns/-29833.358ns; real time: 56 secs 
+Level 1, iteration 13
+20(0.00%) conflicts; 4168(19.11%) untouched conns; 29834294 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.999ns/-29834.295ns; real time: 57 secs 
 Level 4, iteration 1
-7(0.00%) conflicts; 0(0.00%) untouched conn; 23378 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-23.379ns; real time: 11 secs 
+848(0.07%) conflicts; 0(0.00%) untouched conn; 29397638 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.980ns/-29397.639ns; real time: 1 mins 
 Level 4, iteration 2
-5(0.00%) conflicts; 0(0.00%) untouched conn; 23723 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-23.724ns; real time: 11 secs 
+527(0.05%) conflicts; 0(0.00%) untouched conn; 29915022 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.975ns/-29915.022ns; real time: 1 mins 3 secs 
 Level 4, iteration 3
-5(0.00%) conflicts; 0(0.00%) untouched conn; 23573 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-23.574ns; real time: 11 secs 
+398(0.03%) conflicts; 0(0.00%) untouched conn; 29976907 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-29976.907ns; real time: 1 mins 6 secs 
 Level 4, iteration 4
-3(0.00%) conflicts; 0(0.00%) untouched conn; 23573 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.321ns/-23.574ns; real time: 11 secs 
+272(0.02%) conflicts; 0(0.00%) untouched conn; 29976907 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-29976.907ns; real time: 1 mins 8 secs 
 Level 4, iteration 5
-3(0.00%) conflicts; 0(0.00%) untouched conn; 24765 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-24.766ns; real time: 11 secs 
+216(0.02%) conflicts; 0(0.00%) untouched conn; 30161711 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30161.712ns; real time: 1 mins 9 secs 
 Level 4, iteration 6
-2(0.00%) conflicts; 0(0.00%) untouched conn; 24765 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-24.766ns; real time: 11 secs 
+164(0.01%) conflicts; 0(0.00%) untouched conn; 30161711 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30161.712ns; real time: 1 mins 11 secs 
 Level 4, iteration 7
-2(0.00%) conflicts; 0(0.00%) untouched conn; 25132 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-25.133ns; real time: 11 secs 
+129(0.01%) conflicts; 0(0.00%) untouched conn; 30536532 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30536.533ns; real time: 1 mins 13 secs 
 Level 4, iteration 8
-2(0.00%) conflicts; 0(0.00%) untouched conn; 25132 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-25.133ns; real time: 11 secs 
+94(0.01%) conflicts; 0(0.00%) untouched conn; 30536532 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30536.533ns; real time: 1 mins 14 secs 
 Level 4, iteration 9
-1(0.00%) conflict; 0(0.00%) untouched conn; 27303 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.524ns/-27.304ns; real time: 11 secs 
+86(0.01%) conflicts; 0(0.00%) untouched conn; 30617307 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30617.308ns; real time: 1 mins 15 secs 
 Level 4, iteration 10
-1(0.00%) conflict; 0(0.00%) untouched conn; 27303 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.524ns/-27.304ns; real time: 11 secs 
+42(0.00%) conflicts; 0(0.00%) untouched conn; 30617307 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30617.308ns; real time: 1 mins 16 secs 
 Level 4, iteration 11
-1(0.00%) conflict; 0(0.00%) untouched conn; 26929 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-26.930ns; real time: 11 secs 
+31(0.00%) conflicts; 0(0.00%) untouched conn; 30660599 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30660.600ns; real time: 1 mins 16 secs 
 Level 4, iteration 12
-1(0.00%) conflict; 0(0.00%) untouched conn; 26929 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-26.930ns; real time: 11 secs 
+23(0.00%) conflicts; 0(0.00%) untouched conn; 30660599 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30660.600ns; real time: 1 mins 17 secs 
 Level 4, iteration 13
-1(0.00%) conflict; 0(0.00%) untouched conn; 26929 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-26.930ns; real time: 11 secs 
+13(0.00%) conflicts; 0(0.00%) untouched conn; 30689419 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30689.420ns; real time: 1 mins 17 secs 
 Level 4, iteration 14
-1(0.00%) conflict; 0(0.00%) untouched conn; 26929 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-26.930ns; real time: 11 secs 
+14(0.00%) conflicts; 0(0.00%) untouched conn; 30689419 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30689.420ns; real time: 1 mins 17 secs 
 Level 4, iteration 15
-1(0.00%) conflict; 0(0.00%) untouched conn; 26929 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-26.930ns; real time: 11 secs 
+14(0.00%) conflicts; 0(0.00%) untouched conn; 30686031 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30686.032ns; real time: 1 mins 18 secs 
 Level 4, iteration 16
-1(0.00%) conflict; 0(0.00%) untouched conn; 26929 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-26.930ns; real time: 12 secs 
+12(0.00%) conflicts; 0(0.00%) untouched conn; 30686031 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30686.032ns; real time: 1 mins 18 secs 
 Level 4, iteration 17
-0(0.00%) conflict; 0(0.00%) untouched conn; 27952 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.686ns/-27.952ns; real time: 12 secs 
+11(0.00%) conflicts; 0(0.00%) untouched conn; 30674799 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30674.800ns; real time: 1 mins 18 secs 
 Level 4, iteration 18
-0(0.00%) conflict; 0(0.00%) untouched conn; 27952 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.686ns/-27.952ns; real time: 12 secs 
+9(0.00%) conflicts; 0(0.00%) untouched conn; 30674799 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30674.800ns; real time: 1 mins 19 secs 
 Level 4, iteration 19
-0(0.00%) conflict; 0(0.00%) untouched conn; 27952 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.686ns/-27.952ns; real time: 12 secs 
+10(0.00%) conflicts; 0(0.00%) untouched conn; 30715140 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30715.141ns; real time: 1 mins 19 secs 
+Level 4, iteration 20
+5(0.00%) conflicts; 0(0.00%) untouched conn; 30715140 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30715.141ns; real time: 1 mins 19 secs 
+Level 4, iteration 21
+3(0.00%) conflicts; 0(0.00%) untouched conn; 30728870 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.871ns; real time: 1 mins 19 secs 
+Level 4, iteration 22
+1(0.00%) conflict; 0(0.00%) untouched conn; 30728870 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.871ns; real time: 1 mins 19 secs 
+Level 4, iteration 23
+1(0.00%) conflict; 0(0.00%) untouched conn; 30728935 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.936ns; real time: 1 mins 20 secs 
+Level 4, iteration 24
+0(0.00%) conflict; 0(0.00%) untouched conn; 30728935 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.936ns; real time: 1 mins 20 secs 
 
-Start NBR section for performance tuning (iteration 1) at 22:56:49 02/04/26
+Start NBR section for performance tuning (iteration 1) at 05:12:37 02/06/26
 Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 26929 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.467ns/-26.930ns; real time: 12 secs 
+7(0.00%) conflicts; 0(0.00%) untouched conn; 30695011 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30695.012ns; real time: 1 mins 21 secs 
 Level 4, iteration 2
-0(0.00%) conflict; 0(0.00%) untouched conn; 28020 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.648ns/-28.021ns; real time: 12 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 30726607 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.608ns; real time: 1 mins 21 secs 
 Level 4, iteration 3
-0(0.00%) conflict; 0(0.00%) untouched conn; 27952 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.686ns/-27.952ns; real time: 12 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 30726151 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.152ns; real time: 1 mins 21 secs 
 
-Start NBR section for re-routing at 22:56:49 02/04/26
+Start NBR section for performance tuning (iteration 2) at 05:12:38 02/06/26
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 27952 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.686ns/-27.952ns; real time: 12 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 30725756 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30725.757ns; real time: 1 mins 22 secs 
+Level 4, iteration 2
+0(0.00%) conflict; 0(0.00%) untouched conn; 30726178 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.179ns; real time: 1 mins 22 secs 
 
-Start NBR section for post-routing at 22:56:49 02/04/26
+Start NBR section for re-routing at 05:12:39 02/06/26
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 30719191 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30719.192ns; real time: 1 mins 23 secs 
+
+Start NBR section for post-routing at 05:12:40 02/06/26
 
 End NBR router with 0 unrouted connection
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 51 (21.52%)
-  Estimated worst slack<setup> : -1.686ns
-  Timing score<setup> : 18357
+  Number of connections with timing violations : 13604 (62.36%)
+  Estimated worst slack<setup> : -4.767ns
+  Timing score<setup> : 12887912
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 9 secs 
-Total REAL time: 12 secs 
+Total CPU time 1 mins 24 secs 
+Total REAL time: 1 mins 28 secs 
 Completely routed.
-End of route.  237 routed (100.00%); 0 unrouted.
+End of route.  21814 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
-Timing score: 18357 
+Timing score: 12887912 
 
 Dumping design to file AICAM_impl1.dir/5_1.ncd.
 
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = -1.686
-PAR_SUMMARY::Timing score<setup/<ns>> = 18.357
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.178
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -4.767
+PAR_SUMMARY::Timing score<setup/<ns>> = 12887.912
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.177
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 10 secs 
-Total REAL time to completion: 12 secs 
+Total CPU  time to completion: 1 mins 26 secs 
+Total REAL time to completion: 1 mins 30 secs 
 
 par done!
 
@@ -614,7 +1491,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Wed Feb 04 22:56:51 2026
+Fri Feb 06 05:12:48 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -641,14 +1518,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 43  Score: 18357
-Cumulative negative slack: 18357
+Timing errors: 4099  Score: 12887912
+Cumulative negative slack: 12887912
 
-Constraints cover 190 paths, 2 nets, and 140 connections (59.07% coverage)
+Constraints cover 36822 paths, 3 nets, and 17613 connections (80.74% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Wed Feb 04 22:56:51 2026
+Fri Feb 06 05:12:49 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -677,23 +1554,23 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 190 paths, 2 nets, and 140 connections (59.07% coverage)
+Constraints cover 36822 paths, 3 nets, and 17613 connections (80.74% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 43 (setup), 0 (hold)
-Score: 18357 (setup), 0 (hold)
-Cumulative negative slack: 18357 (18357+0)
+Timing errors: 4099 (setup), 0 (hold)
+Score: 12887912 (setup), 0 (hold)
+Cumulative negative slack: 12887912 (12887912+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
 Total CPU Time: 1 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 167 MB
+Total REAL Time: 2 secs 
+Peak Memory Usage: 214 MB
 
 
 iotiming  "AICAM_impl1.ncd" "AICAM_impl1.prf"
@@ -786,7 +1663,7 @@ Done.
 ibisgen "AICAM_impl1.ncd" "C:/lscc/diamond/3.14/cae_library/ibis/ecp5u.ibs" "AICAM_impl1.prf"
 IBIS Models Generator: Lattice Diamond (64-bit) 3.14.0.75.2
 
-Wed Feb 04 22:56:55 2026
+Fri Feb 06 05:12:59 2026
 
 
 Loading design for application GENERIC from file AICAM_impl1.ncd.
@@ -835,9 +1712,9 @@ Loading preferences from aicam_impl1.prf.
 Writing Verilog netlist to file AICAM_impl1_vo.vo
 Writing SDF timing to file AICAM_impl1_vo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 140 MB
+Total CPU Time: 7 secs 
+Total REAL Time: 8 secs 
+Peak Memory Usage: 207 MB
 
 ldbanno "AICAM_impl1.ncd" -n VHDL -o "AICAM_impl1_vho.vho"        -w -neg 
 ldbanno: version Diamond (64-bit) 3.14.0.75.2
@@ -865,9 +1742,9 @@ Loading preferences from aicam_impl1.prf.
 Writing VHDL netlist to file AICAM_impl1_vho.vho
 Writing SDF timing to file AICAM_impl1_vho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 140 MB
+Total CPU Time: 7 secs 
+Total REAL Time: 8 secs 
+Peak Memory Usage: 207 MB
 
 tmcheck -par "AICAM_impl1.par" 
 
@@ -950,9 +1827,9 @@ Creating bit map...
 Bitstream Status: Final           Version 10.27.
  
 Saving bit stream in "AICAM_impl1.bit".
-Total CPU Time: 2 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 272 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 297 MB
 
 ddtcmd -dev LFE5U-25F -if AICAM_impl1.bit -oft -int -of AICAM_impl1.mcs 
 Lattice Diamond Deployment Tool 3.14 Command Line

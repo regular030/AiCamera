@@ -1,52 +1,71 @@
 ----------------------------------------------------------------------
 Report for cell fpga_top.TECH
-Register bits:  56 of 24879 (0.225%)
-I/O cells:      65
+Register bits:  4284 of 24879 (17.219%)
+I/O cells:      71
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C         9          100.0
-                            FD1P3AX        17          100.0
-                            FD1P3IX        16          100.0
-                            FD1S3AX         4          100.0
+                                 BB         1          100.0
+                              CCU2C        35          100.0
+                            FD1P3AX      4153          100.0
+                            FD1P3IX        95          100.0
+                            FD1P3JX         5          100.0
+                            FD1S3AX         7          100.0
                             FD1S3AY         3          100.0
-                            FD1S3IX        15          100.0
+                            FD1S3IX        20          100.0
                             FD1S3JX         1          100.0
                                 GSR         1          100.0
                                  IB        15          100.0
-                               LUT4        23          100.0
-                                 OB        25          100.0
-                                OBZ        25          100.0
+                            L6MUX21       818          100.0
+                               LUT4      2972          100.0
+                                 OB        26          100.0
+                                OBZ        29          100.0
+                              PFUMX      1094          100.0
 SUB MODULES
                 camera_capture_stub         1
                     esp32_link_stub         1
+            sdio_cam_writer_example         1
               sdram_controller_stub         1
-                              TOTAL       157
+                              TOTAL      9279
 ----------------------------------------------------------------------
 Report for cell sdram_controller_stub.v1
 Instance Path : u_sdram
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3IX         8           50.0
-                            FD1S3IX         1            6.7
-                               LUT4         1            4.3
+                            FD1P3IX         8            8.4
+                            FD1S3IX         1            5.0
+                               LUT4         1            0.0
                               TOTAL        10
 ----------------------------------------------------------------------
-Report for cell esp32_link_stub.v1
-Instance Path : u_esp
+Report for cell sdio_cam_writer_example.v1
+Instance Path : u_sdio_cam
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1S3AX         4          100.0
-                            FD1S3AY         3          100.0
-                            FD1S3IX         9           60.0
-                            FD1S3JX         1          100.0
-                               LUT4         9           39.1
-                              TOTAL        26
+                            FD1P3AX      4136           99.6
+                            FD1P3IX        71           74.7
+                            FD1P3JX         5          100.0
+                            FD1S3AX         1           14.3
+                            FD1S3IX         4           20.0
+                            L6MUX21       818          100.0
+                               LUT4      2927           98.5
+                              PFUMX      1094          100.0
+                              TOTAL      9056
 ----------------------------------------------------------------------
 Report for cell camera_capture_stub.v1
 Instance Path : u_cam_cap
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3IX         8           50.0
-                            FD1S3IX         2           13.3
-                               LUT4         2            8.7
+                            FD1P3IX         8            8.4
+                            FD1S3IX         2           10.0
+                               LUT4         2            0.1
                               TOTAL        12
+----------------------------------------------------------------------
+Report for cell esp32_link_stub.v1
+Instance Path : u_esp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         5           71.4
+                            FD1S3AY         3          100.0
+                            FD1S3IX         8           40.0
+                            FD1S3JX         1          100.0
+                               LUT4         8            0.3
+                              TOTAL        25

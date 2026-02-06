@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Feb 04 08:11:47 2026
+Fri Feb 06 05:10:57 2026
 
 
 Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
@@ -80,14 +80,15 @@ Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.
 Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): fpga_top
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13): compiling module fpga_top. VERI-1018
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(238): compiling module camera_capture_stub. VERI-1018
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(271): compiling module sccb_i2c_master_stub. VERI-1018
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(294): Register sda_oe_9 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(294): Register scl_8 is stuck at One. VDB-5014
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(300): compiling module sdram_controller_stub. VERI-1018
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(357): Register sd_cs_n_23 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(357): Register sd_dq_oe_31 is stuck at Zero. VDB-5013
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(363): compiling module esp32_link_stub. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(334): compiling module camera_capture_stub. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(367): compiling module sccb_i2c_master_stub. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): Register sda_oe_9 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): Register scl_8 is stuck at One. VDB-5014
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(396): compiling module sdram_controller_stub. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): Register sd_cs_n_23 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): Register sd_dq_oe_31 is stuck at Zero. VDB-5013
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(459): compiling module esp32_link_stub. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(508): compiling module sdio_cam_writer_example. VERI-1018
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -120,6 +121,10 @@ Top-level module name = fpga_top.
 ######## Converting I/O port ESP_D[2] to output.
 ######## Converting I/O port ESP_D[1] to output.
 ######## Converting I/O port ESP_D[0] to output.
+######## Converting I/O port M_CMD to output.
+######## Converting I/O port M_D1 to output.
+######## Converting I/O port M_D2 to output.
+######## Converting I/O port M_D3 to output.
 WARNING - synthesis: Bit 12 of Register \u_sdram/sd_a is stuck at Zero
 WARNING - synthesis: Bit 11 of Register \u_sdram/sd_a is stuck at Zero
 WARNING - synthesis: Bit 10 of Register \u_sdram/sd_a is stuck at Zero
@@ -137,9 +142,32 @@ WARNING - synthesis: Bit 1 of Register \u_sdram/sd_ba is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_sdram/sd_ba is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \u_sdram/sd_dqm is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_sdram/sd_dqm is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): Register \u_sdio_cam/d1_out_205 is stuck at One. VDB-5014
+INFO - synthesis: Extracted state machine for register '\u_sdio_cam/state' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 00001
+
+ 010 -> 00010
+
+ 100 -> 00100
+
+ 101 -> 01000
+
+ 110 -> 10000
 
 
 
+
+WARNING - synthesis: Bit 47 of Register \u_sdio_cam/cmd_frame is stuck at Zero
+WARNING - synthesis: Bit 46 of Register \u_sdio_cam/cmd_frame is stuck at One
+WARNING - synthesis: Bit 45 of Register \u_sdio_cam/cmd_frame is stuck at Zero
+WARNING - synthesis: Bit 44 of Register \u_sdio_cam/cmd_frame is stuck at One
+WARNING - synthesis: Bit 43 of Register \u_sdio_cam/cmd_frame is stuck at One
+WARNING - synthesis: Bit 42 of Register \u_sdio_cam/cmd_frame is stuck at Zero
+WARNING - synthesis: Bit 41 of Register \u_sdio_cam/cmd_frame is stuck at Zero
+WARNING - synthesis: Bit 40 of Register \u_sdio_cam/cmd_frame is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_sdio_cam/cmd_frame is stuck at One
 WARNING - synthesis: Bit 15 of Register \u_sdram/sd_dq_out is stuck at Zero
 WARNING - synthesis: Bit 14 of Register \u_sdram/sd_dq_out is stuck at Zero
 WARNING - synthesis: Bit 13 of Register \u_sdram/sd_dq_out is stuck at Zero
@@ -148,6 +176,8 @@ WARNING - synthesis: Bit 11 of Register \u_sdram/sd_dq_out is stuck at Zero
 WARNING - synthesis: Bit 10 of Register \u_sdram/sd_dq_out is stuck at Zero
 WARNING - synthesis: Bit 9 of Register \u_sdram/sd_dq_out is stuck at Zero
 WARNING - synthesis: Bit 8 of Register \u_sdram/sd_dq_out is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): Register \u_sdio_cam/d3_oe_208 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(763): Register \u_sdio_cam/state_FSM_i1 is stuck at Zero. VDB-5013
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -161,44 +191,56 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.
 
 ################### Begin Area Report (fpga_top)######################
-Number of register bits => 56 of 24879 (0 % )
-CCU2C => 9
-FD1P3AX => 17
-FD1P3IX => 16
-FD1S3AX => 4
+Number of register bits => 4284 of 24879 (17 % )
+BB => 1
+CCU2C => 35
+FD1P3AX => 4153
+FD1P3IX => 95
+FD1P3JX => 5
+FD1S3AX => 7
 FD1S3AY => 3
-FD1S3IX => 15
+FD1S3IX => 20
 FD1S3JX => 1
 GSR => 1
 IB => 15
-LUT4 => 23
-OB => 25
-OBZ => 25
+L6MUX21 => 818
+LUT4 => 2972
+OB => 26
+OBZ => 29
+PFUMX => 1094
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 3
-  Net : CRYSTAL_c, loads : 38
-  Net : PCLK_c, loads : 10
+  Net : CRYSTAL_c, loads : 4257
+  Net : PCLK_c, loads : 19
   Net : CCLK_c, loads : 8
 Clock Enable Nets
-Number of Clock Enables: 4
-Top 4 highest fanout Clock Enables:
-  Net : u_esp/CRYSTAL_c_enable_16, loads : 9
-  Net : rst_n_N_38, loads : 1
+Number of Clock Enables: 530
+Top 10 highest fanout Clock Enables:
+  Net : u_sdio_cam/CRYSTAL_c_enable_4149, loads : 39
+  Net : CRYSTAL_c_enable_4220, loads : 31
+  Net : u_sdio_cam/CRYSTAL_c_enable_2025, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2041, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2057, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2065, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_4223, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2073, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_33, loads : 8
+  Net : u_sdio_cam/CRYSTAL_c_enable_2081, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : u_esp/CRYSTAL_c_enable_16, loads : 44
-  Net : u_cam_cap/cam_pixel_valid, loads : 9
-  Net : SSPI_CS_n_c, loads : 8
-  Net : n338, loads : 8
-  Net : u_esp/PCLK_c_enable_8, loads : 7
-  Net : rst_n, loads : 4
-  Net : mclk_div_cnt_0, loads : 4
-  Net : VSYNC_c, loads : 3
-  Net : mclk_div_cnt_1, loads : 3
-  Net : HREF_c, loads : 2
+  Net : u_sdio_cam/maxfan_replicated_net_999, loads : 1000
+  Net : u_sdio_cam/rd_byte_1, loads : 999
+  Net : u_sdio_cam/rd_byte_0, loads : 999
+  Net : u_sdio_cam/rd_byte_2, loads : 515
+  Net : cam_byte_hold_7, loads : 512
+  Net : cam_byte_hold_6, loads : 512
+  Net : cam_byte_hold_5, loads : 512
+  Net : cam_byte_hold_4, loads : 512
+  Net : cam_byte_hold_3, loads : 512
+  Net : cam_byte_hold_2, loads : 512
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -211,10 +253,10 @@ create_clock -period 5.000000 -name     |             |             |
 clk2 [get_nets CCLK_c]                  |  200.000 MHz|  417.362 MHz|     2  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CRYSTAL_c]               |  200.000 MHz|  196.002 MHz|     4 *
+clk1 [get_nets PCLK_c]                  |  200.000 MHz|  286.862 MHz|     2  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets PCLK_c]                  |            -|            -|     0  
+clk0 [get_nets CRYSTAL_c]               |  200.000 MHz|   77.471 MHz|    14 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -222,8 +264,8 @@ clk0 [get_nets PCLK_c]                  |            -|            -|     0
 1 constraints not met.
 
 
-Peak Memory Usage: 80.117  MB
+Peak Memory Usage: 144.238  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.375  secs
+Elapsed CPU time for LSE flow : 5.828  secs
 --------------------------------------------------------------
