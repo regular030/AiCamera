@@ -1,0 +1,25 @@
+--------------------- Fri Feb  6 03:06:14 2026 ---------------------
+
+Creating SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.log
+Ansys(R) SIwave 2025 R2 (Build 2025-05-16 12:03:40)
+OS: Windows Server 2025 Standard  (Build 26100)
+
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.siw
+Importing Ansoft Component File C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\IMPORTANT\Untitled.cmp...
+62 capacitors read
+4 inductors read
+65 resistors read
+
+Importing Layer Stackup file C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\IMPORTANT\main.stk...
+Created Touchstone® file C:/Users/kunshpreetbaweja/github/AiCamera/ansys/02-06/main.siwaveresults/Designer/SIwizard1.s76p
+Launching Ansys Electronics Desktop; please wait...done.
+Launching Ansys Electronics Desktop; please wait...done.
+Created Touchstone® file C:/Users/kunshpreetbaweja/github/AiCamera/ansys/02-06/main.siwaveresults/Designer/SIwizard1.s76p
+Launching Ansys Electronics Desktop; please wait...done.
+Launching Ansys Electronics Desktop; please wait...done.
+
+
+--------------------- Fri Feb  6 04:56:09 2026 ---------------------
+
+Appending to SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.log
+Saved C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.siw

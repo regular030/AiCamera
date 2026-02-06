@@ -1,0 +1,5 @@
+(status): Nexxim version: 2025.2.0 WIN64, build time: May 16 2025, 12:12:19
+
+(error): Unable to create output file: C:/Users/kunshpreetbaweja/github/AiCamera/siwave/main.siwaveresults/Designer/SIwizard1_schematic.aedtresults/main_SIwizard1/temp/DV1070_S1066_V0.cir_temp.nxm
+(error): boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/kunshpreetbaweja/github/AiCamera/siwave/main.siwaveresults/Designer/SIwizard1_schematic.aedtresults/main_SIwizard1/temp/DV1070_S1066_V0.cir_temp.nxm\top.sdf"
+(error): unsuccessful simulation for C:/Users/kunshpreetbaweja/github/AiCamera/siwave/main.siwaveresults/Designer/SIwizard1_schematic.aedtresults/main_SIwizard1/temp/DV1070_S1066_V0.cir

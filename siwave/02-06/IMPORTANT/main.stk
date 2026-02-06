@@ -1,0 +1,65 @@
+$begin 'StackupLayers'
+	Units('mm')
+	$begin 'Layers'
+		Layer(LayerID=1, LayerName='Top Layer', LayerType=2, IsNegative=true, Material='copper', Elevation=1.5512, Thickness=0.035, TopRoughness=0, BottomRoughness=0, SideRoughness=0, IsTopRoughnessHuray=false, IsBottomRoughnessHuray=false, IsSideRoughnessHuray=false, TopRoughnessHurayModel='', BottomRoughnessHurayModel='', SideRoughnessHurayModel='', DefinedDielectricFill='FR4_epoxy', TraceCrossSectionShape=0, TraceCrossSectionEtchStyle=0, TraceCrossSectionTopEdgeRatio=1, TraceCrossSectionBottomEdgeRatio=1, IsUserDefinedAbsValForTCS=false, AbsValueOfTopWidthForTCS=0, AbsValueOfBotWidthForTCS=0, IsThicknessInvolvedForTCS=true, IsFlipOrientationForTCS=0, Color(196, 171, 30))
+		Layer(LayerID=2, LayerName='Dielectric1', LayerType=0, IsNegative=true, Material='FR-4', Elevation=1.3408, Thickness=0.2104, TopRoughness=0, BottomRoughness=0, SideRoughness=0, IsTopRoughnessHuray=false, IsBottomRoughnessHuray=false, IsSideRoughnessHuray=false, TopRoughnessHurayModel='', BottomRoughnessHurayModel='', SideRoughnessHurayModel='', DefinedDielectricFill='', TraceCrossSectionShape=0, TraceCrossSectionEtchStyle=0, TraceCrossSectionTopEdgeRatio=1, TraceCrossSectionBottomEdgeRatio=1, IsUserDefinedAbsValForTCS=false, AbsValueOfTopWidthForTCS=0, AbsValueOfBotWidthForTCS=0, IsThicknessInvolvedForTCS=true, IsFlipOrientationForTCS=0, Color(127, 127, 127))
+		Layer(LayerID=3, LayerName='Inner1', LayerType=2, IsNegative=true, Material='copper', Elevation=1.3256, Thickness=0.0152, TopRoughness=0, BottomRoughness=0, SideRoughness=0, IsTopRoughnessHuray=false, IsBottomRoughnessHuray=false, IsSideRoughnessHuray=false, TopRoughnessHurayModel='', BottomRoughnessHurayModel='', SideRoughnessHurayModel='', DefinedDielectricFill='FR-4', TraceCrossSectionShape=0, TraceCrossSectionEtchStyle=0, TraceCrossSectionTopEdgeRatio=1, TraceCrossSectionBottomEdgeRatio=1, IsUserDefinedAbsValForTCS=false, AbsValueOfTopWidthForTCS=0, AbsValueOfBotWidthForTCS=0, IsThicknessInvolvedForTCS=true, IsFlipOrientationForTCS=0, Color(152, 143, 192))
+		Layer(LayerID=4, LayerName='Dielectric2', LayerType=0, IsNegative=true, Material='FR-4', Elevation=0.2606, Thickness=1.065, TopRoughness=0, BottomRoughness=0, SideRoughness=0, IsTopRoughnessHuray=false, IsBottomRoughnessHuray=false, IsSideRoughnessHuray=false, TopRoughnessHurayModel='', BottomRoughnessHurayModel='', SideRoughnessHurayModel='', DefinedDielectricFill='', TraceCrossSectionShape=0, TraceCrossSectionEtchStyle=0, TraceCrossSectionTopEdgeRatio=1, TraceCrossSectionBottomEdgeRatio=1, IsUserDefinedAbsValForTCS=false, AbsValueOfTopWidthForTCS=0, AbsValueOfBotWidthForTCS=0, IsThicknessInvolvedForTCS=true, IsFlipOrientationForTCS=0, Color(127, 127, 127))
+		Layer(LayerID=5, LayerName='Inner2', LayerType=2, IsNegative=true, Material='copper', Elevation=0.2454, Thickness=0.0152, TopRoughness=0, BottomRoughness=0, SideRoughness=0, IsTopRoughnessHuray=false, IsBottomRoughnessHuray=false, IsSideRoughnessHuray=false, TopRoughnessHurayModel='', BottomRoughnessHurayModel='', SideRoughnessHurayModel='', DefinedDielectricFill='FR-4', TraceCrossSectionShape=0, TraceCrossSectionEtchStyle=0, TraceCrossSectionTopEdgeRatio=1, TraceCrossSectionBottomEdgeRatio=1, IsUserDefinedAbsValForTCS=false, AbsValueOfTopWidthForTCS=0, AbsValueOfBotWidthForTCS=0, IsThicknessInvolvedForTCS=true, IsFlipOrientationForTCS=0, Color(141, 225, 218))
+		Layer(LayerID=6, LayerName='Dielectric3', LayerType=0, IsNegative=true, Material='FR-4', Elevation=0.035, Thickness=0.2104, TopRoughness=0, BottomRoughness=0, SideRoughness=0, IsTopRoughnessHuray=false, IsBottomRoughnessHuray=false, IsSideRoughnessHuray=false, TopRoughnessHurayModel='', BottomRoughnessHurayModel='', SideRoughnessHurayModel='', DefinedDielectricFill='', TraceCrossSectionShape=0, TraceCrossSectionEtchStyle=0, TraceCrossSectionTopEdgeRatio=1, TraceCrossSectionBottomEdgeRatio=1, IsUserDefinedAbsValForTCS=false, AbsValueOfTopWidthForTCS=0, AbsValueOfBotWidthForTCS=0, IsThicknessInvolvedForTCS=true, IsFlipOrientationForTCS=0, Color(127, 127, 127))
+		Layer(LayerID=7, LayerName='Bottom Layer', LayerType=2, IsNegative=true, Material='copper', Elevation=0, Thickness=0.035, TopRoughness=0, BottomRoughness=0, SideRoughness=0, IsTopRoughnessHuray=false, IsBottomRoughnessHuray=false, IsSideRoughnessHuray=false, TopRoughnessHurayModel='', BottomRoughnessHurayModel='', SideRoughnessHurayModel='', DefinedDielectricFill='FR4_epoxy', TraceCrossSectionShape=0, TraceCrossSectionEtchStyle=0, TraceCrossSectionTopEdgeRatio=1, TraceCrossSectionBottomEdgeRatio=1, IsUserDefinedAbsValForTCS=false, AbsValueOfTopWidthForTCS=0, AbsValueOfBotWidthForTCS=0, IsThicknessInvolvedForTCS=true, IsFlipOrientationForTCS=0, Color(232, 149, 131))
+	$end 'Layers'
+	$begin 'Materials'
+		$begin 'Conductor'
+			Name='copper'
+			Conductivity=58004640.3712297
+			Permeability=1
+			DerivedFrom='vacuum'
+			AnsoftID=4
+		$end 'Conductor'
+		$begin 'Insulator'
+			Name='FR-4'
+			Permittivity=4.8
+			LossTangent=0
+			DerivedFrom='vacuum'
+			AnsoftID=0
+			$begin 'Djordjevic-Sarkar'
+				MeasurementFreq=1000000000
+				SigmaDC=1e-12
+				EpsDC=0
+			$end 'Djordjevic-Sarkar'
+		$end 'Insulator'
+		$begin 'Insulator'
+			Name='Solder Resist'
+			Permittivity=1
+			LossTangent=0
+			DerivedFrom='vacuum'
+			AnsoftID=0
+			$begin 'Djordjevic-Sarkar'
+				MeasurementFreq=1000000000
+				SigmaDC=1e-12
+				EpsDC=0
+			$end 'Djordjevic-Sarkar'
+		$end 'Insulator'
+	$end 'Materials'
+	$begin 'HurayModels'
+		$begin 'HurayModel'
+			ModelName='Low Loss'
+			MetalSphereRadius=0.0005
+			UnitCellArea=1e-06
+			SpheresPerUnitCell=0.3183098861837906
+		$end 'HurayModel'
+		$begin 'HurayModel'
+			ModelName='Medium Loss'
+			MetalSphereRadius=0.0005
+			UnitCellArea=1e-06
+			SpheresPerUnitCell=0.954929658551372
+		$end 'HurayModel'
+		$begin 'HurayModel'
+			ModelName='High Loss'
+			MetalSphereRadius=0.0005
+			UnitCellArea=1e-06
+			SpheresPerUnitCell=1.909859317102744
+		$end 'HurayModel'
+	$end 'HurayModels'
+$end 'StackupLayers'
