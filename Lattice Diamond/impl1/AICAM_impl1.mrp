@@ -15,7 +15,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  02/06/26  05:11:04
+Mapped on:  02/07/26  05:33:56
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -198,7 +198,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -264,7 +264,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -330,7 +330,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -396,7 +396,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -462,7 +462,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -528,7 +528,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -594,7 +594,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -660,7 +660,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Design Summary (cont)
 ---------------------
@@ -726,7 +726,7 @@ Design Summary (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 
 
@@ -792,7 +792,7 @@ IO (PIO) Attributes
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -858,7 +858,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -924,7 +924,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  fpga_top                                      Date:  02/06/26  05:11:04
+Design:  fpga_top                                      Date:  02/07/26  05:33:56
 
 Removed logic
 -------------

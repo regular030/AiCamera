@@ -1,288 +1,4 @@
 
-synthesis -f "AICAM_impl1_lattice.synproj"
-synthesis:  version Diamond (64-bit) 3.14.0.75.2
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Feb 06 05:10:57 2026
-
-
-Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
-
-    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
-Synthesis options:
-The -a option is ECP5U.
-The -s option is 6.
-The -t option is CABGA256.
-The -d option is LFE5U-25F.
-Using package CABGA256.
-Using performance grade 6.
-                                                          
-
-##########################################################
-
-### Lattice Family : ECP5U
-
-### Device  : LFE5U-25F
-
-### Package : CABGA256
-
-### Speed   : 6
-
-##########################################################
-
-                                                          
-
-    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
-Optimization goal = Timing
-Top-level module name = fpga_top.
-Target frequency = 200.000000 MHz.
-Maximum fanout = 1000.
-Timing path count = 3
-BRAM utilization = 100.000000 %
-DSP usage = true
-DSP utilization = 100.000000 %
-fsm_encoding_style = auto
-resolve_mixed_drivers = 0
-fix_gated_clocks = 1
-
-Mux style = Auto
-Use Carry Chain = true
-carry_chain_length = 0
-Loop Limit = 1950.
-Use IO Insertion = TRUE
-Use IO Reg = AUTO
-
-Resource Sharing = TRUE
-Propagate Constants = TRUE
-Remove Duplicate Registers = TRUE
-force_gsr = auto
-ROM style = auto
-RAM style = auto
-The -comp option is FALSE.
-The -syn option is FALSE.
--p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond (searchpath added)
--p C:/lscc/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
--p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1 (searchpath added)
--p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond (searchpath added)
-Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v
-NGD file = AICAM_impl1.ngd
--sdc option: SDC file input not used.
--lpf option: Output file option is ON.
-Hardtimer checking is enabled (default). The -dt option is not used.
-The -r option is OFF. [ Remove LOC Properties is OFF. ]
-Technology check ok...
-
-Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
-Compile design.
-Compile Design Begin
-Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v. VERI-1482
-Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
-Top module name (Verilog): fpga_top
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13): " arg1="fpga_top" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="13"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(334): " arg1="camera_capture_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="334"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(367): " arg1="sccb_i2c_master_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="367"  />
-    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): " arg1="sda_oe_9" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="390"  />
-    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): " arg1="scl_8" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="390"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(396): " arg1="sdram_controller_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="396"  />
-    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): " arg1="sd_cs_n_23" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="453"  />
-    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): " arg1="sd_dq_oe_31" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="453"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(459): " arg1="esp32_link_stub" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="459"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(508): " arg1="sdio_cam_writer_example" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="508"  />
-Last elaborated design is fpga_top()
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
-Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
-Package Status:                     Final          Version 1.44.
-Top-level module name = fpga_top.
-######## Converting I/O port cam_sda to output.
-######## Converting I/O port SD_DQ[15] to output.
-######## Converting I/O port SD_DQ[14] to output.
-######## Converting I/O port SD_DQ[13] to output.
-######## Converting I/O port SD_DQ[12] to output.
-######## Converting I/O port SD_DQ[11] to output.
-######## Converting I/O port SD_DQ[10] to output.
-######## Converting I/O port SD_DQ[9] to output.
-######## Converting I/O port SD_DQ[8] to output.
-######## Converting I/O port SD_DQ[7] to output.
-######## Converting I/O port SD_DQ[6] to output.
-######## Converting I/O port SD_DQ[5] to output.
-######## Converting I/O port SD_DQ[4] to output.
-######## Converting I/O port SD_DQ[3] to output.
-######## Converting I/O port SD_DQ[2] to output.
-######## Converting I/O port SD_DQ[1] to output.
-######## Converting I/O port SD_DQ[0] to output.
-######## Converting I/O port ESP_D[7] to output.
-######## Converting I/O port ESP_D[6] to output.
-######## Converting I/O port ESP_D[5] to output.
-######## Converting I/O port ESP_D[4] to output.
-######## Converting I/O port ESP_D[3] to output.
-######## Converting I/O port ESP_D[2] to output.
-######## Converting I/O port ESP_D[1] to output.
-######## Converting I/O port ESP_D[0] to output.
-######## Converting I/O port M_CMD to output.
-######## Converting I/O port M_D1 to output.
-######## Converting I/O port M_D2 to output.
-######## Converting I/O port M_D3 to output.
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdram/sd_a"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sdram/sd_ba"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdram/sd_ba"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sdram/sd_dqm"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdram/sd_dqm"  />
-    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): " arg1="\u_sdio_cam/d1_out_205" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="765"  />
-    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_sdio_cam/state" arg1="one-hot"  />
-original encoding -> new encoding (one-hot encoding)
-
- 000 -> 00001
-
- 010 -> 00010
-
- 100 -> 00100
-
- 101 -> 01000
-
- 110 -> 10000
-
-
-
-
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="47" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="46" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="45" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="44" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="43" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="42" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="41" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="40" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sdio_cam/cmd_frame"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_sdram/sd_dq_out"  />
-    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): " arg1="\u_sdio_cam/d3_oe_208" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="765"  />
-    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(763): " arg1="\u_sdio_cam/state_FSM_i1" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="763"  />
-GSR will not be inferred because no asynchronous signal was found in the netlist.
-Applying 200.000000 MHz constraint to all clocks
-
-    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
-Results of NGD DRC are available in fpga_top_drc.log.
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
-
-
-Running DRC...
-
-DRC complete with no errors or warnings
-
-Design Results:
-   9278 blocks expanded
-completed the first expansion
-All blocks are expanded and NGD expansion is successful.
-Writing NGD file AICAM_impl1.ngd.
-
-################### Begin Area Report (fpga_top)######################
-Number of register bits => 4284 of 24879 (17 % )
-BB => 1
-CCU2C => 35
-FD1P3AX => 4153
-FD1P3IX => 95
-FD1P3JX => 5
-FD1S3AX => 7
-FD1S3AY => 3
-FD1S3IX => 20
-FD1S3JX => 1
-GSR => 1
-IB => 15
-L6MUX21 => 818
-LUT4 => 2972
-OB => 26
-OBZ => 29
-PFUMX => 1094
-################### End Area Report ##################
-
-################### Begin Clock Report ######################
-Clock Nets
-Number of Clocks: 3
-  Net : CRYSTAL_c, loads : 4257
-  Net : PCLK_c, loads : 19
-  Net : CCLK_c, loads : 8
-Clock Enable Nets
-Number of Clock Enables: 530
-Top 10 highest fanout Clock Enables:
-  Net : u_sdio_cam/CRYSTAL_c_enable_4149, loads : 39
-  Net : CRYSTAL_c_enable_4220, loads : 31
-  Net : u_sdio_cam/CRYSTAL_c_enable_2025, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2041, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2057, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2065, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_4223, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2073, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_33, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2081, loads : 8
-Highest fanout non-clock nets
-Top 10 highest fanout non-clock nets:
-  Net : u_sdio_cam/maxfan_replicated_net_999, loads : 1000
-  Net : u_sdio_cam/rd_byte_1, loads : 999
-  Net : u_sdio_cam/rd_byte_0, loads : 999
-  Net : u_sdio_cam/rd_byte_2, loads : 515
-  Net : cam_byte_hold_7, loads : 512
-  Net : cam_byte_hold_6, loads : 512
-  Net : cam_byte_hold_5, loads : 512
-  Net : cam_byte_hold_4, loads : 512
-  Net : cam_byte_hold_3, loads : 512
-  Net : cam_byte_hold_2, loads : 512
-################### End Clock Report ##################
-
-Timing Report Summary
---------------
---------------------------------------------------------------------------------
-Constraint                              |   Constraint|       Actual|Levels
---------------------------------------------------------------------------------
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets CCLK_c]                  |  200.000 MHz|  417.362 MHz|     2  
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets PCLK_c]                  |  200.000 MHz|  286.862 MHz|     2  
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets CRYSTAL_c]               |  200.000 MHz|   77.471 MHz|    14 *
-                                        |             |             |
---------------------------------------------------------------------------------
-
-
-1 constraints not met.
-
-
-Peak Memory Usage: 144.238  MB
-
---------------------------------------------------------------
-Elapsed CPU time for LSE flow : 5.828  secs
---------------------------------------------------------------
-
 map -a "ECP5U" -p LFE5U-25F -t CABGA256 -s 6 -oc Commercial   "AICAM_impl1.ngd" -o "AICAM_impl1_map.ncd" -pr "AICAM_impl1.prf" -mp "AICAM_impl1.mrp" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1/AICAM_impl1.lpf" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf"             
 map:  version Diamond (64-bit) 3.14.0.75.2
 
@@ -961,7 +677,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Fri Feb 06 05:11:08 2026
+Sat Feb 07 05:34:00 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -995,7 +711,7 @@ Constraints cover 36822 paths, 3 nets, and 16981 connections (77.84% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Fri Feb 06 05:11:08 2026
+Sat Feb 07 05:34:01 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1040,7 +756,7 @@ Cumulative negative slack: 3282467 (3282467+0)
 
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 232 MB
+Peak Memory Usage: 233 MB
 
 
 ldbanno "AICAM_impl1_map.ncd" -n Verilog -o "AICAM_impl1_mapvo.vo" -w -neg
@@ -1097,7 +813,7 @@ Converting design AICAM_impl1_map.ncd into .ldb format.
 Writing VHDL netlist to file AICAM_impl1_mapvho.vho
 Writing SDF timing to file AICAM_impl1_mapvho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 4 secs 
+Total CPU Time: 3 secs 
 Total REAL Time: 4 secs 
 Peak Memory Usage: 198 MB
 
@@ -1108,7 +824,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "AICAM_impl1_map.ncd"
-Fri Feb 06 05:11:17 2026
+Sat Feb 07 05:34:09 2026
 
 PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 AICAM_impl1_map.ncd AICAM_impl1.dir/5_1.ncd AICAM_impl1.prf
@@ -1162,12 +878,12 @@ Finished Placer Phase 0.  REAL time: 3 secs
 Starting Placer Phase 1.
 .............
 Placer score = 89500203.
-Finished Placer Phase 1.  REAL time: 9 secs 
+Finished Placer Phase 1.  REAL time: 8 secs 
 
 Starting Placer Phase 2.
 .
 Placer score =  77535788
-Finished Placer Phase 2.  REAL time: 11 secs 
+Finished Placer Phase 2.  REAL time: 10 secs 
 
 
 ------------------ Clock Report ------------------
@@ -1205,7 +921,7 @@ Quadrant BL Clocks:
 Quadrant BR Clocks:
   PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 589
   PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 4
-  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "J14 (PR20C)", CLK/CE/SR load = 6
+  PRIMARY "CCLK_c" from comp "CCLK" on PIO site "P11 (PR47C)", CLK/CE/SR load = 6
   PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R12C42A", CLK/CE/SR load = 9
 
   PRIMARY  : 4 out of 16 (25%)
@@ -1231,23 +947,23 @@ I/O Bank Usage Summary:
 +----------+----------------+------------+------------+------------+
 | 0        | 12 / 24 ( 50%) | 3.3V       | -          | -          |
 | 1        | 14 / 32 ( 43%) | 1.8V       | -          | -          |
-| 2        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
-| 3        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
+| 2        | 12 / 32 ( 37%) | 3.3V       | -          | -          |
+| 3        | 14 / 32 ( 43%) | 3.3V       | -          | -          |
 | 6        | 5 / 32 ( 15%)  | 3.3V       | -          | -          |
 | 7        | 10 / 32 ( 31%) | 3.3V       | -          | -          |
 | 8        | 4 / 13 ( 30%)  | 2.5V       | -          | -          |
 +----------+----------------+------------+------------+------------+
 
-Total placer CPU time: 10 secs 
+Total placer CPU time: 9 secs 
 
 Dumping design to file AICAM_impl1.dir/5_1.ncd.
 
 0 connections routed; 21814 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 14 secs 
+Completed router resource preassignment. Real time: 13 secs 
 
-Start NBR router at 05:11:31 02/06/26
+Start NBR router at 05:34:22 02/07/26
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -1262,163 +978,163 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 05:11:32 02/06/26
+Start NBR special constraint process at 05:34:23 02/07/26
 
-Start NBR section for initial routing at 05:11:32 02/06/26
+Start NBR section for initial routing at 05:34:23 02/07/26
 Level 1, iteration 1
 245(0.02%) conflicts; 16973(77.81%) untouched conns; 36690937 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.009ns/-36690.937ns; real time: 21 secs 
+Estimated worst slack/total negative slack<setup>: -5.009ns/-36690.937ns; real time: 18 secs 
 Level 2, iteration 1
 1294(0.11%) conflicts; 14167(64.94%) untouched conns; 26776189 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.777ns/-26776.189ns; real time: 29 secs 
+Estimated worst slack/total negative slack<setup>: -4.777ns/-26776.189ns; real time: 23 secs 
 Level 3, iteration 1
 2449(0.21%) conflicts; 4203(19.27%) untouched conns; 24412414 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.763ns/-24412.414ns; real time: 35 secs 
+Estimated worst slack/total negative slack<setup>: -4.763ns/-24412.414ns; real time: 27 secs 
 Level 4, iteration 1
 1645(0.14%) conflicts; 0(0.00%) untouched conn; 25854916 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.674ns/-25854.917ns; real time: 42 secs 
+Estimated worst slack/total negative slack<setup>: -4.674ns/-25854.917ns; real time: 32 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 40 (1.19%)
 
-Start NBR section for normal routing at 05:11:59 02/06/26
+Start NBR section for normal routing at 05:34:41 02/07/26
 Level 1, iteration 1
 1075(0.09%) conflicts; 2665(12.22%) untouched conns; 25939203 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.775ns/-25939.203ns; real time: 44 secs 
+Estimated worst slack/total negative slack<setup>: -4.775ns/-25939.203ns; real time: 34 secs 
 Level 1, iteration 2
 721(0.06%) conflicts; 3089(14.16%) untouched conns; 26132813 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.755ns/-26132.814ns; real time: 46 secs 
+Estimated worst slack/total negative slack<setup>: -4.755ns/-26132.814ns; real time: 36 secs 
 Level 1, iteration 3
 471(0.04%) conflicts; 3522(16.15%) untouched conns; 26214352 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.755ns/-26214.352ns; real time: 48 secs 
+Estimated worst slack/total negative slack<setup>: -4.755ns/-26214.352ns; real time: 38 secs 
 Level 1, iteration 4
 343(0.03%) conflicts; 3668(16.81%) untouched conns; 26214352 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.755ns/-26214.352ns; real time: 50 secs 
+Estimated worst slack/total negative slack<setup>: -4.755ns/-26214.352ns; real time: 39 secs 
 Level 1, iteration 5
 268(0.02%) conflicts; 3763(17.25%) untouched conns; 27005075 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.769ns/-27005.076ns; real time: 51 secs 
+Estimated worst slack/total negative slack<setup>: -4.769ns/-27005.076ns; real time: 41 secs 
 Level 1, iteration 6
 155(0.01%) conflicts; 3814(17.48%) untouched conns; 27005075 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.769ns/-27005.076ns; real time: 52 secs 
+Estimated worst slack/total negative slack<setup>: -4.769ns/-27005.076ns; real time: 42 secs 
 Level 1, iteration 7
 128(0.01%) conflicts; 3854(17.67%) untouched conns; 27247866 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.754ns/-27247.867ns; real time: 53 secs 
+Estimated worst slack/total negative slack<setup>: -4.754ns/-27247.867ns; real time: 42 secs 
 Level 1, iteration 8
 107(0.01%) conflicts; 4142(18.99%) untouched conns; 27247866 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.754ns/-27247.867ns; real time: 54 secs 
+Estimated worst slack/total negative slack<setup>: -4.754ns/-27247.867ns; real time: 43 secs 
 Level 1, iteration 9
 77(0.01%) conflicts; 4156(19.05%) untouched conns; 28167765 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.946ns/-28167.766ns; real time: 55 secs 
+Estimated worst slack/total negative slack<setup>: -4.946ns/-28167.766ns; real time: 44 secs 
 Level 1, iteration 10
 49(0.00%) conflicts; 4158(19.06%) untouched conns; 28167765 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.946ns/-28167.766ns; real time: 56 secs 
+Estimated worst slack/total negative slack<setup>: -4.946ns/-28167.766ns; real time: 44 secs 
 Level 1, iteration 11
 29(0.00%) conflicts; 4169(19.11%) untouched conns; 29833358 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.948ns/-29833.358ns; real time: 56 secs 
+Estimated worst slack/total negative slack<setup>: -4.948ns/-29833.358ns; real time: 45 secs 
 Level 1, iteration 12
 37(0.00%) conflicts; 4160(19.07%) untouched conns; 29833358 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.948ns/-29833.358ns; real time: 56 secs 
+Estimated worst slack/total negative slack<setup>: -4.948ns/-29833.358ns; real time: 45 secs 
 Level 1, iteration 13
 20(0.00%) conflicts; 4168(19.11%) untouched conns; 29834294 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.999ns/-29834.295ns; real time: 57 secs 
+Estimated worst slack/total negative slack<setup>: -4.999ns/-29834.295ns; real time: 45 secs 
 Level 4, iteration 1
 848(0.07%) conflicts; 0(0.00%) untouched conn; 29397638 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.980ns/-29397.639ns; real time: 1 mins 
+Estimated worst slack/total negative slack<setup>: -4.980ns/-29397.639ns; real time: 48 secs 
 Level 4, iteration 2
 527(0.05%) conflicts; 0(0.00%) untouched conn; 29915022 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.975ns/-29915.022ns; real time: 1 mins 3 secs 
+Estimated worst slack/total negative slack<setup>: -4.975ns/-29915.022ns; real time: 50 secs 
 Level 4, iteration 3
 398(0.03%) conflicts; 0(0.00%) untouched conn; 29976907 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-29976.907ns; real time: 1 mins 6 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-29976.907ns; real time: 51 secs 
 Level 4, iteration 4
 272(0.02%) conflicts; 0(0.00%) untouched conn; 29976907 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-29976.907ns; real time: 1 mins 8 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-29976.907ns; real time: 52 secs 
 Level 4, iteration 5
 216(0.02%) conflicts; 0(0.00%) untouched conn; 30161711 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-30161.712ns; real time: 1 mins 9 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30161.712ns; real time: 53 secs 
 Level 4, iteration 6
 164(0.01%) conflicts; 0(0.00%) untouched conn; 30161711 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-30161.712ns; real time: 1 mins 11 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30161.712ns; real time: 54 secs 
 Level 4, iteration 7
 129(0.01%) conflicts; 0(0.00%) untouched conn; 30536532 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-30536.533ns; real time: 1 mins 13 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30536.533ns; real time: 55 secs 
 Level 4, iteration 8
 94(0.01%) conflicts; 0(0.00%) untouched conn; 30536532 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-30536.533ns; real time: 1 mins 14 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30536.533ns; real time: 56 secs 
 Level 4, iteration 9
 86(0.01%) conflicts; 0(0.00%) untouched conn; 30617307 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-30617.308ns; real time: 1 mins 15 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30617.308ns; real time: 57 secs 
 Level 4, iteration 10
 42(0.00%) conflicts; 0(0.00%) untouched conn; 30617307 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.985ns/-30617.308ns; real time: 1 mins 16 secs 
+Estimated worst slack/total negative slack<setup>: -4.985ns/-30617.308ns; real time: 57 secs 
 Level 4, iteration 11
 31(0.00%) conflicts; 0(0.00%) untouched conn; 30660599 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30660.600ns; real time: 1 mins 16 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30660.600ns; real time: 57 secs 
 Level 4, iteration 12
 23(0.00%) conflicts; 0(0.00%) untouched conn; 30660599 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30660.600ns; real time: 1 mins 17 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30660.600ns; real time: 57 secs 
 Level 4, iteration 13
 13(0.00%) conflicts; 0(0.00%) untouched conn; 30689419 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30689.420ns; real time: 1 mins 17 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30689.420ns; real time: 58 secs 
 Level 4, iteration 14
 14(0.00%) conflicts; 0(0.00%) untouched conn; 30689419 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30689.420ns; real time: 1 mins 17 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30689.420ns; real time: 58 secs 
 Level 4, iteration 15
 14(0.00%) conflicts; 0(0.00%) untouched conn; 30686031 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30686.032ns; real time: 1 mins 18 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30686.032ns; real time: 58 secs 
 Level 4, iteration 16
 12(0.00%) conflicts; 0(0.00%) untouched conn; 30686031 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30686.032ns; real time: 1 mins 18 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30686.032ns; real time: 58 secs 
 Level 4, iteration 17
 11(0.00%) conflicts; 0(0.00%) untouched conn; 30674799 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30674.800ns; real time: 1 mins 18 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30674.800ns; real time: 58 secs 
 Level 4, iteration 18
 9(0.00%) conflicts; 0(0.00%) untouched conn; 30674799 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30674.800ns; real time: 1 mins 19 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30674.800ns; real time: 59 secs 
 Level 4, iteration 19
 10(0.00%) conflicts; 0(0.00%) untouched conn; 30715140 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30715.141ns; real time: 1 mins 19 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30715.141ns; real time: 59 secs 
 Level 4, iteration 20
 5(0.00%) conflicts; 0(0.00%) untouched conn; 30715140 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30715.141ns; real time: 1 mins 19 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30715.141ns; real time: 59 secs 
 Level 4, iteration 21
 3(0.00%) conflicts; 0(0.00%) untouched conn; 30728870 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.871ns; real time: 1 mins 19 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.871ns; real time: 59 secs 
 Level 4, iteration 22
 1(0.00%) conflict; 0(0.00%) untouched conn; 30728870 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.871ns; real time: 1 mins 19 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.871ns; real time: 59 secs 
 Level 4, iteration 23
 1(0.00%) conflict; 0(0.00%) untouched conn; 30728935 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.936ns; real time: 1 mins 20 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.936ns; real time: 59 secs 
 Level 4, iteration 24
 0(0.00%) conflict; 0(0.00%) untouched conn; 30728935 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.936ns; real time: 1 mins 20 secs 
+Estimated worst slack/total negative slack<setup>: -5.004ns/-30728.936ns; real time: 59 secs 
 
-Start NBR section for performance tuning (iteration 1) at 05:12:37 02/06/26
+Start NBR section for performance tuning (iteration 1) at 05:35:08 02/07/26
 Level 4, iteration 1
 7(0.00%) conflicts; 0(0.00%) untouched conn; 30695011 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.767ns/-30695.012ns; real time: 1 mins 21 secs 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30695.012ns; real time: 1 mins 
 Level 4, iteration 2
 1(0.00%) conflict; 0(0.00%) untouched conn; 30726607 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.608ns; real time: 1 mins 21 secs 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.608ns; real time: 1 mins 
 Level 4, iteration 3
 0(0.00%) conflict; 0(0.00%) untouched conn; 30726151 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.152ns; real time: 1 mins 21 secs 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.152ns; real time: 1 mins 
 
-Start NBR section for performance tuning (iteration 2) at 05:12:38 02/06/26
+Start NBR section for performance tuning (iteration 2) at 05:35:09 02/07/26
 Level 4, iteration 1
 1(0.00%) conflict; 0(0.00%) untouched conn; 30725756 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.767ns/-30725.757ns; real time: 1 mins 22 secs 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30725.757ns; real time: 1 mins 
 Level 4, iteration 2
 0(0.00%) conflict; 0(0.00%) untouched conn; 30726178 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.179ns; real time: 1 mins 22 secs 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30726.179ns; real time: 1 mins 
 
-Start NBR section for re-routing at 05:12:39 02/06/26
+Start NBR section for re-routing at 05:35:09 02/07/26
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 30719191 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.767ns/-30719.192ns; real time: 1 mins 23 secs 
+Estimated worst slack/total negative slack<setup>: -4.767ns/-30719.192ns; real time: 1 mins 1 secs 
 
-Start NBR section for post-routing at 05:12:40 02/06/26
+Start NBR section for post-routing at 05:35:10 02/07/26
 
 End NBR router with 0 unrouted connection
 
@@ -1433,8 +1149,8 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 
 
 
-Total CPU time 1 mins 24 secs 
-Total REAL time: 1 mins 28 secs 
+Total CPU time 1 mins 2 secs 
+Total REAL time: 1 mins 4 secs 
 Completely routed.
 End of route.  21814 routed (100.00%); 0 unrouted.
 
@@ -1453,8 +1169,8 @@ PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.177
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 1 mins 26 secs 
-Total REAL time to completion: 1 mins 30 secs 
+Total CPU  time to completion: 1 mins 3 secs 
+Total REAL time to completion: 1 mins 5 secs 
 
 par done!
 
@@ -1491,7 +1207,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Fri Feb 06 05:12:48 2026
+Sat Feb 07 05:35:15 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1525,7 +1241,7 @@ Constraints cover 36822 paths, 3 nets, and 17613 connections (80.74% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Fri Feb 06 05:12:49 2026
+Sat Feb 07 05:35:15 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1569,8 +1285,8 @@ Cumulative negative slack: 12887912 (12887912+0)
 --------------------------------------------------------------------------------
 
 Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 214 MB
+Total REAL Time: 0 secs 
+Peak Memory Usage: 215 MB
 
 
 iotiming  "AICAM_impl1.ncd" "AICAM_impl1.prf"
@@ -1663,7 +1379,7 @@ Done.
 ibisgen "AICAM_impl1.ncd" "C:/lscc/diamond/3.14/cae_library/ibis/ecp5u.ibs" "AICAM_impl1.prf"
 IBIS Models Generator: Lattice Diamond (64-bit) 3.14.0.75.2
 
-Fri Feb 06 05:12:59 2026
+Sat Feb 07 05:35:22 2026
 
 
 Loading design for application GENERIC from file AICAM_impl1.ncd.
@@ -1712,8 +1428,8 @@ Loading preferences from aicam_impl1.prf.
 Writing Verilog netlist to file AICAM_impl1_vo.vo
 Writing SDF timing to file AICAM_impl1_vo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 7 secs 
-Total REAL Time: 8 secs 
+Total CPU Time: 6 secs 
+Total REAL Time: 6 secs 
 Peak Memory Usage: 207 MB
 
 ldbanno "AICAM_impl1.ncd" -n VHDL -o "AICAM_impl1_vho.vho"        -w -neg 
@@ -1742,8 +1458,8 @@ Loading preferences from aicam_impl1.prf.
 Writing VHDL netlist to file AICAM_impl1_vho.vho
 Writing SDF timing to file AICAM_impl1_vho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 7 secs 
-Total REAL Time: 8 secs 
+Total CPU Time: 6 secs 
+Total REAL Time: 6 secs 
 Peak Memory Usage: 207 MB
 
 tmcheck -par "AICAM_impl1.par" 

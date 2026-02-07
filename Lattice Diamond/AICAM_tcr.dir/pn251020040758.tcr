@@ -1,5 +1,0 @@
-#Start recording tcl command: 10/20/2025 00:35:14
-#Project Location: C:/Users/kunsh/OneDrive/Desktop/ai camera/Lattice Diamond; Project name: AICAM
-prj_project new -name "AICAM" -impl "impl1" -dev LFE5U-25F-6BG256C -synthesis "lse"
-prj_project save
-#Stop recording: 10/20/2025 04:07:58

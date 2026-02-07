@@ -14,13 +14,13 @@ Performance Grade:      6
 PACKAGE:          CABGA256
 Package Status:                     Final          Version 1.44
 
-Fri Feb 06 05:11:28 2026
+Sat Feb 07 05:34:19 2026
 
 Pinout by Port Name:
 +-----------+----------+---------------+-------+-----------+---------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type   | Site  | BC Enable | Properties                                  |
 +-----------+----------+---------------+-------+-----------+---------------------------------------------+
-| CCLK      | J14/2    | LVCMOS33_IN   | PR20C |           | CLAMP:ON HYSTERESIS:ON                      |
+| CCLK      | P11/3    | LVCMOS33_IN   | PR47C |           | CLAMP:ON HYSTERESIS:ON                      |
 | CRYSTAL   | M1/6     | LVCMOS33_IN   | PL26C |           | CLAMP:ON HYSTERESIS:ON                      |
 | DIN       | T8/8     | LVCMOS33_IN   | PB11B |           | HYSTERESIS:ON                               |
 | DOUT      | M8/8     | LVCMOS33_OUT  | PB15B |           | DRIVE:8mA OPENDRAIN:ON SLEW:SLOW            |
@@ -229,7 +229,7 @@ Vccio by Bank:
 | J5/7     |     unused, PULL:DOWN |            |               | PL17D | LDQ20                    |           |
 | J12/2    |     unused, PULL:DOWN |            |               | PR17D | RDQ20                    |           |
 | J13/2    |     unused, PULL:DOWN |            |               | PR17C | RDQ20                    |           |
-| J14/2    | CCLK                  | LOCATED    | LVCMOS33_IN   | PR20C | GR_PCLK2_0/RDQ20         |           |
+| J14/2    |     unused, PULL:DOWN |            |               | PR20C | GR_PCLK2_0/RDQ20         |           |
 | J15/2    | SD_CLK                | LOCATED    | LVCMOS33_OUT  | PR23B | PCLKC2_1/RDQ20           |           |
 | J16/2    | SD_DQ[7]              | LOCATED    | LVCMOS33_OUT  | PR23A | PCLKT2_1/RDQ20           |           |
 | K1/7     |     unused, PULL:DOWN |            |               | PL23C | PCLKT7_0/LDQ20           |           |
@@ -287,7 +287,7 @@ Vccio by Bank:
 | P6/6     |     unused, PULL:DOWN |            |               | PL47C | LLC_GPLL0T_IN/LDQ44      |           |
 | P7/8     |     unused, PULL:DOWN |            |               | PB6B  | D4/MOSI2/IO4             |           |
 | P8/8     |     unused, PULL:DOWN |            |               | PB13B | CS1N                     |           |
-| P11/3    |     unused, PULL:DOWN |            |               | PR47C | LRC_GPLL0T_IN/RDQ44      |           |
+| P11/3    | CCLK                  | LOCATED    | LVCMOS33_IN   | PR47C | LRC_GPLL0T_IN/RDQ44      |           |
 | P12/3    |     unused, PULL:DOWN |            |               | PR47D | LRC_GPLL0C_IN/RDQ44      |           |
 | P13/3    |     unused, PULL:DOWN |            |               | PR41A | RDQ44                    |           |
 | P14/3    |     unused, PULL:DOWN |            |               | PR38B | RDQ44                    |           |
@@ -327,7 +327,7 @@ Vccio by Bank:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "CCLK"  SITE  "J14";
+LOCATE  COMP  "CCLK"  SITE  "P11";
 LOCATE  COMP  "CRYSTAL"  SITE  "M1";
 LOCATE  COMP  "DIN"  SITE  "T8";
 LOCATE  COMP  "DOUT"  SITE  "M8";
@@ -409,7 +409,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Feb 06 05:11:28 2026
+Sat Feb 07 05:34:19 2026
 
 
 
