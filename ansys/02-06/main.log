@@ -1,4 +1,4 @@
---------------------- Fri Feb  6 03:06:14 2026 ---------------------
+--------------------- Fri Feb 27 01:26:31 2026 ---------------------
 
 Creating SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.log
 Ansys(R) SIwave 2025 R2 (Build 2025-05-16 12:03:40)
@@ -8,18 +8,79 @@ Saved C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.siw
 Importing Ansoft Component File C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\IMPORTANT\Untitled.cmp...
 62 capacitors read
 4 inductors read
-65 resistors read
+82 resistors read
 
-Importing Layer Stackup file C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\IMPORTANT\main.stk...
-Created Touchstone® file C:/Users/kunshpreetbaweja/github/AiCamera/ansys/02-06/main.siwaveresults/Designer/SIwizard1.s76p
-Launching Ansys Electronics Desktop; please wait...done.
-Launching Ansys Electronics Desktop; please wait...done.
-Created Touchstone® file C:/Users/kunshpreetbaweja/github/AiCamera/ansys/02-06/main.siwaveresults/Designer/SIwizard1.s76p
-Launching Ansys Electronics Desktop; please wait...done.
-Launching Ansys Electronics Desktop; please wait...done.
+Importing Layer Stackup file C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\IMPORTANT\six.stk...
+Building near field surface plot(s)...
+Field Magnitude 27.885714A/m at (92.041946, 94.391800, 4.538400)mm
+Field Magnitude 27.885714A/m at (92.041946, 94.391800, 4.538400)mm
+Field Magnitude 27.885714A/m at (92.041946, 94.391800, 4.538400)mm
+Field Magnitude 6902.461026V/m at (114.559807, 99.837929, 4.538400)mm
+Field Magnitude 6902.461026V/m at (114.559807, 99.837929, 4.538400)mm
+Field Magnitude 6902.461026V/m at (114.559807, 99.837929, 4.538400)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 14322.439034V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 14322.439034V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 14322.439034V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 14322.439034V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 14322.439034V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 14322.439034V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 291.311091A/m at (92.041946, 94.391800, 4.538400)mm
+Field Magnitude 291.311091A/m at (92.041946, 94.391800, 4.538400)mm
+Field Magnitude 20.174068A/m at (151.198456, 111.119446, 0.769200)mm
+Field Magnitude 20.174068A/m at (151.198456, 111.119446, 0.769200)mm
+Field Magnitude 20.174068A/m at (151.198456, 111.119446, 0.769200)mm
+Field Magnitude 46.549877A/m at (118.723427, 100.522026, 4.538400)mm
+Field Magnitude 46.549877A/m at (118.723427, 100.522026, 4.538400)mm
+Field Magnitude 3919.788265V/m at (151.198456, 100.442711, 0.769200)mm
+Field Magnitude 3919.788265V/m at (151.198456, 100.442711, 0.769200)mm
+Field Magnitude 3919.788265V/m at (151.198456, 100.442711, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 10152.597632V/m at (151.198456, 119.912048, 0.769200)mm
+Field Magnitude 4021.644850V/m at (151.198456, 156.338562, 0.769200)mm
+Field Magnitude 4021.644850V/m at (151.198456, 156.338562, 0.769200)mm
+Field Magnitude 4021.644850V/m at (151.198456, 156.338562, 0.769200)mm
+Field Magnitude 4709.302444V/m at (116.072975, 127.910530, 4.538400)mm
+Field Magnitude 4709.302444V/m at (116.072975, 127.910530, 4.538400)mm
+Field Magnitude 4709.302444V/m at (116.072975, 127.910530, 4.538400)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Field Magnitude 11222.851059V/m at (96.187981, 183.972458, 0.769200)mm
+Building near field surface plot(s)...
+Field Magnitude 12519.652058V/m at (99.083267, 183.972458, 0.769200)mm
+Field Magnitude 12519.652058V/m at (99.083267, 183.972458, 0.769200)mm
+Field Magnitude 12519.652058V/m at (99.083267, 183.972458, 0.769200)mm
+Field Magnitude 93.894736A/m at (81.711540, 97.616516, 0.576900)mm
+Field Magnitude 93.894736A/m at (81.711540, 97.616516, 0.576900)mm
+Field Magnitude 28.039651A/m at (103.426201, 183.972458, 0.769200)mm
+Field Magnitude 28.039651A/m at (103.426201, 183.972458, 0.769200)mm
+Field Magnitude 28.039651A/m at (103.426201, 183.972458, 0.769200)mm
+Field Magnitude 25.895060A/m at (81.711540, 90.551025, 0.288450)mm
+Field Magnitude 25.895060A/m at (81.711540, 90.551025, 0.288450)mm
+Field Magnitude 25.895060A/m at (81.711540, 90.551025, 0.288450)mm
+Field Magnitude 20.347760A/m at (151.198456, 93.952927, 0.384600)mm
+Field Magnitude 20.347760A/m at (151.198456, 93.952927, 0.384600)mm
+Field Magnitude 39.703563A/m at (151.198456, 93.952927, 0.384600)mm
+Field Magnitude 39.703563A/m at (151.198456, 93.952927, 0.384600)mm
+Field Magnitude 39.703563A/m at (151.198456, 93.952927, 0.384600)mm
+Field Magnitude 13282.786273V/m at (94.740334, 183.972458, -0.576950)mm
+Field Magnitude 13282.786273V/m at (94.740334, 183.972458, -0.576950)mm
+Field Magnitude 13282.786273V/m at (94.740334, 183.972458, -0.576950)mm
 
 
---------------------- Fri Feb  6 04:56:09 2026 ---------------------
+--------------------- Fri Feb 27 02:41:04 2026 ---------------------
 
 Appending to SIwave session log C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.log
 Saved C:\Users\kunshpreetbaweja\github\AiCamera\ansys\02-06\main.siw
