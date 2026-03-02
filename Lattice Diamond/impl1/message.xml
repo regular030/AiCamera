@@ -67,6 +67,18 @@
             <Severity>Warning</Severity>
             <Dynamic>DIN_pad/IOBUF</Dynamic>
         </Message>
+        <Message>
+            <ID>51001102</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>N9</Dynamic>
+            <Dynamic>CCLK</Dynamic>
+        </Message>
+        <Message>
+            <ID>1103694</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>Semantic error in &quot;LOCATE COMP &quot;CCLK&quot; SITE &quot;N9&quot; ;&quot;: </Dynamic>
+            <Dynamic>N9</Dynamic>
+        </Message>
     </Task>
     <Task name="Lattice_Synthesis">
         <Message>

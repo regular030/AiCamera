@@ -2,22 +2,22 @@
 <BuildStatus>
     <Strategy name="Strategy1">
         <Milestone name="Export" build_result="0" build_time="0">
-            <Task name="IBIS" build_result="2" update_result="0" update_time="1770460524"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1770460530"/>
-            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1770460536"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1770460565"/>
-            <Task name="Promgen" build_result="2" update_result="0" update_time="1770460566"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1772417350"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1772417359"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1772417366"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1772417371"/>
+            <Task name="Promgen" build_result="2" update_result="0" update_time="1772417374"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1770460439">
-            <Task name="Map" build_result="2" update_result="0" update_time="1770460439"/>
-            <Task name="MapTrace" build_result="2" update_result="0" update_time="1770460441"/>
-            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1770460445"/>
-            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1770460449"/>
+        <Milestone name="Map" build_result="2" build_time="1772417206">
+            <Task name="Map" build_result="2" update_result="0" update_time="1772417206"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1772417208"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1772417212"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1772417216"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1770460514">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1770460514"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1770460516"/>
-            <Task name="IOTiming" build_result="2" update_result="0" update_time="1770460522"/>
+        <Milestone name="PAR" build_result="2" build_time="1772417336">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1772417336"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1772417338"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1772417348"/>
         </Milestone>
         <Milestone name="Synthesis" build_result="2" build_time="1770372663">
             <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1770372663"/>
@@ -30,25 +30,25 @@
             <Task name="PIODRC" build_result="0" update_result="2" update_time="1770372663"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="1761708787"/>
         </Milestone>
-        <Report name=".vdbs/AICAM_impl1_map.vdb" last_build_time="1770460439" last_build_size="1215834"/>
-        <Report name="AICAM_impl1.bgn" last_build_time="1770460564" last_build_size="4602"/>
-        <Report name="AICAM_impl1.bit" last_build_time="1770460564" last_build_size="582671"/>
-        <Report name="AICAM_impl1.ior" last_build_time="1770460522" last_build_size="4326"/>
+        <Report name=".vdbs/AICAM_impl1_map.vdb" last_build_time="1772417206" last_build_size="1215834"/>
+        <Report name="AICAM_impl1.bgn" last_build_time="1772417371" last_build_size="4602"/>
+        <Report name="AICAM_impl1.bit" last_build_time="1772417371" last_build_size="582671"/>
+        <Report name="AICAM_impl1.ior" last_build_time="1772417348" last_build_size="4326"/>
         <Report name="AICAM_impl1.lsedata" last_build_time="1770372657" last_build_size="466597"/>
-        <Report name="AICAM_impl1.mcs" last_build_time="1770460566" last_build_size="1638910"/>
-        <Report name="AICAM_impl1.ncd" last_build_time="1770460514" last_build_size="5924927"/>
+        <Report name="AICAM_impl1.mcs" last_build_time="1772417374" last_build_size="1638910"/>
+        <Report name="AICAM_impl1.ncd" last_build_time="1772417336" last_build_size="5899983"/>
         <Report name="AICAM_impl1.ngd" last_build_time="1770372663" last_build_size="4314664"/>
-        <Report name="AICAM_impl1.tw1" last_build_time="1770460441" last_build_size="21595"/>
-        <Report name="AICAM_impl1.twr" last_build_time="1770460515" last_build_size="124924"/>
-        <Report name="AICAM_impl1_map.ncd" last_build_time="1770460438" last_build_size="4083619"/>
-        <Report name="AICAM_impl1_mapvho.sdf" last_build_time="1770460449" last_build_size="4223852"/>
-        <Report name="AICAM_impl1_mapvho.vho" last_build_time="1770460448" last_build_size="2930683"/>
-        <Report name="AICAM_impl1_mapvo.sdf" last_build_time="1770460445" last_build_size="4233821"/>
-        <Report name="AICAM_impl1_mapvo.vo" last_build_time="1770460444" last_build_size="2372498"/>
-        <Report name="AICAM_impl1_vho.sdf" last_build_time="1770460536" last_build_size="5173347"/>
-        <Report name="AICAM_impl1_vho.vho" last_build_time="1770460535" last_build_size="2927598"/>
-        <Report name="AICAM_impl1_vo.sdf" last_build_time="1770460529" last_build_size="5184044"/>
-        <Report name="AICAM_impl1_vo.vo" last_build_time="1770460529" last_build_size="2373799"/>
-        <Report name="IBIS/AICAM_impl1.ibs" last_build_time="1770460524" last_build_size="473988"/>
+        <Report name="AICAM_impl1.tw1" last_build_time="1772417208" last_build_size="21595"/>
+        <Report name="AICAM_impl1.twr" last_build_time="1772417338" last_build_size="126378"/>
+        <Report name="AICAM_impl1_map.ncd" last_build_time="1772417205" last_build_size="4083614"/>
+        <Report name="AICAM_impl1_mapvho.sdf" last_build_time="1772417216" last_build_size="4223852"/>
+        <Report name="AICAM_impl1_mapvho.vho" last_build_time="1772417215" last_build_size="2930683"/>
+        <Report name="AICAM_impl1_mapvo.sdf" last_build_time="1772417212" last_build_size="4233821"/>
+        <Report name="AICAM_impl1_mapvo.vo" last_build_time="1772417211" last_build_size="2372498"/>
+        <Report name="AICAM_impl1_vho.sdf" last_build_time="1772417365" last_build_size="5174747"/>
+        <Report name="AICAM_impl1_vho.vho" last_build_time="1772417365" last_build_size="2927742"/>
+        <Report name="AICAM_impl1_vo.sdf" last_build_time="1772417358" last_build_size="5185552"/>
+        <Report name="AICAM_impl1_vo.vo" last_build_time="1772417358" last_build_size="2373709"/>
+        <Report name="IBIS/AICAM_impl1.ibs" last_build_time="1772417350" last_build_size="473988"/>
     </Strategy>
 </BuildStatus>

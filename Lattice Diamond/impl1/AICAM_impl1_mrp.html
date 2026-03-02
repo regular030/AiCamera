@@ -23,7 +23,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  02/07/26  05:33:56
+Mapped on:  03/01/26  21:06:42
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
@@ -642,7 +642,7 @@ Mapped on:  02/07/26  05:33:56
 
 
 
-   Number of warnings:  4
+   Number of warnings:  6
    Number of errors:    0
      
 
@@ -659,6 +659,10 @@ WARNING - map: DOUT_pad/IOBUF has conflicing BANK and VCCIO settings, which will
      be ignored
 WARNING - map: DIN_pad/IOBUF has conflicing BANK and VCCIO settings, which will
      be ignored
+WARNING - map: Specified location site name "N9" is not valid for CCLK. Location
+     directive ignored.
+WARNING - map: Semantic error in "LOCATE COMP "CCLK" SITE "N9" ;": Unable to
+     find site N9 in the device. This preference has been disabled.
 
 
 
@@ -695,11 +699,11 @@ WARNING - map: DIN_pad/IOBUF has conflicing BANK and VCCIO settings, which will
 | SD_DQ[7]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_DQ[6]            | OUTPUT    | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 | SD_DQ[5]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_DQ[4]            | OUTPUT    | LVCMOS33  |            |
-
 +---------------------+-----------+-----------+------------+
 | SD_DQ[3]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -752,11 +756,11 @@ WARNING - map: DIN_pad/IOBUF has conflicing BANK and VCCIO settings, which will
 | SD_BA[1]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_BA[0]            | OUTPUT    | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 | DOUT                | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | ESP_D[7]            | OUTPUT    | LVCMOS33  |            |
-
 +---------------------+-----------+-----------+------------+
 | ESP_D[6]            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -809,10 +813,10 @@ WARNING - map: DIN_pad/IOBUF has conflicing BANK and VCCIO settings, which will
 | DIN                 | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | CCLK                | INPUT     | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 | SSPI_CS_n           | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
 
 
 
@@ -853,15 +857,9 @@ Block i2 was optimized away.
 -------------------------
 
    Total CPU Time: 2 secs  
-   Total REAL Time: 3 secs  
-   Peak Memory Usage: 154 MB
+   Total REAL Time: 4 secs  
+   Peak Memory Usage: 155 MB
         
-
-
-
-
-
-
 
 
 

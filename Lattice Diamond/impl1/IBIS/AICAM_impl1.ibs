@@ -1,6 +1,6 @@
 |************************************************************************
 | IBIS Models Generator: Lattice Diamond (64-bit) 3.14.0.75.2
-| Generate date: Sat Feb 07 05:35:23 2026
+| Generate date: Sun Mar 01 21:09:10 2026
 |************************************************************************
 | IBIS File
 | Lattice Semiconductor Corporation
@@ -165,6 +165,7 @@ T3            SD_A[2]              lvc330s080eaaaaaaaou
 T2            SD_A[3]              lvc330s080eaaaaaaaou
 R1            SSPI_CS_n            lvc330axxxeaaaaaaain
 M1            CRYSTAL              lvc330axxxeaaaaaaain
+L1            CCLK                 lvc330axxxeaaaaaaain
 J2            ESP_D[7]             lvc330s080eaaaaaaaou
 J1            ESP_D[6]             lvc330s080eaaaaaaaou
 G1            ESP_D[5]             lvc330s080eaaaaaaaou
@@ -205,7 +206,6 @@ A13           Y7                   lvc180axxxeaaaaaaain
 A14           Y6                   lvc180axxxeaaaaaaain
 B14           Y2                   lvc180axxxeaaaaaaain
 A15           Y5                   lvc180axxxeaaaaaaain
-P11           CCLK                 lvc330axxxeaaaaaaain
 T14           SD_RAS_N             lvc330s080eaaaaaaaou
 R13           SD_CAS_N             lvc330s080eaaaaaaaou
 T15           SD_DQM[0]            lvc330s080eaaaaaaaou

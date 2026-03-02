@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Feb 07 05:34:09 2026
+Sun Mar 01 21:06:56 2026
 
 C:/lscc/diamond/3.14/ispfpga\bin\nt64\par -f AICAM_impl1.p2t
 AICAM_impl1_map.ncd AICAM_impl1.dir AICAM_impl1.prf -gui -msgset
@@ -16,11 +16,11 @@ Preference file: AICAM_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -4.767       12887912     0.177        0            01:04        Completed
+5_1   *      0            -4.528       11928981     0.178        0            02:00        Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 1 mins 5 secs 
+Total (real) run time for 1-seed: 2 mins 
 
 par done!
 
