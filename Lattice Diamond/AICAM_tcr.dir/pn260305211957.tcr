@@ -1,0 +1,11 @@
+#Start recording tcl command: 3/5/2026 20:03:09
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/candidate_bus.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/integration_example_fpga_top_snippet.v"
+prj_run Export -impl impl1
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/integration_example_fpga_top_snippet.v"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 3/5/2026 21:19:57

@@ -7,10 +7,32 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
-DRC complete with no errors or warnings
+WARNING - synthesis: logical net 'DIN' has no load.
+WARNING - synthesis: input pad net 'DIN' has no legal load.
+WARNING - synthesis: logical net 'CCLK' has no load.
+WARNING - synthesis: input pad net 'CCLK' has no legal load.
+WARNING - synthesis: logical net 'SSPI_CS_n' has no load.
+WARNING - synthesis: input pad net 'SSPI_CS_n' has no legal load.
+WARNING - synthesis: logical net 'SD_DQ_out_9' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_10' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_11' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_12' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_13' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_14' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_0' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_1' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_2' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_3' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_4' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_5' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_6' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_7' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_8' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_15' has no load.
+WARNING - synthesis: DRC complete with 22 warnings.
 
 Design Results:
-   9278 blocks expanded
+  20097 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.

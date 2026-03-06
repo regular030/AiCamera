@@ -1,0 +1,13 @@
+#Start recording tcl command: 3/5/2026 06:10:33
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/proposal_gen.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cropper_128_to_64.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_scheduler.v"
+prj_src add -exclude "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.ldc"
+prj_src enable "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.ldc"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.ldc"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/track_count.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_1080p_yuyv.memh"
+#Stop recording: 3/5/2026 20:02:58

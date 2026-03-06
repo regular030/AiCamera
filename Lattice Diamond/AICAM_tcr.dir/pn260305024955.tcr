@@ -1,0 +1,10 @@
+#Start recording tcl command: 3/5/2026 00:32:37
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sd_spi_writer.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/frame_packer.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_simple.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/saturn_core.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_sccb.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/reset_sync.v"
+#Stop recording: 3/5/2026 02:49:55

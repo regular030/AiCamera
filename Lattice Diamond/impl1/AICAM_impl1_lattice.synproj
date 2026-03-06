@@ -33,6 +33,25 @@
 -lpf 1
 -p "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond"
 -ver "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sd_spi_writer.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/frame_packer.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_simple.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/saturn_core.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_sccb.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/reset_sync.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/PLL/PLL.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/proposal_gen.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cropper_128_to_64.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_scheduler.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/track_count.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/candidate_bus.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/esp32_ctrl_spi.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/motion_block_frontend.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/esp32_ctrl_uart.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/uart_rx.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/uart_tx.v"
+"C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/raw_frame_capture.v"
 -top fpga_top
 
 

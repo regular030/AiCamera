@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Feb 06 05:10:57 2026
+Fri Mar 06 02:32:54 2026
 
 
 Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
@@ -75,6 +75,25 @@ The -syn option is FALSE.
 -p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1 (searchpath added)
 -p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond (searchpath added)
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sd_spi_writer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/frame_packer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_simple.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/saturn_core.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_sccb.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/reset_sync.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/PLL/PLL.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/proposal_gen.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cropper_128_to_64.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_scheduler.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/track_count.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/candidate_bus.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/esp32_ctrl_spi.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/motion_block_frontend.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/esp32_ctrl_uart.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/uart_rx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/uart_tx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/raw_frame_capture.v
 NGD file = AICAM_impl1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -86,18 +105,63 @@ Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADER
 Compile design.
 Compile Design Begin
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/saturn_core.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/reset_sync.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/pll/pll.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_scheduler.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/esp32_ctrl_spi.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/esp32_ctrl_uart.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/uart_rx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/uart_tx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v. VERI-1482
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(122): identifier fifo_wready is used before its declaration. VERI-1875
 Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): fpga_top
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(13): compiling module fpga_top. VERI-1018
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(334): compiling module camera_capture_stub. VERI-1018
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(367): compiling module sccb_i2c_master_stub. VERI-1018
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): Register sda_oe_9 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(390): Register scl_8 is stuck at One. VDB-5014
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(396): compiling module sdram_controller_stub. VERI-1018
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): Register sd_cs_n_23 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(453): Register sd_dq_oe_31 is stuck at Zero. VDB-5013
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(459): compiling module esp32_link_stub. VERI-1018
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(508): compiling module sdio_cam_writer_example. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(3): compiling module fpga_top. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/pll/pll.v(8): compiling module PLL. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(1696): compiling module EHXPLLL(CLKFB_DIV=2,CLKOP_DIV=12,CLKOS_DIV=24,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOS_ENABLE="ENABLED",CLKOP_CPHASE=11,CLKOS_CPHASE=23,CLKOP_TRIM_POL="FALLING",CLKOS_TRIM_POL="FALLING"). VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/reset_sync.v(8): compiling module reset_sync. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(13): compiling module ov5640_sccb. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(336): compiling module ov5640_init_rom. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(342): net mem does not have a driver. VDB-1002
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/esp32_ctrl_uart.v(3): compiling module esp32_ctrl_uart. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/uart_rx.v(3): compiling module uart_rx. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/uart_tx.v(3): compiling module uart_tx. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(3): compiling module raw_frame_capture. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(21): compiling module sdram_ctrl_simple. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(3): compiling module motion_block_frontend. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(54): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(111): expression size 9 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v(3): compiling module proposal_gen. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(4): compiling module cropper_128_to_64(FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,N=16,K=4). VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_scheduler.v(3): compiling module cnn_scheduler. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(3): compiling module cnn_int8_core. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(56): using initial value of fcb_mem since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(117): expression size 32 truncated to fit in target size 7. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(118): expression size 32 truncated to fit in target size 7. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(119): expression size 32 truncated to fit in target size 7. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(120): expression size 32 truncated to fit in target size 7. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(121): expression size 32 truncated to fit in target size 7. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(122): expression size 32 truncated to fit in target size 7. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(46): net w1 does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(47): net b1 does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(48): net fcw does not have a driver. VDB-1002
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v(2): compiling module candidate_bus(K=4,FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100). VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v(18): compiling module track_count(MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100). VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(3): compiling module sd_spi_writer. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v(3): compiling module frame_packer. VERI-1018
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -105,23 +169,13 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
 Package Status:                     Final          Version 1.44.
 Top-level module name = fpga_top.
-######## Converting I/O port cam_sda to output.
-######## Converting I/O port SD_DQ[15] to output.
-######## Converting I/O port SD_DQ[14] to output.
-######## Converting I/O port SD_DQ[13] to output.
-######## Converting I/O port SD_DQ[12] to output.
-######## Converting I/O port SD_DQ[11] to output.
-######## Converting I/O port SD_DQ[10] to output.
-######## Converting I/O port SD_DQ[9] to output.
-######## Converting I/O port SD_DQ[8] to output.
-######## Converting I/O port SD_DQ[7] to output.
-######## Converting I/O port SD_DQ[6] to output.
-######## Converting I/O port SD_DQ[5] to output.
-######## Converting I/O port SD_DQ[4] to output.
-######## Converting I/O port SD_DQ[3] to output.
-######## Converting I/O port SD_DQ[2] to output.
-######## Converting I/O port SD_DQ[1] to output.
-######## Converting I/O port SD_DQ[0] to output.
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(342): ram mem_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(46): ram w1_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(47): ram b1_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(48): ram fcw_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
+WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
+WARNING - synthesis: I/O Port SSPI_CS_n 's net has no driver and is unused.
 ######## Converting I/O port ESP_D[7] to output.
 ######## Converting I/O port ESP_D[6] to output.
 ######## Converting I/O port ESP_D[5] to output.
@@ -131,125 +185,813 @@ Top-level module name = fpga_top.
 ######## Converting I/O port ESP_D[1] to output.
 ######## Converting I/O port ESP_D[0] to output.
 ######## Converting I/O port M_CMD to output.
+######## Converting I/O port M_D0 to input.
 ######## Converting I/O port M_D1 to output.
 ######## Converting I/O port M_D2 to output.
 ######## Converting I/O port M_D3 to output.
-WARNING - synthesis: Bit 12 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 11 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 10 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 9 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 8 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 7 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 5 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \u_sdram/sd_a is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \u_sdram/sd_ba is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \u_sdram/sd_ba is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \u_sdram/sd_dqm is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \u_sdram/sd_dqm is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): Register \u_sdio_cam/d1_out_205 is stuck at One. VDB-5014
-INFO - synthesis: Extracted state machine for register '\u_sdio_cam/state' with one-hot encoding
+WARNING - synthesis: Bit 0 of Register \u_rst_sys/sync is stuck at One
+WARNING - synthesis: Bit 0 of Register \u_rst_pclk/sync is stuck at One
+WARNING - synthesis: Bit 0 of Register \u_rst_sys/sync is stuck at One
+WARNING - synthesis: Bit 0 of Register \u_rst_pclk/sync is stuck at One
+INFO - synthesis: Extracted state machine for register '\u_ctrl/rx_count' with one-hot encoding
 original encoding -> new encoding (one-hot encoding)
 
- 000 -> 00001
+ 00 -> 0001
 
- 010 -> 00010
+ 01 -> 0010
 
- 100 -> 00100
+ 10 -> 0100
 
- 101 -> 01000
+ 11 -> 1000
 
- 110 -> 10000
+INFO - synthesis: Extracted state machine for register '\u_sdram/st' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 000000000000000001
+
+ 00001 -> 000000000000000010
+
+ 00010 -> 000000000000000100
+
+ 00011 -> 000000000000001000
+
+ 00100 -> 000000000000010000
+
+ 00101 -> 000000000000100000
+
+ 00110 -> 000000000001000000
+
+ 00111 -> 000000000010000000
+
+ 01000 -> 000000000100000000
+
+ 01001 -> 000000001000000000
+
+ 01010 -> 000000010000000000
+
+ 01011 -> 000000100000000000
+
+ 01100 -> 000001000000000000
+
+ 10000 -> 000010000000000000
+
+ 10001 -> 000100000000000000
+
+ 10010 -> 001000000000000000
+
+ 10011 -> 010000000000000000
+
+ 10100 -> 100000000000000000
+
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(596): Register \u_sdram/dq_oe_204 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\u_sched/st' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\u_pack/st' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 10 -> 11
+
+ 11 -> 10
+
+INFO - synthesis: Extracted state machine for register '\u_ctrl/u_rx/st' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\u_ctrl/u_tx/st' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\u_candidate_bus/u_track_count/state' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
 
 
 
 
-WARNING - synthesis: Bit 47 of Register \u_sdio_cam/cmd_frame is stuck at Zero
-WARNING - synthesis: Bit 46 of Register \u_sdio_cam/cmd_frame is stuck at One
-WARNING - synthesis: Bit 45 of Register \u_sdio_cam/cmd_frame is stuck at Zero
-WARNING - synthesis: Bit 44 of Register \u_sdio_cam/cmd_frame is stuck at One
-WARNING - synthesis: Bit 43 of Register \u_sdio_cam/cmd_frame is stuck at One
-WARNING - synthesis: Bit 42 of Register \u_sdio_cam/cmd_frame is stuck at Zero
-WARNING - synthesis: Bit 41 of Register \u_sdio_cam/cmd_frame is stuck at Zero
-WARNING - synthesis: Bit 40 of Register \u_sdio_cam/cmd_frame is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \u_sdio_cam/cmd_frame is stuck at One
-WARNING - synthesis: Bit 15 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: Bit 14 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: Bit 13 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: Bit 12 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: Bit 11 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: Bit 10 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: Bit 9 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: Bit 8 of Register \u_sdram/sd_dq_out is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(765): Register \u_sdio_cam/d3_oe_208 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(763): Register \u_sdio_cam/state_FSM_i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 31 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_raw_cap/payload_bytes is stuck at One
+WARNING - synthesis: Bit 17 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_raw_cap/payload_bytes is stuck at One
+WARNING - synthesis: Bit 14 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_raw_cap/payload_bytes is stuck at One
+WARNING - synthesis: Bit 12 of Register \u_raw_cap/payload_bytes is stuck at One
+WARNING - synthesis: Bit 11 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_raw_cap/payload_bytes is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_raw_cap/stream_kind is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_raw_cap/stream_kind is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_raw_cap/stream_kind is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_raw_cap/stream_kind is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_raw_cap/stream_kind is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_raw_cap/stream_kind is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_raw_cap/stream_kind is stuck at One
+WARNING - synthesis: Bit 0 of Register \u_raw_cap/stream_kind is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_candidate_bus/cand_flags[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \u_sdram/level_words is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_motion_frontend/blk_by is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 47 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 46 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 45 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 44 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 34 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 33 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 32 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 63 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 62 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 61 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 60 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 50 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 49 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 48 of Register \u_cropper/sel_cx_out[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 47 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 46 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 45 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 44 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 34 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 33 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 32 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 63 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 62 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 61 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 60 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 50 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 49 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 48 of Register \u_cropper/sel_cy_out[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cx_p[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/sel_cy_p[3] is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(596): Register \u_sdram/pend_wr_214 is stuck at One. VDB-5014
+WARNING - synthesis: Bit 2 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 34 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 33 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 32 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 50 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 49 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 48 of Register \u_candidate_bus/cand_x0[3] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 34 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 33 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 32 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 50 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 49 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 48 of Register \u_candidate_bus/cand_y0[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 47 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 46 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 45 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 63 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 62 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 61 of Register \u_candidate_bus/cand_x1[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 47 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 46 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 45 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 63 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 62 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 61 of Register \u_candidate_bus/cand_y1[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_sdram/a_r is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(216): Register \u_raw_cap/sdram_wr_valid_234 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(216): Register \u_raw_cap/pack_half_238 is stuck at One. VDB-5014
+WARNING - synthesis: Bit 15 of Register \u_candidate_bus/u_track_count/pending_cy is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_candidate_bus/u_track_count/pending_cy is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_candidate_bus/u_track_count/pending_cy is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_candidate_bus/u_track_count/pending_cy is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_candidate_bus/u_track_count/pending_cy is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_candidate_bus/u_track_count/pending_cy is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_candidate_bus/u_track_count/pending_cy is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_candidate_bus/u_track_count/pending_cx is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_candidate_bus/u_track_count/pending_cx is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_candidate_bus/u_track_count/pending_cx is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_candidate_bus/u_track_count/pending_cx is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_candidate_bus/u_track_count/pending_cx is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_candidate_bus/u_track_count/pending_cx is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_candidate_bus/u_track_count/pending_cx is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_sdram/a_r is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_sdram/a_r is stuck at Zero
+######## Found 3 RTL RAMs in the design.
+Unable to honor syn_srlstyle or syn_ramstyle attribute value of block_ram on net \u_sched/u_cnn/img_mem
+
+######## Mapping RTL RAM \u_sched/u_cnn/img_mem to 512 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+Unable to honor syn_srlstyle or syn_ramstyle attribute value of block_ram on net \u_sched/u_cnn/feat1_mem
+
+######## Mapping RTL RAM \u_sched/u_cnn/feat1_mem to 512 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+Unable to honor syn_srlstyle or syn_ramstyle attribute value of block_ram on net \u_motion_frontend/bg_mem
+
+######## Mapping RTL RAM \u_motion_frontend/bg_mem to 256 Distributed blocks in SINGLE_PORT Mode
+
+WARNING - synthesis: Bit 11 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_raw_cap/rptr_bin is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_raw_cap/rptr_gray is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_raw_cap/rptr_gray is stuck at Zero
+
+
+######### Begin FIR Info ########
+
+
+Number of FIR filters recognized: 2
+
+
+
+######### End FIR Info ########
+
+
+WARNING - synthesis: Bit 7 of Register _add_1_15695_e1 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register _add_1_15695_e1 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register _add_1_15695_e1 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_sched/u_cnn/mult_54_e1 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register mult_209_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register mult_209_e2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register mult_209_e2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register mult_209_e2 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_sched/u_cnn/mult_54_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_sched/u_cnn/mult_54_e2 is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(54): Register _add_1_15695_i7 clock is stuck at Zero. VDB-5035
+WARNING - synthesis: Bit 7 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register _add_1_15695_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register add_15687_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register add_15687_e2 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register mult_209_e1 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register mult_209_e1 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register mult_209_e1 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register mult_209_e1 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register mult_209_e1 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register mult_209_e1 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register mult_209_e1 is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(123): Register _add_1_15805_i7 clock is stuck at Zero. VDB-5035
+WARNING - synthesis: Bit 31 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register _add_1_15805_e3 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register add_15797_e3 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register add_15797_e2 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register add_15797_e2 is stuck at Zero
+
+The number of registers created due to operator pipelining is 8.
+
+######## Converting I/O port cam_sda to output.
+WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
+WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
+WARNING - synthesis: I/O Port SSPI_CS_n 's net has no driver and is unused.
+WARNING - synthesis: Bit 15 of Register \u_cropper/cand_cx_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/cand_cx_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/cand_cx_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/cand_cx_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/cand_cx_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/cand_cx_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/cand_cx_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_cropper/cand_cy_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_cropper/cand_cy_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_cropper/cand_cy_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_cropper/cand_cy_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_cropper/cand_cy_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cropper/cand_cy_p_i0 is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cropper/cand_cy_p_i0 is stuck at Zero
+######## Missing driver on net \u_sched/u_cnn/\i280/_Z. Patching with GND.
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(116): Register \u_motion_frontend/x_pix__i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(594): Register \u_sdram/st_FSM_i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(575): Register \u_sd/cmd_frame_i0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(393): Register \u_sdram/init_wait_cnt_4813__i31 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(192): Register \u_cropper/x_pix__i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(587): Register \u_sdram/rd_ptr_ext_4816_15664__i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v(293): Register \u_pack/cur_word_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v(149): Register \u_candidate_bus/cand_track_id[3]__i23 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v(293): Register \u_pack/pad_bytes_i8 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v(64): Register \u_props/by_w[15]_i128 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v(310): Register \u_candidate_bus/u_track_count/cur_cx__i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(127): Register \u_cropper/sel_cy_out[3]_rep_22__i35 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(149): Register \u_cropper/sel_cy_p[3]__i36 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(328): Register \u_cam_cfg/byte_idx_i0_i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(176): Register \u_cropper/cand_cy_p_i0_i9 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i2.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i14.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i42 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i27.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i41 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i3.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i40 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i15.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i29 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i40.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i28 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i16.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i27 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i28.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i16 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i3.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i15 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i29.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i14 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i41.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i2 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i42.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i49.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i51 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i50.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i36.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i38 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i37.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i23.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i25 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i24.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i10.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i12 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i11.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i49.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i51 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i50.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i36.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i38 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i37.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i23.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i25 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i24.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i10.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i12 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i11.
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i2.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i14.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i42 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i15.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i41 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i16.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i40 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i27.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i29 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i28.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i48.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i51 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i52.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i35.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i38 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i39.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i22.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i25 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i26.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i9.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i12 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i13.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i51.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i38.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i25.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i12.
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i29.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i40.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i42 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i41.
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i42.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i1.
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(575): Register \u_sd/wr_lba_lat_i31 is stuck at Zero. VDB-5013
 GSR will not be inferred because no asynchronous signal was found in the netlist.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/best_dist_i2 is a one-to-one match with \u_candidate_bus/u_track_count/best_dist_i0.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/best_dist_i1 is a one-to-one match with \u_candidate_bus/u_track_count/best_dist_i2.
+Duplicate register/latch removal. \u_cropper/sel_cx_out[3]_rep_21__i27 is a one-to-one match with \u_cropper/sel_cy_out[3]_rep_22__i27.
+Duplicate register/latch removal. \u_cropper/sel_cx_out[3]_rep_21__i18 is a one-to-one match with \u_cropper/sel_cy_out[3]_rep_22__i18.
+Duplicate register/latch removal. \u_cropper/sel_cx_out[3]_rep_21__i9 is a one-to-one match with \u_cropper/sel_cy_out[3]_rep_22__i9.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i31 is a one-to-one match with \u_sched/u_cnn/fz_i30.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i29 is a one-to-one match with \u_sched/u_cnn/fz_i31.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i28 is a one-to-one match with \u_sched/u_cnn/fz_i29.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i27 is a one-to-one match with \u_sched/u_cnn/fz_i28.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i26 is a one-to-one match with \u_sched/u_cnn/fz_i27.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i25 is a one-to-one match with \u_sched/u_cnn/fz_i26.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i24 is a one-to-one match with \u_sched/u_cnn/fz_i25.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i23 is a one-to-one match with \u_sched/u_cnn/fz_i24.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i22 is a one-to-one match with \u_sched/u_cnn/fz_i23.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i21 is a one-to-one match with \u_sched/u_cnn/fz_i22.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i20 is a one-to-one match with \u_sched/u_cnn/fz_i21.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i19 is a one-to-one match with \u_sched/u_cnn/fz_i20.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i18 is a one-to-one match with \u_sched/u_cnn/fz_i19.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i17 is a one-to-one match with \u_sched/u_cnn/fz_i18.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i16 is a one-to-one match with \u_sched/u_cnn/fz_i17.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i15 is a one-to-one match with \u_sched/u_cnn/fz_i16.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i14 is a one-to-one match with \u_sched/u_cnn/fz_i15.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i13 is a one-to-one match with \u_sched/u_cnn/fz_i14.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i31 is a one-to-one match with \u_sched/u_cnn/tmp1_i30.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i29 is a one-to-one match with \u_sched/u_cnn/tmp1_i31.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i28 is a one-to-one match with \u_sched/u_cnn/tmp1_i29.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i27 is a one-to-one match with \u_sched/u_cnn/tmp1_i28.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i26 is a one-to-one match with \u_sched/u_cnn/tmp1_i27.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i25 is a one-to-one match with \u_sched/u_cnn/tmp1_i26.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i24 is a one-to-one match with \u_sched/u_cnn/tmp1_i25.
+Duplicate register/latch removal. \u_cropper/sel_cy_out[3]_rep_22__i0 is a one-to-one match with \u_cropper/sel_cx_out[3]_rep_21__i0.
+Duplicate register/latch removal. \u_cropper/sel_cx_p[3]__i1 is a one-to-one match with \u_cropper/sel_cy_p[3]__i1.
+Duplicate register/latch removal. \u_cropper/sel_cy_p[3]__i28 is a one-to-one match with \u_cropper/sel_cx_p[3]__i28.
+Duplicate register/latch removal. \u_cropper/sel_cy_p[3]__i19 is a one-to-one match with \u_cropper/sel_cx_p[3]__i19.
+Duplicate register/latch removal. \u_cropper/sel_cy_p[3]__i10 is a one-to-one match with \u_cropper/sel_cx_p[3]__i10.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/pending_cx__i1 is a one-to-one match with \u_candidate_bus/u_track_count/pending_cy__i1.
+Duplicate register/latch removal. \u_cropper/cand_cx_p_i0_i1 is a one-to-one match with \u_cropper/cand_cy_p_i0_i1.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/cur_cy__i3 is a one-to-one match with \u_candidate_bus/u_track_count/cur_cx__i3.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i116 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i116.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i100 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i100.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i84 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i84.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i68 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i68.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i52 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i52.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i36 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i36.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i20 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i20.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i4 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i4.
 Applying 200.000000 MHz constraint to all clocks
 
+INFO - synthesis: Net \u_sched/u_cnn/n3002 with fanout 1013 was buffered for fixing max_fanout violation.
+INFO - synthesis: Net \u_sched/u_cnn/n3002 with fanout 1013 was buffered for fixing max_fanout violation.
 WARNING - synthesis: No user .sdc file.
 Results of NGD DRC are available in fpga_top_drc.log.
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'DIN' has no load.
+WARNING - synthesis: input pad net 'DIN' has no legal load.
+WARNING - synthesis: logical net 'CCLK' has no load.
+WARNING - synthesis: input pad net 'CCLK' has no legal load.
+WARNING - synthesis: logical net 'SSPI_CS_n' has no load.
+WARNING - synthesis: input pad net 'SSPI_CS_n' has no legal load.
+WARNING - synthesis: logical net 'SD_DQ_out_9' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_10' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_11' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_12' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_13' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_14' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_0' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_1' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_2' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_3' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_4' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_5' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_6' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_7' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_8' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_15' has no load.
+WARNING - synthesis: DRC complete with 22 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.
 
 ################### Begin Area Report (fpga_top)######################
-Number of register bits => 4284 of 24879 (17 % )
-BB => 1
-CCU2C => 35
-FD1P3AX => 4153
-FD1P3IX => 95
-FD1P3JX => 5
-FD1S3AX => 7
-FD1S3AY => 3
-FD1S3IX => 20
-FD1S3JX => 1
+Number of register bits => 2688 of 24879 (10 % )
+BB => 16
+CCU2C => 525
+DPR16X4C => 1024
+EHXPLLL => 1
+FD1P3AX => 623
+FD1P3IX => 1188
+FD1P3JX => 27
+FD1S3AX => 759
+FD1S3IX => 80
+FD1S3JX => 11
 GSR => 1
-IB => 15
-L6MUX21 => 818
-LUT4 => 2972
-OB => 26
-OBZ => 29
-PFUMX => 1094
+IB => 14
+L6MUX21 => 252
+LUT4 => 12391
+MULT9X9D => 3
+OB => 29
+OBZ => 11
+PDPW16KD => 5
+PFUMX => 2878
+SPR16X4C => 256
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 3
-  Net : CRYSTAL_c, loads : 4257
-  Net : PCLK_c, loads : 19
-  Net : CCLK_c, loads : 8
+Number of Clocks: 4
+  Net : SD_CLK_c, loads : 2434
+  Net : PCLK_c, loads : 1541
+  Net : MCLK_c, loads : 1
+  Net : CRYSTAL_c, loads : 1
 Clock Enable Nets
-Number of Clock Enables: 530
+Number of Clock Enables: 153
 Top 10 highest fanout Clock Enables:
-  Net : u_sdio_cam/CRYSTAL_c_enable_4149, loads : 39
-  Net : CRYSTAL_c_enable_4220, loads : 31
-  Net : u_sdio_cam/CRYSTAL_c_enable_2025, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2041, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2057, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2065, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_4223, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2073, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_33, loads : 8
-  Net : u_sdio_cam/CRYSTAL_c_enable_2081, loads : 8
+  Net : u_cropper/PCLK_c_enable_427, loads : 96
+  Net : u_sched/u_cnn/SD_CLK_c_enable_1112, loads : 72
+  Net : u_sched/u_cnn/SD_CLK_c_enable_991, loads : 50
+  Net : u_sched/u_cnn/SD_CLK_c_enable_1109, loads : 45
+  Net : u_sched/u_cnn/SD_CLK_c_enable_881, loads : 42
+  Net : u_motion_frontend/PCLK_c_enable_447, loads : 36
+  Net : u_ctrl/SD_CLK_c_enable_1008, loads : 33
+  Net : u_sched/u_cnn/SD_CLK_c_enable_975, loads : 33
+  Net : SD_CLK_c_enable_1076, loads : 33
+  Net : u_sched/u_cnn/SD_CLK_c_enable_1084, loads : 30
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : u_sdio_cam/maxfan_replicated_net_999, loads : 1000
-  Net : u_sdio_cam/rd_byte_1, loads : 999
-  Net : u_sdio_cam/rd_byte_0, loads : 999
-  Net : u_sdio_cam/rd_byte_2, loads : 515
-  Net : cam_byte_hold_7, loads : 512
-  Net : cam_byte_hold_6, loads : 512
-  Net : cam_byte_hold_5, loads : 512
-  Net : cam_byte_hold_4, loads : 512
-  Net : cam_byte_hold_3, loads : 512
-  Net : cam_byte_hold_2, loads : 512
+  Net : n190661, loads : 1000
+  Net : u_sched/u_cnn/ix_4, loads : 1000
+  Net : blk_idx_4, loads : 596
+  Net : n3001, loads : 523
+  Net : n3003, loads : 512
+  Net : n3004, loads : 512
+  Net : feat1_mem_N_7037_3, loads : 512
+  Net : feat1_mem_N_7037_2, loads : 512
+  Net : u_sched/u_cnn/ix_5, loads : 511
+  Net : blk_idx_5, loads : 340
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -259,24 +1001,21 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets CCLK_c]                  |  200.000 MHz|  417.362 MHz|     2  
+clk1 [get_nets PCLK_c]                  |  200.000 MHz|    6.732 MHz|   125 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets PCLK_c]                  |  200.000 MHz|  286.862 MHz|     2  
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets CRYSTAL_c]               |  200.000 MHz|   77.471 MHz|    14 *
+clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   46.346 MHz|    27 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+2 constraints not met.
 
 
-Peak Memory Usage: 144.238  MB
+Peak Memory Usage: 411.414  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 5.828  secs
+Elapsed CPU time for LSE flow : 126.906  secs
 --------------------------------------------------------------
 
 

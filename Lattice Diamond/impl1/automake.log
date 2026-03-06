@@ -1,4 +1,1026 @@
 
+synthesis -f "AICAM_impl1_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Mar 06 02:32:54 2026
+
+
+Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA256.
+The -d option is LFE5U-25F.
+Using package CABGA256.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-25F
+
+### Package : CABGA256
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Timing
+Top-level module name = fpga_top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond (searchpath added)
+-p C:/lscc/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1 (searchpath added)
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond (searchpath added)
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sd_spi_writer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/frame_packer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_simple.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/saturn_core.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_sccb.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/reset_sync.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/PLL/PLL.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/proposal_gen.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cropper_128_to_64.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_scheduler.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/track_count.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/candidate_bus.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/esp32_ctrl_spi.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/motion_block_frontend.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/esp32_ctrl_uart.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/uart_rx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/uart_tx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/raw_frame_capture.v
+NGD file = AICAM_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/saturn_core.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/reset_sync.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/pll/pll.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_scheduler.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/esp32_ctrl_spi.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/esp32_ctrl_uart.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/uart_rx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/uart_tx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v. VERI-1482
+    <postMsg mid="35901875" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(122): " arg1="fifo_wready" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v" arg3="122"  />
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): fpga_top
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v(3): " arg1="fpga_top" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_top.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/pll/pll.v(8): " arg1="PLL" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/pll/pll.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(757): " arg1="VHI" arg2="C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v" arg3="757"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(761): " arg1="VLO" arg2="C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v" arg3="761"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(1696): " arg1="EHXPLLL(CLKFB_DIV=2,CLKOP_DIV=12,CLKOS_DIV=24,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOS_ENABLE=&quot;ENABLED&quot;,CLKOP_CPHASE=11,CLKOS_CPHASE=23,CLKOP_TRIM_POL=&quot;FALLING&quot;,CLKOS_TRIM_POL=&quot;FALLING&quot;)" arg2="C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v" arg3="1696"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/reset_sync.v(8): " arg1="reset_sync" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/reset_sync.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(13): " arg1="ov5640_sccb" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v" arg3="13"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(336): " arg1="ov5640_init_rom" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v" arg3="336"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(342): " arg1="mem" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v" arg3="342"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/esp32_ctrl_uart.v(3): " arg1="esp32_ctrl_uart" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/esp32_ctrl_uart.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/uart_rx.v(3): " arg1="uart_rx" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/uart_rx.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/uart_tx.v(3): " arg1="uart_tx" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/uart_tx.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(3): " arg1="raw_frame_capture" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(21): " arg1="sdram_ctrl_simple" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v" arg3="21"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(3): " arg1="motion_block_frontend" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v" arg3="3"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(54): " arg1="32" arg2="16" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v" arg4="54"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(111): " arg1="9" arg2="8" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v" arg4="111"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v(3): " arg1="proposal_gen" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(4): " arg1="cropper_128_to_64(FRAME_W=16&apos;b01010000000,FRAME_H=16&apos;b0111100000,N=16,K=4)" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v" arg3="4"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_scheduler.v(3): " arg1="cnn_scheduler" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_scheduler.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(3): " arg1="cnn_int8_core" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="3"  />
+    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(56): " arg1="fcb_mem" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="56"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(117): " arg1="32" arg2="7" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg4="117"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(118): " arg1="32" arg2="7" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg4="118"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(119): " arg1="32" arg2="7" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg4="119"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(120): " arg1="32" arg2="7" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg4="120"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(121): " arg1="32" arg2="7" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg4="121"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(122): " arg1="32" arg2="7" arg3="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg4="122"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(46): " arg1="w1" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="46"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(47): " arg1="b1" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="47"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(48): " arg1="fcw" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="48"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v(2): " arg1="candidate_bus(K=4,FRAME_W=16&apos;b01010000000,FRAME_H=16&apos;b0111100000,MAX_T=8,X_LINE=16&apos;b0101000000,YA0=16&apos;b011001000,YA1=16&apos;b0110101110,YB0=16&apos;b01010000,YB1=16&apos;b010110100,GATE_R=16&apos;b0111100)" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v" arg3="2"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v(18): " arg1="track_count(MAX_T=8,X_LINE=16&apos;b0101000000,YA0=16&apos;b011001000,YA1=16&apos;b0110101110,YB0=16&apos;b01010000,YB1=16&apos;b010110100,GATE_R=16&apos;b0111100)" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v" arg3="18"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(3): " arg1="sd_spi_writer" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v(3): " arg1="frame_packer" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v" arg3="3"  />
+Last elaborated design is fpga_top()
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = fpga_top.
+    <postMsg mid="35931038" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(342): " arg1="mem_original_ramnet" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v" arg3="342"  />
+    <postMsg mid="35931038" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(46): " arg1="w1_original_ramnet" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="46"  />
+    <postMsg mid="35931038" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(47): " arg1="b1_original_ramnet" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="47"  />
+    <postMsg mid="35931038" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(48): " arg1="fcw_original_ramnet" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="48"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="DIN"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="CCLK"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="SSPI_CS_n"  />
+######## Converting I/O port ESP_D[7] to output.
+######## Converting I/O port ESP_D[6] to output.
+######## Converting I/O port ESP_D[5] to output.
+######## Converting I/O port ESP_D[4] to output.
+######## Converting I/O port ESP_D[3] to output.
+######## Converting I/O port ESP_D[2] to output.
+######## Converting I/O port ESP_D[1] to output.
+######## Converting I/O port ESP_D[0] to output.
+######## Converting I/O port M_CMD to output.
+######## Converting I/O port M_D0 to input.
+######## Converting I/O port M_D1 to output.
+######## Converting I/O port M_D2 to output.
+######## Converting I/O port M_D3 to output.
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_rst_sys/sync"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_rst_pclk/sync"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_rst_sys/sync"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_rst_pclk/sync"  />
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_ctrl/rx_count" arg1="one-hot"  />
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_sdram/st" arg1="one-hot"  />
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 000000000000000001
+
+ 00001 -> 000000000000000010
+
+ 00010 -> 000000000000000100
+
+ 00011 -> 000000000000001000
+
+ 00100 -> 000000000000010000
+
+ 00101 -> 000000000000100000
+
+ 00110 -> 000000000001000000
+
+ 00111 -> 000000000010000000
+
+ 01000 -> 000000000100000000
+
+ 01001 -> 000000001000000000
+
+ 01010 -> 000000010000000000
+
+ 01011 -> 000000100000000000
+
+ 01100 -> 000001000000000000
+
+ 10000 -> 000010000000000000
+
+ 10001 -> 000100000000000000
+
+ 10010 -> 001000000000000000
+
+ 10011 -> 010000000000000000
+
+ 10100 -> 100000000000000000
+
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(596): " arg1="\u_sdram/dq_oe_204" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v" arg3="596"  />
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_sched/st" arg1="one-hot"  />
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_pack/st" arg1="gray"  />
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 10 -> 11
+
+ 11 -> 10
+
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_ctrl/u_rx/st" arg1="one-hot"  />
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_ctrl/u_tx/st" arg1="one-hot"  />
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_candidate_bus/u_track_count/state" arg1="gray"  />
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+
+
+
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="28" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="27" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="26" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="25" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="24" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="23" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="22" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="21" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="20" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="19" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_raw_cap/payload_bytes"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_raw_cap/stream_kind"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="23" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="22" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="\u_candidate_bus/cand_flags[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="28" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="27" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="26" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="25" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="24" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="23" arg1="\u_sdram/level_words"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_motion_frontend/blk_by"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="28" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="47" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="46" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="45" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="44" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="34" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="33" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="32" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="63" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="62" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="61" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="60" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="50" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="49" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="48" arg1="\u_cropper/sel_cx_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="28" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="47" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="46" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="45" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="44" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="34" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="33" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="32" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="63" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="62" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="61" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="60" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="50" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="49" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="48" arg1="\u_cropper/sel_cy_out[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cx_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/sel_cy_p[3]"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(596): " arg1="\u_sdram/pend_wr_214" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v" arg3="596"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="34" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="33" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="32" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="50" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="49" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="48" arg1="\u_candidate_bus/cand_x0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="34" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="33" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="32" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="50" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="49" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="48" arg1="\u_candidate_bus/cand_y0[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="47" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="46" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="45" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="63" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="62" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="61" arg1="\u_candidate_bus/cand_x1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="47" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="46" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="45" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="63" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="62" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="61" arg1="\u_candidate_bus/cand_y1[3]"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_sdram/a_r"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(216): " arg1="\u_raw_cap/sdram_wr_valid_234" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v" arg3="216"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v(216): " arg1="\u_raw_cap/pack_half_238" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/raw_frame_capture.v" arg3="216"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_candidate_bus/u_track_count/pending_cy"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_candidate_bus/u_track_count/pending_cy"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_candidate_bus/u_track_count/pending_cy"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_candidate_bus/u_track_count/pending_cy"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_candidate_bus/u_track_count/pending_cy"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_candidate_bus/u_track_count/pending_cy"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_candidate_bus/u_track_count/pending_cy"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_candidate_bus/u_track_count/pending_cx"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_candidate_bus/u_track_count/pending_cx"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_candidate_bus/u_track_count/pending_cx"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_candidate_bus/u_track_count/pending_cx"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_candidate_bus/u_track_count/pending_cx"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_candidate_bus/u_track_count/pending_cx"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_candidate_bus/u_track_count/pending_cx"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_sdram/a_r"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_sdram/a_r"  />
+######## Found 3 RTL RAMs in the design.
+Unable to honor syn_srlstyle or syn_ramstyle attribute value of block_ram on net \u_sched/u_cnn/img_mem
+
+######## Mapping RTL RAM \u_sched/u_cnn/img_mem to 512 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+Unable to honor syn_srlstyle or syn_ramstyle attribute value of block_ram on net \u_sched/u_cnn/feat1_mem
+
+######## Mapping RTL RAM \u_sched/u_cnn/feat1_mem to 512 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+Unable to honor syn_srlstyle or syn_ramstyle attribute value of block_ram on net \u_motion_frontend/bg_mem
+
+######## Mapping RTL RAM \u_motion_frontend/bg_mem to 256 Distributed blocks in SINGLE_PORT Mode
+
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_raw_cap/rptr_bin"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_raw_cap/rptr_gray"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_raw_cap/rptr_gray"  />
+
+
+######### Begin FIR Info ########
+
+
+Number of FIR filters recognized: 2
+
+
+
+######### End FIR Info ########
+
+
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="_add_1_15695_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="_add_1_15695_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="_add_1_15695_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sched/u_cnn/mult_54_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="mult_209_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="mult_209_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="mult_209_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="mult_209_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sched/u_cnn/mult_54_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_sched/u_cnn/mult_54_e2"  />
+    <postMsg mid="35935035" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(54): " arg1="_add_1_15695_i7" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v" arg3="54"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="_add_1_15695_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="add_15687_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="add_15687_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="mult_209_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="mult_209_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="mult_209_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="mult_209_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="mult_209_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="mult_209_e1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="mult_209_e1"  />
+    <postMsg mid="35935035" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v(123): " arg1="_add_1_15805_i7" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cnn_int8_core.v" arg3="123"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="28" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="27" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="26" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="25" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="24" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="23" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="22" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="21" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="20" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="19" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="_add_1_15805_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="28" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="27" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="26" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="25" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="24" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="23" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="22" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="21" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="20" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="19" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="add_15797_e3"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="31" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="30" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="29" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="28" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="27" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="26" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="25" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="24" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="23" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="22" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="21" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="20" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="19" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="18" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="17" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="16" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="9" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="8" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="add_15797_e2"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="add_15797_e2"  />
+
+The number of registers created due to operator pipelining is 8.
+
+######## Converting I/O port cam_sda to output.
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="DIN"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="CCLK"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="SSPI_CS_n"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/cand_cx_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/cand_cx_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/cand_cx_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/cand_cx_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/cand_cx_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/cand_cx_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/cand_cx_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="15" arg1="\u_cropper/cand_cy_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="14" arg1="\u_cropper/cand_cy_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="13" arg1="\u_cropper/cand_cy_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\u_cropper/cand_cy_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\u_cropper/cand_cy_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\u_cropper/cand_cy_p_i0"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\u_cropper/cand_cy_p_i0"  />
+######## Missing driver on net \u_sched/u_cnn/\i280/_Z. Patching with GND.
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v(116): " arg1="\u_motion_frontend/x_pix__i0" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/motion_block_frontend.v" arg3="116"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(594): " arg1="\u_sdram/st_FSM_i1" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v" arg3="594"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(575): " arg1="\u_sd/cmd_frame_i0" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v" arg3="575"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(393): " arg1="\u_sdram/init_wait_cnt_4813__i31" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v" arg3="393"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(192): " arg1="\u_cropper/x_pix__i1" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v" arg3="192"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(587): " arg1="\u_sdram/rd_ptr_ext_4816_15664__i1" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v" arg3="587"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v(293): " arg1="\u_pack/cur_word_i0" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v" arg3="293"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v(149): " arg1="\u_candidate_bus/cand_track_id[3]__i23" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/candidate_bus.v" arg3="149"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v(293): " arg1="\u_pack/pad_bytes_i8" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/frame_packer.v" arg3="293"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v(64): " arg1="\u_props/by_w[15]_i128" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/proposal_gen.v" arg3="64"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v(310): " arg1="\u_candidate_bus/u_track_count/cur_cx__i0" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/track_count.v" arg3="310"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(127): " arg1="\u_cropper/sel_cy_out[3]_rep_22__i35" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v" arg3="127"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(149): " arg1="\u_cropper/sel_cy_p[3]__i36" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v" arg3="149"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(328): " arg1="\u_cam_cfg/byte_idx_i0_i2" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v" arg3="328"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v(176): " arg1="\u_cropper/cand_cy_p_i0_i9" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/cropper_128_to_64.v" arg3="176"  />
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i2.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i14.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i42 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i27.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i41 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i3.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i40 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i15.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i29 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i40.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i28 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i16.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i27 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i28.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i16 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i3.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i15 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i29.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i14 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i41.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i2 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i42.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i49.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i51 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i50.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i36.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i38 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i37.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i23.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i25 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i24.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i10.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i12 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i11.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i49.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i51 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i50.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i36.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i38 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i37.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i23.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i25 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i24.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i10.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i12 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i11.
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i2.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i14.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i42 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i15.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i41 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i16.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i40 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i27.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i29 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i28.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i48.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i51 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i52.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i35.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i38 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i39.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i22.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i25 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i26.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i9.
+Duplicate register/latch removal. \u_candidate_bus/cand_y0[3]_i12 is a one-to-one match with \u_candidate_bus/cand_y0[3]_i13.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i52 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i51.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i39 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i38.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i26 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i25.
+Duplicate register/latch removal. \u_candidate_bus/cand_x0[3]_i13 is a one-to-one match with \u_candidate_bus/cand_x0[3]_i12.
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i29.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i40.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i42 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i41.
+Duplicate register/latch removal. \u_candidate_bus/cand_y1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_x1[3]__i42.
+Duplicate register/latch removal. \u_candidate_bus/cand_x1[3]__i1 is a one-to-one match with \u_candidate_bus/cand_y1[3]__i1.
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(575): " arg1="\u_sd/wr_lba_lat_i31" arg2="c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v" arg3="575"  />
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/best_dist_i2 is a one-to-one match with \u_candidate_bus/u_track_count/best_dist_i0.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/best_dist_i1 is a one-to-one match with \u_candidate_bus/u_track_count/best_dist_i2.
+Duplicate register/latch removal. \u_cropper/sel_cx_out[3]_rep_21__i27 is a one-to-one match with \u_cropper/sel_cy_out[3]_rep_22__i27.
+Duplicate register/latch removal. \u_cropper/sel_cx_out[3]_rep_21__i18 is a one-to-one match with \u_cropper/sel_cy_out[3]_rep_22__i18.
+Duplicate register/latch removal. \u_cropper/sel_cx_out[3]_rep_21__i9 is a one-to-one match with \u_cropper/sel_cy_out[3]_rep_22__i9.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i31 is a one-to-one match with \u_sched/u_cnn/fz_i30.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i29 is a one-to-one match with \u_sched/u_cnn/fz_i31.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i28 is a one-to-one match with \u_sched/u_cnn/fz_i29.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i27 is a one-to-one match with \u_sched/u_cnn/fz_i28.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i26 is a one-to-one match with \u_sched/u_cnn/fz_i27.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i25 is a one-to-one match with \u_sched/u_cnn/fz_i26.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i24 is a one-to-one match with \u_sched/u_cnn/fz_i25.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i23 is a one-to-one match with \u_sched/u_cnn/fz_i24.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i22 is a one-to-one match with \u_sched/u_cnn/fz_i23.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i21 is a one-to-one match with \u_sched/u_cnn/fz_i22.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i20 is a one-to-one match with \u_sched/u_cnn/fz_i21.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i19 is a one-to-one match with \u_sched/u_cnn/fz_i20.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i18 is a one-to-one match with \u_sched/u_cnn/fz_i19.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i17 is a one-to-one match with \u_sched/u_cnn/fz_i18.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i16 is a one-to-one match with \u_sched/u_cnn/fz_i17.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i15 is a one-to-one match with \u_sched/u_cnn/fz_i16.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i14 is a one-to-one match with \u_sched/u_cnn/fz_i15.
+Duplicate register/latch removal. \u_sched/u_cnn/fz_i13 is a one-to-one match with \u_sched/u_cnn/fz_i14.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i31 is a one-to-one match with \u_sched/u_cnn/tmp1_i30.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i29 is a one-to-one match with \u_sched/u_cnn/tmp1_i31.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i28 is a one-to-one match with \u_sched/u_cnn/tmp1_i29.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i27 is a one-to-one match with \u_sched/u_cnn/tmp1_i28.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i26 is a one-to-one match with \u_sched/u_cnn/tmp1_i27.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i25 is a one-to-one match with \u_sched/u_cnn/tmp1_i26.
+Duplicate register/latch removal. \u_sched/u_cnn/tmp1_i24 is a one-to-one match with \u_sched/u_cnn/tmp1_i25.
+Duplicate register/latch removal. \u_cropper/sel_cy_out[3]_rep_22__i0 is a one-to-one match with \u_cropper/sel_cx_out[3]_rep_21__i0.
+Duplicate register/latch removal. \u_cropper/sel_cx_p[3]__i1 is a one-to-one match with \u_cropper/sel_cy_p[3]__i1.
+Duplicate register/latch removal. \u_cropper/sel_cy_p[3]__i28 is a one-to-one match with \u_cropper/sel_cx_p[3]__i28.
+Duplicate register/latch removal. \u_cropper/sel_cy_p[3]__i19 is a one-to-one match with \u_cropper/sel_cx_p[3]__i19.
+Duplicate register/latch removal. \u_cropper/sel_cy_p[3]__i10 is a one-to-one match with \u_cropper/sel_cx_p[3]__i10.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/pending_cx__i1 is a one-to-one match with \u_candidate_bus/u_track_count/pending_cy__i1.
+Duplicate register/latch removal. \u_cropper/cand_cx_p_i0_i1 is a one-to-one match with \u_cropper/cand_cy_p_i0_i1.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/cur_cy__i3 is a one-to-one match with \u_candidate_bus/u_track_count/cur_cx__i3.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i116 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i116.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i100 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i100.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i84 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i84.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i68 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i68.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i52 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i52.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i36 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i36.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i20 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i20.
+Duplicate register/latch removal. \u_candidate_bus/u_track_count/t_cy[7]__i4 is a one-to-one match with \u_candidate_bus/u_track_count/t_cx[7]__i4.
+Applying 200.000000 MHz constraint to all clocks
+
+    <postMsg mid="35001701" type="Info"    dynamic="2" navigation="0" arg0="\u_sched/u_cnn/n3002" arg1="1013"  />
+    <postMsg mid="35001701" type="Info"    dynamic="2" navigation="0" arg0="\u_sched/u_cnn/n3002" arg1="1013"  />
+    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
+Results of NGD DRC are available in fpga_top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="DIN" arg2="DIN"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="DIN"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="CCLK" arg2="CCLK"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="CCLK"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SSPI_CS_n" arg2="SSPI_CS_n"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="SSPI_CS_n"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_9" arg2="SD_DQ_out_9"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_10" arg2="SD_DQ_out_10"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_11" arg2="SD_DQ_out_11"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_12" arg2="SD_DQ_out_12"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_13" arg2="SD_DQ_out_13"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_14" arg2="SD_DQ_out_14"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_0" arg2="SD_DQ_out_0"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_1" arg2="SD_DQ_out_1"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_2" arg2="SD_DQ_out_2"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_3" arg2="SD_DQ_out_3"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_4" arg2="SD_DQ_out_4"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_5" arg2="SD_DQ_out_5"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_6" arg2="SD_DQ_out_6"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_7" arg2="SD_DQ_out_7"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_8" arg2="SD_DQ_out_8"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="SD_DQ_out_15" arg2="SD_DQ_out_15"  />
+    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="22"  />
+
+Design Results:
+  20097 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file AICAM_impl1.ngd.
+
+################### Begin Area Report (fpga_top)######################
+Number of register bits => 2688 of 24879 (10 % )
+BB => 16
+CCU2C => 525
+DPR16X4C => 1024
+EHXPLLL => 1
+FD1P3AX => 623
+FD1P3IX => 1188
+FD1P3JX => 27
+FD1S3AX => 759
+FD1S3IX => 80
+FD1S3JX => 11
+GSR => 1
+IB => 14
+L6MUX21 => 252
+LUT4 => 12391
+MULT9X9D => 3
+OB => 29
+OBZ => 11
+PDPW16KD => 5
+PFUMX => 2878
+SPR16X4C => 256
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : SD_CLK_c, loads : 2434
+  Net : PCLK_c, loads : 1541
+  Net : MCLK_c, loads : 1
+  Net : CRYSTAL_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 153
+Top 10 highest fanout Clock Enables:
+  Net : u_cropper/PCLK_c_enable_427, loads : 96
+  Net : u_sched/u_cnn/SD_CLK_c_enable_1112, loads : 72
+  Net : u_sched/u_cnn/SD_CLK_c_enable_991, loads : 50
+  Net : u_sched/u_cnn/SD_CLK_c_enable_1109, loads : 45
+  Net : u_sched/u_cnn/SD_CLK_c_enable_881, loads : 42
+  Net : u_motion_frontend/PCLK_c_enable_447, loads : 36
+  Net : u_ctrl/SD_CLK_c_enable_1008, loads : 33
+  Net : u_sched/u_cnn/SD_CLK_c_enable_975, loads : 33
+  Net : SD_CLK_c_enable_1076, loads : 33
+  Net : u_sched/u_cnn/SD_CLK_c_enable_1084, loads : 30
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n190661, loads : 1000
+  Net : u_sched/u_cnn/ix_4, loads : 1000
+  Net : blk_idx_4, loads : 596
+  Net : n3001, loads : 523
+  Net : n3003, loads : 512
+  Net : n3004, loads : 512
+  Net : feat1_mem_N_7037_3, loads : 512
+  Net : feat1_mem_N_7037_2, loads : 512
+  Net : u_sched/u_cnn/ix_5, loads : 511
+  Net : blk_idx_5, loads : 340
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets PCLK_c]                  |  200.000 MHz|    6.732 MHz|   125 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   46.346 MHz|    27 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 411.414  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 126.906  secs
+--------------------------------------------------------------
+
 map -a "ECP5U" -p LFE5U-25F -t CABGA256 -s 6 -oc Commercial   "AICAM_impl1.ngd" -o "AICAM_impl1_map.ncd" -pr "AICAM_impl1.prf" -mp "AICAM_impl1.mrp" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/impl1/AICAM_impl1.lpf" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf"             
 map:  version Diamond (64-bit) 3.14.0.75.2
 
@@ -20,39 +1042,70 @@ Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
 Part used: LFE5U-25FCABGA256, Performance used: 6.
 
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(83): Semantic error in &quot;IOBUF PORT &quot;DIN&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=OFF OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE=&quot;NA&quot; BANK_VCCIO=3.3 HYSTERESIS=ON TERMINATION=OFF ;&quot;: " arg1="DIN" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="83"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(85): Semantic error in &quot;IOBUF PORT &quot;CCLK&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE=&quot;NA&quot; BANK_VCCIO=3.3 HYSTERESIS=ON TERMINATION=OFF ;&quot;: " arg1="CCLK" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="85"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(86): Semantic error in &quot;IOBUF PORT &quot;SSPI_CS_n&quot; IO_TYPE=LVCMOS33 PULLMODE=UP DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE=&quot;NA&quot; BANK_VCCIO=3.3 HYSTERESIS=ON TERMINATION=OFF ;&quot;: " arg1="SSPI_CS_n" arg2="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf" arg3="86"  />
 Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
 Package Status:                     Final          Version 1.44.
 
-    <postMsg mid="52101276" type="Warning" dynamic="1" navigation="0" arg0="SD_A_pad_10/IOBUF"  />
-    <postMsg mid="52101276" type="Warning" dynamic="1" navigation="0" arg0="SD_A_pad_0/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_9/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_10/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_11/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_12/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_13/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_14/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="DRIVE" arg1="8" arg2="M_D0_pad/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="SLEWRATE" arg1="SLOW" arg2="M_D0_pad/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="DRIVE" arg1="8" arg2="RX_pad/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="SLEWRATE" arg1="SLOW" arg2="RX_pad/IOBUF"  />
     <postMsg mid="52101276" type="Warning" dynamic="1" navigation="0" arg0="DOUT_pad/IOBUF"  />
-    <postMsg mid="52101276" type="Warning" dynamic="1" navigation="0" arg0="DIN_pad/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="OPENDRAIN" arg1="OFF" arg2="DOUT_pad/IOBUF"  />
+    <postMsg mid="52101276" type="Warning" dynamic="1" navigation="0" arg0="SD_A_pad_0/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="OPENDRAIN" arg1="OFF" arg2="SD_A_pad_0/IOBUF"  />
+    <postMsg mid="52101276" type="Warning" dynamic="1" navigation="0" arg0="SD_A_pad_10/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="OPENDRAIN" arg1="OFF" arg2="SD_A_pad_10/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_0/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_1/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_2/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_3/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_4/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_5/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_6/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_7/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_8/IOBUF"  />
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="HYSTERESIS" arg1="NA" arg2="SD_DQ_pad_15/IOBUF"  />
 Running general design DRC...
 
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="DIN"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="CCLK"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="SSPI_CS_n"  />
 Removing unused logic...
 
 Optimizing...
 
-147 CCU2 constant inputs absorbed.
+1674 CCU2 constant inputs absorbed.
 
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="DIN"  />
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="CCLK"  />
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="SSPI_CS_n"  />
 
 
 
 Design Summary:
-   Number of registers:   4284 out of 24879 (17%)
-      PFU registers:         4284 out of 24288 (18%)
+   Number of registers:   2688 out of 24879 (11%)
+      PFU registers:         2688 out of 24288 (11%)
       PIO registers:            0 out of   591 (0%)
-   Number of SLICEs:      3641 out of 12144 (30%)
-      SLICEs as Logic/ROM:   3641 out of 12144 (30%)
-      SLICEs as RAM:            0 out of  9108 (0%)
-      SLICEs as Carry:         35 out of 12144 (0%)
-   Number of LUT4s:        3038 out of 24288 (13%)
-      Number used as logic LUTs:        2968
-      Number used as distributed RAM:     0
-      Number used as ripple logic:       70
+   Number of SLICEs:     11042 out of 12144 (91%)
+      SLICEs as Logic/ROM:   7202 out of 12144 (59%)
+      SLICEs as RAM:         3840 out of  9108 (42%)
+      SLICEs as Carry:        525 out of 12144 (4%)
+   Number of LUT4s:        21111 out of 24288 (87%)
+      Number used as logic LUTs:        12381
+      Number used as distributed RAM:   7680
+      Number used as ripple logic:      1050
       Number used as shift registers:     0
-   Number of PIO sites used: 71 out of 197 (36%)
-   Number of block RAMs:  0 out of 56 (0%)
+   Number of PIO sites used: 54 out of 197 (27%)
+   Number of block RAMs:  5 out of 56 (9%)
    Number of GSRs:  0 out of 1 (0%)
    JTAG used :      No
    Readback used :  No
@@ -63,7 +1116,7 @@ Design Summary:
    Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
    Number of DCC:  0 out of 60 (0%)
    Number of DCS:  0 out of 2 (0%)
-   Number of PLLs:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
    Number of DDRDLLs:  0 out of 4 (0%)
    Number of CLKDIV:  0 out of 4 (0%)
    Number of ECLKSYNC:  0 out of 10 (0%)
@@ -75,580 +1128,417 @@ Design Summary:
    Number Of Mapped DSP Components:
    --------------------------------
    MULT18X18D          0
-   MULT9X9D            0
+   MULT9X9D            3
    ALU54B              0
    ALU24B              0
    PRADD18A            0
    PRADD9A             0
    --------------------------------
-   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP MULT Sites:  3 out of 56 (5 %)
    Number of Used DSP ALU Sites:  0 out of 28 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
    Number of clocks:  3
-     Net CRYSTAL_c: 2140 loads, 2140 rising, 0 falling (Driver: PIO CRYSTAL )
-     Net PCLK_c: 11 loads, 11 rising, 0 falling (Driver: PIO PCLK )
-     Net CCLK_c: 6 loads, 6 rising, 0 falling (Driver: PIO CCLK )
-   Number of Clock Enables:  530
-     Net cam_pixel_valid: 4 loads, 4 LSLICEs
-     Net PCLK_c_enable_16: 4 loads, 4 LSLICEs
-     Net rst_n_N_46: 1 loads, 1 LSLICEs
-     Net rst_n: 9 loads, 9 LSLICEs
-     Net PCLK_c_enable_9: 4 loads, 4 LSLICEs
-     Net CRYSTAL_c_enable_4166: 3 loads, 3 LSLICEs
-     Net CRYSTAL_c_enable_4110: 2 loads, 2 LSLICEs
-     Net CRYSTAL_c_enable_1: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_4205: 17 loads, 17 LSLICEs
-     Net CRYSTAL_c_enable_4228: 7 loads, 7 LSLICEs
-     Net CRYSTAL_c_enable_4174: 6 loads, 6 LSLICEs
-     Net CRYSTAL_c_enable_4224: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_4225: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_4222: 2 loads, 2 LSLICEs
-     Net CRYSTAL_c_enable_4162: 3 loads, 3 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2: 1 loads, 1 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4223: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4149: 20 loads, 20 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_25: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_33: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_41: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_49: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_57: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_65: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_73: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_81: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_89: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_97: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_105: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_113: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_121: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_129: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_137: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_145: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_153: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_161: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_169: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_177: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_185: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_193: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_201: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_209: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_217: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_225: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_233: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_241: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_249: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_257: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_265: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_273: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_281: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_289: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_297: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_305: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_313: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_321: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_329: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_337: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_345: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_353: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_361: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_369: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_377: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_385: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_393: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_401: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_409: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_417: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_425: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_433: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_441: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_449: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_457: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_465: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_473: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_481: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_489: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_497: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_505: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_513: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_521: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_529: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_537: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_545: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_553: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_561: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_569: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_577: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_585: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_593: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_601: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_609: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_617: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_625: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_633: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_641: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_649: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_657: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_665: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_673: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_681: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_689: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_697: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_705: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_713: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_721: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_729: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_737: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_745: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_753: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_761: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_769: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_777: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_785: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_793: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_801: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_809: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_817: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_825: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_833: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_841: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_849: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_857: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_865: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_873: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_881: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_889: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_897: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_905: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_913: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_921: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_929: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_937: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_945: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_953: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_961: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_969: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_977: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_985: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_993: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1001: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1009: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1017: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1025: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1033: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1041: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1049: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1057: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1065: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1073: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1081: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1089: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1097: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1105: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1113: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1121: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1129: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1137: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1145: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1153: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1161: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1169: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1177: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1185: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1193: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1201: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1209: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1217: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1225: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1233: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1241: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1249: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1257: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1265: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1273: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1281: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1289: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1297: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1305: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1313: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1321: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1329: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1337: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1345: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1353: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1361: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1369: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1377: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1385: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3257: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1393: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1401: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1409: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1417: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1425: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1433: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1441: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1449: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1457: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1465: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1473: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1481: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1489: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1497: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1505: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1513: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1521: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1529: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1537: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1545: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1553: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1561: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1569: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1577: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1585: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1593: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1601: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1609: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1617: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1625: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1633: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1641: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1649: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1657: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1665: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1673: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1681: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1689: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1697: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1705: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1713: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1721: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1729: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1737: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1745: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1753: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1761: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1769: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1777: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1785: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1793: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1801: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1809: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1817: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1825: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1833: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1841: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1849: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1857: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1865: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1873: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1881: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1889: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1897: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1905: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1913: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1921: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1929: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1937: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1945: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1953: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1961: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1969: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1977: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1985: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_1993: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2001: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2009: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2017: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2025: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2033: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2041: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2049: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2057: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2065: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2073: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2081: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2089: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2097: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2105: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2113: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2121: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2129: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2137: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2145: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2153: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2161: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2169: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2177: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2185: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2193: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2201: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2209: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2217: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2225: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2233: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2241: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2249: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2257: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2265: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2273: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2281: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2289: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2297: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2305: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2313: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2321: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2329: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2337: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2345: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2353: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2361: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2369: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2377: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2385: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2393: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2401: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2409: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2417: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2425: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2433: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2441: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2449: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2457: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2465: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2473: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2481: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2489: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2497: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2505: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2513: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2521: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2529: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2537: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2545: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2553: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2561: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2569: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2577: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2585: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2593: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2601: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2609: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2617: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2625: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2633: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2641: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2649: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2657: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2665: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2673: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2681: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2689: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2697: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2705: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2713: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2721: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2729: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2737: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2745: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2753: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2761: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2769: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2777: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2785: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2793: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2801: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2809: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2817: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2825: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2833: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2841: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2849: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2857: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2865: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2873: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2881: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2889: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2897: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2905: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2913: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2921: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2929: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2937: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2945: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2953: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2961: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2969: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2977: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2985: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_2993: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3001: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3009: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3017: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3025: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3033: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3041: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3049: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3057: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3065: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3073: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3081: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3089: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3097: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3105: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3113: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3121: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3129: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3137: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3145: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3153: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3161: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3169: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3177: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3185: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3193: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3201: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3209: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3217: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3225: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3233: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3241: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3249: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3265: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3273: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3281: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3289: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3297: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3305: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3313: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3321: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3329: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3337: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3345: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3353: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3361: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3369: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3377: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3385: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3393: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3401: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3409: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3417: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3425: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3433: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3441: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3449: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3457: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3465: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3473: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3481: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3489: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3497: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3505: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3513: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3521: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3529: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3537: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3545: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3553: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3561: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3569: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3577: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3585: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3593: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3601: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3609: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3617: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3625: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3633: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3641: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3649: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3657: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3665: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3673: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3681: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3689: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3697: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3705: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3713: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3721: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3729: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3737: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3745: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3753: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3761: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3769: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3777: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3785: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3793: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3801: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3809: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3817: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3825: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3833: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3841: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3849: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3857: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3865: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3873: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3881: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3889: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3897: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3905: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3913: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3921: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3929: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3937: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3945: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3953: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3961: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3969: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3977: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3985: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_3993: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4001: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4009: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4017: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4025: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4033: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4041: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4049: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4057: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4065: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4073: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4081: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4089: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4097: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4105: 4 loads, 4 LSLICEs
-     Net u_sdio_cam/CRYSTAL_c_enable_4112: 1 loads, 1 LSLICEs
-   Number of LSRs:  5
-     Net n4063: 1 loads, 1 LSLICEs
-     Net rst_n: 64 loads, 64 LSLICEs
-     Net SSPI_CS_n_c: 1 loads, 1 LSLICEs
-     Net n3512: 2 loads, 2 LSLICEs
-     Net u_sdio_cam/n733: 2 loads, 2 LSLICEs
+     Net SD_CLK_c: 2929 loads, 2929 rising, 0 falling (Driver: u_pll/PLLInst_0 )
+     Net PCLK_c: 1194 loads, 1194 rising, 0 falling (Driver: PIO PCLK )
+     Net CRYSTAL_c: 1 loads, 1 rising, 0 falling (Driver: PIO CRYSTAL )
+   Number of Clock Enables:  153
+     Net PCLK_c_enable_321: 30 loads, 30 LSLICEs
+     Net u_motion_frontend/PCLK_c_enable_447: 13 loads, 13 LSLICEs
+     Net frame_end: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_395: 6 loads, 6 LSLICEs
+     Net u_motion_frontend/PCLK_c_enable_596: 15 loads, 15 LSLICEs
+     Net SD_CLK_c_enable_966: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1039: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1041: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1054: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1061: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1082: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1089: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1076: 97 loads, 97 LSLICEs
+     Net SD_CLK_c_enable_1094: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1096: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_1021: 68 loads, 68 LSLICEs
+     Net SD_CLK_c_enable_272: 10 loads, 10 LSLICEs
+     Net SD_CLK_c_enable_280: 9 loads, 9 LSLICEs
+     Net SD_CLK_c_enable_288: 10 loads, 10 LSLICEs
+     Net SD_CLK_c_enable_296: 11 loads, 11 LSLICEs
+     Net SD_CLK_c_enable_304: 9 loads, 9 LSLICEs
+     Net SD_CLK_c_enable_320: 8 loads, 8 LSLICEs
+     Net SD_CLK_c_enable_328: 10 loads, 10 LSLICEs
+     Net SD_CLK_c_enable_1017: 3 loads, 3 LSLICEs
+     Net SD_CLK_c_enable_582: 1 loads, 1 LSLICEs
+     Net tick: 11 loads, 6 LSLICEs
+     Net u_props/PCLK_c_enable_594: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_453: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_460: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_467: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_474: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_481: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_488: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_495: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_502: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_509: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_516: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_523: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_530: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_537: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_544: 12 loads, 12 LSLICEs
+     Net u_props/PCLK_c_enable_551: 12 loads, 12 LSLICEs
+     Net u_cropper/PCLK_c_enable_583: 6 loads, 6 LSLICEs
+     Net props_ready_sys: 77 loads, 77 LSLICEs
+     Net u_cropper/PCLK_c_enable_427: 49 loads, 49 LSLICEs
+     Net u_cropper/take_sample_p: 7 loads, 7 LSLICEs
+     Net u_cropper/SD_CLK_c_enable_1111: 14 loads, 14 LSLICEs
+     Net u_cropper/PCLK_c_enable_590: 6 loads, 6 LSLICEs
+     Net u_cropper/PCLK_c_enable_563: 7 loads, 7 LSLICEs
+     Net SD_CLK_c_enable_994: 3 loads, 3 LSLICEs
+     Net SD_CLK_c_enable_889: 7 loads, 7 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_820: 3 loads, 3 LSLICEs
+     Net u_sdram/refresh_req_N_1985: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_999: 12 loads, 12 LSLICEs
+     Net SD_CLK_c_enable_968: 3 loads, 3 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_819: 19 loads, 19 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_3: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_4: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_1103: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_1106: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_1107: 4 loads, 4 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_626: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_912: 3 loads, 3 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_607: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_608: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_627: 2 loads, 2 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_1105: 6 loads, 6 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_798: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_977: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_1100: 2 loads, 2 LSLICEs
+     Net u_sd/SD_CLK_c_enable_689: 4 loads, 4 LSLICEs
+     Net u_sd/bit_cnt_1: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_1026: 9 loads, 9 LSLICEs
+     Net u_sd/SD_CLK_c_enable_703: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_705: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_1101: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_701: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_1102: 2 loads, 2 LSLICEs
+     Net u_sd/SD_CLK_c_enable_700: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_702: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_704: 1 loads, 1 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_795: 4 loads, 4 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_788: 4 loads, 4 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_781: 4 loads, 4 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_8: 1 loads, 1 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_1104: 5 loads, 5 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_983: 2 loads, 2 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_926: 1 loads, 1 LSLICEs
+     Net u_ctrl/rx_valid: 2 loads, 2 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_578: 1 loads, 1 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_1108: 4 loads, 4 LSLICEs
+     Net u_ctrl/n35772: 18 loads, 18 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_696: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_tx/SD_CLK_c_enable_731: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_tx/SD_CLK_c_enable_948: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_668: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_714: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_667: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_729: 9 loads, 9 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_710: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_709: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_711: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_706: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_707: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_708: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_1099: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1034: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1035: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1037: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1038: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1040: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1042: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1048: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1052: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1053: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1060: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1077: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1078: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1079: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1081: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1086: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1090: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1091: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1092: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1093: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1095: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1023: 8 loads, 8 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_312: 8 loads, 8 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_475: 8 loads, 8 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1018: 3 loads, 3 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1011: 2 loads, 2 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_1010: 16 loads, 16 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_526: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_527: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_529: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/SD_CLK_c_enable_530: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/pending_valid_N_9255: 1 loads, 1 LSLICEs
+     Net u_sched/scores_ready_N_6509: 1 loads, 1 LSLICEs
+     Net u_sched/SD_CLK_c_enable_674: 1 loads, 1 LSLICEs
+     Net u_sched/SD_CLK_c_enable_13: 1 loads, 1 LSLICEs
+     Net u_sched/SD_CLK_c_enable_673: 1 loads, 1 LSLICEs
+     Net u_sched/SD_CLK_c_enable_671: 1 loads, 1 LSLICEs
+     Net u_sched/SD_CLK_c_enable_672: 1 loads, 1 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_1109: 24 loads, 24 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_1112: 37 loads, 37 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_1084: 18 loads, 18 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_1087: 11 loads, 11 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_976: 7 loads, 7 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_975: 18 loads, 18 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_881: 20 loads, 20 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_745: 2 loads, 2 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_969: 4 loads, 4 LSLICEs
+     Net u_sched/u_cnn/SD_CLK_c_enable_991: 27 loads, 27 LSLICEs
+   Number of LSRs:  98
+     Net n40916: 6 loads, 6 LSLICEs
+     Net u_motion_frontend/n98437: 15 loads, 15 LSLICEs
+     Net u_motion_frontend/n98489: 1 loads, 1 LSLICEs
+     Net n179688: 3 loads, 3 LSLICEs
+     Net n40892: 5 loads, 5 LSLICEs
+     Net u_props/n97803: 12 loads, 12 LSLICEs
+     Net u_props/n98165: 12 loads, 12 LSLICEs
+     Net u_props/n98158: 12 loads, 12 LSLICEs
+     Net u_props/n98151: 12 loads, 12 LSLICEs
+     Net u_props/n98144: 12 loads, 12 LSLICEs
+     Net u_props/n98137: 12 loads, 12 LSLICEs
+     Net u_props/n98130: 12 loads, 12 LSLICEs
+     Net u_props/n98123: 12 loads, 12 LSLICEs
+     Net u_props/n98116: 12 loads, 12 LSLICEs
+     Net u_props/n98109: 12 loads, 12 LSLICEs
+     Net u_props/n98102: 12 loads, 12 LSLICEs
+     Net u_props/n98095: 12 loads, 12 LSLICEs
+     Net u_props/n98088: 12 loads, 12 LSLICEs
+     Net u_props/n98081: 12 loads, 12 LSLICEs
+     Net u_props/n98074: 12 loads, 12 LSLICEs
+     Net u_props/n98067: 12 loads, 12 LSLICEs
+     Net u_cropper/n40912: 6 loads, 6 LSLICEs
+     Net u_cropper/n97812: 6 loads, 6 LSLICEs
+     Net u_cropper/n98037: 7 loads, 7 LSLICEs
+     Net u_cropper/n112642: 2 loads, 2 LSLICEs
+     Net u_cropper/n40920: 2 loads, 2 LSLICEs
+     Net u_sdram/n28918: 9 loads, 9 LSLICEs
+     Net u_sdram/refresh_req: 1 loads, 1 LSLICEs
+     Net u_sdram/n74752: 1 loads, 1 LSLICEs
+     Net u_sdram/n19290: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_A_12_N_1769_9: 1 loads, 1 LSLICEs
+     Net u_sdram/n179426: 1 loads, 1 LSLICEs
+     Net n97953: 19 loads, 19 LSLICEs
+     Net u_cam_cfg/tick_N_429: 5 loads, 5 LSLICEs
+     Net u_cam_cfg/n137013: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/n98447: 4 loads, 4 LSLICEs
+     Net u_cam_cfg/n137147: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/n98439: 3 loads, 3 LSLICEs
+     Net u_sd/st_5: 4 loads, 4 LSLICEs
+     Net u_sd/n178961: 9 loads, 9 LSLICEs
+     Net u_sd/n87710: 3 loads, 3 LSLICEs
+     Net u_sd/n40946: 12 loads, 12 LSLICEs
+     Net u_sd/n117952: 2 loads, 2 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_8: 2 loads, 2 LSLICEs
+     Net u_ctrl/n59938: 1 loads, 1 LSLICEs
+     Net u_ctrl/n179431: 3 loads, 3 LSLICEs
+     Net u_ctrl/cmd_fire: 5 loads, 5 LSLICEs
+     Net n190654: 28 loads, 28 LSLICEs
+     Net n190653: 28 loads, 28 LSLICEs
+     Net n190652: 26 loads, 26 LSLICEs
+     Net n190651: 27 loads, 27 LSLICEs
+     Net n190650: 31 loads, 31 LSLICEs
+     Net n190649: 43 loads, 43 LSLICEs
+     Net u_ctrl/rx_valid: 1 loads, 1 LSLICEs
+     Net u_ctrl/n98463: 4 loads, 4 LSLICEs
+     Net clear_counts_pulse: 30 loads, 30 LSLICEs
+     Net u_ctrl/n98431: 5 loads, 5 LSLICEs
+     Net u_ctrl/u_tx/n24433: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_tx/n98457: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_tx/SD_CLK_c_enable_948: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_tx/n28889: 9 loads, 9 LSLICEs
+     Net u_ctrl/u_rx/n98455: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_rx/rx_s2: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/n98017: 9 loads, 9 LSLICEs
+     Net u_candidate_bus/n97832: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n73892: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/n97827: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97828: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97829: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97830: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97831: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97833: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97834: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97849: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97850: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97851: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97852: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97853: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97854: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97855: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n97856: 5 loads, 5 LSLICEs
+     Net u_candidate_bus/u_track_count/n74127: 1 loads, 1 LSLICEs
+     Net u_candidate_bus/u_track_count/n97860: 7 loads, 7 LSLICEs
+     Net u_candidate_bus/u_track_count/n87228: 1 loads, 1 LSLICEs
+     Net u_sched/scores_ready_N_6509: 1 loads, 1 LSLICEs
+     Net u_sched/SD_CLK_c_enable_674: 1 loads, 1 LSLICEs
+     Net u_sched/n19708: 1 loads, 1 LSLICEs
+     Net u_sched/u_cnn/n98002: 24 loads, 24 LSLICEs
+     Net u_sched/u_cnn/n97937: 9 loads, 9 LSLICEs
+     Net u_sched/u_cnn/n97878: 7 loads, 7 LSLICEs
+     Net u_sched/u_cnn/n190656: 29 loads, 29 LSLICEs
+     Net u_sched/u_cnn/n97909: 9 loads, 9 LSLICEs
+     Net u_sched/u_cnn/n97946: 4 loads, 4 LSLICEs
+     Net u_sched/u_cnn/n97983: 1 loads, 1 LSLICEs
+     Net u_sched/u_cnn/n102298: 2 loads, 2 LSLICEs
+     Net u_sched/u_cnn/n97997: 2 loads, 2 LSLICEs
+     Net u_sched/u_cnn/n97988: 2 loads, 2 LSLICEs
+     Net u_sched/u_cnn/n83311: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net rd_byte_0: 1000 loads
-     Net rd_byte_1: 1000 loads
-     Net u_sdio_cam/maxfan_replicated_net_999: 1000 loads
-     Net rd_byte_2: 516 loads
-     Net cam_byte_hold_0: 512 loads
-     Net cam_byte_hold_1: 512 loads
-     Net cam_byte_hold_2: 512 loads
-     Net cam_byte_hold_3: 512 loads
-     Net cam_byte_hold_4: 512 loads
-     Net cam_byte_hold_5: 512 loads
-    <postMsg mid="51001102" type="Warning" dynamic="2" navigation="0" arg0="N9" arg1="CCLK"  />
-    <postMsg mid="1103694" type="Warning" dynamic="2" navigation="0" arg0="Semantic error in &quot;LOCATE COMP &quot;CCLK&quot; SITE &quot;N9&quot; ;&quot;: " arg1="N9"  />
+     Net n3003: 2048 loads
+     Net n3004: 2048 loads
+     Net blk_idx_3: 1280 loads
+     Net n3002: 1013 loads
+     Net u_sched/u_cnn/ix_4: 1000 loads
+     Net blk_idx_4: 596 loads
+     Net n3001: 523 loads
+     Net feat1_mem_N_7037_2: 512 loads
+     Net feat1_mem_N_7037_3: 512 loads
+     Net u_sched/u_cnn/ix_5: 511 loads
  
 
-   Number of warnings:  6
+   Number of warnings:  35
    Number of errors:    0
 
 
+. MULT9X9D  u_motion_frontend/mult_209_mult_2:
 
-Total CPU Time: 2 secs  
-Total REAL Time: 4 secs  
-Peak Memory Usage: 155 MB
+Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+
+. MULT9X9D  u_sched/u_cnn/mult_54_mult_2:
+
+Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+
+. MULT9X9D  u_sched/u_cnn/mult_132:
+
+Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+
+
+Total CPU Time: 25 secs  
+Total REAL Time: 26 secs  
+Peak Memory Usage: 247 MB
 
 Dumping design to file AICAM_impl1_map.ncd.
 
@@ -679,7 +1569,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Sun Mar 01 21:06:46 2026
+Fri Mar 06 02:35:36 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -696,24 +1586,19 @@ Device,speed:    LFE5U-25F,6
 Report level:    verbose report, limited to 1 item per preference
 --------------------------------------------------------------------------------
 
-Report Type:     based on TRACE automatically generated preferences
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
 
 
 Timing summary (Setup):
 ---------------
 
-Timing errors: 4096  Score: 3282467
-Cumulative negative slack: 3282467
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
 
-Constraints cover 36822 paths, 3 nets, and 16981 connections (77.84% coverage)
+Constraints cover 27144987 paths, 3 nets, and 61608 connections (58.95% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Sun Mar 01 21:06:47 2026
+Fri Mar 06 02:35:37 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -730,10 +1615,6 @@ Device,speed:    LFE5U-25F,M
 Report level:    verbose report, limited to 1 item per preference
 --------------------------------------------------------------------------------
 
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
 
 
 Timing summary (Hold):
@@ -742,23 +1623,23 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 36822 paths, 3 nets, and 16412 connections (75.24% coverage)
+Constraints cover 27144987 paths, 3 nets, and 62323 connections (59.63% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 4096 (setup), 0 (hold)
-Score: 3282467 (setup), 0 (hold)
-Cumulative negative slack: 3282467 (3282467+0)
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 233 MB
+Total CPU Time: 4 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 314 MB
 
 
 ldbanno "AICAM_impl1_map.ncd" -n Verilog -o "AICAM_impl1_mapvo.vo" -w -neg
@@ -786,9 +1667,9 @@ Converting design AICAM_impl1_map.ncd into .ldb format.
 Writing Verilog netlist to file AICAM_impl1_mapvo.vo
 Writing SDF timing to file AICAM_impl1_mapvo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 3 secs 
-Total REAL Time: 4 secs 
-Peak Memory Usage: 198 MB
+Total CPU Time: 33 secs 
+Total REAL Time: 34 secs 
+Peak Memory Usage: 441 MB
 
 ldbanno "AICAM_impl1_map.ncd" -n VHDL -o "AICAM_impl1_mapvho.vho" -w -neg
 ldbanno: version Diamond (64-bit) 3.14.0.75.2
@@ -815,9 +1696,9 @@ Converting design AICAM_impl1_map.ncd into .ldb format.
 Writing VHDL netlist to file AICAM_impl1_mapvho.vho
 Writing SDF timing to file AICAM_impl1_mapvho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 4 secs 
-Total REAL Time: 4 secs 
-Peak Memory Usage: 198 MB
+Total CPU Time: 29 secs 
+Total REAL Time: 30 secs 
+Peak Memory Usage: 443 MB
 
 mpartrce -p "AICAM_impl1.p2t" -f "AICAM_impl1.p3t" -tf "AICAM_impl1.pt" "AICAM_impl1_map.ncd" "AICAM_impl1.ncd"
 
@@ -826,7 +1707,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "AICAM_impl1_map.ncd"
-Sun Mar 01 21:06:56 2026
+Fri Mar 06 02:36:44 2026
 
 PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 AICAM_impl1_map.ncd AICAM_impl1.dir/5_1.ncd AICAM_impl1.prf
@@ -850,82 +1731,114 @@ License checked out.
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)      71/197          36% used
-                     71/197          36% bonded
+   PIO (prelim)      54/197          27% used
+                     54/197          27% bonded
 
-   SLICE           3641/12144        29% used
+   SLICE          11042/12144        90% used
+
+   EBR                5/56            8% used
+   PLL                1/2            50% used
+   MULT9              3/56            5% used
 
 
-
-Number of Signals: 7088
-Number of Connections: 21814
+Number of Signals: 29238
+Number of Connections: 104514
 
 Pin Constraint Summary:
-   70 out of 71 pins locked (98% locked).
+   54 out of 54 pins locked (100% locked).
 
-The following 6 signals are selected to use the primary clock routing resources:
-    CRYSTAL_c (driver: CRYSTAL, clk/ce/sr load #: 2140/0/0)
-    PCLK_c (driver: PCLK, clk/ce/sr load #: 11/0/0)
-    CCLK_c (driver: CCLK, clk/ce/sr load #: 6/0/0)
-    rst_n (driver: SLICE_71, clk/ce/sr load #: 0/9/64)
-    u_sdio_cam/CRYSTAL_c_enable_4149 (driver: u_sdio_cam/SLICE_3283, clk/ce/sr load #: 0/20/0)
-    CRYSTAL_c_enable_4205 (driver: SLICE_3359, clk/ce/sr load #: 0/17/0)
+
+The following 14 signals are selected to use the primary clock routing resources:
+    SD_CLK_c (driver: u_pll/PLLInst_0, clk/ce/sr load #: 2929/0/0)
+    PCLK_c (driver: PCLK, clk/ce/sr load #: 1194/0/0)
+    SD_CLK_c_enable_1076 (driver: SLICE_4787, clk/ce/sr load #: 0/97/0)
+    props_ready_sys (driver: SLICE_4746, clk/ce/sr load #: 0/77/0)
+    SD_CLK_c_enable_1021 (driver: SLICE_8635, clk/ce/sr load #: 0/68/0)
+    u_cropper/PCLK_c_enable_427 (driver: SLICE_5532, clk/ce/sr load #: 0/49/0)
+    n190649 (driver: u_ctrl/SLICE_4535, clk/ce/sr load #: 0/0/43)
+    u_sched/u_cnn/SD_CLK_c_enable_1112 (driver: u_sched/u_cnn/SLICE_10039, clk/ce/sr load #: 0/37/0)
+    n190650 (driver: u_ctrl/SLICE_4536, clk/ce/sr load #: 0/0/31)
+    PCLK_c_enable_321 (driver: SLICE_4474, clk/ce/sr load #: 0/30/0)
+    clear_counts_pulse (driver: u_ctrl/SLICE_4397, clk/ce/sr load #: 0/0/30)
+    u_sched/u_cnn/n190656 (driver: u_sched/u_cnn/SLICE_10168, clk/ce/sr load #: 0/0/29)
+    n190654 (driver: u_ctrl/SLICE_4538, clk/ce/sr load #: 0/0/28)
+    n190653 (driver: u_ctrl/SLICE_4537, clk/ce/sr load #: 0/0/28)
 
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-...........
-Finished Placer Phase 0.  REAL time: 4 secs 
+..........
+Finished Placer Phase 0.  REAL time: 16 secs 
+
 
 Starting Placer Phase 1.
-.............
-Placer score = 63223764.
-Finished Placer Phase 1.  REAL time: 11 secs 
+.....................................
+Placer score = 7519302.
+Finished Placer Phase 1.  REAL time: 2 mins 40 secs 
 
 Starting Placer Phase 2.
-.
-Placer score =  60319297
-Finished Placer Phase 2.  REAL time: 13 secs 
+...
+Placer score =  7253512
+Finished Placer Phase 2.  REAL time: 3 mins 9 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clock Resources:
-  CLK_PIN    : 3 out of 12 (25%)
+  CLK_PIN    : 1 out of 12 (8%)
   GR_PCLK    : 0 out of 12 (0%)
-  PLL        : 0 out of 2 (0%)
+  PLL        : 1 out of 2 (50%)
   DCS        : 0 out of 2 (0%)
   DCC        : 0 out of 60 (0%)
   CLKDIV     : 0 out of 4 (0%)
 
 Quadrant TL Clocks:
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 690
-  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 10
-  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R27C37C", CLK/CE/SR load = 58
-  PRIMARY "u_sdio_cam/CRYSTAL_c_enable_4149" from F0 on comp "u_sdio_cam/SLICE_3283" on site "R15C13B", CLK/CE/SR load = 20
-  PRIMARY "CRYSTAL_c_enable_4205" from F0 on comp "SLICE_3359" on site "R9C23B", CLK/CE/SR load = 17
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 923
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 1
+  PRIMARY "u_sched/u_cnn/SD_CLK_c_enable_1112" from F1 on comp "u_sched/u_cnn/SLICE_10039" on site "R33C37B", CLK/CE/SR load = 17
 
-  PRIMARY  : 5 out of 16 (31%)
+  PRIMARY  : 3 out of 16 (18%)
 
 Quadrant TR Clocks:
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 530
-  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R27C37C", CLK/CE/SR load = 7
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 649
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 849
+  PRIMARY "SD_CLK_c_enable_1076" from F1 on comp "SLICE_4787" on site "R14C52C", CLK/CE/SR load = 97
+  PRIMARY "SD_CLK_c_enable_1021" from F0 on comp "SLICE_8635" on site "R14C51B", CLK/CE/SR load = 68
+  PRIMARY "n190649" from Q1 on comp "u_ctrl/SLICE_4535" on site "R19C46A", CLK/CE/SR load = 32
+  PRIMARY "u_sched/u_cnn/SD_CLK_c_enable_1112" from F1 on comp "u_sched/u_cnn/SLICE_10039" on site "R33C37B", CLK/CE/SR load = 8
+  PRIMARY "n190650" from Q0 on comp "u_ctrl/SLICE_4536" on site "R19C46D", CLK/CE/SR load = 31
+  PRIMARY "PCLK_c_enable_321" from F0 on comp "SLICE_4474" on site "R22C43B", CLK/CE/SR load = 5
+  PRIMARY "clear_counts_pulse" from Q0 on comp "u_ctrl/SLICE_4397" on site "R20C44D", CLK/CE/SR load = 28
+  PRIMARY "n190654" from Q0 on comp "u_ctrl/SLICE_4538" on site "R19C43D", CLK/CE/SR load = 22
+  PRIMARY "n190653" from Q1 on comp "u_ctrl/SLICE_4537" on site "R20C45A", CLK/CE/SR load = 24
 
-  PRIMARY  : 2 out of 16 (12%)
+  PRIMARY  : 11 out of 16 (68%)
 
 Quadrant BL Clocks:
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 621
-  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 1
-  PRIMARY "CCLK_c" from comp "CCLK" on CLK_PIN site "L1 (PL26A)", CLK/CE/SR load = 6
-  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R27C37C", CLK/CE/SR load = 6
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 117
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 262
+  PRIMARY "props_ready_sys" from F1 on comp "SLICE_4746" on site "R19C37C", CLK/CE/SR load = 71
+  PRIMARY "u_cropper/PCLK_c_enable_427" from F0 on comp "SLICE_5532" on site "R17C37A", CLK/CE/SR load = 40
+  PRIMARY "n190649" from Q1 on comp "u_ctrl/SLICE_4535" on site "R19C46A", CLK/CE/SR load = 11
+  PRIMARY "PCLK_c_enable_321" from F0 on comp "SLICE_4474" on site "R22C43B", CLK/CE/SR load = 19
+  PRIMARY "clear_counts_pulse" from Q0 on comp "u_ctrl/SLICE_4397" on site "R20C44D", CLK/CE/SR load = 2
+  PRIMARY "n190654" from Q0 on comp "u_ctrl/SLICE_4538" on site "R19C43D", CLK/CE/SR load = 4
+  PRIMARY "n190653" from Q1 on comp "u_ctrl/SLICE_4537" on site "R20C45A", CLK/CE/SR load = 2
 
-  PRIMARY  : 4 out of 16 (25%)
+  PRIMARY  : 9 out of 16 (56%)
 
 Quadrant BR Clocks:
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 299
-  PRIMARY "rst_n" from Q0 on comp "SLICE_71" on site "R27C37C", CLK/CE/SR load = 2
+  PRIMARY "SD_CLK_c" from CLKOP on comp "u_pll/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 1240
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 82
+  PRIMARY "props_ready_sys" from F1 on comp "SLICE_4746" on site "R19C37C", CLK/CE/SR load = 6
+  PRIMARY "u_cropper/PCLK_c_enable_427" from F0 on comp "SLICE_5532" on site "R17C37A", CLK/CE/SR load = 9
+  PRIMARY "u_sched/u_cnn/SD_CLK_c_enable_1112" from F1 on comp "u_sched/u_cnn/SLICE_10039" on site "R33C37B", CLK/CE/SR load = 12
+  PRIMARY "PCLK_c_enable_321" from F0 on comp "SLICE_4474" on site "R22C43B", CLK/CE/SR load = 6
+  PRIMARY "u_sched/u_cnn/n190656" from F1 on comp "u_sched/u_cnn/SLICE_10168" on site "R33C38D", CLK/CE/SR load = 29
+  PRIMARY "n190654" from Q0 on comp "u_ctrl/SLICE_4538" on site "R19C43D", CLK/CE/SR load = 2
+  PRIMARY "n190653" from Q1 on comp "u_ctrl/SLICE_4537" on site "R20C45A", CLK/CE/SR load = 2
 
-  PRIMARY  : 2 out of 16 (12%)
+  PRIMARY  : 9 out of 16 (56%)
 
 Edge Clocks:
 
@@ -937,9 +1850,9 @@ Edge Clocks:
 
 +
 I/O Usage Summary (final):
-   71 out of 197 (36.0%) PIO sites used.
-   71 out of 197 (36.0%) bonded PIO sites used.
-   Number of PIO comps: 71; differential: 0.
+   54 out of 197 (27.4%) PIO sites used.
+   54 out of 197 (27.4%) bonded PIO sites used.
+   Number of PIO comps: 54; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
@@ -948,23 +1861,44 @@ I/O Bank Usage Summary:
 +----------+----------------+------------+------------+------------+
 | 0        | 12 / 24 ( 50%) | 3.3V       | -          | -          |
 | 1        | 14 / 32 ( 43%) | 1.8V       | -          | -          |
-| 2        | 12 / 32 ( 37%) | 3.3V       | -          | -          |
-| 3        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
-| 6        | 6 / 32 ( 18%)  | 3.3V       | -          | -          |
-| 7        | 10 / 32 ( 31%) | 3.3V       | -          | -          |
-| 8        | 4 / 13 ( 30%)  | 2.5V       | -          | -          |
+| 2        | 2 / 32 (  6%)  | 3.3V       | -          | -          |
+| 3        | 7 / 32 ( 21%)  | 3.3V       | -          | -          |
+| 6        | 4 / 32 ( 12%)  | 3.3V       | -          | -          |
+| 7        | 12 / 32 ( 37%) | 3.3V       | -          | -          |
+| 8        | 3 / 13 ( 23%)  | 2.5V       | -          | -          |
 +----------+----------------+------------+------------+------------+
 
-Total placer CPU time: 11 secs 
+---------------------------------- DSP Report ----------------------------------
+
+DSP Slice #:           1  2  3  4  5  6  7  8  9 10 11 12 13 14
+# of MULT9                               1  1        1         
+# of MULT18                                                    
+# of ALU24                                                     
+# of ALU54                                                     
+# of PRADD9                                                    
+# of PRADD18                                                   
+
+DSP Slice  7         Component_Type       Physical_Type                 Instance_Name              
+  MULT9_R13C33          MULT9X9D              MULT9             u_sched/u_cnn/mult_54_mult_2       
+
+DSP Slice  8         Component_Type       Physical_Type                 Instance_Name              
+ MULT18_R13C38          MULT9X9D              MULT9                u_sched/u_cnn/mult_132          
+
+DSP Slice 11         Component_Type       Physical_Type                 Instance_Name              
+ MULT18_R13C51          MULT9X9D              MULT9           u_motion_frontend/mult_209_mult_2    
+
+------------------------------ End of DSP Report -------------------------------
+Total placer CPU time: 3 mins 4 secs 
 
 Dumping design to file AICAM_impl1.dir/5_1.ncd.
 
-0 connections routed; 21814 unrouted.
+0 connections routed; 104514 unrouted.
 Starting router resource preassignment
+DSP info: No dsp pins have been swapped.
 
-Completed router resource preassignment. Real time: 16 secs 
+Completed router resource preassignment. Real time: 3 mins 29 secs 
 
-Start NBR router at 21:07:13 03/01/26
+Start NBR router at 02:40:14 03/06/26
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -979,170 +1913,119 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 21:07:13 03/01/26
+Start NBR special constraint process at 02:40:18 03/06/26
 
-Start NBR section for initial routing at 21:07:13 03/01/26
+Start NBR section for initial routing at 02:40:20 03/06/26
 Level 1, iteration 1
-180(0.02%) conflicts; 16920(77.56%) untouched conns; 34388049 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.846ns/-34388.049ns; real time: 28 secs 
+306(0.03%) conflicts; 80184(76.72%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.100ns/0.000ns; real time: 3 mins 55 secs 
 Level 2, iteration 1
-962(0.08%) conflicts; 14198(65.09%) untouched conns; 26060792 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.229ns/-26060.793ns; real time: 33 secs 
+48(0.00%) conflicts; 80076(76.62%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.250ns/0.000ns; real time: 4 mins 14 secs 
 Level 3, iteration 1
-2297(0.20%) conflicts; 4197(19.24%) untouched conns; 23073215 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.290ns/-23073.215ns; real time: 44 secs 
+216(0.02%) conflicts; 69469(66.47%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.001ns/0.000ns; real time: 4 mins 24 secs 
 Level 4, iteration 1
-1586(0.14%) conflicts; 0(0.00%) untouched conn; 24025769 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.281ns/-24025.770ns; real time: 54 secs 
+4571(0.39%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.684ns/0.000ns; real time: 4 mins 56 secs 
 
 Info: Initial congestion level at 75% usage is 0
-Info: Initial congestion area  at 75% usage is 44 (1.31%)
+Info: Initial congestion area  at 75% usage is 16 (0.48%)
 
-Start NBR section for normal routing at 21:07:50 03/01/26
+Start NBR section for normal routing at 02:41:40 03/06/26
 Level 1, iteration 1
-998(0.09%) conflicts; 2634(12.07%) untouched conns; 23823559 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.291ns/-23823.559ns; real time: 1 mins 5 secs 
-Level 1, iteration 2
-617(0.05%) conflicts; 3058(14.02%) untouched conns; 24094423 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.220ns/-24094.423ns; real time: 1 mins 12 secs 
-Level 1, iteration 3
-377(0.03%) conflicts; 3231(14.81%) untouched conns; 24748251 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-24748.251ns; real time: 1 mins 15 secs 
-Level 1, iteration 4
-243(0.02%) conflicts; 3295(15.10%) untouched conns; 24748251 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-24748.251ns; real time: 1 mins 18 secs 
-Level 1, iteration 5
-160(0.01%) conflicts; 3327(15.25%) untouched conns; 25271049 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-25271.049ns; real time: 1 mins 22 secs 
-Level 1, iteration 6
-125(0.01%) conflicts; 3341(15.32%) untouched conns; 25271049 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-25271.049ns; real time: 1 mins 26 secs 
-Level 1, iteration 7
-95(0.01%) conflicts; 3356(15.38%) untouched conns; 25695131 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-25695.131ns; real time: 1 mins 29 secs 
-Level 1, iteration 8
-64(0.01%) conflicts; 3369(15.44%) untouched conns; 25695131 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-25695.131ns; real time: 1 mins 31 secs 
-Level 1, iteration 9
-46(0.00%) conflicts; 3474(15.93%) untouched conns; 25663865 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-25663.865ns; real time: 1 mins 33 secs 
-Level 1, iteration 10
-32(0.00%) conflicts; 3480(15.95%) untouched conns; 25663865 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.221ns/-25663.865ns; real time: 1 mins 34 secs 
-Level 1, iteration 11
-25(0.00%) conflicts; 3483(15.97%) untouched conns; 27576134 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.567ns/-27576.135ns; real time: 1 mins 35 secs 
-Level 1, iteration 12
-11(0.00%) conflicts; 3485(15.98%) untouched conns; 27576134 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.567ns/-27576.135ns; real time: 1 mins 36 secs 
-Level 1, iteration 13
-8(0.00%) conflicts; 3485(15.98%) untouched conns; 27658063 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.567ns/-27658.064ns; real time: 1 mins 37 secs 
-Level 1, iteration 14
-4(0.00%) conflicts; 3486(15.98%) untouched conns; 27658063 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.567ns/-27658.064ns; real time: 1 mins 37 secs 
-Level 1, iteration 15
-3(0.00%) conflicts; 3486(15.98%) untouched conns; 27659657 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.567ns/-27659.658ns; real time: 1 mins 37 secs 
+56(0.00%) conflicts; 9959(9.53%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.891ns/0.000ns; real time: 5 mins 
+Level 2, iteration 1
+14(0.00%) conflicts; 10053(9.62%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.846ns/0.000ns; real time: 5 mins 2 secs 
+Level 2, iteration 2
+5(0.00%) conflicts; 10057(9.62%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.891ns/0.000ns; real time: 5 mins 3 secs 
+Level 3, iteration 1
+65(0.01%) conflicts; 9730(9.31%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.711ns/0.000ns; real time: 5 mins 5 secs 
+Level 3, iteration 2
+27(0.00%) conflicts; 9778(9.36%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.873ns/0.000ns; real time: 5 mins 7 secs 
+Level 3, iteration 3
+8(0.00%) conflicts; 9798(9.37%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.873ns/0.000ns; real time: 5 mins 8 secs 
 Level 4, iteration 1
-567(0.05%) conflicts; 0(0.00%) untouched conn; 27320147 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.638ns/-27320.148ns; real time: 1 mins 42 secs 
+2076(0.18%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.873ns/0.000ns; real time: 5 mins 22 secs 
 Level 4, iteration 2
-232(0.02%) conflicts; 0(0.00%) untouched conn; 27457176 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.572ns/-27457.177ns; real time: 1 mins 45 secs 
+856(0.07%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.670ns/0.000ns; real time: 5 mins 29 secs 
 Level 4, iteration 3
-108(0.01%) conflicts; 0(0.00%) untouched conn; 27527022 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.732ns/-27527.023ns; real time: 1 mins 46 secs 
+410(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.596ns/0.000ns; real time: 5 mins 34 secs 
 Level 4, iteration 4
-54(0.00%) conflicts; 0(0.00%) untouched conn; 27527022 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.732ns/-27527.023ns; real time: 1 mins 47 secs 
+241(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.596ns/0.000ns; real time: 5 mins 37 secs 
 Level 4, iteration 5
-19(0.00%) conflicts; 0(0.00%) untouched conn; 27557753 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27557.754ns; real time: 1 mins 47 secs 
+101(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.716ns/0.000ns; real time: 5 mins 39 secs 
 Level 4, iteration 6
-11(0.00%) conflicts; 0(0.00%) untouched conn; 27557753 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27557.754ns; real time: 1 mins 48 secs 
+67(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.716ns/0.000ns; real time: 5 mins 41 secs 
 Level 4, iteration 7
-8(0.00%) conflicts; 0(0.00%) untouched conn; 27589311 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27589.312ns; real time: 1 mins 49 secs 
+23(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.676ns/0.000ns; real time: 5 mins 42 secs 
 Level 4, iteration 8
-3(0.00%) conflicts; 0(0.00%) untouched conn; 27589311 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27589.312ns; real time: 1 mins 49 secs 
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.676ns/0.000ns; real time: 5 mins 43 secs 
 Level 4, iteration 9
-1(0.00%) conflict; 0(0.00%) untouched conn; 27588544 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27588.545ns; real time: 1 mins 49 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.716ns/0.000ns; real time: 5 mins 44 secs 
 Level 4, iteration 10
-4(0.00%) conflicts; 0(0.00%) untouched conn; 27588544 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27588.545ns; real time: 1 mins 49 secs 
-Level 4, iteration 11
-1(0.00%) conflict; 0(0.00%) untouched conn; 27586100 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27586.101ns; real time: 1 mins 50 secs 
-Level 4, iteration 12
-1(0.00%) conflict; 0(0.00%) untouched conn; 27586100 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27586.101ns; real time: 1 mins 50 secs 
-Level 4, iteration 13
-1(0.00%) conflict; 0(0.00%) untouched conn; 27587642 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27587.643ns; real time: 1 mins 50 secs 
-Level 4, iteration 14
-1(0.00%) conflict; 0(0.00%) untouched conn; 27587642 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27587.643ns; real time: 1 mins 50 secs 
-Level 4, iteration 15
-0(0.00%) conflict; 0(0.00%) untouched conn; 27587612 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.561ns/-27587.613ns; real time: 1 mins 50 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.716ns/0.000ns; real time: 5 mins 44 secs 
 
-Start NBR section for performance tuning (iteration 1) at 21:08:46 03/01/26
+Start NBR section for setup/hold timing optimization with effort level 3 at 02:42:28 03/06/26
+
+Start NBR section for re-routing at 02:42:36 03/06/26
 Level 4, iteration 1
-4(0.00%) conflicts; 0(0.00%) untouched conn; 26468458 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.226ns/-26468.458ns; real time: 1 mins 52 secs 
-Level 4, iteration 2
-0(0.00%) conflict; 0(0.00%) untouched conn; 27601147 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.528ns/-27601.148ns; real time: 1 mins 52 secs 
-Level 4, iteration 3
-0(0.00%) conflict; 0(0.00%) untouched conn; 27601147 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.528ns/-27601.148ns; real time: 1 mins 52 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.676ns/0.000ns; real time: 5 mins 53 secs 
 
-Start NBR section for re-routing at 21:08:48 03/01/26
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 27601147 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -4.528ns/-27601.148ns; real time: 1 mins 53 secs 
-
-Start NBR section for post-routing at 21:08:49 03/01/26
+Start NBR section for post-routing at 02:42:37 03/06/26
 
 End NBR router with 0 unrouted connection
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 13447 (61.64%)
-  Estimated worst slack<setup> : -4.528ns
-  Timing score<setup> : 11928981
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 1.676ns
+  Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 1 mins 47 secs 
-Total REAL time: 1 mins 58 secs 
+Total CPU time 6 mins 
+Total REAL time: 6 mins 12 secs 
 Completely routed.
-End of route.  21814 routed (100.00%); 0 unrouted.
+End of route.  104514 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
-Timing score: 11928981 
+Timing score: 0 
 
 Dumping design to file AICAM_impl1.dir/5_1.ncd.
 
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = -4.528
-PAR_SUMMARY::Timing score<setup/<ns>> = 11928.981
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.178
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 1.676
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.157
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 1 mins 49 secs 
-Total REAL time to completion: 2 mins 
+Total CPU  time to completion: 6 mins 6 secs 
+Total REAL time to completion: 6 mins 19 secs 
 
 par done!
 
@@ -1179,7 +2062,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Sun Mar 01 21:08:57 2026
+Fri Mar 06 02:43:06 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1196,24 +2079,19 @@ Device,speed:    LFE5U-25F,6
 Report level:    verbose report, limited to 10 items per preference
 --------------------------------------------------------------------------------
 
-Report Type:     based on TRACE automatically generated preferences
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
 
 
 Timing summary (Setup):
 ---------------
 
-Timing errors: 4096  Score: 11928981
-Cumulative negative slack: 11928981
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
 
-Constraints cover 36822 paths, 3 nets, and 17613 connections (80.74% coverage)
+Constraints cover 27144987 paths, 3 nets, and 64524 connections (61.74% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Sun Mar 01 21:08:57 2026
+Fri Mar 06 02:43:08 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1230,10 +2108,6 @@ Device,speed:    LFE5U-25F,m
 Report level:    verbose report, limited to 10 items per preference
 --------------------------------------------------------------------------------
 
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
 
 
 Timing summary (Hold):
@@ -1242,23 +2116,23 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 36822 paths, 3 nets, and 17613 connections (80.74% coverage)
+Constraints cover 27144987 paths, 3 nets, and 64524 connections (61.74% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 4096 (setup), 0 (hold)
-Score: 11928981 (setup), 0 (hold)
-Cumulative negative slack: 11928981 (11928981+0)
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
-Total CPU Time: 2 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 215 MB
+Total CPU Time: 7 secs 
+Total REAL Time: 8 secs 
+Peak Memory Usage: 331 MB
 
 
 iotiming  "AICAM_impl1.ncd" "AICAM_impl1.prf"
@@ -1351,7 +2225,7 @@ Done.
 ibisgen "AICAM_impl1.ncd" "C:/lscc/diamond/3.14/cae_library/ibis/ecp5u.ibs" "AICAM_impl1.prf"
 IBIS Models Generator: Lattice Diamond (64-bit) 3.14.0.75.2
 
-Sun Mar 01 21:09:08 2026
+Fri Mar 06 02:43:47 2026
 
 
 Loading design for application GENERIC from file AICAM_impl1.ncd.
@@ -1400,9 +2274,9 @@ Loading preferences from aicam_impl1.prf.
 Writing Verilog netlist to file AICAM_impl1_vo.vo
 Writing SDF timing to file AICAM_impl1_vo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 7 secs 
-Total REAL Time: 9 secs 
-Peak Memory Usage: 207 MB
+Total CPU Time: 46 secs 
+Total REAL Time: 49 secs 
+Peak Memory Usage: 447 MB
 
 ldbanno "AICAM_impl1.ncd" -n VHDL -o "AICAM_impl1_vho.vho"        -w -neg 
 ldbanno: version Diamond (64-bit) 3.14.0.75.2
@@ -1430,9 +2304,9 @@ Loading preferences from aicam_impl1.prf.
 Writing VHDL netlist to file AICAM_impl1_vho.vho
 Writing SDF timing to file AICAM_impl1_vho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 6 secs 
-Total REAL Time: 6 secs 
-Peak Memory Usage: 207 MB
+Total CPU Time: 46 secs 
+Total REAL Time: 47 secs 
+Peak Memory Usage: 448 MB
 
 tmcheck -par "AICAM_impl1.par" 
 
@@ -1515,9 +2389,9 @@ Creating bit map...
 Bitstream Status: Final           Version 10.27.
  
 Saving bit stream in "AICAM_impl1.bit".
-Total CPU Time: 3 secs 
-Total REAL Time: 3 secs 
-Peak Memory Usage: 297 MB
+Total CPU Time: 10 secs 
+Total REAL Time: 10 secs 
+Peak Memory Usage: 361 MB
 
 ddtcmd -dev LFE5U-25F -if AICAM_impl1.bit -oft -int -of AICAM_impl1.mcs 
 Lattice Diamond Deployment Tool 3.14 Command Line

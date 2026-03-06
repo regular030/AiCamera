@@ -6,136 +6,7 @@
 -->
 </STYLE>
 </HEAD>
-<PRE><A name="pn251028005449"></A><B><U><big>pn251028005449</big></U></B>
-#Start recording tcl command: 10/27/2025 23:09:15
-#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
-prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
-#Stop recording: 10/28/2025 00:54:49
-
-
-
-<A name="pn251029132312"></A><B><U><big>pn251029132312</big></U></B>
-#Start recording tcl command: 10/28/2025 00:55:03
-#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
-prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
-prj_run Translate -impl impl1
-prj_run Map -impl impl1
-prj_run PAR -impl impl1
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/Main.v"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/Main.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/camera_capture.v"
-prj_src add -exclude "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.ldc"
-prj_src enable "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.ldc"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.ldc"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_writer.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/spi_bridge.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/fpga_top.v"
-set currentPath [pwd];set tmp_autopath $auto_path
-cd "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m"
-source "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/generate_core.tcl"
-set auto_path $tmp_autopath;cd $currentPath
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/pll24m_to_48m.sbx"
-sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/pll24m_to_48m.sbx"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll24m_to_48m/pll24m_to_48m.sbx"
-set currentPath [pwd];set tmp_autopath $auto_path
-cd "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m"
-source "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/generate_core.tcl"
-set auto_path $tmp_autopath;cd $currentPath
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
-#Stop recording: 10/29/2025 13:23:12
-
-
-
-<A name="pn251030011849"></A><B><U><big>pn251030011849</big></U></B>
-#Start recording tcl command: 10/29/2025 18:57:05
-#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
-prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_min.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/dc_fifo.v"
-sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
-set currentPath [pwd];set tmp_autopath $auto_path
-cd "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m"
-source "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/generate_core.tcl"
-set auto_path $tmp_autopath;cd $currentPath
-pwc_command new
-pwc_command exit
-sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pixel_packer_2x8.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/timing.sdc"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_crop_stream.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pixel_assemble_rgb565.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker_motion.v"
-prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_streamer_rgb565.v"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/camera_capture.v"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_tracker.v"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_writer.v"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pixel_packer_2x8.v"
-prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/roi_crop_stream.v"
-sbp_design open -dsgn "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/pll_24m/pll_24m.sbx"
-prj_run Synthesis -impl impl1 -task Lattice_Synthesis
-prj_run Map -impl impl1
-prj_run Map -impl impl1 -task MapTrace
-prj_run Map -impl impl1 -task MapVerilogSimFile
-prj_run Map -impl impl1 -task MapVHDLSimFile
-prj_run PAR -impl impl1
-prj_run Export -impl impl1
-prj_run PAR -impl impl1
-prj_run Map -impl impl1 -task MapTrace
-prj_run Map -impl impl1 -task MapVHDLSimFile
-prj_run Map -impl impl1 -task MapVerilogSimFile
-prj_run PAR -impl impl1
-prj_run Map -impl impl1
-prj_run Map -impl impl1 -task MapTrace
-prj_run Map -impl impl1 -task MapVerilogSimFile
-prj_run Map -impl impl1 -task MapVHDLSimFile
-prj_run PAR -impl impl1
-prj_run PAR -impl impl1
-prj_run PAR -impl impl1 -task IOTiming
-#Stop recording: 10/30/2025 01:18:49
-
-
-
-<A name="pn251104212841"></A><B><U><big>pn251104212841</big></U></B>
-#Start recording tcl command: 11/4/2025 18:21:59
-#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
-prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
-#Stop recording: 11/4/2025 21:28:41
-
-
-
-<A name="pn260110184759"></A><B><U><big>pn260110184759</big></U></B>
-#Start recording tcl command: 1/10/2026 18:25:44
-#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
-prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
-pwc_command new
-pwc_thermal set -ambient 30
-pwc_parameters set -process Worst
-prj_run Export -impl impl1
-pwc_command exit
-#Stop recording: 1/10/2026 18:47:59
-
-
-
-<A name="pn260111173302"></A><B><U><big>pn260111173302</big></U></B>
-#Start recording tcl command: 1/10/2026 18:48:06
-#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
-prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
-prj_run Export -impl impl1
-#Stop recording: 1/11/2026 17:33:02
-
-
-
-<A name="pn260128071102"></A><B><U><big>pn260128071102</big></U></B>
-#Start recording tcl command: 1/28/2026 07:05:13
-#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
-prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
-prj_run Export -impl impl1
-#Stop recording: 1/28/2026 07:11:02
-
-
-
-<A name="pn260206051353"></A><B><U><big>pn260206051353</big></U></B>
+<PRE><A name="pn260206051353"></A><B><U><big>pn260206051353</big></U></B>
 #Start recording tcl command: 2/4/2026 22:46:50
 #Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
 prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
@@ -164,6 +35,94 @@ prj_run Export -impl impl1
 prj_run Export -impl impl1
 prj_run Export -impl impl1
 #Stop recording: 2/7/2026 05:39:12
+
+
+
+<A name="pn260302011916"></A><B><U><big>pn260302011916</big></U></B>
+#Start recording tcl command: 3/1/2026 21:01:40
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_run Export -impl impl1
+#Stop recording: 3/2/2026 01:19:16
+
+
+
+<A name="pn260303211231"></A><B><U><big>pn260303211231</big></U></B>
+#Start recording tcl command: 3/3/2026 20:37:42
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+#Stop recording: 3/3/2026 21:12:31
+
+
+
+<A name="pn260304082342"></A><B><U><big>pn260304082342</big></U></B>
+#Start recording tcl command: 3/4/2026 06:57:31
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+#Stop recording: 3/4/2026 08:23:42
+
+
+
+<A name="pn260305024955"></A><B><U><big>pn260305024955</big></U></B>
+#Start recording tcl command: 3/5/2026 00:32:37
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sd_spi_writer.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/frame_packer.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/sdram_ctrl_simple.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/saturn_core.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_sccb.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/reset_sync.v"
+#Stop recording: 3/5/2026 02:49:55
+
+
+
+<A name="pn260305054035"></A><B><U><big>pn260305054035</big></U></B>
+#Start recording tcl command: 3/5/2026 03:07:55
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_run Export -impl impl1
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_1080p_yuyv.memh"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 3/5/2026 05:40:35
+
+
+
+<A name="pn260305200258"></A><B><U><big>pn260305200258</big></U></B>
+#Start recording tcl command: 3/5/2026 06:10:33
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/proposal_gen.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cropper_128_to_64.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_scheduler.v"
+prj_src add -exclude "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.ldc"
+prj_src enable "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.ldc"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.ldc"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/cnn_int8_core.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/track_count.v"
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/ov5640_1080p_yuyv.memh"
+#Stop recording: 3/5/2026 20:02:58
+
+
+
+<A name="pn260305211957"></A><B><U><big>pn260305211957</big></U></B>
+#Start recording tcl command: 3/5/2026 20:03:09
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/candidate_bus.v"
+prj_src add "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/integration_example_fpga_top_snippet.v"
+prj_run Export -impl impl1
+prj_src remove "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/integration_example_fpga_top_snippet.v"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 3/5/2026 21:19:57
 
 
 

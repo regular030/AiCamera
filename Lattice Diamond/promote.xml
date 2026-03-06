@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<userSetting name="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml" version="Diamond (64-bit) 3.14.0.75.2" date="Mon Mar 02 01:19:15 2026" vendor="Lattice Semiconductor Corporation" >
+<userSetting name="C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml" version="Diamond (64-bit) 3.14.0.75.2" date="Thu Mar 05 23:46:49 2026" vendor="Lattice Semiconductor Corporation" >
+  <msg mid="35901066" type="Error" />
+  <msg mid="35931002" type="Warning" />
+  <msg mid="35901010" type="Error" />
+  <msg mid="35901012" type="Error" />
   <msg mid="35901208" type="Warning" />
+  <msg mid="35931038" type="Warning" />
+  <msg mid="35901209" type="Warning" />
+  <msg mid="35901220" type="Warning" />
+  <msg mid="35901875" type="Warning" />
 </userSetting>

@@ -3,46 +3,171 @@ Report for cell fpga_top
    Instance path: fpga_top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	    3641.00        100.0
-                                  LUT4	    2968.00        100.0
-                                 IOBUF	         71        100.0
-                                PFUREG	       4284        100.0
-                                RIPPLE	         35        100.0
+                                  SLIC	   11042.00        100.0
+                                  LUT4	   12381.00        100.0
+                               DISTRAM	    3840.00        100.0
+                                 IOBUF	         54        100.0
+                                PFUREG	       2688        100.0
+                                RIPPLE	        525        100.0
+                                   EBR	          5        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                 sdram_controller_stub	          1         0.1
-               sdio_cam_writer_example	          1        98.2
-                       esp32_link_stub	          1         0.3
-                   camera_capture_stub	          1         0.2
+                     sdram_ctrl_simple	          1         0.2
+                         sd_spi_writer	          1         2.2
+                     raw_frame_capture	          1         0.0
+                          proposal_gen	          1         4.9
+                           ov5640_sccb	          1         0.8
+                 motion_block_frontend	          1        17.0
+                       esp32_ctrl_uart	          1         1.8
+cropper_128_to_64(FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,N=16,K=4)	          1        20.6
+                         cnn_scheduler	          1        45.3
+candidate_bus(K=4,FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100)	          1         3.8
+                                   PLL	          1         0.0
 ---------------------------------------------------
-Report for cell sdram_controller_stub
+Report for cell motion_block_frontend
+   Instance path: fpga_top/u_motion_frontend
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    1876.58        17.0
+                                  LUT4	    2163.00        17.5
+                               DISTRAM	     768.00        20.0
+                                PFUREG	        707        26.3
+---------------------------------------------------
+Report for cell raw_frame_capture
+   Instance path: fpga_top/u_raw_cap
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell proposal_gen
+   Instance path: fpga_top/u_props
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     535.67         4.9
+                                  LUT4	     710.50         5.7
+                                PFUREG	        369        13.7
+---------------------------------------------------
+Report for cell cropper_128_to_64(FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,N=16,K=4)
+   Instance path: fpga_top/u_cropper
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    2278.67        20.6
+                                  LUT4	    4404.50        35.6
+                                PFUREG	        311        11.6
+                                RIPPLE	          7         1.3
+---------------------------------------------------
+Report for cell sdram_ctrl_simple
    Instance path: fpga_top/u_sdram
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       5.00         0.1
-                                  LUT4	       1.00         0.0
-                                PFUREG	          9         0.2
+                                  SLIC	      23.42         0.2
+                                  LUT4	      23.00         0.2
+                                PFUREG	         29         1.1
+                                RIPPLE	          9         1.7
 ---------------------------------------------------
-Report for cell sdio_cam_writer_example
-   Instance path: fpga_top/u_sdio_cam
+Report for cell ov5640_sccb
+   Instance path: fpga_top/u_cam_cfg
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	    3574.08        98.2
-                                  LUT4	    2926.00        98.6
-                                PFUREG	       4217        98.4
+                                  SLIC	      90.67         0.8
+                                  LUT4	     152.33         1.2
+                                PFUREG	         74         2.8
+                                RIPPLE	          5         1.0
+                                   EBR	          4        80.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                       ov5640_init_rom	          1         0.2
 ---------------------------------------------------
-Report for cell camera_capture_stub
-   Instance path: fpga_top/u_cam_cap
+Report for cell ov5640_init_rom
+   Instance path: fpga_top/u_cam_cfg/u_rom
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       6.00         0.2
-                                  LUT4	       2.00         0.1
-                                PFUREG	         10         0.2
+                                  SLIC	      19.25         0.2
+                                  LUT4	      46.00         0.4
+                                   EBR	          4        80.0
 ---------------------------------------------------
-Report for cell esp32_link_stub
-   Instance path: fpga_top/u_esp
+Report for cell sd_spi_writer
+   Instance path: fpga_top/u_sd
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      11.33         0.3
-                                  LUT4	       8.00         0.3
-                                PFUREG	         17         0.4
+                                  SLIC	     243.67         2.2
+                                  LUT4	     463.00         3.7
+                                PFUREG	        108         4.0
+                                RIPPLE	          3         0.6
+---------------------------------------------------
+Report for cell PLL
+   Instance path: fpga_top/u_pll
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell esp32_ctrl_uart
+   Instance path: fpga_top/u_ctrl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     195.83         1.8
+                                  LUT4	     234.00         1.9
+                                PFUREG	        171         6.4
+                                RIPPLE	         27         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               uart_tx	          1         0.2
+                               uart_rx	          1         0.4
+---------------------------------------------------
+Report for cell uart_tx
+   Instance path: fpga_top/u_ctrl/u_tx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      25.58         0.2
+                                  LUT4	      24.00         0.2
+                                PFUREG	         33         1.2
+                                RIPPLE	          9         1.7
+---------------------------------------------------
+Report for cell uart_rx
+   Instance path: fpga_top/u_ctrl/u_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      43.50         0.4
+                                  LUT4	      46.00         0.4
+                                PFUREG	         42         1.6
+                                RIPPLE	          9         1.7
+---------------------------------------------------
+Report for cell candidate_bus(K=4,FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100)
+   Instance path: fpga_top/u_candidate_bus
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     416.58         3.8
+                                  LUT4	     475.50         3.8
+                                PFUREG	        486        18.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+track_count(MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100)	          1         3.6
+---------------------------------------------------
+Report for cell track_count(MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100)
+   Instance path: fpga_top/u_candidate_bus/u_track_count
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     402.75         3.6
+                                  LUT4	     439.50         3.5
+                                PFUREG	        486        18.1
+---------------------------------------------------
+Report for cell cnn_scheduler
+   Instance path: fpga_top/u_sched
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    4999.50        45.3
+                                  LUT4	    3610.67        29.2
+                               DISTRAM	    3072.00        80.0
+                                PFUREG	        366        13.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         cnn_int8_core	          1        45.2
+---------------------------------------------------
+Report for cell cnn_int8_core
+   Instance path: fpga_top/u_sched/u_cnn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    4985.67        45.2
+                                  LUT4	    3598.67        29.1
+                               DISTRAM	    3072.00        80.0
+                                PFUREG	        352        13.1

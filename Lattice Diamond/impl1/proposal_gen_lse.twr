@@ -1,0 +1,1557 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Thu Mar 05 21:20:56 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     proposal_gen
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 225.937ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             score_w[31]__i244  (from clk_c +)
+   Destination:    FD1P3AX    SP             by_w[31]__i1  (to clk_c +)
+
+   Delay:                 231.016ns  (12.6% logic, 87.4% route), 176 logic levels.
+
+ Constraint Details:
+
+    231.016ns data_path score_w[31]__i244 to by_w[31]__i1 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 225.937ns
+
+ Path Details: score_w[31]__i244 to by_w[31]__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              score_w[31]__i244 (from clk_c)
+Route         4   e 1.397                                  prop_score_flat_c_11
+LUT4        ---     0.166              A to Z              LessThan_121_i7_2_lut_rep_1825
+Route         1   e 1.020                                  n38785
+LUT4        ---     0.166              B to Z              i28397_4_lut
+Route         1   e 1.020                                  n36594
+LUT4        ---     0.166              D to Z              i28540_4_lut
+Route         1   e 0.020                                  n36605
+MOFX0       ---     0.179             C0 to Z              LessThan_121_i16
+Route         9   e 1.459                                  n4824
+LUT4        ---     0.166              C to Z              mux_122_i2_3_lut
+Route         9   e 1.459                                  n4832
+LUT4        ---     0.166              B to Z              LessThan_124_i3_2_lut
+Route         1   e 1.020                                  n3_adj_83
+LUT4        ---     0.166              D to Z              i28355_4_lut
+Route         1   e 1.020                                  n36552
+LUT4        ---     0.166              D to Z              i28541_4_lut
+Route         1   e 0.020                                  n36565
+MOFX0       ---     0.179             C0 to Z              LessThan_124_i16
+Route        12   e 1.516                                  n4841
+LUT4        ---     0.166              C to Z              mux_125_i5_3_lut
+Route         5   e 1.341                                  n4846
+LUT4        ---     0.166              B to Z              LessThan_127_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_74
+LUT4        ---     0.166              C to Z              LessThan_127_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_146
+LUT4        ---     0.166              B to Z              LessThan_127_i10_4_lut
+Route         1   e 1.020                                  n10_adj_77
+LUT4        ---     0.166              A to Z              LessThan_127_i16_4_lut
+Route        19   e 1.608                                  n4858
+LUT4        ---     0.166              C to Z              mux_125_i2_rep_229_3_lut
+Route         4   e 1.297                                  n35443
+LUT4        ---     0.166              C to Z              LessThan_130_i3_4_lut
+Route         2   e 1.158                                  n3_adj_75
+LUT4        ---     0.166              C to Z              i28237_4_lut
+Route         1   e 1.020                                  n36434
+LUT4        ---     0.166              D to Z              i28250_4_lut
+Route         1   e 1.020                                  n36447
+LUT4        ---     0.166              D to Z              LessThan_130_i16_4_lut
+Route        20   e 1.619                                  n4875
+LUT4        ---     0.166              A to Z              i28436_2_lut_3_lut
+Route         3   e 1.239                                  n36633
+LUT4        ---     0.166              D to Z              LessThan_133_i3_4_lut
+Route         2   e 1.158                                  n3_adj_61
+LUT4        ---     0.166              C to Z              i28202_4_lut
+Route         1   e 1.020                                  n36399
+LUT4        ---     0.166              D to Z              i28215_4_lut
+Route         1   e 1.020                                  n36412
+LUT4        ---     0.166              D to Z              LessThan_133_i16_4_lut
+Route        20   e 1.619                                  n4892
+LUT4        ---     0.166              C to Z              mux_131_i2_rep_218_3_lut
+Route         1   e 1.020                                  n35432
+LUT4        ---     0.166              B to Z              mux_134_i2_4_lut
+Route         2   e 1.158                                  n4900
+LUT4        ---     0.166              B to Z              LessThan_136_i4_4_lut
+Route         2   e 1.158                                  n4_adj_141
+LUT4        ---     0.166              C to Z              LessThan_136_i6_rep_209_3_lut_3_lut
+Route         1   e 1.020                                  n35423
+LUT4        ---     0.166              C to Z              LessThan_136_i8_rep_201_3_lut_3_lut
+Route         1   e 1.020                                  n35415
+LUT4        ---     0.166              C to Z              LessThan_136_i10_rep_193_3_lut_3_lut
+Route         1   e 1.020                                  n35407
+LUT4        ---     0.166              C to Z              LessThan_136_i12_rep_185_3_lut_3_lut
+Route         1   e 1.020                                  n35399
+LUT4        ---     0.166              C to Z              LessThan_136_i14_rep_177_3_lut_3_lut
+Route         1   e 1.020                                  n35391
+LUT4        ---     0.166              C to Z              LessThan_136_i16_rep_1751
+Route        10   e 1.480                                  n38711
+LUT4        ---     0.166              C to Z              mux_137_i7_3_lut_rep_1746
+Route         3   e 1.239                                  n38706
+LUT4        ---     0.166              B to Z              LessThan_139_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_17
+LUT4        ---     0.166              C to Z              LessThan_139_i12_3_lut_3_lut_4_lut
+Route         1   e 0.020                                  n12_adj_16
+MUXL5       ---     0.116           ALUT to Z              LessThan_139_i14
+Route         1   e 1.020                                  n14_adj_50
+LUT4        ---     0.166              B to Z              LessThan_139_i16_4_lut
+Route        21   e 1.628                                  n4926
+LUT4        ---     0.166              C to Z              mux_140_i6_3_lut_rep_1737
+Route         4   e 1.297                                  n38697
+LUT4        ---     0.166              B to Z              LessThan_142_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_49
+LUT4        ---     0.166              C to Z              LessThan_142_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_152
+LUT4        ---     0.166              B to Z              LessThan_142_i12_4_lut
+Route         1   e 1.020                                  n12_adj_158
+LUT4        ---     0.166              A to Z              LessThan_142_i16_4_lut
+Route        21   e 1.628                                  n4943
+LUT4        ---     0.166              C to Z              mux_143_i5_3_lut_rep_1726
+Route         4   e 1.297                                  n38686
+LUT4        ---     0.166              B to Z              LessThan_145_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_94
+LUT4        ---     0.166              C to Z              LessThan_145_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_47
+LUT4        ---     0.166              B to Z              LessThan_145_i10_4_lut
+Route         1   e 1.020                                  n10_adj_15
+LUT4        ---     0.166              A to Z              LessThan_145_i16_4_lut
+Route        23   e 1.647                                  n4960
+LUT4        ---     0.166              C to Z              mux_143_i2_rep_153_3_lut
+Route         4   e 1.297                                  n35367
+LUT4        ---     0.166              C to Z              LessThan_148_i3_4_lut
+Route         2   e 1.158                                  n3_adj_129
+LUT4        ---     0.166              C to Z              i28324_4_lut
+Route         1   e 1.020                                  n36521
+LUT4        ---     0.166              D to Z              i28337_4_lut
+Route         1   e 1.020                                  n36534
+LUT4        ---     0.166              D to Z              LessThan_148_i16_4_lut
+Route        24   e 1.655                                  n4977
+LUT4        ---     0.166              C to Z              i28448_2_lut_3_lut
+Route         3   e 1.239                                  n36645
+LUT4        ---     0.166              D to Z              LessThan_151_i3_4_lut
+Route         2   e 1.158                                  n3_adj_201
+LUT4        ---     0.166              C to Z              i28090_4_lut
+Route         1   e 1.020                                  n36287
+LUT4        ---     0.166              D to Z              i28103_4_lut
+Route         1   e 1.020                                  n36300
+LUT4        ---     0.166              D to Z              LessThan_151_i16_4_lut
+Route        23   e 1.647                                  n4994
+LUT4        ---     0.166              C to Z              mux_152_i6_3_lut_rep_1691
+Route         4   e 1.297                                  n38651
+LUT4        ---     0.166              C to Z              LessThan_154_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_156
+LUT4        ---     0.166              C to Z              LessThan_154_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_89
+MUXL5       ---     0.116           ALUT to Z              LessThan_154_i14
+Route         1   e 1.020                                  n14_adj_149
+LUT4        ---     0.166              B to Z              LessThan_154_i16_4_lut
+Route        21   e 1.628                                  n5011
+LUT4        ---     0.166              C to Z              mux_155_i1_3_lut
+Route         7   e 1.409                                  n35540
+LUT4        ---     0.166              D to Z              LessThan_157_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_137
+LUT4        ---     0.166              C to Z              LessThan_157_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_71
+LUT4        ---     0.166              C to Z              LessThan_157_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_128
+LUT4        ---     0.166              B to Z              LessThan_157_i16_4_lut
+Route        27   e 1.679                                  n5028
+LUT4        ---     0.166              C to Z              mux_158_i5_3_lut_rep_1668
+Route         4   e 1.297                                  n38628
+LUT4        ---     0.166              B to Z              LessThan_160_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_58
+LUT4        ---     0.166              C to Z              LessThan_160_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_24
+LUT4        ---     0.166              B to Z              LessThan_160_i10_4_lut
+Route         1   e 1.020                                  n10_adj_79
+LUT4        ---     0.166              A to Z              LessThan_160_i16_4_lut
+Route        26   e 1.671                                  n5045
+LUT4        ---     0.166              A to Z              i28458_2_lut_rep_1653
+Route         5   e 1.341                                  n38613
+LUT4        ---     0.166              D to Z              LessThan_163_i3_4_lut
+Route         2   e 1.158                                  n3_adj_19
+LUT4        ---     0.166              C to Z              i28145_4_lut
+Route         1   e 1.020                                  n36342
+LUT4        ---     0.166              D to Z              i28158_4_lut
+Route         1   e 1.020                                  n36355
+LUT4        ---     0.166              D to Z              LessThan_163_i16_4_lut
+Route        33   e 1.719                                  n5062
+LUT4        ---     0.166              C to Z              mux_161_i1_rep_307_3_lut
+Route         5   e 1.341                                  n35521
+LUT4        ---     0.166              C to Z              mux_164_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5071
+LUT4        ---     0.166              D to Z              mux_164_i2_rep_123_4_lut_4_lut
+Route         1   e 1.020                                  n35337
+LUT4        ---     0.166              C to Z              LessThan_166_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_151
+LUT4        ---     0.166              B to Z              LessThan_166_i6_4_lut
+Route         1   e 1.020                                  n6_adj_13
+LUT4        ---     0.166              A to Z              LessThan_166_i16_4_lut
+Route        23   e 1.647                                  n5079
+LUT4        ---     0.166              C to Z              mux_167_i6_3_lut_rep_1629
+Route         3   e 1.239                                  n38589
+LUT4        ---     0.166              C to Z              LessThan_169_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_161
+LUT4        ---     0.166              C to Z              LessThan_169_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_159
+MUXL5       ---     0.116           ALUT to Z              LessThan_169_i14
+Route         1   e 1.020                                  n14_adj_44
+LUT4        ---     0.166              B to Z              LessThan_169_i16_4_lut
+Route        26   e 1.671                                  n5096
+LUT4        ---     0.166              C to Z              mux_164_i1_rep_302_3_lut
+Route         2   e 1.158                                  n35516
+LUT4        ---     0.166              C to Z              mux_167_i1_rep_293_3_lut_4_lut
+Route         1   e 1.020                                  n35507
+LUT4        ---     0.166              C to Z              mux_170_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5105
+LUT4        ---     0.166              D to Z              LessThan_172_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_97
+LUT4        ---     0.166              C to Z              LessThan_172_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_96
+LUT4        ---     0.166              C to Z              LessThan_172_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_42
+LUT4        ---     0.166              B to Z              LessThan_172_i16_4_lut
+Route        28   e 1.686                                  n5113
+MOFX0       ---     0.179             C0 to Z              i28822
+Route         4   e 1.297                                  n35503
+LUT4        ---     0.166              C to Z              mux_173_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5122
+LUT4        ---     0.166              B to Z              mux_173_i2_rep_109_4_lut
+Route         1   e 0.020                                  n35323
+MUXL5       ---     0.116           BLUT to Z              LessThan_175_i12
+Route         1   e 1.020                                  n12_adj_99
+LUT4        ---     0.166              C to Z              LessThan_175_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_98
+LUT4        ---     0.166              B to Z              LessThan_175_i16_4_lut
+Route        29   e 1.693                                  n5130
+LUT4        ---     0.166              C to Z              mux_173_i2_rep_108_3_lut
+Route         4   e 1.297                                  n35325
+LUT4        ---     0.166              C to Z              LessThan_178_i3_4_lut
+Route         2   e 1.158                                  n3_adj_8
+LUT4        ---     0.166              C to Z              i27923_4_lut
+Route         1   e 1.020                                  n36120
+LUT4        ---     0.166              D to Z              i27936_4_lut
+Route         1   e 1.020                                  n36133
+LUT4        ---     0.166              D to Z              LessThan_178_i16_4_lut
+Route        31   e 1.706                                  n5147
+LUT4        ---     0.166              C to Z              mux_176_i1_rep_283_3_lut
+Route         1   e 1.020                                  n35497
+LUT4        ---     0.166              C to Z              mux_179_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5156
+LUT4        ---     0.166              D to Z              mux_179_i2_rep_103_4_lut_4_lut
+Route         1   e 1.020                                  n35317
+LUT4        ---     0.166              C to Z              LessThan_181_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_103
+LUT4        ---     0.166              B to Z              LessThan_181_i6_4_lut
+Route         1   e 1.020                                  n6_adj_102
+LUT4        ---     0.166              A to Z              LessThan_181_i16_4_lut
+Route        27   e 1.679                                  n5164
+LUT4        ---     0.166              C to Z              mux_182_i6_3_lut_rep_1564
+Route         4   e 1.297                                  n38524
+LUT4        ---     0.166              C to Z              LessThan_184_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10
+LUT4        ---     0.166              C to Z              LessThan_184_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_105
+MUXL5       ---     0.116           ALUT to Z              LessThan_184_i14
+Route         1   e 1.020                                  n14_adj_104
+LUT4        ---     0.166              B to Z              LessThan_184_i16_4_lut
+Route        22   e 1.638                                  n5181
+LUT4        ---     0.166              C to Z              mux_185_i1_3_lut
+Route         7   e 1.409                                  n35495
+LUT4        ---     0.166              D to Z              LessThan_187_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4
+LUT4        ---     0.166              C to Z              LessThan_187_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_38
+LUT4        ---     0.166              C to Z              LessThan_187_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_37
+LUT4        ---     0.166              B to Z              LessThan_187_i16_4_lut
+Route        33   e 1.719                                  n5198
+LUT4        ---     0.166              C to Z              mux_188_i4_3_lut_rep_1544
+Route         4   e 1.297                                  n38504
+LUT4        ---     0.166              C to Z              LessThan_190_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_107
+LUT4        ---     0.166              C to Z              LessThan_190_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_173
+LUT4        ---     0.166              B to Z              LessThan_190_i10_4_lut
+Route         1   e 1.020                                  n10_adj_36
+LUT4        ---     0.166              A to Z              LessThan_190_i16_4_lut
+Route        27   e 1.679                                  n5215
+LUT4        ---     0.166              A to Z              i28482_2_lut_rep_1533
+Route         5   e 1.341                                  n38493
+LUT4        ---     0.166              D to Z              LessThan_193_i3_4_lut
+Route         2   e 1.158                                  n3_adj_176
+LUT4        ---     0.166              C to Z              i27782_4_lut
+Route         1   e 1.020                                  n35979
+LUT4        ---     0.166              D to Z              i27795_4_lut
+Route         1   e 1.020                                  n35992
+LUT4        ---     0.166              D to Z              LessThan_193_i16_4_lut
+Route        31   e 1.706                                  n5232
+LUT4        ---     0.166              C to Z              mux_191_i1_rep_263_3_lut
+Route         5   e 1.341                                  n35477
+LUT4        ---     0.166              C to Z              mux_194_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5241
+LUT4        ---     0.166              D to Z              mux_194_i2_rep_83_4_lut_4_lut
+Route         1   e 1.020                                  n35297
+LUT4        ---     0.166              C to Z              LessThan_196_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_34
+LUT4        ---     0.166              B to Z              LessThan_196_i6_4_lut
+Route         1   e 1.020                                  n6_adj_33
+LUT4        ---     0.166              A to Z              LessThan_196_i16_4_lut
+Route        26   e 1.671                                  n5249
+LUT4        ---     0.166              C to Z              mux_197_i6_3_lut_rep_1504
+Route         3   e 1.239                                  n38464
+LUT4        ---     0.166              C to Z              LessThan_199_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_32
+LUT4        ---     0.166              C to Z              LessThan_199_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_30
+MUXL5       ---     0.116           ALUT to Z              LessThan_199_i14
+Route         1   e 1.020                                  n14_adj_183
+LUT4        ---     0.166              B to Z              LessThan_199_i16_4_lut
+Route        29   e 1.693                                  n5266
+LUT4        ---     0.166              C to Z              mux_194_i1_rep_257_3_lut
+Route         2   e 1.158                                  n35471
+LUT4        ---     0.166              C to Z              mux_197_i1_rep_248_3_lut_4_lut
+Route         1   e 1.020                                  n35462
+LUT4        ---     0.166              C to Z              mux_200_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5275
+LUT4        ---     0.166              D to Z              LessThan_202_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_182
+LUT4        ---     0.166              C to Z              LessThan_202_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_1
+LUT4        ---     0.166              C to Z              LessThan_202_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_114
+LUT4        ---     0.166              B to Z              LessThan_202_i16_4_lut
+Route        31   e 1.706                                  n5283
+MOFX0       ---     0.179             C0 to Z              i28824
+Route         4   e 1.297                                  n35458
+LUT4        ---     0.166              C to Z              mux_203_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5292
+LUT4        ---     0.166              B to Z              mux_203_i2_rep_69_4_lut
+Route         1   e 0.020                                  n35283
+MUXL5       ---     0.116           BLUT to Z              LessThan_205_i12
+Route         1   e 1.020                                  n12_adj_184
+LUT4        ---     0.166              C to Z              LessThan_205_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14
+LUT4        ---     0.166              B to Z              LessThan_205_i16_4_lut
+Route        31   e 1.706                                  n5300
+LUT4        ---     0.166              C to Z              mux_203_i2_rep_68_3_lut
+Route         4   e 1.297                                  n35282
+LUT4        ---     0.166              C to Z              prop_score_flat_247__I_0_i3_4_lut
+Route         2   e 1.158                                  n3_adj_120
+LUT4        ---     0.166              C to Z              i27641_4_lut
+Route         1   e 1.020                                  n35838
+LUT4        ---     0.166              D to Z              i27654_4_lut
+Route         1   e 1.020                                  n35851
+LUT4        ---     0.166              D to Z              prop_score_flat_247__I_0_i16_4_lut
+Route        33   e 1.719                                  min_score_7__N_1562
+LUT4        ---     0.166              C to Z              mux_206_i1_rep_238_3_lut
+Route         1   e 1.020                                  n35452
+LUT4        ---     0.166              C to Z              min_score_7__I_4_i1_3_lut_4_lut
+Route         1   e 1.020                                  min_score_7__N_769[0]
+LUT4        ---     0.166              D to Z              min_score_7__I_4_i2_rep_63_4_lut_4_lut
+Route         1   e 1.020                                  n35277
+LUT4        ---     0.166              C to Z              prop_score_flat_255__I_0_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_26
+LUT4        ---     0.166              B to Z              prop_score_flat_255__I_0_i6_4_lut
+Route         1   e 1.020                                  n6
+LUT4        ---     0.166              A to Z              prop_score_flat_255__I_0_i16_4_lut
+Route        26   e 1.671                                  min_score_7__N_777
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_111
+Route         1   e 1.020                                  n29372
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_108
+Route         1   e 1.020                                  n31861
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_107
+Route        11   e 1.499                                  n29052
+LUT4        ---     0.166              B to Z              i8_2_lut_rep_1436
+Route       350   e 1.550                                  n38396
+LUT4        ---     0.166              D to Z              mux_598_i1_4_lut
+Route       704   e 1.550                                  min_idx[0]
+LUT4        ---     0.166              A to Z              i1_2_lut_rep_1339
+Route         6   e 1.378                                  n38299
+LUT4        ---     0.166              A to Z              i1_3_lut_4_lut_adj_699
+Route        24   e 1.655                                  clk_c_enable_768
+                  --------
+                  231.016  (12.6% logic, 87.4% route), 176 logic levels.
+
+
+Error:  The following path violates requirements by 225.937ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             score_w[31]__i244  (from clk_c +)
+   Destination:    FD1P3AX    SP             by_w[31]__i1  (to clk_c +)
+
+   Delay:                 231.016ns  (12.6% logic, 87.4% route), 176 logic levels.
+
+ Constraint Details:
+
+    231.016ns data_path score_w[31]__i244 to by_w[31]__i1 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 225.937ns
+
+ Path Details: score_w[31]__i244 to by_w[31]__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              score_w[31]__i244 (from clk_c)
+Route         4   e 1.397                                  prop_score_flat_c_11
+LUT4        ---     0.166              A to Z              LessThan_121_i7_2_lut_rep_1825
+Route         1   e 1.020                                  n38785
+LUT4        ---     0.166              B to Z              i28397_4_lut
+Route         1   e 1.020                                  n36594
+LUT4        ---     0.166              D to Z              i28540_4_lut
+Route         1   e 0.020                                  n36605
+MOFX0       ---     0.179             C0 to Z              LessThan_121_i16
+Route         9   e 1.459                                  n4824
+LUT4        ---     0.166              C to Z              mux_122_i2_3_lut
+Route         9   e 1.459                                  n4832
+LUT4        ---     0.166              B to Z              LessThan_124_i3_2_lut
+Route         1   e 1.020                                  n3_adj_83
+LUT4        ---     0.166              D to Z              i28355_4_lut
+Route         1   e 1.020                                  n36552
+LUT4        ---     0.166              D to Z              i28541_4_lut
+Route         1   e 0.020                                  n36565
+MOFX0       ---     0.179             C0 to Z              LessThan_124_i16
+Route        12   e 1.516                                  n4841
+LUT4        ---     0.166              C to Z              mux_125_i3_3_lut
+Route         5   e 1.341                                  n4848
+LUT4        ---     0.166              B to Z              LessThan_127_i5_2_lut_rep_1789
+Route         1   e 1.020                                  n38749
+LUT4        ---     0.166              B to Z              i28295_4_lut
+Route         1   e 1.020                                  n36492
+LUT4        ---     0.166              D to Z              i28308_4_lut
+Route         1   e 1.020                                  n36505
+LUT4        ---     0.166              D to Z              LessThan_127_i16_4_lut
+Route        19   e 1.608                                  n4858
+LUT4        ---     0.166              C to Z              mux_125_i2_rep_229_3_lut
+Route         4   e 1.297                                  n35443
+LUT4        ---     0.166              C to Z              LessThan_130_i3_4_lut
+Route         2   e 1.158                                  n3_adj_75
+LUT4        ---     0.166              C to Z              i28237_4_lut
+Route         1   e 1.020                                  n36434
+LUT4        ---     0.166              D to Z              i28250_4_lut
+Route         1   e 1.020                                  n36447
+LUT4        ---     0.166              D to Z              LessThan_130_i16_4_lut
+Route        20   e 1.619                                  n4875
+LUT4        ---     0.166              A to Z              i28436_2_lut_3_lut
+Route         3   e 1.239                                  n36633
+LUT4        ---     0.166              D to Z              LessThan_133_i3_4_lut
+Route         2   e 1.158                                  n3_adj_61
+LUT4        ---     0.166              C to Z              i28199_2_lut_3_lut
+Route         1   e 1.020                                  n36396
+LUT4        ---     0.166              D to Z              LessThan_133_i6_4_lut
+Route         1   e 1.020                                  n6_adj_132
+LUT4        ---     0.166              A to Z              LessThan_133_i16_4_lut
+Route        20   e 1.619                                  n4892
+LUT4        ---     0.166              C to Z              mux_131_i2_rep_218_3_lut
+Route         1   e 1.020                                  n35432
+LUT4        ---     0.166              B to Z              mux_134_i2_4_lut
+Route         2   e 1.158                                  n4900
+LUT4        ---     0.166              B to Z              LessThan_136_i4_4_lut
+Route         2   e 1.158                                  n4_adj_141
+LUT4        ---     0.166              C to Z              LessThan_136_i6_rep_209_3_lut_3_lut
+Route         1   e 1.020                                  n35423
+LUT4        ---     0.166              C to Z              LessThan_136_i8_rep_201_3_lut_3_lut
+Route         1   e 1.020                                  n35415
+LUT4        ---     0.166              C to Z              LessThan_136_i10_rep_193_3_lut_3_lut
+Route         1   e 1.020                                  n35407
+LUT4        ---     0.166              C to Z              LessThan_136_i12_rep_185_3_lut_3_lut
+Route         1   e 1.020                                  n35399
+LUT4        ---     0.166              C to Z              LessThan_136_i14_rep_177_3_lut_3_lut
+Route         1   e 1.020                                  n35391
+LUT4        ---     0.166              C to Z              LessThan_136_i16_rep_1751
+Route        10   e 1.480                                  n38711
+LUT4        ---     0.166              C to Z              mux_137_i6_3_lut_rep_1745
+Route         3   e 1.239                                  n38705
+LUT4        ---     0.166              C to Z              LessThan_139_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_17
+LUT4        ---     0.166              C to Z              LessThan_139_i12_3_lut_3_lut_4_lut
+Route         1   e 0.020                                  n12_adj_16
+MUXL5       ---     0.116           ALUT to Z              LessThan_139_i14
+Route         1   e 1.020                                  n14_adj_50
+LUT4        ---     0.166              B to Z              LessThan_139_i16_4_lut
+Route        21   e 1.628                                  n4926
+LUT4        ---     0.166              C to Z              mux_140_i6_3_lut_rep_1737
+Route         4   e 1.297                                  n38697
+LUT4        ---     0.166              B to Z              LessThan_142_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_49
+LUT4        ---     0.166              C to Z              LessThan_142_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_152
+LUT4        ---     0.166              B to Z              LessThan_142_i12_4_lut
+Route         1   e 1.020                                  n12_adj_158
+LUT4        ---     0.166              A to Z              LessThan_142_i16_4_lut
+Route        21   e 1.628                                  n4943
+LUT4        ---     0.166              C to Z              mux_143_i5_3_lut_rep_1726
+Route         4   e 1.297                                  n38686
+LUT4        ---     0.166              B to Z              LessThan_145_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_94
+LUT4        ---     0.166              C to Z              LessThan_145_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_47
+LUT4        ---     0.166              B to Z              LessThan_145_i10_4_lut
+Route         1   e 1.020                                  n10_adj_15
+LUT4        ---     0.166              A to Z              LessThan_145_i16_4_lut
+Route        23   e 1.647                                  n4960
+LUT4        ---     0.166              C to Z              mux_143_i2_rep_153_3_lut
+Route         4   e 1.297                                  n35367
+LUT4        ---     0.166              C to Z              LessThan_148_i3_4_lut
+Route         2   e 1.158                                  n3_adj_129
+LUT4        ---     0.166              C to Z              i28324_4_lut
+Route         1   e 1.020                                  n36521
+LUT4        ---     0.166              D to Z              i28337_4_lut
+Route         1   e 1.020                                  n36534
+LUT4        ---     0.166              D to Z              LessThan_148_i16_4_lut
+Route        24   e 1.655                                  n4977
+LUT4        ---     0.166              C to Z              i28448_2_lut_3_lut
+Route         3   e 1.239                                  n36645
+LUT4        ---     0.166              D to Z              LessThan_151_i3_4_lut
+Route         2   e 1.158                                  n3_adj_201
+LUT4        ---     0.166              C to Z              i28090_4_lut
+Route         1   e 1.020                                  n36287
+LUT4        ---     0.166              D to Z              i28103_4_lut
+Route         1   e 1.020                                  n36300
+LUT4        ---     0.166              D to Z              LessThan_151_i16_4_lut
+Route        23   e 1.647                                  n4994
+LUT4        ---     0.166              C to Z              mux_152_i6_3_lut_rep_1691
+Route         4   e 1.297                                  n38651
+LUT4        ---     0.166              C to Z              LessThan_154_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_156
+LUT4        ---     0.166              C to Z              LessThan_154_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_89
+MUXL5       ---     0.116           ALUT to Z              LessThan_154_i14
+Route         1   e 1.020                                  n14_adj_149
+LUT4        ---     0.166              B to Z              LessThan_154_i16_4_lut
+Route        21   e 1.628                                  n5011
+LUT4        ---     0.166              C to Z              mux_155_i1_3_lut
+Route         7   e 1.409                                  n35540
+LUT4        ---     0.166              D to Z              LessThan_157_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_137
+LUT4        ---     0.166              C to Z              LessThan_157_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_71
+LUT4        ---     0.166              C to Z              LessThan_157_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_128
+LUT4        ---     0.166              B to Z              LessThan_157_i16_4_lut
+Route        27   e 1.679                                  n5028
+LUT4        ---     0.166              C to Z              mux_158_i4_3_lut_rep_1669
+Route         4   e 1.297                                  n38629
+LUT4        ---     0.166              C to Z              LessThan_160_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_58
+LUT4        ---     0.166              C to Z              LessThan_160_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_24
+LUT4        ---     0.166              B to Z              LessThan_160_i10_4_lut
+Route         1   e 1.020                                  n10_adj_79
+LUT4        ---     0.166              A to Z              LessThan_160_i16_4_lut
+Route        26   e 1.671                                  n5045
+LUT4        ---     0.166              A to Z              i28458_2_lut_rep_1653
+Route         5   e 1.341                                  n38613
+LUT4        ---     0.166              D to Z              LessThan_163_i3_4_lut
+Route         2   e 1.158                                  n3_adj_19
+LUT4        ---     0.166              C to Z              i28145_4_lut
+Route         1   e 1.020                                  n36342
+LUT4        ---     0.166              D to Z              i28158_4_lut
+Route         1   e 1.020                                  n36355
+LUT4        ---     0.166              D to Z              LessThan_163_i16_4_lut
+Route        33   e 1.719                                  n5062
+LUT4        ---     0.166              C to Z              mux_161_i1_rep_307_3_lut
+Route         5   e 1.341                                  n35521
+LUT4        ---     0.166              C to Z              mux_164_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5071
+LUT4        ---     0.166              D to Z              mux_164_i2_rep_123_4_lut_4_lut
+Route         1   e 1.020                                  n35337
+LUT4        ---     0.166              C to Z              LessThan_166_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_151
+LUT4        ---     0.166              B to Z              LessThan_166_i6_4_lut
+Route         1   e 1.020                                  n6_adj_13
+LUT4        ---     0.166              A to Z              LessThan_166_i16_4_lut
+Route        23   e 1.647                                  n5079
+LUT4        ---     0.166              C to Z              mux_167_i6_3_lut_rep_1629
+Route         3   e 1.239                                  n38589
+LUT4        ---     0.166              C to Z              LessThan_169_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_161
+LUT4        ---     0.166              C to Z              LessThan_169_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_159
+MUXL5       ---     0.116           ALUT to Z              LessThan_169_i14
+Route         1   e 1.020                                  n14_adj_44
+LUT4        ---     0.166              B to Z              LessThan_169_i16_4_lut
+Route        26   e 1.671                                  n5096
+LUT4        ---     0.166              C to Z              mux_164_i1_rep_302_3_lut
+Route         2   e 1.158                                  n35516
+LUT4        ---     0.166              C to Z              mux_167_i1_rep_293_3_lut_4_lut
+Route         1   e 1.020                                  n35507
+LUT4        ---     0.166              C to Z              mux_170_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5105
+LUT4        ---     0.166              D to Z              LessThan_172_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_97
+LUT4        ---     0.166              C to Z              LessThan_172_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_96
+LUT4        ---     0.166              C to Z              LessThan_172_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_42
+LUT4        ---     0.166              B to Z              LessThan_172_i16_4_lut
+Route        28   e 1.686                                  n5113
+MOFX0       ---     0.179             C0 to Z              i28822
+Route         4   e 1.297                                  n35503
+LUT4        ---     0.166              C to Z              mux_173_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5122
+LUT4        ---     0.166              B to Z              mux_173_i2_rep_109_4_lut
+Route         1   e 0.020                                  n35323
+MUXL5       ---     0.116           BLUT to Z              LessThan_175_i12
+Route         1   e 1.020                                  n12_adj_99
+LUT4        ---     0.166              C to Z              LessThan_175_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_98
+LUT4        ---     0.166              B to Z              LessThan_175_i16_4_lut
+Route        29   e 1.693                                  n5130
+LUT4        ---     0.166              C to Z              mux_173_i2_rep_108_3_lut
+Route         4   e 1.297                                  n35325
+LUT4        ---     0.166              C to Z              LessThan_178_i3_4_lut
+Route         2   e 1.158                                  n3_adj_8
+LUT4        ---     0.166              C to Z              i27923_4_lut
+Route         1   e 1.020                                  n36120
+LUT4        ---     0.166              D to Z              i27936_4_lut
+Route         1   e 1.020                                  n36133
+LUT4        ---     0.166              D to Z              LessThan_178_i16_4_lut
+Route        31   e 1.706                                  n5147
+LUT4        ---     0.166              C to Z              mux_176_i1_rep_283_3_lut
+Route         1   e 1.020                                  n35497
+LUT4        ---     0.166              C to Z              mux_179_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5156
+LUT4        ---     0.166              D to Z              mux_179_i2_rep_103_4_lut_4_lut
+Route         1   e 1.020                                  n35317
+LUT4        ---     0.166              C to Z              LessThan_181_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_103
+LUT4        ---     0.166              B to Z              LessThan_181_i6_4_lut
+Route         1   e 1.020                                  n6_adj_102
+LUT4        ---     0.166              A to Z              LessThan_181_i16_4_lut
+Route        27   e 1.679                                  n5164
+LUT4        ---     0.166              C to Z              mux_182_i6_3_lut_rep_1564
+Route         4   e 1.297                                  n38524
+LUT4        ---     0.166              C to Z              LessThan_184_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10
+LUT4        ---     0.166              C to Z              LessThan_184_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_105
+MUXL5       ---     0.116           ALUT to Z              LessThan_184_i14
+Route         1   e 1.020                                  n14_adj_104
+LUT4        ---     0.166              B to Z              LessThan_184_i16_4_lut
+Route        22   e 1.638                                  n5181
+LUT4        ---     0.166              C to Z              mux_185_i1_3_lut
+Route         7   e 1.409                                  n35495
+LUT4        ---     0.166              D to Z              LessThan_187_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4
+LUT4        ---     0.166              C to Z              LessThan_187_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_38
+LUT4        ---     0.166              C to Z              LessThan_187_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_37
+LUT4        ---     0.166              B to Z              LessThan_187_i16_4_lut
+Route        33   e 1.719                                  n5198
+LUT4        ---     0.166              C to Z              mux_188_i4_3_lut_rep_1544
+Route         4   e 1.297                                  n38504
+LUT4        ---     0.166              C to Z              LessThan_190_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_107
+LUT4        ---     0.166              C to Z              LessThan_190_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_173
+LUT4        ---     0.166              B to Z              LessThan_190_i10_4_lut
+Route         1   e 1.020                                  n10_adj_36
+LUT4        ---     0.166              A to Z              LessThan_190_i16_4_lut
+Route        27   e 1.679                                  n5215
+LUT4        ---     0.166              A to Z              i28482_2_lut_rep_1533
+Route         5   e 1.341                                  n38493
+LUT4        ---     0.166              D to Z              LessThan_193_i3_4_lut
+Route         2   e 1.158                                  n3_adj_176
+LUT4        ---     0.166              C to Z              i27782_4_lut
+Route         1   e 1.020                                  n35979
+LUT4        ---     0.166              D to Z              i27795_4_lut
+Route         1   e 1.020                                  n35992
+LUT4        ---     0.166              D to Z              LessThan_193_i16_4_lut
+Route        31   e 1.706                                  n5232
+LUT4        ---     0.166              C to Z              mux_191_i1_rep_263_3_lut
+Route         5   e 1.341                                  n35477
+LUT4        ---     0.166              C to Z              mux_194_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5241
+LUT4        ---     0.166              D to Z              mux_194_i2_rep_83_4_lut_4_lut
+Route         1   e 1.020                                  n35297
+LUT4        ---     0.166              C to Z              LessThan_196_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_34
+LUT4        ---     0.166              B to Z              LessThan_196_i6_4_lut
+Route         1   e 1.020                                  n6_adj_33
+LUT4        ---     0.166              A to Z              LessThan_196_i16_4_lut
+Route        26   e 1.671                                  n5249
+LUT4        ---     0.166              C to Z              mux_197_i6_3_lut_rep_1504
+Route         3   e 1.239                                  n38464
+LUT4        ---     0.166              C to Z              LessThan_199_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_32
+LUT4        ---     0.166              C to Z              LessThan_199_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_30
+MUXL5       ---     0.116           ALUT to Z              LessThan_199_i14
+Route         1   e 1.020                                  n14_adj_183
+LUT4        ---     0.166              B to Z              LessThan_199_i16_4_lut
+Route        29   e 1.693                                  n5266
+LUT4        ---     0.166              C to Z              mux_194_i1_rep_257_3_lut
+Route         2   e 1.158                                  n35471
+LUT4        ---     0.166              C to Z              mux_197_i1_rep_248_3_lut_4_lut
+Route         1   e 1.020                                  n35462
+LUT4        ---     0.166              C to Z              mux_200_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5275
+LUT4        ---     0.166              D to Z              LessThan_202_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_182
+LUT4        ---     0.166              C to Z              LessThan_202_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_1
+LUT4        ---     0.166              C to Z              LessThan_202_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_114
+LUT4        ---     0.166              B to Z              LessThan_202_i16_4_lut
+Route        31   e 1.706                                  n5283
+MOFX0       ---     0.179             C0 to Z              i28824
+Route         4   e 1.297                                  n35458
+LUT4        ---     0.166              C to Z              mux_203_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5292
+LUT4        ---     0.166              B to Z              mux_203_i2_rep_69_4_lut
+Route         1   e 0.020                                  n35283
+MUXL5       ---     0.116           BLUT to Z              LessThan_205_i12
+Route         1   e 1.020                                  n12_adj_184
+LUT4        ---     0.166              C to Z              LessThan_205_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14
+LUT4        ---     0.166              B to Z              LessThan_205_i16_4_lut
+Route        31   e 1.706                                  n5300
+LUT4        ---     0.166              C to Z              mux_203_i2_rep_68_3_lut
+Route         4   e 1.297                                  n35282
+LUT4        ---     0.166              C to Z              prop_score_flat_247__I_0_i3_4_lut
+Route         2   e 1.158                                  n3_adj_120
+LUT4        ---     0.166              C to Z              i27641_4_lut
+Route         1   e 1.020                                  n35838
+LUT4        ---     0.166              D to Z              i27654_4_lut
+Route         1   e 1.020                                  n35851
+LUT4        ---     0.166              D to Z              prop_score_flat_247__I_0_i16_4_lut
+Route        33   e 1.719                                  min_score_7__N_1562
+LUT4        ---     0.166              C to Z              mux_206_i1_rep_238_3_lut
+Route         1   e 1.020                                  n35452
+LUT4        ---     0.166              C to Z              min_score_7__I_4_i1_3_lut_4_lut
+Route         1   e 1.020                                  min_score_7__N_769[0]
+LUT4        ---     0.166              D to Z              min_score_7__I_4_i2_rep_63_4_lut_4_lut
+Route         1   e 1.020                                  n35277
+LUT4        ---     0.166              C to Z              prop_score_flat_255__I_0_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_26
+LUT4        ---     0.166              B to Z              prop_score_flat_255__I_0_i6_4_lut
+Route         1   e 1.020                                  n6
+LUT4        ---     0.166              A to Z              prop_score_flat_255__I_0_i16_4_lut
+Route        26   e 1.671                                  min_score_7__N_777
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_111
+Route         1   e 1.020                                  n29372
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_108
+Route         1   e 1.020                                  n31861
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_107
+Route        11   e 1.499                                  n29052
+LUT4        ---     0.166              B to Z              i8_2_lut_rep_1436
+Route       350   e 1.550                                  n38396
+LUT4        ---     0.166              D to Z              mux_598_i1_4_lut
+Route       704   e 1.550                                  min_idx[0]
+LUT4        ---     0.166              A to Z              i1_2_lut_rep_1339
+Route         6   e 1.378                                  n38299
+LUT4        ---     0.166              A to Z              i1_3_lut_4_lut_adj_699
+Route        24   e 1.655                                  clk_c_enable_768
+                  --------
+                  231.016  (12.6% logic, 87.4% route), 176 logic levels.
+
+
+Error:  The following path violates requirements by 225.937ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             score_w[31]__i244  (from clk_c +)
+   Destination:    FD1P3AX    SP             by_w[31]__i1  (to clk_c +)
+
+   Delay:                 231.016ns  (12.6% logic, 87.4% route), 176 logic levels.
+
+ Constraint Details:
+
+    231.016ns data_path score_w[31]__i244 to by_w[31]__i1 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 225.937ns
+
+ Path Details: score_w[31]__i244 to by_w[31]__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              score_w[31]__i244 (from clk_c)
+Route         4   e 1.397                                  prop_score_flat_c_11
+LUT4        ---     0.166              A to Z              LessThan_121_i7_2_lut_rep_1825
+Route         1   e 1.020                                  n38785
+LUT4        ---     0.166              B to Z              i28397_4_lut
+Route         1   e 1.020                                  n36594
+LUT4        ---     0.166              D to Z              i28540_4_lut
+Route         1   e 0.020                                  n36605
+MOFX0       ---     0.179             C0 to Z              LessThan_121_i16
+Route         9   e 1.459                                  n4824
+LUT4        ---     0.166              C to Z              mux_122_i2_3_lut
+Route         9   e 1.459                                  n4832
+LUT4        ---     0.166              B to Z              LessThan_124_i3_2_lut
+Route         1   e 1.020                                  n3_adj_83
+LUT4        ---     0.166              D to Z              i28355_4_lut
+Route         1   e 1.020                                  n36552
+LUT4        ---     0.166              D to Z              i28541_4_lut
+Route         1   e 0.020                                  n36565
+MOFX0       ---     0.179             C0 to Z              LessThan_124_i16
+Route        12   e 1.516                                  n4841
+LUT4        ---     0.166              C to Z              mux_125_i4_3_lut
+Route         5   e 1.341                                  n4847
+LUT4        ---     0.166              C to Z              LessThan_127_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_74
+LUT4        ---     0.166              C to Z              LessThan_127_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_146
+LUT4        ---     0.166              B to Z              LessThan_127_i10_4_lut
+Route         1   e 1.020                                  n10_adj_77
+LUT4        ---     0.166              A to Z              LessThan_127_i16_4_lut
+Route        19   e 1.608                                  n4858
+LUT4        ---     0.166              C to Z              mux_125_i2_rep_229_3_lut
+Route         4   e 1.297                                  n35443
+LUT4        ---     0.166              C to Z              LessThan_130_i3_4_lut
+Route         2   e 1.158                                  n3_adj_75
+LUT4        ---     0.166              C to Z              i28237_4_lut
+Route         1   e 1.020                                  n36434
+LUT4        ---     0.166              D to Z              i28250_4_lut
+Route         1   e 1.020                                  n36447
+LUT4        ---     0.166              D to Z              LessThan_130_i16_4_lut
+Route        20   e 1.619                                  n4875
+LUT4        ---     0.166              A to Z              i28436_2_lut_3_lut
+Route         3   e 1.239                                  n36633
+LUT4        ---     0.166              D to Z              LessThan_133_i3_4_lut
+Route         2   e 1.158                                  n3_adj_61
+LUT4        ---     0.166              C to Z              i28199_2_lut_3_lut
+Route         1   e 1.020                                  n36396
+LUT4        ---     0.166              D to Z              LessThan_133_i6_4_lut
+Route         1   e 1.020                                  n6_adj_132
+LUT4        ---     0.166              A to Z              LessThan_133_i16_4_lut
+Route        20   e 1.619                                  n4892
+LUT4        ---     0.166              C to Z              mux_131_i2_rep_218_3_lut
+Route         1   e 1.020                                  n35432
+LUT4        ---     0.166              B to Z              mux_134_i2_4_lut
+Route         2   e 1.158                                  n4900
+LUT4        ---     0.166              B to Z              LessThan_136_i4_4_lut
+Route         2   e 1.158                                  n4_adj_141
+LUT4        ---     0.166              C to Z              LessThan_136_i6_rep_209_3_lut_3_lut
+Route         1   e 1.020                                  n35423
+LUT4        ---     0.166              C to Z              LessThan_136_i8_rep_201_3_lut_3_lut
+Route         1   e 1.020                                  n35415
+LUT4        ---     0.166              C to Z              LessThan_136_i10_rep_193_3_lut_3_lut
+Route         1   e 1.020                                  n35407
+LUT4        ---     0.166              C to Z              LessThan_136_i12_rep_185_3_lut_3_lut
+Route         1   e 1.020                                  n35399
+LUT4        ---     0.166              C to Z              LessThan_136_i14_rep_177_3_lut_3_lut
+Route         1   e 1.020                                  n35391
+LUT4        ---     0.166              C to Z              LessThan_136_i16_rep_1751
+Route        10   e 1.480                                  n38711
+LUT4        ---     0.166              C to Z              mux_137_i6_3_lut_rep_1745
+Route         3   e 1.239                                  n38705
+LUT4        ---     0.166              C to Z              LessThan_139_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_17
+LUT4        ---     0.166              C to Z              LessThan_139_i12_3_lut_3_lut_4_lut
+Route         1   e 0.020                                  n12_adj_16
+MUXL5       ---     0.116           ALUT to Z              LessThan_139_i14
+Route         1   e 1.020                                  n14_adj_50
+LUT4        ---     0.166              B to Z              LessThan_139_i16_4_lut
+Route        21   e 1.628                                  n4926
+LUT4        ---     0.166              C to Z              mux_140_i6_3_lut_rep_1737
+Route         4   e 1.297                                  n38697
+LUT4        ---     0.166              B to Z              LessThan_142_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_49
+LUT4        ---     0.166              C to Z              LessThan_142_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_152
+LUT4        ---     0.166              B to Z              LessThan_142_i12_4_lut
+Route         1   e 1.020                                  n12_adj_158
+LUT4        ---     0.166              A to Z              LessThan_142_i16_4_lut
+Route        21   e 1.628                                  n4943
+LUT4        ---     0.166              C to Z              mux_143_i5_3_lut_rep_1726
+Route         4   e 1.297                                  n38686
+LUT4        ---     0.166              B to Z              LessThan_145_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_94
+LUT4        ---     0.166              C to Z              LessThan_145_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_47
+LUT4        ---     0.166              B to Z              LessThan_145_i10_4_lut
+Route         1   e 1.020                                  n10_adj_15
+LUT4        ---     0.166              A to Z              LessThan_145_i16_4_lut
+Route        23   e 1.647                                  n4960
+LUT4        ---     0.166              C to Z              mux_143_i2_rep_153_3_lut
+Route         4   e 1.297                                  n35367
+LUT4        ---     0.166              C to Z              LessThan_148_i3_4_lut
+Route         2   e 1.158                                  n3_adj_129
+LUT4        ---     0.166              C to Z              i28324_4_lut
+Route         1   e 1.020                                  n36521
+LUT4        ---     0.166              D to Z              i28337_4_lut
+Route         1   e 1.020                                  n36534
+LUT4        ---     0.166              D to Z              LessThan_148_i16_4_lut
+Route        24   e 1.655                                  n4977
+LUT4        ---     0.166              C to Z              i28448_2_lut_3_lut
+Route         3   e 1.239                                  n36645
+LUT4        ---     0.166              D to Z              LessThan_151_i3_4_lut
+Route         2   e 1.158                                  n3_adj_201
+LUT4        ---     0.166              C to Z              i28090_4_lut
+Route         1   e 1.020                                  n36287
+LUT4        ---     0.166              D to Z              i28103_4_lut
+Route         1   e 1.020                                  n36300
+LUT4        ---     0.166              D to Z              LessThan_151_i16_4_lut
+Route        23   e 1.647                                  n4994
+LUT4        ---     0.166              C to Z              mux_152_i6_3_lut_rep_1691
+Route         4   e 1.297                                  n38651
+LUT4        ---     0.166              C to Z              LessThan_154_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_156
+LUT4        ---     0.166              C to Z              LessThan_154_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_89
+MUXL5       ---     0.116           ALUT to Z              LessThan_154_i14
+Route         1   e 1.020                                  n14_adj_149
+LUT4        ---     0.166              B to Z              LessThan_154_i16_4_lut
+Route        21   e 1.628                                  n5011
+LUT4        ---     0.166              C to Z              mux_155_i1_3_lut
+Route         7   e 1.409                                  n35540
+LUT4        ---     0.166              D to Z              LessThan_157_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_137
+LUT4        ---     0.166              C to Z              LessThan_157_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_71
+LUT4        ---     0.166              C to Z              LessThan_157_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_128
+LUT4        ---     0.166              B to Z              LessThan_157_i16_4_lut
+Route        27   e 1.679                                  n5028
+LUT4        ---     0.166              C to Z              mux_158_i5_3_lut_rep_1668
+Route         4   e 1.297                                  n38628
+LUT4        ---     0.166              B to Z              LessThan_160_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_58
+LUT4        ---     0.166              C to Z              LessThan_160_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_24
+LUT4        ---     0.166              B to Z              LessThan_160_i10_4_lut
+Route         1   e 1.020                                  n10_adj_79
+LUT4        ---     0.166              A to Z              LessThan_160_i16_4_lut
+Route        26   e 1.671                                  n5045
+LUT4        ---     0.166              A to Z              i28458_2_lut_rep_1653
+Route         5   e 1.341                                  n38613
+LUT4        ---     0.166              D to Z              LessThan_163_i3_4_lut
+Route         2   e 1.158                                  n3_adj_19
+LUT4        ---     0.166              C to Z              i28145_4_lut
+Route         1   e 1.020                                  n36342
+LUT4        ---     0.166              D to Z              i28158_4_lut
+Route         1   e 1.020                                  n36355
+LUT4        ---     0.166              D to Z              LessThan_163_i16_4_lut
+Route        33   e 1.719                                  n5062
+LUT4        ---     0.166              C to Z              mux_161_i1_rep_307_3_lut
+Route         5   e 1.341                                  n35521
+LUT4        ---     0.166              C to Z              mux_164_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5071
+LUT4        ---     0.166              D to Z              mux_164_i2_rep_123_4_lut_4_lut
+Route         1   e 1.020                                  n35337
+LUT4        ---     0.166              C to Z              LessThan_166_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_151
+LUT4        ---     0.166              B to Z              LessThan_166_i6_4_lut
+Route         1   e 1.020                                  n6_adj_13
+LUT4        ---     0.166              A to Z              LessThan_166_i16_4_lut
+Route        23   e 1.647                                  n5079
+LUT4        ---     0.166              C to Z              mux_167_i6_3_lut_rep_1629
+Route         3   e 1.239                                  n38589
+LUT4        ---     0.166              C to Z              LessThan_169_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_161
+LUT4        ---     0.166              C to Z              LessThan_169_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_159
+MUXL5       ---     0.116           ALUT to Z              LessThan_169_i14
+Route         1   e 1.020                                  n14_adj_44
+LUT4        ---     0.166              B to Z              LessThan_169_i16_4_lut
+Route        26   e 1.671                                  n5096
+LUT4        ---     0.166              C to Z              mux_164_i1_rep_302_3_lut
+Route         2   e 1.158                                  n35516
+LUT4        ---     0.166              C to Z              mux_167_i1_rep_293_3_lut_4_lut
+Route         1   e 1.020                                  n35507
+LUT4        ---     0.166              C to Z              mux_170_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5105
+LUT4        ---     0.166              D to Z              LessThan_172_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_97
+LUT4        ---     0.166              C to Z              LessThan_172_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_96
+LUT4        ---     0.166              C to Z              LessThan_172_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_42
+LUT4        ---     0.166              B to Z              LessThan_172_i16_4_lut
+Route        28   e 1.686                                  n5113
+MOFX0       ---     0.179             C0 to Z              i28822
+Route         4   e 1.297                                  n35503
+LUT4        ---     0.166              C to Z              mux_173_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5122
+LUT4        ---     0.166              B to Z              mux_173_i2_rep_109_4_lut
+Route         1   e 0.020                                  n35323
+MUXL5       ---     0.116           BLUT to Z              LessThan_175_i12
+Route         1   e 1.020                                  n12_adj_99
+LUT4        ---     0.166              C to Z              LessThan_175_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_98
+LUT4        ---     0.166              B to Z              LessThan_175_i16_4_lut
+Route        29   e 1.693                                  n5130
+LUT4        ---     0.166              C to Z              mux_173_i2_rep_108_3_lut
+Route         4   e 1.297                                  n35325
+LUT4        ---     0.166              C to Z              LessThan_178_i3_4_lut
+Route         2   e 1.158                                  n3_adj_8
+LUT4        ---     0.166              C to Z              i27923_4_lut
+Route         1   e 1.020                                  n36120
+LUT4        ---     0.166              D to Z              i27936_4_lut
+Route         1   e 1.020                                  n36133
+LUT4        ---     0.166              D to Z              LessThan_178_i16_4_lut
+Route        31   e 1.706                                  n5147
+LUT4        ---     0.166              C to Z              mux_176_i1_rep_283_3_lut
+Route         1   e 1.020                                  n35497
+LUT4        ---     0.166              C to Z              mux_179_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5156
+LUT4        ---     0.166              D to Z              mux_179_i2_rep_103_4_lut_4_lut
+Route         1   e 1.020                                  n35317
+LUT4        ---     0.166              C to Z              LessThan_181_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_103
+LUT4        ---     0.166              B to Z              LessThan_181_i6_4_lut
+Route         1   e 1.020                                  n6_adj_102
+LUT4        ---     0.166              A to Z              LessThan_181_i16_4_lut
+Route        27   e 1.679                                  n5164
+LUT4        ---     0.166              C to Z              mux_182_i6_3_lut_rep_1564
+Route         4   e 1.297                                  n38524
+LUT4        ---     0.166              C to Z              LessThan_184_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10
+LUT4        ---     0.166              C to Z              LessThan_184_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_105
+MUXL5       ---     0.116           ALUT to Z              LessThan_184_i14
+Route         1   e 1.020                                  n14_adj_104
+LUT4        ---     0.166              B to Z              LessThan_184_i16_4_lut
+Route        22   e 1.638                                  n5181
+LUT4        ---     0.166              C to Z              mux_185_i1_3_lut
+Route         7   e 1.409                                  n35495
+LUT4        ---     0.166              D to Z              LessThan_187_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4
+LUT4        ---     0.166              C to Z              LessThan_187_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_38
+LUT4        ---     0.166              C to Z              LessThan_187_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_37
+LUT4        ---     0.166              B to Z              LessThan_187_i16_4_lut
+Route        33   e 1.719                                  n5198
+LUT4        ---     0.166              C to Z              mux_188_i4_3_lut_rep_1544
+Route         4   e 1.297                                  n38504
+LUT4        ---     0.166              C to Z              LessThan_190_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_107
+LUT4        ---     0.166              C to Z              LessThan_190_i8_3_lut_3_lut
+Route         1   e 1.020                                  n8_adj_173
+LUT4        ---     0.166              B to Z              LessThan_190_i10_4_lut
+Route         1   e 1.020                                  n10_adj_36
+LUT4        ---     0.166              A to Z              LessThan_190_i16_4_lut
+Route        27   e 1.679                                  n5215
+LUT4        ---     0.166              A to Z              i28482_2_lut_rep_1533
+Route         5   e 1.341                                  n38493
+LUT4        ---     0.166              D to Z              LessThan_193_i3_4_lut
+Route         2   e 1.158                                  n3_adj_176
+LUT4        ---     0.166              C to Z              i27782_4_lut
+Route         1   e 1.020                                  n35979
+LUT4        ---     0.166              D to Z              i27795_4_lut
+Route         1   e 1.020                                  n35992
+LUT4        ---     0.166              D to Z              LessThan_193_i16_4_lut
+Route        31   e 1.706                                  n5232
+LUT4        ---     0.166              C to Z              mux_191_i1_rep_263_3_lut
+Route         5   e 1.341                                  n35477
+LUT4        ---     0.166              C to Z              mux_194_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5241
+LUT4        ---     0.166              D to Z              mux_194_i2_rep_83_4_lut_4_lut
+Route         1   e 1.020                                  n35297
+LUT4        ---     0.166              C to Z              LessThan_196_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_34
+LUT4        ---     0.166              B to Z              LessThan_196_i6_4_lut
+Route         1   e 1.020                                  n6_adj_33
+LUT4        ---     0.166              A to Z              LessThan_196_i16_4_lut
+Route        26   e 1.671                                  n5249
+LUT4        ---     0.166              C to Z              mux_197_i6_3_lut_rep_1504
+Route         3   e 1.239                                  n38464
+LUT4        ---     0.166              C to Z              LessThan_199_i10_3_lut_3_lut
+Route         1   e 1.020                                  n10_adj_32
+LUT4        ---     0.166              C to Z              LessThan_199_i12_3_lut_3_lut
+Route         1   e 0.020                                  n12_adj_30
+MUXL5       ---     0.116           ALUT to Z              LessThan_199_i14
+Route         1   e 1.020                                  n14_adj_183
+LUT4        ---     0.166              B to Z              LessThan_199_i16_4_lut
+Route        29   e 1.693                                  n5266
+LUT4        ---     0.166              C to Z              mux_194_i1_rep_257_3_lut
+Route         2   e 1.158                                  n35471
+LUT4        ---     0.166              C to Z              mux_197_i1_rep_248_3_lut_4_lut
+Route         1   e 1.020                                  n35462
+LUT4        ---     0.166              C to Z              mux_200_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5275
+LUT4        ---     0.166              D to Z              LessThan_202_i4_4_lut_4_lut
+Route         1   e 1.020                                  n4_adj_182
+LUT4        ---     0.166              C to Z              LessThan_202_i6_3_lut_3_lut
+Route         1   e 1.020                                  n6_adj_1
+LUT4        ---     0.166              C to Z              LessThan_202_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14_adj_114
+LUT4        ---     0.166              B to Z              LessThan_202_i16_4_lut
+Route        31   e 1.706                                  n5283
+MOFX0       ---     0.179             C0 to Z              i28824
+Route         4   e 1.297                                  n35458
+LUT4        ---     0.166              C to Z              mux_203_i1_3_lut_4_lut
+Route         1   e 1.020                                  n5292
+LUT4        ---     0.166              B to Z              mux_203_i2_rep_69_4_lut
+Route         1   e 0.020                                  n35283
+MUXL5       ---     0.116           BLUT to Z              LessThan_205_i12
+Route         1   e 1.020                                  n12_adj_184
+LUT4        ---     0.166              C to Z              LessThan_205_i14_3_lut_3_lut
+Route         1   e 1.020                                  n14
+LUT4        ---     0.166              B to Z              LessThan_205_i16_4_lut
+Route        31   e 1.706                                  n5300
+LUT4        ---     0.166              C to Z              mux_203_i2_rep_68_3_lut
+Route         4   e 1.297                                  n35282
+LUT4        ---     0.166              C to Z              prop_score_flat_247__I_0_i3_4_lut
+Route         2   e 1.158                                  n3_adj_120
+LUT4        ---     0.166              C to Z              i27641_4_lut
+Route         1   e 1.020                                  n35838
+LUT4        ---     0.166              D to Z              i27654_4_lut
+Route         1   e 1.020                                  n35851
+LUT4        ---     0.166              D to Z              prop_score_flat_247__I_0_i16_4_lut
+Route        33   e 1.719                                  min_score_7__N_1562
+LUT4        ---     0.166              C to Z              mux_206_i1_rep_238_3_lut
+Route         1   e 1.020                                  n35452
+LUT4        ---     0.166              C to Z              min_score_7__I_4_i1_3_lut_4_lut
+Route         1   e 1.020                                  min_score_7__N_769[0]
+LUT4        ---     0.166              D to Z              min_score_7__I_4_i2_rep_63_4_lut_4_lut
+Route         1   e 1.020                                  n35277
+LUT4        ---     0.166              C to Z              prop_score_flat_255__I_0_i4_3_lut_3_lut
+Route         1   e 1.020                                  n4_adj_26
+LUT4        ---     0.166              B to Z              prop_score_flat_255__I_0_i6_4_lut
+Route         1   e 1.020                                  n6
+LUT4        ---     0.166              A to Z              prop_score_flat_255__I_0_i16_4_lut
+Route        26   e 1.671                                  min_score_7__N_777
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_111
+Route         1   e 1.020                                  n29372
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_108
+Route         1   e 1.020                                  n31861
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_107
+Route        11   e 1.499                                  n29052
+LUT4        ---     0.166              B to Z              i8_2_lut_rep_1436
+Route       350   e 1.550                                  n38396
+LUT4        ---     0.166              D to Z              mux_598_i1_4_lut
+Route       704   e 1.550                                  min_idx[0]
+LUT4        ---     0.166              A to Z              i1_2_lut_rep_1339
+Route         6   e 1.378                                  n38299
+LUT4        ---     0.166              A to Z              i1_3_lut_4_lut_adj_699
+Route        24   e 1.655                                  clk_c_enable_768
+                  --------
+                  231.016  (12.6% logic, 87.4% route), 176 logic levels.
+
+Warning: 230.937 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|   230.937 ns|   176 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+min_idx[0]                              |     704|    4096|     99.00%
+                                        |        |        |
+min_score_7__N_769[0]                   |       1|    4096|     99.00%
+                                        |        |        |
+min_score_7__N_777                      |      26|    4096|     99.00%
+                                        |        |        |
+min_score_7__N_1562                     |      33|    4096|     99.00%
+                                        |        |        |
+n3_adj_8                                |       2|    4096|     99.00%
+                                        |        |        |
+n3_adj_19                               |       2|    4096|     99.00%
+                                        |        |        |
+n3_adj_61                               |       2|    4096|     99.00%
+                                        |        |        |
+n3_adj_75                               |       2|    4096|     99.00%
+                                        |        |        |
+n3_adj_83                               |       1|    4096|     99.00%
+                                        |        |        |
+n3_adj_120                              |       2|    4096|     99.00%
+                                        |        |        |
+n3_adj_129                              |       2|    4096|     99.00%
+                                        |        |        |
+n3_adj_176                              |       2|    4096|     99.00%
+                                        |        |        |
+n3_adj_201                              |       2|    4096|     99.00%
+                                        |        |        |
+n4                                      |       1|    4096|     99.00%
+                                        |        |        |
+n4_adj_26                               |       1|    4096|     99.00%
+                                        |        |        |
+n4_adj_34                               |       1|    4096|     99.00%
+                                        |        |        |
+n4_adj_97                               |       1|    4096|     99.00%
+                                        |        |        |
+n4_adj_103                              |       1|    4096|     99.00%
+                                        |        |        |
+n4_adj_137                              |       1|    4096|     99.00%
+                                        |        |        |
+n4_adj_141                              |       2|    4096|     99.00%
+                                        |        |        |
+n4_adj_151                              |       1|    4096|     99.00%
+                                        |        |        |
+n4_adj_182                              |       1|    4096|     99.00%
+                                        |        |        |
+n6                                      |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_1                                |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_13                               |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_33                               |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_38                               |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_58                               |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_71                               |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_94                               |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_96                               |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_102                              |       1|    4096|     99.00%
+                                        |        |        |
+n6_adj_107                              |       1|    4096|     99.00%
+                                        |        |        |
+n8_adj_24                               |       1|    4096|     99.00%
+                                        |        |        |
+n8_adj_47                               |       1|    4096|     99.00%
+                                        |        |        |
+n8_adj_49                               |       1|    4096|     99.00%
+                                        |        |        |
+n8_adj_173                              |       1|    4096|     99.00%
+                                        |        |        |
+n10                                     |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_15                              |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_17                              |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_32                              |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_36                              |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_79                              |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_152                             |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_156                             |       1|    4096|     99.00%
+                                        |        |        |
+n10_adj_161                             |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_16                              |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_30                              |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_89                              |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_99                              |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_105                             |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_158                             |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_159                             |       1|    4096|     99.00%
+                                        |        |        |
+n12_adj_184                             |       1|    4096|     99.00%
+                                        |        |        |
+n14                                     |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_37                              |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_42                              |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_44                              |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_50                              |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_98                              |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_104                             |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_114                             |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_128                             |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_149                             |       1|    4096|     99.00%
+                                        |        |        |
+n14_adj_183                             |       1|    4096|     99.00%
+                                        |        |        |
+n4824                                   |       9|    4096|     99.00%
+                                        |        |        |
+n4832                                   |       9|    4096|     99.00%
+                                        |        |        |
+n4841                                   |      12|    4096|     99.00%
+                                        |        |        |
+n4858                                   |      19|    4096|     99.00%
+                                        |        |        |
+n4875                                   |      20|    4096|     99.00%
+                                        |        |        |
+n4892                                   |      20|    4096|     99.00%
+                                        |        |        |
+n4900                                   |       2|    4096|     99.00%
+                                        |        |        |
+n4926                                   |      21|    4096|     99.00%
+                                        |        |        |
+n4943                                   |      21|    4096|     99.00%
+                                        |        |        |
+n4960                                   |      23|    4096|     99.00%
+                                        |        |        |
+n4977                                   |      24|    4096|     99.00%
+                                        |        |        |
+n4994                                   |      23|    4096|     99.00%
+                                        |        |        |
+n5011                                   |      21|    4096|     99.00%
+                                        |        |        |
+n5028                                   |      27|    4096|     99.00%
+                                        |        |        |
+n5045                                   |      26|    4096|     99.00%
+                                        |        |        |
+n5062                                   |      33|    4096|     99.00%
+                                        |        |        |
+n5071                                   |       1|    4096|     99.00%
+                                        |        |        |
+n5079                                   |      23|    4096|     99.00%
+                                        |        |        |
+n5096                                   |      26|    4096|     99.00%
+                                        |        |        |
+n5105                                   |       1|    4096|     99.00%
+                                        |        |        |
+n5113                                   |      28|    4096|     99.00%
+                                        |        |        |
+n5122                                   |       1|    4096|     99.00%
+                                        |        |        |
+n5130                                   |      29|    4096|     99.00%
+                                        |        |        |
+n5147                                   |      31|    4096|     99.00%
+                                        |        |        |
+n5156                                   |       1|    4096|     99.00%
+                                        |        |        |
+n5164                                   |      27|    4096|     99.00%
+                                        |        |        |
+n5181                                   |      22|    4096|     99.00%
+                                        |        |        |
+n5198                                   |      33|    4096|     99.00%
+                                        |        |        |
+n5215                                   |      27|    4096|     99.00%
+                                        |        |        |
+n5232                                   |      31|    4096|     99.00%
+                                        |        |        |
+n5241                                   |       1|    4096|     99.00%
+                                        |        |        |
+n5249                                   |      26|    4096|     99.00%
+                                        |        |        |
+n5266                                   |      29|    4096|     99.00%
+                                        |        |        |
+n5275                                   |       1|    4096|     99.00%
+                                        |        |        |
+n5283                                   |      31|    4096|     99.00%
+                                        |        |        |
+n5292                                   |       1|    4096|     99.00%
+                                        |        |        |
+n5300                                   |      31|    4096|     99.00%
+                                        |        |        |
+n29052                                  |      11|    4096|     99.00%
+                                        |        |        |
+n31861                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35277                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35282                                  |       4|    4096|     99.00%
+                                        |        |        |
+n35283                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35297                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35317                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35323                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35325                                  |       4|    4096|     99.00%
+                                        |        |        |
+n35337                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35367                                  |       4|    4096|     99.00%
+                                        |        |        |
+n35391                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35399                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35407                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35415                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35423                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35432                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35443                                  |       4|    4096|     99.00%
+                                        |        |        |
+n35452                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35458                                  |       4|    4096|     99.00%
+                                        |        |        |
+n35462                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35471                                  |       2|    4096|     99.00%
+                                        |        |        |
+n35477                                  |       5|    4096|     99.00%
+                                        |        |        |
+n35495                                  |       7|    4096|     99.00%
+                                        |        |        |
+n35497                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35503                                  |       4|    4096|     99.00%
+                                        |        |        |
+n35507                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35516                                  |       2|    4096|     99.00%
+                                        |        |        |
+n35521                                  |       5|    4096|     99.00%
+                                        |        |        |
+n35540                                  |       7|    4096|     99.00%
+                                        |        |        |
+n35838                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35851                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35979                                  |       1|    4096|     99.00%
+                                        |        |        |
+n35992                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36120                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36133                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36342                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36355                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36434                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36447                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36521                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36534                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36552                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36565                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36594                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36605                                  |       1|    4096|     99.00%
+                                        |        |        |
+n36633                                  |       3|    4096|     99.00%
+                                        |        |        |
+n36645                                  |       3|    4096|     99.00%
+                                        |        |        |
+n38299                                  |       6|    4096|     99.00%
+                                        |        |        |
+n38396                                  |     350|    4096|     99.00%
+                                        |        |        |
+n38493                                  |       5|    4096|     99.00%
+                                        |        |        |
+n38524                                  |       4|    4096|     99.00%
+                                        |        |        |
+n38613                                  |       5|    4096|     99.00%
+                                        |        |        |
+n38651                                  |       4|    4096|     99.00%
+                                        |        |        |
+n38711                                  |      10|    4096|     99.00%
+                                        |        |        |
+n29372                                  |       1|    3784|     92.38%
+                                        |        |        |
+n38464                                  |       3|    3769|     92.02%
+                                        |        |        |
+n36287                                  |       1|    3756|     91.70%
+                                        |        |        |
+n36300                                  |       1|    3756|     91.70%
+                                        |        |        |
+n38504                                  |       4|    3756|     91.70%
+                                        |        |        |
+n38589                                  |       3|    3756|     91.70%
+                                        |        |        |
+n38628                                  |       4|    3756|     91.70%
+                                        |        |        |
+n38686                                  |       4|    3756|     91.70%
+                                        |        |        |
+n38697                                  |       4|    3614|     88.23%
+                                        |        |        |
+n6_adj_132                              |       1|    3458|     84.42%
+                                        |        |        |
+n36396                                  |       1|    3458|     84.42%
+                                        |        |        |
+n38706                                  |       3|    3458|     84.42%
+                                        |        |        |
+n38786                                  |       1|    2980|     72.75%
+                                        |        |        |
+n36492                                  |       1|    2904|     70.90%
+                                        |        |        |
+n36505                                  |       1|    2904|     70.90%
+                                        |        |        |
+n4848                                   |       5|    2862|     69.87%
+                                        |        |        |
+n38749                                  |       1|    2862|     69.87%
+                                        |        |        |
+clk_c_enable_768                        |      24|    2696|     65.82%
+                                        |        |        |
+prop_score_flat_c_12                    |       4|    2422|     59.13%
+                                        |        |        |
+n6_adj_74                               |       1|    1192|     29.10%
+                                        |        |        |
+n8_adj_146                              |       1|    1192|     29.10%
+                                        |        |        |
+n10_adj_77                              |       1|    1192|     29.10%
+                                        |        |        |
+n38785                                  |       1|    1116|     27.25%
+                                        |        |        |
+n4847                                   |       5|     638|     15.58%
+                                        |        |        |
+n36399                                  |       1|     638|     15.58%
+                                        |        |        |
+n36412                                  |       1|     638|     15.58%
+                                        |        |        |
+n38705                                  |       3|     638|     15.58%
+                                        |        |        |
+n4846                                   |       5|     596|     14.55%
+                                        |        |        |
+prop_score_flat_c_3                     |       4|     558|     13.62%
+                                        |        |        |
+prop_score_flat_c_4                     |       4|     558|     13.62%
+                                        |        |        |
+prop_score_flat_c_11                    |       4|     558|     13.62%
+                                        |        |        |
+n38698                                  |       4|     482|     11.77%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 925437952
+
+Constraints cover >4294967295 paths, 2295 nets, and 9392 connections (87.9% coverage)
+
+
+Peak memory: 213884928 bytes, TRCE: 76079104 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 1 secs 

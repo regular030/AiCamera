@@ -1,0 +1,4 @@
+This bundle integrates cropper/cnn_scheduler/candidate_bus/frame_packer into the real fpga_top.
+Current top-level proposal source is a bring-up shim: the Saturn bbox center is duplicated into K slots.
+This lets the CNN/tracker/header path compile and run now, but it is not the final proposal_gen hookup.
+Next RTL step: expose per-block motion score stream from saturn_core (or another motion frontend) and feed proposal_gen properly.
