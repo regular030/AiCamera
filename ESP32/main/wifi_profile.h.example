@@ -1,0 +1,10 @@
+#pragma once
+
+#define WIFI_USE_ENTERPRISE 0
+
+#define WIFI_SSID       "your-ssid"
+#define WIFI_PASSWORD   "your-password"
+
+#define WIFI_EAP_IDENTITY   "your-identity"
+#define WIFI_EAP_USERNAME   "your-username"
+#define WIFI_EAP_PASSWORD   "your-enterprise-password"

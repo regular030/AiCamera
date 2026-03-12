@@ -1,465 +1,75 @@
 [ START MERGED ]
-u_motion_frontend/n179046 blk_idx_9
-u_motion_frontend/n179310 blk_idx_7
-n190661 n3002
-n59582 sda_oe
-n190662 n3002
-u_cropper/n181751 u_cropper/n1746
-u_cropper/n180048 u_cropper/n4567
-u_cropper/n180058 u_cropper/n6919
-u_cropper/n180086 u_cropper/n2803
-u_cropper/n180452 u_cropper/n4565
-u_cropper/n180470 u_cropper/n4566
-u_cropper/n180596 u_cropper/n2801
-u_cropper/n180599 u_cropper/n6917
-u_cropper/n180602 u_cropper/n6918
-u_cropper/n180611 u_cropper/n2802
-u_cropper/n190466 u_cropper/n4714
-u_cropper/n190463 u_cropper/n2950
-u_sdram/n97799 u_sdram/n19290
+u_ctrl/u_tx/n51533 u_ctrl/n24558
+u_ctrl/u_rx/n61791 rx_s2
+u_ctrl/u_cmd/n51509 u_ctrl/u_cmd/cmd_valid_N_765
+n49047 sda_oe
 u_sdram/n1 u_sdram/refresh_req
-u_ctrl/n98462 u_ctrl/cmd_fire
-u_ctrl/SD_CLK_c_enable_1008 u_ctrl/n35772
-u_ctrl/n73345 u_ctrl/rx_valid
-u_ctrl/u_tx/n98471 u_ctrl/u_tx/n24433
-u_ctrl/u_rx/n13 u_ctrl/u_rx/rx_s2
-u_sched/n97804 u_sched/n19708
+u_sdram/n51501 u_sdram/n19202
 [ END MERGED ]
 [ START CLIPPED ]
-SD_DQ[15]
-SD_DQ[8]
-SD_DQ[7]
-SD_DQ[6]
-SD_DQ[5]
-SD_DQ[4]
-SD_DQ[3]
-SD_DQ[2]
-SD_DQ[1]
-SD_DQ[0]
-SD_DQ[14]
-SD_DQ[13]
-SD_DQ[12]
-SD_DQ[11]
-SD_DQ[10]
-SD_DQ[9]
 VCC_net
-u_ctrl/u_rx/clk_cnt_4824_add_4_1/S0
-u_ctrl/u_rx/clk_cnt_4824_add_4_1/CI
-u_ctrl/u_rx/clk_cnt_4824_add_4_17/S1
-u_ctrl/u_rx/clk_cnt_4824_add_4_17/CO
-u_ctrl/u_tx/clk_cnt_4826_add_4_1/S0
-u_ctrl/u_tx/clk_cnt_4826_add_4_1/CI
-u_ctrl/u_tx/clk_cnt_4826_add_4_17/S1
-u_ctrl/u_tx/clk_cnt_4826_add_4_17/CO
-u_ctrl/total_people_31__I_0_0/S1
-u_ctrl/total_people_31__I_0_0/S0
-u_ctrl/total_people_31__I_0_0/CI
-u_ctrl/total_people_31__I_0_25/S1
-u_ctrl/total_people_31__I_0_25/S0
-u_ctrl/total_people_31__I_0_32/S0
-u_ctrl/total_people_31__I_0_32/CO
-u_ctrl/total_people_31__I_0_27/S1
-u_ctrl/total_people_31__I_0_27/S0
-u_ctrl/total_people_31__I_0_29/S1
-u_ctrl/total_people_31__I_0_29/S0
-u_ctrl/total_people_31__I_0_19/S1
-u_ctrl/total_people_31__I_0_19/S0
-u_ctrl/total_people_31__I_0_21/S1
-u_ctrl/total_people_31__I_0_21/S0
-u_ctrl/total_people_31__I_0_31/S1
-u_ctrl/total_people_31__I_0_31/S0
-u_ctrl/total_people_31__I_0_23/S1
-u_ctrl/total_people_31__I_0_23/S0
-u_sd/equal_15282_16/S0
-u_sd/equal_15282_16/CO
-u_sd/equal_15282_0/S1
-u_sd/equal_15282_0/S0
-u_sd/equal_15282_0/CI
-u_sd/equal_15282_15/S1
-u_sd/equal_15282_15/S0
-u_cam_cfg/divc_4810_add_4_1/S0
-u_cam_cfg/divc_4810_add_4_1/CI
-u_cam_cfg/divc_4810_add_4_9/CO
-u_sdram/refresh_cnt_4812_add_4_1/S0
-u_sdram/refresh_cnt_4812_add_4_1/CI
-u_sdram/refresh_cnt_4812_add_4_17/S1
-u_sdram/refresh_cnt_4812_add_4_17/CO
-u_cropper/samp_count_p_4821_add_4_1/S0
-u_cropper/samp_count_p_4821_add_4_1/CI
-u_cropper/samp_count_p_4821_add_4_13/CO
-_add_1_15913_add_4_1/S0
-_add_1_15913_add_4_1/CI
-_add_1_15856_add_4_1/S0
-_add_1_15856_add_4_1/CI
-_add_1_15856_add_4_9/S1
-_add_1_15856_add_4_9/CO
-_add_1_15910_add_4_1/S0
-_add_1_15910_add_4_1/CI
-_add_1_15847_add_4_9/S1
-_add_1_15847_add_4_9/CO
-_add_1_15910_add_4_9/S1
-_add_1_15910_add_4_9/CO
-_add_1_15913_add_4_11/CO
-_add_1_15752_add_4_1/S0
-_add_1_15752_add_4_1/CI
-_add_1_15874_add_4_1/S0
-_add_1_15874_add_4_1/CI
-_add_1_15868_add_4_1/S0
-_add_1_15868_add_4_1/CI
-_add_1_15805_add_4_add_4_2/S0
-_add_1_15805_add_4_add_4_2/CI
-_add_1_15874_add_4_9/S1
-_add_1_15874_add_4_9/CO
-_add_1_15907_add_4_1/S0
-_add_1_15907_add_4_1/CI
-_add_1_15752_add_4_cout/S1
-_add_1_15752_add_4_cout/CO
-_add_1_15907_add_4_9/S1
-_add_1_15907_add_4_9/CO
-_add_1_15814_add_4_2/S0
-_add_1_15814_add_4_2/CI
-SD_DQ_out_15
-_add_1_15814_add_4_16/CO
-_add_1_15695_add_4_add_4_2/S0
-_add_1_15695_add_4_add_4_2/CI
-_add_1_15695_add_4_add_4_8/CO
-_add_1_15817_add_4_1/S0
-_add_1_15817_add_4_1/CI
-_add_1_15920_add_4_add_1_add_2_2/S0
-_add_1_15920_add_4_add_1_add_2_2/CI
-_add_1_15817_add_4_11/S1
-_add_1_15817_add_4_11/CO
-_add_1_15797_add_4_2/S0
-_add_1_15797_add_4_2/CI
-_add_1_15797_add_4_12/CO
-_add_1_15904_add_4_1/S0
-_add_1_15904_add_4_1/CI
-_add_1_15904_add_4_9/S1
-_add_1_15904_add_4_9/CO
-_add_1_15880_add_4_1/S0
-_add_1_15880_add_4_1/CI
-_add_1_15868_add_4_9/S1
-_add_1_15868_add_4_9/CO
-_add_1_15880_add_4_9/S1
-_add_1_15880_add_4_9/CO
-_add_1_15832_add_4_1/S0
-_add_1_15832_add_4_1/CI
-_add_1_15832_add_4_11/CO
-_add_1_15698_add_4_2/S0
-_add_1_15698_add_4_2/CI
-_add_1_15920_add_4_add_1_add_2_32/CO
-_add_1_15859_add_4_1/S0
-_add_1_15859_add_4_1/CI
-_add_1_15698_add_4_8/CO
-_add_1_15901_add_4_1/S1
-_add_1_15901_add_4_1/S0
-_add_1_15901_add_4_1/CI
-_add_1_15920_add_4_add_1_add_1_2/S0
-_add_1_15920_add_4_add_1_add_1_2/CI
-_add_1_15901_add_4_9/CO
-_add_1_15713_add_4_1/S1
-_add_1_15713_add_4_1/S0
-_add_1_15713_add_4_1/CI
-_add_1_15713_add_4_15/S1
-_add_1_15713_add_4_15/CO
-_add_1_15692_add_4_2/S0
-_add_1_15692_add_4_2/CI
-_add_1_15692_add_4_10/CO
-add_15934_add_4_1/S1
-add_15934_add_4_1/S0
-add_15934_add_4_1/CI
-add_15934_add_4_3/S1
-add_15934_add_4_3/S0
-add_15934_add_4_5/S1
-add_15934_add_4_5/S0
-add_15934_add_4_7/S1
-add_15934_add_4_7/S0
-add_15934_add_4_9/S1
-add_15934_add_4_9/S0
-add_15934_add_4_cout/S1
-add_15934_add_4_cout/CO
-_add_1_15755_add_4_1/S0
-_add_1_15755_add_4_1/CI
-_add_1_15755_add_4_17/S1
-_add_1_15755_add_4_17/CO
-_add_1_15898_add_4_1/S0
-_add_1_15898_add_4_1/CI
-_add_1_15898_add_4_11/S1
-_add_1_15898_add_4_11/CO
-_add_1_add_4_2/S0
-_add_1_add_4_2/CI
-_add_1_add_4_10/S1
-_add_1_add_4_10/CO
-_add_1_15850_add_4_1/S0
-_add_1_15850_add_4_1/CI
-_add_1_15850_add_4_9/S1
-_add_1_15850_add_4_9/CO
-_add_1_15788_add_4_2/S1
-_add_1_15788_add_4_2/S0
-_add_1_15788_add_4_2/CI
-_add_1_15788_add_4_4/S1
-_add_1_15788_add_4_4/S0
-_add_1_15788_add_4_6/S1
-_add_1_15788_add_4_6/S0
-_add_1_15788_add_4_8/S1
-_add_1_15788_add_4_8/S0
-_add_1_15788_add_4_10/S1
-_add_1_15788_add_4_10/S0
-_add_1_15788_add_4_12/S1
-_add_1_15788_add_4_12/S0
-_add_1_15788_add_4_14/S1
-_add_1_15788_add_4_14/S0
-_add_1_15788_add_4_16/S1
-_add_1_15788_add_4_16/S0
-_add_1_15788_add_4_18/S0
-_add_1_15788_add_4_18/CO
-_add_1_15725_add_4_1/S0
-_add_1_15725_add_4_1/CI
-_add_1_15725_add_4_11/CO
-_add_1_15920_add_4_add_1_add_1_32/CO
-add_94778_1/S1
-add_94778_1/S0
-add_94778_1/CI
-_add_1_15802_add_4_2/S0
-_add_1_15802_add_4_2/CI
-add_94778_3/S1
-add_94778_3/S0
-_add_1_15802_add_4_10/CO
-_add_1_15871_add_4_1/S0
-_add_1_15871_add_4_1/CI
-_add_1_15871_add_4_9/S1
-_add_1_15871_add_4_9/CO
-_add_1_15844_add_4_1/S0
-_add_1_15844_add_4_1/CI
-add_94778_5/S1
-add_94778_5/S0
-add_94778_7/S1
-add_94778_7/S0
-add_94778_9/S1
-add_94778_9/S0
-add_94778_11/S1
-add_94778_11/S0
-add_94778_13/S1
-add_94778_13/S0
-_add_1_15844_add_4_33/S1
-_add_1_15844_add_4_33/CO
-_add_1_15701_add_4_1/S0
-_add_1_15701_add_4_1/CI
-_add_1_15701_add_4_11/CO
-_add_1_15886_add_4_1/S0
-_add_1_15886_add_4_1/CI
-add_94778_15/S1
-add_94778_15/S0
-_add_1_15886_add_4_9/S1
-_add_1_15886_add_4_9/CO
-add_94778_17/S1
-add_94778_17/S0
-_add_1_15883_add_4_1/S0
-_add_1_15883_add_4_1/CI
-add_94778_19/S1
-add_94778_19/S0
-add_94778_21/S1
-add_94778_21/S0
-add_94778_23/S1
-add_94778_23/S0
-SD_DQ_out_8
-add_94778_25/S1
-add_94778_25/S0
-_add_1_15883_add_4_33/S1
-_add_1_15883_add_4_33/CO
-SD_DQ_out_7
-SD_DQ_out_6
-SD_DQ_out_5
-SD_DQ_out_4
-SD_DQ_out_3
-SD_DQ_out_2
-SD_DQ_out_1
-SD_DQ_out_0
-_add_1_15704_add_4_1/S0
-_add_1_15704_add_4_1/CI
-add_94778_cout/S1
-add_94778_cout/CO
-_add_1_15704_add_4_11/CO
-_add_1_15794_add_4_1/S0
-_add_1_15794_add_4_1/CI
-add_94777_2/S1
-add_94777_2/S0
-add_94777_2/CI
-_add_1_15859_add_4_9/S1
-_add_1_15859_add_4_9/CO
-_add_1_15865_add_4_1/S0
-_add_1_15865_add_4_1/CI
-_add_1_15794_add_4_cout/S1
-_add_1_15794_add_4_cout/CO
-add_94777_4/S1
-add_94777_4/S0
-add_94777_6/S1
-add_94777_6/S0
-add_15933_add_4_1/S1
-add_15933_add_4_1/S0
-add_15933_add_4_1/CI
-add_15933_add_4_3/S1
-add_15933_add_4_3/S0
-add_15933_add_4_5/S1
-add_15933_add_4_5/S0
-add_94777_8/S1
-add_94777_8/S0
-add_15933_add_4_7/S1
-add_15933_add_4_7/S0
-add_15933_add_4_9/S1
-add_15933_add_4_9/S0
-add_94777_10/S1
-add_94777_10/S0
-add_15933_add_4_cout/S1
-add_15933_add_4_cout/CO
-_add_1_15710_add_4_1/S0
-_add_1_15710_add_4_1/CI
-add_94777_12/S1
-add_94777_12/S0
-add_94777_14/S1
-add_94777_14/S0
-_add_1_15710_add_4_13/CO
-add_94777_16/S1
-add_94777_16/S0
-add_94777_18/S1
-add_94777_18/S0
-_add_1_15785_add_4_2/S1
-_add_1_15785_add_4_2/S0
-_add_1_15785_add_4_2/CI
-add_94777_20/S1
-add_94777_20/S0
-_add_1_15785_add_4_4/S1
-_add_1_15785_add_4_4/S0
-_add_1_15785_add_4_6/S0
-_add_1_15785_add_4_10/CO
-_add_1_15767_add_4_1/S1
-_add_1_15767_add_4_1/S0
-_add_1_15767_add_4_1/CI
-_add_1_15767_add_4_3/S1
-_add_1_15767_add_4_3/S0
-_add_1_15767_add_4_5/S1
-_add_1_15767_add_4_5/S0
-_add_1_15767_add_4_7/S1
-_add_1_15767_add_4_7/S0
-_add_1_15767_add_4_9/S0
-_add_1_15767_add_4_9/CO
-_add_1_15707_add_4_1/S0
-_add_1_15707_add_4_1/CI
-add_94777_22/S1
-add_94777_22/S0
-_add_1_15862_add_4_9/S1
-_add_1_15862_add_4_9/CO
-add_94777_24/S1
-add_94777_24/S0
-_add_1_15707_add_4_17/S1
-_add_1_15707_add_4_17/CO
-add_94777_cout/S1
-add_94777_cout/CO
-_add_1_15865_add_4_9/S1
-_add_1_15865_add_4_9/CO
-_add_1_15684_add_4_1/S0
-_add_1_15684_add_4_1/CI
-_add_1_15853_add_4_1/S0
-_add_1_15853_add_4_1/CI
-_add_1_15684_add_4_33/S1
-_add_1_15684_add_4_33/CO
-add_94827_1/S0
-add_94827_1/CI
-_add_1_15761_add_4_1/S0
-_add_1_15761_add_4_1/CI
-_add_1_15917_add_4_2/S0
-_add_1_15917_add_4_2/CI
-_add_1_15761_add_4_11/CO
-_add_1_15791_add_4_1/S1
-_add_1_15791_add_4_1/S0
-_add_1_15791_add_4_1/CI
-_add_1_15805_add_4_add_4_32/CO
-_add_1_15791_add_4_3/S1
-_add_1_15791_add_4_3/S0
-add_94827_33/S1
-add_94827_33/CO
-_add_1_15791_add_4_5/S1
-_add_1_15791_add_4_5/S0
-add_94776_1/S1
-add_94776_1/S0
-add_94776_1/CI
-_add_1_15791_add_4_7/S1
-_add_1_15791_add_4_7/S0
-add_94776_9/CO
-_add_1_15791_add_4_9/S0
-_add_1_15791_add_4_9/CO
-add_94775_1/S1
-add_94775_1/S0
-add_94775_1/CI
-_add_1_15835_add_4_1/S0
-_add_1_15835_add_4_1/CI
-add_94775_3/S1
-add_94775_3/S0
-add_94775_5/S1
-add_94775_5/S0
-add_94775_7/S1
-add_94775_7/S0
-add_94775_9/S1
-add_94775_9/S0
-_add_1_15847_add_4_1/S0
-_add_1_15847_add_4_1/CI
-add_94775_11/S1
-add_94775_11/S0
-add_94775_13/S1
-add_94775_13/S0
-add_94775_15/S1
-add_94775_15/S0
-add_94775_17/S1
-add_94775_17/S0
-add_94775_19/S0
-add_94775_19/CO
-_add_1_15829_add_4_1/S0
-_add_1_15829_add_4_1/CI
-_add_1_15829_add_4_13/CO
-_add_1_15853_add_4_9/S1
-_add_1_15853_add_4_9/CO
-_add_1_15862_add_4_1/S0
-_add_1_15862_add_4_1/CI
-_add_1_15835_add_4_33/S1
-_add_1_15835_add_4_33/CO
-_add_1_15838_add_4_1/S0
-_add_1_15838_add_4_1/CI
-_add_1_15917_add_4_10/CO
-_add_1_15838_add_4_33/S1
-_add_1_15838_add_4_33/CO
-_add_1_15841_add_4_1/S0
-_add_1_15841_add_4_1/CI
-_add_1_15877_add_4_1/S0
-_add_1_15877_add_4_1/CI
-_add_1_15877_add_4_9/S1
-_add_1_15877_add_4_9/CO
-_add_1_15841_add_4_33/S1
-_add_1_15841_add_4_33/CO
-SD_DQ_out_14
-SD_DQ_out_13
-SD_DQ_out_12
-SD_DQ_out_11
-SD_DQ_out_10
-SD_DQ_out_9
+u_cam_cfg/divc_3991_add_4_1/S0
+u_cam_cfg/divc_3991_add_4_1/CI
+u_cam_cfg/divc_3991_add_4_9/CO
+u_sdram/refresh_cnt_3993_add_4_1/S0
+u_sdram/refresh_cnt_3993_add_4_1/CI
+u_sdram/refresh_cnt_3993_add_4_17/S1
+u_sdram/refresh_cnt_3993_add_4_17/CO
+_add_1_11934_add_4_11/S1
+_add_1_11934_add_4_11/CO
+u_sd/equal_11678_0/S1
+u_sd/equal_11678_0/S0
+u_sd/equal_11678_0/CI
+u_sd/equal_11678_16/S0
+u_sd/equal_11678_16/CO
+u_sd/equal_11678_15/S1
+u_sd/equal_11678_15/S0
+_add_1_11922_add_4_1/S0
+_add_1_11922_add_4_1/CI
+_add_1_11937_add_4_1/S1
+_add_1_11937_add_4_1/S0
+_add_1_11937_add_4_1/CI
+_add_1_11931_add_4_1/S0
+_add_1_11931_add_4_1/CI
+_add_1_11931_add_4_11/CO
+_add_1_11934_add_4_1/S0
+_add_1_11934_add_4_1/CI
+add_18988_1/S1
+add_18988_1/S0
+add_18988_1/CI
+add_18988_9/CO
+_add_1_11922_add_4_17/S1
+_add_1_11922_add_4_17/CO
+_add_1_11937_add_4_9/CO
+u_ctrl/u_cmd/chk_calc_7__I_0_0/S1
+u_ctrl/u_cmd/chk_calc_7__I_0_0/S0
+u_ctrl/u_cmd/chk_calc_7__I_0_0/CI
+u_ctrl/u_cmd/chk_calc_7__I_0_7/S1
+u_ctrl/u_cmd/chk_calc_7__I_0_7/S0
+u_ctrl/u_cmd/chk_calc_7__I_0_8/S0
+u_ctrl/u_cmd/chk_calc_7__I_0_8/CO
+u_ctrl/u_rx/clk_cnt_4005_add_4_1/S0
+u_ctrl/u_rx/clk_cnt_4005_add_4_1/CI
+u_ctrl/u_rx/clk_cnt_4005_add_4_17/S1
+u_ctrl/u_rx/clk_cnt_4005_add_4_17/CO
+u_ctrl/u_tx/clk_cnt_4007_add_4_17/S1
+u_ctrl/u_tx/clk_cnt_4007_add_4_17/CO
+u_ctrl/u_tx/clk_cnt_4007_add_4_1/S0
+u_ctrl/u_tx/clk_cnt_4007_add_4_1/CI
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Fri Mar 06 02:35:32 2026
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sat Mar 07 23:07:10 2026
 
 SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+LOCATE COMP "SD_DQ[13]" SITE "G15" ;
+LOCATE COMP "SD_DQ[14]" SITE "G16" ;
+LOCATE COMP "SD_DQ[15]" SITE "H15" ;
+LOCATE COMP "cam_sda" SITE "B9" ;
+LOCATE COMP "cam_scl" SITE "A10" ;
+LOCATE COMP "MCLK" SITE "A12" ;
 LOCATE COMP "M_D0" SITE "B2" ;
 LOCATE COMP "RX" SITE "K1" ;
-LOCATE COMP "Y2" SITE "B14" ;
-LOCATE COMP "Y3" SITE "C12" ;
-LOCATE COMP "Y4" SITE "C13" ;
-LOCATE COMP "Y5" SITE "A15" ;
-LOCATE COMP "Y6" SITE "A14" ;
-LOCATE COMP "Y7" SITE "A13" ;
-LOCATE COMP "Y8" SITE "B12" ;
-LOCATE COMP "Y9" SITE "B11" ;
-LOCATE COMP "PCLK" SITE "C8" ;
-LOCATE COMP "HREF" SITE "A11" ;
-LOCATE COMP "VSYNC" SITE "B10" ;
 LOCATE COMP "CRYSTAL" SITE "M1" ;
 LOCATE COMP "M_CLK" SITE "C7" ;
 LOCATE COMP "M_D3" SITE "B5" ;
@@ -498,11 +108,21 @@ LOCATE COMP "SD_CS_N" SITE "R15" ;
 LOCATE COMP "SD_CLK" SITE "J15" ;
 LOCATE COMP "SD_DQM[0]" SITE "T15" ;
 LOCATE COMP "SD_DQM[1]" SITE "D14" ;
-LOCATE COMP "cam_sda" SITE "B9" ;
-LOCATE COMP "cam_scl" SITE "A10" ;
-LOCATE COMP "MCLK" SITE "A12" ;
+LOCATE COMP "SD_DQ[0]" SITE "L15" ;
+LOCATE COMP "SD_DQ[1]" SITE "M16" ;
+LOCATE COMP "SD_DQ[2]" SITE "K16" ;
+LOCATE COMP "SD_DQ[3]" SITE "M15" ;
+LOCATE COMP "SD_DQ[4]" SITE "M14" ;
+LOCATE COMP "SD_DQ[5]" SITE "P16" ;
+LOCATE COMP "SD_DQ[6]" SITE "R16" ;
+LOCATE COMP "SD_DQ[7]" SITE "J16" ;
+LOCATE COMP "SD_DQ[8]" SITE "D16" ;
+LOCATE COMP "SD_DQ[9]" SITE "E15" ;
+LOCATE COMP "SD_DQ[10]" SITE "E16" ;
+LOCATE COMP "SD_DQ[11]" SITE "F15" ;
+LOCATE COMP "SD_DQ[12]" SITE "F16" ;
 FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
-FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
 FREQUENCY NET "MCLK_c" 24.000000 MHz ;
+FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

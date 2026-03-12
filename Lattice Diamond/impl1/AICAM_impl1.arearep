@@ -1,148 +1,179 @@
 ----------------------------------------------------------------------
 Report for cell fpga_top.TECH
-Register bits:  2688 of 24879 (10.804%)
-I/O cells:      70
+Register bits:  449 of 24879 (1.805%)
+I/O cells:      59
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                 BB        16          100.0
-                              CCU2C       525          100.0
-                           DPR16X4C      1024          100.0
+                              CCU2C        69          100.0
                             EHXPLLL         1          100.0
-                            FD1P3AX       623          100.0
-                            FD1P3IX      1188          100.0
-                            FD1P3JX        27          100.0
-                            FD1S3AX       759          100.0
-                            FD1S3IX        80          100.0
-                            FD1S3JX        11          100.0
+                            FD1P3AX       243          100.0
+                            FD1P3IX        62          100.0
+                            FD1P3JX         9          100.0
+                            FD1S3AX        69          100.0
+                            FD1S3IX        56          100.0
+                            FD1S3JX        10          100.0
                                 GSR         1          100.0
-                                 IB        14          100.0
-                            L6MUX21       252          100.0
-                               LUT4     12391          100.0
-                           MULT9X9D         3          100.0
+                                 IB         3          100.0
+                            L6MUX21         5          100.0
+                               LUT4       923          100.0
                                  OB        29          100.0
-                                OBZ        11          100.0
+                                OBZ        27          100.0
                            PDPW16KD         5          100.0
-                              PFUMX      2878          100.0
-                           SPR16X4C       256          100.0
+                              PFUMX       114          100.0
 SUB MODULES
                                 PLL         1
-candidate_bus(K=4,FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100)         1
-                      cnn_int8_core         1
-                      cnn_scheduler         1
-cropper_128_to_64(FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,N=16,K=4)         1
-                    esp32_ctrl_uart         1
-              motion_block_frontend         1
+         esp32_ctrl_uart_min_bridge         1
+                fpga_ack_packetizer         1
+                  fpga_control_regs         1
+               fpga_uart_cmd_parser         1
                     ov5640_init_rom         1
                         ov5640_sccb         1
-                       proposal_gen         1
-                  raw_frame_capture         1
                       sd_spi_writer         1
                   sdram_ctrl_simple         1
-track_count(MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100)         1
                             uart_rx         1
                             uart_tx         1
-                              TOTAL     20110
+                              TOTAL      1637
 ----------------------------------------------------------------------
-Report for cell motion_block_frontend.v1
-Instance Path : u_motion_frontend
+Report for cell esp32_ctrl_uart_min_bridge.v1
+Instance Path : u_ctrl
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3AX        23            3.7
-                            FD1P3IX        39            3.3
-                            FD1S3AX       642           84.6
-                            FD1S3IX         3            3.8
-                            L6MUX21        82           32.5
-                               LUT4      2162           17.4
-                           MULT9X9D         1           33.3
-                              PFUMX       405           14.1
-                           SPR16X4C       256          100.0
-                              TOTAL      3613
-----------------------------------------------------------------------
-Report for cell raw_frame_capture.v1
-Instance Path : u_raw_cap
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1S3AX         2            0.3
-                              TOTAL         2
-----------------------------------------------------------------------
-Report for cell proposal_gen.v1
-Instance Path : u_props
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3IX       368           31.0
-                            FD1S3AX         1            0.1
-                               LUT4       711            5.7
-                              PFUMX        19            0.7
-                              TOTAL      1099
-----------------------------------------------------------------------
-Report for cell cropper_128_to_64(FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,N=16,K=4).v1
-Instance Path : u_cropper
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C         7            1.3
-                            FD1P3AX       256           41.1
-                            FD1P3IX        38            3.2
-                            FD1S3AX        13            1.7
-                            FD1S3IX         4            5.0
-                            L6MUX21        31           12.3
-                               LUT4      4408           35.6
-                              PFUMX       983           34.2
-                              TOTAL      5740
-----------------------------------------------------------------------
-Report for cell sdram_ctrl_simple.v1
-Instance Path : u_sdram
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C         9            1.7
-                            FD1P3AX         4            0.6
-                            FD1P3IX         1            0.1
-                            FD1S3AX         4            0.5
-                            FD1S3IX        18           22.5
-                            FD1S3JX         2           18.2
-                               LUT4        25            0.2
-                              PFUMX         1            0.0
-                              TOTAL        64
-----------------------------------------------------------------------
-Report for cell ov5640_sccb.v1
-Instance Path : u_cam_cfg
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C         5            1.0
-                            FD1P3AX        49            7.9
-                            FD1P3IX         8            0.7
-                            FD1P3JX         6           22.2
-                            FD1S3AX         2            0.3
-                            FD1S3IX         9           11.3
-                               LUT4       152            1.2
-                           PDPW16KD         4           80.0
-                              PFUMX        31            1.1
+                              CCU2C        21           30.4
+                            FD1P3AX       180           74.1
+                            FD1P3IX        27           43.5
+                            FD1S3AX        11           15.9
+                            FD1S3IX        20           35.7
+                            FD1S3JX         3           30.0
+                            L6MUX21         2           40.0
+                               LUT4       280           30.3
+                              PFUMX        17           14.9
 SUB MODULES
-                    ov5640_init_rom         1
-                              TOTAL       267
+                fpga_ack_packetizer         1
+                  fpga_control_regs         1
+               fpga_uart_cmd_parser         1
+                            uart_rx         1
+                            uart_tx         1
+                              TOTAL       566
 ----------------------------------------------------------------------
-Report for cell ov5640_init_rom.v1
-Instance Path : u_cam_cfg.u_rom
+Report for cell uart_tx.v1
+Instance Path : u_ctrl.u_tx
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4        46            0.4
-                           PDPW16KD         4           80.0
-                              PFUMX        22            0.8
-                              TOTAL        72
+                              CCU2C         9           13.0
+                            FD1P3AX         8            3.3
+                            FD1P3IX         3            4.8
+                            FD1S3AX         4            5.8
+                            FD1S3IX        16           28.6
+                            FD1S3JX         2           20.0
+                            L6MUX21         1           20.0
+                               LUT4        34            3.7
+                              PFUMX         2            1.8
+                              TOTAL        79
+----------------------------------------------------------------------
+Report for cell uart_rx.v1
+Instance Path : u_ctrl.u_rx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9           13.0
+                            FD1P3AX        16            6.6
+                            FD1P3IX        19           30.6
+                            FD1S3AX         6            8.7
+                            FD1S3IX         1            1.8
+                               LUT4        87            9.4
+                              PFUMX         1            0.9
+                              TOTAL       139
+----------------------------------------------------------------------
+Report for cell fpga_control_regs.v1
+Instance Path : u_ctrl.u_regs
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        34           14.0
+                            FD1P3IX         3            4.8
+                            FD1S3AX         1            1.4
+                               LUT4        58            6.3
+                              PFUMX         5            4.4
+                              TOTAL       101
+----------------------------------------------------------------------
+Report for cell fpga_uart_cmd_parser.v1
+Instance Path : u_ctrl.u_cmd
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         3            4.3
+                            FD1P3AX        80           32.9
+                            FD1S3IX         1            1.8
+                               LUT4        49            5.3
+                              TOTAL       133
+----------------------------------------------------------------------
+Report for cell fpga_ack_packetizer.v1
+Instance Path : u_ctrl.u_ack
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        42           17.3
+                            FD1P3IX         2            3.2
+                            FD1S3IX         2            3.6
+                            FD1S3JX         1           10.0
+                            L6MUX21         1           20.0
+                               LUT4        50            5.4
+                              PFUMX         9            7.9
+                              TOTAL       107
 ----------------------------------------------------------------------
 Report for cell sd_spi_writer.v1
 Instance Path : u_sd
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C         3            0.6
-                            FD1P3AX         9            1.4
-                            FD1P3IX        27            2.3
-                            FD1P3JX         3           11.1
-                            FD1S3AX        57            7.5
-                            FD1S3IX         7            8.8
-                            FD1S3JX         5           45.5
-                               LUT4       463            3.7
-                              PFUMX        52            1.8
-                              TOTAL       626
+                              CCU2C         3            4.3
+                            FD1P3AX         9            3.7
+                            FD1P3IX        27           43.5
+                            FD1P3JX         3           33.3
+                            FD1S3AX        53           76.8
+                            FD1S3IX         9           16.1
+                            FD1S3JX         5           50.0
+                            L6MUX21         1           20.0
+                               LUT4       430           46.6
+                              PFUMX        63           55.3
+                              TOTAL       603
+----------------------------------------------------------------------
+Report for cell sdram_ctrl_simple.v1
+Instance Path : u_sdram
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9           13.0
+                            FD1P3AX         4            1.6
+                            FD1P3IX         1            1.6
+                            FD1S3AX         4            5.8
+                            FD1S3IX        18           32.1
+                            FD1S3JX         2           20.0
+                               LUT4        25            2.7
+                              PFUMX         2            1.8
+                              TOTAL        65
+----------------------------------------------------------------------
+Report for cell ov5640_sccb.v1
+Instance Path : u_cam_cfg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         5            7.2
+                            FD1P3AX        50           20.6
+                            FD1P3IX         7           11.3
+                            FD1P3JX         6           66.7
+                            FD1S3AX         1            1.4
+                            FD1S3IX         9           16.1
+                            L6MUX21         2           40.0
+                               LUT4       165           17.9
+                           PDPW16KD         4           80.0
+                              PFUMX        32           28.1
+SUB MODULES
+                    ov5640_init_rom         1
+                              TOTAL       282
+----------------------------------------------------------------------
+Report for cell ov5640_init_rom.v1
+Instance Path : u_cam_cfg.u_rom
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            L6MUX21         1           20.0
+                               LUT4        58            6.3
+                           PDPW16KD         4           80.0
+                              PFUMX        23           20.2
+                              TOTAL        86
 ----------------------------------------------------------------------
 Report for cell PLL.v1
 Instance Path : u_pll
@@ -150,109 +181,3 @@ Instance Path : u_pll
                                cell     count   Res Usage(%)
                             EHXPLLL         1          100.0
                               TOTAL         1
-----------------------------------------------------------------------
-Report for cell esp32_ctrl_uart.v1
-Instance Path : u_ctrl
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C        27            5.1
-                            FD1P3AX        86           13.8
-                            FD1P3IX        40            3.4
-                            FD1P3JX         5           18.5
-                            FD1S3AX        11            1.4
-                            FD1S3IX        27           33.8
-                            FD1S3JX         2           18.2
-                            L6MUX21         7            2.8
-                               LUT4       239            1.9
-                              PFUMX        37            1.3
-SUB MODULES
-                            uart_rx         1
-                            uart_tx         1
-                              TOTAL       483
-----------------------------------------------------------------------
-Report for cell uart_tx.v1
-Instance Path : u_ctrl.u_tx
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C         9            1.7
-                            FD1P3AX         8            1.3
-                            FD1P3IX         3            0.3
-                            FD1S3AX         4            0.5
-                            FD1S3IX        16           20.0
-                            FD1S3JX         2           18.2
-                               LUT4        25            0.2
-                              PFUMX         1            0.0
-                              TOTAL        68
-----------------------------------------------------------------------
-Report for cell uart_rx.v1
-Instance Path : u_ctrl.u_rx
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2C         9            1.7
-                            FD1P3AX        16            2.6
-                            FD1P3IX        19            1.6
-                            FD1S3AX         6            0.8
-                            FD1S3IX         1            1.3
-                               LUT4        48            0.4
-                              PFUMX         1            0.0
-                              TOTAL       100
-----------------------------------------------------------------------
-Report for cell candidate_bus(K=4,FRAME_W=16'b01010000000,FRAME_H=16'b0111100000,MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100).v1
-Instance Path : u_candidate_bus
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3AX         1            0.2
-                            FD1P3IX       462           38.9
-                            FD1P3JX        13           48.1
-                            FD1S3IX        10           12.5
-                            L6MUX21        36           14.3
-                               LUT4       475            3.8
-                              PFUMX        90            3.1
-SUB MODULES
-track_count(MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100)         1
-                              TOTAL      1088
-----------------------------------------------------------------------
-Report for cell track_count(MAX_T=8,X_LINE=16'b0101000000,YA0=16'b011001000,YA1=16'b0110101110,YB0=16'b01010000,YB1=16'b010110100,GATE_R=16'b0111100).v1
-Instance Path : u_candidate_bus.u_track_count
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3AX         1            0.2
-                            FD1P3IX       462           38.9
-                            FD1P3JX        13           48.1
-                            FD1S3IX        10           12.5
-                            L6MUX21        36           14.3
-                               LUT4       439            3.5
-                              PFUMX        73            2.5
-                              TOTAL      1034
-----------------------------------------------------------------------
-Report for cell cnn_scheduler.v1
-Instance Path : u_sched
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           DPR16X4C      1024          100.0
-                            FD1P3AX       163           26.2
-                            FD1P3IX       196           16.5
-                            FD1S3AX         3            0.4
-                            FD1S3IX         2            2.5
-                            FD1S3JX         2           18.2
-                            L6MUX21        96           38.1
-                               LUT4      3611           29.1
-                           MULT9X9D         2           66.7
-                              PFUMX      1255           43.6
-SUB MODULES
-                      cnn_int8_core         1
-                              TOTAL      6355
-----------------------------------------------------------------------
-Report for cell cnn_int8_core.v1
-Instance Path : u_sched.u_cnn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           DPR16X4C      1024          100.0
-                            FD1P3AX       155           24.9
-                            FD1P3IX       196           16.5
-                            FD1S3IX         1            1.3
-                            L6MUX21        96           38.1
-                               LUT4      3598           29.0
-                           MULT9X9D         2           66.7
-                              PFUMX      1255           43.6
-                              TOTAL      6327

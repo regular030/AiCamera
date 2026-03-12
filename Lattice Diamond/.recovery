@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="AICAM" device="LFE5U-25F-6BG256C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="uart_loopback" top="fpga_top"/>
+        <Options def_top="fpga_detection_packetizer" top="fpga_top"/>
         <Source name="fpga_top.v" type="Verilog" type_short="Verilog">
             <Options top_module="fpga_top"/>
         </Source>
@@ -51,9 +51,6 @@
         <Source name="motion_block_frontend.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="esp32_ctrl_uart.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
         <Source name="uart_rx.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -64,6 +61,21 @@
             <Options/>
         </Source>
         <Source name="uart_loopback.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_control_regs.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_detection_packetizer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_uart_cmd_parser.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="esp32_ctrl_uart_min_bridge.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_ack_packetizer.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="AICAM.lpf" type="Logic Preference" type_short="LPF">

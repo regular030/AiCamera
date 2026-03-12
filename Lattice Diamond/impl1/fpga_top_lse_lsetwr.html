@@ -9,7 +9,7 @@
 <PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Fri Mar 06 02:34:58 2026
+Sat Mar 07 23:07:09 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -27,1064 +27,161 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk1 [get_nets PCLK_c]
-            4096 items scored, 4096 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Error:  The following path violates requirements by 143.553ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3IX    CK             \u_props/score_w[15]_i113  (from PCLK_c +)
-   Destination:    FD1P3IX    SP             \u_props/score_w[15]_i1  (to PCLK_c +)
-
-   Delay:                 148.632ns  (14.0% logic, 86.0% route), 125 logic levels.
-
- Constraint Details:
-
-    148.632ns data_path \u_props/score_w[15]_i113 to \u_props/score_w[15]_i1 violates
-      5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 143.553ns
-
- Path Details: \u_props/score_w[15]_i113 to \u_props/score_w[15]_i1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \u_props/score_w[15]_i113 (from PCLK_c)
-Route        18   e 1.698                                  prop_score_bus[9]
-LUT4        ---     0.166              A to Z              \u_props/prop_score_bus[9]_bdd_4_lut_131734
-Route         1   e 1.020                                  \u_props/n173623
-LUT4        ---     0.166              C to Z              \u_props/i117285_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158359
-LUT4        ---     0.166              C to Z              \u_props/i117175_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158233
-LUT4        ---     0.166              C to Z              \u_props/i116788_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n157832
-LUT4        ---     0.166              C to Z              \u_props/i12_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n9_adj_13289
-LUT4        ---     0.166              C to Z              \u_props/i10_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n7_adj_13284
-LUT4        ---     0.166              C to Z              \u_props/i8_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n5_adj_13130
-LUT4        ---     0.166              D to Z              \u_props/i5_4_lut
-Route         3   e 1.239                                  \u_props/n156304
-LUT4        ---     0.166              C to Z              \u_props/LessThan_6_i4_3_lut_adj_1833
-Route         1   e 1.020                                  \u_props/n4_adj_13138
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i6_3_lut_adj_1832
-Route         1   e 1.020                                  \u_props/n6_adj_13137
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i8_3_lut_adj_1831
-Route         1   e 1.020                                  \u_props/n8_adj_13136
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i10_3_lut_adj_1830
-Route         1   e 1.020                                  \u_props/n10_adj_13135
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i12_3_lut_adj_1829
-Route         1   e 1.020                                  \u_props/n12_adj_13133
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i14_3_lut_adj_1828
-Route         1   e 1.020                                  \u_props/n14_adj_13134
-LUT4        ---     0.166              C to Z              \u_props/LessThan_6_i16_3_lut_3_lut_4_lut_adj_1918
-Route         1   e 1.020                                  \u_props/n18_adj_13384
-LUT4        ---     0.166              C to Z              \u_props/mux_7_i2_3_lut_adj_2006
-Route         1   e 1.020                                  \u_props/n26_adj_13301
-LUT4        ---     0.166              B to Z              \u_props/n26_bdd_4_lut
-Route         3   e 1.239                                  \u_props/n3
-LUT4        ---     0.166              C to Z              \u_props/LessThan_9_i4_3_lut_adj_1890
-Route         1   e 1.020                                  \u_props/n4_adj_13277
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i6_3_lut_adj_1889
-Route         1   e 1.020                                  \u_props/n6_adj_13276
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i8_3_lut_adj_1888
-Route         1   e 1.020                                  \u_props/n8_adj_13275
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i10_3_lut_adj_1887
-Route         1   e 1.020                                  \u_props/n10_adj_13274
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i12_3_lut_adj_1886
-Route         1   e 1.020                                  \u_props/n12_adj_13272
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i14_3_lut_adj_1885
-Route         1   e 1.020                                  \u_props/n14_adj_13273
-LUT4        ---     0.166              C to Z              \u_props/LessThan_9_i16_3_lut_3_lut_adj_1989
-Route         1   e 1.020                                  \u_props/n34_adj_13271
-LUT4        ---     0.166              C to Z              \u_props/mux_10_i2_3_lut_adj_1884
-Route         2   e 1.158                                  \u_props/n42_adj_13262
-LUT4        ---     0.166              B to Z              \u_props/LessThan_12_i4_3_lut_adj_1883
-Route         1   e 1.020                                  \u_props/n4_adj_13269
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i6_3_lut_adj_1882
-Route         1   e 1.020                                  \u_props/n6_adj_13268
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i8_3_lut_adj_1881
-Route         1   e 1.020                                  \u_props/n8_adj_13267
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i10_3_lut_adj_1880
-Route         1   e 1.020                                  \u_props/n10_adj_13266
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i12_3_lut_adj_1879
-Route         1   e 1.020                                  \u_props/n12_adj_13264
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i14_3_lut_adj_1878
-Route         1   e 1.020                                  \u_props/n14_adj_13265
-LUT4        ---     0.166              C to Z              \u_props/LessThan_12_i16_3_lut_3_lut_adj_1990
-Route         1   e 1.020                                  \u_props/n50_adj_13263
-LUT4        ---     0.166              C to Z              \u_props/mux_13_i2_3_lut_adj_1877
-Route         2   e 1.158                                  \u_props/n58_adj_13254
-LUT4        ---     0.166              B to Z              \u_props/LessThan_15_i4_3_lut_adj_1876
-Route         1   e 1.020                                  \u_props/n4_adj_13261
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i6_3_lut_adj_1875
-Route         1   e 1.020                                  \u_props/n6_adj_13259
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i8_3_lut_adj_1874
-Route         1   e 1.020                                  \u_props/n8_adj_13260
-LUT4        ---     0.166              C to Z              \u_props/LessThan_15_i10_3_lut_3_lut_adj_1987
-Route         1   e 1.020                                  \u_props/n10_adj_13258
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i12_3_lut_adj_1873
-Route         1   e 1.020                                  \u_props/n12_adj_13257
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i14_3_lut_adj_1872
-Route         1   e 1.020                                  \u_props/n14_adj_13256
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i16_3_lut_adj_1871
-Route         1   e 1.020                                  \u_props/n66_adj_13255
-LUT4        ---     0.166              C to Z              \u_props/mux_16_i2_3_lut_adj_1870
-Route         2   e 1.158                                  \u_props/n74_adj_13246
-LUT4        ---     0.166              B to Z              \u_props/LessThan_18_i4_3_lut_adj_1869
-Route         1   e 1.020                                  \u_props/n4_adj_13253
-LUT4        ---     0.166              C to Z              \u_props/LessThan_18_i6_3_lut_3_lut_adj_1900
-Route         1   e 1.020                                  \u_props/n6_adj_13252
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i8_3_lut_adj_1868
-Route         1   e 1.020                                  \u_props/n8_adj_13251
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i10_3_lut_adj_1867
-Route         1   e 1.020                                  \u_props/n10_adj_13250
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i12_3_lut_adj_1866
-Route         1   e 1.020                                  \u_props/n12_adj_13249
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i14_3_lut_adj_1865
-Route         1   e 1.020                                  \u_props/n14_adj_13248
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i16_3_lut_adj_1864
-Route         1   e 1.020                                  \u_props/n82_adj_13247
-LUT4        ---     0.166              C to Z              \u_props/mux_19_i2_3_lut_adj_1863
-Route         2   e 1.158                                  \u_props/n90_adj_13243
-LUT4        ---     0.166              B to Z              \u_props/LessThan_21_i4_3_lut_adj_1862
-Route         1   e 1.020                                  \u_props/n4_adj_13245
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i6_3_lut_3_lut_adj_1991
-Route         1   e 1.020                                  \u_props/n6_adj_13449
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i8_3_lut_3_lut_adj_1993
-Route         1   e 1.020                                  \u_props/n8_adj_13441
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i10_3_lut_3_lut_adj_1984
-Route         1   e 1.020                                  \u_props/n10_adj_13442
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i12_3_lut_3_lut_adj_1985
-Route         1   e 1.020                                  \u_props/n12_adj_13445
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i14_3_lut_3_lut_adj_1986
-Route         1   e 1.020                                  \u_props/n14_adj_13438
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i16_3_lut_3_lut_adj_1982
-Route         1   e 1.020                                  \u_props/n98_adj_13244
-LUT4        ---     0.166              C to Z              \u_props/mux_22_i2_3_lut_adj_1861
-Route         2   e 1.158                                  \u_props/n106_adj_13236
-LUT4        ---     0.166              B to Z              \u_props/LessThan_24_i4_3_lut_adj_1860
-Route         1   e 1.020                                  \u_props/n4_adj_13242
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i6_3_lut_adj_1859
-Route         1   e 1.020                                  \u_props/n6_adj_13241
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i8_3_lut_adj_1858
-Route         1   e 1.020                                  \u_props/n8_adj_13240
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i10_3_lut_adj_1857
-Route         1   e 1.020                                  \u_props/n10_adj_13238
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i12_3_lut_adj_1856
-Route         1   e 1.020                                  \u_props/n12_adj_13239
-LUT4        ---     0.166              C to Z              \u_props/LessThan_24_i14_3_lut_3_lut_adj_1995
-Route         1   e 1.020                                  \u_props/n14_adj_13451
-LUT4        ---     0.166              C to Z              \u_props/LessThan_24_i16_3_lut_3_lut_adj_1994
-Route         1   e 1.020                                  \u_props/n114_adj_13237
-LUT4        ---     0.166              C to Z              \u_props/mux_25_i2_3_lut_adj_1855
-Route         2   e 1.158                                  \u_props/n122_adj_13229
-LUT4        ---     0.166              D to Z              \u_props/LessThan_27_i4_3_lut_4_lut_adj_1979
-Route         1   e 1.020                                  \u_props/n4_adj_13436
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i6_3_lut_3_lut_adj_1981
-Route         1   e 1.020                                  \u_props/n6_adj_13234
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i8_3_lut_adj_1854
-Route         1   e 1.020                                  \u_props/n8_adj_13235
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i10_3_lut_3_lut_adj_1977
-Route         1   e 1.020                                  \u_props/n10_adj_13233
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i12_3_lut_adj_1853
-Route         1   e 1.020                                  \u_props/n12_adj_13231
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i14_3_lut_adj_1852
-Route         1   e 1.020                                  \u_props/n14_adj_13232
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i16_3_lut_3_lut_adj_1975
-Route         1   e 1.020                                  \u_props/n130_adj_13230
-LUT4        ---     0.166              C to Z              \u_props/mux_28_i2_3_lut_adj_1851
-Route         2   e 1.158                                  \u_props/n138_adj_13221
-LUT4        ---     0.166              B to Z              \u_props/LessThan_30_i4_3_lut_adj_1850
-Route         1   e 1.020                                  \u_props/n4_adj_13228
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i6_3_lut_adj_1849
-Route         1   e 1.020                                  \u_props/n6_adj_13226
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i8_3_lut_adj_1848
-Route         1   e 1.020                                  \u_props/n8_adj_13227
-LUT4        ---     0.166              C to Z              \u_props/LessThan_30_i10_3_lut_3_lut_adj_1974
-Route         1   e 1.020                                  \u_props/n10_adj_13224
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i12_3_lut_adj_1847
-Route         1   e 1.020                                  \u_props/n12_adj_13225
-LUT4        ---     0.166              C to Z              \u_props/LessThan_30_i14_3_lut_3_lut_adj_1973
-Route         1   e 1.020                                  \u_props/n14_adj_13223
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i16_3_lut_adj_1846
-Route         1   e 1.020                                  \u_props/n146_adj_13222
-LUT4        ---     0.166              C to Z              \u_props/mux_31_i2_3_lut_adj_1845
-Route         2   e 1.158                                  \u_props/n154_adj_13215
-LUT4        ---     0.166              B to Z              \u_props/LessThan_33_i4_3_lut_adj_1844
-Route         1   e 1.020                                  \u_props/n4_adj_13219
-LUT4        ---     0.166              A to Z              \u_props/LessThan_33_i6_3_lut_adj_1843
-Route         1   e 1.020                                  \u_props/n6_adj_13220
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i8_3_lut_3_lut_adj_1999
-Route         1   e 1.020                                  \u_props/n8_adj_13217
-LUT4        ---     0.166              A to Z              \u_props/LessThan_33_i10_3_lut_adj_1842
-Route         1   e 1.020                                  \u_props/n10_adj_13218
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i12_3_lut_3_lut_adj_1972
-Route         1   e 1.020                                  \u_props/n12_adj_13433
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i14_3_lut_3_lut_adj_1997
-Route         1   e 1.020                                  \u_props/n14_adj_13429
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i16_3_lut_3_lut_adj_1970
-Route         1   e 1.020                                  \u_props/n162_adj_13216
-LUT4        ---     0.166              C to Z              \u_props/mux_34_i2_3_lut_adj_1841
-Route         2   e 1.158                                  \u_props/n170_adj_13204
-LUT4        ---     0.166              B to Z              \u_props/LessThan_36_i4_3_lut
-Route         1   e 1.020                                  \u_props/n4_adj_13212
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i6_3_lut
-Route         1   e 1.020                                  \u_props/n6_adj_13211
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i8_3_lut
-Route         1   e 1.020                                  \u_props/n8_adj_13209
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i10_3_lut
-Route         1   e 1.020                                  \u_props/n10_adj_13208
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i12_3_lut
-Route         1   e 1.020                                  \u_props/n12_adj_13207
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i14_3_lut
-Route         1   e 1.020                                  \u_props/n14_adj_13206
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i16_3_lut
-Route         1   e 1.020                                  \u_props/n178_adj_13205
-LUT4        ---     0.166              C to Z              \u_props/mux_37_i2_3_lut
-Route         2   e 1.158                                  \u_props/n186
-LUT4        ---     0.166              D to Z              \u_props/LessThan_39_i4_3_lut_4_lut_adj_2000
-Route         1   e 1.020                                  \u_props/n4_adj_13421
-LUT4        ---     0.166              A to Z              \u_props/i128783_4_lut
-Route         1   e 0.020                                  \u_props/n12_adj_13423
-MUXL5       ---     0.116           ALUT to Z              \u_props/LessThan_39_i14
-Route         1   e 1.020                                  \u_props/n14_adj_13420
-LUT4        ---     0.166              C to Z              \u_props/\i115274_rep_162_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158572
-LUT4        ---     0.166              C to Z              \u_props/\i115274_rep_158_3_lut
-Route         2   e 1.158                                  \u_props/min_score_7__N_3834[1]_adj_13196
-LUT4        ---     0.166              B to Z              \u_props/prop_score_flat_119__I_0_i4_3_lut_adj_1840
-Route         1   e 1.020                                  \u_props/n4_adj_13203
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i6_3_lut_adj_1839
-Route         1   e 1.020                                  \u_props/n6_adj_13201
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i8_3_lut_adj_1838
-Route         1   e 1.020                                  \u_props/n8_adj_13202
-LUT4        ---     0.166              C to Z              \u_props/prop_score_flat_119__I_0_i10_3_lut_3_lut_adj_1956
-Route         1   e 1.020                                  \u_props/n10_adj_13200
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i12_3_lut_adj_1837
-Route         1   e 1.020                                  \u_props/n12_adj_13199
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i14_3_lut_adj_1836
-Route         1   e 1.020                                  \u_props/n14_adj_13197
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i16_3_lut_adj_1835
-Route         1   e 1.020                                  \u_props/min_score_7__N_3842_adj_13198
-LUT4        ---     0.166              C to Z              \u_props/min_score_7__I_46_i2_3_lut_adj_1971
-Route         1   e 0.020                                  \u_props/min_score_7__N_3820[1]_adj_13430
-MUXL5       ---     0.116           ALUT to Z              \u_props/i115275
-Route         1   e 1.020                                  \u_props/n1
-LUT4        ---     0.166              B to Z              \u_props/i5_2_lut
-Route         1   e 1.020                                  \u_props/n156307
-LUT4        ---     0.166              C to Z              \u_props/prop_score_flat_127__I_0_i4_4_lut
-Route         1   e 0.020                                  \u_props/n4_adj_13333
-MUXL5       ---     0.116           BLUT to Z              \u_props/prop_score_flat_127__I_0_i14
-Route         1   e 1.020                                  \u_props/n14_adj_13309
-LUT4        ---     0.166              B to Z              \u_props/prop_score_flat_127__I_0_i16_4_lut
-Route        23   e 1.647                                  \u_props/min_score_7__N_3828
-LUT4        ---     0.166              D to Z              \u_props/LessThan_52_i7_4_lut_rep_2018
-Route         2   e 1.158                                  \u_props/n179191
-LUT4        ---     0.166              C to Z              \u_props/LessThan_52_i6_3_lut
-Route         1   e 1.020                                  \u_props/n6_adj_13327
-LUT4        ---     0.166              A to Z              \u_props/LessThan_52_i8_3_lut
-Route         1   e 0.020                                  \u_props/n8_adj_13329
-MUXL5       ---     0.116           ALUT to Z              \u_props/LessThan_52_i10
-Route         1   e 1.020                                  \u_props/n10_adj_13306
-LUT4        ---     0.166              A to Z              \u_props/LessThan_52_i12_3_lut
-Route         3   e 1.239                                  \u_props/n12_adj_13307
-LUT4        ---     0.166              D to Z              \u_props/i1_2_lut_4_lut_adj_2002
-Route         1   e 1.020                                  \u_props/n23
-LUT4        ---     0.166              B to Z              \u_props/i1_2_lut
-Route         1   e 1.020                                  \u_props/n24
-LUT4        ---     0.166              D to Z              \u_props/i1_4_lut
-Route         2   e 1.158                                  \u_props/n26_adj_13305
-LUT4        ---     0.166              A to Z              \u_props/i1_2_lut_4_lut_adj_2003
-Route        23   e 1.647                                  \u_props/PCLK_c_enable_594
-                  --------
-                  148.632  (14.0% logic, 86.0% route), 125 logic levels.
-
-
-Error:  The following path violates requirements by 143.553ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3IX    CK             \u_props/score_w[15]_i113  (from PCLK_c +)
-   Destination:    FD1P3IX    SP             \u_props/score_w[15]_i1  (to PCLK_c +)
-
-   Delay:                 148.632ns  (14.0% logic, 86.0% route), 125 logic levels.
-
- Constraint Details:
-
-    148.632ns data_path \u_props/score_w[15]_i113 to \u_props/score_w[15]_i1 violates
-      5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 143.553ns
-
- Path Details: \u_props/score_w[15]_i113 to \u_props/score_w[15]_i1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \u_props/score_w[15]_i113 (from PCLK_c)
-Route        18   e 1.698                                  prop_score_bus[9]
-LUT4        ---     0.166              A to Z              \u_props/prop_score_bus[9]_bdd_4_lut_131734
-Route         1   e 1.020                                  \u_props/n173623
-LUT4        ---     0.166              C to Z              \u_props/i117285_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158359
-LUT4        ---     0.166              C to Z              \u_props/i117175_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158233
-LUT4        ---     0.166              C to Z              \u_props/i116788_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n157832
-LUT4        ---     0.166              C to Z              \u_props/i12_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n9_adj_13289
-LUT4        ---     0.166              C to Z              \u_props/i10_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n7_adj_13284
-LUT4        ---     0.166              C to Z              \u_props/i8_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n5_adj_13130
-LUT4        ---     0.166              D to Z              \u_props/i5_4_lut
-Route         3   e 1.239                                  \u_props/n156304
-LUT4        ---     0.166              C to Z              \u_props/LessThan_6_i4_3_lut
-Route         1   e 1.020                                  \u_props/n4_adj_13127
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i6_3_lut
-Route         1   e 1.020                                  \u_props/n6_adj_13126
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i8_3_lut
-Route         1   e 1.020                                  \u_props/n8_adj_13125
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i10_3_lut
-Route         1   e 1.020                                  \u_props/n10_adj_13123
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i12_3_lut
-Route         1   e 1.020                                  \u_props/n12_adj_13120
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i14_3_lut
-Route         1   e 1.020                                  \u_props/n14_adj_13122
-LUT4        ---     0.166              C to Z              \u_props/LessThan_6_i16_3_lut_3_lut_4_lut
-Route         1   e 1.020                                  \u_props/n18_adj_13376
-LUT4        ---     0.166              C to Z              \u_props/mux_7_i2_3_lut_adj_2007
-Route         1   e 1.020                                  \u_props/n26_adj_13300
-LUT4        ---     0.166              A to Z              \u_props/n26_bdd_4_lut
-Route         3   e 1.239                                  \u_props/n3
-LUT4        ---     0.166              C to Z              \u_props/LessThan_9_i4_3_lut_adj_1890
-Route         1   e 1.020                                  \u_props/n4_adj_13277
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i6_3_lut_adj_1889
-Route         1   e 1.020                                  \u_props/n6_adj_13276
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i8_3_lut_adj_1888
-Route         1   e 1.020                                  \u_props/n8_adj_13275
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i10_3_lut_adj_1887
-Route         1   e 1.020                                  \u_props/n10_adj_13274
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i12_3_lut_adj_1886
-Route         1   e 1.020                                  \u_props/n12_adj_13272
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i14_3_lut_adj_1885
-Route         1   e 1.020                                  \u_props/n14_adj_13273
-LUT4        ---     0.166              C to Z              \u_props/LessThan_9_i16_3_lut_3_lut_adj_1989
-Route         1   e 1.020                                  \u_props/n34_adj_13271
-LUT4        ---     0.166              C to Z              \u_props/mux_10_i2_3_lut_adj_1884
-Route         2   e 1.158                                  \u_props/n42_adj_13262
-LUT4        ---     0.166              B to Z              \u_props/LessThan_12_i4_3_lut_adj_1883
-Route         1   e 1.020                                  \u_props/n4_adj_13269
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i6_3_lut_adj_1882
-Route         1   e 1.020                                  \u_props/n6_adj_13268
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i8_3_lut_adj_1881
-Route         1   e 1.020                                  \u_props/n8_adj_13267
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i10_3_lut_adj_1880
-Route         1   e 1.020                                  \u_props/n10_adj_13266
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i12_3_lut_adj_1879
-Route         1   e 1.020                                  \u_props/n12_adj_13264
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i14_3_lut_adj_1878
-Route         1   e 1.020                                  \u_props/n14_adj_13265
-LUT4        ---     0.166              C to Z              \u_props/LessThan_12_i16_3_lut_3_lut_adj_1990
-Route         1   e 1.020                                  \u_props/n50_adj_13263
-LUT4        ---     0.166              C to Z              \u_props/mux_13_i2_3_lut_adj_1877
-Route         2   e 1.158                                  \u_props/n58_adj_13254
-LUT4        ---     0.166              B to Z              \u_props/LessThan_15_i4_3_lut_adj_1876
-Route         1   e 1.020                                  \u_props/n4_adj_13261
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i6_3_lut_adj_1875
-Route         1   e 1.020                                  \u_props/n6_adj_13259
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i8_3_lut_adj_1874
-Route         1   e 1.020                                  \u_props/n8_adj_13260
-LUT4        ---     0.166              C to Z              \u_props/LessThan_15_i10_3_lut_3_lut_adj_1987
-Route         1   e 1.020                                  \u_props/n10_adj_13258
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i12_3_lut_adj_1873
-Route         1   e 1.020                                  \u_props/n12_adj_13257
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i14_3_lut_adj_1872
-Route         1   e 1.020                                  \u_props/n14_adj_13256
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i16_3_lut_adj_1871
-Route         1   e 1.020                                  \u_props/n66_adj_13255
-LUT4        ---     0.166              C to Z              \u_props/mux_16_i2_3_lut_adj_1870
-Route         2   e 1.158                                  \u_props/n74_adj_13246
-LUT4        ---     0.166              B to Z              \u_props/LessThan_18_i4_3_lut_adj_1869
-Route         1   e 1.020                                  \u_props/n4_adj_13253
-LUT4        ---     0.166              C to Z              \u_props/LessThan_18_i6_3_lut_3_lut_adj_1900
-Route         1   e 1.020                                  \u_props/n6_adj_13252
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i8_3_lut_adj_1868
-Route         1   e 1.020                                  \u_props/n8_adj_13251
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i10_3_lut_adj_1867
-Route         1   e 1.020                                  \u_props/n10_adj_13250
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i12_3_lut_adj_1866
-Route         1   e 1.020                                  \u_props/n12_adj_13249
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i14_3_lut_adj_1865
-Route         1   e 1.020                                  \u_props/n14_adj_13248
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i16_3_lut_adj_1864
-Route         1   e 1.020                                  \u_props/n82_adj_13247
-LUT4        ---     0.166              C to Z              \u_props/mux_19_i2_3_lut_adj_1863
-Route         2   e 1.158                                  \u_props/n90_adj_13243
-LUT4        ---     0.166              B to Z              \u_props/LessThan_21_i4_3_lut_adj_1862
-Route         1   e 1.020                                  \u_props/n4_adj_13245
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i6_3_lut_3_lut_adj_1991
-Route         1   e 1.020                                  \u_props/n6_adj_13449
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i8_3_lut_3_lut_adj_1993
-Route         1   e 1.020                                  \u_props/n8_adj_13441
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i10_3_lut_3_lut_adj_1984
-Route         1   e 1.020                                  \u_props/n10_adj_13442
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i12_3_lut_3_lut_adj_1985
-Route         1   e 1.020                                  \u_props/n12_adj_13445
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i14_3_lut_3_lut_adj_1986
-Route         1   e 1.020                                  \u_props/n14_adj_13438
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i16_3_lut_3_lut_adj_1982
-Route         1   e 1.020                                  \u_props/n98_adj_13244
-LUT4        ---     0.166              C to Z              \u_props/mux_22_i2_3_lut_adj_1861
-Route         2   e 1.158                                  \u_props/n106_adj_13236
-LUT4        ---     0.166              B to Z              \u_props/LessThan_24_i4_3_lut_adj_1860
-Route         1   e 1.020                                  \u_props/n4_adj_13242
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i6_3_lut_adj_1859
-Route         1   e 1.020                                  \u_props/n6_adj_13241
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i8_3_lut_adj_1858
-Route         1   e 1.020                                  \u_props/n8_adj_13240
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i10_3_lut_adj_1857
-Route         1   e 1.020                                  \u_props/n10_adj_13238
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i12_3_lut_adj_1856
-Route         1   e 1.020                                  \u_props/n12_adj_13239
-LUT4        ---     0.166              C to Z              \u_props/LessThan_24_i14_3_lut_3_lut_adj_1995
-Route         1   e 1.020                                  \u_props/n14_adj_13451
-LUT4        ---     0.166              C to Z              \u_props/LessThan_24_i16_3_lut_3_lut_adj_1994
-Route         1   e 1.020                                  \u_props/n114_adj_13237
-LUT4        ---     0.166              C to Z              \u_props/mux_25_i2_3_lut_adj_1855
-Route         2   e 1.158                                  \u_props/n122_adj_13229
-LUT4        ---     0.166              D to Z              \u_props/LessThan_27_i4_3_lut_4_lut_adj_1979
-Route         1   e 1.020                                  \u_props/n4_adj_13436
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i6_3_lut_3_lut_adj_1981
-Route         1   e 1.020                                  \u_props/n6_adj_13234
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i8_3_lut_adj_1854
-Route         1   e 1.020                                  \u_props/n8_adj_13235
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i10_3_lut_3_lut_adj_1977
-Route         1   e 1.020                                  \u_props/n10_adj_13233
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i12_3_lut_adj_1853
-Route         1   e 1.020                                  \u_props/n12_adj_13231
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i14_3_lut_adj_1852
-Route         1   e 1.020                                  \u_props/n14_adj_13232
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i16_3_lut_3_lut_adj_1975
-Route         1   e 1.020                                  \u_props/n130_adj_13230
-LUT4        ---     0.166              C to Z              \u_props/mux_28_i2_3_lut_adj_1851
-Route         2   e 1.158                                  \u_props/n138_adj_13221
-LUT4        ---     0.166              B to Z              \u_props/LessThan_30_i4_3_lut_adj_1850
-Route         1   e 1.020                                  \u_props/n4_adj_13228
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i6_3_lut_adj_1849
-Route         1   e 1.020                                  \u_props/n6_adj_13226
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i8_3_lut_adj_1848
-Route         1   e 1.020                                  \u_props/n8_adj_13227
-LUT4        ---     0.166              C to Z              \u_props/LessThan_30_i10_3_lut_3_lut_adj_1974
-Route         1   e 1.020                                  \u_props/n10_adj_13224
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i12_3_lut_adj_1847
-Route         1   e 1.020                                  \u_props/n12_adj_13225
-LUT4        ---     0.166              C to Z              \u_props/LessThan_30_i14_3_lut_3_lut_adj_1973
-Route         1   e 1.020                                  \u_props/n14_adj_13223
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i16_3_lut_adj_1846
-Route         1   e 1.020                                  \u_props/n146_adj_13222
-LUT4        ---     0.166              C to Z              \u_props/mux_31_i2_3_lut_adj_1845
-Route         2   e 1.158                                  \u_props/n154_adj_13215
-LUT4        ---     0.166              B to Z              \u_props/LessThan_33_i4_3_lut_adj_1844
-Route         1   e 1.020                                  \u_props/n4_adj_13219
-LUT4        ---     0.166              A to Z              \u_props/LessThan_33_i6_3_lut_adj_1843
-Route         1   e 1.020                                  \u_props/n6_adj_13220
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i8_3_lut_3_lut_adj_1999
-Route         1   e 1.020                                  \u_props/n8_adj_13217
-LUT4        ---     0.166              A to Z              \u_props/LessThan_33_i10_3_lut_adj_1842
-Route         1   e 1.020                                  \u_props/n10_adj_13218
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i12_3_lut_3_lut_adj_1972
-Route         1   e 1.020                                  \u_props/n12_adj_13433
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i14_3_lut_3_lut_adj_1997
-Route         1   e 1.020                                  \u_props/n14_adj_13429
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i16_3_lut_3_lut_adj_1970
-Route         1   e 1.020                                  \u_props/n162_adj_13216
-LUT4        ---     0.166              C to Z              \u_props/mux_34_i2_3_lut_adj_1841
-Route         2   e 1.158                                  \u_props/n170_adj_13204
-LUT4        ---     0.166              B to Z              \u_props/LessThan_36_i4_3_lut
-Route         1   e 1.020                                  \u_props/n4_adj_13212
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i6_3_lut
-Route         1   e 1.020                                  \u_props/n6_adj_13211
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i8_3_lut
-Route         1   e 1.020                                  \u_props/n8_adj_13209
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i10_3_lut
-Route         1   e 1.020                                  \u_props/n10_adj_13208
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i12_3_lut
-Route         1   e 1.020                                  \u_props/n12_adj_13207
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i14_3_lut
-Route         1   e 1.020                                  \u_props/n14_adj_13206
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i16_3_lut
-Route         1   e 1.020                                  \u_props/n178_adj_13205
-LUT4        ---     0.166              C to Z              \u_props/mux_37_i2_3_lut
-Route         2   e 1.158                                  \u_props/n186
-LUT4        ---     0.166              D to Z              \u_props/LessThan_39_i4_3_lut_4_lut_adj_2000
-Route         1   e 1.020                                  \u_props/n4_adj_13421
-LUT4        ---     0.166              A to Z              \u_props/i128783_4_lut
-Route         1   e 0.020                                  \u_props/n12_adj_13423
-MUXL5       ---     0.116           ALUT to Z              \u_props/LessThan_39_i14
-Route         1   e 1.020                                  \u_props/n14_adj_13420
-LUT4        ---     0.166              C to Z              \u_props/\i115274_rep_162_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158572
-LUT4        ---     0.166              C to Z              \u_props/\i115274_rep_158_3_lut
-Route         2   e 1.158                                  \u_props/min_score_7__N_3834[1]_adj_13196
-LUT4        ---     0.166              B to Z              \u_props/prop_score_flat_119__I_0_i4_3_lut_adj_1840
-Route         1   e 1.020                                  \u_props/n4_adj_13203
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i6_3_lut_adj_1839
-Route         1   e 1.020                                  \u_props/n6_adj_13201
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i8_3_lut_adj_1838
-Route         1   e 1.020                                  \u_props/n8_adj_13202
-LUT4        ---     0.166              C to Z              \u_props/prop_score_flat_119__I_0_i10_3_lut_3_lut_adj_1956
-Route         1   e 1.020                                  \u_props/n10_adj_13200
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i12_3_lut_adj_1837
-Route         1   e 1.020                                  \u_props/n12_adj_13199
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i14_3_lut_adj_1836
-Route         1   e 1.020                                  \u_props/n14_adj_13197
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i16_3_lut_adj_1835
-Route         1   e 1.020                                  \u_props/min_score_7__N_3842_adj_13198
-LUT4        ---     0.166              C to Z              \u_props/min_score_7__I_46_i2_3_lut_adj_1971
-Route         1   e 0.020                                  \u_props/min_score_7__N_3820[1]_adj_13430
-MUXL5       ---     0.116           ALUT to Z              \u_props/i115275
-Route         1   e 1.020                                  \u_props/n1
-LUT4        ---     0.166              B to Z              \u_props/i5_2_lut
-Route         1   e 1.020                                  \u_props/n156307
-LUT4        ---     0.166              C to Z              \u_props/prop_score_flat_127__I_0_i4_4_lut
-Route         1   e 0.020                                  \u_props/n4_adj_13333
-MUXL5       ---     0.116           BLUT to Z              \u_props/prop_score_flat_127__I_0_i14
-Route         1   e 1.020                                  \u_props/n14_adj_13309
-LUT4        ---     0.166              B to Z              \u_props/prop_score_flat_127__I_0_i16_4_lut
-Route        23   e 1.647                                  \u_props/min_score_7__N_3828
-LUT4        ---     0.166              D to Z              \u_props/LessThan_52_i7_4_lut_rep_2018
-Route         2   e 1.158                                  \u_props/n179191
-LUT4        ---     0.166              C to Z              \u_props/LessThan_52_i6_3_lut
-Route         1   e 1.020                                  \u_props/n6_adj_13327
-LUT4        ---     0.166              A to Z              \u_props/LessThan_52_i8_3_lut
-Route         1   e 0.020                                  \u_props/n8_adj_13329
-MUXL5       ---     0.116           ALUT to Z              \u_props/LessThan_52_i10
-Route         1   e 1.020                                  \u_props/n10_adj_13306
-LUT4        ---     0.166              A to Z              \u_props/LessThan_52_i12_3_lut
-Route         3   e 1.239                                  \u_props/n12_adj_13307
-LUT4        ---     0.166              D to Z              \u_props/i1_2_lut_4_lut_adj_2002
-Route         1   e 1.020                                  \u_props/n23
-LUT4        ---     0.166              B to Z              \u_props/i1_2_lut
-Route         1   e 1.020                                  \u_props/n24
-LUT4        ---     0.166              D to Z              \u_props/i1_4_lut
-Route         2   e 1.158                                  \u_props/n26_adj_13305
-LUT4        ---     0.166              A to Z              \u_props/i1_2_lut_4_lut_adj_2003
-Route        23   e 1.647                                  \u_props/PCLK_c_enable_594
-                  --------
-                  148.632  (14.0% logic, 86.0% route), 125 logic levels.
-
-
-Error:  The following path violates requirements by 143.553ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3IX    CK             \u_props/score_w[15]_i113  (from PCLK_c +)
-   Destination:    FD1P3IX    SP             \u_props/score_w[15]_i2  (to PCLK_c +)
-
-   Delay:                 148.632ns  (14.0% logic, 86.0% route), 125 logic levels.
-
- Constraint Details:
-
-    148.632ns data_path \u_props/score_w[15]_i113 to \u_props/score_w[15]_i2 violates
-      5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 143.553ns
-
- Path Details: \u_props/score_w[15]_i113 to \u_props/score_w[15]_i2
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \u_props/score_w[15]_i113 (from PCLK_c)
-Route        18   e 1.698                                  prop_score_bus[9]
-LUT4        ---     0.166              A to Z              \u_props/prop_score_bus[9]_bdd_4_lut_131734
-Route         1   e 1.020                                  \u_props/n173623
-LUT4        ---     0.166              C to Z              \u_props/i117285_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158359
-LUT4        ---     0.166              C to Z              \u_props/i117175_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158233
-LUT4        ---     0.166              C to Z              \u_props/i116788_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n157832
-LUT4        ---     0.166              C to Z              \u_props/i12_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n9_adj_13289
-LUT4        ---     0.166              C to Z              \u_props/i10_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n7_adj_13284
-LUT4        ---     0.166              C to Z              \u_props/i8_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n5_adj_13130
-LUT4        ---     0.166              D to Z              \u_props/i5_4_lut
-Route         3   e 1.239                                  \u_props/n156304
-LUT4        ---     0.166              C to Z              \u_props/LessThan_6_i4_3_lut_adj_1833
-Route         1   e 1.020                                  \u_props/n4_adj_13138
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i6_3_lut_adj_1832
-Route         1   e 1.020                                  \u_props/n6_adj_13137
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i8_3_lut_adj_1831
-Route         1   e 1.020                                  \u_props/n8_adj_13136
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i10_3_lut_adj_1830
-Route         1   e 1.020                                  \u_props/n10_adj_13135
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i12_3_lut_adj_1829
-Route         1   e 1.020                                  \u_props/n12_adj_13133
-LUT4        ---     0.166              A to Z              \u_props/LessThan_6_i14_3_lut_adj_1828
-Route         1   e 1.020                                  \u_props/n14_adj_13134
-LUT4        ---     0.166              C to Z              \u_props/LessThan_6_i16_3_lut_3_lut_4_lut_adj_1918
-Route         1   e 1.020                                  \u_props/n18_adj_13384
-LUT4        ---     0.166              C to Z              \u_props/mux_7_i2_3_lut_adj_2006
-Route         1   e 1.020                                  \u_props/n26_adj_13301
-LUT4        ---     0.166              B to Z              \u_props/n26_bdd_4_lut
-Route         3   e 1.239                                  \u_props/n3
-LUT4        ---     0.166              C to Z              \u_props/LessThan_9_i4_3_lut_adj_1890
-Route         1   e 1.020                                  \u_props/n4_adj_13277
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i6_3_lut_adj_1889
-Route         1   e 1.020                                  \u_props/n6_adj_13276
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i8_3_lut_adj_1888
-Route         1   e 1.020                                  \u_props/n8_adj_13275
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i10_3_lut_adj_1887
-Route         1   e 1.020                                  \u_props/n10_adj_13274
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i12_3_lut_adj_1886
-Route         1   e 1.020                                  \u_props/n12_adj_13272
-LUT4        ---     0.166              A to Z              \u_props/LessThan_9_i14_3_lut_adj_1885
-Route         1   e 1.020                                  \u_props/n14_adj_13273
-LUT4        ---     0.166              C to Z              \u_props/LessThan_9_i16_3_lut_3_lut_adj_1989
-Route         1   e 1.020                                  \u_props/n34_adj_13271
-LUT4        ---     0.166              C to Z              \u_props/mux_10_i2_3_lut_adj_1884
-Route         2   e 1.158                                  \u_props/n42_adj_13262
-LUT4        ---     0.166              B to Z              \u_props/LessThan_12_i4_3_lut_adj_1883
-Route         1   e 1.020                                  \u_props/n4_adj_13269
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i6_3_lut_adj_1882
-Route         1   e 1.020                                  \u_props/n6_adj_13268
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i8_3_lut_adj_1881
-Route         1   e 1.020                                  \u_props/n8_adj_13267
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i10_3_lut_adj_1880
-Route         1   e 1.020                                  \u_props/n10_adj_13266
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i12_3_lut_adj_1879
-Route         1   e 1.020                                  \u_props/n12_adj_13264
-LUT4        ---     0.166              A to Z              \u_props/LessThan_12_i14_3_lut_adj_1878
-Route         1   e 1.020                                  \u_props/n14_adj_13265
-LUT4        ---     0.166              C to Z              \u_props/LessThan_12_i16_3_lut_3_lut_adj_1990
-Route         1   e 1.020                                  \u_props/n50_adj_13263
-LUT4        ---     0.166              C to Z              \u_props/mux_13_i2_3_lut_adj_1877
-Route         2   e 1.158                                  \u_props/n58_adj_13254
-LUT4        ---     0.166              B to Z              \u_props/LessThan_15_i4_3_lut_adj_1876
-Route         1   e 1.020                                  \u_props/n4_adj_13261
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i6_3_lut_adj_1875
-Route         1   e 1.020                                  \u_props/n6_adj_13259
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i8_3_lut_adj_1874
-Route         1   e 1.020                                  \u_props/n8_adj_13260
-LUT4        ---     0.166              C to Z              \u_props/LessThan_15_i10_3_lut_3_lut_adj_1987
-Route         1   e 1.020                                  \u_props/n10_adj_13258
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i12_3_lut_adj_1873
-Route         1   e 1.020                                  \u_props/n12_adj_13257
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i14_3_lut_adj_1872
-Route         1   e 1.020                                  \u_props/n14_adj_13256
-LUT4        ---     0.166              A to Z              \u_props/LessThan_15_i16_3_lut_adj_1871
-Route         1   e 1.020                                  \u_props/n66_adj_13255
-LUT4        ---     0.166              C to Z              \u_props/mux_16_i2_3_lut_adj_1870
-Route         2   e 1.158                                  \u_props/n74_adj_13246
-LUT4        ---     0.166              B to Z              \u_props/LessThan_18_i4_3_lut_adj_1869
-Route         1   e 1.020                                  \u_props/n4_adj_13253
-LUT4        ---     0.166              C to Z              \u_props/LessThan_18_i6_3_lut_3_lut_adj_1900
-Route         1   e 1.020                                  \u_props/n6_adj_13252
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i8_3_lut_adj_1868
-Route         1   e 1.020                                  \u_props/n8_adj_13251
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i10_3_lut_adj_1867
-Route         1   e 1.020                                  \u_props/n10_adj_13250
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i12_3_lut_adj_1866
-Route         1   e 1.020                                  \u_props/n12_adj_13249
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i14_3_lut_adj_1865
-Route         1   e 1.020                                  \u_props/n14_adj_13248
-LUT4        ---     0.166              A to Z              \u_props/LessThan_18_i16_3_lut_adj_1864
-Route         1   e 1.020                                  \u_props/n82_adj_13247
-LUT4        ---     0.166              C to Z              \u_props/mux_19_i2_3_lut_adj_1863
-Route         2   e 1.158                                  \u_props/n90_adj_13243
-LUT4        ---     0.166              B to Z              \u_props/LessThan_21_i4_3_lut_adj_1862
-Route         1   e 1.020                                  \u_props/n4_adj_13245
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i6_3_lut_3_lut_adj_1991
-Route         1   e 1.020                                  \u_props/n6_adj_13449
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i8_3_lut_3_lut_adj_1993
-Route         1   e 1.020                                  \u_props/n8_adj_13441
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i10_3_lut_3_lut_adj_1984
-Route         1   e 1.020                                  \u_props/n10_adj_13442
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i12_3_lut_3_lut_adj_1985
-Route         1   e 1.020                                  \u_props/n12_adj_13445
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i14_3_lut_3_lut_adj_1986
-Route         1   e 1.020                                  \u_props/n14_adj_13438
-LUT4        ---     0.166              C to Z              \u_props/LessThan_21_i16_3_lut_3_lut_adj_1982
-Route         1   e 1.020                                  \u_props/n98_adj_13244
-LUT4        ---     0.166              C to Z              \u_props/mux_22_i2_3_lut_adj_1861
-Route         2   e 1.158                                  \u_props/n106_adj_13236
-LUT4        ---     0.166              B to Z              \u_props/LessThan_24_i4_3_lut_adj_1860
-Route         1   e 1.020                                  \u_props/n4_adj_13242
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i6_3_lut_adj_1859
-Route         1   e 1.020                                  \u_props/n6_adj_13241
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i8_3_lut_adj_1858
-Route         1   e 1.020                                  \u_props/n8_adj_13240
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i10_3_lut_adj_1857
-Route         1   e 1.020                                  \u_props/n10_adj_13238
-LUT4        ---     0.166              A to Z              \u_props/LessThan_24_i12_3_lut_adj_1856
-Route         1   e 1.020                                  \u_props/n12_adj_13239
-LUT4        ---     0.166              C to Z              \u_props/LessThan_24_i14_3_lut_3_lut_adj_1995
-Route         1   e 1.020                                  \u_props/n14_adj_13451
-LUT4        ---     0.166              C to Z              \u_props/LessThan_24_i16_3_lut_3_lut_adj_1994
-Route         1   e 1.020                                  \u_props/n114_adj_13237
-LUT4        ---     0.166              C to Z              \u_props/mux_25_i2_3_lut_adj_1855
-Route         2   e 1.158                                  \u_props/n122_adj_13229
-LUT4        ---     0.166              D to Z              \u_props/LessThan_27_i4_3_lut_4_lut_adj_1979
-Route         1   e 1.020                                  \u_props/n4_adj_13436
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i6_3_lut_3_lut_adj_1981
-Route         1   e 1.020                                  \u_props/n6_adj_13234
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i8_3_lut_adj_1854
-Route         1   e 1.020                                  \u_props/n8_adj_13235
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i10_3_lut_3_lut_adj_1977
-Route         1   e 1.020                                  \u_props/n10_adj_13233
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i12_3_lut_adj_1853
-Route         1   e 1.020                                  \u_props/n12_adj_13231
-LUT4        ---     0.166              A to Z              \u_props/LessThan_27_i14_3_lut_adj_1852
-Route         1   e 1.020                                  \u_props/n14_adj_13232
-LUT4        ---     0.166              C to Z              \u_props/LessThan_27_i16_3_lut_3_lut_adj_1975
-Route         1   e 1.020                                  \u_props/n130_adj_13230
-LUT4        ---     0.166              C to Z              \u_props/mux_28_i2_3_lut_adj_1851
-Route         2   e 1.158                                  \u_props/n138_adj_13221
-LUT4        ---     0.166              B to Z              \u_props/LessThan_30_i4_3_lut_adj_1850
-Route         1   e 1.020                                  \u_props/n4_adj_13228
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i6_3_lut_adj_1849
-Route         1   e 1.020                                  \u_props/n6_adj_13226
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i8_3_lut_adj_1848
-Route         1   e 1.020                                  \u_props/n8_adj_13227
-LUT4        ---     0.166              C to Z              \u_props/LessThan_30_i10_3_lut_3_lut_adj_1974
-Route         1   e 1.020                                  \u_props/n10_adj_13224
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i12_3_lut_adj_1847
-Route         1   e 1.020                                  \u_props/n12_adj_13225
-LUT4        ---     0.166              C to Z              \u_props/LessThan_30_i14_3_lut_3_lut_adj_1973
-Route         1   e 1.020                                  \u_props/n14_adj_13223
-LUT4        ---     0.166              A to Z              \u_props/LessThan_30_i16_3_lut_adj_1846
-Route         1   e 1.020                                  \u_props/n146_adj_13222
-LUT4        ---     0.166              C to Z              \u_props/mux_31_i2_3_lut_adj_1845
-Route         2   e 1.158                                  \u_props/n154_adj_13215
-LUT4        ---     0.166              B to Z              \u_props/LessThan_33_i4_3_lut_adj_1844
-Route         1   e 1.020                                  \u_props/n4_adj_13219
-LUT4        ---     0.166              A to Z              \u_props/LessThan_33_i6_3_lut_adj_1843
-Route         1   e 1.020                                  \u_props/n6_adj_13220
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i8_3_lut_3_lut_adj_1999
-Route         1   e 1.020                                  \u_props/n8_adj_13217
-LUT4        ---     0.166              A to Z              \u_props/LessThan_33_i10_3_lut_adj_1842
-Route         1   e 1.020                                  \u_props/n10_adj_13218
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i12_3_lut_3_lut_adj_1972
-Route         1   e 1.020                                  \u_props/n12_adj_13433
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i14_3_lut_3_lut_adj_1997
-Route         1   e 1.020                                  \u_props/n14_adj_13429
-LUT4        ---     0.166              C to Z              \u_props/LessThan_33_i16_3_lut_3_lut_adj_1970
-Route         1   e 1.020                                  \u_props/n162_adj_13216
-LUT4        ---     0.166              C to Z              \u_props/mux_34_i2_3_lut_adj_1841
-Route         2   e 1.158                                  \u_props/n170_adj_13204
-LUT4        ---     0.166              B to Z              \u_props/LessThan_36_i4_3_lut
-Route         1   e 1.020                                  \u_props/n4_adj_13212
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i6_3_lut
-Route         1   e 1.020                                  \u_props/n6_adj_13211
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i8_3_lut
-Route         1   e 1.020                                  \u_props/n8_adj_13209
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i10_3_lut
-Route         1   e 1.020                                  \u_props/n10_adj_13208
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i12_3_lut
-Route         1   e 1.020                                  \u_props/n12_adj_13207
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i14_3_lut
-Route         1   e 1.020                                  \u_props/n14_adj_13206
-LUT4        ---     0.166              A to Z              \u_props/LessThan_36_i16_3_lut
-Route         1   e 1.020                                  \u_props/n178_adj_13205
-LUT4        ---     0.166              C to Z              \u_props/mux_37_i2_3_lut
-Route         2   e 1.158                                  \u_props/n186
-LUT4        ---     0.166              D to Z              \u_props/LessThan_39_i4_3_lut_4_lut_adj_2000
-Route         1   e 1.020                                  \u_props/n4_adj_13421
-LUT4        ---     0.166              A to Z              \u_props/i128783_4_lut
-Route         1   e 0.020                                  \u_props/n12_adj_13423
-MUXL5       ---     0.116           ALUT to Z              \u_props/LessThan_39_i14
-Route         1   e 1.020                                  \u_props/n14_adj_13420
-LUT4        ---     0.166              C to Z              \u_props/\i115274_rep_162_3_lut_3_lut
-Route         1   e 1.020                                  \u_props/n158572
-LUT4        ---     0.166              C to Z              \u_props/\i115274_rep_158_3_lut
-Route         2   e 1.158                                  \u_props/min_score_7__N_3834[1]_adj_13196
-LUT4        ---     0.166              B to Z              \u_props/prop_score_flat_119__I_0_i4_3_lut_adj_1840
-Route         1   e 1.020                                  \u_props/n4_adj_13203
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i6_3_lut_adj_1839
-Route         1   e 1.020                                  \u_props/n6_adj_13201
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i8_3_lut_adj_1838
-Route         1   e 1.020                                  \u_props/n8_adj_13202
-LUT4        ---     0.166              C to Z              \u_props/prop_score_flat_119__I_0_i10_3_lut_3_lut_adj_1956
-Route         1   e 1.020                                  \u_props/n10_adj_13200
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i12_3_lut_adj_1837
-Route         1   e 1.020                                  \u_props/n12_adj_13199
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i14_3_lut_adj_1836
-Route         1   e 1.020                                  \u_props/n14_adj_13197
-LUT4        ---     0.166              A to Z              \u_props/prop_score_flat_119__I_0_i16_3_lut_adj_1835
-Route         1   e 1.020                                  \u_props/min_score_7__N_3842_adj_13198
-LUT4        ---     0.166              C to Z              \u_props/min_score_7__I_46_i2_3_lut_adj_1971
-Route         1   e 0.020                                  \u_props/min_score_7__N_3820[1]_adj_13430
-MUXL5       ---     0.116           ALUT to Z              \u_props/i115275
-Route         1   e 1.020                                  \u_props/n1
-LUT4        ---     0.166              B to Z              \u_props/i5_2_lut
-Route         1   e 1.020                                  \u_props/n156307
-LUT4        ---     0.166              C to Z              \u_props/prop_score_flat_127__I_0_i4_4_lut
-Route         1   e 0.020                                  \u_props/n4_adj_13333
-MUXL5       ---     0.116           BLUT to Z              \u_props/prop_score_flat_127__I_0_i14
-Route         1   e 1.020                                  \u_props/n14_adj_13309
-LUT4        ---     0.166              B to Z              \u_props/prop_score_flat_127__I_0_i16_4_lut
-Route        23   e 1.647                                  \u_props/min_score_7__N_3828
-LUT4        ---     0.166              D to Z              \u_props/LessThan_52_i7_4_lut_rep_2018
-Route         2   e 1.158                                  \u_props/n179191
-LUT4        ---     0.166              C to Z              \u_props/LessThan_52_i6_3_lut
-Route         1   e 1.020                                  \u_props/n6_adj_13327
-LUT4        ---     0.166              A to Z              \u_props/LessThan_52_i8_3_lut
-Route         1   e 0.020                                  \u_props/n8_adj_13329
-MUXL5       ---     0.116           ALUT to Z              \u_props/LessThan_52_i10
-Route         1   e 1.020                                  \u_props/n10_adj_13306
-LUT4        ---     0.166              A to Z              \u_props/LessThan_52_i12_3_lut
-Route         3   e 1.239                                  \u_props/n12_adj_13307
-LUT4        ---     0.166              D to Z              \u_props/i1_2_lut_4_lut_adj_2002
-Route         1   e 1.020                                  \u_props/n23
-LUT4        ---     0.166              B to Z              \u_props/i1_2_lut
-Route         1   e 1.020                                  \u_props/n24
-LUT4        ---     0.166              D to Z              \u_props/i1_4_lut
-Route         2   e 1.158                                  \u_props/n26_adj_13305
-LUT4        ---     0.166              A to Z              \u_props/i1_2_lut_4_lut_adj_2003
-Route        23   e 1.647                                  \u_props/PCLK_c_enable_594
-                  --------
-                  148.632  (14.0% logic, 86.0% route), 125 logic levels.
-
-Warning: 148.553 ns is the maximum delay for this constraint.
-
-
-
-================================================================================
 Constraint: create_clock -period 5.000000 -name clk0 [get_nets SD_CLK_c]
             4096 items scored, 4096 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 16.577ns
+Error:  The following path violates requirements by 9.856ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             \u_candidate_bus/u_track_count/scan_idx__i0  (from SD_CLK_c +)
-   Destination:    FD1P3AX    SP             \u_candidate_bus/u_track_count/best_dist_i1  (to SD_CLK_c +)
+   Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
+   Destination:    FD1P3AX    SP             \u_cam_cfg/cur_reg__i1  (to SD_CLK_c +)
 
-   Delay:                  21.656ns  (24.3% logic, 75.7% route), 27 logic levels.
+   Delay:                  14.935ns  (16.4% logic, 83.6% route), 14 logic levels.
 
  Constraint Details:
 
-     21.656ns data_path \u_candidate_bus/u_track_count/scan_idx__i0 to \u_candidate_bus/u_track_count/best_dist_i1 violates
+     14.935ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1 violates
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 16.577ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 9.856ns
 
- Path Details: \u_candidate_bus/u_track_count/scan_idx__i0 to \u_candidate_bus/u_track_count/best_dist_i1
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \u_candidate_bus/u_track_count/scan_idx__i0 (from SD_CLK_c)
-Route        73   e 1.978                                  scan_idx[0]
-LUT4        ---     0.166              C to Z              \u_candidate_bus/u_track_count/t_cy[0][3]_bdd_3_lut_133259
-Route         1   e 0.020                                  \u_candidate_bus/u_track_count/n175372
-MUXL5       ---     0.116           BLUT to Z              \u_candidate_bus/u_track_count/i133169
-Route         1   e 0.020                                  \u_candidate_bus/u_track_count/n175373
-MUXL5       ---     0.116             D0 to Z              \u_candidate_bus/u_track_count/i133171
-Route         2   e 1.158                                  scan_dy_w_15__N_8551[3]
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15761_add_4_1
-Route         1   e 0.020                                  n135781
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_3
-Route         1   e 0.020                                  n135782
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_5
-Route         1   e 0.020                                  n135783
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_7
-Route         1   e 0.020                                  n135784
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_9
-Route         1   e 0.020                                  n135785
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15761_add_4_11
-Route         8   e 1.535                                  scan_dy_w_15__N_8534[12]
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_15752_add_4_11
-Route         1   e 0.020                                  n135690
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15752_add_4_cout
-Route        12   e 1.616                                  cout_adj_13723
-LUT4        ---     0.166              A to Z              \u_candidate_bus/u_track_count/i3236_2_lut_rep_2531
-Route        13   e 1.532                                  n179704
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15710_add_4_1
-Route         1   e 0.020                                  n136053
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15710_add_4_3
-Route         1   e 1.020                                  n69_adj_14018
-LUT4        ---     0.166              C to Z              \u_candidate_bus/u_track_count/i94822_3_lut_4_lut
-Route         1   e 1.020                                  n135267
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_15713_add_4_3
-Route         1   e 0.020                                  n135911
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15713_add_4_5
-Route         1   e 0.020                                  n135912
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15713_add_4_7
-Route         1   e 0.020                                  n135913
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15713_add_4_9
-Route         1   e 0.020                                  n135914
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15713_add_4_11
-Route         1   e 0.020                                  n135915
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15713_add_4_13
-Route         2   e 1.258                                  scan_dist_w[13]
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15788_add_4_16
-Route         1   e 0.020                                  n135969
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15788_add_4_18
-Route         2   e 1.258                                  cout_adj_13960
-LUT4        ---     0.166              A to Z              \u_candidate_bus/u_track_count/i1_4_lut_4_lut_adj_1320
-Route         1   e 1.020                                  \u_candidate_bus/u_track_count/n24
-LUT4        ---     0.166              B to Z              \u_candidate_bus/u_track_count/n20_bdd_4_lut
-Route         2   e 1.158                                  \u_candidate_bus/u_track_count/n178926
-LUT4        ---     0.166              B to Z              \u_candidate_bus/u_track_count/i1_2_lut_rep_1889
-Route        14   e 1.547                                  \u_candidate_bus/u_track_count/SD_CLK_c_enable_1023
+L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
+Route        37   e 1.842                                  \u_cam_cfg/st[2]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i20921_2_lut_rep_307
+Route        15   e 1.561                                  n61777
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11931_add_4_3
+Route         1   e 0.020                                  n56203
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_5
+Route         1   e 0.020                                  n56204
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_7
+Route         1   e 0.020                                  n56205
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_9
+Route         1   e 0.020                                  n56206
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11931_add_4_11
+Route        45   e 1.881                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23017_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60164
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/u_rom/i23019
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/rom_entry[2]
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_626
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58987
+LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_624
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58993
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_622
+Route         3   e 1.239                                  \u_cam_cfg/n58276
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_3_lut_rep_230
+Route         2   e 1.158                                  \u_cam_cfg/n61700
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_630
+Route        23   e 1.647                                  \u_cam_cfg/SD_CLK_c_enable_237
                   --------
-                   21.656  (24.3% logic, 75.7% route), 27 logic levels.
+                   14.935  (16.4% logic, 83.6% route), 14 logic levels.
 
 
-Error:  The following path violates requirements by 16.577ns
+Error:  The following path violates requirements by 9.856ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             \u_candidate_bus/u_track_count/scan_idx__i0  (from SD_CLK_c +)
-   Destination:    FD1P3AX    SP             \u_candidate_bus/u_track_count/best_dist_i1  (to SD_CLK_c +)
+   Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
+   Destination:    FD1P3AX    SP             \u_cam_cfg/cur_reg__i1  (to SD_CLK_c +)
 
-   Delay:                  21.656ns  (24.3% logic, 75.7% route), 27 logic levels.
+   Delay:                  14.935ns  (16.4% logic, 83.6% route), 14 logic levels.
 
  Constraint Details:
 
-     21.656ns data_path \u_candidate_bus/u_track_count/scan_idx__i0 to \u_candidate_bus/u_track_count/best_dist_i1 violates
+     14.935ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1 violates
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 16.577ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 9.856ns
 
- Path Details: \u_candidate_bus/u_track_count/scan_idx__i0 to \u_candidate_bus/u_track_count/best_dist_i1
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \u_candidate_bus/u_track_count/scan_idx__i0 (from SD_CLK_c)
-Route        73   e 1.978                                  scan_idx[0]
-LUT4        ---     0.166              C to Z              \u_candidate_bus/u_track_count/t_cy[0][3]_bdd_3_lut_133259
-Route         1   e 0.020                                  \u_candidate_bus/u_track_count/n175372
-MUXL5       ---     0.116           BLUT to Z              \u_candidate_bus/u_track_count/i133169
-Route         1   e 0.020                                  \u_candidate_bus/u_track_count/n175373
-MUXL5       ---     0.116             D0 to Z              \u_candidate_bus/u_track_count/i133171
-Route         2   e 1.158                                  scan_dy_w_15__N_8551[3]
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15761_add_4_1
-Route         1   e 0.020                                  n135781
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_3
-Route         1   e 0.020                                  n135782
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_5
-Route         1   e 0.020                                  n135783
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_7
-Route         1   e 0.020                                  n135784
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_9
-Route         1   e 0.020                                  n135785
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15761_add_4_11
-Route         8   e 1.535                                  scan_dy_w_15__N_8534[12]
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_15752_add_4_11
-Route         1   e 0.020                                  n135690
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15752_add_4_cout
-Route        12   e 1.616                                  cout_adj_13723
-LUT4        ---     0.166              A to Z              \u_candidate_bus/u_track_count/i3236_2_lut_rep_2531
-Route        13   e 1.532                                  n179704
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15710_add_4_1
-Route         1   e 0.020                                  n136053
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15710_add_4_3
-Route         1   e 0.020                                  n136054
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15710_add_4_5
-Route         1   e 1.020                                  n63_adj_14021
-LUT4        ---     0.166              C to Z              \u_candidate_bus/u_track_count/i94818_3_lut_4_lut
-Route         1   e 1.020                                  n135263
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_15713_add_4_5
-Route         1   e 0.020                                  n135912
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15713_add_4_7
-Route         2   e 1.258                                  scan_dist_w[7]
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15788_add_4_10
-Route         1   e 0.020                                  n135966
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15788_add_4_12
-Route         1   e 0.020                                  n135967
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15788_add_4_14
-Route         1   e 0.020                                  n135968
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15788_add_4_16
-Route         1   e 0.020                                  n135969
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15788_add_4_18
-Route         2   e 1.258                                  cout_adj_13960
-LUT4        ---     0.166              A to Z              \u_candidate_bus/u_track_count/i1_4_lut_4_lut_adj_1320
-Route         1   e 1.020                                  \u_candidate_bus/u_track_count/n24
-LUT4        ---     0.166              B to Z              \u_candidate_bus/u_track_count/n20_bdd_4_lut
-Route         2   e 1.158                                  \u_candidate_bus/u_track_count/n178926
-LUT4        ---     0.166              B to Z              \u_candidate_bus/u_track_count/i1_2_lut_rep_1889
-Route        14   e 1.547                                  \u_candidate_bus/u_track_count/SD_CLK_c_enable_1023
+L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
+Route        37   e 1.842                                  \u_cam_cfg/st[2]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i20921_2_lut_rep_307
+Route        15   e 1.561                                  n61777
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11931_add_4_3
+Route         1   e 0.020                                  n56203
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_5
+Route         1   e 0.020                                  n56204
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_7
+Route         1   e 0.020                                  n56205
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_9
+Route         1   e 0.020                                  n56206
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11931_add_4_11
+Route        45   e 1.881                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23015_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60162
+MUXL5       ---     0.116           ALUT to Z              \u_cam_cfg/u_rom/i23016
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/rom_entry[3]
+LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_626
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58987
+LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_624
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58993
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_622
+Route         3   e 1.239                                  \u_cam_cfg/n58276
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_3_lut_rep_230
+Route         2   e 1.158                                  \u_cam_cfg/n61700
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_630
+Route        23   e 1.647                                  \u_cam_cfg/SD_CLK_c_enable_237
                   --------
-                   21.656  (24.3% logic, 75.7% route), 27 logic levels.
+                   14.935  (16.4% logic, 83.6% route), 14 logic levels.
 
 
-Error:  The following path violates requirements by 16.577ns
+Error:  The following path violates requirements by 9.856ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             \u_candidate_bus/u_track_count/scan_idx__i0  (from SD_CLK_c +)
-   Destination:    FD1P3AX    SP             \u_candidate_bus/u_track_count/best_dist_i1  (to SD_CLK_c +)
+   Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
+   Destination:    FD1P3AX    SP             \u_cam_cfg/cur_reg__i1  (to SD_CLK_c +)
 
-   Delay:                  21.656ns  (24.3% logic, 75.7% route), 27 logic levels.
+   Delay:                  14.935ns  (16.4% logic, 83.6% route), 14 logic levels.
 
  Constraint Details:
 
-     21.656ns data_path \u_candidate_bus/u_track_count/scan_idx__i0 to \u_candidate_bus/u_track_count/best_dist_i1 violates
+     14.935ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1 violates
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 16.577ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 9.856ns
 
- Path Details: \u_candidate_bus/u_track_count/scan_idx__i0 to \u_candidate_bus/u_track_count/best_dist_i1
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \u_candidate_bus/u_track_count/scan_idx__i0 (from SD_CLK_c)
-Route        73   e 1.978                                  scan_idx[0]
-LUT4        ---     0.166              B to Z              \u_candidate_bus/u_track_count/n167841_bdd_3_lut_135598
-Route         1   e 0.020                                  \u_candidate_bus/u_track_count/n175369
-MUXL5       ---     0.116           BLUT to Z              \u_candidate_bus/u_track_count/i133166
-Route         1   e 0.020                                  \u_candidate_bus/u_track_count/n175370
-MUXL5       ---     0.116             D1 to Z              \u_candidate_bus/u_track_count/i133171
-Route         2   e 1.158                                  scan_dy_w_15__N_8551[3]
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15761_add_4_1
-Route         1   e 0.020                                  n135781
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_3
-Route         1   e 0.020                                  n135782
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_5
-Route         1   e 0.020                                  n135783
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_7
-Route         1   e 0.020                                  n135784
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15761_add_4_9
-Route         1   e 0.020                                  n135785
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15761_add_4_11
-Route         8   e 1.535                                  scan_dy_w_15__N_8534[12]
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_15752_add_4_11
-Route         1   e 0.020                                  n135690
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15752_add_4_cout
-Route        12   e 1.616                                  cout_adj_13723
-LUT4        ---     0.166              A to Z              \u_candidate_bus/u_track_count/i3236_2_lut_rep_2531
-Route        13   e 1.532                                  n179704
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15710_add_4_1
-Route         1   e 0.020                                  n136053
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15710_add_4_3
-Route         1   e 0.020                                  n136054
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15710_add_4_5
-Route         1   e 0.020                                  n136055
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15710_add_4_7
-Route         1   e 0.020                                  n136056
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15710_add_4_9
-Route         1   e 1.020                                  n51_adj_14027
-LUT4        ---     0.166              C to Z              \u_candidate_bus/u_track_count/i94810_3_lut_4_lut
-Route         1   e 1.020                                  n135255
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_15713_add_4_9
-Route         1   e 0.020                                  n135914
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15713_add_4_11
-Route         2   e 1.258                                  scan_dist_w[11]
-A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_15788_add_4_14
-Route         1   e 0.020                                  n135968
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_15788_add_4_16
-Route         1   e 0.020                                  n135969
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_15788_add_4_18
-Route         2   e 1.258                                  cout_adj_13960
-LUT4        ---     0.166              A to Z              \u_candidate_bus/u_track_count/i1_4_lut_4_lut_adj_1320
-Route         1   e 1.020                                  \u_candidate_bus/u_track_count/n24
-LUT4        ---     0.166              B to Z              \u_candidate_bus/u_track_count/n20_bdd_4_lut
-Route         2   e 1.158                                  \u_candidate_bus/u_track_count/n178926
-LUT4        ---     0.166              B to Z              \u_candidate_bus/u_track_count/i1_2_lut_rep_1889
-Route        14   e 1.547                                  \u_candidate_bus/u_track_count/SD_CLK_c_enable_1023
+L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
+Route        37   e 1.842                                  \u_cam_cfg/st[2]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i20921_2_lut_rep_307
+Route        15   e 1.561                                  n61777
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11931_add_4_3
+Route         1   e 0.020                                  n56203
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_5
+Route         1   e 0.020                                  n56204
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_7
+Route         1   e 0.020                                  n56205
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_9
+Route         1   e 0.020                                  n56206
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11931_add_4_11
+Route        45   e 1.881                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23008_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60155
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/u_rom/i23010
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/rom_entry[5]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_626
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58987
+LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_624
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58993
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_622
+Route         3   e 1.239                                  \u_cam_cfg/n58276
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_3_lut_rep_230
+Route         2   e 1.158                                  \u_cam_cfg/n61700
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_630
+Route        23   e 1.647                                  \u_cam_cfg/SD_CLK_c_enable_237
                   --------
-                   21.656  (24.3% logic, 75.7% route), 27 logic levels.
+                   14.935  (16.4% logic, 83.6% route), 14 logic levels.
 
-Warning: 21.577 ns is the maximum delay for this constraint.
+Warning: 14.856 ns is the maximum delay for this constraint.
 
 
 <A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -1094,387 +191,51 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets PCLK_c]                  |     5.000 ns|   148.553 ns|   125 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets SD_CLK_c]                |     5.000 ns|    21.577 ns|    27 *
+clk0 [get_nets SD_CLK_c]                |     5.000 ns|    14.856 ns|    14 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-2 constraints not met.
+1 constraints not met.
 
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-\u_candidate_bus/u_track_count/SD_CLK_c_|        |        |
-enable_1023                             |      14|    4096|     50.00%
+\u_cam_cfg/SD_CLK_c_enable_237          |      23|    4096|     99.00%
                                         |        |        |
-\u_candidate_bus/u_track_count/n24      |       1|    4096|     50.00%
+\u_cam_cfg/n58276                       |       3|    4096|     99.00%
                                         |        |        |
-\u_candidate_bus/u_track_count/n178926  |       2|    4096|     50.00%
+\u_cam_cfg/n61700                       |       2|    4096|     99.00%
                                         |        |        |
-\u_props/min_score_7__N_3820[1]_adj_1343|        |        |
-0                                       |       1|    4096|     50.00%
+\u_cam_cfg/u_rom/n58987                 |       1|    4096|     99.00%
                                         |        |        |
-\u_props/min_score_7__N_3828            |      23|    4096|     50.00%
+\u_cam_cfg/u_rom/n58993                 |       1|    4096|     99.00%
                                         |        |        |
-\u_props/min_score_7__N_3834[1]_adj_1319|        |        |
-6                                       |       2|    4096|     50.00%
+n56206                                  |       1|    4096|     99.00%
                                         |        |        |
-\u_props/min_score_7__N_3842_adj_13198  |       1|    4096|     50.00%
+n61777                                  |      15|    4048|     98.83%
                                         |        |        |
-\u_props/n1                             |       1|    4096|     50.00%
+n56205                                  |       1|    3360|     82.03%
                                         |        |        |
-\u_props/n3                             |       3|    4096|     50.00%
+n309                                    |      45|    2992|     73.05%
                                         |        |        |
-\u_props/n4_adj_13203                   |       1|    4096|     50.00%
+n56204                                  |       1|    2256|     55.08%
                                         |        |        |
-\u_props/n4_adj_13212                   |       1|    4096|     50.00%
+\u_cam_cfg/st[1]                        |      30|    2024|     49.41%
                                         |        |        |
-\u_props/n4_adj_13219                   |       1|    4096|     50.00%
+\u_cam_cfg/st[2]                        |      37|    2024|     49.41%
                                         |        |        |
-\u_props/n4_adj_13228                   |       1|    4096|     50.00%
+n56203                                  |       1|    1152|     28.13%
                                         |        |        |
-\u_props/n4_adj_13242                   |       1|    4096|     50.00%
+n308                                    |      25|    1104|     26.95%
                                         |        |        |
-\u_props/n4_adj_13245                   |       1|    4096|     50.00%
+\u_cam_cfg/u_rom/rom_entry[5]           |       1|    1048|     25.59%
                                         |        |        |
-\u_props/n4_adj_13253                   |       1|    4096|     50.00%
+\u_cam_cfg/u_rom/rom_entry[2]           |       1|    1016|     24.80%
                                         |        |        |
-\u_props/n4_adj_13261                   |       1|    4096|     50.00%
+\u_cam_cfg/u_rom/rom_entry[3]           |       1|    1016|     24.80%
                                         |        |        |
-\u_props/n4_adj_13269                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n4_adj_13277                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n4_adj_13333                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n4_adj_13421                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n4_adj_13436                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13201                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13211                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13220                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13226                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13234                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13241                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13252                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13259                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13268                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13276                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n6_adj_13449                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13202                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13209                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13217                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13227                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13235                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13240                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13251                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13260                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13267                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13275                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n8_adj_13441                   |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13200                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13208                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13218                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13224                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13233                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13238                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13250                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13258                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13266                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13274                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13306                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n10_adj_13442                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13199                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13207                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13225                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13231                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13239                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13249                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13257                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13264                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13272                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13307                  |       3|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13423                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13433                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n12_adj_13445                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13197                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13206                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13223                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13232                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13248                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13256                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13265                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13273                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13309                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13420                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13429                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13438                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n14_adj_13451                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n34_adj_13271                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n42_adj_13262                  |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n50_adj_13263                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n58_adj_13254                  |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n66_adj_13255                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n74_adj_13246                  |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n82_adj_13247                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n90_adj_13243                  |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n98_adj_13244                  |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n106_adj_13236                 |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n114_adj_13237                 |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n122_adj_13229                 |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n130_adj_13230                 |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n138_adj_13221                 |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n146_adj_13222                 |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n154_adj_13215                 |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n162_adj_13216                 |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n170_adj_13204                 |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n178_adj_13205                 |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n186                           |       2|    4096|     50.00%
-                                        |        |        |
-\u_props/n156307                        |       1|    4096|     50.00%
-                                        |        |        |
-\u_props/n158572                        |       1|    4096|     50.00%
-                                        |        |        |
-cout_adj_13723                          |      12|    4096|     50.00%
-                                        |        |        |
-cout_adj_13960                          |       2|    4096|     50.00%
-                                        |        |        |
-n135690                                 |       1|    4096|     50.00%
-                                        |        |        |
-n135781                                 |       1|    4096|     50.00%
-                                        |        |        |
-n135782                                 |       1|    4096|     50.00%
-                                        |        |        |
-n135783                                 |       1|    4096|     50.00%
-                                        |        |        |
-n135784                                 |       1|    4096|     50.00%
-                                        |        |        |
-n135785                                 |       1|    4096|     50.00%
-                                        |        |        |
-n135969                                 |       1|    4096|     50.00%
-                                        |        |        |
-n179704                                 |      13|    4096|     50.00%
-                                        |        |        |
-scan_dy_w_15__N_8534[12]                |       8|    4096|     50.00%
-                                        |        |        |
-scan_dy_w_15__N_8551[3]                 |       2|    4096|     50.00%
-                                        |        |        |
-scan_idx[0]                             |      73|    4096|     50.00%
-                                        |        |        |
-n136053                                 |       1|    3808|     46.48%
-                                        |        |        |
-\u_props/n26_adj_13305                  |       2|    3590|     43.82%
-                                        |        |        |
-\u_props/n23                            |       1|    3130|     38.21%
-                                        |        |        |
-\u_props/n24                            |       1|    3130|     38.21%
-                                        |        |        |
-\u_props/n5_adj_13130                   |       1|    3015|     36.80%
-                                        |        |        |
-\u_props/n7_adj_13284                   |       1|    3015|     36.80%
-                                        |        |        |
-\u_props/n9_adj_13289                   |       1|    3015|     36.80%
-                                        |        |        |
-\u_props/n156304                        |       3|    3015|     36.80%
-                                        |        |        |
-\u_props/n157832                        |       1|    3015|     36.80%
-                                        |        |        |
-\u_props/n158233                        |       1|    3015|     36.80%
-                                        |        |        |
-\u_props/n158359                        |       1|    3015|     36.80%
-                                        |        |        |
-n136054                                 |       1|    2849|     34.78%
-                                        |        |        |
-\u_props/n173623                        |       1|    2831|     34.56%
-                                        |        |        |
-\u_props/n4_adj_13127                   |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n6_adj_13126                   |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n8_adj_13125                   |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n10_adj_13123                  |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n12_adj_13120                  |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n14_adj_13122                  |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n18_adj_13376                  |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n26_adj_13300                  |       1|    2417|     29.50%
-                                        |        |        |
-\u_props/n179191                        |       2|    2369|     28.92%
-                                        |        |        |
-\u_props/n8_adj_13329                   |       1|    2325|     28.38%
-                                        |        |        |
-n135913                                 |       1|    2288|     27.93%
-                                        |        |        |
-n135968                                 |       1|    2282|     27.86%
-                                        |        |        |
-n135914                                 |       1|    2175|     26.55%
-                                        |        |        |
-\u_candidate_bus/u_track_count/n175373  |       1|    2070|     25.27%
-                                        |        |        |
-\u_props/PCLK_c_enable_594              |      23|    2047|     24.99%
-                                        |        |        |
-\u_candidate_bus/u_track_count/n175370  |       1|    2026|     24.73%
-                                        |        |        |
-n135912                                 |       1|    1935|     23.62%
-                                        |        |        |
-\u_props/n6_adj_13327                   |       1|    1886|     23.02%
-                                        |        |        |
-n136055                                 |       1|    1817|     22.18%
-                                        |        |        |
-n135915                                 |       1|    1814|     22.14%
-                                        |        |        |
-\u_props/n4_adj_13138                   |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n6_adj_13137                   |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n8_adj_13136                   |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n10_adj_13135                  |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n12_adj_13133                  |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n14_adj_13134                  |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n18_adj_13384                  |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n26_adj_13301                  |       1|    1679|     20.50%
-                                        |        |        |
-\u_props/n97803                         |      23|    1543|     18.84%
-                                        |        |        |
-n135967                                 |       1|    1365|     16.66%
-                                        |        |        |
-\u_props/n166140                        |       1|    1357|     16.56%
-                                        |        |        |
-prop_score_bus[9]                       |      18|    1242|     15.16%
-                                        |        |        |
-scan_dist_w[13]                         |       2|    1211|     14.78%
-                                        |        |        |
-n69_adj_14018                           |       1|    1120|     13.67%
-                                        |        |        |
-n135267                                 |       1|    1120|     13.67%
-                                        |        |        |
-n135911                                 |       1|    1120|     13.67%
-                                        |        |        |
-prop_score_bus[1]                       |      13|    1081|     13.20%
-                                        |        |        |
-\u_candidate_bus/u_track_count/n175369  |       1|    1044|     12.74%
-                                        |        |        |
-\u_candidate_bus/u_track_count/n175372  |       1|    1044|     12.74%
-                                        |        |        |
-\u_candidate_bus/u_track_count/n175371  |       1|    1026|     12.52%
-                                        |        |        |
-n136056                                 |       1|    1020|     12.45%
-                                        |        |        |
-\u_candidate_bus/u_track_count/n167841  |       1|     982|     11.99%
-                                        |        |        |
-\u_props/n9_adj_13328                   |       2|     922|     11.25%
-                                        |        |        |
-\u_props/n2_adj_13118                   |       1|     920|     11.23%
-                                        |        |        |
-\u_props/n6_adj_13415                   |       1|     920|     11.23%
-                                        |        |        |
-\u_props/n8_adj_13411                   |       1|     920|     11.23%
-                                        |        |        |
-\u_props/n10_adj_13119                  |       2|     920|     11.23%
-                                        |        |        |
-\u_props/n10_adj_13406                  |       1|     920|     11.23%
-                                        |        |        |
-\u_props/n12_adj_13288                  |       1|     920|     11.23%
-                                        |        |        |
-\u_props/n14_adj_13283                  |       1|     920|     11.23%
-                                        |        |        |
-n63_adj_14021                           |       1|     912|     11.13%
-                                        |        |        |
-n135263                                 |       1|     912|     11.13%
-                                        |        |        |
-\u_props/n158562                        |       1|     851|     10.39%
+\u_cam_cfg/u_rom/rom_entry[4]           |       1|    1016|     24.80%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -1482,13 +243,13 @@ n135263                                 |       1|     912|     11.13%
 <A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
 ---------------
 
-Timing errors: 8192  Score: 651360821
+Timing errors: 4096  Score: 39606496
 
-Constraints cover >4294967295 paths, 13090 nets, and 38388 connections (49.0% coverage)
+Constraints cover  119861 paths, 1754 nets, and 4683 connections (90.7% coverage)
 
 
-Peak memory: 429146112 bytes, TRCE: 42786816 bytes, DLYMAN: 0 bytes
-CPU_TIME_REPORT: 1 secs 
+Peak memory: 289480704 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
 
 
 

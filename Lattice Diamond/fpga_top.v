@@ -80,13 +80,22 @@ module fpga_top (
     wire [7:0] record_stride_ctrl, detect_decim_ctrl;
     wire clear_counts_pulse;
 
-    esp32_ctrl_uart u_ctrl (
-        .clk(clk_sys), .rst_n(rst_sys_n), .rx(RX), .tx(TX),
-        .frame_id_status(status_frame_id), .total_people(total_people),
-        .count_A_LR(count_A_LR), .count_A_RL(count_A_RL), .count_B_LR(count_B_LR), .count_B_RL(count_B_RL),
-        .sd_ready(sd_ready), .sd_err(sd_err),
-        .record_en(record_en_ctrl), .detect_en(detect_en_ctrl), .record_stride(record_stride_ctrl), .detect_decim(detect_decim_ctrl), .clear_counts_pulse(clear_counts_pulse)
-    );
+	wire        ctrl_capture_enable;
+	wire [1:0]  ctrl_mode;
+	wire [7:0]  ctrl_frame_stride;
+	wire        ctrl_clear_counts;
+	wire        ctrl_snapshot;
+	esp32_ctrl_uart_min_bridge u_ctrl (
+		.clk(clk_sys),
+		.rst_n(rst_sys_n),
+		.rx(RX),
+		.tx(TX),
+		.capture_enable(ctrl_capture_enable),
+		.mode(ctrl_mode),
+		.frame_stride(ctrl_frame_stride),
+		.clear_counts_pulse(ctrl_clear_counts),
+		.snapshot_pulse(ctrl_snapshot)
+	);
 
     assign DOUT = 1'b0;
     assign ESP_D = 8'hzz;
