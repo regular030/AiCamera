@@ -12,6 +12,10 @@
 #include "driver/uart.h"
 #include "cmd_protocol.h"
 #include "wifi_profile.h"
+#include "esp_mac.h"
+
+esp_err_t fpga_upload_init(void);
+esp_err_t fpga_upload_register_routes(httpd_handle_t server);
 
 static const char *TAG = "aicamera_esp32";
 static uint8_t g_seq = 0;
@@ -96,11 +100,14 @@ static httpd_handle_t start_webserver(void) {
         httpd_uri_t capture_uri = {.uri="/capture", .method=HTTP_GET, .handler=capture_handler, .user_ctx=NULL};
         httpd_uri_t mode_uri = {.uri="/mode", .method=HTTP_GET, .handler=mode_handler, .user_ctx=NULL};
         httpd_uri_t stride_uri = {.uri="/stride", .method=HTTP_GET, .handler=stride_handler, .user_ctx=NULL};
+
         httpd_register_uri_handler(server, &ping_uri);
         httpd_register_uri_handler(server, &status_uri);
         httpd_register_uri_handler(server, &capture_uri);
         httpd_register_uri_handler(server, &mode_uri);
         httpd_register_uri_handler(server, &stride_uri);
+
+        ESP_ERROR_CHECK(fpga_upload_register_routes(server));
     }
     return server;
 }
@@ -138,6 +145,8 @@ void app_main(void) {
     uart_param_config(FPGA_UART_NUM, &uart_config);
     uart_set_pin(FPGA_UART_NUM, FPGA_UART_TX_PIN, FPGA_UART_RX_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
 
+    ESP_ERROR_CHECK(fpga_upload_init());
+
     wifi_init_sta();
     start_webserver();
 
@@ -145,5 +154,18 @@ void app_main(void) {
 
     while (1) {
         vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+}
+
+static void wifi_event_handler(void *arg, esp_event_base_t event_base,
+                               int32_t event_id, void *event_data) {
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        esp_wifi_connect();
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        ESP_LOGW(TAG, "WiFi disconnected, retrying...");
+        esp_wifi_connect();
+    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+        ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        ESP_LOGI(TAG, "ESP32 IP: " IPSTR, IP2STR(&event->ip_info.ip));
     }
 }
