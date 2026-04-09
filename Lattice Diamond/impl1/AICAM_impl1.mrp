@@ -15,20 +15,20 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  03/07/26  23:07:09
+Mapped on:  03/18/26  08:21:47
 
 Design Summary
 --------------
 
-   Number of registers:    449 out of 24879 (2%)
-      PFU registers:          449 out of 24288 (2%)
+   Number of registers:    447 out of 24879 (2%)
+      PFU registers:          447 out of 24288 (2%)
       PIO registers:            0 out of   591 (0%)
-   Number of SLICEs:       695 out of 12144 (6%)
-      SLICEs as Logic/ROM:    695 out of 12144 (6%)
+   Number of SLICEs:       677 out of 12144 (6%)
+      SLICEs as Logic/ROM:    677 out of 12144 (6%)
       SLICEs as RAM:            0 out of  9108 (0%)
       SLICEs as Carry:         69 out of 12144 (1%)
-   Number of LUT4s:        1058 out of 24288 (4%)
-      Number used as logic LUTs:        920
+   Number of LUT4s:        1036 out of 24288 (4%)
+      Number used as logic LUTs:        898
       Number used as distributed RAM:     0
       Number used as ripple logic:      138
       Number used as shift registers:     0
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 Design Summary (cont)
 ---------------------
@@ -78,113 +78,112 @@ Design Summary (cont)
    Number of Used DSP ALU Sites:  0 out of 28 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
    Number of clocks:  2
-     Net SD_CLK_c: 288 loads, 288 rising, 0 falling (Driver: u_pll/PLLInst_0 )
+     Net SD_CLK_c: 286 loads, 286 rising, 0 falling (Driver: u_pll/PLLInst_0 )
      Net CRYSTAL_c: 1 loads, 1 rising, 0 falling (Driver: PIO CRYSTAL )
-   Number of Clock Enables:  55
-     Net u_ctrl/SD_CLK_c_enable_54: 4 loads, 4 LSLICEs
-     Net u_ctrl/u_tx/SD_CLK_c_enable_257: 2 loads, 2 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_263: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_210: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_209: 4 loads, 4 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_175: 1 loads, 1 LSLICEs
+   Number of Clock Enables:  54
+     Net u_ctrl/SD_CLK_c_enable_47: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_tx/SD_CLK_c_enable_254: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_257: 9 loads, 9 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_183: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_38: 1 loads, 1 LSLICEs
      Net u_ctrl/rx_valid: 4 loads, 4 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_176: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_260: 9 loads, 9 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_21: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_266: 2 loads, 2 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_23: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_26: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_rx/SD_CLK_c_enable_31: 1 loads, 1 LSLICEs
-     Net u_ctrl/cmd_valid: 16 loads, 16 LSLICEs
-     Net u_ctrl/SD_CLK_c_enable_102: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_regs/SD_CLK_c_enable_61: 4 loads, 4 LSLICEs
-     Net u_ctrl/u_cmd/SD_CLK_c_enable_143: 4 loads, 4 LSLICEs
-     Net u_ctrl/u_cmd/SD_CLK_c_enable_135: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_182: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_262: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_213: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_165: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_265: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_25: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_28: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_rx/SD_CLK_c_enable_215: 1 loads, 1 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_94: 1 loads, 1 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_54: 4 loads, 4 LSLICEs
+     Net u_ctrl/cmd_valid: 15 loads, 15 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_164: 1 loads, 1 LSLICEs
      Net u_ctrl/u_cmd/SD_CLK_c_enable_126: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_cmd/SD_CLK_c_enable_102: 4 loads, 4 LSLICEs
      Net u_ctrl/u_cmd/SD_CLK_c_enable_110: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_cmd/SD_CLK_c_enable_142: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_cmd/SD_CLK_c_enable_163: 14 loads, 14 LSLICEs
      Net u_ctrl/u_cmd/SD_CLK_c_enable_118: 4 loads, 4 LSLICEs
-     Net u_ctrl/u_cmd/SD_CLK_c_enable_151: 4 loads, 4 LSLICEs
-     Net u_ctrl/u_cmd/SD_CLK_c_enable_172: 13 loads, 13 LSLICEs
-     Net u_ctrl/u_ack/SD_CLK_c_enable_94: 17 loads, 17 LSLICEs
-     Net u_ctrl/u_ack/SD_CLK_c_enable_47: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_ack/SD_CLK_c_enable_101: 7 loads, 7 LSLICEs
+     Net u_ctrl/u_cmd/SD_CLK_c_enable_134: 4 loads, 4 LSLICEs
+     Net u_ctrl/u_ack/SD_CLK_c_enable_86: 17 loads, 17 LSLICEs
+     Net u_ctrl/u_ack/SD_CLK_c_enable_40: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_ack/SD_CLK_c_enable_93: 7 loads, 7 LSLICEs
      Net tick: 12 loads, 7 LSLICEs
-     Net u_sd/SD_CLK_c_enable_264: 11 loads, 11 LSLICEs
-     Net u_sd/SD_CLK_c_enable_211: 4 loads, 4 LSLICEs
-     Net u_sd/SD_CLK_c_enable_10: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_199: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_7: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_8: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_11: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_200: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_9: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_201: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_14: 1 loads, 1 LSLICEs
-     Net u_sd/SD_CLK_c_enable_265: 2 loads, 2 LSLICEs
      Net u_sdram/refresh_req_N_2426: 1 loads, 1 LSLICEs
-     Net u_sdram/SD_CLK_c_enable_258: 3 loads, 3 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_237: 19 loads, 19 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_5: 2 loads, 2 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_213: 4 loads, 4 LSLICEs
+     Net u_sdram/SD_CLK_c_enable_259: 3 loads, 3 LSLICEs
+     Net u_sd/SD_CLK_c_enable_263: 11 loads, 11 LSLICEs
+     Net u_sd/SD_CLK_c_enable_266: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_193: 4 loads, 4 LSLICEs
+     Net u_sd/SD_CLK_c_enable_10: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_11: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_12: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_16: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_17: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_264: 2 loads, 2 LSLICEs
+     Net u_sd/SD_CLK_c_enable_261: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_256: 1 loads, 1 LSLICEs
+     Net u_sd/SD_CLK_c_enable_258: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_243: 19 loads, 19 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_219: 2 loads, 2 LSLICEs
 
                                     Page 2
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 Design Summary (cont)
 ---------------------
-     Net u_cam_cfg/SD_CLK_c_enable_259: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_188: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_17: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_195: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_216: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_189: 2 loads, 2 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_215: 6 loads, 6 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_196: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_197: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/SD_CLK_c_enable_198: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_216: 2 loads, 2 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_252: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_8: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_244: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_250: 6 loads, 6 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_18: 1 loads, 1 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_245: 2 loads, 2 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_255: 4 loads, 4 LSLICEs
+     Net u_cam_cfg/SD_CLK_c_enable_251: 1 loads, 1 LSLICEs
    Number of LSRs:  26
      Net u_ctrl/n24558: 1 loads, 1 LSLICEs
-     Net u_ctrl/SD_CLK_c_enable_54: 1 loads, 1 LSLICEs
+     Net u_ctrl/SD_CLK_c_enable_47: 1 loads, 1 LSLICEs
      Net u_ctrl/u_tx/n28555: 9 loads, 9 LSLICEs
-     Net u_ctrl/u_tx/n51512: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_tx/n51515: 2 loads, 2 LSLICEs
+     Net u_ctrl/u_rx/n51518: 9 loads, 9 LSLICEs
      Net rx_s2: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_rx/n51515: 9 loads, 9 LSLICEs
-     Net u_ctrl/u_rx/n51530: 2 loads, 2 LSLICEs
-     Net u_ctrl/u_regs/n51535: 3 loads, 3 LSLICEs
+     Net u_ctrl/u_rx/n51533: 2 loads, 2 LSLICEs
+     Net u_ctrl/n51538: 3 loads, 3 LSLICEs
      Net u_ctrl/u_cmd/cmd_valid_N_765: 1 loads, 1 LSLICEs
-     Net u_ctrl/u_ack/SD_CLK_c_enable_94: 4 loads, 4 LSLICEs
-     Net u_sd/n36898: 9 loads, 9 LSLICEs
-     Net u_sd/st_5: 3 loads, 3 LSLICEs
-     Net u_sd/n36894: 12 loads, 12 LSLICEs
-     Net u_sd/n62890: 4 loads, 4 LSLICEs
-     Net u_sd/n50399: 3 loads, 3 LSLICEs
-     Net u_sd/n61701: 1 loads, 1 LSLICEs
-     Net u_sdram/SD_A_12_N_2210_9: 1 loads, 1 LSLICEs
-     Net u_sdram/n61750: 1 loads, 1 LSLICEs
-     Net u_sdram/n19202: 1 loads, 1 LSLICEs
-     Net u_sdram/n49524: 1 loads, 1 LSLICEs
+     Net u_ctrl/u_ack/SD_CLK_c_enable_86: 4 loads, 4 LSLICEs
+     Net u_sdram/n50301: 1 loads, 1 LSLICEs
      Net u_sdram/refresh_req: 1 loads, 1 LSLICEs
+     Net u_sdram/n19202: 1 loads, 1 LSLICEs
+     Net u_sdram/n62005: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_A_12_N_2210_9: 1 loads, 1 LSLICEs
      Net u_sdram/n28589: 9 loads, 9 LSLICEs
+     Net u_sd/n36876: 9 loads, 9 LSLICEs
+     Net u_sd/n36895: 12 loads, 12 LSLICEs
+     Net u_sd/st_5: 2 loads, 2 LSLICEs
+     Net u_sd/n63084: 4 loads, 4 LSLICEs
+     Net u_sd/n61961: 1 loads, 1 LSLICEs
+     Net u_sd/n50392: 3 loads, 3 LSLICEs
      Net u_cam_cfg/tick_N_429: 5 loads, 5 LSLICEs
-     Net u_cam_cfg/n51496: 4 loads, 4 LSLICEs
-     Net u_cam_cfg/n56472: 1 loads, 1 LSLICEs
-     Net u_cam_cfg/n51556: 3 loads, 3 LSLICEs
+     Net u_cam_cfg/n51503: 3 loads, 3 LSLICEs
+     Net u_cam_cfg/n55733: 4 loads, 4 LSLICEs
+     Net u_cam_cfg/n55737: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
      Net u_sd/st_1: 117 loads
-     Net u_sd/st_0: 106 loads
-     Net u_sd/st_2: 105 loads
-     Net u_sd/st_3: 91 loads
-     Net u_sd/st_4: 78 loads
-     Net spi_done: 53 loads
-     Net n309: 45 loads
-     Net st_0: 45 loads
-     Net u_sd/SD_CLK_c_enable_264: 42 loads
-     Net u_sd/st_5: 39 loads
+     Net u_sd/st_0: 107 loads
+     Net u_sd/st_2: 107 loads
+     Net u_sd/st_3: 93 loads
+     Net u_sd/st_4: 79 loads
+     Net spi_done: 51 loads
+     Net n309: 48 loads
+     Net st_0: 43 loads
+     Net u_sd/SD_CLK_c_enable_263: 42 loads
+     Net u_sd/st_5: 40 loads
 
 
 
@@ -193,13 +192,13 @@ Design Summary (cont)
    Number of errors:    0
      
 
+
                                     Page 3
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
-
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 Design Errors/Warnings
 ----------------------
@@ -258,17 +257,17 @@ WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(28):
      Semantic error in "IOBUF PORT "PCLK" IO_TYPE=LVCMOS18 PULLMODE=NONE
      DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
      BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "PCLK" does not exist
+     in the design. This preference has been disabled.
 
                                     Page 4
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 Design Errors/Warnings (cont)
 -----------------------------
-     in the design. This preference has been disabled.
 WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.lpf(83):
      Semantic error in "IOBUF PORT "DIN" IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA
      SLEWRATE=NA CLAMP=OFF OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
@@ -324,17 +323,17 @@ WARNING - map: IO buffer missing for top level port HREF...logic will be
      discarded.
 WARNING - map: IO buffer missing for top level port PCLK...logic will be
      discarded.
+WARNING - map: IO buffer missing for top level port Y9...logic will be
 
                                     Page 5
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 Design Errors/Warnings (cont)
 -----------------------------
-WARNING - map: IO buffer missing for top level port Y9...logic will be
      discarded.
 WARNING - map: IO buffer missing for top level port Y8...logic will be
      discarded.
@@ -390,17 +389,17 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+
 | M_D1                | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| M_CMD               | OUTPUT    | LVCMOS33  |            |
 
                                     Page 6
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 IO (PIO) Attributes (cont)
 --------------------------
-| M_CMD               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | TX                  | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -456,17 +455,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | SD_RAS_N            | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| SD_WE_N             | OUTPUT    | LVCMOS33  |            |
 
                                     Page 7
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 IO (PIO) Attributes (cont)
 --------------------------
-| SD_WE_N             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | SD_CS_N             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -508,62 +507,62 @@ Removed logic
 
 Block GSR_INST undriven or does not drive anything - clipped.
 Signal u_sdram/n1 was merged into signal u_sdram/refresh_req
-Signal u_sdram/n51501 was merged into signal u_sdram/n19202
-Signal n49047 was merged into signal sda_oe
-Signal u_ctrl/u_cmd/n51509 was merged into signal u_ctrl/u_cmd/cmd_valid_N_765
-Signal u_ctrl/u_rx/n61791 was merged into signal rx_s2
-Signal u_ctrl/u_tx/n51533 was merged into signal u_ctrl/n24558
+Signal u_sdram/n51504 was merged into signal u_sdram/n19202
+Signal n49048 was merged into signal sda_oe
+Signal u_ctrl/u_cmd/n51512 was merged into signal u_ctrl/u_cmd/cmd_valid_N_765
+Signal u_ctrl/u_rx/n62046 was merged into signal rx_s2
+Signal u_ctrl/u_tx/n51536 was merged into signal u_ctrl/n24558
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal u_cam_cfg/divc_3991_add_4_1/S0 undriven or does not drive anything -
+Signal u_cam_cfg/divc_3992_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal u_cam_cfg/divc_3991_add_4_1/CI undriven or does not drive anything -
+Signal u_cam_cfg/divc_3992_add_4_1/CI undriven or does not drive anything -
      clipped.
-Signal u_cam_cfg/divc_3991_add_4_9/CO undriven or does not drive anything -
+Signal u_cam_cfg/divc_3992_add_4_9/CO undriven or does not drive anything -
      clipped.
-Signal u_sdram/refresh_cnt_3993_add_4_1/S0 undriven or does not drive anything -
-     clipped.
+Signal u_sd/equal_11680_0/S1 undriven or does not drive anything - clipped.
+Signal u_sd/equal_11680_0/S0 undriven or does not drive anything - clipped.
+Signal u_sd/equal_11680_0/CI undriven or does not drive anything - clipped.
 
                                     Page 8
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 Removed logic (cont)
 --------------------
-Signal u_sdram/refresh_cnt_3993_add_4_1/CI undriven or does not drive anything -
+Signal u_sd/equal_11680_16/S0 undriven or does not drive anything - clipped.
+Signal u_sd/equal_11680_16/CO undriven or does not drive anything - clipped.
+Signal u_sd/equal_11680_15/S1 undriven or does not drive anything - clipped.
+Signal u_sd/equal_11680_15/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11935_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11935_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11923_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11923_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11932_add_4_11/CO undriven or does not drive anything - clipped.
+Signal add_19341_1/S1 undriven or does not drive anything - clipped.
+Signal add_19341_1/S0 undriven or does not drive anything - clipped.
+Signal add_19341_1/CI undriven or does not drive anything - clipped.
+Signal add_19341_9/CO undriven or does not drive anything - clipped.
+Signal u_sdram/refresh_cnt_3994_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal u_sdram/refresh_cnt_3993_add_4_17/S1 undriven or does not drive anything
+Signal u_sdram/refresh_cnt_3994_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_sdram/refresh_cnt_3994_add_4_17/S1 undriven or does not drive anything
      - clipped.
-Signal u_sdram/refresh_cnt_3993_add_4_17/CO undriven or does not drive anything
+Signal u_sdram/refresh_cnt_3994_add_4_17/CO undriven or does not drive anything
      - clipped.
-Signal _add_1_11934_add_4_11/S1 undriven or does not drive anything - clipped.
-Signal _add_1_11934_add_4_11/CO undriven or does not drive anything - clipped.
-Signal u_sd/equal_11678_0/S1 undriven or does not drive anything - clipped.
-Signal u_sd/equal_11678_0/S0 undriven or does not drive anything - clipped.
-Signal u_sd/equal_11678_0/CI undriven or does not drive anything - clipped.
-Signal u_sd/equal_11678_16/S0 undriven or does not drive anything - clipped.
-Signal u_sd/equal_11678_16/CO undriven or does not drive anything - clipped.
-Signal u_sd/equal_11678_15/S1 undriven or does not drive anything - clipped.
-Signal u_sd/equal_11678_15/S0 undriven or does not drive anything - clipped.
-Signal _add_1_11922_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal _add_1_11922_add_4_1/CI undriven or does not drive anything - clipped.
-Signal _add_1_11937_add_4_1/S1 undriven or does not drive anything - clipped.
-Signal _add_1_11937_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal _add_1_11937_add_4_1/CI undriven or does not drive anything - clipped.
-Signal _add_1_11931_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal _add_1_11931_add_4_1/CI undriven or does not drive anything - clipped.
-Signal _add_1_11931_add_4_11/CO undriven or does not drive anything - clipped.
-Signal _add_1_11934_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal _add_1_11934_add_4_1/CI undriven or does not drive anything - clipped.
-Signal add_18988_1/S1 undriven or does not drive anything - clipped.
-Signal add_18988_1/S0 undriven or does not drive anything - clipped.
-Signal add_18988_1/CI undriven or does not drive anything - clipped.
-Signal add_18988_9/CO undriven or does not drive anything - clipped.
-Signal _add_1_11922_add_4_17/S1 undriven or does not drive anything - clipped.
-Signal _add_1_11922_add_4_17/CO undriven or does not drive anything - clipped.
-Signal _add_1_11937_add_4_9/CO undriven or does not drive anything - clipped.
+Signal _add_1_11938_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11938_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11938_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11923_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11923_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_11935_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11935_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11938_add_4_9/CO undriven or does not drive anything - clipped.
+Signal _add_1_11932_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11932_add_4_1/CI undriven or does not drive anything - clipped.
 Signal u_ctrl/u_cmd/chk_calc_7__I_0_0/S1 undriven or does not drive anything -
      clipped.
 Signal u_ctrl/u_cmd/chk_calc_7__I_0_0/S0 undriven or does not drive anything -
@@ -578,38 +577,38 @@ Signal u_ctrl/u_cmd/chk_calc_7__I_0_8/S0 undriven or does not drive anything -
      clipped.
 Signal u_ctrl/u_cmd/chk_calc_7__I_0_8/CO undriven or does not drive anything -
      clipped.
-Signal u_ctrl/u_rx/clk_cnt_4005_add_4_1/S0 undriven or does not drive anything -
+Signal u_ctrl/u_rx/clk_cnt_4006_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal u_ctrl/u_rx/clk_cnt_4005_add_4_1/CI undriven or does not drive anything -
+Signal u_ctrl/u_rx/clk_cnt_4006_add_4_1/CI undriven or does not drive anything -
      clipped.
-Signal u_ctrl/u_rx/clk_cnt_4005_add_4_17/S1 undriven or does not drive anything
+Signal u_ctrl/u_rx/clk_cnt_4006_add_4_17/S1 undriven or does not drive anything
      - clipped.
-Signal u_ctrl/u_rx/clk_cnt_4005_add_4_17/CO undriven or does not drive anything
+Signal u_ctrl/u_rx/clk_cnt_4006_add_4_17/CO undriven or does not drive anything
      - clipped.
-Signal u_ctrl/u_tx/clk_cnt_4007_add_4_17/S1 undriven or does not drive anything
+Signal u_ctrl/u_tx/clk_cnt_4008_add_4_17/S1 undriven or does not drive anything
      - clipped.
+Signal u_ctrl/u_tx/clk_cnt_4008_add_4_17/CO undriven or does not drive anything
 
                                     Page 9
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 Removed logic (cont)
 --------------------
-Signal u_ctrl/u_tx/clk_cnt_4007_add_4_17/CO undriven or does not drive anything
      - clipped.
-Signal u_ctrl/u_tx/clk_cnt_4007_add_4_1/S0 undriven or does not drive anything -
+Signal u_ctrl/u_tx/clk_cnt_4008_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal u_ctrl/u_tx/clk_cnt_4007_add_4_1/CI undriven or does not drive anything -
+Signal u_ctrl/u_tx/clk_cnt_4008_add_4_1/CI undriven or does not drive anything -
      clipped.
 Block u_sdram/i1_1_lut was optimized away.
-Block u_sdram/i14374_1_lut was optimized away.
-Block i11966_1_lut was optimized away.
-Block u_ctrl/u_cmd/i14382_1_lut was optimized away.
-Block u_ctrl/u_rx/i13_1_lut_rep_321 was optimized away.
-Block u_ctrl/u_tx/i14406_1_lut was optimized away.
+Block u_sdram/i14375_1_lut was optimized away.
+Block i11967_1_lut was optimized away.
+Block u_ctrl/u_cmd/i14383_1_lut was optimized away.
+Block u_ctrl/u_rx/i13_1_lut_rep_327 was optimized away.
+Block u_ctrl/u_tx/i14407_1_lut was optimized away.
 Block i2 was optimized away.
 
 Memory Usage
@@ -625,7 +624,7 @@ Memory Usage
 /u_cam_cfg/u_rom:
     EBRs: 4
     RAM SLICEs: 0
-    Logic SLICEs: 6
+    Logic SLICEs: 0
     PFU Registers: 0
     -Contains EBR mux_839:  TYPE= PDPW16KD,  Width= 23,  Depth_R= 512,  REGMODE=
          NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
@@ -654,17 +653,17 @@ PLL 1:                                     Pin/Node Value
   Standby Signal:                          NODE     GND_net
   Input Clock Frequency (MHz):                      24.0000
   Output Clock(P) Frequency (MHz):                  48.0000
+  Output Clock(S) Frequency (MHz):                  24.0000
 
                                    Page 10
 
 
 
 
-Design:  fpga_top                                      Date:  03/07/26  23:07:09
+Design:  fpga_top                                      Date:  03/18/26  08:21:47
 
 PLL/DLL Summary (cont)
 ----------------------
-  Output Clock(S) Frequency (MHz):                  24.0000
   CLKOP Post Divider A Input:                       DIVA
   CLKOS Post Divider B Input:                       DIVB
   CLKOS2 Post Divider C Input:                      DIVC
@@ -717,6 +716,7 @@ Run Time and Memory Usage
    Total REAL Time: 0 secs  
    Peak Memory Usage: 122 MB
         
+
 
 
 

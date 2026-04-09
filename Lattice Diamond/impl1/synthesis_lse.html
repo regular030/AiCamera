@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Mar 07 23:06:57 2026
+Wed Mar 18 08:21:25 2026
 
 
 Command Line:  synthesis -f AICAM_impl1_lattice.synproj -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml 
@@ -2098,12 +2098,14 @@ WARNING - synthesis: I/O Port SSPI_CS_n 's net has no driver and is unused.
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(594): Register \u_sdram/st_FSM_i1 is stuck at Zero. VDB-5013
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(575): Register \u_sd/cmd_frame_i0 is stuck at One. VDB-5014
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sd_spi_writer.v(575): Register \u_sd/wr_lba_lat_i0 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(393): Register \u_sdram/init_wait_cnt_3994__i31 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(587): Register \u_sdram/rd_ptr_ext_3997_5039__i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(393): Register \u_sdram/init_wait_cnt_3995__i31 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(587): Register \u_sdram/rd_ptr_ext_3998_5040__i1 is stuck at Zero. VDB-5013
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_uart_cmd_parser.v(60): Register \u_ctrl/u_cmd/bytes[7]__i64 is stuck at One. VDB-5014
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/fpga_uart_cmd_parser.v(60): Register \u_ctrl/u_cmd/bytes[7]__i63 is stuck at Zero. VDB-5013
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/ov5640_sccb.v(328): Register \u_cam_cfg/byte_idx_i0_i2 is stuck at Zero. VDB-5013
 GSR will not be inferred because no asynchronous signal was found in the netlist.
+Duplicate register/latch removal. \u_ctrl/u_regs/ack_type__i1 is a one-to-one match with \u_ctrl/u_regs/ack_value__i14.
+Duplicate register/latch removal. \u_ctrl/u_ack/pkt[7]__i33 is a one-to-one match with \u_ctrl/u_ack/pkt[7]__i17.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -2145,10 +2147,10 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.
 
 ################### Begin Area Report (fpga_top)######################
-Number of register bits => 449 of 24879 (1 % )
+Number of register bits => 447 of 24879 (1 % )
 CCU2C => 69
 EHXPLLL => 1
-FD1P3AX => 243
+FD1P3AX => 241
 FD1P3IX => 62
 FD1P3JX => 9
 FD1S3AX => 69
@@ -2156,45 +2158,45 @@ FD1S3IX => 56
 FD1S3JX => 10
 GSR => 1
 IB => 3
-L6MUX21 => 5
-LUT4 => 923
+L6MUX21 => 4
+LUT4 => 901
 OB => 29
 OBZ => 27
 PDPW16KD => 5
-PFUMX => 114
+PFUMX => 113
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 3
-  Net : SD_CLK_c, loads : 456
+  Net : SD_CLK_c, loads : 454
   Net : MCLK_c, loads : 1
   Net : CRYSTAL_c, loads : 1
 Clock Enable Nets
-Number of Clock Enables: 55
+Number of Clock Enables: 54
 Top 10 highest fanout Clock Enables:
-  Net : u_sd/SD_CLK_c_enable_264, loads : 49
-  Net : u_ctrl/u_ack/SD_CLK_c_enable_94, loads : 39
-  Net : u_ctrl/u_cmd/SD_CLK_c_enable_172, loads : 24
-  Net : u_cam_cfg/tick, loads : 23
-  Net : u_cam_cfg/SD_CLK_c_enable_237, loads : 23
-  Net : u_ctrl/u_rx/SD_CLK_c_enable_260, loads : 16
-  Net : u_ctrl/u_ack/SD_CLK_c_enable_101, loads : 9
-  Net : u_ctrl/u_cmd/SD_CLK_c_enable_135, loads : 8
-  Net : u_ctrl/u_cmd/SD_CLK_c_enable_151, loads : 8
-  Net : u_cam_cfg/SD_CLK_c_enable_215, loads : 8
+  Net : u_sd/SD_CLK_c_enable_263, loads : 49
+  Net : u_ctrl/u_ack/SD_CLK_c_enable_86, loads : 38
+  Net : u_ctrl/u_cmd/SD_CLK_c_enable_163, loads : 24
+  Net : u_cam_cfg/tick, loads : 24
+  Net : u_cam_cfg/SD_CLK_c_enable_243, loads : 23
+  Net : u_ctrl/u_rx/SD_CLK_c_enable_257, loads : 18
+  Net : u_ctrl/u_rx/SD_CLK_c_enable_183, loads : 12
+  Net : u_ctrl/u_ack/SD_CLK_c_enable_93, loads : 9
+  Net : u_ctrl/u_cmd/SD_CLK_c_enable_126, loads : 8
+  Net : u_ctrl/u_cmd/SD_CLK_c_enable_134, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : u_sd/st_1, loads : 117
-  Net : u_sd/st_0, loads : 106
-  Net : u_sd/st_2, loads : 105
-  Net : u_sd/st_3, loads : 91
-  Net : u_sd/st_4, loads : 78
-  Net : u_sd/spi_done, loads : 52
-  Net : u_sd/SD_CLK_c_enable_264, loads : 49
-  Net : n309, loads : 45
-  Net : u_cam_cfg/st_0, loads : 44
-  Net : u_ctrl/u_ack/SD_CLK_c_enable_94, loads : 39
+  Net : u_sd/st_2, loads : 107
+  Net : u_sd/st_0, loads : 107
+  Net : u_sd/st_3, loads : 93
+  Net : u_sd/st_4, loads : 79
+  Net : u_sd/spi_done, loads : 50
+  Net : u_sd/SD_CLK_c_enable_263, loads : 49
+  Net : n309, loads : 48
+  Net : u_cam_cfg/st_0, loads : 42
+  Net : u_sd/st_5, loads : 40
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -2204,7 +2206,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   67.313 MHz|    14 *
+clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   64.008 MHz|    16 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -2212,10 +2214,10 @@ clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   67.313 MHz|    14 *
 1 constraints not met.
 
 
-Peak Memory Usage: 276.070  MB
+Peak Memory Usage: 278.195  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 11.188  secs
+Elapsed CPU time for LSE flow : 16.578  secs
 --------------------------------------------------------------
 
 

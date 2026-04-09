@@ -1,6 +1,6 @@
 [ActiveSupport TRCE]
 ; Setup Analysis
-Fmax_0 = 65.227 MHz (48.000 MHz);
+Fmax_0 = 65.656 MHz (48.000 MHz);
 Fmax_1 = - (-);
 Fmax_2 = - (-);
 Failed = 0 (Total 3);

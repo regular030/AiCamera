@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sat Mar 07 23:07:09 2026
+Wed Mar 18 08:21:46 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,156 +23,168 @@ Constraint: create_clock -period 5.000000 -name clk0 [get_nets SD_CLK_c]
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 9.856ns
+Error:  The following path violates requirements by 10.623ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
-   Destination:    FD1P3AX    SP             \u_cam_cfg/cur_reg__i1  (to SD_CLK_c +)
+   Destination:    FD1P3AX    D              \u_cam_cfg/st_i0_i1  (to SD_CLK_c +)
 
-   Delay:                  14.935ns  (16.4% logic, 83.6% route), 14 logic levels.
+   Delay:                  15.798ns  (17.3% logic, 82.7% route), 16 logic levels.
 
  Constraint Details:
 
-     14.935ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1 violates
+     15.798ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i1 violates
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 9.856ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 10.623ns
 
- Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i1
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
-Route        37   e 1.842                                  \u_cam_cfg/st[2]
-LUT4        ---     0.166              B to Z              \u_cam_cfg/i20921_2_lut_rep_307
-Route        15   e 1.561                                  n61777
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11931_add_4_3
-Route         1   e 0.020                                  n56203
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_5
-Route         1   e 0.020                                  n56204
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_7
-Route         1   e 0.020                                  n56205
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_9
-Route         1   e 0.020                                  n56206
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11931_add_4_11
-Route        45   e 1.881                                  n309
-LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23017_3_lut
-Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60164
-MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/u_rom/i23019
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/rom_entry[2]
-LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_626
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58987
-LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_624
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58993
-LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_622
-Route         3   e 1.239                                  \u_cam_cfg/n58276
-LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_3_lut_rep_230
-Route         2   e 1.158                                  \u_cam_cfg/n61700
-LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_630
-Route        23   e 1.647                                  \u_cam_cfg/SD_CLK_c_enable_237
+Route        35   e 1.831                                  \u_cam_cfg/st[2]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i21140_2_lut_rep_339
+Route        13   e 1.532                                  n62058
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11932_add_4_3
+Route         1   e 0.020                                  n56561
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_5
+Route         1   e 0.020                                  n56562
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_7
+Route         1   e 0.020                                  n56563
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_9
+Route         1   e 0.020                                  n56564
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11932_add_4_11
+Route        48   e 1.894                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23210_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60376
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/u_rom/i23212
+Route         2   e 1.158                                  \u_cam_cfg/rom_entry[18]
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_adj_651
+Route         1   e 1.020                                  \u_cam_cfg/n59283
+LUT4        ---     0.166              C to Z              \u_cam_cfg/i1_4_lut_adj_649
+Route         2   e 1.158                                  \u_cam_cfg/n29_adj_12135
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_adj_639
+Route         2   e 1.158                                  \u_cam_cfg/n59739
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_642
+Route         2   e 1.158                                  \u_cam_cfg/n54127
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i17010_2_lut
+Route         1   e 0.020                                  \u_cam_cfg/n128
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i14340
+Route         1   e 1.020                                  \u_cam_cfg/n51468
+LUT4        ---     0.166              D to Z              \u_cam_cfg/i16757_4_lut_4_lut
+Route         1   e 1.020                                  \u_cam_cfg/n302
                   --------
-                   14.935  (16.4% logic, 83.6% route), 14 logic levels.
+                   15.798  (17.3% logic, 82.7% route), 16 logic levels.
 
 
-Error:  The following path violates requirements by 9.856ns
+Error:  The following path violates requirements by 10.623ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
-   Destination:    FD1P3AX    SP             \u_cam_cfg/cur_reg__i1  (to SD_CLK_c +)
+   Destination:    FD1P3AX    D              \u_cam_cfg/st_i0_i1  (to SD_CLK_c +)
 
-   Delay:                  14.935ns  (16.4% logic, 83.6% route), 14 logic levels.
+   Delay:                  15.798ns  (17.3% logic, 82.7% route), 16 logic levels.
 
  Constraint Details:
 
-     14.935ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1 violates
+     15.798ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i1 violates
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 9.856ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 10.623ns
 
- Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i1
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
-Route        37   e 1.842                                  \u_cam_cfg/st[2]
-LUT4        ---     0.166              B to Z              \u_cam_cfg/i20921_2_lut_rep_307
-Route        15   e 1.561                                  n61777
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11931_add_4_3
-Route         1   e 0.020                                  n56203
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_5
-Route         1   e 0.020                                  n56204
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_7
-Route         1   e 0.020                                  n56205
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_9
-Route         1   e 0.020                                  n56206
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11931_add_4_11
-Route        45   e 1.881                                  n309
-LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23015_3_lut
-Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60162
-MUXL5       ---     0.116           ALUT to Z              \u_cam_cfg/u_rom/i23016
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/rom_entry[3]
-LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_626
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58987
-LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_624
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58993
-LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_622
-Route         3   e 1.239                                  \u_cam_cfg/n58276
-LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_3_lut_rep_230
-Route         2   e 1.158                                  \u_cam_cfg/n61700
-LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_630
-Route        23   e 1.647                                  \u_cam_cfg/SD_CLK_c_enable_237
+Route        35   e 1.831                                  \u_cam_cfg/st[2]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i21140_2_lut_rep_339
+Route        13   e 1.532                                  n62058
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11932_add_4_3
+Route         1   e 0.020                                  n56561
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_5
+Route         1   e 0.020                                  n56562
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_7
+Route         1   e 0.020                                  n56563
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_9
+Route         1   e 0.020                                  n56564
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11932_add_4_11
+Route        48   e 1.894                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23211_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60377
+MUXL5       ---     0.116           ALUT to Z              \u_cam_cfg/u_rom/i23212
+Route         2   e 1.158                                  \u_cam_cfg/rom_entry[18]
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_adj_651
+Route         1   e 1.020                                  \u_cam_cfg/n59283
+LUT4        ---     0.166              C to Z              \u_cam_cfg/i1_4_lut_adj_649
+Route         2   e 1.158                                  \u_cam_cfg/n29_adj_12135
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_adj_639
+Route         2   e 1.158                                  \u_cam_cfg/n59739
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_642
+Route         2   e 1.158                                  \u_cam_cfg/n54127
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i17010_2_lut
+Route         1   e 0.020                                  \u_cam_cfg/n128
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i14340
+Route         1   e 1.020                                  \u_cam_cfg/n51468
+LUT4        ---     0.166              D to Z              \u_cam_cfg/i16757_4_lut_4_lut
+Route         1   e 1.020                                  \u_cam_cfg/n302
                   --------
-                   14.935  (16.4% logic, 83.6% route), 14 logic levels.
+                   15.798  (17.3% logic, 82.7% route), 16 logic levels.
 
 
-Error:  The following path violates requirements by 9.856ns
+Error:  The following path violates requirements by 10.623ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
-   Destination:    FD1P3AX    SP             \u_cam_cfg/cur_reg__i1  (to SD_CLK_c +)
+   Destination:    FD1P3AX    D              \u_cam_cfg/st_i0_i1  (to SD_CLK_c +)
 
-   Delay:                  14.935ns  (16.4% logic, 83.6% route), 14 logic levels.
+   Delay:                  15.798ns  (17.3% logic, 82.7% route), 16 logic levels.
 
  Constraint Details:
 
-     14.935ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1 violates
+     15.798ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i1 violates
       5.000ns delay constraint less
-     -0.079ns LCE_S requirement (totaling 5.079ns) by 9.856ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 10.623ns
 
- Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/cur_reg__i1
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i1
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
-Route        37   e 1.842                                  \u_cam_cfg/st[2]
-LUT4        ---     0.166              B to Z              \u_cam_cfg/i20921_2_lut_rep_307
-Route        15   e 1.561                                  n61777
-A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11931_add_4_3
-Route         1   e 0.020                                  n56203
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_5
-Route         1   e 0.020                                  n56204
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_7
-Route         1   e 0.020                                  n56205
-FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11931_add_4_9
-Route         1   e 0.020                                  n56206
-FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11931_add_4_11
-Route        45   e 1.881                                  n309
-LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23008_3_lut
-Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60155
-MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/u_rom/i23010
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/rom_entry[5]
-LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_626
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58987
-LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_624
-Route         1   e 1.020                                  \u_cam_cfg/u_rom/n58993
-LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_622
-Route         3   e 1.239                                  \u_cam_cfg/n58276
-LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_3_lut_rep_230
-Route         2   e 1.158                                  \u_cam_cfg/n61700
-LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_630
-Route        23   e 1.647                                  \u_cam_cfg/SD_CLK_c_enable_237
+Route        35   e 1.831                                  \u_cam_cfg/st[2]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i21140_2_lut_rep_339
+Route        13   e 1.532                                  n62058
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_11932_add_4_3
+Route         1   e 0.020                                  n56561
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_5
+Route         1   e 0.020                                  n56562
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_7
+Route         1   e 0.020                                  n56563
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_11932_add_4_9
+Route         1   e 0.020                                  n56564
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_11932_add_4_11
+Route        48   e 1.894                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i23202_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n60368
+MUXL5       ---     0.116           ALUT to Z              \u_cam_cfg/u_rom/i23203
+Route         2   e 1.158                                  \u_cam_cfg/rom_entry[21]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_650
+Route         1   e 1.020                                  \u_cam_cfg/n59285
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_649
+Route         2   e 1.158                                  \u_cam_cfg/n29_adj_12135
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_adj_639
+Route         2   e 1.158                                  \u_cam_cfg/n59739
+LUT4        ---     0.166              B to Z              \u_cam_cfg/i1_4_lut_adj_642
+Route         2   e 1.158                                  \u_cam_cfg/n54127
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i17010_2_lut
+Route         1   e 0.020                                  \u_cam_cfg/n128
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i14340
+Route         1   e 1.020                                  \u_cam_cfg/n51468
+LUT4        ---     0.166              D to Z              \u_cam_cfg/i16757_4_lut_4_lut
+Route         1   e 1.020                                  \u_cam_cfg/n302
                   --------
-                   14.935  (16.4% logic, 83.6% route), 14 logic levels.
+                   15.798  (17.3% logic, 82.7% route), 16 logic levels.
 
-Warning: 14.856 ns is the maximum delay for this constraint.
+Warning: 15.623 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -182,7 +194,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets SD_CLK_c]                |     5.000 ns|    14.856 ns|    14 *
+clk0 [get_nets SD_CLK_c]                |     5.000 ns|    15.623 ns|    16 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -192,41 +204,51 @@ clk0 [get_nets SD_CLK_c]                |     5.000 ns|    14.856 ns|    14 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-\u_cam_cfg/SD_CLK_c_enable_237          |      23|    4096|     99.00%
+\u_cam_cfg/n29_adj_12135                |       2|    4096|     99.00%
                                         |        |        |
-\u_cam_cfg/n58276                       |       3|    4096|     99.00%
+\u_cam_cfg/n59739                       |       2|    4096|     99.00%
                                         |        |        |
-\u_cam_cfg/n61700                       |       2|    4096|     99.00%
+n56564                                  |       1|    4048|     98.83%
                                         |        |        |
-\u_cam_cfg/u_rom/n58987                 |       1|    4096|     99.00%
+n56563                                  |       1|    3904|     95.31%
                                         |        |        |
-\u_cam_cfg/u_rom/n58993                 |       1|    4096|     99.00%
+n62058                                  |      13|    3886|     94.87%
                                         |        |        |
-n56206                                  |       1|    4096|     99.00%
+n309                                    |      48|    3862|     94.29%
                                         |        |        |
-n61777                                  |      15|    4048|     98.83%
+\u_cam_cfg/n54127                       |       2|    3724|     90.92%
                                         |        |        |
-n56205                                  |       1|    3360|     82.03%
+\u_cam_cfg/SD_CLK_c_enable_243          |      23|    3262|     79.64%
                                         |        |        |
-n309                                    |      45|    2992|     73.05%
+\u_cam_cfg/n59285                       |       1|    2758|     67.33%
                                         |        |        |
-n56204                                  |       1|    2256|     55.08%
+n56562                                  |       1|    2706|     66.06%
                                         |        |        |
-\u_cam_cfg/st[1]                        |      30|    2024|     49.41%
+\u_cam_cfg/st[2]                        |      35|    2028|     49.51%
                                         |        |        |
-\u_cam_cfg/st[2]                        |      37|    2024|     49.41%
+\u_cam_cfg/st[1]                        |      27|    1978|     48.29%
                                         |        |        |
-n56203                                  |       1|    1152|     28.13%
+n56561                                  |       1|    1458|     35.60%
                                         |        |        |
-n308                                    |      25|    1104|     26.95%
+\u_cam_cfg/n59283                       |       1|    1338|     32.67%
                                         |        |        |
-\u_cam_cfg/u_rom/rom_entry[5]           |       1|    1048|     25.59%
+\u_cam_cfg/rom_entry[10]                |       2|     691|     16.87%
                                         |        |        |
-\u_cam_cfg/u_rom/rom_entry[2]           |       1|    1016|     24.80%
+\u_cam_cfg/rom_entry[16]                |       2|     691|     16.87%
                                         |        |        |
-\u_cam_cfg/u_rom/rom_entry[3]           |       1|    1016|     24.80%
+\u_cam_cfg/rom_entry[18]                |       2|     691|     16.87%
                                         |        |        |
-\u_cam_cfg/u_rom/rom_entry[4]           |       1|    1016|     24.80%
+\u_cam_cfg/rom_entry[21]                |       2|     691|     16.87%
+                                        |        |        |
+\u_cam_cfg/rom_entry[15]                |       2|     685|     16.72%
+                                        |        |        |
+\u_cam_cfg/rom_entry[23]                |       2|     647|     15.80%
+                                        |        |        |
+\u_cam_cfg/n128                         |       1|     462|     11.28%
+                                        |        |        |
+\u_cam_cfg/n302                         |       1|     462|     11.28%
+                                        |        |        |
+\u_cam_cfg/n51468                       |       1|     462|     11.28%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -234,10 +256,10 @@ n308                                    |      25|    1104|     26.95%
 Timing summary:
 ---------------
 
-Timing errors: 4096  Score: 39606496
+Timing errors: 4096  Score: 40879790
 
-Constraints cover  119861 paths, 1754 nets, and 4683 connections (90.7% coverage)
+Constraints cover  124818 paths, 1728 nets, and 4602 connections (90.6% coverage)
 
 
-Peak memory: 289480704 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 291708928 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

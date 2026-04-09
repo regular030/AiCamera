@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Sat Mar 07 23:07:12 2026
+Wed Mar 18 08:21:50 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -38,45 +38,46 @@ Preference: FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 10.358ns
+Passed: The following path meets requirements by 9.359ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         PDPW16KD   Port           u_cam_cfg/u_rom/mux_839(ASIC)  (from SD_CLK_c +)
-   Destination:    FF         Data in        u_cam_cfg/cur_val_i0_i3  (to SD_CLK_c +)
-                   FF                        u_cam_cfg/cur_val_i0_i2
+   Destination:    FF         Data in        u_cam_cfg/st_i0_i1  (to SD_CLK_c +)
 
-   Delay:              10.602ns  (69.1% logic, 30.9% route), 7 logic levels.
+   Delay:              11.734ns  (65.8% logic, 34.2% route), 8 logic levels.
 
  Constraint Details:
 
-     10.602ns physical path delay u_cam_cfg/u_rom/mux_839 to u_cam_cfg/SLICE_120 meets
+     11.734ns physical path delay u_cam_cfg/u_rom/mux_839 to u_cam_cfg/SLICE_131 meets
      20.833ns delay constraint less
-     -0.127ns CE_SET requirement (totaling 20.960ns) by 10.358ns
+     -0.260ns DIN_SET requirement (totaling 21.093ns) by 9.359ns
 
  Physical Path Details:
 
-      Data path u_cam_cfg/u_rom/mux_839 to u_cam_cfg/SLICE_120:
+      Data path u_cam_cfg/u_rom/mux_839 to u_cam_cfg/SLICE_131:
 
    Name    Fanout   Delay (ns)          Site               Resource
-C2Q_DEL     ---     5.740 */mux_839.CLKR to *m/mux_839.DO5 u_cam_cfg/u_rom/mux_839 (from SD_CLK_c)
-ROUTE         1   e 0.573 *m/mux_839.DO5 to */SLICE_378.C1 u_cam_cfg/u_rom/n28089
-CTOOFX_DEL  ---     0.401 */SLICE_378.C1 to *LICE_378.OFX0 u_cam_cfg/u_rom/i23010/SLICE_378
-ROUTE         1   e 0.573 *LICE_378.OFX0 to */SLICE_528.B1 u_cam_cfg/u_rom/rom_entry_5
-CTOF_DEL    ---     0.236 */SLICE_528.B1 to */SLICE_528.F1 u_cam_cfg/u_rom/SLICE_528
-ROUTE         1   e 0.208 */SLICE_528.F1 to */SLICE_528.A0 u_cam_cfg/u_rom/n58987
-CTOF_DEL    ---     0.236 */SLICE_528.A0 to */SLICE_528.F0 u_cam_cfg/u_rom/SLICE_528
-ROUTE         1   e 0.573 */SLICE_528.F0 to */SLICE_527.B0 u_cam_cfg/u_rom/n58993
-CTOF_DEL    ---     0.236 */SLICE_527.B0 to */SLICE_527.F0 u_cam_cfg/u_rom/SLICE_527
-ROUTE         3   e 0.573 */SLICE_527.F0 to */SLICE_521.B1 u_cam_cfg/n58276
-CTOF_DEL    ---     0.236 */SLICE_521.B1 to */SLICE_521.F1 u_cam_cfg/SLICE_521
-ROUTE         2   e 0.208 */SLICE_521.F1 to */SLICE_521.B0 u_cam_cfg/n61700
-CTOF_DEL    ---     0.236 */SLICE_521.B0 to */SLICE_521.F0 u_cam_cfg/SLICE_521
-ROUTE        19   e 0.573 */SLICE_521.F0 to */SLICE_120.CE u_cam_cfg/SD_CLK_c_enable_237 (to SD_CLK_c)
+C2Q_DEL     ---     5.740 */mux_839.CLKR to */mux_839.DO15 u_cam_cfg/u_rom/mux_839 (from SD_CLK_c)
+ROUTE         1   e 0.573 */mux_839.DO15 to */SLICE_112.C1 u_cam_cfg/u_rom/n28079
+CTOOFX_DEL  ---     0.401 */SLICE_112.C1 to *LICE_112.OFX0 u_cam_cfg/SLICE_112
+ROUTE         2   e 0.573 *LICE_112.OFX0 to */SLICE_551.C1 u_cam_cfg/rom_entry_16
+CTOF_DEL    ---     0.236 */SLICE_551.C1 to */SLICE_551.F1 u_cam_cfg/SLICE_551
+ROUTE         1   e 0.573 */SLICE_551.F1 to */SLICE_525.B1 u_cam_cfg/n59285
+CTOF_DEL    ---     0.236 */SLICE_525.B1 to */SLICE_525.F1 u_cam_cfg/SLICE_525
+ROUTE         2   e 0.573 */SLICE_525.F1 to */SLICE_524.A0 u_cam_cfg/n29_adj_12135
+CTOF_DEL    ---     0.236 */SLICE_524.A0 to */SLICE_524.F0 u_cam_cfg/SLICE_524
+ROUTE         2   e 0.573 */SLICE_524.F0 to */SLICE_510.B1 u_cam_cfg/n59739
+CTOF_DEL    ---     0.236 */SLICE_510.B1 to */SLICE_510.F1 u_cam_cfg/SLICE_510
+ROUTE         2   e 0.573 */SLICE_510.F1 to */SLICE_369.A0 u_cam_cfg/n54127
+CTOOFX_DEL  ---     0.401 */SLICE_369.A0 to *LICE_369.OFX0 u_cam_cfg/i14340/SLICE_369
+ROUTE         1   e 0.573 *LICE_369.OFX0 to */SLICE_131.D0 u_cam_cfg/n51468
+CTOF_DEL    ---     0.236 */SLICE_131.D0 to */SLICE_131.F0 u_cam_cfg/SLICE_131
+ROUTE         1   e 0.001 */SLICE_131.F0 to *SLICE_131.DI0 u_cam_cfg/n302 (to SD_CLK_c)
                   --------
-                   10.602   (69.1% logic, 30.9% route), 7 logic levels.
+                   11.734   (65.8% logic, 34.2% route), 8 logic levels.
 
-Report:   95.465MHz is the maximum frequency for this preference.
+Report:   87.154MHz is the maximum frequency for this preference.
 
 
 ================================================================================
@@ -97,7 +98,7 @@ Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
 FREQUENCY NET "SD_CLK_c" 48.000000 MHz  |             |             |
-;                                       |   48.000 MHz|   95.465 MHz|   7  
+;                                       |   48.000 MHz|   87.154 MHz|   8  
                                         |             |             |
 FREQUENCY NET "MCLK_c" 24.000000 MHz ;  |            -|            -|   0  
                                         |             |             |
@@ -115,7 +116,7 @@ Clock Domains Analysis
 
 Found 2 clocks:
 
-Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 289
+Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 287
    Covered under: FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
 
 Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 1
@@ -128,11 +129,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 96620 paths, 3 nets, and 4327 connections (94.07% coverage)
+Constraints cover 100402 paths, 3 nets, and 4250 connections (94.01% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Sat Mar 07 23:07:12 2026
+Wed Mar 18 08:21:50 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -168,17 +169,17 @@ Passed: The following path meets requirements by 0.103ns
 
  Constraint Details:
 
-      0.221ns physical path delay u_ctrl/u_cmd/SLICE_223 to u_ctrl/u_cmd/SLICE_223 meets
+      0.221ns physical path delay u_ctrl/u_cmd/SLICE_224 to u_ctrl/u_cmd/SLICE_224 meets
       0.118ns M_HLD and
       0.000ns delay constraint requirement (totaling 0.118ns) by 0.103ns
 
  Physical Path Details:
 
-      Data path u_ctrl/u_cmd/SLICE_223 to u_ctrl/u_cmd/SLICE_223:
+      Data path u_ctrl/u_cmd/SLICE_224 to u_ctrl/u_cmd/SLICE_224:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.163 *SLICE_223.CLK to */SLICE_223.Q1 u_ctrl/u_cmd/SLICE_223 (from SD_CLK_c)
-ROUTE         3   e 0.058 */SLICE_223.Q1 to */SLICE_223.M0 u_ctrl/u_cmd/n24336 (to SD_CLK_c)
+REG_DEL     ---     0.163 *SLICE_224.CLK to */SLICE_224.Q1 u_ctrl/u_cmd/SLICE_224 (from SD_CLK_c)
+ROUTE         3   e 0.058 */SLICE_224.Q1 to */SLICE_224.M0 u_ctrl/u_cmd/n24336 (to SD_CLK_c)
                   --------
                     0.221   (73.8% logic, 26.2% route), 1 logic levels.
 
@@ -219,7 +220,7 @@ Clock Domains Analysis
 
 Found 2 clocks:
 
-Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 289
+Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 287
    Covered under: FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
 
 Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 1
@@ -232,7 +233,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 96620 paths, 3 nets, and 4587 connections (99.72% coverage)
+Constraints cover 100402 paths, 3 nets, and 4508 connections (99.71% coverage)
 
 
 

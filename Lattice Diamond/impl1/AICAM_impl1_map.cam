@@ -1,46 +1,46 @@
 [ START MERGED ]
-u_ctrl/u_tx/n51533 u_ctrl/n24558
-u_ctrl/u_rx/n61791 rx_s2
-u_ctrl/u_cmd/n51509 u_ctrl/u_cmd/cmd_valid_N_765
-n49047 sda_oe
+u_ctrl/u_tx/n51536 u_ctrl/n24558
+u_ctrl/u_rx/n62046 rx_s2
+u_ctrl/u_cmd/n51512 u_ctrl/u_cmd/cmd_valid_N_765
+n49048 sda_oe
+u_sdram/n51504 u_sdram/n19202
 u_sdram/n1 u_sdram/refresh_req
-u_sdram/n51501 u_sdram/n19202
 [ END MERGED ]
 [ START CLIPPED ]
 VCC_net
-u_cam_cfg/divc_3991_add_4_1/S0
-u_cam_cfg/divc_3991_add_4_1/CI
-u_cam_cfg/divc_3991_add_4_9/CO
-u_sdram/refresh_cnt_3993_add_4_1/S0
-u_sdram/refresh_cnt_3993_add_4_1/CI
-u_sdram/refresh_cnt_3993_add_4_17/S1
-u_sdram/refresh_cnt_3993_add_4_17/CO
-_add_1_11934_add_4_11/S1
-_add_1_11934_add_4_11/CO
-u_sd/equal_11678_0/S1
-u_sd/equal_11678_0/S0
-u_sd/equal_11678_0/CI
-u_sd/equal_11678_16/S0
-u_sd/equal_11678_16/CO
-u_sd/equal_11678_15/S1
-u_sd/equal_11678_15/S0
-_add_1_11922_add_4_1/S0
-_add_1_11922_add_4_1/CI
-_add_1_11937_add_4_1/S1
-_add_1_11937_add_4_1/S0
-_add_1_11937_add_4_1/CI
-_add_1_11931_add_4_1/S0
-_add_1_11931_add_4_1/CI
-_add_1_11931_add_4_11/CO
-_add_1_11934_add_4_1/S0
-_add_1_11934_add_4_1/CI
-add_18988_1/S1
-add_18988_1/S0
-add_18988_1/CI
-add_18988_9/CO
-_add_1_11922_add_4_17/S1
-_add_1_11922_add_4_17/CO
-_add_1_11937_add_4_9/CO
+u_cam_cfg/divc_3992_add_4_1/S0
+u_cam_cfg/divc_3992_add_4_1/CI
+u_cam_cfg/divc_3992_add_4_9/CO
+u_sd/equal_11680_0/S1
+u_sd/equal_11680_0/S0
+u_sd/equal_11680_0/CI
+u_sd/equal_11680_16/S0
+u_sd/equal_11680_16/CO
+u_sd/equal_11680_15/S1
+u_sd/equal_11680_15/S0
+_add_1_11935_add_4_11/S1
+_add_1_11935_add_4_11/CO
+_add_1_11923_add_4_1/S0
+_add_1_11923_add_4_1/CI
+_add_1_11932_add_4_11/CO
+add_19341_1/S1
+add_19341_1/S0
+add_19341_1/CI
+add_19341_9/CO
+u_sdram/refresh_cnt_3994_add_4_1/S0
+u_sdram/refresh_cnt_3994_add_4_1/CI
+u_sdram/refresh_cnt_3994_add_4_17/S1
+u_sdram/refresh_cnt_3994_add_4_17/CO
+_add_1_11938_add_4_1/S1
+_add_1_11938_add_4_1/S0
+_add_1_11938_add_4_1/CI
+_add_1_11923_add_4_17/S1
+_add_1_11923_add_4_17/CO
+_add_1_11935_add_4_1/S0
+_add_1_11935_add_4_1/CI
+_add_1_11938_add_4_9/CO
+_add_1_11932_add_4_1/S0
+_add_1_11932_add_4_1/CI
 u_ctrl/u_cmd/chk_calc_7__I_0_0/S1
 u_ctrl/u_cmd/chk_calc_7__I_0_0/S0
 u_ctrl/u_cmd/chk_calc_7__I_0_0/CI
@@ -48,18 +48,18 @@ u_ctrl/u_cmd/chk_calc_7__I_0_7/S1
 u_ctrl/u_cmd/chk_calc_7__I_0_7/S0
 u_ctrl/u_cmd/chk_calc_7__I_0_8/S0
 u_ctrl/u_cmd/chk_calc_7__I_0_8/CO
-u_ctrl/u_rx/clk_cnt_4005_add_4_1/S0
-u_ctrl/u_rx/clk_cnt_4005_add_4_1/CI
-u_ctrl/u_rx/clk_cnt_4005_add_4_17/S1
-u_ctrl/u_rx/clk_cnt_4005_add_4_17/CO
-u_ctrl/u_tx/clk_cnt_4007_add_4_17/S1
-u_ctrl/u_tx/clk_cnt_4007_add_4_17/CO
-u_ctrl/u_tx/clk_cnt_4007_add_4_1/S0
-u_ctrl/u_tx/clk_cnt_4007_add_4_1/CI
+u_ctrl/u_rx/clk_cnt_4006_add_4_1/S0
+u_ctrl/u_rx/clk_cnt_4006_add_4_1/CI
+u_ctrl/u_rx/clk_cnt_4006_add_4_17/S1
+u_ctrl/u_rx/clk_cnt_4006_add_4_17/CO
+u_ctrl/u_tx/clk_cnt_4008_add_4_17/S1
+u_ctrl/u_tx/clk_cnt_4008_add_4_17/CO
+u_ctrl/u_tx/clk_cnt_4008_add_4_1/S0
+u_ctrl/u_tx/clk_cnt_4008_add_4_1/CI
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sat Mar 07 23:07:10 2026
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Wed Mar 18 08:21:48 2026
 
 SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
 LOCATE COMP "SD_DQ[13]" SITE "G15" ;

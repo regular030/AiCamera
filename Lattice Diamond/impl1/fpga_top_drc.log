@@ -38,7 +38,7 @@ WARNING - synthesis: input pad net 'SSPI_CS_n' has no legal load.
 WARNING - synthesis: DRC complete with 28 warnings.
 
 Design Results:
-   1629 blocks expanded
+   1603 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file AICAM_impl1.ngd.

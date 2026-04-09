@@ -11522,7 +11522,7 @@
             <ID>35935013</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(393): </Dynamic>
-            <Dynamic>\u_sdram/init_wait_cnt_3994__i31</Dynamic>
+            <Dynamic>\u_sdram/init_wait_cnt_3995__i31</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v</Navigation>
             <Navigation>393</Navigation>
         </Message>
@@ -11530,7 +11530,7 @@
             <ID>35935013</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v(587): </Dynamic>
-            <Dynamic>\u_sdram/rd_ptr_ext_3997_5039__i1</Dynamic>
+            <Dynamic>\u_sdram/rd_ptr_ext_3998_5040__i1</Dynamic>
             <Navigation>c:/users/kunsh/desktop/aicamera/lattice diamond/sdram_ctrl_simple.v</Navigation>
             <Navigation>587</Navigation>
         </Message>
