@@ -1,4 +1,4 @@
-# AiCamera
+# AiCamera - VERY MUCH WIP, PLEASE CONTACT ME BEFORE DOING ANYTHING
 ## AI FPGA Camera Board (HW Rev 1.0)
 
 AiCamera is a custom embedded-vision platform built around a **Lattice ECP5 FPGA**, an **OV5640 camera**, an **ESP32-S3**, and **external SDRAM**. The goal is to build a board that can do more than simply capture frames. I want a platform that can reliably ingest camera data, run a reduced FPGA-friendly vision pipeline, log useful metadata, and expose a practical control path over Wi-Fi through the ESP32-S3.
