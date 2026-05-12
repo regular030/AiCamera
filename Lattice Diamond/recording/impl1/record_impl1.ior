@@ -1,0 +1,116 @@
+Loading design for application iotiming from file record_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 7
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file record_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 8
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file record_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 9
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file record_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+// Design: fpga_top
+// Package: CABGA256
+// ncd File: record_impl1.ncd
+// Version: Diamond (64-bit) 3.14.0.75.2
+// Written on Mon May 11 14:49:38 2026
+// M: Minimum Performance Grade
+// iotiming record_impl1.ncd record_impl1.prf
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 9, 8, 7, 6):
+
+// Input Setup and Hold Times
+
+Port      Clock   Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+HREF      PCLK    R     1.351      6       0.123     6
+SSPI_CS_n CRYSTAL R     2.996      6      -0.363     6
+VSYNC     PCLK    R     0.090      M       1.410     6
+Y2        PCLK    R     0.934      6       0.460     6
+Y3        PCLK    R     0.173      M       1.326     6
+Y4        PCLK    R     0.360      M       0.976     6
+Y5        PCLK    R     0.567      6       0.736     6
+Y6        PCLK    R     0.511      6       0.767     6
+Y7        PCLK    R     0.403      M       0.909     6
+Y8        PCLK    R     0.360      M       0.976     6
+Y9        PCLK    R     0.125      M       1.365     6
+
+
+// Clock to Output Delay
+
+Port      Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+DOUT      CRYSTAL R    11.923         6        4.113          M
+ESP_D[0]  CRYSTAL R    11.417         6        4.598          M
+ESP_D[1]  CRYSTAL R    10.884         6        4.401          M
+ESP_D[2]  CRYSTAL R    11.095         6        4.483          M
+ESP_D[3]  CRYSTAL R    14.497         6        5.101          M
+ESP_D[4]  CRYSTAL R    11.290         6        4.538          M
+ESP_D[5]  CRYSTAL R    10.590         6        4.271          M
+ESP_D[6]  CRYSTAL R    10.603         6        4.280          M
+ESP_D[7]  CRYSTAL R    10.781         6        4.344          M
+SD_A[0]   CRYSTAL R    10.156         6        4.106          M
+SD_A[10]  CRYSTAL R     9.462         6        3.840          M
+SD_A[11]  CRYSTAL R     9.810         6        3.991          M
+SD_A[12]  CRYSTAL R    10.030         6        4.067          M
+SD_A[1]   CRYSTAL R    10.402         6        4.219          M
+SD_A[2]   CRYSTAL R    10.224         6        4.143          M
+SD_A[3]   CRYSTAL R    10.460         6        4.223          M
+SD_A[4]   CRYSTAL R    11.334         6        4.594          M
+SD_A[5]   CRYSTAL R    11.077         6        4.492          M
+SD_A[6]   CRYSTAL R    11.500         6        4.647          M
+SD_A[7]   CRYSTAL R    10.318         6        4.192          M
+SD_A[8]   CRYSTAL R    10.538         6        4.268          M
+SD_A[9]   CRYSTAL R    10.214         6        4.145          M
+SD_BA[0]  CRYSTAL R     8.446         6        3.464          M
+SD_BA[1]  CRYSTAL R     8.189         6        3.363          M
+SD_CAS_N  CRYSTAL R     8.446         6        3.464          M
+SD_DQ[0]  CRYSTAL R     8.668         6        3.181          M
+SD_DQ[10] CRYSTAL R     9.103         6        3.359          M
+SD_DQ[11] CRYSTAL R     9.103         6        3.358          M
+SD_DQ[12] CRYSTAL R     9.092         6        3.359          M
+SD_DQ[13] CRYSTAL R     9.092         6        3.358          M
+SD_DQ[14] CRYSTAL R     8.838         6        3.210          M
+SD_DQ[15] CRYSTAL R     8.838         6        3.209          M
+SD_DQ[1]  CRYSTAL R     8.562         6        3.180          M
+SD_DQ[2]  CRYSTAL R     8.550         6        3.143          M
+SD_DQ[3]  CRYSTAL R     8.562         6        3.108          M
+SD_DQ[4]  CRYSTAL R     7.938         6        3.144          M
+SD_DQ[5]  CRYSTAL R     8.079         6        3.229          M
+SD_DQ[6]  CRYSTAL R     8.159         6        3.229          M
+SD_DQ[7]  CRYSTAL R     9.059         6        3.288          M
+SD_DQ[8]  CRYSTAL R     9.878         6        3.437          M
+SD_DQ[9]  CRYSTAL R     9.878         6        3.507          M
+SD_RAS_N  CRYSTAL R     8.407         6        3.443          M
+SD_WE_N   CRYSTAL R     8.042         6        3.310          M
+cam_scl   CRYSTAL R     9.528         6        3.784          M
+cam_sda   CRYSTAL R    10.569         6        3.984          M
+WARNING: you must also run trce with hold speed: 6
+WARNING: you must also run trce with setup speed: M

@@ -1,0 +1,448 @@
+synthesis:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Mon May 11 15:55:00 2026
+
+
+Command Line:  synthesis -f record_impl1_lattice.synproj 
+
+Synthesis options:
+The -a option is ECP5UM.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5UM-25F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5UM
+
+### Device  : LFE5UM-25F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = fpga_top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording (searchpath added)
+-p C:/lscc/diamond/3.14/ispfpga/sa5p00m/data (searchpath added)
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/impl1 (searchpath added)
+-p C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording (searchpath added)
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/async_fifo_16x1024.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/bmp_sector_streamer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/cam_capture_rgb565.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/debug_uart_text.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/fpga_cmd_rx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/fpga_top.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/framebuffer_capture.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/ov5640_sccb_init.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/reset_sync.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/sd_spi_writer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/uart_rx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/uart_tx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/w9825_sdram_ctrl.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/debug_uart_min.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/debug_uart_status.v
+NGD file = record_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5um.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/async_fifo_16x1024.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/bmp_sector_streamer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/cam_capture_rgb565.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_text.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_cmd_rx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v. VERI-1482
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(123): analyzing included file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/model_box20_bootstrap/box20_linear_params.vh. VERI-1328
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/framebuffer_capture.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/reset_sync.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sd_spi_writer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_rx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_tx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_min.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_status.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5um.v. VERI-1482
+Top module name (Verilog): fpga_top
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1): compiling module fpga_top. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/reset_sync.v(1): compiling module reset_sync. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(1): compiling module ov5640_sccb_init. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(36): net reg_addr does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(37): net reg_data does not have a driver. VDB-1002
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_rx.v(1): compiling module uart_rx. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_cmd_rx.v(1): compiling module fpga_cmd_rx. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(1): compiling module w9825_sdram_ctrl. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(97): expression size 32 truncated to fit in target size 6. VERI-1209
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/async_fifo_16x1024.v(1): compiling module async_fifo_16x1024. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/async_fifo_16x1024.v(1): compiling module async_fifo_16x1024(AW=15). VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/framebuffer_capture.v(1): compiling module framebuffer_capture. VERI-1018
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1103): expression size 13 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1139): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1140): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1141): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1171): expression size 8 truncated to fit in target size 5. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1172): expression size 9 truncated to fit in target size 6. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1173): expression size 8 truncated to fit in target size 5. VERI-1209
+Constant propagated thru Write Port :clk_write_port_986.
+
+Constant propagated thru Write Port :clk_write_port_987.
+
+Constant propagated thru Write Port :clk_write_port_988.
+
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1930): Register qvga_avg_pending_pclk_3284 is stuck at Zero. VDB-5013
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00m/data/sa5mlib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25m.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.37.
+Top-level module name = fpga_top.
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(36): ram reg_addr_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(37): ram reg_data_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: Bit 7 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_cur_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_cur_u_pclk is stuck at One
+WARNING - synthesis: Bit 6 of Register qvga_cur_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_cur_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_cur_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_cur_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_cur_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_cur_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_cur_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_cur_v_pclk is stuck at One
+WARNING - synthesis: Bit 6 of Register qvga_cur_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_cur_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_cur_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_cur_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_cur_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_cur_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_cur_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_prev_y_pclk is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_prev_u_pclk is stuck at One
+WARNING - synthesis: Bit 6 of Register qvga_prev_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_prev_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_prev_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_prev_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_prev_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_prev_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_prev_u_pclk is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_prev_v_pclk is stuck at One
+WARNING - synthesis: Bit 6 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: I/O Port RX 's net has no driver and is unused.
+WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
+WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
+######## Converting I/O port M_D1 to output.
+######## Converting I/O port M_D0 to output.
+######## Converting I/O port M_D2 to output.
+######## Converting I/O port M_D3 to output.
+######## Converting I/O port M_CMD to output.
+WARNING - synthesis: Bit 1 of Register \u_sdram/SD_DQM is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_sdram/SD_DQM is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(105): Register \u_sdram/SD_CKE_220 is stuck at One. VDB-5014
+WARNING - synthesis: Bit 0 of Register \u_rst/shreg is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_rst/shreg is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_rst/shreg is stuck at Zero
+WARNING - synthesis: Bit 0 of Register pclk_rst_sync is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(105): Register \u_sdram/SD_CS_N_221 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 1 of Register pclk_rst_sync is stuck at Zero
+INFO - synthesis: Extracted state machine for register 'qvga_tx_state_sys' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+INFO - synthesis: Extracted state machine for register '\u_uart_rx/state' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\u_snap_capture/state' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+INFO - synthesis: Extracted state machine for register '\u_sdram/state' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 000001 -> 00000000000001
+
+ 000010 -> 00000000000010
+
+ 000011 -> 00000000000100
+
+ 000100 -> 00000000001000
+
+ 000101 -> 00000000010000
+
+ 000110 -> 00000000100000
+
+ 000111 -> 00000001000000
+
+ 001000 -> 00000010000000
+
+ 001001 -> 00000100000000
+
+ 001010 -> 00001000000000
+
+ 001011 -> 00010000000000
+
+ 001100 -> 00100000000000
+
+ 001101 -> 01000000000000
+
+ 001110 -> 10000000000000
+
+
+
+
+WARNING - synthesis: Bit 0 of Register \u_sdram/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_cam_init/bytes[3] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_cam_init/bytes[3] is stuck at One
+WARNING - synthesis: Bit 5 of Register \u_cam_init/bytes[3] is stuck at One
+WARNING - synthesis: Bit 4 of Register \u_cam_init/bytes[3] is stuck at One
+WARNING - synthesis: Bit 3 of Register \u_cam_init/bytes[3] is stuck at One
+WARNING - synthesis: Bit 2 of Register \u_cam_init/bytes[3] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cam_init/bytes[3] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cam_init/bytes[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_sdram/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 21 of Register sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_cam_init/retry_ctr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_cam_init/retry_ctr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_cam_init/state is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_cam_init/state is stuck at Zero
+######## Found 2 RTL RAMs in the design.
+######## Mapping RTL RAM \u_qvga_fifo/mem to 32 EBR blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \u_snap_fifo/mem to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+
+######## Converting I/O port cam_sda to output.
+WARNING - synthesis: I/O Port RX 's net has no driver and is unused.
+WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
+WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
+######## Converting I/O port SD_DQ[15] to output.
+######## Converting I/O port SD_DQ[14] to output.
+######## Converting I/O port SD_DQ[13] to output.
+######## Converting I/O port SD_DQ[12] to output.
+######## Converting I/O port SD_DQ[11] to output.
+######## Converting I/O port SD_DQ[10] to output.
+######## Converting I/O port SD_DQ[9] to output.
+######## Converting I/O port SD_DQ[8] to output.
+######## Converting I/O port SD_DQ[7] to output.
+######## Converting I/O port SD_DQ[6] to output.
+######## Converting I/O port SD_DQ[5] to output.
+######## Converting I/O port SD_DQ[4] to output.
+######## Converting I/O port SD_DQ[3] to output.
+######## Converting I/O port SD_DQ[2] to output.
+######## Converting I/O port SD_DQ[1] to output.
+######## Converting I/O port SD_DQ[0] to output.
+WARNING - synthesis: Bit 1 of Register qvga_tx_state_sys is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(103): Register \u_sdram/state_FSM_i13 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(542): Register \u_cam_init/init_done_r_162 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3633): Register tx_preview_col_gap_3469 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3633): Register tx_preview_replay_active_3462 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1930): Register cam_init_pclk_sync_i0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3435): Register tx_preview_col_gap_ctr_6711__i0 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_11__0_i4 is a one-to-one match with \u_qvga_fifo/mem_7241.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_11__0_i3 is a one-to-one match with \u_qvga_fifo/mem_7238.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_11__0_i2 is a one-to-one match with \u_qvga_fifo/mem_7236.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_11__0_i1 is a one-to-one match with \u_qvga_fifo/mem_7234.
+Duplicate register/latch removal. \u_snap_fifo/mem_7487 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i0.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7232 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_11__0_i0.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7230 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i9.
+Duplicate register/latch removal. \u_snap_fifo/mem_7489 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i1.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7228 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i8.
+Duplicate register/latch removal. \u_snap_fifo/mem_7499 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i6.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7226 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i7.
+Duplicate register/latch removal. \u_snap_fifo/mem_7501 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i7.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7224 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i6.
+Duplicate register/latch removal. \u_snap_fifo/mem_7491 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i2.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7222 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i5.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_10_i0 is a one-to-one match with \u_qvga_fifo/mem_7212.
+Duplicate register/latch removal. \u_snap_fifo/mem_7503 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i8.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7220 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i4.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7218 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i3.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7216 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i2.
+Duplicate register/latch removal. \u_qvga_fifo/mem_7214 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_10_i1.
+Duplicate register/latch removal. \u_snap_fifo/mem_7493 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i3.
+Duplicate register/latch removal. \u_snap_fifo/mem_7506 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i9.
+Duplicate register/latch removal. \u_snap_fifo/mem_7495 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i4.
+Duplicate register/latch removal. \u_snap_fifo/mem_7497 is a one-to-one match with \u_snap_fifo/rd_bin_rep_9_i5.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_10_i14 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_11__0_i4.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_10_i13 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_11__0_i3.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_10_i12 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_11__0_i2.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_10_i11 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_11__0_i1.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_10_i10 is a one-to-one match with \u_qvga_fifo/mem_7232.
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+Duplicate register/latch removal. \u_qvga_fifo/wr_bin_i0_i15 is a one-to-one match with \u_qvga_fifo/wr_gray_i0_i15.
+Duplicate register/latch removal. \u_snap_fifo/wr_bin_i0_i10 is a one-to-one match with \u_snap_fifo/wr_gray_i0_i10.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in fpga_top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00m/data/sa5mlib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'RX' has no load.
+WARNING - synthesis: input pad net 'RX' has no legal load.
+WARNING - synthesis: logical net 'DIN' has no load.
+WARNING - synthesis: input pad net 'DIN' has no legal load.
+WARNING - synthesis: logical net 'CCLK' has no load.
+WARNING - synthesis: input pad net 'CCLK' has no legal load.
+WARNING - synthesis: DRC complete with 6 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file record_impl1.ngd.
+
+################### Begin Area Report (fpga_top)######################
+Number of register bits => 1255 of 24879 (5 % )
+CCU2C => 411
+DP16KD => 33
+FD1P3AX => 455
+FD1P3IX => 449
+FD1P3JX => 13
+FD1S3AX => 246
+FD1S3IX => 81
+FD1S3JX => 11
+GSR => 1
+IB => 13
+L6MUX21 => 102
+LUT4 => 1685
+OB => 38
+OBZ => 20
+PDPW16KD => 1
+PFUMX => 187
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : CRYSTAL_c, loads : 947
+  Net : PCLK_c, loads : 377
+Clock Enable Nets
+Number of Clock Enables: 100
+Top 10 highest fanout Clock Enables:
+  Net : u_snap_capture/state_0, loads : 41
+  Net : qvga_fifo_rd_en, loads : 40
+  Net : href_pclk, loads : 38
+  Net : u_qvga_fifo/wr_bin_next_15_N_8451_0, loads : 32
+  Net : u_cam_init/CRYSTAL_c_enable_252, loads : 32
+  Net : CRYSTAL_c_enable_485, loads : 31
+  Net : qvga_tx_busy_sys_N_6837, loads : 29
+  Net : u_snap_fifo/CRYSTAL_c_enable_556, loads : 27
+  Net : u_sdram/SD_CS_N_N_8043, loads : 26
+  Net : CRYSTAL_c_enable_594, loads : 24
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : u_qvga_fifo/n38130, loads : 257
+  Net : u_qvga_fifo/n38129, loads : 129
+  Net : CRYSTAL_c_enable_550, loads : 70
+  Net : u_qvga_fifo/n38128, loads : 65
+  Net : tx_is_snapshot, loads : 53
+  Net : tx_in_gap, loads : 48
+  Net : CRYSTAL_c_enable_421, loads : 48
+  Net : CRYSTAL_c_enable_346, loads : 48
+  Net : CRYSTAL_c_enable_567, loads : 48
+  Net : u_cam_init/tick, loads : 48
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets CRYSTAL_c]               |  200.000 MHz|   74.410 MHz|    10 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets PCLK_c]                  |  200.000 MHz|   59.709 MHz|    13 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 155.969  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 11.953  secs
+--------------------------------------------------------------

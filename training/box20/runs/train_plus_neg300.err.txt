@@ -1,0 +1,7 @@
+usage: train_box20.py [-h] --data DATA --out OUT [--epochs EPOCHS]
+                      [--batch-size BATCH_SIZE] [--lr LR]
+                      [--channels CHANNELS] [--input-channels {3}]
+                      [--shift1 SHIFT1] [--shift-fc SHIFT_FC]
+                      [--threshold THRESHOLD] [--val-frac VAL_FRAC]
+                      [--seed SEED]
+train_box20.py: error: unrecognized arguments: Diamond\recording\model_box20_grid_clean_20260511_191labels_plus_neg300

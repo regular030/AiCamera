@@ -1,0 +1,28 @@
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Mon May 11 15:55:28 2026
+
+C:/lscc/diamond/3.14/ispfpga\bin\nt64\par -f record_impl1.p2t
+record_impl1_map.ncd record_impl1.dir record_impl1.prf
+
+
+Preference file: record_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1          -            -            -            -            -            02           Failed
+
+* : Design saved.
+
+INFO - par: Iteration 5_1 failed due to design error(s).
+
+ERROR - par: All 1 iterations failed with design error(s). It is recommended to correct all design errors before running multiple iterations. Please check the Place and Route reports (.par) for the individual iterations under the directory "C:\Users\kunsh\Desktop\AiCamera\Lattice Diamond\recording\impl1\record_impl1.dir".
+
+Total (real) run time for 1-seed: 2 secs 
+
+par failed!

@@ -1,0 +1,732 @@
+
+        Lattice Mapping Report File for Design Module 'sdram_text_top'
+
+
+Design Information
+------------------
+
+Command line:   C:\lscc\diamond\3.14\ispfpga\bin\nt64\map.exe
+     sdramtest_impl1.ngd ..\sdramtest.lpf -o sdramtest_impl1_map.ncd -pr
+     sdramtest_impl1.prf -p LFE5U-25F -t CABGA256 -s 6 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-25FCABGA256
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  04/22/26  12:51:32
+
+Design Summary
+--------------
+
+   Number of registers:    669 out of 24879 (3%)
+      PFU registers:          669 out of 24288 (3%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       724 out of 12144 (6%)
+      SLICEs as Logic/ROM:    724 out of 12144 (6%)
+      SLICEs as RAM:            0 out of  9108 (0%)
+      SLICEs as Carry:        116 out of 12144 (1%)
+   Number of LUT4s:        1017 out of 24288 (4%)
+      Number used as logic LUTs:        785
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      232
+      Number used as shift registers:     0
+   Number of PIO sites used: 50 out of 197 (25%)
+   Number of block RAMs:  0 out of 56 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+
+                                    Page 1
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Design Summary (cont)
+---------------------
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net CRYSTAL_c: 379 loads, 379 rising, 0 falling (Driver: PIO CRYSTAL )
+   Number of Clock Enables:  46
+     Net out_busy: 13 loads, 13 LSLICEs
+     Net CRYSTAL_c_enable_314: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_307: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_454: 17 loads, 17 LSLICEs
+     Net CRYSTAL_c_enable_223: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_238: 16 loads, 16 LSLICEs
+     Net uart_valid: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_432: 21 loads, 21 LSLICEs
+     Net CRYSTAL_c_enable_370: 11 loads, 11 LSLICEs
+     Net CRYSTAL_c_enable_194: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_118: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_431: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_291: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_288: 11 loads, 11 LSLICEs
+     Net CRYSTAL_c_enable_266: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_265: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_460: 20 loads, 20 LSLICEs
+     Net sdram_rd_req_N_1089: 9 loads, 9 LSLICEs
+     Net CRYSTAL_c_enable_245: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_225: 15 loads, 15 LSLICEs
+     Net CRYSTAL_c_enable_112: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_429: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_227: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_55: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_228: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_249: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_433: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_453: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_216: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_248: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_299: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_324: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_322: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_332: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_340: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_348: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_349: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_424: 2 loads, 2 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_262: 4 loads, 4 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_91: 4 loads, 4 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_209: 2 loads, 2 LSLICEs
+     Net u_sdram/SD_CS_N_N_1555: 8 loads, 8 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_385: 8 loads, 8 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_406: 12 loads, 12 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_421: 8 loads, 8 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_451: 8 loads, 8 LSLICEs
+   Number of LSRs:  34
+     Net n11338: 7 loads, 7 LSLICEs
+     Net n11238: 15 loads, 15 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Design Summary (cont)
+---------------------
+     Net CRYSTAL_c_enable_238: 10 loads, 10 LSLICEs
+     Net n21119: 28 loads, 28 LSLICEs
+     Net n11220: 1 loads, 1 LSLICEs
+     Net n11321: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_288: 1 loads, 1 LSLICEs
+     Net n8742: 16 loads, 16 LSLICEs
+     Net n11290: 8 loads, 8 LSLICEs
+     Net n16065: 1 loads, 1 LSLICEs
+     Net n14161: 4 loads, 4 LSLICEs
+     Net n10639: 1 loads, 1 LSLICEs
+     Net n10104: 1 loads, 1 LSLICEs
+     Net n13: 2 loads, 2 LSLICEs
+     Net n14866: 2 loads, 2 LSLICEs
+     Net n11331: 4 loads, 4 LSLICEs
+     Net n12049: 4 loads, 4 LSLICEs
+     Net n11232: 4 loads, 4 LSLICEs
+     Net n10637: 1 loads, 1 LSLICEs
+     Net read_request: 1 loads, 1 LSLICEs
+     Net n20275: 7 loads, 7 LSLICEs
+     Net u_uart_rx/n11268: 2 loads, 2 LSLICEs
+     Net u_uart_rx/n6179: 1 loads, 1 LSLICEs
+     Net u_uart_rx/n8823: 9 loads, 9 LSLICEs
+     Net u_sdram/op_is_read: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CS_N_N_1555: 2 loads, 2 LSLICEs
+     Net u_sdram/SD_CS_N_N_1553: 1 loads, 1 LSLICEs
+     Net u_sdram/rd_ack_N_1541: 1 loads, 1 LSLICEs
+     Net u_sdram/n21108: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CS_N_N_1551: 3 loads, 3 LSLICEs
+     Net u_sdram/SD_CS_N_N_1556: 1 loads, 1 LSLICEs
+     Net u_sdram/op_is_read_N_1536: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CS_N_N_1552: 1 loads, 1 LSLICEs
+     Net u_sdram/n20298: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net pkt_1_0: 49 loads
+     Net out_busy: 41 loads
+     Net sdram_wr_req: 38 loads
+     Net idle_idx_0: 34 loads
+     Net n87_adj_1621: 31 loads
+     Net sdram_rd_req: 31 loads
+     Net n21119: 28 loads
+     Net tx_byte_idx_0: 28 loads
+     Net write_streaming: 28 loads
+     Net CRYSTAL_c_enable_238: 26 loads
+
+
+
+
+   Number of warnings:  70
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: ../sdramtest.lpf(31): Semantic error in "FREQUENCY PORT "PCLK"
+
+                                    Page 3
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Design Errors/Warnings (cont)
+-----------------------------
+     48.000000 MHz ;": "PCLK" matches no ports in the design.  This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(32): Semantic error in "FREQUENCY NET "PCLK_c"
+     48.000000 MHz ;": PCLK_c matches no clock nets in the design.  This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(11): Semantic error in "LOCATE COMP "VSYNC" SITE
+     "B10" ;": COMP "VSYNC" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(11): Semantic error in "IOBUF PORT "VSYNC"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "VSYNC" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(12): Semantic error in "LOCATE COMP "HREF" SITE
+     "A11" ;": COMP "HREF" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(12): Semantic error in "IOBUF PORT "HREF"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "HREF" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(13): Semantic error in "LOCATE COMP "Y9" SITE
+     "B11" ;": COMP "Y9" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(13): Semantic error in "IOBUF PORT "Y9"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y9" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(14): Semantic error in "LOCATE COMP "Y8" SITE
+     "B12" ;": COMP "Y8" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(14): Semantic error in "IOBUF PORT "Y8"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y8" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(15): Semantic error in "LOCATE COMP "Y7" SITE
+     "A13" ;": COMP "Y7" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(15): Semantic error in "IOBUF PORT "Y7"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y7" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(16): Semantic error in "LOCATE COMP "Y6" SITE
+     "A14" ;": COMP "Y6" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(16): Semantic error in "IOBUF PORT "Y6"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y6" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(17): Semantic error in "LOCATE COMP "Y5" SITE
+     "A15" ;": COMP "Y5" cannot be found in design. This preference has been
+     disabled.
+
+                                    Page 4
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: ../sdramtest.lpf(17): Semantic error in "IOBUF PORT "Y5"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y5" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(18): Semantic error in "LOCATE COMP "Y4" SITE
+     "C13" ;": COMP "Y4" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(18): Semantic error in "IOBUF PORT "Y4"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y4" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(19): Semantic error in "LOCATE COMP "Y3" SITE
+     "C12" ;": COMP "Y3" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(19): Semantic error in "IOBUF PORT "Y3"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y3" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(20): Semantic error in "LOCATE COMP "Y2" SITE
+     "B14" ;": COMP "Y2" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(20): Semantic error in "IOBUF PORT "Y2"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y2" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(22): Semantic error in "LOCATE COMP "MCLK" SITE
+     "A12" ;": COMP "MCLK" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(22): Semantic error in "IOBUF PORT "MCLK"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "MCLK" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(24): Semantic error in "LOCATE COMP "cam_scl"
+     SITE "A10" ;": COMP "cam_scl" cannot be found in design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(25): Semantic error in "IOBUF PORT "cam_scl"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=4 SLEWRATE=SLOW ;": Port "cam_scl"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(27): Semantic error in "LOCATE COMP "cam_sda"
+     SITE "B9" ;": COMP "cam_sda" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: ../sdramtest.lpf(28): Semantic error in "IOBUF PORT "cam_sda"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=4 SLEWRATE=SLOW ;": Port "cam_sda"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(30): Semantic error in "LOCATE COMP "PCLK" SITE
+     "C8" ;": COMP "PCLK" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(30): Semantic error in "IOBUF PORT "PCLK"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "PCLK" does not exist in the design. This
+
+                                    Page 5
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Design Errors/Warnings (cont)
+-----------------------------
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(85): Semantic error in "LOCATE COMP "RX" SITE
+     "K1" ;": COMP "RX" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(85): Semantic error in "IOBUF PORT "RX"
+     IO_TYPE=LVCMOS33 PULLMODE=UP DRIVE=8 SLEWRATE=SLOW CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "RX" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(87): Semantic error in "LOCATE COMP "DIN" SITE
+     "T8" ;": COMP "DIN" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(87): Semantic error in "IOBUF PORT "DIN"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=OFF OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "DIN" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(89): Semantic error in "LOCATE COMP "CCLK" SITE
+     "N9" ;": COMP "CCLK" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(89): Semantic error in "IOBUF PORT "CCLK"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "CCLK" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(124): Semantic error in "LOCATE COMP "M_D1" SITE
+     "B1" ;": COMP "M_D1" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(125): Semantic error in "IOBUF PORT "M_D1"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D1" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(127): Semantic error in "LOCATE COMP "M_D0" SITE
+     "B2" ;": COMP "M_D0" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(128): Semantic error in "IOBUF PORT "M_D0"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D0" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(130): Semantic error in "LOCATE COMP "M_CMD"
+     SITE "B4" ;": COMP "M_CMD" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: ../sdramtest.lpf(131): Semantic error in "IOBUF PORT "M_CMD"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_CMD" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(133): Semantic error in "LOCATE COMP "M_D3" SITE
+     "B5" ;": COMP "M_D3" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(134): Semantic error in "IOBUF PORT "M_D3"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D3" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(136): Semantic error in "LOCATE COMP "M_D2" SITE
+     "B6" ;": COMP "M_D2" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(137): Semantic error in "IOBUF PORT "M_D2"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D2" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(139): Semantic error in "LOCATE COMP "M_CLK"
+
+                                    Page 6
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Design Errors/Warnings (cont)
+-----------------------------
+     SITE "C7" ;": COMP "M_CLK" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: ../sdramtest.lpf(140): Semantic error in "IOBUF PORT "M_CLK"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_CLK" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_14/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_15/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_13/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_12/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_11/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_10/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_9/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_8/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_7/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_6/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_5/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_4/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_3/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_2/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_1/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_0/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: DOUT_pad/IOBUF has conflicing BANK and VCCIO settings, which will
+     be ignored
+WARNING - map: OPENDRAIN=OFF for DOUT_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: SD_A_pad_10/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_10/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: SD_A_pad_0/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_0/IOBUF violates legal combination and
+     is ignored.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
+
+                                    Page 7
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| SD_DQ[14]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[15]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[13]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[12]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[11]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[10]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[9]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[8]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[7]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[6]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[5]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[4]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[3]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[2]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[1]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[0]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| TX                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DOUT                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CLK              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CS_N             | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 8
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| SD_RAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_WE_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[12]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[11]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[10]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[9]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[8]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[1]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[0]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CRYSTAL             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SSPI_CS_n           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal u_sdram/n11271 was merged into signal u_sdram/rd_ack_N_1541
+Signal u_sdram/n10166 was merged into signal u_sdram/op_is_read_N_1536
+Signal n9860 was merged into signal u_sdram/dq_oe
+Signal u_uart_rx/n11267 was merged into signal u_uart_rx/n6179
+Signal n20347 was merged into signal tx_byte_idx_2
+Signal out_busy_N_1165 was merged into signal out_busy
+
+                                    Page 9
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Removed logic (cont)
+--------------------
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal u_uart_rx/ctr_1955_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_uart_rx/ctr_1955_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_uart_rx/ctr_1955_add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal u_uart_rx/ctr_1955_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal _add_1_2693_add_4_26/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_26/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2678_add_4_13/CO undriven or does not drive anything - clipped.
+Signal _add_1_2684_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2684_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_2681_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2681_add_4_33/CO undriven or does not drive anything - clipped.
+Signal _add_1_2675_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2675_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_2675_add_4_8/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_28/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_28/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_30/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_30/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_34/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_34/CO undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal write_addr_1953_add_4_1/S0 undriven or does not drive anything - clipped.
+     
+Signal write_addr_1953_add_4_1/CI undriven or does not drive anything - clipped.
+     
+Signal _add_1_2693_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal equal_11767_0/S1 undriven or does not drive anything - clipped.
+Signal equal_11767_0/S0 undriven or does not drive anything - clipped.
+Signal equal_11767_0/CI undriven or does not drive anything - clipped.
+Signal equal_11767_28/S1 undriven or does not drive anything - clipped.
+Signal equal_11767_28/S0 undriven or does not drive anything - clipped.
+Signal equal_11767_30/S1 undriven or does not drive anything - clipped.
+Signal equal_11767_30/S0 undriven or does not drive anything - clipped.
+Signal equal_11767_32/S1 undriven or does not drive anything - clipped.
+Signal equal_11767_32/S0 undriven or does not drive anything - clipped.
+Signal equal_11767_33/S0 undriven or does not drive anything - clipped.
+Signal equal_11767_33/CO undriven or does not drive anything - clipped.
+Signal _add_1_2690_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2690_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2687_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2687_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_0/S1 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_0/S0 undriven or does not drive anything - clipped.
+
+                                   Page 10
+
+
+
+
+Design:  sdram_text_top                                Date:  04/22/26  12:51:32
+
+Removed logic (cont)
+--------------------
+Signal checksum_acc_7__I_0_0/CI undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2684_add_4_22/CO undriven or does not drive anything - clipped.
+Signal _add_1_2681_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2681_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_7/S1 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_7/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_8/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_8/CO undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_32/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_32/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_20/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_34/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_34/CO undriven or does not drive anything - clipped.
+Signal _add_1_2687_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2687_add_4_9/CO undriven or does not drive anything - clipped.
+Signal _add_1_2678_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2678_add_4_1/CI undriven or does not drive anything - clipped.
+Signal write_addr_1953_add_4_23/S1 undriven or does not drive anything -
+     clipped.
+Signal write_addr_1953_add_4_23/CO undriven or does not drive anything -
+     clipped.
+Signal _add_1_2690_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2690_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_22/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_22/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_24/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2693_add_4_24/S0 undriven or does not drive anything - clipped.
+Block u_sdram/i4045_1_lut was optimized away.
+Block u_sdram/i2989_1_lut was optimized away.
+Block u_sdram/i2702_1_lut was optimized away.
+Block u_uart_rx/i4041_1_lut was optimized away.
+Block i8434_1_lut_rep_268 was optimized away.
+Block i3_1_lut was optimized away.
+Block i2 was optimized away.
+
+     
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 122 MB
+        
+
+                                   Page 11
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

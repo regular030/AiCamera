@@ -1,0 +1,398 @@
+
+Loading design for application trce from file record_impl1_map.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5UM-25F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p25m.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Mon May 11 15:55:19 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o record_impl1.tw1 record_impl1_map.ncd record_impl1.prf 
+Design file:     record_impl1_map.ncd
+Preference file: record_impl1.prf
+Device,speed:    LFE5UM-25F,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "CRYSTAL" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 36.667ns
+         The internal maximum frequency of the following component is 200.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            CRYSTAL
+
+   Delay:               5.000ns -- based on Minimum Pulse Width
+
+Report:  200.000MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 30.720ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         PDPW16KD   Port           u_cam_init/mux_4081(ASIC)  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/bidx_i0_i1  (to CRYSTAL_c +)
+                   FF                        u_cam_init/bidx_i0_i0
+
+   Delay:              10.523ns  (67.3% logic, 32.7% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.523ns physical path delay u_cam_init/mux_4081 to u_cam_init/SLICE_655 meets
+     41.667ns delay constraint less
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 30.720ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/mux_4081 to u_cam_init/SLICE_655:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+C2Q_DEL     ---     5.740 *mux_4081.CLKR to */mux_4081.DO7 u_cam_init/mux_4081 (from CRYSTAL_c)
+ROUTE         2   e 0.573 */mux_4081.DO7 to *SLICE_1513.A0 u_cam_init/init_done_N_7436_0
+CTOF_DEL    ---     0.236 *SLICE_1513.A0 to *SLICE_1513.F0 u_cam_init/SLICE_1513
+ROUTE         1   e 0.573 *SLICE_1513.F0 to *SLICE_1281.B0 u_cam_init/n59044
+CTOF_DEL    ---     0.236 *SLICE_1281.B0 to *SLICE_1281.F0 u_cam_init/SLICE_1281
+ROUTE         1   e 0.573 *SLICE_1281.F0 to *SLICE_1262.B1 u_cam_init/n59048
+CTOF_DEL    ---     0.236 *SLICE_1262.B1 to *SLICE_1262.F1 u_cam_init/SLICE_1262
+ROUTE         7   e 0.573 *SLICE_1262.F1 to */SLICE_917.C0 u_cam_init/n47977
+CTOOFX_DEL  ---     0.401 */SLICE_917.C0 to *LICE_917.OFX0 u_cam_init/i37/SLICE_917
+ROUTE         2   e 0.573 *LICE_917.OFX0 to *SLICE_1508.B0 u_cam_init/n24
+CTOF_DEL    ---     0.236 *SLICE_1508.B0 to *SLICE_1508.F0 u_cam_init/SLICE_1508
+ROUTE         1   e 0.573 *SLICE_1508.F0 to *SLICE_655.LSR u_cam_init/n45394 (to CRYSTAL_c)
+                  --------
+                   10.523   (67.3% logic, 32.7% route), 6 logic levels.
+
+Report:   91.349MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "PCLK" 48.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 15.833ns
+         The internal maximum frequency of the following component is 200.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            PCLK
+
+   Delay:               5.000ns -- based on Minimum Pulse Width
+
+Report:  200.000MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 9.863ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              yuv_order_pclk_i0  (from PCLK_c +)
+   Destination:    FF         Data in        qvga_fifo_wr_data_pclk_i10  (to PCLK_c +)
+
+   Delay:              11.230ns  (48.9% logic, 51.1% route), 18 logic levels.
+
+ Constraint Details:
+
+     11.230ns physical path delay SLICE_891 to SLICE_495 meets
+     20.833ns delay constraint less
+     -0.260ns DIN_SET requirement (totaling 21.093ns) by 9.863ns
+
+ Physical Path Details:
+
+      Data path SLICE_891 to SLICE_495:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525  SLICE_891.CLK to   SLICE_891.Q0 SLICE_891 (from PCLK_c)
+ROUTE        14   e 0.573   SLICE_891.Q0 to  SLICE_1470.A0 yuv_order_pclk_0
+CTOF_DEL    ---     0.236  SLICE_1470.A0 to  SLICE_1470.F0 SLICE_1470
+ROUTE         7   e 0.573  SLICE_1470.F0 to   SLICE_291.B1 n62246
+C1TOFCO_DE  ---     0.447   SLICE_291.B1 to  SLICE_291.FCO SLICE_291
+ROUTE         1   e 0.001  SLICE_291.FCO to  SLICE_290.FCI n53582
+FCITOFCO_D  ---     0.071  SLICE_290.FCI to  SLICE_290.FCO SLICE_290
+ROUTE         1   e 0.001  SLICE_290.FCO to  SLICE_289.FCI n53583
+FCITOF0_DE  ---     0.443  SLICE_289.FCI to   SLICE_289.F0 SLICE_289
+ROUTE         7   e 0.573   SLICE_289.F0 to   SLICE_156.A1 n540
+C1TOFCO_DE  ---     0.447   SLICE_156.A1 to  SLICE_156.FCO SLICE_156
+ROUTE         1   e 0.001  SLICE_156.FCO to  SLICE_154.FCI n53702
+FCITOFCO_D  ---     0.071  SLICE_154.FCI to  SLICE_154.FCO SLICE_154
+ROUTE         1   e 0.001  SLICE_154.FCO to  SLICE_143.FCI n53703
+FCITOFCO_D  ---     0.071  SLICE_143.FCI to  SLICE_143.FCO SLICE_143
+ROUTE         1   e 0.001  SLICE_143.FCO to  SLICE_139.FCI n53704
+FCITOFCO_D  ---     0.071  SLICE_139.FCI to  SLICE_139.FCO SLICE_139
+ROUTE         1   e 0.001  SLICE_139.FCO to  SLICE_135.FCI n53705
+FCITOF0_DE  ---     0.443  SLICE_135.FCI to   SLICE_135.F0 SLICE_135
+ROUTE         1   e 0.573   SLICE_135.F0 to   SLICE_171.A1 n53282
+C1TOFCO_DE  ---     0.447   SLICE_171.A1 to  SLICE_171.FCO SLICE_171
+ROUTE         1   e 0.001  SLICE_171.FCO to  SLICE_166.FCI n53699
+FCITOF1_DE  ---     0.474  SLICE_166.FCI to   SLICE_166.F1 SLICE_166
+ROUTE         6   e 0.573   SLICE_166.F1 to  SLICE_1371.B0 n53428
+CTOF_DEL    ---     0.236  SLICE_1371.B0 to  SLICE_1371.F0 SLICE_1371
+ROUTE         1   e 0.573  SLICE_1371.F0 to  SLICE_1099.A0 n56036
+CTOF_DEL    ---     0.236  SLICE_1099.A0 to  SLICE_1099.F0 SLICE_1099
+ROUTE         6   e 0.573  SLICE_1099.F0 to *SLICE_1065.A1 qvga_yuv_word0_12_N_3370_4
+CTOOFX_DEL  ---     0.401 *SLICE_1065.A1 to *ICE_1065.OFX0 i27715/SLICE_1065
+ROUTE         1   e 0.573 *ICE_1065.OFX0 to  SLICE_1466.B0 n62272
+CTOF_DEL    ---     0.236  SLICE_1466.B0 to  SLICE_1466.F0 SLICE_1466
+ROUTE         1   e 0.573  SLICE_1466.F0 to  SLICE_1072.B0 n57693
+CTOF_DEL    ---     0.236  SLICE_1072.B0 to  SLICE_1072.F0 SLICE_1072
+ROUTE         2   e 0.573  SLICE_1072.F0 to   SLICE_495.B1 n5
+CTOOFX_DEL  ---     0.401   SLICE_495.B1 to SLICE_495.OFX0 SLICE_495
+ROUTE         1   e 0.001 SLICE_495.OFX0 to  SLICE_495.DI0 qvga_fifo_wr_data_15_N_6179_10 (to PCLK_c)
+                  --------
+                   11.230   (48.9% logic, 51.1% route), 18 logic levels.
+
+Report:   91.158MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "CRYSTAL" 24.000000 MHz  |             |             |
+;                                       |   24.000 MHz|  200.000 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "CRYSTAL_c" 24.000000 MHz |             |             |
+;                                       |   24.000 MHz|   91.349 MHz|   6  
+                                        |             |             |
+FREQUENCY PORT "PCLK" 48.000000 MHz ;   |   48.000 MHz|  200.000 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "PCLK_c" 48.000000 MHz ;  |   48.000 MHz|   91.158 MHz|  18  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: PCLK_c   Source: PCLK.PAD   Loads: 235
+   Covered under: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 557
+   Covered under: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PCLK_c   Source: PCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 7743710 paths, 2 nets, and 10884 connections (93.38% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Mon May 11 15:55:19 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o record_impl1.tw1 record_impl1_map.ncd record_impl1.prf 
+Design file:     record_impl1_map.ncd
+Preference file: record_impl1.prf
+Device,speed:    LFE5UM-25F,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "CRYSTAL" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.103ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/wr_gray_r1_i10  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_snap_fifo/wr_gray_r2_i10  (to CRYSTAL_c +)
+
+   Delay:               0.221ns  (73.8% logic, 26.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.221ns physical path delay u_snap_fifo/SLICE_874 to u_snap_fifo/SLICE_874 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.118ns) by 0.103ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_874 to u_snap_fifo/SLICE_874:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163 *SLICE_874.CLK to */SLICE_874.Q1 u_snap_fifo/SLICE_874 (from CRYSTAL_c)
+ROUTE         1   e 0.058 */SLICE_874.Q1 to */SLICE_874.M0 u_snap_fifo/wr_gray_r1_10 (to CRYSTAL_c)
+                  --------
+                    0.221   (73.8% logic, 26.2% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY PORT "PCLK" 48.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.103ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/rd_gray_w1_i10  (from PCLK_c +)
+   Destination:    FF         Data in        u_snap_fifo/rd_gray_w2_i10  (to PCLK_c +)
+
+   Delay:               0.221ns  (73.8% logic, 26.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.221ns physical path delay u_snap_fifo/SLICE_857 to u_snap_fifo/SLICE_857 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.118ns) by 0.103ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_857 to u_snap_fifo/SLICE_857:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163 *SLICE_857.CLK to */SLICE_857.Q1 u_snap_fifo/SLICE_857 (from PCLK_c)
+ROUTE         1   e 0.058 */SLICE_857.Q1 to */SLICE_857.M0 u_snap_fifo/rd_gray_w1_10 (to PCLK_c)
+                  --------
+                    0.221   (73.8% logic, 26.2% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "CRYSTAL" 24.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "CRYSTAL_c" 24.000000 MHz |             |             |
+;                                       |     0.000 ns|     0.103 ns|   1  
+                                        |             |             |
+FREQUENCY PORT "PCLK" 48.000000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "PCLK_c" 48.000000 MHz ;  |     0.000 ns|     0.103 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: PCLK_c   Source: PCLK.PAD   Loads: 235
+   Covered under: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 557
+   Covered under: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PCLK_c   Source: PCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 7743710 paths, 2 nets, and 11434 connections (98.10% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

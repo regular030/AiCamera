@@ -1,0 +1,32 @@
+Results of NGD DRC are available in sdram_text_top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'SD_DQ_out_15' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_14' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_13' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_12' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_11' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_10' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_9' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_8' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_7' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_6' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_5' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_4' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_3' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_2' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_1' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_0' has no load.
+WARNING - synthesis: DRC complete with 16 warnings.
+
+Design Results:
+   2231 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file sdramtest_impl1.ngd.

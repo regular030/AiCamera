@@ -1,0 +1,1055 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+        Lattice Mapping Report File for Design Module 'sdram_text_top'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a ECP5U -p LFE5U-25F -t CABGA256 -s 6 -oc Commercial
+     sdramtest_impl1.ngd -o sdramtest_impl1_map.ncd -pr sdramtest_impl1.prf -mp
+     sdramtest_impl1.mrp -lpf
+     C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/impl1/sdramtest_impl1.lpf -lpf
+     C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-25FCABGA256
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  04/22/26  23:50:25
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    654 out of 24879 (3%)
+      PFU registers:          654 out of 24288 (3%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:       929 out of 12144 (8%)
+      SLICEs as Logic/ROM:    929 out of 12144 (8%)
+      SLICEs as RAM:            0 out of  9108 (0%)
+      SLICEs as Carry:        189 out of 12144 (2%)
+   Number of LUT4s:        1501 out of 24288 (6%)
+      Number used as logic LUTs:        1123
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      378
+      Number used as shift registers:     0
+   Number of PIO sites used: 50 out of 197 (25%)
+   Number of block RAMs:  32 out of 56 (57%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  1
+     Net CRYSTAL_c: 449 loads, 449 rising, 0 falling (Driver: PIO CRYSTAL )
+   Number of Clock Enables:  54
+     Net u_uart_rx_probe/CRYSTAL_c_enable_505: 9 loads, 9 LSLICEs
+     Net u_uart_rx_probe/CRYSTAL_c_enable_429: 4 loads, 4 LSLICEs
+     Net u_uart_rx_probe/CRYSTAL_c_enable_436: 5 loads, 5 LSLICEs
+     Net u_uart_rx_probe/CRYSTAL_c_enable_444: 4 loads, 4 LSLICEs
+     Net u_uart_rx_probe/CRYSTAL_c_enable_451: 5 loads, 5 LSLICEs
+     Net u_uart_rx_probe/CRYSTAL_c_enable_437: 1 loads, 1 LSLICEs
+     Net u_uart_rx_probe/CRYSTAL_c_enable_464: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_242: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_240: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_89: 22 loads, 22 LSLICEs
+     Net CRYSTAL_c_enable_219: 27 loads, 27 LSLICEs
+     Net CRYSTAL_c_enable_6: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_9: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_465: 3 loads, 3 LSLICEs
+     Net CRYSTAL_c_enable_11: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_282: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_280: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_270: 10 loads, 10 LSLICEs
+     Net CRYSTAL_c_enable_194: 17 loads, 17 LSLICEs
+     Net CRYSTAL_c_enable_119: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_263: 21 loads, 21 LSLICEs
+     Net CRYSTAL_c_enable_288: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_290: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_302: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_325: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_332: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_333: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_48: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_54: 3 loads, 3 LSLICEs
+     Net CRYSTAL_c_enable_345: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_385: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_421: 13 loads, 13 LSLICEs
+     Net out_busy: 6 loads, 6 LSLICEs
+     Net CRYSTAL_c_enable_110: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_122: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_285: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_201: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_202: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_233: 7 loads, 7 LSLICEs
+     Net CRYSTAL_c_enable_273: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_336: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_318: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_363: 2 loads, 2 LSLICEs
+     Net rst: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_462: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_504: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_472: 4 loads, 4 LSLICEs
+
+     Net CRYSTAL_c_enable_480: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_488: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_496: 4 loads, 4 LSLICEs
+     Net u_sdram/SD_CS_N_N_1333: 9 loads, 9 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_360: 9 loads, 9 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_400: 21 loads, 21 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_90: 1 loads, 1 LSLICEs
+   Number of LSRs:  14
+     Net u_uart_rx_probe/n12464: 9 loads, 9 LSLICEs
+     Net u_uart_rx_probe/n12463: 2 loads, 2 LSLICEs
+     Net u_uart_rx_probe/n12452: 1 loads, 1 LSLICEs
+     Net n23638: 40 loads, 40 LSLICEs
+     Net n23639: 38 loads, 38 LSLICEs
+     Net n19121: 1 loads, 1 LSLICEs
+     Net n23640: 28 loads, 28 LSLICEs
+     Net n23641: 26 loads, 26 LSLICEs
+     Net CRYSTAL_c_enable_202: 26 loads, 26 LSLICEs
+     Net n23643: 28 loads, 28 LSLICEs
+     Net n23644: 28 loads, 28 LSLICEs
+     Net n23645: 28 loads, 28 LSLICEs
+     Net n23646: 28 loads, 28 LSLICEs
+     Net rst: 25 loads, 25 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n8579: 129 loads
+     Net pkt_1_1: 94 loads
+     Net n22791: 68 loads
+     Net n8578: 65 loads
+     Net n12298: 54 loads
+     Net n6351: 54 loads
+     Net n5485: 53 loads
+     Net uart_data_0: 45 loads
+     Net uart_data_1: 45 loads
+     Net uart_data_2: 45 loads
+
+
+
+
+   Number of warnings:  70
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(31):
+     Semantic error in "FREQUENCY PORT "PCLK" 48.000000 MHz ;": "PCLK" matches
+     no ports in the design.  This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(32):
+     Semantic error in "FREQUENCY NET "PCLK_c" 48.000000 MHz ;": PCLK_c matches
+     no clock nets in the design.  This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(11):
+     Semantic error in "LOCATE COMP "VSYNC" SITE "B10" ;": COMP "VSYNC" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(11):
+     Semantic error in "IOBUF PORT "VSYNC" IO_TYPE=LVCMOS18 PULLMODE=NONE
+
+     DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "VSYNC" does not
+     exist in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(12):
+     Semantic error in "LOCATE COMP "HREF" SITE "A11" ;": COMP "HREF" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(12):
+     Semantic error in "IOBUF PORT "HREF" IO_TYPE=LVCMOS18 PULLMODE=NONE
+     DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "HREF" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(13):
+     Semantic error in "LOCATE COMP "Y9" SITE "B11" ;": COMP "Y9" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(13):
+     Semantic error in "IOBUF PORT "Y9" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y9" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(14):
+     Semantic error in "LOCATE COMP "Y8" SITE "B12" ;": COMP "Y8" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(14):
+     Semantic error in "IOBUF PORT "Y8" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y8" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(15):
+     Semantic error in "LOCATE COMP "Y7" SITE "A13" ;": COMP "Y7" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(15):
+     Semantic error in "IOBUF PORT "Y7" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y7" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(16):
+     Semantic error in "LOCATE COMP "Y6" SITE "A14" ;": COMP "Y6" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(16):
+     Semantic error in "IOBUF PORT "Y6" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y6" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(17):
+     Semantic error in "LOCATE COMP "Y5" SITE "A15" ;": COMP "Y5" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(17):
+     Semantic error in "IOBUF PORT "Y5" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y5" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(18):
+     Semantic error in "LOCATE COMP "Y4" SITE "C13" ;": COMP "Y4" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(18):
+     Semantic error in "IOBUF PORT "Y4" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y4" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(19):
+     Semantic error in "LOCATE COMP "Y3" SITE "C12" ;": COMP "Y3" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(19):
+     Semantic error in "IOBUF PORT "Y3" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y3" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(20):
+     Semantic error in "LOCATE COMP "Y2" SITE "B14" ;": COMP "Y2" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(20):
+     Semantic error in "IOBUF PORT "Y2" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "Y2" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(22):
+     Semantic error in "LOCATE COMP "MCLK" SITE "A12" ;": COMP "MCLK" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(22):
+     Semantic error in "IOBUF PORT "MCLK" IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=8
+     SLEWRATE=SLOW CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "MCLK" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(24):
+     Semantic error in "LOCATE COMP "cam_scl" SITE "A10" ;": COMP "cam_scl"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(25):
+     Semantic error in "IOBUF PORT "cam_scl" IO_TYPE=LVCMOS18 PULLMODE=NONE
+     DRIVE=4 SLEWRATE=SLOW ;": Port "cam_scl" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(27):
+     Semantic error in "LOCATE COMP "cam_sda" SITE "B9" ;": COMP "cam_sda"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(28):
+     Semantic error in "IOBUF PORT "cam_sda" IO_TYPE=LVCMOS18 PULLMODE=NONE
+     DRIVE=4 SLEWRATE=SLOW ;": Port "cam_sda" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(30):
+     Semantic error in "LOCATE COMP "PCLK" SITE "C8" ;": COMP "PCLK" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(30):
+     Semantic error in "IOBUF PORT "PCLK" IO_TYPE=LVCMOS18 PULLMODE=NONE
+     DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=1.8 HYSTERESIS=NA TERMINATION=OFF ;": Port "PCLK" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(85):
+     Semantic error in "LOCATE COMP "RX" SITE "K1" ;": COMP "RX" cannot be found
+     in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(85):
+     Semantic error in "IOBUF PORT "RX" IO_TYPE=LVCMOS33 PULLMODE=UP DRIVE=8
+     SLEWRATE=SLOW CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=3.3 HYSTERESIS=ON TERMINATION=OFF ;": Port "RX" does not exist
+
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(87):
+     Semantic error in "LOCATE COMP "DIN" SITE "T8" ;": COMP "DIN" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(87):
+     Semantic error in "IOBUF PORT "DIN" IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA
+     SLEWRATE=NA CLAMP=OFF OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=3.3 HYSTERESIS=ON TERMINATION=OFF ;": Port "DIN" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(89):
+     Semantic error in "LOCATE COMP "CCLK" SITE "N9" ;": COMP "CCLK" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(89):
+     Semantic error in "IOBUF PORT "CCLK" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF DIFFRESISTOR=OFF DIFFDRIVE="NA"
+     BANK_VCCIO=3.3 HYSTERESIS=ON TERMINATION=OFF ;": Port "CCLK" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(124):
+     Semantic error in "LOCATE COMP "M_D1" SITE "B1" ;": COMP "M_D1" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(125):
+     Semantic error in "IOBUF PORT "M_D1" IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8
+     SLEWRATE=SLOW ;": Port "M_D1" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(127):
+     Semantic error in "LOCATE COMP "M_D0" SITE "B2" ;": COMP "M_D0" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(128):
+     Semantic error in "IOBUF PORT "M_D0" IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8
+     SLEWRATE=SLOW ;": Port "M_D0" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(130):
+     Semantic error in "LOCATE COMP "M_CMD" SITE "B4" ;": COMP "M_CMD" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(131):
+     Semantic error in "IOBUF PORT "M_CMD" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     DRIVE=8 SLEWRATE=SLOW ;": Port "M_CMD" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(133):
+     Semantic error in "LOCATE COMP "M_D3" SITE "B5" ;": COMP "M_D3" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(134):
+     Semantic error in "IOBUF PORT "M_D3" IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8
+     SLEWRATE=SLOW ;": Port "M_D3" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(136):
+     Semantic error in "LOCATE COMP "M_D2" SITE "B6" ;": COMP "M_D2" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(137):
+     Semantic error in "IOBUF PORT "M_D2" IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8
+     SLEWRATE=SLOW ;": Port "M_D2" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(139):
+     Semantic error in "LOCATE COMP "M_CLK" SITE "C7" ;": COMP "M_CLK" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/sdramtest/LD/sdramtest.lpf(140):
+
+     Semantic error in "IOBUF PORT "M_CLK" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     DRIVE=8 SLEWRATE=SLOW ;": Port "M_CLK" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_15/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_14/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_13/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_12/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_11/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_10/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_9/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_8/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_7/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_6/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_5/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_4/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_3/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_2/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_1/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: HYSTERESIS=NA for SD_DQ_pad_0/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: DOUT_pad/IOBUF has conflicing BANK and VCCIO settings, which will
+     be ignored
+WARNING - map: OPENDRAIN=OFF for DOUT_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: SD_A_pad_10/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_10/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: SD_A_pad_0/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_0/IOBUF violates legal combination and
+     is ignored.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| SD_DQ[15]           | BIDIR     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| SD_DQ[14]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[13]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[12]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[11]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[10]           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[9]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[8]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[7]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[6]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[5]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[4]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[3]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[2]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[1]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[0]            | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| TX                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DOUT                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CLK              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CS_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_RAS_N            | OUTPUT    | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_WE_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[12]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[11]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[10]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[9]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[8]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[1]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[0]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CRYSTAL             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SSPI_CS_n           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal n10849 was merged into signal u_sdram/dq_oe
+Signal CRYSTAL_c_enable_459 was merged into signal out_busy
+Signal n21544 was merged into signal n5489
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal _add_1_add_4_28/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_28/S0 undriven or does not drive anything - clipped.
+Signal equal_1717_13/S1 undriven or does not drive anything - clipped.
+Signal equal_1717_13/S0 undriven or does not drive anything - clipped.
+
+Signal _add_1_add_4_30/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_30/S0 undriven or does not drive anything - clipped.
+Signal equal_12746_32/S0 undriven or does not drive anything - clipped.
+Signal equal_12746_32/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_32/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_32/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_34/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_34/CO undriven or does not drive anything - clipped.
+Signal _add_1_2627_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2627_add_4_33/CO undriven or does not drive anything - clipped.
+Signal equal_1717_15/S1 undriven or does not drive anything - clipped.
+Signal equal_1717_15/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2624_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2624_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_2648_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2648_add_4_33/CO undriven or does not drive anything - clipped.
+Signal reset_ctr_1496_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal reset_ctr_1496_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_2618_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2618_add_4_2/CI undriven or does not drive anything - clipped.
+Signal equal_1717_16/S0 undriven or does not drive anything - clipped.
+Signal equal_1717_16/CO undriven or does not drive anything - clipped.
+Signal reset_ctr_1496_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal reset_ctr_1496_add_4_9/CO undriven or does not drive anything - clipped.
+Signal add_8904_1/S1 undriven or does not drive anything - clipped.
+Signal add_8904_1/S0 undriven or does not drive anything - clipped.
+Signal add_8904_1/CI undriven or does not drive anything - clipped.
+Signal add_8904_3/S1 undriven or does not drive anything - clipped.
+Signal add_8904_3/S0 undriven or does not drive anything - clipped.
+Signal add_8904_5/S1 undriven or does not drive anything - clipped.
+Signal add_8904_5/S0 undriven or does not drive anything - clipped.
+Signal add_8904_7/S1 undriven or does not drive anything - clipped.
+Signal add_8904_7/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2618_add_4_8/CO undriven or does not drive anything - clipped.
+Signal add_8904_9/S1 undriven or does not drive anything - clipped.
+Signal add_8904_9/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2633_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2633_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_2624_add_4_13/CO undriven or does not drive anything - clipped.
+Signal equal_401_21/S1 undriven or does not drive anything - clipped.
+Signal equal_401_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2621_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2621_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_8904_11/S1 undriven or does not drive anything - clipped.
+Signal add_8904_11/S0 undriven or does not drive anything - clipped.
+Signal add_8904_13/S1 undriven or does not drive anything - clipped.
+Signal add_8904_13/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_7/S1 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_7/S0 undriven or does not drive anything - clipped.
+Signal add_8904_15/S1 undriven or does not drive anything - clipped.
+Signal add_8904_15/S0 undriven or does not drive anything - clipped.
+Signal add_8904_17/S1 undriven or does not drive anything - clipped.
+Signal add_8904_17/S0 undriven or does not drive anything - clipped.
+Signal add_8904_19/S1 undriven or does not drive anything - clipped.
+Signal add_8904_19/S0 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_0 undriven or does not drive anything - clipped.
+
+Signal SD_DQ_out_1 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_2 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_3 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_4 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_5 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_6 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_7 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_8 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_9 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_10 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_11 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_12 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_13 undriven or does not drive anything - clipped.
+Signal add_8904_21/S1 undriven or does not drive anything - clipped.
+Signal add_8904_21/S0 undriven or does not drive anything - clipped.
+Signal SD_DQ_out_14 undriven or does not drive anything - clipped.
+Signal add_8904_23/S1 undriven or does not drive anything - clipped.
+Signal add_8904_23/S0 undriven or does not drive anything - clipped.
+Signal add_8904_25/S1 undriven or does not drive anything - clipped.
+Signal add_8904_25/S0 undriven or does not drive anything - clipped.
+Signal add_8904_27/S1 undriven or does not drive anything - clipped.
+Signal add_8904_27/S0 undriven or does not drive anything - clipped.
+Signal equal_401_23/S1 undriven or does not drive anything - clipped.
+Signal equal_401_23/S0 undriven or does not drive anything - clipped.
+Signal add_8904_29/S1 undriven or does not drive anything - clipped.
+Signal add_8904_29/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2633_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2633_add_4_9/CO undriven or does not drive anything - clipped.
+Signal _add_1_2645_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2645_add_4_1/CI undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_8/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_8/CO undriven or does not drive anything - clipped.
+Signal equal_401_0/S1 undriven or does not drive anything - clipped.
+Signal equal_401_0/S0 undriven or does not drive anything - clipped.
+Signal equal_401_0/CI undriven or does not drive anything - clipped.
+Signal add_8904_31/S1 undriven or does not drive anything - clipped.
+Signal add_8904_31/S0 undriven or does not drive anything - clipped.
+Signal add_8904_cout/S1 undriven or does not drive anything - clipped.
+Signal add_8904_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_2645_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2645_add_4_9/CO undriven or does not drive anything - clipped.
+Signal _add_1_2621_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2621_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_2642_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2642_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_2651_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2651_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_2636_add_4_23/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2636_add_4_23/CO undriven or does not drive anything - clipped.
+Signal _add_1_2627_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2627_add_4_1/CI undriven or does not drive anything - clipped.
+Signal equal_401_25/S1 undriven or does not drive anything - clipped.
+Signal equal_401_25/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2642_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2642_add_4_33/CO undriven or does not drive anything - clipped.
+Signal equal_401_27/S1 undriven or does not drive anything - clipped.
+
+Signal equal_401_27/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2630_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2630_add_4_1/CI undriven or does not drive anything - clipped.
+Signal equal_401_29/S1 undriven or does not drive anything - clipped.
+Signal equal_401_29/S0 undriven or does not drive anything - clipped.
+Signal equal_401_19/S1 undriven or does not drive anything - clipped.
+Signal equal_401_19/S0 undriven or does not drive anything - clipped.
+Signal equal_401_31/S1 undriven or does not drive anything - clipped.
+Signal equal_401_31/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2651_add_4_34/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2651_add_4_34/CO undriven or does not drive anything - clipped.
+Signal _add_1_2648_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2648_add_4_1/CI undriven or does not drive anything - clipped.
+Signal equal_401_32/S0 undriven or does not drive anything - clipped.
+Signal equal_401_32/CO undriven or does not drive anything - clipped.
+Signal _add_1_2630_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_2630_add_4_17/CO undriven or does not drive anything - clipped.
+Signal equal_1717_0/S1 undriven or does not drive anything - clipped.
+Signal equal_1717_0/S0 undriven or does not drive anything - clipped.
+Signal equal_1717_0/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal SD_DQ_out_15 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal equal_12746_31/S1 undriven or does not drive anything - clipped.
+Signal equal_12746_31/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_0/S1 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_0/S0 undriven or does not drive anything - clipped.
+Signal checksum_acc_7__I_0_0/CI undriven or does not drive anything - clipped.
+Signal _add_1_2636_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_2636_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal equal_1717_11/S1 undriven or does not drive anything - clipped.
+Signal equal_1717_11/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_20/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_22/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_22/S0 undriven or does not drive anything - clipped.
+Signal equal_12746_0/S1 undriven or does not drive anything - clipped.
+Signal equal_12746_0/S0 undriven or does not drive anything - clipped.
+Signal equal_12746_0/CI undriven or does not drive anything - clipped.
+
+Signal _add_1_add_4_24/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_24/S0 undriven or does not drive anything - clipped.
+Signal equal_12746_27/S1 undriven or does not drive anything - clipped.
+Signal equal_12746_27/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_26/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_26/S0 undriven or does not drive anything - clipped.
+Signal equal_12746_29/S1 undriven or does not drive anything - clipped.
+Signal equal_12746_29/S0 undriven or does not drive anything - clipped.
+Signal u_uart_rx_probe/clk_count_1498_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal u_uart_rx_probe/clk_count_1498_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal u_uart_rx_probe/clk_count_1498_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal u_uart_rx_probe/clk_count_1498_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Block u_sdram/i2680_1_lut was optimized away.
+Block i5113_1_lut_rep_281 was optimized away.
+Block i13153_1_lut was optimized away.
+Block i2 was optimized away.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+/:
+    EBRs: 32
+    RAM SLICEs: 0
+    Logic SLICEs: 645
+    PFU Registers: 490
+    -Contains EBR shadow_mem6:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem1:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem2:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem10:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem3:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem13:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem4:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem15:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem5:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem16:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem7:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem19:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem8:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem21:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem9:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem22:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem11:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem24:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem12:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem25:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem14:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem26:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem0:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem17:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem28:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem18:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem29:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem20:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem30:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem23:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem31:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR shadow_mem27:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+
+     
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: shadow_mem6
+         Type: DP16KD
+Instance Name: shadow_mem1
+         Type: DP16KD
+Instance Name: shadow_mem2
+
+         Type: DP16KD
+Instance Name: shadow_mem10
+         Type: DP16KD
+Instance Name: shadow_mem3
+         Type: DP16KD
+Instance Name: shadow_mem13
+         Type: DP16KD
+Instance Name: shadow_mem4
+         Type: DP16KD
+Instance Name: shadow_mem15
+         Type: DP16KD
+Instance Name: shadow_mem5
+         Type: DP16KD
+Instance Name: shadow_mem16
+         Type: DP16KD
+Instance Name: shadow_mem7
+         Type: DP16KD
+Instance Name: shadow_mem19
+         Type: DP16KD
+Instance Name: shadow_mem8
+         Type: DP16KD
+Instance Name: shadow_mem21
+         Type: DP16KD
+Instance Name: shadow_mem9
+         Type: DP16KD
+Instance Name: shadow_mem22
+         Type: DP16KD
+Instance Name: shadow_mem11
+         Type: DP16KD
+Instance Name: shadow_mem24
+         Type: DP16KD
+Instance Name: shadow_mem12
+         Type: DP16KD
+Instance Name: shadow_mem25
+         Type: DP16KD
+Instance Name: shadow_mem14
+         Type: DP16KD
+Instance Name: shadow_mem26
+         Type: DP16KD
+Instance Name: shadow_mem0
+         Type: DP16KD
+Instance Name: shadow_mem17
+         Type: DP16KD
+Instance Name: shadow_mem28
+         Type: DP16KD
+Instance Name: shadow_mem18
+         Type: DP16KD
+Instance Name: shadow_mem29
+         Type: DP16KD
+Instance Name: shadow_mem20
+         Type: DP16KD
+Instance Name: shadow_mem30
+         Type: DP16KD
+Instance Name: shadow_mem23
+         Type: DP16KD
+Instance Name: shadow_mem31
+
+         Type: DP16KD
+Instance Name: shadow_mem27
+         Type: DP16KD
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 127 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

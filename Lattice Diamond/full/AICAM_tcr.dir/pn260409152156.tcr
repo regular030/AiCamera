@@ -1,0 +1,5 @@
+#Start recording tcl command: 4/8/2026 23:31:12
+#Project Location: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond; Project name: AICAM
+prj_project open "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/AICAM.ldf"
+prj_run Export -impl impl1
+#Stop recording: 4/9/2026 15:21:56

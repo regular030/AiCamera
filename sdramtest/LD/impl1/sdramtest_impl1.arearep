@@ -1,0 +1,51 @@
+----------------------------------------------------------------------
+Report for cell sdram_text_top.TECH
+Register bits:  654 of 24879 (2.629%)
+I/O cells:      50
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB        16          100.0
+                              CCU2C       189          100.0
+                             DP16KD        32          100.0
+                            FD1P3AX        83          100.0
+                            FD1P3IX       440          100.0
+                            FD1P3JX         5          100.0
+                            FD1S3AX        58          100.0
+                            FD1S3AY         2          100.0
+                            FD1S3IX        60          100.0
+                            FD1S3JX         6          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                            L6MUX21        61          100.0
+                               LUT4      1125          100.0
+                                 OB        32          100.0
+                              PFUMX       116          100.0
+SUB MODULES
+                      uart_rx_probe         1
+             w9825_sdram_ctrl_local         1
+                              TOTAL      2230
+----------------------------------------------------------------------
+Report for cell uart_rx_probe.v1
+Instance Path : u_uart_rx_probe
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9            4.8
+                            FD1P3AX        33           39.8
+                            FD1P3IX        19            4.3
+                            FD1S3AX         1            1.7
+                            FD1S3AY         2          100.0
+                            FD1S3IX         1            1.7
+                               LUT4        53            4.7
+                              PFUMX         1            0.9
+                              TOTAL       119
+----------------------------------------------------------------------
+Report for cell w9825_sdram_ctrl_local.v1
+Instance Path : u_sdram
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX        71           16.1
+                            FD1S3IX        49           81.7
+                            FD1S3JX         4           66.7
+                               LUT4       198           17.6
+                              PFUMX         4            3.4
+                              TOTAL       326

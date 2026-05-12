@@ -1,331 +1,0 @@
-<HTML>
-<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
-
-Loading design for application trce from file aicam_impl1_map.ncd.
-Design name: fpga_top
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LFE5U-25F
-Package:     CABGA256
-Performance: 6
-Loading device for application trce from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
-Package Status:                     Final          Version 1.44.
-Performance Hardware Data Status:   Final          Version 55.1.
-Setup and Hold Report
-
---------------------------------------------------------------------------------
-<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2</big></U></B>
-Wed Mar 18 08:21:50 2026
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o AICAM_impl1.tw1 -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd AICAM_impl1.prf 
-Design file:     aicam_impl1_map.ncd
-Preference file: aicam_impl1.prf
-Device,speed:    LFE5U-25F,6
-Report level:    verbose report, limited to 1 item per preference
---------------------------------------------------------------------------------
-
-<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
-
-<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY NET "SD_CLK_c" 48.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
-Report:   87.154MHz is the maximum frequency for this preference.
-
-<LI><A href='#map_twr_pref_0_1' Target='right'>FREQUENCY NET "MCLK_c" 24.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_0_2' Target='right'>FREQUENCY NET "CRYSTAL_c" 24.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-
-
-================================================================================
-<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
-            4096 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed: The following path meets requirements by 9.359ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         PDPW16KD   Port           u_cam_cfg/u_rom/mux_839(ASIC)  (from SD_CLK_c +)
-   Destination:    FF         Data in        u_cam_cfg/st_i0_i1  (to SD_CLK_c +)
-
-   Delay:              11.734ns  (65.8% logic, 34.2% route), 8 logic levels.
-
- Constraint Details:
-
-     11.734ns physical path delay u_cam_cfg/u_rom/mux_839 to u_cam_cfg/SLICE_131 meets
-     20.833ns delay constraint less
-     -0.260ns DIN_SET requirement (totaling 21.093ns) by 9.359ns
-
- Physical Path Details:
-
-      Data path u_cam_cfg/u_rom/mux_839 to u_cam_cfg/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-C2Q_DEL     ---     5.740 */mux_839.CLKR to */mux_839.DO15 u_cam_cfg/u_rom/mux_839 (from SD_CLK_c)
-ROUTE         1   e 0.573 */mux_839.DO15 to */SLICE_112.C1 u_cam_cfg/u_rom/n28079
-CTOOFX_DEL  ---     0.401 */SLICE_112.C1 to *LICE_112.OFX0 u_cam_cfg/SLICE_112
-ROUTE         2   e 0.573 *LICE_112.OFX0 to */SLICE_551.C1 u_cam_cfg/rom_entry_16
-CTOF_DEL    ---     0.236 */SLICE_551.C1 to */SLICE_551.F1 u_cam_cfg/SLICE_551
-ROUTE         1   e 0.573 */SLICE_551.F1 to */SLICE_525.B1 u_cam_cfg/n59285
-CTOF_DEL    ---     0.236 */SLICE_525.B1 to */SLICE_525.F1 u_cam_cfg/SLICE_525
-ROUTE         2   e 0.573 */SLICE_525.F1 to */SLICE_524.A0 u_cam_cfg/n29_adj_12135
-CTOF_DEL    ---     0.236 */SLICE_524.A0 to */SLICE_524.F0 u_cam_cfg/SLICE_524
-ROUTE         2   e 0.573 */SLICE_524.F0 to */SLICE_510.B1 u_cam_cfg/n59739
-CTOF_DEL    ---     0.236 */SLICE_510.B1 to */SLICE_510.F1 u_cam_cfg/SLICE_510
-ROUTE         2   e 0.573 */SLICE_510.F1 to */SLICE_369.A0 u_cam_cfg/n54127
-CTOOFX_DEL  ---     0.401 */SLICE_369.A0 to *LICE_369.OFX0 u_cam_cfg/i14340/SLICE_369
-ROUTE         1   e 0.573 *LICE_369.OFX0 to */SLICE_131.D0 u_cam_cfg/n51468
-CTOF_DEL    ---     0.236 */SLICE_131.D0 to */SLICE_131.F0 u_cam_cfg/SLICE_131
-ROUTE         1   e 0.001 */SLICE_131.F0 to *SLICE_131.DI0 u_cam_cfg/n302 (to SD_CLK_c)
-                  --------
-                   11.734   (65.8% logic, 34.2% route), 8 logic levels.
-
-Report:   87.154MHz is the maximum frequency for this preference.
-
-
-================================================================================
-<A name="map_twr_pref_0_1"></A>Preference: FREQUENCY NET "MCLK_c" 24.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-================================================================================
-<A name="map_twr_pref_0_2"></A>Preference: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
---------------
-----------------------------------------------------------------------------
-Preference                              |   Constraint|       Actual|Levels
-----------------------------------------------------------------------------
-                                        |             |             |
-FREQUENCY NET "SD_CLK_c" 48.000000 MHz  |             |             |
-;                                       |   48.000 MHz|   87.154 MHz|   8  
-                                        |             |             |
-FREQUENCY NET "MCLK_c" 24.000000 MHz ;  |            -|            -|   0  
-                                        |             |             |
-FREQUENCY NET "CRYSTAL_c" 24.000000 MHz |             |             |
-;                                       |            -|            -|   0  
-                                        |             |             |
-----------------------------------------------------------------------------
-
-
-All preferences were met.
-
-
-<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
-------------------------
-
-Found 2 clocks:
-
-Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 287
-   Covered under: FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
-
-Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 1
-   No transfer within this clock domain is found
-
-
-<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
----------------
-
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
-
-Constraints cover 100402 paths, 3 nets, and 4250 connections (94.01% coverage)
-
---------------------------------------------------------------------------------
-<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2</big></U></B>
-Wed Mar 18 08:21:50 2026
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o AICAM_impl1.tw1 -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml AICAM_impl1_map.ncd AICAM_impl1.prf 
-Design file:     aicam_impl1_map.ncd
-Preference file: aicam_impl1.prf
-Device,speed:    LFE5U-25F,M
-Report level:    verbose report, limited to 1 item per preference
---------------------------------------------------------------------------------
-
-<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
-
-<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "SD_CLK_c" 48.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_1_1' Target='right'>FREQUENCY NET "MCLK_c" 24.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_1_2' Target='right'>FREQUENCY NET "CRYSTAL_c" 24.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-
-
-================================================================================
-<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
-            4096 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed: The following path meets requirements by 0.103ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              u_ctrl/u_cmd/idx_FSM_i0_i2  (from SD_CLK_c +)
-   Destination:    FF         Data in        u_ctrl/u_cmd/idx_FSM_i0_i3  (to SD_CLK_c +)
-
-   Delay:               0.221ns  (73.8% logic, 26.2% route), 1 logic levels.
-
- Constraint Details:
-
-      0.221ns physical path delay u_ctrl/u_cmd/SLICE_224 to u_ctrl/u_cmd/SLICE_224 meets
-      0.118ns M_HLD and
-      0.000ns delay constraint requirement (totaling 0.118ns) by 0.103ns
-
- Physical Path Details:
-
-      Data path u_ctrl/u_cmd/SLICE_224 to u_ctrl/u_cmd/SLICE_224:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.163 *SLICE_224.CLK to */SLICE_224.Q1 u_ctrl/u_cmd/SLICE_224 (from SD_CLK_c)
-ROUTE         3   e 0.058 */SLICE_224.Q1 to */SLICE_224.M0 u_ctrl/u_cmd/n24336 (to SD_CLK_c)
-                  --------
-                    0.221   (73.8% logic, 26.2% route), 1 logic levels.
-
-
-================================================================================
-<A name="map_twr_pref_1_1"></A>Preference: FREQUENCY NET "MCLK_c" 24.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-================================================================================
-<A name="map_twr_pref_1_2"></A>Preference: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
---------------
-----------------------------------------------------------------------------
-Preference(MIN Delays)                  |   Constraint|       Actual|Levels
-----------------------------------------------------------------------------
-                                        |             |             |
-FREQUENCY NET "SD_CLK_c" 48.000000 MHz  |             |             |
-;                                       |     0.000 ns|     0.103 ns|   1  
-                                        |             |             |
-FREQUENCY NET "MCLK_c" 24.000000 MHz ;  |            -|            -|   0  
-                                        |             |             |
-FREQUENCY NET "CRYSTAL_c" 24.000000 MHz |             |             |
-;                                       |            -|            -|   0  
-                                        |             |             |
-----------------------------------------------------------------------------
-
-
-All preferences were met.
-
-
-<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
-------------------------
-
-Found 2 clocks:
-
-Clock Domain: SD_CLK_c   Source: u_pll/PLLInst_0.CLKOP   Loads: 287
-   Covered under: FREQUENCY NET "SD_CLK_c" 48.000000 MHz ;
-
-Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 1
-   No transfer within this clock domain is found
-
-
-<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
----------------
-
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
-
-Constraints cover 100402 paths, 3 nets, and 4508 connections (99.71% coverage)
-
-
-
-<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
----------------
-
-Timing errors: 0 (setup), 0 (hold)
-Score: 0 (setup), 0 (hold)
-Cumulative negative slack: 0 (0+0)
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

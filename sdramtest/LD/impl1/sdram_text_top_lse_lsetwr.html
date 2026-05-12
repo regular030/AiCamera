@@ -1,0 +1,370 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Apr 22 23:50:23 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     sdram_text_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets CRYSTAL_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.535ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_uart_rx_probe/data_i1  (from CRYSTAL_c +)
+   Destination:    FD1P3IX    D              write_remaining__i31  (to CRYSTAL_c +)
+
+   Delay:                  12.710ns  (20.5% logic, 79.5% route), 23 logic levels.
+
+ Constraint Details:
+
+     12.710ns data_path \u_uart_rx_probe/data_i1 to write_remaining__i31 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.535ns
+
+ Path Details: \u_uart_rx_probe/data_i1 to write_remaining__i31
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_uart_rx_probe/data_i1 (from CRYSTAL_c)
+Route        45   e 1.881                                  uart_data[1]
+LUT4        ---     0.166              B to Z              \u_uart_rx_probe/i1_2_lut_adj_155
+Route         1   e 1.020                                  \u_uart_rx_probe/n19557
+LUT4        ---     0.166              C to Z              \u_uart_rx_probe/i1_4_lut_adj_154
+Route         1   e 1.020                                  \u_uart_rx_probe/n19561
+LUT4        ---     0.166              B to Z              \u_uart_rx_probe/i1_4_lut_adj_153
+Route        54   e 1.817                                  n6351
+LUT4        ---     0.166              A to Z              i1_2_lut_rep_250
+Route        68   e 1.863                                  n22791
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_282
+Route         2   e 1.158                                  n15014
+A1_TO_FCO   ---     0.329           D[2] to COUT           _add_1_2651_add_4_2
+Route         1   e 0.020                                  n17108
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_4
+Route         1   e 0.020                                  n17109
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_6
+Route         1   e 0.020                                  n17110
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_8
+Route         1   e 0.020                                  n17111
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_10
+Route         1   e 0.020                                  n17112
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_12
+Route         1   e 0.020                                  n17113
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_14
+Route         1   e 0.020                                  n17114
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_16
+Route         1   e 0.020                                  n17115
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_18
+Route         1   e 0.020                                  n17116
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_20
+Route         1   e 0.020                                  n17117
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_22
+Route         1   e 0.020                                  n17118
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_24
+Route         1   e 0.020                                  n17119
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_26
+Route         1   e 0.020                                  n17120
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_28
+Route         1   e 0.020                                  n17121
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_30
+Route         1   e 0.020                                  n17122
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_32
+Route         1   e 0.020                                  n17123
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_2651_add_4_34
+Route         1   e 1.020                                  n70_adj_1656
+                  --------
+                   12.710  (20.5% logic, 79.5% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 7.535ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_uart_rx_probe/data_i1  (from CRYSTAL_c +)
+   Destination:    FD1P3IX    D              write_byte_index__i31  (to CRYSTAL_c +)
+
+   Delay:                  12.710ns  (20.5% logic, 79.5% route), 23 logic levels.
+
+ Constraint Details:
+
+     12.710ns data_path \u_uart_rx_probe/data_i1 to write_byte_index__i31 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.535ns
+
+ Path Details: \u_uart_rx_probe/data_i1 to write_byte_index__i31
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_uart_rx_probe/data_i1 (from CRYSTAL_c)
+Route        45   e 1.881                                  uart_data[1]
+LUT4        ---     0.166              B to Z              \u_uart_rx_probe/i1_2_lut_adj_155
+Route         1   e 1.020                                  \u_uart_rx_probe/n19557
+LUT4        ---     0.166              C to Z              \u_uart_rx_probe/i1_4_lut_adj_154
+Route         1   e 1.020                                  \u_uart_rx_probe/n19561
+LUT4        ---     0.166              B to Z              \u_uart_rx_probe/i1_4_lut_adj_153
+Route        54   e 1.817                                  n6351
+LUT4        ---     0.166              A to Z              i1_2_lut_rep_250
+Route        68   e 1.863                                  n22791
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_282
+Route         2   e 1.158                                  n15014
+A1_TO_FCO   ---     0.329           B[2] to COUT           _add_1_2642_add_4_1
+Route         1   e 0.020                                  n17153
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_3
+Route         1   e 0.020                                  n17154
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_5
+Route         1   e 0.020                                  n17155
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_7
+Route         1   e 0.020                                  n17156
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_9
+Route         1   e 0.020                                  n17157
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_11
+Route         1   e 0.020                                  n17158
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_13
+Route         1   e 0.020                                  n17159
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_15
+Route         1   e 0.020                                  n17160
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_17
+Route         1   e 0.020                                  n17161
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_19
+Route         1   e 0.020                                  n17162
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_21
+Route         1   e 0.020                                  n17163
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_23
+Route         1   e 0.020                                  n17164
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_25
+Route         1   e 0.020                                  n17165
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_27
+Route         1   e 0.020                                  n17166
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_29
+Route         1   e 0.020                                  n17167
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2642_add_4_31
+Route         1   e 0.020                                  n17168
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_2642_add_4_33
+Route         1   e 1.020                                  n68_adj_1576
+                  --------
+                   12.710  (20.5% logic, 79.5% route), 23 logic levels.
+
+
+Error:  The following path violates requirements by 7.535ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_uart_rx_probe/data_i6  (from CRYSTAL_c +)
+   Destination:    FD1P3IX    D              write_remaining__i31  (to CRYSTAL_c +)
+
+   Delay:                  12.710ns  (20.5% logic, 79.5% route), 23 logic levels.
+
+ Constraint Details:
+
+     12.710ns data_path \u_uart_rx_probe/data_i6 to write_remaining__i31 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.535ns
+
+ Path Details: \u_uart_rx_probe/data_i6 to write_remaining__i31
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_uart_rx_probe/data_i6 (from CRYSTAL_c)
+Route        45   e 1.881                                  uart_data[6]
+LUT4        ---     0.166              A to Z              \u_uart_rx_probe/i1_2_lut_adj_155
+Route         1   e 1.020                                  \u_uart_rx_probe/n19557
+LUT4        ---     0.166              C to Z              \u_uart_rx_probe/i1_4_lut_adj_154
+Route         1   e 1.020                                  \u_uart_rx_probe/n19561
+LUT4        ---     0.166              B to Z              \u_uart_rx_probe/i1_4_lut_adj_153
+Route        54   e 1.817                                  n6351
+LUT4        ---     0.166              A to Z              i1_2_lut_rep_250
+Route        68   e 1.863                                  n22791
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_282
+Route         2   e 1.158                                  n15014
+A1_TO_FCO   ---     0.329           D[2] to COUT           _add_1_2651_add_4_2
+Route         1   e 0.020                                  n17108
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_4
+Route         1   e 0.020                                  n17109
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_6
+Route         1   e 0.020                                  n17110
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_8
+Route         1   e 0.020                                  n17111
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_10
+Route         1   e 0.020                                  n17112
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_12
+Route         1   e 0.020                                  n17113
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_14
+Route         1   e 0.020                                  n17114
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_16
+Route         1   e 0.020                                  n17115
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_18
+Route         1   e 0.020                                  n17116
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_20
+Route         1   e 0.020                                  n17117
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_22
+Route         1   e 0.020                                  n17118
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_24
+Route         1   e 0.020                                  n17119
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_26
+Route         1   e 0.020                                  n17120
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_28
+Route         1   e 0.020                                  n17121
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_30
+Route         1   e 0.020                                  n17122
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_2651_add_4_32
+Route         1   e 0.020                                  n17123
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_2651_add_4_34
+Route         1   e 1.020                                  n70_adj_1656
+                  --------
+                   12.710  (20.5% logic, 79.5% route), 23 logic levels.
+
+Warning: 12.535 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets CRYSTAL_c]               |     5.000 ns|    12.535 ns|    23 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n12834                                  |      13|    3097|     75.61%
+                                        |        |        |
+n20703                                  |       3|    3097|     75.61%
+                                        |        |        |
+n22781                                  |      23|    2916|     71.19%
+                                        |        |        |
+n57_adj_1609                            |       4|    1633|     39.87%
+                                        |        |        |
+n58                                     |       4|    1464|     35.74%
+                                        |        |        |
+n17071                                  |       1|    1452|     35.45%
+                                        |        |        |
+n17070                                  |       1|    1404|     34.28%
+                                        |        |        |
+n17072                                  |       1|    1404|     34.28%
+                                        |        |        |
+n17069                                  |       1|    1260|     30.76%
+                                        |        |        |
+n17073                                  |       1|    1260|     30.76%
+                                        |        |        |
+n19437                                  |       1|    1091|     26.64%
+                                        |        |        |
+n17068                                  |       1|    1020|     24.90%
+                                        |        |        |
+n17074                                  |       1|    1020|     24.90%
+                                        |        |        |
+n19481                                  |       1|     976|     23.83%
+                                        |        |        |
+\u_uart_rx_probe/n19561                 |       1|     743|     18.14%
+                                        |        |        |
+n6351                                   |      54|     743|     18.14%
+                                        |        |        |
+n22791                                  |      68|     743|     18.14%
+                                        |        |        |
+n17067                                  |       1|     684|     16.70%
+                                        |        |        |
+n17075                                  |       1|     684|     16.70%
+                                        |        |        |
+\u_uart_rx_probe/n19557                 |       1|     584|     14.26%
+                                        |        |        |
+n19435                                  |       1|     542|     13.23%
+                                        |        |        |
+n19479                                  |       1|     488|     11.91%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 4096  Score: 24830640
+
+Constraints cover  537547 paths, 2604 nets, and 8383 connections (99.3% coverage)
+
+
+Peak memory: 123338752 bytes, TRCE: 7643136 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

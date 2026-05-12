@@ -1,0 +1,167 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file sdramtest_impl1.ncd.
+Design name: sdram_text_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 7
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file sdramtest_impl1.ncd.
+Design name: sdram_text_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 8
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file sdramtest_impl1.ncd.
+Design name: sdram_text_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 9
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file sdramtest_impl1.ncd.
+Design name: sdram_text_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+// Design: sdram_text_top
+// Package: CABGA256
+// ncd File: sdramtest_impl1.ncd
+// Version: Diamond (64-bit) 3.14.0.75.2
+// Written on Wed Apr 22 23:51:21 2026
+// M: Minimum Performance Grade
+// iotiming sdramtest_impl1.ncd sdramtest_impl1.prf -gui
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 9, 8, 7, 6):
+
+// Input Setup and Hold Times
+
+Port      Clock   Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+SSPI_CS_n CRYSTAL R     1.413      6       0.792     6
+
+
+// Clock to Output Delay
+
+Port      Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+DOUT      CRYSTAL R     8.995         6        3.669          M
+ESP_D[0]  CRYSTAL R     9.796         6        3.968          M
+ESP_D[1]  CRYSTAL R     9.241         6        3.784          M
+ESP_D[2]  CRYSTAL R     9.058         6        3.713          M
+ESP_D[4]  CRYSTAL R     9.166         6        3.743          M
+ESP_D[5]  CRYSTAL R     8.874         6        3.632          M
+ESP_D[6]  CRYSTAL R     8.616         6        3.526          M
+ESP_D[7]  CRYSTAL R    10.012         6        4.069          M
+SD_A[0]   CRYSTAL R     8.923         6        3.649          M
+SD_A[10]  CRYSTAL R     9.128         6        3.716          M
+SD_A[11]  CRYSTAL R     8.550         6        3.503          M
+SD_A[12]  CRYSTAL R     8.812         6        3.595          M
+SD_A[1]   CRYSTAL R     9.858         6        3.997          M
+SD_A[2]   CRYSTAL R     9.647         6        3.930          M
+SD_A[3]   CRYSTAL R     9.582         6        3.902          M
+SD_A[4]   CRYSTAL R     9.942         6        4.028          M
+SD_A[5]   CRYSTAL R     9.828         6        3.997          M
+SD_A[6]   CRYSTAL R     9.972         6        4.051          M
+SD_A[7]   CRYSTAL R     9.066         6        3.697          M
+SD_A[8]   CRYSTAL R     9.464         6        3.850          M
+SD_A[9]   CRYSTAL R     8.962         6        3.650          M
+SD_BA[0]  CRYSTAL R     8.747         6        3.579          M
+SD_BA[1]  CRYSTAL R     9.003         6        3.673          M
+SD_CAS_N  CRYSTAL R     9.423         6        3.845          M
+SD_DQ[0]  CRYSTAL R     9.940         6        3.321          M
+SD_DQ[10] CRYSTAL R     9.598         6        3.648          M
+SD_DQ[11] CRYSTAL R     9.598         6        3.512          M
+SD_DQ[12] CRYSTAL R     9.548         6        3.494          M
+SD_DQ[13] CRYSTAL R     9.548         6        3.548          M
+SD_DQ[14] CRYSTAL R     9.319         6        3.463          M
+SD_DQ[15] CRYSTAL R     9.319         6        3.443          M
+SD_DQ[1]  CRYSTAL R    10.199         6        3.210          M
+SD_DQ[2]  CRYSTAL R     9.940         6        3.442          M
+SD_DQ[3]  CRYSTAL R    10.199         6        3.443          M
+SD_DQ[4]  CRYSTAL R    10.464         6        3.386          M
+SD_DQ[5]  CRYSTAL R    10.464         6        3.464          M
+SD_DQ[6]  CRYSTAL R    10.464         6        3.392          M
+SD_DQ[7]  CRYSTAL R     9.587         6        3.567          M
+SD_DQ[8]  CRYSTAL R     9.919         6        3.753          M
+SD_DQ[9]  CRYSTAL R     9.919         6        3.749          M
+SD_RAS_N  CRYSTAL R     9.390         6        3.829          M
+SD_WE_N   CRYSTAL R     8.889         6        3.630          M
+WARNING: you must also run trce with hold speed: 6
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

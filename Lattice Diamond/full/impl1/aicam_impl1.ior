@@ -1,0 +1,73 @@
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 7
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 8
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 9
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Loading design for application iotiming from file aicam_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+// Design: fpga_top
+// Package: CABGA256
+// ncd File: aicam_impl1.ncd
+// Version: Diamond (64-bit) 3.14.0.75.2
+// Written on Mon Apr 13 19:47:17 2026
+// M: Minimum Performance Grade
+// iotiming AICAM_impl1.ncd AICAM_impl1.prf -gui -msgset C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 9, 8, 7, 6):
+
+// Input Setup and Hold Times
+
+Port  Clock   Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+M_D0  CRYSTAL R     2.988      6      -0.555     M
+RX    CRYSTAL R     2.238      6      -0.558     M
+VSYNC PCLK    R     1.094      6       1.668     6
+
+
+// Clock to Output Delay
+
+Port     Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+ESP_D[0] CRYSTAL R     7.459         6        3.368          M
+M_CLK    CRYSTAL R     6.958         6        3.169          M
+M_CMD    CRYSTAL R     6.613         6        3.034          M
+M_D3     CRYSTAL R     6.860         6        3.125          M
+SD_A[9]  CRYSTAL R     8.510         6        3.752          M
+SD_CAS_N CRYSTAL R     6.338         6        2.936          M
+SD_RAS_N CRYSTAL R     6.155         6        2.865          M
+SD_WE_N  CRYSTAL R     5.680         6        2.682          M
+TX       CRYSTAL R     8.010         6        3.575          M
+cam_scl  CRYSTAL R     7.150         6        3.161          M
+cam_sda  CRYSTAL R     7.641         6        3.572          M
+WARNING: you must also run trce with hold speed: 6

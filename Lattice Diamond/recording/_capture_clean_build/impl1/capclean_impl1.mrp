@@ -1,0 +1,1854 @@
+
+           Lattice Mapping Report File for Design Module 'fpga_top'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-25F -t CABGA256 -s 6 -oc Commercial
+     capclean_impl1.ngd -o capclean_impl1_map.ncd -pr capclean_impl1.prf -mp
+     capclean_impl1.mrp -lpf C:/Users/kunsh/Desktop/AiCamera/Lattice
+     Diamond/recording/_capture_clean_build/impl1/capclean_impl1.lpf -lpf
+     C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/record.lpf 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-25FCABGA256
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  05/11/26  21:14:24
+
+Design Summary
+--------------
+
+   Number of registers:   6582 out of 24879 (26%)
+      PFU registers:         6582 out of 24288 (27%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:      6132 out of 12144 (50%)
+      SLICEs as Logic/ROM:   6132 out of 12144 (50%)
+      SLICEs as RAM:            0 out of  9108 (0%)
+      SLICEs as Carry:        417 out of 12144 (3%)
+   Number of LUT4s:        5991 out of 24288 (25%)
+      Number used as logic LUTs:        5157
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      834
+      Number used as shift registers:     0
+   Number of PIO sites used: 71 out of 197 (36%)
+   Number of block RAMs:  34 out of 56 (61%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          4
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+
+                                    Page 1
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Summary (cont)
+---------------------
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  8 out of 56 (14 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  2
+     Net PCLK_c: 3031 loads, 3031 rising, 0 falling (Driver: PIO PCLK )
+     Net CRYSTAL_c: 527 loads, 527 rising, 0 falling (Driver: PIO CRYSTAL )
+   Number of Clock Enables:  289
+     Net href_pclk: 5 loads, 5 LSLICEs
+     Net box20_grid_eval_active_pclk: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5453: 6 loads, 6 LSLICEs
+     Net PCLK_c_enable_5459: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4125: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_661: 6 loads, 6 LSLICEs
+     Net PCLK_c_enable_5462: 24 loads, 24 LSLICEs
+     Net PCLK_c_enable_4175: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_2528: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_2535: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_2577: 25 loads, 25 LSLICEs
+     Net qvga_tx_busy_sys_N_12793: 6 loads, 6 LSLICEs
+     Net CRYSTAL_c_enable_4: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3023: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_3029: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_3036: 4 loads, 4 LSLICEs
+     Net qvga_fifo_rd_en: 9 loads, 9 LSLICEs
+     Net CRYSTAL_c_enable_490: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3084: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3131: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_5297: 12 loads, 12 LSLICEs
+     Net box20_eval_active_pclk: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3842: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_24: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_3857: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_5025: 26 loads, 26 LSLICEs
+     Net CRYSTAL_c_enable_122: 25 loads, 25 LSLICEs
+     Net CRYSTAL_c_enable_127: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_26: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_4225: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3872: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_3879: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_3881: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_5075: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_5125: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_5175: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_5225: 26 loads, 26 LSLICEs
+     Net CRYSTAL_c_enable_272: 20 loads, 20 LSLICEs
+     Net PCLK_c_enable_5314: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4325: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_5322: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5461: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5272: 24 loads, 24 LSLICEs
+     Net PCLK_c_enable_4275: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_26: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_23: 1 loads, 1 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Summary (cont)
+---------------------
+     Net qvga_frame_pending_sys_N_12828: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_3499: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_25: 1 loads, 1 LSLICEs
+     Net cmd_snapshot_pulse: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5303: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5304: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5299: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5300: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5301: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5400: 30 loads, 30 LSLICEs
+     Net PCLK_c_enable_5404: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_5336: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5329: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5331: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5330: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5332: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5333: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5335: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5313: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5305: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3882: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5312: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5307: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5451: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5450: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5449: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5448: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5447: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5446: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5445: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5444: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5443: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5442: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5441: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5440: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5439: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5438: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5437: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5436: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5435: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5434: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5433: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5432: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5431: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5430: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5429: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5428: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5427: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5426: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5425: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5424: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5423: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5422: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5421: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5420: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5419: 22 loads, 22 LSLICEs
+
+                                    Page 3
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Summary (cont)
+---------------------
+     Net PCLK_c_enable_5418: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5417: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5416: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5415: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5414: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5413: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5412: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5411: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5410: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5409: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5408: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5407: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5406: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5405: 23 loads, 23 LSLICEs
+     Net PCLK_c_enable_671: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_681: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_691: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_701: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_711: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_721: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_731: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_741: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_751: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_761: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_771: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_781: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_791: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_801: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_811: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_821: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_831: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_841: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_851: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_861: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_871: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_881: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_891: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_901: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_911: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_921: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_931: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_941: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_951: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_961: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_971: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_981: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_991: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1001: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1011: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1021: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1031: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1041: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1051: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1061: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1071: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1081: 5 loads, 5 LSLICEs
+
+                                    Page 4
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Summary (cont)
+---------------------
+     Net PCLK_c_enable_1091: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1101: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1111: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1121: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1131: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_5308: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5309: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5311: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_2627: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2677: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2727: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2777: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2827: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2877: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2927: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2977: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3149: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3030: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3037: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3199: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3249: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3299: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3349: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3399: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3449: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3549: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3599: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3649: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3699: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3749: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3799: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3807: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_5460: 9 loads, 9 LSLICEs
+     Net CRYSTAL_c_enable_129: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3925: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_3975: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4025: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4075: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4375: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4425: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4475: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4525: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4575: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4625: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4675: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4725: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4775: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4825: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4875: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4925: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4975: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_5342: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5338: 1 loads, 1 LSLICEs
+     Net state_0: 19 loads, 19 LSLICEs
+     Net CRYSTAL_c_enable_477: 12 loads, 12 LSLICEs
+     Net PCLK_c_enable_5341: 1 loads, 1 LSLICEs
+
+                                    Page 5
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Summary (cont)
+---------------------
+     Net CRYSTAL_c_enable_480: 7 loads, 7 LSLICEs
+     Net CRYSTAL_c_enable_481: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_483: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_484: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_485: 10 loads, 10 LSLICEs
+     Net PCLK_c_enable_5319: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5317: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5316: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5315: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5320: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5327: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5325: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5324: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5323: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5321: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5454: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5328: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_493: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_489: 1 loads, 1 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_177: 4 loads, 4 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_185: 4 loads, 4 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_476: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_5463: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_5456: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_486: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_287: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_5455: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5343: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5337: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5457: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5302: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5310: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5318: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5326: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5334: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5458: 7 loads, 7 LSLICEs
+     Net PCLK_c_enable_5298: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5306: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5339: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5340: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_358: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_487: 2 loads, 2 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_492: 12 loads, 12 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_144: 8 loads, 8 LSLICEs
+     Net u_sdram/SD_CS_N_N_14031: 8 loads, 8 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_354: 9 loads, 9 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_15: 1 loads, 1 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_491: 8 loads, 8 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_482: 3 loads, 3 LSLICEs
+     Net u_snap_fifo/wr_bin_next_10_N_14176_0: 11 loads, 11 LSLICEs
+     Net u_cam_init/tick: 5 loads, 4 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_146: 2 loads, 2 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_170: 12 loads, 12 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_494: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_147: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_475: 17 loads, 17 LSLICEs
+
+                                    Page 6
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Summary (cont)
+---------------------
+     Net u_cam_init/CRYSTAL_c_enable_355: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_478: 2 loads, 2 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_479: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_496: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_495: 1 loads, 1 LSLICEs
+     Net u_snap_capture/CRYSTAL_c_enable_22: 1 loads, 1 LSLICEs
+     Net u_snap_capture/CRYSTAL_c_enable_24: 1 loads, 1 LSLICEs
+     Net u_qvga_fifo/wr_bin_next_15_N_14439_0: 17 loads, 17 LSLICEs
+     Net u_qvga_fifo/CRYSTAL_c_enable_292: 28 loads, 28 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_2: 1 loads, 1 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_178: 1 loads, 1 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_319: 2 loads, 2 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_35: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_43: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_51: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_59: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_67: 5 loads, 5 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_75: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_474: 4 loads, 4 LSLICEs
+   Number of LSRs:  58
+     Net n116984: 1 loads, 1 LSLICEs
+     Net n117262: 1313 loads, 1313 LSLICEs
+     Net n92089: 6 loads, 6 LSLICEs
+     Net n117145: 18 loads, 18 LSLICEs
+     Net PCLK_c_enable_2577: 5 loads, 5 LSLICEs
+     Net n91891: 3 loads, 3 LSLICEs
+     Net PCLK_c_enable_3131: 1 loads, 1 LSLICEs
+     Net n106568: 1 loads, 1 LSLICEs
+     Net n116991: 1 loads, 1 LSLICEs
+     Net n80842: 1 loads, 1 LSLICEs
+     Net n80838: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_26: 3 loads, 3 LSLICEs
+     Net n117057: 1 loads, 1 LSLICEs
+     Net n91710: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5272: 2 loads, 2 LSLICEs
+     Net qvga_frame_pending_sys_N_12828: 1 loads, 1 LSLICEs
+     Net n88609: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_3807: 41 loads, 41 LSLICEs
+     Net PCLK_c_enable_3925: 7 loads, 7 LSLICEs
+     Net n92035: 12 loads, 12 LSLICEs
+     Net n91938: 5 loads, 5 LSLICEs
+     Net n94114: 4 loads, 4 LSLICEs
+     Net n91922: 4 loads, 4 LSLICEs
+     Net n91905: 10 loads, 10 LSLICEs
+     Net n65695: 3 loads, 3 LSLICEs
+     Net n92103: 8 loads, 8 LSLICEs
+     Net n93064: 2 loads, 2 LSLICEs
+     Net n93068: 6 loads, 6 LSLICEs
+     Net n91756: 10 loads, 10 LSLICEs
+     Net snap_fifo_full: 1 loads, 1 LSLICEs
+     Net u_uart_rx/n71661: 9 loads, 9 LSLICEs
+     Net u_uart_rx/n63974: 1 loads, 1 LSLICEs
+     Net u_uart_rx/n91755: 2 loads, 2 LSLICEs
+     Net n91762: 8 loads, 8 LSLICEs
+     Net n91844: 6 loads, 6 LSLICEs
+     Net n91760: 5 loads, 5 LSLICEs
+
+                                    Page 7
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Summary (cont)
+---------------------
+     Net n80839: 1 loads, 1 LSLICEs
+     Net n85791: 1 loads, 1 LSLICEs
+     Net n93977: 6 loads, 6 LSLICEs
+     Net n91943: 7 loads, 7 LSLICEs
+     Net n91901: 2 loads, 2 LSLICEs
+     Net n91889: 1 loads, 1 LSLICEs
+     Net u_sdram/op_is_read_N_14012: 1 loads, 1 LSLICEs
+     Net u_sdram/n91754: 5 loads, 5 LSLICEs
+     Net u_sdram/op_is_read: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CS_N_N_14031: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CS_N_N_14029: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CS_N_N_14032: 1 loads, 1 LSLICEs
+     Net u_sdram/SD_CS_N_N_14027: 1 loads, 1 LSLICEs
+     Net u_sdram/n91935: 2 loads, 2 LSLICEs
+     Net u_sdram/n92016: 3 loads, 3 LSLICEs
+     Net u_cam_init/tick_N_13468: 9 loads, 9 LSLICEs
+     Net u_cam_init/n92058: 17 loads, 17 LSLICEs
+     Net u_cam_init/n91742: 2 loads, 2 LSLICEs
+     Net u_cam_init/n91741: 1 loads, 1 LSLICEs
+     Net n36_adj_16059: 1 loads, 1 LSLICEs
+     Net u_cmd_rx/n91750: 2 loads, 2 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_474: 4 loads, 4 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n117262: 1328 loads
+     Net box20_accum_idx_reg_pclk_0: 1000 loads
+     Net box20_eval_idx_pclk_0: 1000 loads
+     Net box20_eval_idx_pclk_1: 657 loads
+     Net box20_accum_idx_reg_pclk_1: 648 loads
+     Net box20_accum_idx_reg_pclk_2: 335 loads
+     Net box20_eval_idx_pclk_2: 333 loads
+     Net maxfan_replicated_net_289: 290 loads
+     Net maxfan_replicated_net_284: 285 loads
+     Net u_qvga_fifo/n73169: 257 loads
+
+
+
+
+   Number of warnings:  15
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice
+     Diamond/recording/record.lpf(85): Semantic error in "IOBUF PORT "RX"
+     IO_TYPE=LVCMOS33 PULLMODE=UP DRIVE=8 SLEWRATE=SLOW CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "RX" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice
+     Diamond/recording/record.lpf(87): Semantic error in "IOBUF PORT "DIN"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=OFF OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "DIN" does not exist in the design. This
+
+                                    Page 8
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Design Errors/Warnings (cont)
+-----------------------------
+     preference has been disabled.
+WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice
+     Diamond/recording/record.lpf(89): Semantic error in "IOBUF PORT "CCLK"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "CCLK" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: DOUT_pad/IOBUF has conflicing BANK and VCCIO settings, which will
+     be ignored
+WARNING - map: OPENDRAIN=OFF for DOUT_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: SD_A_pad_10/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_10/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: SD_A_pad_0/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_0/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: input pad net 'RX' has no legal load.
+WARNING - map: input pad net 'DIN' has no legal load.
+WARNING - map: input pad net 'CCLK' has no legal load.
+WARNING - map: IO buffer missing for top level port RX...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port DIN...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port CCLK...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| SD_DQ[11]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[12]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[13]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[14]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[15]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 9
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+IO (PIO) Attributes (cont)
+--------------------------
+| ESP_D[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DOUT                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| TX                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cam_sda             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| cam_scl             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| MCLK                | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[10]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[9]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[8]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[1]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[0]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CLK              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CS_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_WE_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_RAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[12]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[11]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 10
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+IO (PIO) Attributes (cont)
+--------------------------
+| SD_A[10]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[9]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[8]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CKE              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| M_D1                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_D0                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_D2                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_D3                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_CMD               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| M_CLK               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CRYSTAL             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| VSYNC               | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| HREF                | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| PCLK                | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y9                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y8                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y7                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y6                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 11
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+IO (PIO) Attributes (cont)
+--------------------------
+| Y5                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y4                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y3                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| Y2                  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| SSPI_CS_n           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal n80197 was merged into signal u_cam_init/sda_oe
+Signal u_cam_init/n118406 was merged into signal u_cam_init/tick
+Signal u_cam_init/n117301 was merged into signal u_cam_init/tick
+Signal n80199 was merged into signal u_sdram/dq_oe
+Signal u_sdram/n70956 was merged into signal u_sdram/op_is_read_N_14012
+Signal u_uart_rx/n91749 was merged into signal u_uart_rx/n63974
+Signal CRYSTAL_c_enable_488 was merged into signal qvga_tx_busy_sys_N_12793
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal u_cmd_rx/capture_enable_I_353_0/S1 undriven or does not drive anything -
+     clipped.
+Signal u_cmd_rx/capture_enable_I_353_0/S0 undriven or does not drive anything -
+     clipped.
+Signal u_cmd_rx/capture_enable_I_353_0/CI undriven or does not drive anything -
+     clipped.
+Signal u_cmd_rx/capture_enable_I_353_7/S1 undriven or does not drive anything -
+     clipped.
+Signal u_cmd_rx/capture_enable_I_353_7/S0 undriven or does not drive anything -
+     clipped.
+Signal u_cmd_rx/capture_enable_I_353_8/S0 undriven or does not drive anything -
+     clipped.
+Signal u_cmd_rx/capture_enable_I_353_8/CO undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_0/S1 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_0/S0 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_0/CI undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_11/S1 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_11/S0 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_13/S1 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_13/S0 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_15/S1 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_15/S0 undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_16/S0 undriven or does not drive anything
+
+                                   Page 12
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal u_qvga_fifo/wr_gray_inc_15__I_0_16/CO undriven or does not drive anything
+     - clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_0/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_0/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_0/CI undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_11/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_11/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_13/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_13/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_0/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_0/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_0/CI undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_11/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_11/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_13/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_13/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_15_36329/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_15_36329/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_15/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_15/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_16/S0 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/rd_gray_15__I_0_16/CO undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_15/S1 undriven or does not drive anything -
+     clipped.
+Signal u_qvga_fifo/equal_9084_15/CO undriven or does not drive anything -
+     clipped.
+Signal u_cam_init/div_ctr_8420_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_cam_init/div_ctr_8420_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_cam_init/div_ctr_8420_add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal u_cam_init/div_ctr_8420_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal u_cam_init/wait_ctr_8406_add_4_1/S0 undriven or does not drive anything -
+
+                                   Page 13
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal u_cam_init/wait_ctr_8406_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_cam_init/wait_ctr_8406_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal u_cam_init/wait_ctr_8406_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_0/S1 undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_0/S0 undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_0/CI undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_9/S1 undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_9/S0 undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_11_36330/S1 undriven or does not drive
+     anything - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_11_36330/S0 undriven or does not drive
+     anything - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_11/S1 undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/wr_gray_inc_10__I_0_11/CO undriven or does not drive anything
+     - clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_0/S1 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_0/S0 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_0/CI undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_9/S1 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_9/S0 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_0/S1 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_0/S0 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_0/CI undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_8/S1 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_8/S0 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_10_36332/S1 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_10_36332/S0 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_11_36331/S1 undriven or does not drive
+     anything - clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_11_36331/S0 undriven or does not drive
+     anything - clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_11/S1 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/rd_gray_10__I_0_11/CO undriven or does not drive anything -
+
+                                   Page 14
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal u_snap_fifo/equal_9349_10/S1 undriven or does not drive anything -
+     clipped.
+Signal u_snap_fifo/equal_9349_10/CO undriven or does not drive anything -
+     clipped.
+Signal u_sdram/ref_ctr_8427_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_sdram/ref_ctr_8427_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_sdram/ref_ctr_8427_add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal u_sdram/ref_ctr_8427_add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal box20_eval_score_pclk_8401_add_4_49/S1 undriven or does not drive
+     anything - clipped.
+Signal box20_eval_score_pclk_8401_add_4_49/CO undriven or does not drive
+     anything - clipped.
+Signal box20_eval_idx_pclk_8400_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal box20_eval_idx_pclk_8400_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal box20_eval_idx_pclk_8400_add_4_7/S1 undriven or does not drive anything -
+     clipped.
+Signal box20_eval_idx_pclk_8400_add_4_7/CO undriven or does not drive anything -
+     clipped.
+Signal add_36332_2/S1 undriven or does not drive anything - clipped.
+Signal add_36332_2/S0 undriven or does not drive anything - clipped.
+Signal add_36332_2/CI undriven or does not drive anything - clipped.
+Signal add_36332_4/S1 undriven or does not drive anything - clipped.
+Signal add_36332_4/S0 undriven or does not drive anything - clipped.
+Signal add_36332_6/S1 undriven or does not drive anything - clipped.
+Signal add_36332_6/S0 undriven or does not drive anything - clipped.
+Signal add_36332_8/S1 undriven or does not drive anything - clipped.
+Signal add_36332_8/S0 undriven or does not drive anything - clipped.
+Signal add_36356_12/CO undriven or does not drive anything - clipped.
+Signal add_36332_10/S1 undriven or does not drive anything - clipped.
+Signal add_36332_10/S0 undriven or does not drive anything - clipped.
+Signal add_36332_12/S1 undriven or does not drive anything - clipped.
+Signal add_36332_12/S0 undriven or does not drive anything - clipped.
+Signal add_36332_14/S1 undriven or does not drive anything - clipped.
+Signal add_36332_14/S0 undriven or does not drive anything - clipped.
+Signal add_36332_16/S1 undriven or does not drive anything - clipped.
+Signal add_36332_16/S0 undriven or does not drive anything - clipped.
+Signal add_36332_18/S1 undriven or does not drive anything - clipped.
+Signal add_36332_18/S0 undriven or does not drive anything - clipped.
+Signal add_36332_20/S1 undriven or does not drive anything - clipped.
+Signal add_36332_20/S0 undriven or does not drive anything - clipped.
+Signal add_36332_22/S1 undriven or does not drive anything - clipped.
+Signal add_36332_22/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_36332_24/S1 undriven or does not drive anything - clipped.
+Signal add_36332_24/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11393_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11393_add_4_11/CO undriven or does not drive anything - clipped.
+
+                                   Page 15
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+Signal add_36332_26/S1 undriven or does not drive anything - clipped.
+Signal add_36332_26/S0 undriven or does not drive anything - clipped.
+Signal qvga_seq_sys_8409_8667_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal qvga_seq_sys_8409_8667_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal add_36332_28/S1 undriven or does not drive anything - clipped.
+Signal add_36332_28/S0 undriven or does not drive anything - clipped.
+Signal add_36332_30/S1 undriven or does not drive anything - clipped.
+Signal add_36332_30/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal add_36332_32/S1 undriven or does not drive anything - clipped.
+Signal add_36332_32/S0 undriven or does not drive anything - clipped.
+Signal add_36332_34/S1 undriven or does not drive anything - clipped.
+Signal add_36332_34/S0 undriven or does not drive anything - clipped.
+Signal add_36332_36/S1 undriven or does not drive anything - clipped.
+Signal add_36332_36/S0 undriven or does not drive anything - clipped.
+Signal add_36332_38/S1 undriven or does not drive anything - clipped.
+Signal add_36332_38/S0 undriven or does not drive anything - clipped.
+Signal add_36332_40/S1 undriven or does not drive anything - clipped.
+Signal add_36332_40/S0 undriven or does not drive anything - clipped.
+Signal add_36332_42/S1 undriven or does not drive anything - clipped.
+Signal add_36332_42/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11390_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11390_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11390_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_36332_44/S0 undriven or does not drive anything - clipped.
+Signal add_36332_44/CO undriven or does not drive anything - clipped.
+Signal _add_1_11430_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11430_add_4_17/CO undriven or does not drive anything - clipped.
+Signal add_36359_1/S0 undriven or does not drive anything - clipped.
+Signal add_36359_1/CI undriven or does not drive anything - clipped.
+Signal qvga_seq_sys_8409_8667_add_4_7/S1 undriven or does not drive anything -
+     clipped.
+Signal qvga_seq_sys_8409_8667_add_4_7/CO undriven or does not drive anything -
+     clipped.
+Signal _add_1_11426_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11426_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11390_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11390_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal qvga_interframe_gap_sys_8408_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal qvga_interframe_gap_sys_8408_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal add_36359_11/S1 undriven or does not drive anything - clipped.
+Signal add_36359_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11390_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11354_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11354_add_4_12/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_14/CO undriven or does not drive anything - clipped.
+Signal _add_1_11345_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11345_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11390_add_4_cout/S1 undriven or does not drive anything - clipped.
+     
+Signal _add_1_11390_add_4_cout/CO undriven or does not drive anything - clipped.
+
+                                   Page 16
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+     
+Signal _add_1_11387_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11387_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_13728_36341_add_1_2/S0 undriven or does not drive anything - clipped.
+     
+Signal add_13728_36341_add_1_2/CI undriven or does not drive anything - clipped.
+     
+Signal _add_1_11345_add_4_9/CO undriven or does not drive anything - clipped.
+Signal qvga_interframe_gap_sys_8408_add_4_21/S1 undriven or does not drive
+     anything - clipped.
+Signal qvga_interframe_gap_sys_8408_add_4_21/CO undriven or does not drive
+     anything - clipped.
+Signal _add_1_11434_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11434_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_11426_add_4_13/CO undriven or does not drive anything - clipped.
+Signal add_13728_36341_add_1_10/CO undriven or does not drive anything -
+     clipped.
+Signal _add_1_11423_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11423_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11387_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11387_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11384_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11384_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11434_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11434_add_4_10/CO undriven or does not drive anything - clipped.
+Signal _add_1_11449_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11449_add_4_17/CO undriven or does not drive anything - clipped.
+Signal add_36350_2/S1 undriven or does not drive anything - clipped.
+Signal add_36350_2/S0 undriven or does not drive anything - clipped.
+Signal add_36350_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_11361_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11361_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11446_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11446_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11423_add_4_13/CO undriven or does not drive anything - clipped.
+Signal add_36350_4/S0 undriven or does not drive anything - clipped.
+Signal u_uart_rx/ctr_8425_add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal u_uart_rx/ctr_8425_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal u_uart_rx/ctr_8425_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_uart_rx/ctr_8425_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal _add_1_11348_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11348_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal add_36347_2/S1 undriven or does not drive anything - clipped.
+Signal add_36347_2/S0 undriven or does not drive anything - clipped.
+Signal add_36347_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_11384_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11384_add_4_15/CO undriven or does not drive anything - clipped.
+Signal _add_3_add_4_36339_add_1_2/S0 undriven or does not drive anything -
+     clipped.
+Signal _add_3_add_4_36339_add_1_2/CI undriven or does not drive anything -
+     clipped.
+Signal add_13716_36347_add_1_2/S0 undriven or does not drive anything - clipped.
+
+                                   Page 17
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+     
+Signal add_13716_36347_add_1_2/CI undriven or does not drive anything - clipped.
+     
+Signal add_36347_12/CO undriven or does not drive anything - clipped.
+Signal _add_1_11408_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11408_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_36350_12/CO undriven or does not drive anything - clipped.
+Signal add_13716_36347_add_1_10/CO undriven or does not drive anything -
+     clipped.
+Signal _add_3_add_4_36339_add_1_8/CO undriven or does not drive anything -
+     clipped.
+Signal _add_1_11446_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11446_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_11381_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11381_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_13722_36345_add_1_2/S0 undriven or does not drive anything - clipped.
+     
+Signal add_13722_36345_add_1_2/CI undriven or does not drive anything - clipped.
+     
+Signal _add_1_11461_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11461_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11461_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_11461_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11443_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11443_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11455_add_4_23/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11455_add_4_23/CO undriven or does not drive anything - clipped.
+Signal _add_1_11381_add_4_15/CO undriven or does not drive anything - clipped.
+Signal add_13722_36345_add_1_10/CO undriven or does not drive anything -
+     clipped.
+Signal snap_target_line_pclk_8404_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal snap_target_line_pclk_8404_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal snap_target_line_pclk_8404_add_4_11/S1 undriven or does not drive
+     anything - clipped.
+Signal snap_target_line_pclk_8404_add_4_11/CO undriven or does not drive
+     anything - clipped.
+Signal _add_1_11378_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11378_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11408_add_4_19/CO undriven or does not drive anything - clipped.
+Signal add_36353_1/S1 undriven or does not drive anything - clipped.
+Signal add_36353_1/S0 undriven or does not drive anything - clipped.
+Signal add_36353_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11452_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11452_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11405_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11405_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11443_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11440_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11440_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_36353_3/S1 undriven or does not drive anything - clipped.
+Signal add_36353_3/S0 undriven or does not drive anything - clipped.
+Signal line_idx_9__I_0_4156_10_36328/S1 undriven or does not drive anything -
+     clipped.
+Signal line_idx_9__I_0_4156_10_36328/S0 undriven or does not drive anything -
+
+                                   Page 18
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal line_idx_9__I_0_4156_10/S1 undriven or does not drive anything - clipped.
+     
+Signal line_idx_9__I_0_4156_10/CO undriven or does not drive anything - clipped.
+     
+Signal _add_1_11405_add_4_13/CO undriven or does not drive anything - clipped.
+Signal _add_1_11440_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11402_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11402_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11378_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11378_add_4_15/CO undriven or does not drive anything - clipped.
+Signal _add_1_11437_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11437_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11375_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11375_add_4_2/CI undriven or does not drive anything - clipped.
+Signal box20_grid_eval_idx_pclk_8402_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal box20_grid_eval_idx_pclk_8402_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal add_36353_13/S1 undriven or does not drive anything - clipped.
+Signal add_36353_13/CO undriven or does not drive anything - clipped.
+Signal _add_1_11461_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11461_add_4_14/CO undriven or does not drive anything - clipped.
+Signal _add_1_11402_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11437_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11396_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11396_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11458_add_4_9/CO undriven or does not drive anything - clipped.
+Signal _add_1_11430_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11430_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11375_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11375_add_4_12/CO undriven or does not drive anything - clipped.
+Signal _add_1_11368_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11368_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_13720_36343_add_1_2/S0 undriven or does not drive anything - clipped.
+     
+Signal add_13720_36343_add_1_2/CI undriven or does not drive anything - clipped.
+     
+Signal box20_grid_eval_idx_pclk_8402_add_4_7/S1 undriven or does not drive
+     anything - clipped.
+Signal box20_grid_eval_idx_pclk_8402_add_4_7/CO undriven or does not drive
+     anything - clipped.
+Signal box20_eval_score_pclk_8401_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal box20_eval_score_pclk_8401_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal line_idx_9__I_0_4156_0/S1 undriven or does not drive anything - clipped.
+Signal line_idx_9__I_0_4156_0/S0 undriven or does not drive anything - clipped.
+Signal line_idx_9__I_0_4156_0/CI undriven or does not drive anything - clipped.
+Signal line_idx_9__I_0_4156_8/S1 undriven or does not drive anything - clipped.
+Signal line_idx_9__I_0_4156_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11455_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11455_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11396_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11396_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11452_add_4_17/S1 undriven or does not drive anything - clipped.
+
+                                   Page 19
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Removed logic (cont)
+--------------------
+Signal _add_1_11452_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_11393_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11393_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11368_add_4_11/CO undriven or does not drive anything - clipped.
+Signal add_13720_36343_add_1_10/CO undriven or does not drive anything -
+     clipped.
+Signal _add_1_11449_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11449_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_11354_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11354_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_36356_2/S1 undriven or does not drive anything - clipped.
+Signal add_36356_2/S0 undriven or does not drive anything - clipped.
+Signal add_36356_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_11348_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_11348_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11348_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_11348_add_4_16/CO undriven or does not drive anything - clipped.
+Signal _add_1_11361_add_4_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_11458_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_11458_add_4_1/CI undriven or does not drive anything - clipped.
+Block u_cam_init/i13658_1_lut was optimized away.
+Block u_cam_init/i38993_3_lut_4_lut_then_1_lut was optimized away.
+Block u_cam_init/i50973_4_lut_then_1_lut was optimized away.
+Block u_sdram/i13674_1_lut was optimized away.
+Block u_sdram/i7640_1_lut was optimized away.
+Block u_uart_rx/i25050_1_lut was optimized away.
+Block i10972_1_lut_rep_728 was optimized away.
+Block i2 was optimized away.
+
+Memory Usage
+------------
+
+/u_cam_init:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 113
+    PFU Registers: 93
+    -Contains EBR mux_4965:  TYPE= PDPW16KD,  Width= 24,  Depth_R= 256,
+         REGMODE= NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR=
+         DISABLED
+/u_qvga_fifo:
+    EBRs: 32
+    RAM SLICEs: 0
+    Logic SLICEs: 195
+    PFU Registers: 157
+    -Contains EBR mem22:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem9:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem21:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+
+                                   Page 20
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Memory Usage (cont)
+-------------------
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem8:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem24:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem11:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem19:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem7:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem10:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem2:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem16:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem5:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem15:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem4:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem27:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem31:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem23:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+
+                                   Page 21
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Memory Usage (cont)
+-------------------
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem30:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem20:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem13:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem6:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem3:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem1:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem29:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem18:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem28:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem17:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem0:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem26:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem14:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem25:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+
+                                   Page 22
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+Memory Usage (cont)
+-------------------
+         WRITETHROUGH,  GSR= DISABLED
+    -Contains EBR mem12:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+/u_snap_fifo:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 92
+    PFU Registers: 118
+    -Contains EBR mem0:  TYPE= DP16KD,  Width_B= 16,  Depth_A= 1024,  Depth_B=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= WRITETHROUGH,  WRITEMODE_B=
+         WRITETHROUGH,  GSR= DISABLED
+
+DSP Component Details
+---------------------
+
+
+     . MULT18X18D  mult_570:
+
+     Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+
+                                   Page 23
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+DSP Component Details (cont)
+----------------------------
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  mult_567:
+
+     Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  mult_564:
+
+     Multiplier
+
+                                   Page 24
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+DSP Component Details (cont)
+----------------------------
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  mult_561:
+
+     Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+                                   Page 25
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+DSP Component Details (cont)
+----------------------------
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	SYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: mult_570
+         Type: MULT18X18D
+Instance Name: mult_567
+         Type: MULT18X18D
+Instance Name: mult_564
+         Type: MULT18X18D
+Instance Name: mult_561
+         Type: MULT18X18D
+Instance Name: u_snap_fifo/mem0
+         Type: DP16KD
+Instance Name: u_cam_init/mux_4965
+         Type: PDPW16KD
+Instance Name: u_qvga_fifo/mem22
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem9
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem21
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem8
+         Type: DP16KD
+
+                                   Page 26
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+ASIC Components (cont)
+----------------------
+Instance Name: u_qvga_fifo/mem24
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem11
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem19
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem7
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem10
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem2
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem16
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem5
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem15
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem4
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem27
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem31
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem23
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem30
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem20
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem13
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem6
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem3
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem1
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem29
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem18
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem28
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem17
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem0
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem26
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem14
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem25
+         Type: DP16KD
+Instance Name: u_qvga_fifo/mem12
+         Type: DP16KD
+
+                                   Page 27
+
+
+
+
+Design:  fpga_top                                      Date:  05/11/26  21:14:24
+
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 8 secs  
+   Total REAL Time: 8 secs  
+   Peak Memory Usage: 189 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 28
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

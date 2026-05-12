@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1776916283"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1776916285"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1776916288"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1776916292"/>
+            <Task name="Promgen" build_result="2" update_result="0" update_time="1776916295"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1776916228">
+            <Task name="Map" build_result="2" update_result="0" update_time="1776916228"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1776916230"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1776916233"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1776916235"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1776916274">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1776916274"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1776916276"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1776916281"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1776916224">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1776916224"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1776916295"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1776916211"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1776916211"/>
+            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/sdramtest_impl1_map.vdb" last_build_time="1776916228" last_build_size="369677"/>
+        <Report name="IBIS/sdramtest_impl1.ibs" last_build_time="1776916283" last_build_size="152310"/>
+        <Report name="sdramtest_impl1.bgn" last_build_time="1776916292" last_build_size="4562"/>
+        <Report name="sdramtest_impl1.bit" last_build_time="1776916292" last_build_size="582675"/>
+        <Report name="sdramtest_impl1.ior" last_build_time="1776916281" last_build_size="4914"/>
+        <Report name="sdramtest_impl1.lsedata" last_build_time="1776916215" last_build_size="2015140"/>
+        <Report name="sdramtest_impl1.mcs" last_build_time="1776916295" last_build_size="1638931"/>
+        <Report name="sdramtest_impl1.ncd" last_build_time="1776916274" last_build_size="2026290"/>
+        <Report name="sdramtest_impl1.ngd" last_build_time="1776916224" last_build_size="1326312"/>
+        <Report name="sdramtest_impl1.tw1" last_build_time="1776916230" last_build_size="9875"/>
+        <Report name="sdramtest_impl1.twr" last_build_time="1776916276" last_build_size="76311"/>
+        <Report name="sdramtest_impl1_map.ncd" last_build_time="1776916227" last_build_size="1416591"/>
+        <Report name="sdramtest_impl1_mapvho.sdf" last_build_time="1776916235" last_build_size="1254588"/>
+        <Report name="sdramtest_impl1_mapvho.vho" last_build_time="1776916235" last_build_size="2981541"/>
+        <Report name="sdramtest_impl1_mapvo.sdf" last_build_time="1776916233" last_build_size="1244087"/>
+        <Report name="sdramtest_impl1_mapvo.vo" last_build_time="1776916232" last_build_size="1048113"/>
+        <Report name="sdramtest_impl1_vho.sdf" last_build_time="1776916287" last_build_size="1445055"/>
+        <Report name="sdramtest_impl1_vho.vho" last_build_time="1776916287" last_build_size="2981480"/>
+        <Report name="sdramtest_impl1_vo.sdf" last_build_time="1776916285" last_build_size="1430900"/>
+        <Report name="sdramtest_impl1_vo.vo" last_build_time="1776916285" last_build_size="1048057"/>
+    </Strategy>
+</BuildStatus>

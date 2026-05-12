@@ -1,0 +1,369 @@
+[ START MERGED ]
+n41488 u_sdram/dq_oe
+n41485 u_cam_init/sda_oe
+n45415 tx_read_pending
+u_uart_rx/n45411 u_uart_rx/n31686
+u_cam_init/n63276 u_cam_init/tick
+u_cam_init/n62292 u_cam_init/tick
+u_sdram/n36451 op_is_read_N_8024
+u_sdram/n45413 u_sdram/rd_ack_N_8029
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+u_snap_fifo/wr_gray_inc_10__I_0_0/S1
+u_snap_fifo/wr_gray_inc_10__I_0_0/S0
+u_snap_fifo/wr_gray_inc_10__I_0_0/CI
+u_snap_fifo/rd_gray_10__I_0_11/S1
+u_snap_fifo/rd_gray_10__I_0_11/CO
+u_snap_fifo/wr_gray_inc_10__I_0_9/S1
+u_snap_fifo/wr_gray_inc_10__I_0_9/S0
+u_snap_fifo/wr_gray_inc_10__I_0_11_20082/S1
+u_snap_fifo/wr_gray_inc_10__I_0_11_20082/S0
+u_snap_fifo/wr_gray_inc_10__I_0_11/S1
+u_snap_fifo/wr_gray_inc_10__I_0_11/CO
+u_snap_fifo/equal_7504_0/S1
+u_snap_fifo/equal_7504_0/S0
+u_snap_fifo/equal_7504_0/CI
+u_snap_fifo/equal_7504_8/S1
+u_snap_fifo/equal_7504_8/S0
+u_snap_fifo/equal_7504_10_20084/S1
+u_snap_fifo/equal_7504_10_20084/S0
+u_snap_fifo/rd_gray_10__I_0_0/S1
+u_snap_fifo/rd_gray_10__I_0_0/S0
+u_snap_fifo/rd_gray_10__I_0_0/CI
+u_snap_fifo/equal_7504_10/S1
+u_snap_fifo/equal_7504_10/CO
+u_snap_fifo/rd_gray_10__I_0_9/S1
+u_snap_fifo/rd_gray_10__I_0_9/S0
+u_snap_fifo/rd_gray_10__I_0_11_20083/S1
+u_snap_fifo/rd_gray_10__I_0_11_20083/S0
+u_qvga_fifo/equal_7239_11/S1
+u_qvga_fifo/equal_7239_11/S0
+u_qvga_fifo/wr_gray_inc_15__I_0_0/S1
+u_qvga_fifo/wr_gray_inc_15__I_0_0/S0
+u_qvga_fifo/wr_gray_inc_15__I_0_0/CI
+u_qvga_fifo/wr_gray_inc_15__I_0_11/S1
+u_qvga_fifo/wr_gray_inc_15__I_0_11/S0
+u_qvga_fifo/equal_7239_13/S1
+u_qvga_fifo/equal_7239_13/S0
+u_qvga_fifo/wr_gray_inc_15__I_0_13/S1
+u_qvga_fifo/wr_gray_inc_15__I_0_13/S0
+u_qvga_fifo/wr_gray_inc_15__I_0_15/S1
+u_qvga_fifo/wr_gray_inc_15__I_0_15/S0
+u_qvga_fifo/equal_7239_15_20081/S1
+u_qvga_fifo/equal_7239_15_20081/S0
+u_qvga_fifo/equal_7239_15/S1
+u_qvga_fifo/equal_7239_15/CO
+u_qvga_fifo/wr_gray_inc_15__I_0_16/S0
+u_qvga_fifo/wr_gray_inc_15__I_0_16/CO
+u_qvga_fifo/rd_gray_15__I_0_0/S1
+u_qvga_fifo/rd_gray_15__I_0_0/S0
+u_qvga_fifo/rd_gray_15__I_0_0/CI
+u_qvga_fifo/rd_gray_15__I_0_11/S1
+u_qvga_fifo/rd_gray_15__I_0_11/S0
+u_qvga_fifo/rd_gray_15__I_0_13/S1
+u_qvga_fifo/rd_gray_15__I_0_13/S0
+u_qvga_fifo/rd_gray_15__I_0_15/S1
+u_qvga_fifo/rd_gray_15__I_0_15/S0
+u_qvga_fifo/rd_gray_15__I_0_16/S0
+u_qvga_fifo/rd_gray_15__I_0_16/CO
+u_qvga_fifo/equal_7239_0/S1
+u_qvga_fifo/equal_7239_0/S0
+u_qvga_fifo/equal_7239_0/CI
+u_cmd_rx/capture_enable_I_316_8/S0
+u_cmd_rx/capture_enable_I_316_8/CO
+u_cmd_rx/capture_enable_I_316_0/S1
+u_cmd_rx/capture_enable_I_316_0/S0
+u_cmd_rx/capture_enable_I_316_0/CI
+u_cmd_rx/capture_enable_I_316_7/S1
+u_cmd_rx/capture_enable_I_316_7/S0
+u_sdram/ref_ctr_6722_add_4_1/S0
+u_sdram/ref_ctr_6722_add_4_1/CI
+u_sdram/ref_ctr_6722_add_4_9/S1
+u_sdram/ref_ctr_6722_add_4_9/CO
+_add_1_8351_add_4_13/CO
+_add_1_8354_add_4_2/S1
+_add_1_8354_add_4_2/S0
+_add_1_8354_add_4_2/CI
+line_idx_9__I_0_3580_10_20080/S1
+line_idx_9__I_0_3580_10_20080/S0
+u_cam_init/div_ctr_6702_add_4_1/S0
+u_cam_init/div_ctr_6702_add_4_1/CI
+u_cam_init/div_ctr_6702_add_4_17/S1
+u_cam_init/div_ctr_6702_add_4_17/CO
+u_cam_init/wait_ctr_6701_add_4_1/S0
+u_cam_init/wait_ctr_6701_add_4_1/CI
+u_cam_init/wait_ctr_6701_add_4_33/S1
+u_cam_init/wait_ctr_6701_add_4_33/CO
+line_idx_9__I_0_3580_10/S1
+line_idx_9__I_0_3580_10/CO
+_add_1_8354_add_4_4/S0
+line_idx_9__I_0_3580_0/S1
+line_idx_9__I_0_3580_0/S0
+line_idx_9__I_0_3580_0/CI
+_add_1_8313_add_4_25/S1
+_add_1_8313_add_4_25/CO
+line_idx_9__I_0_3580_8/S1
+line_idx_9__I_0_3580_8/S0
+_add_1_8278_add_4_1/S0
+_add_1_8278_add_4_1/CI
+_add_1_8354_add_4_14/S1
+_add_1_8354_add_4_14/CO
+_add_1_8288_add_4_11/CO
+_add_1_8278_add_4_11/CO
+_add_1_8330_add_4_1/S0
+_add_1_8330_add_4_1/CI
+_add_1_8324_add_4_2/S0
+_add_1_8324_add_4_2/CI
+_add_1_8324_add_4_10/S1
+_add_1_8324_add_4_10/CO
+add_20101_2/S1
+add_20101_2/S0
+add_20101_2/CI
+add_8532_20090_add_1_2/S0
+add_8532_20090_add_1_2/CI
+add_8532_20090_add_1_10/CO
+_add_1_add_4_2/S1
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+_add_1_add_4_4/S0
+_add_1_add_4_14/S1
+_add_1_add_4_14/CO
+_add_1_8330_add_4_11/CO
+add_20101_4/S0
+qvga_interframe_gap_sys_6703_add_4_1/S0
+qvga_interframe_gap_sys_6703_add_4_1/CI
+_add_1_8262_add_4_1/S0
+_add_1_8262_add_4_1/CI
+_add_1_8262_add_4_9/CO
+_add_1_8310_add_4_19/CO
+_add_1_8327_add_4_1/S0
+_add_1_8327_add_4_1/CI
+add_20101_12/CO
+_add_1_8333_add_4_1/S0
+_add_1_8333_add_4_1/CI
+qvga_interframe_gap_sys_6703_add_4_21/S1
+qvga_interframe_gap_sys_6703_add_4_21/CO
+_add_1_8265_add_4_1/S0
+_add_1_8265_add_4_1/CI
+_add_1_8333_add_4_11/CO
+_add_1_8265_add_4_9/CO
+add_8538_20096_add_1_2/S0
+add_8538_20096_add_1_2/CI
+add_8538_20096_add_1_10/CO
+_add_1_8336_add_4_1/S0
+_add_1_8336_add_4_1/CI
+_add_1_8336_add_4_11/CO
+_add_3_add_4_20094_add_1_2/S0
+_add_3_add_4_20094_add_1_2/CI
+_add_3_add_4_20094_add_1_8/CO
+_add_1_8327_add_4_17/S1
+_add_1_8327_add_4_17/CO
+tx_preview_col_6717_add_4_1/S0
+tx_preview_col_6717_add_4_1/CI
+add_20098_1/S1
+add_20098_1/S0
+add_20098_1/CI
+add_20098_3/S1
+add_20098_3/S0
+tx_preview_col_6717_add_4_9/S1
+tx_preview_col_6717_add_4_9/CO
+_add_1_8339_add_4_1/S0
+_add_1_8339_add_4_1/CI
+tx_preview_row_6716_add_4_1/S0
+tx_preview_row_6716_add_4_1/CI
+_add_1_8271_add_4_12/S1
+_add_1_8271_add_4_12/CO
+_add_1_8307_add_4_1/S0
+_add_1_8307_add_4_1/CI
+tx_preview_row_6716_add_4_7/CO
+add_20098_13/S1
+add_20098_13/CO
+tx_snap_x_6715_add_4_1/S0
+tx_snap_x_6715_add_4_1/CI
+u_uart_rx/ctr_6720_add_4_1/S0
+u_uart_rx/ctr_6720_add_4_1/CI
+u_uart_rx/ctr_6720_add_4_17/S1
+u_uart_rx/ctr_6720_add_4_17/CO
+_add_1_8339_add_4_17/S1
+_add_1_8339_add_4_17/CO
+tx_snap_x_6715_add_4_11/S1
+tx_snap_x_6715_add_4_11/CO
+tx_snap_preamble_left_6712_add_4_1/S0
+tx_snap_preamble_left_6712_add_4_1/CI
+add_20107_1/S1
+add_20107_1/S0
+add_20107_1/CI
+add_20107_3/S0
+tx_snap_preamble_left_6712_add_4_17/S1
+tx_snap_preamble_left_6712_add_4_17/CO
+tx_preview_row_gap_ctr_6710_add_4_1/S0
+tx_preview_row_gap_ctr_6710_add_4_1/CI
+add_20107_13/S1
+add_20107_13/CO
+add_8553_20098_add_1_2/S0
+add_8553_20098_add_1_2/CI
+_add_1_8307_add_4_11/CO
+add_8540_20092_add_1_2/S0
+add_8540_20092_add_1_2/CI
+tx_preview_row_gap_ctr_6710_add_4_25/S1
+tx_preview_row_gap_ctr_6710_add_4_25/CO
+add_8553_20098_add_1_10/CO
+tx_snap_row_gap_ctr_6708_add_4_1/S0
+tx_snap_row_gap_ctr_6708_add_4_1/CI
+_add_1_8301_add_4_1/S0
+_add_1_8301_add_4_1/CI
+_add_1_8281_add_4_2/S1
+_add_1_8281_add_4_2/S0
+_add_1_8281_add_4_2/CI
+_add_1_8281_add_4_4/S1
+_add_1_8281_add_4_4/S0
+_add_1_8281_add_4_6/S0
+add_8540_20092_add_1_10/CO
+_add_1_8342_add_4_1/S0
+_add_1_8342_add_4_1/CI
+_add_1_8281_add_4_cout/S1
+_add_1_8281_add_4_cout/CO
+_add_1_8320_add_4_1/S0
+_add_1_8320_add_4_1/CI
+tx_snap_row_gap_ctr_6708_add_4_25/S1
+tx_snap_row_gap_ctr_6708_add_4_25/CO
+tx_gap_ctr_6706_add_4_1/S0
+tx_gap_ctr_6706_add_4_1/CI
+_add_1_8342_add_4_17/S1
+_add_1_8342_add_4_17/CO
+_add_1_8320_add_4_13/CO
+_add_1_8316_add_4_1/S0
+_add_1_8316_add_4_1/CI
+_add_1_8310_add_4_1/S0
+_add_1_8310_add_4_1/CI
+tx_gap_ctr_6706_add_4_25/S1
+tx_gap_ctr_6706_add_4_25/CO
+qvga_gate_warmup_sys_6705_add_4_1/S0
+qvga_gate_warmup_sys_6705_add_4_1/CI
+_add_1_8301_add_4_11/S1
+_add_1_8301_add_4_11/CO
+snap_target_line_pclk_6699_add_4_1/S0
+snap_target_line_pclk_6699_add_4_1/CI
+qvga_gate_warmup_sys_6705_add_4_13/CO
+qvga_seq_sys_6704_6929_add_4_1/S0
+qvga_seq_sys_6704_6929_add_4_1/CI
+qvga_seq_sys_6704_6929_add_4_7/S1
+qvga_seq_sys_6704_6929_add_4_7/CO
+add_20104_1/S0
+add_20104_1/CI
+add_20104_11/S1
+add_20104_11/CO
+_add_1_8345_add_4_1/S0
+_add_1_8345_add_4_1/CI
+_add_1_8316_add_4_19/CO
+_add_1_8295_add_4_2/S0
+_add_1_8295_add_4_2/CI
+_add_1_8345_add_4_17/S1
+_add_1_8345_add_4_17/CO
+_add_1_8348_add_4_1/S0
+_add_1_8348_add_4_1/CI
+_add_1_8295_add_4_12/S1
+_add_1_8295_add_4_12/CO
+snap_target_line_pclk_6699_add_4_11/S1
+snap_target_line_pclk_6699_add_4_11/CO
+_add_1_8313_add_4_1/S0
+_add_1_8313_add_4_1/CI
+_add_1_8298_add_4_1/S0
+_add_1_8298_add_4_1/CI
+_add_1_8348_add_4_23/S1
+_add_1_8348_add_4_23/CO
+add_20110_2/S1
+add_20110_2/S0
+add_20110_2/CI
+_add_1_8271_add_4_2/S0
+_add_1_8271_add_4_2/CI
+_add_1_8298_add_4_11/S1
+_add_1_8298_add_4_11/CO
+add_20110_12/CO
+_add_1_8351_add_4_1/S0
+_add_1_8351_add_4_1/CI
+_add_1_8288_add_4_1/S0
+_add_1_8288_add_4_1/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Mon May 11 15:55:16 2026
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+LOCATE COMP "SD_DQ[12]" SITE "F16" ;
+LOCATE COMP "SD_DQ[13]" SITE "G15" ;
+LOCATE COMP "SD_DQ[14]" SITE "G16" ;
+LOCATE COMP "SD_DQ[15]" SITE "H15" ;
+LOCATE COMP "ESP_D[0]" SITE "E2" ;
+LOCATE COMP "ESP_D[1]" SITE "E1" ;
+LOCATE COMP "ESP_D[2]" SITE "F2" ;
+LOCATE COMP "ESP_D[3]" SITE "F3" ;
+LOCATE COMP "ESP_D[4]" SITE "G2" ;
+LOCATE COMP "ESP_D[5]" SITE "G1" ;
+LOCATE COMP "ESP_D[6]" SITE "J1" ;
+LOCATE COMP "ESP_D[7]" SITE "J2" ;
+LOCATE COMP "DOUT" SITE "M8" ;
+LOCATE COMP "TX" SITE "K2" ;
+LOCATE COMP "cam_sda" SITE "B9" ;
+LOCATE COMP "cam_scl" SITE "A10" ;
+LOCATE COMP "MCLK" SITE "A12" ;
+LOCATE COMP "SD_DQ[11]" SITE "F15" ;
+LOCATE COMP "SD_DQ[10]" SITE "E16" ;
+LOCATE COMP "SD_DQ[9]" SITE "E15" ;
+LOCATE COMP "SD_DQ[8]" SITE "D16" ;
+LOCATE COMP "SD_DQ[7]" SITE "J16" ;
+LOCATE COMP "SD_DQ[6]" SITE "R16" ;
+LOCATE COMP "SD_DQ[5]" SITE "P16" ;
+LOCATE COMP "SD_DQ[4]" SITE "M14" ;
+LOCATE COMP "SD_DQ[3]" SITE "M15" ;
+LOCATE COMP "SD_DQ[2]" SITE "K16" ;
+LOCATE COMP "SD_DQ[1]" SITE "M16" ;
+LOCATE COMP "SD_DQ[0]" SITE "L15" ;
+LOCATE COMP "SD_DQM[1]" SITE "D14" ;
+LOCATE COMP "SD_DQM[0]" SITE "T15" ;
+LOCATE COMP "SD_CLK" SITE "J15" ;
+LOCATE COMP "SD_CS_N" SITE "R15" ;
+LOCATE COMP "SD_WE_N" SITE "N13" ;
+LOCATE COMP "SD_RAS_N" SITE "T14" ;
+LOCATE COMP "SD_CAS_N" SITE "R13" ;
+LOCATE COMP "SD_A[12]" SITE "B7" ;
+LOCATE COMP "SD_A[11]" SITE "A8" ;
+LOCATE COMP "SD_A[10]" SITE "T7" ;
+LOCATE COMP "SD_A[9]" SITE "A7" ;
+LOCATE COMP "SD_A[8]" SITE "A6" ;
+LOCATE COMP "SD_A[7]" SITE "A5" ;
+LOCATE COMP "SD_A[6]" SITE "A4" ;
+LOCATE COMP "SD_A[5]" SITE "A3" ;
+LOCATE COMP "SD_A[4]" SITE "A2" ;
+LOCATE COMP "SD_A[3]" SITE "T2" ;
+LOCATE COMP "SD_A[2]" SITE "T3" ;
+LOCATE COMP "SD_A[1]" SITE "T4" ;
+LOCATE COMP "SD_A[0]" SITE "T6" ;
+LOCATE COMP "SD_BA[1]" SITE "L12" ;
+LOCATE COMP "SD_BA[0]" SITE "K12" ;
+LOCATE COMP "M_D1" SITE "B1" ;
+LOCATE COMP "M_D0" SITE "B2" ;
+LOCATE COMP "M_D2" SITE "B6" ;
+LOCATE COMP "M_D3" SITE "B5" ;
+LOCATE COMP "M_CMD" SITE "B4" ;
+LOCATE COMP "M_CLK" SITE "C7" ;
+LOCATE COMP "CRYSTAL" SITE "M1" ;
+LOCATE COMP "VSYNC" SITE "B10" ;
+LOCATE COMP "HREF" SITE "A11" ;
+LOCATE COMP "PCLK" SITE "C8" ;
+LOCATE COMP "Y9" SITE "B11" ;
+LOCATE COMP "Y8" SITE "B12" ;
+LOCATE COMP "Y7" SITE "A13" ;
+LOCATE COMP "Y6" SITE "A14" ;
+LOCATE COMP "Y5" SITE "A15" ;
+LOCATE COMP "Y4" SITE "C13" ;
+LOCATE COMP "Y3" SITE "C12" ;
+LOCATE COMP "Y2" SITE "B14" ;
+LOCATE COMP "SSPI_CS_n" SITE "R1" ;
+FREQUENCY PORT "CRYSTAL" 24.000000 MHz ;
+FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+FREQUENCY PORT "PCLK" 48.000000 MHz ;
+FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

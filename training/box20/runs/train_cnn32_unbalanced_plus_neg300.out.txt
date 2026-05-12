@@ -1,0 +1,18 @@
+epoch 001 loss=3765.805 val_float=0.932 val_quant=0.932
+epoch 005 loss=2137.787 val_float=0.958 val_quant=0.958
+epoch 010 loss=2065.409 val_float=0.963 val_quant=0.963
+epoch 015 loss=1938.609 val_float=0.966 val_quant=0.965
+epoch 020 loss=1946.472 val_float=0.968 val_quant=0.967
+epoch 025 loss=1936.345 val_float=0.964 val_quant=0.964
+epoch 030 loss=1889.027 val_float=0.961 val_quant=0.961
+epoch 035 loss=1952.147 val_float=0.965 val_quant=0.965
+epoch 040 loss=1842.830 val_float=0.972 val_quant=0.971
+epoch 045 loss=1909.306 val_float=0.963 val_quant=0.962
+epoch 050 loss=1941.283 val_float=0.970 val_quant=0.970
+epoch 055 loss=1860.043 val_float=0.962 val_quant=0.963
+epoch 060 loss=1873.884 val_float=0.964 val_quant=0.964
+epoch 065 loss=1887.362 val_float=0.961 val_quant=0.962
+epoch 070 loss=1808.515 val_float=0.968 val_quant=0.968
+epoch 075 loss=1900.797 val_float=0.968 val_quant=0.968
+epoch 080 loss=1878.822 val_float=0.968 val_quant=0.968
+exported FPGA weight files to training\box20\models\model_box20_cnn32_unbalanced_plus_neg300

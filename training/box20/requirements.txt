@@ -1,0 +1,5 @@
+# NVIDIA/CUDA build for this RTX 3070 Windows box.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.11.0+cu130
+pillow
+numpy

@@ -1,0 +1,151 @@
+<top name = "sdram_pin_static_top"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 0
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "sdram_pin_static_top">
+
+    <!--
+        Top Level Pins: 50
+    -->
+
+    <pins>
+        <pitem  name = "CRYSTAL"  direction = "in"  />
+        <pitem  name = "SSPI_CS_n"  direction = "in"  />
+        <pitem  name = "TX"  direction = "out"  />
+        <pitem  name = "DOUT"  direction = "out"  />
+        <pitem  name = "ESP_D[7]"  direction = "out"  />
+        <pitem  name = "ESP_D[6]"  direction = "out"  />
+        <pitem  name = "ESP_D[5]"  direction = "out"  />
+        <pitem  name = "ESP_D[4]"  direction = "out"  />
+        <pitem  name = "ESP_D[3]"  direction = "out"  />
+        <pitem  name = "ESP_D[2]"  direction = "out"  />
+        <pitem  name = "ESP_D[1]"  direction = "out"  />
+        <pitem  name = "ESP_D[0]"  direction = "out"  />
+        <pitem  name = "SD_CLK"  direction = "out"  />
+        <pitem  name = "SD_CS_N"  direction = "out"  />
+        <pitem  name = "SD_RAS_N"  direction = "out"  />
+        <pitem  name = "SD_CAS_N"  direction = "out"  />
+        <pitem  name = "SD_WE_N"  direction = "out"  />
+        <pitem  name = "SD_A[12]"  direction = "out"  />
+        <pitem  name = "SD_A[11]"  direction = "out"  />
+        <pitem  name = "SD_A[10]"  direction = "out"  />
+        <pitem  name = "SD_A[9]"  direction = "out"  />
+        <pitem  name = "SD_A[8]"  direction = "out"  />
+        <pitem  name = "SD_A[7]"  direction = "out"  />
+        <pitem  name = "SD_A[6]"  direction = "out"  />
+        <pitem  name = "SD_A[5]"  direction = "out"  />
+        <pitem  name = "SD_A[4]"  direction = "out"  />
+        <pitem  name = "SD_A[3]"  direction = "out"  />
+        <pitem  name = "SD_A[2]"  direction = "out"  />
+        <pitem  name = "SD_A[1]"  direction = "out"  />
+        <pitem  name = "SD_A[0]"  direction = "out"  />
+        <pitem  name = "SD_BA[1]"  direction = "out"  />
+        <pitem  name = "SD_BA[0]"  direction = "out"  />
+        <pitem  name = "SD_DQM[1]"  direction = "out"  />
+        <pitem  name = "SD_DQM[0]"  direction = "out"  />
+        <pitem  name = "SD_DQ[15]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[14]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[13]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[12]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[11]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[10]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[9]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[8]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[7]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[6]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[5]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[4]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[3]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[2]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[1]"  direction = "inout"  />
+        <pitem  name = "SD_DQ[0]"  direction = "inout"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 1
+    -->
+
+    <instance  name = "tri_52"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i[15]"  direction = "in"  />
+        <pitem  name = "i[14]"  direction = "in"  />
+        <pitem  name = "i[13]"  direction = "in"  />
+        <pitem  name = "i[12]"  direction = "in"  />
+        <pitem  name = "i[11]"  direction = "in"  />
+        <pitem  name = "i[10]"  direction = "in"  />
+        <pitem  name = "i[9]"  direction = "in"  />
+        <pitem  name = "i[8]"  direction = "in"  />
+        <pitem  name = "i[7]"  direction = "in"  />
+        <pitem  name = "i[6]"  direction = "in"  />
+        <pitem  name = "i[5]"  direction = "in"  />
+        <pitem  name = "i[4]"  direction = "in"  />
+        <pitem  name = "i[3]"  direction = "in"  />
+        <pitem  name = "i[2]"  direction = "in"  />
+        <pitem  name = "i[1]"  direction = "in"  />
+        <pitem  name = "i[0]"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n4"  />
+        <nitem  name = "n3"  />
+        <nitem  name = "SD_DQ[15]"  />
+        <nitem  name = "SD_DQ[14]"  />
+        <nitem  name = "SD_DQ[13]"  />
+        <nitem  name = "SD_DQ[12]"  />
+        <nitem  name = "SD_DQ[11]"  />
+        <nitem  name = "SD_DQ[10]"  />
+        <nitem  name = "SD_DQ[9]"  />
+        <nitem  name = "SD_DQ[8]"  />
+        <nitem  name = "SD_DQ[7]"  />
+        <nitem  name = "SD_DQ[6]"  />
+        <nitem  name = "SD_DQ[5]"  />
+        <nitem  name = "SD_DQ[4]"  />
+        <nitem  name = "SD_DQ[3]"  />
+        <nitem  name = "SD_DQ[2]"  />
+        <nitem  name = "SD_DQ[1]"  />
+        <nitem  name = "SD_DQ[0]"  />
+        </nets>
+    </instance>
+
+    <!--
+        Views in design "sdram_pin_static_top": 0
+    -->
+
+    <views>
+    </views>
+
+</unit>
+
+</library>
+
+</top>

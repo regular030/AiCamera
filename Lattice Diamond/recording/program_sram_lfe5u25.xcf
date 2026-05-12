@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ispXCF SYSTEM "IspXCF.dtd" >
+<ispXCF version="3.9.0">
+    <Comment>AiCamera SRAM program for LFE5U-25F Diamond bitstream</Comment>
+    <Chain>
+        <Comm>JTAG</Comm>
+        <Device>
+            <SelectedProg value="TRUE"/>
+            <Pos>1</Pos>
+            <Vendor>Lattice</Vendor>
+            <Family>ECP5U</Family>
+            <Name>LFE5U-25F</Name>
+            <IDCode>0x41111043</IDCode>
+            <Package>All</Package>
+            <PON>LFE5U-25F</PON>
+            <Bypass>
+                <InstrLen>8</InstrLen>
+                <InstrVal>11111111</InstrVal>
+                <BScanLen>1</BScanLen>
+                <BScanVal>0</BScanVal>
+            </Bypass>
+            <File>C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/impl1/record_impl1.bit</File>
+            <FileTime>05/11/26 12:37:54</FileTime>
+            <JedecChecksum>N/A</JedecChecksum>
+            <Operation>Fast Program</Operation>
+            <Option>
+                <SVFVendor>JTAG STANDARD</SVFVendor>
+                <IOState>HighZ</IOState>
+                <PreloadLength>510</PreloadLength>
+                <IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+                <TCKFrequency>0.500000 MHz</TCKFrequency>
+                <SVFProcessor>SVF Processor</SVFProcessor>
+                <Usercode>0x00000000</Usercode>
+                <AccessMode>JTAG</AccessMode>
+            </Option>
+        </Device>
+    </Chain>
+    <ProjectOptions>
+        <Program>SEQUENTIAL</Program>
+        <Process>ENTIRED CHAIN</Process>
+        <OperationOverride>No Override</OperationOverride>
+        <StartTAP>TLR</StartTAP>
+        <EndTAP>TLR</EndTAP>
+        <VerifyUsercode value="FALSE"/>
+        <TCKDelay>1</TCKDelay>
+    </ProjectOptions>
+    <CableOptions>
+        <CableName>USB2</CableName>
+        <PortAdd>FTUSB-0</PortAdd>
+        <USBID>Single RS232-HS Location 0000</USBID>
+        <JTAGPinSetting>
+            TRST    ABSENT;
+            ISPEN   ABSENT;
+        </JTAGPinSetting>
+    </CableOptions>
+</ispXCF>

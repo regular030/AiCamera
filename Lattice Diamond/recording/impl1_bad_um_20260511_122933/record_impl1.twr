@@ -1,0 +1,2548 @@
+
+Loading design for application trce from file record_impl1.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application trce from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Mon May 11 01:30:36 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o record_impl1.twr record_impl1.ncd record_impl1.prf 
+Design file:     record_impl1.ncd
+Preference file: record_impl1.prf
+Device,speed:    LFE5U-25F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "CRYSTAL" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 36.667ns
+         The internal maximum frequency of the following component is 200.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            CRYSTAL
+
+   Delay:               5.000ns -- based on Minimum Pulse Width
+
+Report:  200.000MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i4  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i3
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1126 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1126:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C65C.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1126:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C65C.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i6  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i5
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1125 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C65D.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C65D.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i10  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i9
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1123 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1123:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C66B.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1123:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C66B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i14  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i13
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1121 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1121:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C66D.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1121:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C66D.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i2  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i1
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1127 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1127:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C65B.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1127:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C65B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i18  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i17
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1119 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C67B.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i22  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i21
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1117 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1117:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C67D.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1117:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67D.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i26  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i25
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1115 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1115:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C68B.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1115:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C68B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i30  (to CRYSTAL_c +)
+                   FF                        u_cam_init/wait_ctr_21838__i29
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1113 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1113:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C68D.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1113:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C68D.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 27.546ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_cam_init/wait_ctr_21838__i18  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_cam_init/wait_ctr_21838__i0  (to CRYSTAL_c +)
+
+   Delay:              13.697ns  (19.3% logic, 80.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.697ns physical path delay u_cam_init/SLICE_1119 to u_cam_init/SLICE_1128 meets
+     41.667ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 41.243ns) by 27.546ns
+
+ Physical Path Details:
+
+      Data path u_cam_init/SLICE_1119 to u_cam_init/SLICE_1128:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R35C67B.CLK to     R35C67B.Q1 u_cam_init/SLICE_1119 (from CRYSTAL_c)
+ROUTE         2     1.005     R35C67B.Q1 to     R36C68B.B1 u_cam_init/wait_ctr_18
+CTOF_DEL    ---     0.236     R36C68B.B1 to     R36C68B.F1 u_cam_init/SLICE_4261
+ROUTE         1     0.558     R36C68B.F1 to     R36C68B.B0 u_cam_init/n182347
+CTOF_DEL    ---     0.236     R36C68B.B0 to     R36C68B.F0 u_cam_init/SLICE_4261
+ROUTE         1     0.413     R36C68B.F0 to     R36C67A.D0 u_cam_init/n182361
+CTOF_DEL    ---     0.236     R36C67A.D0 to     R36C67A.F0 u_cam_init/SLICE_4260
+ROUTE         3     0.199     R36C67A.F0 to     R36C67A.D1 u_cam_init/n150139
+CTOF_DEL    ---     0.236     R36C67A.D1 to     R36C67A.F1 u_cam_init/SLICE_4260
+ROUTE         2     1.360     R36C67A.F1 to     R38C64D.A1 u_cam_init/n180279
+CTOF_DEL    ---     0.236     R38C64D.A1 to     R38C64D.F1 u_cam_init/SLICE_4249
+ROUTE         5     0.936     R38C64D.F1 to     R36C64B.A0 u_cam_init/n312
+CTOF_DEL    ---     0.236     R36C64B.A0 to     R36C64B.F0 u_cam_init/SLICE_3843
+ROUTE         2     0.780     R36C64B.F0 to     R38C64B.D1 u_cam_init/n191532
+CTOF_DEL    ---     0.236     R38C64B.D1 to     R38C64B.F1 u_cam_init/SLICE_3845
+ROUTE         1     0.558     R38C64B.F1 to     R38C64B.B0 u_cam_init/n30
+CTOF_DEL    ---     0.236     R38C64B.B0 to     R38C64B.F0 u_cam_init/SLICE_3845
+ROUTE         1     0.413     R38C64B.F0 to     R38C65A.D0 u_cam_init/n21
+CTOF_DEL    ---     0.236     R38C65A.D0 to     R38C65A.F0 u_cam_init/SLICE_4271
+ROUTE        17     4.829     R38C65A.F0 to    R35C65A.LSR u_cam_init/n153982 (to CRYSTAL_c)
+                  --------
+                   13.697   (19.3% logic, 80.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_cam_init/SLICE_1119:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C67B.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_cam_init/SLICE_1128:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     2.391       M1.PADDI to    R35C65A.CLK CRYSTAL_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:   70.817MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "PCLK" 48.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 15.833ns
+         The internal maximum frequency of the following component is 200.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            PCLK
+
+   Delay:               5.000ns -- based on Minimum Pulse Width
+
+Report:  200.000MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.895ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.065ns  (31.9% logic, 68.1% route), 20 logic levels.
+
+ Constraint Details:
+
+     20.065ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.895ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOFCO_D  ---     0.071    R31C38B.FCI to    R31C38B.FCO SLICE_287
+ROUTE         1     0.000    R31C38B.FCO to    R31C38C.FCI n176364
+FCITOF0_DE  ---     0.443    R31C38C.FCI to     R31C38C.F0 SLICE_215
+ROUTE         1     1.013     R31C38C.F0 to     R32C38C.B1 n176125
+C1TOFCO_DE  ---     0.447     R32C38C.B1 to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOFCO_D  ---     0.071    R32C38D.FCI to    R32C38D.FCO SLICE_126
+ROUTE         1     0.000    R32C38D.FCO to    R32C39A.FCI n177372
+FCITOF0_DE  ---     0.443    R32C39A.FCI to     R32C39A.F0 SLICE_125
+ROUTE         2     0.967     R32C39A.F0 to     R33C39A.B0 n176150
+CTOF1_DEL   ---     0.714     R33C39A.B0 to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.065   (31.9% logic, 68.1% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.905ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.055ns  (32.8% logic, 67.2% route), 20 logic levels.
+
+ Constraint Details:
+
+     20.055ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.905ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOFCO_D  ---     0.071    R31C38B.FCI to    R31C38B.FCO SLICE_287
+ROUTE         1     0.000    R31C38B.FCO to    R31C38C.FCI n176364
+FCITOF0_DE  ---     0.443    R31C38C.FCI to     R31C38C.F0 SLICE_215
+ROUTE         1     1.013     R31C38C.F0 to     R32C38C.B1 n176125
+C1TOFCO_DE  ---     0.447     R32C38C.B1 to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOF1_DE  ---     0.474    R32C38D.FCI to     R32C38D.F1 SLICE_126
+ROUTE         2     0.790     R32C38D.F1 to     R33C38D.B1 n176151
+C1TOFCO_DE  ---     0.447     R33C38D.B1 to    R33C38D.FCO SLICE_341
+ROUTE         1     0.000    R33C38D.FCO to    R33C39A.FCI n177265
+FCITOF1_DE  ---     0.474    R33C39A.FCI to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.055   (32.8% logic, 67.2% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.935ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.025ns  (32.7% logic, 67.3% route), 20 logic levels.
+
+ Constraint Details:
+
+     20.025ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.935ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOFCO_D  ---     0.071    R31C38B.FCI to    R31C38B.FCO SLICE_287
+ROUTE         1     0.000    R31C38B.FCO to    R31C38C.FCI n176364
+FCITOF0_DE  ---     0.443    R31C38C.FCI to     R31C38C.F0 SLICE_215
+ROUTE         1     1.013     R31C38C.F0 to     R32C38C.B1 n176125
+C1TOFCO_DE  ---     0.447     R32C38C.B1 to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOF0_DE  ---     0.443    R32C38D.FCI to     R32C38D.F0 SLICE_126
+ROUTE         2     0.791     R32C38D.F0 to     R33C38D.C0 n176152
+C0TOFCO_DE  ---     0.447     R33C38D.C0 to    R33C38D.FCO SLICE_341
+ROUTE         1     0.000    R33C38D.FCO to    R33C39A.FCI n177265
+FCITOF1_DE  ---     0.474    R33C39A.FCI to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.025   (32.7% logic, 67.3% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.947ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.013ns  (32.0% logic, 68.0% route), 20 logic levels.
+
+ Constraint Details:
+
+     20.013ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.947ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOF0_DE  ---     0.443    R31C38B.FCI to     R31C38B.F0 SLICE_287
+ROUTE         1     0.961     R31C38B.F0 to     R32C38B.B1 n176123
+C1TOFCO_DE  ---     0.447     R32C38B.B1 to    R32C38B.FCO SLICE_128
+ROUTE         1     0.000    R32C38B.FCO to    R32C38C.FCI n177370
+FCITOFCO_D  ---     0.071    R32C38C.FCI to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOFCO_D  ---     0.071    R32C38D.FCI to    R32C38D.FCO SLICE_126
+ROUTE         1     0.000    R32C38D.FCO to    R32C39A.FCI n177372
+FCITOF0_DE  ---     0.443    R32C39A.FCI to     R32C39A.F0 SLICE_125
+ROUTE         2     0.967     R32C39A.F0 to     R33C39A.B0 n176150
+CTOF1_DEL   ---     0.714     R33C39A.B0 to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.013   (32.0% logic, 68.0% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.950ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.010ns  (32.9% logic, 67.1% route), 20 logic levels.
+
+ Constraint Details:
+
+     20.010ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.950ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOF0_DE  ---     0.443    R31C38B.FCI to     R31C38B.F0 SLICE_287
+ROUTE         1     0.961     R31C38B.F0 to     R32C38B.B1 n176123
+C1TOFCO_DE  ---     0.447     R32C38B.B1 to    R32C38B.FCO SLICE_128
+ROUTE         1     0.000    R32C38B.FCO to    R32C38C.FCI n177370
+FCITOF1_DE  ---     0.474    R32C38C.FCI to     R32C38C.F1 SLICE_127
+ROUTE         2     0.797     R32C38C.F1 to     R33C38C.C1 n176153
+C1TOFCO_DE  ---     0.447     R33C38C.C1 to    R33C38C.FCO SLICE_342
+ROUTE         1     0.000    R33C38C.FCO to    R33C38D.FCI n177264
+FCITOFCO_D  ---     0.071    R33C38D.FCI to    R33C38D.FCO SLICE_341
+ROUTE         1     0.000    R33C38D.FCO to    R33C39A.FCI n177265
+FCITOF1_DE  ---     0.474    R33C39A.FCI to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.010   (32.9% logic, 67.1% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.953ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              yuv_u_pclk_i0_i3  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.007ns  (32.4% logic, 67.6% route), 21 logic levels.
+
+ Constraint Details:
+
+     20.007ns physical path delay SLICE_2276 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.953ns
+
+ Physical Path Details:
+
+      Data path SLICE_2276 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R29C37D.CLK to     R29C37D.Q1 SLICE_2276 (from PCLK_c)
+ROUTE         1     1.021     R29C37D.Q1 to     R28C37C.A0 yuv_u_pclk_3
+CTOF_DEL    ---     0.236     R28C37C.A0 to     R28C37C.F0 SLICE_4691
+ROUTE         2     1.019     R28C37C.F0 to     R28C36B.B1 n127040
+C1TOFCO_DE  ---     0.447     R28C36B.B1 to    R28C36B.FCO SLICE_241
+ROUTE         1     0.000    R28C36B.FCO to    R28C36C.FCI n177311
+FCITOFCO_D  ---     0.071    R28C36C.FCI to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOFCO_D  ---     0.071    R31C38B.FCI to    R31C38B.FCO SLICE_287
+ROUTE         1     0.000    R31C38B.FCO to    R31C38C.FCI n176364
+FCITOF0_DE  ---     0.443    R31C38C.FCI to     R31C38C.F0 SLICE_215
+ROUTE         1     1.013     R31C38C.F0 to     R32C38C.B1 n176125
+C1TOFCO_DE  ---     0.447     R32C38C.B1 to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOFCO_D  ---     0.071    R32C38D.FCI to    R32C38D.FCO SLICE_126
+ROUTE         1     0.000    R32C38D.FCO to    R32C39A.FCI n177372
+FCITOF0_DE  ---     0.443    R32C39A.FCI to     R32C39A.F0 SLICE_125
+ROUTE         2     0.967     R32C39A.F0 to     R33C39A.B0 n176150
+CTOF1_DEL   ---     0.714     R33C39A.B0 to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.007   (32.4% logic, 67.6% route), 21 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_2276:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R29C37D.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.957ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.003ns  (32.9% logic, 67.1% route), 20 logic levels.
+
+ Constraint Details:
+
+     20.003ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.957ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOF0_DE  ---     0.443    R31C38B.FCI to     R31C38B.F0 SLICE_287
+ROUTE         1     0.961     R31C38B.F0 to     R32C38B.B1 n176123
+C1TOFCO_DE  ---     0.447     R32C38B.B1 to    R32C38B.FCO SLICE_128
+ROUTE         1     0.000    R32C38B.FCO to    R32C38C.FCI n177370
+FCITOFCO_D  ---     0.071    R32C38C.FCI to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOF1_DE  ---     0.474    R32C38D.FCI to     R32C38D.F1 SLICE_126
+ROUTE         2     0.790     R32C38D.F1 to     R33C38D.B1 n176151
+C1TOFCO_DE  ---     0.447     R33C38D.B1 to    R33C38D.FCO SLICE_341
+ROUTE         1     0.000    R33C38D.FCO to    R33C39A.FCI n177265
+FCITOF1_DE  ---     0.474    R33C39A.FCI to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.003   (32.9% logic, 67.1% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.958ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              20.002ns  (31.7% logic, 68.3% route), 19 logic levels.
+
+ Constraint Details:
+
+     20.002ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.958ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.460     R28C36D.F0 to     R31C38B.A1 n538
+C1TOFCO_DE  ---     0.447     R31C38B.A1 to    R31C38B.FCO SLICE_287
+ROUTE         1     0.000    R31C38B.FCO to    R31C38C.FCI n176364
+FCITOF0_DE  ---     0.443    R31C38C.FCI to     R31C38C.F0 SLICE_215
+ROUTE         1     1.013     R31C38C.F0 to     R32C38C.B1 n176125
+C1TOFCO_DE  ---     0.447     R32C38C.B1 to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOFCO_D  ---     0.071    R32C38D.FCI to    R32C38D.FCO SLICE_126
+ROUTE         1     0.000    R32C38D.FCO to    R32C39A.FCI n177372
+FCITOF0_DE  ---     0.443    R32C39A.FCI to     R32C39A.F0 SLICE_125
+ROUTE         2     0.967     R32C39A.F0 to     R33C39A.B0 n176150
+CTOF1_DEL   ---     0.714     R33C39A.B0 to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   20.002   (31.7% logic, 68.3% route), 19 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.963ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              yuv_u_pclk_i0_i3  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              19.997ns  (33.2% logic, 66.8% route), 21 logic levels.
+
+ Constraint Details:
+
+     19.997ns physical path delay SLICE_2276 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.963ns
+
+ Physical Path Details:
+
+      Data path SLICE_2276 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R29C37D.CLK to     R29C37D.Q1 SLICE_2276 (from PCLK_c)
+ROUTE         1     1.021     R29C37D.Q1 to     R28C37C.A0 yuv_u_pclk_3
+CTOF_DEL    ---     0.236     R28C37C.A0 to     R28C37C.F0 SLICE_4691
+ROUTE         2     1.019     R28C37C.F0 to     R28C36B.B1 n127040
+C1TOFCO_DE  ---     0.447     R28C36B.B1 to    R28C36B.FCO SLICE_241
+ROUTE         1     0.000    R28C36B.FCO to    R28C36C.FCI n177311
+FCITOFCO_D  ---     0.071    R28C36C.FCI to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.452     R28C36D.F0 to     R31C38A.B1 n538
+C1TOFCO_DE  ---     0.447     R31C38A.B1 to    R31C38A.FCO SLICE_290
+ROUTE         1     0.000    R31C38A.FCO to    R31C38B.FCI n176363
+FCITOFCO_D  ---     0.071    R31C38B.FCI to    R31C38B.FCO SLICE_287
+ROUTE         1     0.000    R31C38B.FCO to    R31C38C.FCI n176364
+FCITOF0_DE  ---     0.443    R31C38C.FCI to     R31C38C.F0 SLICE_215
+ROUTE         1     1.013     R31C38C.F0 to     R32C38C.B1 n176125
+C1TOFCO_DE  ---     0.447     R32C38C.B1 to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOF1_DE  ---     0.474    R32C38D.FCI to     R32C38D.F1 SLICE_126
+ROUTE         2     0.790     R32C38D.F1 to     R33C38D.B1 n176151
+C1TOFCO_DE  ---     0.447     R33C38D.B1 to    R33C38D.FCO SLICE_341
+ROUTE         1     0.000    R33C38D.FCO to    R33C39A.FCI n177265
+FCITOF1_DE  ---     0.474    R33C39A.FCI to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   19.997   (33.2% logic, 66.8% route), 21 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_2276:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R29C37D.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.968ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cam_byte_pclk_i5  (from PCLK_c +)
+   Destination:    FF         Data in        box20_orange_count_pclk_47___i284  (to PCLK_c +)
+                   FF                        box20_orange_count_pclk_47___i283
+
+   Delay:              19.992ns  (32.5% logic, 67.5% route), 19 logic levels.
+
+ Constraint Details:
+
+     19.992ns physical path delay SLICE_1860 to SLICE_1333 meets
+     20.833ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 20.960ns) by 0.968ns
+
+ Physical Path Details:
+
+      Data path SLICE_1860 to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R28C53A.CLK to     R28C53A.Q1 SLICE_1860 (from PCLK_c)
+ROUTE         9     1.194     R28C53A.Q1 to     R28C38D.D0 cam_byte_pclk_5
+CTOF_DEL    ---     0.236     R28C38D.D0 to     R28C38D.F0 SLICE_4689
+ROUTE         2     0.975     R28C38D.F0 to     R28C36C.A1 n127038
+C1TOFCO_DE  ---     0.447     R28C36C.A1 to    R28C36C.FCO SLICE_237
+ROUTE         1     0.000    R28C36C.FCO to    R28C36D.FCI n177312
+FCITOF0_DE  ---     0.443    R28C36D.FCI to     R28C36D.F0 SLICE_236
+ROUTE         8     1.460     R28C36D.F0 to     R31C38B.A1 n538
+C1TOFCO_DE  ---     0.447     R31C38B.A1 to    R31C38B.FCO SLICE_287
+ROUTE         1     0.000    R31C38B.FCO to    R31C38C.FCI n176364
+FCITOF0_DE  ---     0.443    R31C38C.FCI to     R31C38C.F0 SLICE_215
+ROUTE         1     1.013     R31C38C.F0 to     R32C38C.B1 n176125
+C1TOFCO_DE  ---     0.447     R32C38C.B1 to    R32C38C.FCO SLICE_127
+ROUTE         1     0.000    R32C38C.FCO to    R32C38D.FCI n177371
+FCITOF1_DE  ---     0.474    R32C38D.FCI to     R32C38D.F1 SLICE_126
+ROUTE         2     0.790     R32C38D.F1 to     R33C38D.B1 n176151
+C1TOFCO_DE  ---     0.447     R33C38D.B1 to    R33C38D.FCO SLICE_341
+ROUTE         1     0.000    R33C38D.FCO to    R33C39A.FCI n177265
+FCITOF1_DE  ---     0.474    R33C39A.FCI to     R33C39A.F1 SLICE_340
+ROUTE         6     0.826     R33C39A.F1 to     R33C40C.B0 n39_adj_9599
+CTOF_DEL    ---     0.236     R33C40C.B0 to     R33C40C.F0 SLICE_4816
+ROUTE         1     0.817     R33C40C.F0 to     R33C36C.D0 n182041
+CTOF_DEL    ---     0.236     R33C36C.D0 to     R33C36C.F0 SLICE_3958
+ROUTE         4     0.863     R33C36C.F0 to     R27C37C.D1 qvga_yuv_word0_15_N_3464_5
+CTOF_DEL    ---     0.236     R27C37C.D1 to     R27C37C.F1 SLICE_3873
+ROUTE         5     0.639     R27C37C.F1 to     R27C39A.D0 n191417
+CTOF_DEL    ---     0.236     R27C39A.D0 to     R27C39A.F0 SLICE_4784
+ROUTE         1     0.413     R27C39A.F0 to     R27C38C.D0 n147128
+CTOF_DEL    ---     0.236     R27C38C.D0 to     R27C38C.F0 SLICE_3941
+ROUTE         1     0.858     R27C38C.F0 to     R30C37A.C1 n181867
+CTOF_DEL    ---     0.236     R30C37A.C1 to     R30C37A.F1 SLICE_3893
+ROUTE         1     0.778     R30C37A.F1 to     R32C37B.B0 n181871
+CTOF_DEL    ---     0.236     R32C37B.B0 to     R32C37B.F0 SLICE_3939
+ROUTE         1     0.927     R32C37B.F0 to     R33C31D.C0 n181875
+CTOF_DEL    ---     0.236     R33C31D.C0 to     R33C31D.F0 SLICE_3938
+ROUTE        48     0.734     R33C31D.F0 to     R33C30B.C1 n7_adj_10142
+CTOF_DEL    ---     0.236     R33C30B.C1 to     R33C30B.F1 SLICE_4704
+ROUTE         5     1.201     R33C30B.F1 to     R30C35B.CE PCLK_c_enable_1862 (to PCLK_c)
+                  --------
+                   19.992   (32.5% logic, 67.5% route), 19 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1860:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R28C53A.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1333:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.391       C8.PADDI to    R30C35B.CLK PCLK_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:   50.155MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "CRYSTAL" 24.000000 MHz  |             |             |
+;                                       |   24.000 MHz|  200.000 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "CRYSTAL_c" 24.000000 MHz |             |             |
+;                                       |   24.000 MHz|   70.817 MHz|  10  
+                                        |             |             |
+FREQUENCY PORT "PCLK" 48.000000 MHz ;   |   48.000 MHz|  200.000 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "PCLK_c" 48.000000 MHz ;  |   48.000 MHz|   50.155 MHz|  20  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: PCLK_c   Source: PCLK.PAD   Loads: 1650
+   Covered under: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 428
+   Covered under: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PCLK_c   Source: PCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2147483647 paths, 2 nets, and 46039 connections (99.60% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Mon May 11 01:30:37 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o record_impl1.twr record_impl1.ncd record_impl1.prf 
+Design file:     record_impl1.ncd
+Preference file: record_impl1.prf
+Device,speed:    LFE5U-25F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "CRYSTAL" 24.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_capture/wr_data_i11  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_sdram/op_wdata_i0_i11  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay SLICE_2001 to u_sdram/SLICE_2192 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path SLICE_2001 to u_sdram/SLICE_2192:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R24C62C.CLK to     R24C62C.Q1 SLICE_2001 (from CRYSTAL_c)
+ROUTE         1     0.129     R24C62C.Q1 to     R24C62D.M1 sdram_wr_data_11 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to SLICE_2001:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R24C62C.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_sdram/SLICE_2192:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R24C62D.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_sdram/op_wdata_i0_i7  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_sdram/dq_out_i0_i7  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_sdram/SLICE_2190 to u_sdram/SLICE_1870 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_sdram/SLICE_2190 to u_sdram/SLICE_1870:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R27C65A.CLK to     R27C65A.Q1 u_sdram/SLICE_2190 (from CRYSTAL_c)
+ROUTE         1     0.129     R27C65A.Q1 to     R27C65D.M1 u_sdram/op_wdata_7 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_sdram/SLICE_2190:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R27C65A.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_sdram/SLICE_1870:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R27C65D.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/wr_gray_r1_i5  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_snap_fifo/wr_gray_r2_i5  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_snap_fifo/SLICE_2248 to u_snap_fifo/SLICE_2254 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2248 to u_snap_fifo/SLICE_2254:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R32C61C.CLK to     R32C61C.Q1 u_snap_fifo/SLICE_2248 (from CRYSTAL_c)
+ROUTE         1     0.129     R32C61C.Q1 to     R32C61A.M1 u_snap_fifo/wr_gray_r1_5 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_snap_fifo/SLICE_2248:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R32C61C.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_snap_fifo/SLICE_2254:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R32C61A.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_qvga_fifo/wr_gray_r1_i7  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_qvga_fifo/wr_gray_r2_i7  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_qvga_fifo/SLICE_2154 to u_qvga_fifo/SLICE_2162 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_qvga_fifo/SLICE_2154 to u_qvga_fifo/SLICE_2162:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R30C51C.CLK to     R30C51C.Q1 u_qvga_fifo/SLICE_2154 (from CRYSTAL_c)
+ROUTE         1     0.129     R30C51C.Q1 to     R30C51D.M1 u_qvga_fifo/wr_gray_r1_7 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_qvga_fifo/SLICE_2154:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R30C51C.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_qvga_fifo/SLICE_2162:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R30C51D.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_qvga_fifo/rd_data_i0_i5  (from CRYSTAL_c +)
+   Destination:    FF         Data in        qvga_word_sys_i0_i5  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_qvga_fifo/SLICE_1904 to SLICE_1977 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_qvga_fifo/SLICE_1904 to SLICE_1977:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R34C49D.CLK to     R34C49D.Q1 u_qvga_fifo/SLICE_1904 (from CRYSTAL_c)
+ROUTE         1     0.129     R34C49D.Q1 to     R34C49A.M1 qvga_fifo_rd_data_5 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_qvga_fifo/SLICE_1904:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R34C49D.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to SLICE_1977:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R34C49A.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_qvga_fifo/wr_gray_r1_i13  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_qvga_fifo/wr_gray_r2_i13  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_qvga_fifo/SLICE_2157 to u_qvga_fifo/SLICE_2165 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_qvga_fifo/SLICE_2157 to u_qvga_fifo/SLICE_2165:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R27C53C.CLK to     R27C53C.Q1 u_qvga_fifo/SLICE_2157 (from CRYSTAL_c)
+ROUTE         1     0.129     R27C53C.Q1 to     R27C53A.M1 u_qvga_fifo/wr_gray_r1_13 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_qvga_fifo/SLICE_2157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R27C53C.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_qvga_fifo/SLICE_2165:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R27C53A.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/wr_gray_r1_i1  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_snap_fifo/wr_gray_r2_i1  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_snap_fifo/SLICE_2246 to u_snap_fifo/SLICE_2252 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2246 to u_snap_fifo/SLICE_2252:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R33C63C.CLK to     R33C63C.Q1 u_snap_fifo/SLICE_2246 (from CRYSTAL_c)
+ROUTE         1     0.129     R33C63C.Q1 to     R33C63D.M1 u_snap_fifo/wr_gray_r1_1 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_snap_fifo/SLICE_2246:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R33C63C.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_snap_fifo/SLICE_2252:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R33C63D.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_sdram/op_wdata_i0_i15  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_sdram/dq_out_i0_i15  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_sdram/SLICE_2194 to u_sdram/SLICE_1874 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_sdram/SLICE_2194 to u_sdram/SLICE_1874:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R24C63B.CLK to     R24C63B.Q1 u_sdram/SLICE_2194 (from CRYSTAL_c)
+ROUTE         1     0.129     R24C63B.Q1 to     R24C63A.M1 u_sdram/op_wdata_15 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_sdram/SLICE_2194:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R24C63B.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_sdram/SLICE_1874:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R24C63A.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/wr_gray_r1_i9  (from CRYSTAL_c +)
+   Destination:    FF         Data in        u_snap_fifo/wr_gray_r2_i9  (to CRYSTAL_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_snap_fifo/SLICE_2250 to u_snap_fifo/SLICE_2256 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2250 to u_snap_fifo/SLICE_2256:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R33C64C.CLK to     R33C64C.Q1 u_snap_fifo/SLICE_2250 (from CRYSTAL_c)
+ROUTE         1     0.129     R33C64C.Q1 to     R33C64A.M1 u_snap_fifo/wr_gray_r1_9 (to CRYSTAL_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to u_snap_fifo/SLICE_2250:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R33C64C.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to u_snap_fifo/SLICE_2256:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R33C64A.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              qvga_frame_toggle_sync_i0  (from CRYSTAL_c +)
+   Destination:    FF         Data in        qvga_frame_toggle_sync_i1  (to CRYSTAL_c +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay SLICE_1927 to SLICE_1927 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path SLICE_1927 to SLICE_1927:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R42C42B.CLK to     R42C42B.Q0 SLICE_1927 (from CRYSTAL_c)
+ROUTE         1     0.129     R42C42B.Q0 to     R42C42B.M1 qvga_frame_toggle_sync_0 (to CRYSTAL_c)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CRYSTAL to SLICE_1927:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R42C42B.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CRYSTAL to SLICE_1927:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.736       M1.PADDI to    R42C42B.CLK CRYSTAL_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY PORT "PCLK" 48.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              qvga_tx_busy_sync_pclk_i1  (from PCLK_c +)
+   Destination:    FF         Data in        qvga_tx_busy_sync_pclk_i2  (to PCLK_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay SLICE_1958 to SLICE_1959 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path SLICE_1958 to SLICE_1959:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R45C49A.CLK to     R45C49A.Q1 SLICE_1958 (from PCLK_c)
+ROUTE         1     0.129     R45C49A.Q1 to     R45C49D.M0 qvga_tx_busy_sync_pclk_1 (to PCLK_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1958:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R45C49A.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1959:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R45C49D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/rd_gray_w1_i10  (from PCLK_c +)
+   Destination:    FF         Data in        u_snap_fifo/rd_gray_w2_i10  (to PCLK_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_snap_fifo/SLICE_2240 to u_snap_fifo/SLICE_2240 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2240 to u_snap_fifo/SLICE_2240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R33C60D.CLK to     R33C60D.Q1 u_snap_fifo/SLICE_2240 (from PCLK_c)
+ROUTE         1     0.129     R33C60D.Q1 to     R33C60D.M0 u_snap_fifo/rd_gray_w1_10 (to PCLK_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to u_snap_fifo/SLICE_2240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R33C60D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to u_snap_fifo/SLICE_2240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R33C60D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/rd_gray_w1_i7  (from PCLK_c +)
+   Destination:    FF         Data in        u_snap_fifo/rd_gray_w2_i7  (to PCLK_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_snap_fifo/SLICE_2232 to u_snap_fifo/SLICE_2238 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2232 to u_snap_fifo/SLICE_2238:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R40C61C.CLK to     R40C61C.Q1 u_snap_fifo/SLICE_2232 (from PCLK_c)
+ROUTE         1     0.129     R40C61C.Q1 to     R40C61D.M1 u_snap_fifo/rd_gray_w1_7 (to PCLK_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to u_snap_fifo/SLICE_2232:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R40C61C.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to u_snap_fifo/SLICE_2238:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R40C61D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/rd_gray_w1_i9  (from PCLK_c +)
+   Destination:    FF         Data in        u_snap_fifo/rd_gray_w2_i9  (to PCLK_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay u_snap_fifo/SLICE_2233 to u_snap_fifo/SLICE_2239 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2233 to u_snap_fifo/SLICE_2239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R41C61D.CLK to     R41C61D.Q1 u_snap_fifo/SLICE_2233 (from PCLK_c)
+ROUTE         1     0.129     R41C61D.Q1 to     R41C61A.M1 u_snap_fifo/rd_gray_w1_9 (to PCLK_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to u_snap_fifo/SLICE_2233:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R41C61D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to u_snap_fifo/SLICE_2239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R41C61A.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              box20_eval_mask_pclk__i16  (from PCLK_c +)
+   Destination:    FF         Data in        box20_mask_pclk_i0_i16  (to PCLK_c +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay SLICE_1229 to SLICE_1269 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path SLICE_1229 to SLICE_1269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R22C24C.CLK to     R22C24C.Q0 SLICE_1229 (from PCLK_c)
+ROUTE         1     0.129     R22C24C.Q0 to     R22C24D.M0 box20_eval_mask_pclk_16 (to PCLK_c)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1229:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R22C24C.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1269:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R22C24D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              qvga_tx_busy_sync_pclk_i0  (from PCLK_c +)
+   Destination:    FF         Data in        qvga_tx_busy_sync_pclk_i1  (to PCLK_c +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay SLICE_1958 to SLICE_1958 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path SLICE_1958 to SLICE_1958:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R45C49A.CLK to     R45C49A.Q0 SLICE_1958 (from PCLK_c)
+ROUTE         1     0.129     R45C49A.Q0 to     R45C49A.M1 qvga_tx_busy_sync_pclk_0 (to PCLK_c)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_1958:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R45C49A.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_1958:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R45C49A.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              snap_req_sync_pclk_i0  (from PCLK_c +)
+   Destination:    FF         Data in        snap_req_sync_pclk_i1  (to PCLK_c +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay SLICE_2031 to SLICE_2031 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path SLICE_2031 to SLICE_2031:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R39C54B.CLK to     R39C54B.Q0 SLICE_2031 (from PCLK_c)
+ROUTE         1     0.129     R39C54B.Q0 to     R39C54B.M1 snap_req_sync_pclk_0 (to PCLK_c)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to SLICE_2031:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R39C54B.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to SLICE_2031:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R39C54B.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/rd_gray_w1_i8  (from PCLK_c +)
+   Destination:    FF         Data in        u_snap_fifo/rd_gray_w2_i8  (to PCLK_c +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay u_snap_fifo/SLICE_2233 to u_snap_fifo/SLICE_2239 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2233 to u_snap_fifo/SLICE_2239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R41C61D.CLK to     R41C61D.Q0 u_snap_fifo/SLICE_2233 (from PCLK_c)
+ROUTE         1     0.129     R41C61D.Q0 to     R41C61A.M0 u_snap_fifo/rd_gray_w1_8 (to PCLK_c)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to u_snap_fifo/SLICE_2233:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R41C61D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to u_snap_fifo/SLICE_2239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R41C61A.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/rd_gray_w1_i6  (from PCLK_c +)
+   Destination:    FF         Data in        u_snap_fifo/rd_gray_w2_i6  (to PCLK_c +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay u_snap_fifo/SLICE_2232 to u_snap_fifo/SLICE_2238 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2232 to u_snap_fifo/SLICE_2238:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R40C61C.CLK to     R40C61C.Q0 u_snap_fifo/SLICE_2232 (from PCLK_c)
+ROUTE         1     0.129     R40C61C.Q0 to     R40C61D.M0 u_snap_fifo/rd_gray_w1_6 (to PCLK_c)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to u_snap_fifo/SLICE_2232:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R40C61C.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to u_snap_fifo/SLICE_2238:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R40C61D.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u_snap_fifo/rd_gray_w1_i0  (from PCLK_c +)
+   Destination:    FF         Data in        u_snap_fifo/rd_gray_w2_i0  (to PCLK_c +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay u_snap_fifo/SLICE_2229 to u_snap_fifo/SLICE_2235 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path u_snap_fifo/SLICE_2229 to u_snap_fifo/SLICE_2235:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R33C61A.CLK to     R33C61A.Q0 u_snap_fifo/SLICE_2229 (from PCLK_c)
+ROUTE         1     0.129     R33C61A.Q0 to     R33C61B.M0 u_snap_fifo/rd_gray_w1_0 (to PCLK_c)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCLK to u_snap_fifo/SLICE_2229:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R33C61A.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCLK to u_snap_fifo/SLICE_2235:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.736       C8.PADDI to    R33C61B.CLK PCLK_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "CRYSTAL" 24.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "CRYSTAL_c" 24.000000 MHz |             |             |
+;                                       |     0.000 ns|     0.174 ns|   1  
+                                        |             |             |
+FREQUENCY PORT "PCLK" 48.000000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "PCLK_c" 48.000000 MHz ;  |     0.000 ns|     0.174 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: PCLK_c   Source: PCLK.PAD   Loads: 1650
+   Covered under: FREQUENCY NET "PCLK_c" 48.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: CRYSTAL_c   Source: CRYSTAL.PAD   Loads: 428
+   Covered under: FREQUENCY NET "CRYSTAL_c" 24.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PCLK_c   Source: PCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2147483647 paths, 2 nets, and 46039 connections (99.60% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

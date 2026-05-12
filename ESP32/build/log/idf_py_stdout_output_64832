@@ -1,0 +1,96 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\kunsh\Desktop\AiCamera\ESP32\build\bootloader\esp-idf\esptool_py && C:\Users\kunsh\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/kunsh/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/kunsh/Desktop/AiCamera/ESP32/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Users/kunsh/Desktop/AiCamera/ESP32/main/main.c:1771:13: warning: 'capture_task' defined but not used [-Wunused-function]
+ 1771 | static void capture_task(void *arg) {
+      |             ^~~~~~~~~~~~
+C:/Users/kunsh/Desktop/AiCamera/ESP32/main/main.c:1626:13: warning: 'strobe_irq_init_task' defined but not used [-Wunused-function]
+ 1626 | static void strobe_irq_init_task(void *arg) {
+      |             ^~~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable aicamera_esp32_bridge.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/kunsh/Desktop/AiCamera/ESP32/build/aicamera_esp32_bridge.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\kunsh\Desktop\AiCamera\ESP32\build\esp-idf\esptool_py && C:\Users\kunsh\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/kunsh/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/kunsh/Desktop/AiCamera/ESP32/build/partition_table/partition-table.bin C:/Users/kunsh/Desktop/AiCamera/ESP32/build/aicamera_esp32_bridge.bin"
+aicamera_esp32_bridge.bin binary size 0xe2e30 bytes. Smallest app partition is 0x100000 bytes. 0x1d1d0 bytes (11%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\kunsh\esp\v5.5.1\esp-idf\components\esptool_py && C:\Users\kunsh\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/kunsh/esp/v5.5.1/esp-idf -D SERIAL_TOOL=C:/Users/kunsh/.espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Users/kunsh/esp/v5.5.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/kunsh/Desktop/AiCamera/ESP32/build -P C:/Users/kunsh/esp/v5.5.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 aicamera_esp32_bridge.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev1
+Serial port COM3
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 20:6e:f1:cb:d0:58
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000f2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21056 bytes to 13389...
+Writing at 0x00000000... (100 %)
+Wrote 21056 bytes (13389 compressed) at 0x00000000 in 0.2 seconds (effective 684.8 kbit/s)...
+Hash of data verified.
+Compressed 929328 bytes to 608562...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c8b1... (5 %)
+Writing at 0x000288b2... (7 %)
+Writing at 0x00031952... (10 %)
+Writing at 0x0003a9d1... (13 %)
+Writing at 0x00040516... (15 %)
+Writing at 0x00046336... (18 %)
+Writing at 0x0004bc80... (21 %)
+Writing at 0x000519de... (23 %)
+Writing at 0x00057253... (26 %)
+Writing at 0x0005c7f2... (28 %)
+Writing at 0x0006193d... (31 %)
+Writing at 0x00066d16... (34 %)
+Writing at 0x0006be50... (36 %)
+Writing at 0x0007127f... (39 %)
+Writing at 0x000763f4... (42 %)
+Writing at 0x0007b9ed... (44 %)
+Writing at 0x000811b1... (47 %)
+Writing at 0x00086658... (50 %)
+Writing at 0x0008b669... (52 %)
+Writing at 0x00090845... (55 %)
+Writing at 0x00095dfe... (57 %)
+Writing at 0x0009b71a... (60 %)
+Writing at 0x000a0b6e... (63 %)
+Writing at 0x000a5f45... (65 %)
+Writing at 0x000ab586... (68 %)
+Writing at 0x000b0fe9... (71 %)
+Writing at 0x000b621f... (73 %)
+Writing at 0x000bb598... (76 %)
+Writing at 0x000c0657... (78 %)
+Writing at 0x000c5adc... (81 %)
+Writing at 0x000cb413... (84 %)
+Writing at 0x000d0c4c... (86 %)
+Writing at 0x000db69b... (89 %)
+Writing at 0x000e0f72... (92 %)
+Writing at 0x000e6b7b... (94 %)
+Writing at 0x000ec7dd... (97 %)
+Writing at 0x000f1b7c... (100 %)
+Wrote 929328 bytes (608562 compressed) at 0x00010000 in 5.1 seconds (effective 1467.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 828.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,0 +1,74 @@
+
+Lattice Place and Route Report for Design "record_impl1_map.ncd"
+Mon May 11 12:24:26 2026
+
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 record_impl1_map.ncd record_impl1.dir/5_1.ncd record_impl1.prf
+Preference file: record_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file record_impl1_map.ncd.
+Design name: fpga_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5UM-25F
+Package:     CABGA381
+Performance: 6
+Loading device for application par from file 'sa5p25m.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      71/197          36% used
+                     71/197          36% bonded
+
+   SLICE           5218/12144        42% used
+
+   EBR               34/56           60% used
+
+
+ERROR - par: ChipCheck: comp Y9 and M_CLK have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp PCLK and M_CLK have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp HREF and M_CLK have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp VSYNC and M_CLK have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp M_CLK and cam_sda have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp M_D2 and cam_sda have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp SD_A[8] and cam_sda have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp SD_A[9] and cam_sda have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp SD_A[11] and cam_sda have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp Y3 and SD_DQM[1] have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp Y4 and SD_DQM[1] have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp Y6 and SD_DQM[1] have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp Y7 and SD_DQM[1] have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp Y8 and SD_DQM[1] have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp SD_DQM[1] and MCLK have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp SD_DQ[8] and MCLK have incompatible VCC requirements.
+ERROR - par: ChipCheck: comp SD_DQ[9] and MCLK have incompatible VCC requirements.
+PAR will exit now due to DRC error(s) detected.
+
+
+PAR_SUMMARY::Run status = Failed
+PAR_SUMMARY::Number of unrouted conns = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 17
+
+Total CPU  time to completion: 1 secs 
+Total REAL time to completion: 2 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.

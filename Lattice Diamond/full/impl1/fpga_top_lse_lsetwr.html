@@ -1,0 +1,550 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Mon Apr 13 19:46:49 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     fpga_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets PCLK_c]
+            214 items scored, 72 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 0.736ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_raw_cap/stride_count_p_4339__i0  (from PCLK_c +)
+   Destination:    FD1P3AX    SP             \u_raw_cap/active_frame_id_p_i0_i0  (to PCLK_c +)
+
+   Delay:                   5.815ns  (14.8% logic, 85.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.815ns data_path \u_raw_cap/stride_count_p_4339__i0 to \u_raw_cap/active_frame_id_p_i0_i0 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.736ns
+
+ Path Details: \u_raw_cap/stride_count_p_4339__i0 to \u_raw_cap/active_frame_id_p_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_raw_cap/stride_count_p_4339__i0 (from PCLK_c)
+Route         2   e 1.258                                  \u_raw_cap/stride_count_p[0]
+LUT4        ---     0.166              C to Z              \u_raw_cap/i1_4_lut
+Route         1   e 1.020                                  \u_raw_cap/n74083
+LUT4        ---     0.166              B to Z              \u_raw_cap/i35218_4_lut
+Route         2   e 1.158                                  \u_raw_cap/capture_this_frame_p_N_2024
+LUT4        ---     0.166              C to Z              \u_raw_cap/i23785_2_lut_3_lut
+Route        12   e 1.516                                  \u_raw_cap/PCLK_c_enable_18
+                  --------
+                    5.815  (14.8% logic, 85.2% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 0.736ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_raw_cap/stride_count_p_4339__i0  (from PCLK_c +)
+   Destination:    FD1P3AX    SP             \u_raw_cap/active_frame_id_p_i0_i3  (to PCLK_c +)
+
+   Delay:                   5.815ns  (14.8% logic, 85.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.815ns data_path \u_raw_cap/stride_count_p_4339__i0 to \u_raw_cap/active_frame_id_p_i0_i3 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.736ns
+
+ Path Details: \u_raw_cap/stride_count_p_4339__i0 to \u_raw_cap/active_frame_id_p_i0_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_raw_cap/stride_count_p_4339__i0 (from PCLK_c)
+Route         2   e 1.258                                  \u_raw_cap/stride_count_p[0]
+LUT4        ---     0.166              C to Z              \u_raw_cap/i1_4_lut
+Route         1   e 1.020                                  \u_raw_cap/n74083
+LUT4        ---     0.166              B to Z              \u_raw_cap/i35218_4_lut
+Route         2   e 1.158                                  \u_raw_cap/capture_this_frame_p_N_2024
+LUT4        ---     0.166              C to Z              \u_raw_cap/i23785_2_lut_3_lut
+Route        12   e 1.516                                  \u_raw_cap/PCLK_c_enable_18
+                  --------
+                    5.815  (14.8% logic, 85.2% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 0.736ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_raw_cap/stride_count_p_4339__i0  (from PCLK_c +)
+   Destination:    FD1P3AX    SP             \u_raw_cap/active_frame_id_p_i0_i2  (to PCLK_c +)
+
+   Delay:                   5.815ns  (14.8% logic, 85.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.815ns data_path \u_raw_cap/stride_count_p_4339__i0 to \u_raw_cap/active_frame_id_p_i0_i2 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.736ns
+
+ Path Details: \u_raw_cap/stride_count_p_4339__i0 to \u_raw_cap/active_frame_id_p_i0_i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_raw_cap/stride_count_p_4339__i0 (from PCLK_c)
+Route         2   e 1.258                                  \u_raw_cap/stride_count_p[0]
+LUT4        ---     0.166              C to Z              \u_raw_cap/i1_4_lut
+Route         1   e 1.020                                  \u_raw_cap/n74083
+LUT4        ---     0.166              B to Z              \u_raw_cap/i35218_4_lut
+Route         2   e 1.158                                  \u_raw_cap/capture_this_frame_p_N_2024
+LUT4        ---     0.166              C to Z              \u_raw_cap/i23785_2_lut_3_lut
+Route        12   e 1.516                                  \u_raw_cap/PCLK_c_enable_18
+                  --------
+                    5.815  (14.8% logic, 85.2% route), 4 logic levels.
+
+Warning: 5.736 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets SD_CLK_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 9.416ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
+   Destination:    FD1P3AX    D              \u_cam_cfg/st_i0_i0  (to SD_CLK_c +)
+
+   Delay:                  14.591ns  (18.4% logic, 81.6% route), 16 logic levels.
+
+ Constraint Details:
+
+     14.591ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 9.416ns
+
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
+Route        40   e 1.857                                  st[2]
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_rep_449
+Route        11   e 1.499                                  n76441
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_12632_add_4_3
+Route         1   e 0.020                                  n69836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_5
+Route         1   e 0.020                                  n69837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_7
+Route         1   e 0.020                                  n69838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_9
+Route         1   e 0.020                                  n69839
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_12632_add_4_11
+Route        45   e 1.881                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i34781_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n74361
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/u_rom/i34783
+Route         2   e 1.158                                  \u_cam_cfg/rom_entry[8]
+LUT4        ---     0.166              D to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_948
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n73365
+LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_945
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n73367
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_950
+Route         4   e 1.297                                  \u_cam_cfg/n18
+LUT4        ---     0.166              A to Z              \u_cam_cfg/n18_bdd_3_lut_35309
+Route         1   e 0.020                                  \u_cam_cfg/n75070
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i35304
+Route         1   e 1.020                                  \u_cam_cfg/n75071
+LUT4        ---     0.166              C to Z              \u_cam_cfg/n75071_bdd_3_lut_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/n75072
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i35306
+Route         1   e 1.020                                  \u_cam_cfg/n75073
+                  --------
+                   14.591  (18.4% logic, 81.6% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 9.416ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
+   Destination:    FD1P3AX    D              \u_cam_cfg/st_i0_i0  (to SD_CLK_c +)
+
+   Delay:                  14.591ns  (18.4% logic, 81.6% route), 16 logic levels.
+
+ Constraint Details:
+
+     14.591ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 9.416ns
+
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
+Route        40   e 1.857                                  st[2]
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_rep_449
+Route        11   e 1.499                                  n76441
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_12632_add_4_3
+Route         1   e 0.020                                  n69836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_5
+Route         1   e 0.020                                  n69837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_7
+Route         1   e 0.020                                  n69838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_9
+Route         1   e 0.020                                  n69839
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_12632_add_4_11
+Route        45   e 1.881                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i34778_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n74358
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/u_rom/i34780
+Route         2   e 1.158                                  \u_cam_cfg/rom_entry[9]
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_948
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n73365
+LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_945
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n73367
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_950
+Route         4   e 1.297                                  \u_cam_cfg/n18
+LUT4        ---     0.166              A to Z              \u_cam_cfg/n18_bdd_3_lut_35309
+Route         1   e 0.020                                  \u_cam_cfg/n75070
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i35304
+Route         1   e 1.020                                  \u_cam_cfg/n75071
+LUT4        ---     0.166              C to Z              \u_cam_cfg/n75071_bdd_3_lut_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/n75072
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i35306
+Route         1   e 1.020                                  \u_cam_cfg/n75073
+                  --------
+                   14.591  (18.4% logic, 81.6% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 9.416ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_cam_cfg/st_i0_i2  (from SD_CLK_c +)
+   Destination:    FD1P3AX    D              \u_cam_cfg/st_i0_i0  (to SD_CLK_c +)
+
+   Delay:                  14.591ns  (18.4% logic, 81.6% route), 16 logic levels.
+
+ Constraint Details:
+
+     14.591ns data_path \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 9.416ns
+
+ Path Details: \u_cam_cfg/st_i0_i2 to \u_cam_cfg/st_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_cam_cfg/st_i0_i2 (from SD_CLK_c)
+Route        40   e 1.857                                  st[2]
+LUT4        ---     0.166              A to Z              \u_cam_cfg/i1_2_lut_rep_449
+Route        11   e 1.499                                  n76441
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_12632_add_4_3
+Route         1   e 0.020                                  n69836
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_5
+Route         1   e 0.020                                  n69837
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_7
+Route         1   e 0.020                                  n69838
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_12632_add_4_9
+Route         1   e 0.020                                  n69839
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_12632_add_4_11
+Route        45   e 1.881                                  n309
+LUT4        ---     0.166              C to Z              \u_cam_cfg/u_rom/i34752_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/u_rom/n74332
+MUXL5       ---     0.116           ALUT to Z              \u_cam_cfg/u_rom/i34753
+Route         2   e 1.158                                  \u_cam_cfg/rom_entry[20]
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_948
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n73365
+LUT4        ---     0.166              A to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_945
+Route         1   e 1.020                                  \u_cam_cfg/u_rom/n73367
+LUT4        ---     0.166              B to Z              \u_cam_cfg/u_rom/i1_4_lut_adj_950
+Route         4   e 1.297                                  \u_cam_cfg/n18
+LUT4        ---     0.166              A to Z              \u_cam_cfg/n18_bdd_3_lut_35309
+Route         1   e 0.020                                  \u_cam_cfg/n75070
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i35304
+Route         1   e 1.020                                  \u_cam_cfg/n75071
+LUT4        ---     0.166              C to Z              \u_cam_cfg/n75071_bdd_3_lut_3_lut
+Route         1   e 0.020                                  \u_cam_cfg/n75072
+MUXL5       ---     0.116           BLUT to Z              \u_cam_cfg/i35306
+Route         1   e 1.020                                  \u_cam_cfg/n75073
+                  --------
+                   14.591  (18.4% logic, 81.6% route), 16 logic levels.
+
+Warning: 14.416 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets MCLK_c]
+            2045 items scored, 1631 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.763ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_dbg_status/msg_idx_4355__i0  (from MCLK_c +)
+   Destination:    FD1P3JX    D              \u_dbg_status/start_data__i5  (to MCLK_c +)
+
+   Delay:                   8.938ns  (14.7% logic, 85.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      8.938ns data_path \u_dbg_status/msg_idx_4355__i0 to \u_dbg_status/start_data__i5 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.763ns
+
+ Path Details: \u_dbg_status/msg_idx_4355__i0 to \u_dbg_status/start_data__i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dbg_status/msg_idx_4355__i0 (from MCLK_c)
+Route        26   e 1.771                                  \u_dbg_status/msg_idx[0]
+LUT4        ---     0.166              C to Z              \u_dbg_status/i1_3_lut_rep_484
+Route         5   e 1.341                                  \u_dbg_status/n76476
+LUT4        ---     0.166              C to Z              \u_dbg_status/i1_2_lut_3_lut_4_lut_adj_980
+Route         4   e 1.297                                  \u_dbg_status/n72377
+LUT4        ---     0.166              D to Z              \u_dbg_status/n9_bdd_4_lut_35429
+Route         1   e 0.020                                  \u_dbg_status/n75273
+MUXL5       ---     0.116           ALUT to Z              \u_dbg_status/i35430
+Route         1   e 1.020                                  \u_dbg_status/n75275
+LUT4        ---     0.166              A to Z              \u_dbg_status/i1_4_lut_adj_999
+Route         2   e 1.158                                  \u_dbg_status/n66563
+LUT4        ---     0.166              B to Z              \u_dbg_status/i35126_3_lut
+Route         1   e 1.020                                  \u_dbg_status/n72463
+                  --------
+                    8.938  (14.7% logic, 85.3% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 3.763ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_dbg_status/msg_idx_4355__i0  (from MCLK_c +)
+   Destination:    FD1P3JX    D              \u_dbg_status/start_data__i5  (to MCLK_c +)
+
+   Delay:                   8.938ns  (14.7% logic, 85.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      8.938ns data_path \u_dbg_status/msg_idx_4355__i0 to \u_dbg_status/start_data__i5 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.763ns
+
+ Path Details: \u_dbg_status/msg_idx_4355__i0 to \u_dbg_status/start_data__i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dbg_status/msg_idx_4355__i0 (from MCLK_c)
+Route        26   e 1.771                                  \u_dbg_status/msg_idx[0]
+LUT4        ---     0.166              C to Z              \u_dbg_status/i1_3_lut_rep_484
+Route         5   e 1.341                                  \u_dbg_status/n76476
+LUT4        ---     0.166              C to Z              \u_dbg_status/i1_2_lut_3_lut_4_lut_adj_980
+Route         4   e 1.297                                  \u_dbg_status/n72377
+LUT4        ---     0.166              D to Z              \u_dbg_status/n9_bdd_4_lut
+Route         1   e 0.020                                  \u_dbg_status/n75274
+MUXL5       ---     0.116           BLUT to Z              \u_dbg_status/i35430
+Route         1   e 1.020                                  \u_dbg_status/n75275
+LUT4        ---     0.166              A to Z              \u_dbg_status/i1_4_lut_adj_999
+Route         2   e 1.158                                  \u_dbg_status/n66563
+LUT4        ---     0.166              B to Z              \u_dbg_status/i35126_3_lut
+Route         1   e 1.020                                  \u_dbg_status/n72463
+                  --------
+                    8.938  (14.7% logic, 85.3% route), 7 logic levels.
+
+
+Error:  The following path violates requirements by 3.763ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \u_dbg_status/msg_idx_4355__i0  (from MCLK_c +)
+   Destination:    FD1P3IX    D              \u_dbg_status/start_data__i6  (to MCLK_c +)
+
+   Delay:                   8.938ns  (14.7% logic, 85.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      8.938ns data_path \u_dbg_status/msg_idx_4355__i0 to \u_dbg_status/start_data__i6 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.763ns
+
+ Path Details: \u_dbg_status/msg_idx_4355__i0 to \u_dbg_status/start_data__i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \u_dbg_status/msg_idx_4355__i0 (from MCLK_c)
+Route        26   e 1.771                                  \u_dbg_status/msg_idx[0]
+LUT4        ---     0.166              C to Z              \u_dbg_status/i1_3_lut_rep_484
+Route         5   e 1.341                                  \u_dbg_status/n76476
+LUT4        ---     0.166              C to Z              \u_dbg_status/i1_2_lut_3_lut_4_lut_adj_980
+Route         4   e 1.297                                  \u_dbg_status/n72377
+LUT4        ---     0.166              D to Z              \u_dbg_status/n9_bdd_4_lut_35429
+Route         1   e 0.020                                  \u_dbg_status/n75273
+MUXL5       ---     0.116           ALUT to Z              \u_dbg_status/i35430
+Route         1   e 1.020                                  \u_dbg_status/n75275
+LUT4        ---     0.166              A to Z              \u_dbg_status/i1_4_lut_adj_999
+Route         2   e 1.158                                  \u_dbg_status/n66563
+LUT4        ---     0.166              B to Z              \u_dbg_status/i35189_4_lut
+Route         1   e 1.020                                  \u_dbg_status/n72735
+                  --------
+                    8.938  (14.7% logic, 85.3% route), 7 logic levels.
+
+Warning: 8.763 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets PCLK_c]                  |     5.000 ns|     5.736 ns|     4 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets SD_CLK_c]                |     5.000 ns|    14.416 ns|    16 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets MCLK_c]                  |     5.000 ns|     8.763 ns|     7 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\u_cam_cfg/n18                          |       4|    4096|     70.63%
+                                        |        |        |
+n69839                                  |       1|    4000|     68.98%
+                                        |        |        |
+n69838                                  |       1|    3808|     65.67%
+                                        |        |        |
+n76441                                  |      11|    3780|     65.18%
+                                        |        |        |
+n309                                    |      45|    3748|     64.63%
+                                        |        |        |
+\u_cam_cfg/SD_CLK_c_enable_244          |      23|    2916|     50.28%
+                                        |        |        |
+n69837                                  |       1|    2908|     50.15%
+                                        |        |        |
+\u_cam_cfg/u_rom/n73365                 |       1|    2796|     48.22%
+                                        |        |        |
+\u_cam_cfg/u_rom/n73367                 |       1|    2796|     48.22%
+                                        |        |        |
+st[2]                                   |      40|    1992|     34.35%
+                                        |        |        |
+n69836                                  |       1|    1980|     34.14%
+                                        |        |        |
+\u_cam_cfg/st[1]                        |      38|    1964|     33.87%
+                                        |        |        |
+\u_cam_cfg/u_rom/n72676                 |       1|    1300|     22.42%
+                                        |        |        |
+\u_cam_cfg/u_rom/n73341                 |       1|    1300|     22.42%
+                                        |        |        |
+\u_cam_cfg/rom_entry[8]                 |       2|     706|     12.17%
+                                        |        |        |
+\u_cam_cfg/rom_entry[20]                |       2|     706|     12.17%
+                                        |        |        |
+\u_cam_cfg/rom_entry[17]                |       2|     700|     12.07%
+                                        |        |        |
+\u_cam_cfg/rom_entry[9]                 |       2|     684|     11.80%
+                                        |        |        |
+\u_cam_cfg/n75070                       |       1|     616|     10.62%
+                                        |        |        |
+\u_cam_cfg/n75071                       |       1|     616|     10.62%
+                                        |        |        |
+\u_cam_cfg/n75072                       |       1|     616|     10.62%
+                                        |        |        |
+\u_cam_cfg/n75073                       |       1|     616|     10.62%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 5799  Score: 37702150
+
+Constraints cover  126688 paths, 2306 nets, and 5975 connections (90.8% coverage)
+
+
+Peak memory: 311472128 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,534 @@
+
+     Lattice Mapping Report File for Design Module 'sdram_pin_static_top'
+
+
+Design Information
+------------------
+
+Command line:   C:\lscc\diamond\3.14\ispfpga\bin\nt64\map.exe
+     sdram_pin_static.ngd ..\sdramtest.lpf -o sdram_pin_static_map.ncd -pr
+     sdram_pin_static.prf -p LFE5U-25F -t CABGA256 -s 6 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-25FCABGA256
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  04/22/26  12:57:25
+
+Design Summary
+--------------
+
+   Number of registers:      0 out of 24879 (0%)
+      PFU registers:            0 out of 24288 (0%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:         0 out of 12144 (0%)
+      SLICEs as Logic/ROM:      0 out of 12144 (0%)
+      SLICEs as RAM:            0 out of  9108 (0%)
+      SLICEs as Carry:          0 out of 12144 (0%)
+   Number of LUT4s:          0 out of 24288 (0%)
+      Number used as logic LUTs:          0
+      Number used as distributed RAM:     0
+      Number used as ripple logic:        0
+      Number used as shift registers:     0
+   Number of PIO sites used: 48 out of 197 (24%)
+   Number of block RAMs:  0 out of 56 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+
+                                    Page 1
+
+
+
+
+Design:  sdram_pin_static_top                          Date:  04/22/26  12:57:25
+
+Design Summary (cont)
+---------------------
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  0
+   Number of Clock Enables:  0
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+
+
+
+
+   Number of warnings:  62
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: ../sdramtest.lpf(6): Semantic error in "FREQUENCY PORT "CRYSTAL"
+     24.000000 MHz ;": "CRYSTAL" matches no ports in the design.  This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(7): Semantic error in "FREQUENCY NET "CRYSTAL_c"
+     24.000000 MHz ;": CRYSTAL_c matches no clock nets in the design.  This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(31): Semantic error in "FREQUENCY PORT "PCLK"
+     48.000000 MHz ;": "PCLK" matches no ports in the design.  This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(32): Semantic error in "FREQUENCY NET "PCLK_c"
+     48.000000 MHz ;": PCLK_c matches no clock nets in the design.  This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(5): Semantic error in "IOBUF PORT "CRYSTAL"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "CRYSTAL" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(11): Semantic error in "LOCATE COMP "VSYNC" SITE
+     "B10" ;": COMP "VSYNC" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(11): Semantic error in "IOBUF PORT "VSYNC"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "VSYNC" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(12): Semantic error in "LOCATE COMP "HREF" SITE
+     "A11" ;": COMP "HREF" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(12): Semantic error in "IOBUF PORT "HREF"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "HREF" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(13): Semantic error in "LOCATE COMP "Y9" SITE
+     "B11" ;": COMP "Y9" cannot be found in design. This preference has been
+     disabled.
+
+                                    Page 2
+
+
+
+
+Design:  sdram_pin_static_top                          Date:  04/22/26  12:57:25
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: ../sdramtest.lpf(13): Semantic error in "IOBUF PORT "Y9"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y9" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(14): Semantic error in "LOCATE COMP "Y8" SITE
+     "B12" ;": COMP "Y8" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(14): Semantic error in "IOBUF PORT "Y8"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y8" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(15): Semantic error in "LOCATE COMP "Y7" SITE
+     "A13" ;": COMP "Y7" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(15): Semantic error in "IOBUF PORT "Y7"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y7" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(16): Semantic error in "LOCATE COMP "Y6" SITE
+     "A14" ;": COMP "Y6" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(16): Semantic error in "IOBUF PORT "Y6"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y6" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(17): Semantic error in "LOCATE COMP "Y5" SITE
+     "A15" ;": COMP "Y5" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(17): Semantic error in "IOBUF PORT "Y5"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y5" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(18): Semantic error in "LOCATE COMP "Y4" SITE
+     "C13" ;": COMP "Y4" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(18): Semantic error in "IOBUF PORT "Y4"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y4" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(19): Semantic error in "LOCATE COMP "Y3" SITE
+     "C12" ;": COMP "Y3" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(19): Semantic error in "IOBUF PORT "Y3"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y3" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(20): Semantic error in "LOCATE COMP "Y2" SITE
+     "B14" ;": COMP "Y2" cannot be found in design. This preference has been
+     disabled.
+
+                                    Page 3
+
+
+
+
+Design:  sdram_pin_static_top                          Date:  04/22/26  12:57:25
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: ../sdramtest.lpf(20): Semantic error in "IOBUF PORT "Y2"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "Y2" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(22): Semantic error in "LOCATE COMP "MCLK" SITE
+     "A12" ;": COMP "MCLK" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(22): Semantic error in "IOBUF PORT "MCLK"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "MCLK" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(24): Semantic error in "LOCATE COMP "cam_scl"
+     SITE "A10" ;": COMP "cam_scl" cannot be found in design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(25): Semantic error in "IOBUF PORT "cam_scl"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=4 SLEWRATE=SLOW ;": Port "cam_scl"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(27): Semantic error in "LOCATE COMP "cam_sda"
+     SITE "B9" ;": COMP "cam_sda" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: ../sdramtest.lpf(28): Semantic error in "IOBUF PORT "cam_sda"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=4 SLEWRATE=SLOW ;": Port "cam_sda"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(30): Semantic error in "LOCATE COMP "PCLK" SITE
+     "C8" ;": COMP "PCLK" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(30): Semantic error in "IOBUF PORT "PCLK"
+     IO_TYPE=LVCMOS18 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=1.8 HYSTERESIS=NA
+     TERMINATION=OFF ;": Port "PCLK" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(85): Semantic error in "LOCATE COMP "RX" SITE
+     "K1" ;": COMP "RX" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(85): Semantic error in "IOBUF PORT "RX"
+     IO_TYPE=LVCMOS33 PULLMODE=UP DRIVE=8 SLEWRATE=SLOW CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "RX" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: ../sdramtest.lpf(87): Semantic error in "LOCATE COMP "DIN" SITE
+     "T8" ;": COMP "DIN" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(87): Semantic error in "IOBUF PORT "DIN"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=OFF OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "DIN" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(89): Semantic error in "LOCATE COMP "CCLK" SITE
+     "N9" ;": COMP "CCLK" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(89): Semantic error in "IOBUF PORT "CCLK"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "CCLK" does not exist in the design. This
+
+                                    Page 4
+
+
+
+
+Design:  sdram_pin_static_top                          Date:  04/22/26  12:57:25
+
+Design Errors/Warnings (cont)
+-----------------------------
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(90): Semantic error in "IOBUF PORT "SSPI_CS_n"
+     IO_TYPE=LVCMOS33 PULLMODE=UP DRIVE=NA SLEWRATE=NA CLAMP=ON OPENDRAIN=OFF
+     DIFFRESISTOR=OFF DIFFDRIVE="NA" BANK_VCCIO=3.3 HYSTERESIS=ON
+     TERMINATION=OFF ;": Port "SSPI_CS_n" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: ../sdramtest.lpf(124): Semantic error in "LOCATE COMP "M_D1" SITE
+     "B1" ;": COMP "M_D1" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(125): Semantic error in "IOBUF PORT "M_D1"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D1" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(127): Semantic error in "LOCATE COMP "M_D0" SITE
+     "B2" ;": COMP "M_D0" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(128): Semantic error in "IOBUF PORT "M_D0"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D0" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(130): Semantic error in "LOCATE COMP "M_CMD"
+     SITE "B4" ;": COMP "M_CMD" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: ../sdramtest.lpf(131): Semantic error in "IOBUF PORT "M_CMD"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_CMD" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(133): Semantic error in "LOCATE COMP "M_D3" SITE
+     "B5" ;": COMP "M_D3" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(134): Semantic error in "IOBUF PORT "M_D3"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D3" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(136): Semantic error in "LOCATE COMP "M_D2" SITE
+     "B6" ;": COMP "M_D2" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: ../sdramtest.lpf(137): Semantic error in "IOBUF PORT "M_D2"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_D2" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: ../sdramtest.lpf(139): Semantic error in "LOCATE COMP "M_CLK"
+     SITE "C7" ;": COMP "M_CLK" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: ../sdramtest.lpf(140): Semantic error in "IOBUF PORT "M_CLK"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE DRIVE=8 SLEWRATE=SLOW ;": Port "M_CLK" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: DOUT_pad/IOBUF has conflicing BANK and VCCIO settings, which will
+     be ignored
+WARNING - map: OPENDRAIN=OFF for DOUT_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: SD_A_pad_10/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_10/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: SD_A_pad_0/IOBUF has conflicing BANK and VCCIO settings, which
+     will be ignored
+WARNING - map: OPENDRAIN=OFF for SD_A_pad_0/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: input pad net 'CRYSTAL' has no legal load.
+WARNING - map: input pad net 'SSPI_CS_n' has no legal load.
+
+                                    Page 5
+
+
+
+
+Design:  sdram_pin_static_top                          Date:  04/22/26  12:57:25
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: IO buffer missing for top level port CRYSTAL...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port SSPI_CS_n...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| TX                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DOUT                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ESP_D[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CLK              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CS_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_RAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_CAS_N            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_WE_N             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[12]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[11]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[10]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[9]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[8]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 6
+
+
+
+
+Design:  sdram_pin_static_top                          Date:  04/22/26  12:57:25
+
+IO (PIO) Attributes (cont)
+--------------------------
+| SD_A[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_A[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_BA[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[1]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQM[0]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[15]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[14]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[13]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[12]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[11]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[10]           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[9]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[8]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[7]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[6]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[5]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[4]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[3]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[2]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[1]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| SD_DQ[0]            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+
+
+                                    Page 7
+
+
+
+
+Design:  sdram_pin_static_top                          Date:  04/22/26  12:57:25
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Block i1 was optimized away.
+Block i2 was optimized away.
+
+     
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 54 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 8
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

@@ -1,0 +1,6 @@
+---------------------------------------------------
+Report for cell sdram_pin_static_top
+   Instance path: sdram_pin_static_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	         48        100.0

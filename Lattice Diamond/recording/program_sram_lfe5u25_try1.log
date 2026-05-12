@@ -1,0 +1,20 @@
+			Lattice Semiconductor Corporation.
+			Lattice Programmer Diamond (64-bit) 3.14.0.75.2 Command Line (Database V3.11.1)
+
+
+
+System Information:
+-----------------------------------------------------
+ Microsoft(R) Windows(R) 10.0  64-bit
+ 12th Gen Intel(R) Core(TM) i7-12700 2112MHz
+
+
+Failed to Query Cable from the Lattice Cable Server.
+Error communicating with FTUSB cable.
+JTAG_GetNumDevices function: 
+
+Failed to Open FTDI USB port. Make sure to select the right cable type.
+If you have not installed the FTDI Windows USB Driver, follow the instructions in the Programmer Help topic:
+"Installing/Uninstalling Parallel Port Driver and USB Driver".
+If you have installed the driver, if you recently plugged in the cable, please wait a few seconds and try again.
+This will give the operating system time to recognize the cable.

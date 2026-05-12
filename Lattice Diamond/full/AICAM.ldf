@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="AICAM" device="LFE5U-25F-6BG256C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="fpga_debug_uart_probe_tx" top="fpga_top"/>
+        <Source name="fpga_top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="fpga_top"/>
+        </Source>
+        <Source name="sd_spi_writer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="frame_packer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="sdram_ctrl_simple.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="saturn_core.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="ov5640_sccb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="reset_sync.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="PLL/PLL.sbx" type="sbx" type_short="SBX">
+            <Options/>
+        </Source>
+        <Source name="proposal_gen.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="cropper_128_to_64.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="cnn_scheduler.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="cnn_int8_core.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="track_count.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="candidate_bus.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="esp32_ctrl_spi.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="motion_block_frontend.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="uart_rx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="uart_tx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="raw_frame_capture.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="uart_loopback.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_control_regs.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_detection_packetizer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_uart_cmd_parser.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="esp32_ctrl_uart_min_bridge.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_ack_packetizer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_debug_heartbeat_uart.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_debug_uart_probe_tx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_debug_status_uart_v2.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="AICAM.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="timing.sdc" type="Synplify Design Constraints File" type_short="SDC">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="AICAM1.sty"/>
+</BaliProject>

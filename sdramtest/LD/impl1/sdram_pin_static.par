@@ -1,0 +1,143 @@
+
+Lattice Place and Route Report for Design "sdram_pin_static_map.ncd"
+Wed Apr 22 12:57:25 2026
+
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Command Line: par -w -l 5 -t 1 sdram_pin_static_map.ncd sdram_pin_static.ncd sdram_pin_static.prf
+Preference file: sdram_pin_static.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file sdram_pin_static_map.ncd.
+Design name: sdram_pin_static_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application par from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      48/197          24% used
+                     48/197          24% bonded
+
+   SLICE              0/12144         0% used
+
+
+
+Number of Signals: 0
+Number of Connections: 0
+
+Pin Constraint Summary:
+   48 out of 48 pins locked (100% locked).
+
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+
+Placer score = 0.
+Finished Placer Phase 1.  REAL time: 0 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  0
+Finished Placer Phase 2.  REAL time: 0 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 12 (0%)
+  GR_PCLK    : 0 out of 12 (0%)
+  PLL        : 0 out of 2 (0%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant TR Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant BL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant BR Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   48 out of 197 (24.4%) PIO sites used.
+   48 out of 197 (24.4%) bonded PIO sites used.
+   Number of PIO comps: 48; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 8 / 24 ( 33%)  | 3.3V       | -          | -          |
+| 1        | 0 / 32 (  0%)  | -          | -          | -          |
+| 2        | 12 / 32 ( 37%) | 3.3V       | -          | -          |
+| 3        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
+| 6        | 3 / 32 (  9%)  | 3.3V       | -          | -          |
+| 7        | 9 / 32 ( 28%)  | 3.3V       | -          | -          |
+| 8        | 3 / 13 ( 23%)  | 2.5V       | -          | -          |
++----------+----------------+------------+------------+------------+
+
+Total placer CPU time: 1 secs 
+
+Dumping design to file sdram_pin_static.ncd.
+
+INFO - par: The routing stage will be skipped since the design contains no signals and/or connections.
+Timing score: 0 
+
+Dumping design to file sdram_pin_static.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 1 secs 
+Total REAL time to completion: 0 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.

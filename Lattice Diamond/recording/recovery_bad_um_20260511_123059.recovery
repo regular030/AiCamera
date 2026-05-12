@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="record" device="LFE5UM-25F-6BG381C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="debug_uart_status" top="fpga_top"/>
+        <Source name="async_fifo_16x1024.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="bmp_sector_streamer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="cam_capture_rgb565.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="debug_uart_text.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_cmd_rx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="fpga_top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="fpga_top"/>
+        </Source>
+        <Source name="framebuffer_capture.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="ov5640_sccb_init.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="reset_sync.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="sd_spi_writer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="uart_rx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="uart_tx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="w9825_sdram_ctrl.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="debug_uart_min.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="debug_uart_status.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="record.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="record1.sty"/>
+</BaliProject>

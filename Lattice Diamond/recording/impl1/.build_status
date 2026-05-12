@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1778529297"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1778529297"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="1778529297"/>
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1778529297"/>
+            <Task name="Promgen" build_result="0" update_result="2" update_time="1778529297"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1778529317">
+            <Task name="Map" build_result="2" update_result="0" update_time="1778529317"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1778529319"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1778529324"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1778529327"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="1" build_time="1778529330">
+            <Task name="PAR" build_result="1" update_result="2" update_time="1778529330"/>
+            <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1778529314">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1778529314"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1778529330"/>
+        </Milestone>
+        <Report name=".vdbs/record_impl1_map.vdb" last_build_time="1778529317" last_build_size="686450"/>
+        <Report name="record_impl1.lsedata" last_build_time="1778529303" last_build_size="7241908"/>
+        <Report name="record_impl1.ncd" last_build_time="1778525361" last_build_size="8024100"/>
+        <Report name="record_impl1.ngd" last_build_time="1778529314" last_build_size="2235221"/>
+        <Report name="record_impl1.tw1" last_build_time="1778529319" last_build_size="17746"/>
+        <Report name="record_impl1_map.ncd" last_build_time="1778529316" last_build_size="2271272"/>
+        <Report name="record_impl1_mapvho.sdf" last_build_time="1778529327" last_build_size="2059158"/>
+        <Report name="record_impl1_mapvho.vho" last_build_time="1778529327" last_build_size="4150580"/>
+        <Report name="record_impl1_mapvo.sdf" last_build_time="1778529324" last_build_size="2048703"/>
+        <Report name="record_impl1_mapvo.vo" last_build_time="1778529323" last_build_size="1595088"/>
+    </Strategy>
+</BuildStatus>

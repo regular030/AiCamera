@@ -1,0 +1,47 @@
+Results of NGD DRC are available in fpga_top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'DIN' has no load.
+WARNING - synthesis: input pad net 'DIN' has no legal load.
+WARNING - synthesis: logical net 'CCLK' has no load.
+WARNING - synthesis: input pad net 'CCLK' has no legal load.
+WARNING - synthesis: logical net 'SSPI_CS_n' has no load.
+WARNING - synthesis: input pad net 'SSPI_CS_n' has no legal load.
+WARNING - synthesis: logical net 'SD_DQ_out_7' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_8' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_9' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_10' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_11' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_12' has no load.
+WARNING - synthesis: logical net 'Y2_c_0' has no load.
+WARNING - synthesis: logical net 'Y3_c_1' has no load.
+WARNING - synthesis: logical net 'Y4_c_2' has no load.
+WARNING - synthesis: logical net 'Y5_c_3' has no load.
+WARNING - synthesis: logical net 'Y6_c_4' has no load.
+WARNING - synthesis: logical net 'Y7_c_5' has no load.
+WARNING - synthesis: logical net 'Y8_c_6' has no load.
+WARNING - synthesis: logical net 'Y9_c_7' has no load.
+WARNING - synthesis: logical net 'HREF_c' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_0' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_1' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_2' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_3' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_4' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_5' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_6' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_13' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_14' has no load.
+WARNING - synthesis: logical net 'SD_DQ_out_15' has no load.
+WARNING - synthesis: DRC complete with 31 warnings.
+
+Design Results:
+   2099 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file AICAM_impl1.ngd.
