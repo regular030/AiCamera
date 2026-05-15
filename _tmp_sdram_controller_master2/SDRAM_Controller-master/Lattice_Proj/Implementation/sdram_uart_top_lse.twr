@@ -1,0 +1,355 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun May 26 19:32:17 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     sdram_uart_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets count[2]_derived_14]
+            419 items scored, 280 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.130ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \all_modules1/sdram_controller1/repeatTimer/count__i3  (from count[2]_derived_14 +)
+   Destination:    FD1P3IX    SP             \all_modules1/sdram_controller1/repeatTimer/count__i0  (to count[2]_derived_14 +)
+
+   Delay:                   5.894ns  (42.0% logic, 58.0% route), 8 logic levels.
+
+ Constraint Details:
+
+      5.894ns data_path \all_modules1/sdram_controller1/repeatTimer/count__i3 to \all_modules1/sdram_controller1/repeatTimer/count__i0 violates
+      5.000ns delay constraint less
+      0.236ns LCE_S requirement (totaling 4.764ns) by 1.130ns
+
+ Path Details: \all_modules1/sdram_controller1/repeatTimer/count__i3 to \all_modules1/sdram_controller1/repeatTimer/count__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \all_modules1/sdram_controller1/repeatTimer/count__i3 (from count[2]_derived_14)
+Route         2   e 0.838                                  \all_modules1/sdram_controller1/repeatTimer/count[3]
+A1_TO_FCO   ---     0.684           A[2] to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_2
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4212
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_4
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4213
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_6
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4214
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_8
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4215
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_10
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4216
+FCI_TO_F    ---     0.495            CIN to S[2]           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_12
+Route         5   e 1.221                                  \all_modules1/sdram_controller1/repeat_tim_flag
+LUT4        ---     0.408              B to Z              \all_modules1/sdram_controller1/delay_tim_flag_bdd_4_lut
+Route        14   e 1.261                                  \all_modules1/sdram_controller1/count[2]_derived_14_enable_14
+                  --------
+                    5.894  (42.0% logic, 58.0% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 1.130ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \all_modules1/sdram_controller1/repeatTimer/count__i3  (from count[2]_derived_14 +)
+   Destination:    FD1P3IX    SP             \all_modules1/sdram_controller1/repeatTimer/count__i1  (to count[2]_derived_14 +)
+
+   Delay:                   5.894ns  (42.0% logic, 58.0% route), 8 logic levels.
+
+ Constraint Details:
+
+      5.894ns data_path \all_modules1/sdram_controller1/repeatTimer/count__i3 to \all_modules1/sdram_controller1/repeatTimer/count__i1 violates
+      5.000ns delay constraint less
+      0.236ns LCE_S requirement (totaling 4.764ns) by 1.130ns
+
+ Path Details: \all_modules1/sdram_controller1/repeatTimer/count__i3 to \all_modules1/sdram_controller1/repeatTimer/count__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \all_modules1/sdram_controller1/repeatTimer/count__i3 (from count[2]_derived_14)
+Route         2   e 0.838                                  \all_modules1/sdram_controller1/repeatTimer/count[3]
+A1_TO_FCO   ---     0.684           A[2] to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_2
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4212
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_4
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4213
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_6
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4214
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_8
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4215
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_10
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4216
+FCI_TO_F    ---     0.495            CIN to S[2]           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_12
+Route         5   e 1.221                                  \all_modules1/sdram_controller1/repeat_tim_flag
+LUT4        ---     0.408              B to Z              \all_modules1/sdram_controller1/delay_tim_flag_bdd_4_lut
+Route        14   e 1.261                                  \all_modules1/sdram_controller1/count[2]_derived_14_enable_14
+                  --------
+                    5.894  (42.0% logic, 58.0% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 1.130ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \all_modules1/sdram_controller1/repeatTimer/count__i3  (from count[2]_derived_14 +)
+   Destination:    FD1P3IX    SP             \all_modules1/sdram_controller1/repeatTimer/count__i2  (to count[2]_derived_14 +)
+
+   Delay:                   5.894ns  (42.0% logic, 58.0% route), 8 logic levels.
+
+ Constraint Details:
+
+      5.894ns data_path \all_modules1/sdram_controller1/repeatTimer/count__i3 to \all_modules1/sdram_controller1/repeatTimer/count__i2 violates
+      5.000ns delay constraint less
+      0.236ns LCE_S requirement (totaling 4.764ns) by 1.130ns
+
+ Path Details: \all_modules1/sdram_controller1/repeatTimer/count__i3 to \all_modules1/sdram_controller1/repeatTimer/count__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \all_modules1/sdram_controller1/repeatTimer/count__i3 (from count[2]_derived_14)
+Route         2   e 0.838                                  \all_modules1/sdram_controller1/repeatTimer/count[3]
+A1_TO_FCO   ---     0.684           A[2] to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_2
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4212
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_4
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4213
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_6
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4214
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_8
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4215
+FCI_TO_FCO  ---     0.130            CIN to COUT           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_10
+Route         1   e 0.020                                  \all_modules1/sdram_controller1/repeatTimer/n4216
+FCI_TO_F    ---     0.495            CIN to S[2]           \all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_12
+Route         5   e 1.221                                  \all_modules1/sdram_controller1/repeat_tim_flag
+LUT4        ---     0.408              B to Z              \all_modules1/sdram_controller1/delay_tim_flag_bdd_4_lut
+Route        14   e 1.261                                  \all_modules1/sdram_controller1/count[2]_derived_14_enable_14
+                  --------
+                    5.894  (42.0% logic, 58.0% route), 8 logic levels.
+
+Warning: 6.130 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets SD_CLK_c]
+            383 items scored, 383 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 5.239ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \all_modules1/sdram_controller1/initTimer/count_769__i0  (from SD_CLK_c +)
+   Destination:    FD1S3AY    D              \all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:                  10.106ns  (35.9% logic, 64.1% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.106ns data_path \all_modules1/sdram_controller1/initTimer/count_769__i0 to \all_modules1/sdram_controller1/state_FSM_i1 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 5.239ns
+
+ Path Details: \all_modules1/sdram_controller1/initTimer/count_769__i0 to \all_modules1/sdram_controller1/state_FSM_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \all_modules1/sdram_controller1/initTimer/count_769__i0 (from SD_CLK_c)
+Route         2   e 0.838                                  \all_modules1/sdram_controller1/initTimer/count[0]
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/initTimer/i826_3_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n6
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/initTimer/i862_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n12
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i4_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n10
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i861_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n24
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i2_4_lut
+Route         3   e 0.879                                  \all_modules1/sdram_controller1/initTimer/n30
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/initTimer/i3664_3_lut_rep_49_4_lut
+Route         2   e 0.798                                  \all_modules1/sdram_controller1/n4836
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/i114_4_lut_3_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/n324
+LUT4        ---     0.408              D to Z              \all_modules1/sdram_controller1/i1_4_lut_adj_97
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/n4546
+                  --------
+                   10.106  (35.9% logic, 64.1% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 5.239ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \all_modules1/sdram_controller1/initTimer/count_769__i2  (from SD_CLK_c +)
+   Destination:    FD1S3AY    D              \all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:                  10.106ns  (35.9% logic, 64.1% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.106ns data_path \all_modules1/sdram_controller1/initTimer/count_769__i2 to \all_modules1/sdram_controller1/state_FSM_i1 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 5.239ns
+
+ Path Details: \all_modules1/sdram_controller1/initTimer/count_769__i2 to \all_modules1/sdram_controller1/state_FSM_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \all_modules1/sdram_controller1/initTimer/count_769__i2 (from SD_CLK_c)
+Route         2   e 0.838                                  \all_modules1/sdram_controller1/initTimer/count[2]
+LUT4        ---     0.408              B to Z              \all_modules1/sdram_controller1/initTimer/i826_3_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n6
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/initTimer/i862_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n12
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i4_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n10
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i861_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n24
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i2_4_lut
+Route         3   e 0.879                                  \all_modules1/sdram_controller1/initTimer/n30
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/initTimer/i3664_3_lut_rep_49_4_lut
+Route         2   e 0.798                                  \all_modules1/sdram_controller1/n4836
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/i114_4_lut_3_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/n324
+LUT4        ---     0.408              D to Z              \all_modules1/sdram_controller1/i1_4_lut_adj_97
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/n4546
+                  --------
+                   10.106  (35.9% logic, 64.1% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 5.239ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \all_modules1/sdram_controller1/initTimer/count_769__i1  (from SD_CLK_c +)
+   Destination:    FD1S3AY    D              \all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:                  10.106ns  (35.9% logic, 64.1% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.106ns data_path \all_modules1/sdram_controller1/initTimer/count_769__i1 to \all_modules1/sdram_controller1/state_FSM_i1 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 5.239ns
+
+ Path Details: \all_modules1/sdram_controller1/initTimer/count_769__i1 to \all_modules1/sdram_controller1/state_FSM_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \all_modules1/sdram_controller1/initTimer/count_769__i1 (from SD_CLK_c)
+Route         2   e 0.838                                  \all_modules1/sdram_controller1/initTimer/count[1]
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i826_3_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n6
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/initTimer/i862_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n12
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i4_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n10
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i861_4_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/initTimer/n24
+LUT4        ---     0.408              C to Z              \all_modules1/sdram_controller1/initTimer/i2_4_lut
+Route         3   e 0.879                                  \all_modules1/sdram_controller1/initTimer/n30
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/initTimer/i3664_3_lut_rep_49_4_lut
+Route         2   e 0.798                                  \all_modules1/sdram_controller1/n4836
+LUT4        ---     0.408              A to Z              \all_modules1/sdram_controller1/i114_4_lut_3_lut
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/n324
+LUT4        ---     0.408              D to Z              \all_modules1/sdram_controller1/i1_4_lut_adj_97
+Route         1   e 0.660                                  \all_modules1/sdram_controller1/n4546
+                  --------
+                   10.106  (35.9% logic, 64.1% route), 9 logic levels.
+
+Warning: 10.239 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets count[2]_derived_14]     |     5.000 ns|     6.130 ns|     8 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets SD_CLK_c]                |     5.000 ns|    10.239 ns|     9 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\all_modules1/sdram_controller1/repeatTi|        |        |
+mer/n4216                               |       1|     281|     42.38%
+                                        |        |        |
+\all_modules1/sdram_controller1/repeat_t|        |        |
+im_flag                                 |       5|     281|     42.38%
+                                        |        |        |
+\all_modules1/sdram_controller1/repeatTi|        |        |
+mer/n4215                               |       1|     225|     33.94%
+                                        |        |        |
+refresh_tim_flag                        |       3|     221|     33.33%
+                                        |        |        |
+\all_modules1/sdram_controller1/refreshT|        |        |
+imer/n9_adj_888                         |       1|     215|     32.43%
+                                        |        |        |
+\all_modules1/sdram_controller1/refreshT|        |        |
+imer/n5                                 |       1|     212|     31.98%
+                                        |        |        |
+SD_CLK_c_enable_117                     |      24|     192|     28.96%
+                                        |        |        |
+\all_modules1/sdram_controller1/repeatTi|        |        |
+mer/n4214                               |       1|     169|     25.49%
+                                        |        |        |
+\all_modules1/sdram_controller1/count[2]|        |        |
+_derived_14_enable_14                   |      14|     140|     21.12%
+                                        |        |        |
+\all_modules1/sdram_controller1/repeat_t|        |        |
+im_reset                                |      14|     140|     21.12%
+                                        |        |        |
+\all_modules1/sdram_controller1/refreshT|        |        |
+imer/n12_adj_892                        |       1|     132|     19.91%
+                                        |        |        |
+\all_modules1/sdram_controller1/initTime|        |        |
+r/n24                                   |       1|     123|     18.55%
+                                        |        |        |
+\all_modules1/sdram_controller1/initTime|        |        |
+r/n30                                   |       3|     123|     18.55%
+                                        |        |        |
+\all_modules1/sdram_controller1/initTime|        |        |
+r/n10                                   |       1|     120|     18.10%
+                                        |        |        |
+\all_modules1/sdram_controller1/initTime|        |        |
+r/n12                                   |       1|     114|     17.19%
+                                        |        |        |
+\all_modules1/sdram_controller1/repeatTi|        |        |
+mer/n4213                               |       1|     113|     17.04%
+                                        |        |        |
+\all_modules1/sdram_controller1/SD_CLK_c|        |        |
+_enable_68                              |      16|      99|     14.93%
+                                        |        |        |
+\all_modules1/sdram_controller1/refreshT|        |        |
+imer/n11_adj_891                        |       1|      78|     11.76%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 663  Score: 1340664
+
+Constraints cover  4229 paths, 618 nets, and 1535 connections (71.1% coverage)
+
+
+Peak memory: 71675904 bytes, TRCE: 1527808 bytes, DLYMAN: 163840 bytes
+CPU_TIME_REPORT: 0 secs 

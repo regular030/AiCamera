@@ -15,10 +15,15 @@ prj_src add -impl impl1 -format VERILOG -include "$root" \
     "$root/fpga_top.v" \
     "$root/framebuffer_capture.v" \
     "$root/ov5640_sccb_init.v" \
+    "$root/pll_24m_to_120m.v" \
     "$root/reset_sync.v" \
     "$root/sd_spi_writer.v" \
+    "$root/sdram_single_req_probe.v" \
+    "$root/sdram_stress_tester.v" \
     "$root/uart_rx.v" \
     "$root/uart_tx.v" \
+    "$root/w9825_direct_req_sdram_ctrl.v" \
+    "$root/w9825_ref_sdram_ctrl.v" \
     "$root/w9825_sdram_ctrl.v" \
     "$root/debug_uart_min.v" \
     "$root/debug_uart_status.v"

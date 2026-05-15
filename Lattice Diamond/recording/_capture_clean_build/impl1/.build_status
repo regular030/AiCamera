@@ -2,36 +2,36 @@
 <BuildStatus>
     <Strategy name="Strategy1">
         <Milestone name="Export" build_result="0" build_time="0">
-            <Task name="IBIS" build_result="0" update_result="2" update_time="1778546837"/>
-            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1778546837"/>
-            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="1778546837"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1778548627"/>
-            <Task name="Promgen" build_result="2" update_result="0" update_time="1778548632"/>
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1778785700"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1778785700"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="1778785700"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1778838876"/>
+            <Task name="Promgen" build_result="2" update_result="0" update_time="1778838877"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1778548475">
-            <Task name="Map" build_result="2" update_result="0" update_time="1778548475"/>
+        <Milestone name="Map" build_result="2" build_time="1778838767">
+            <Task name="Map" build_result="2" update_result="0" update_time="1778838767"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1778548610">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1778548610"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1778548619"/>
+        <Milestone name="PAR" build_result="2" build_time="1778838867">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1778838867"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1778838870"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1778548463">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1778548463"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1778548632"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1778838757">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1778838757"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1778838877"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0"/>
-        <Report name=".vdbs/capclean_impl1_map.vdb" last_build_time="1778548475" last_build_size="2239182"/>
-        <Report name="capclean_impl1.bgn" last_build_time="1778548627" last_build_size="4612"/>
-        <Report name="capclean_impl1.bit" last_build_time="1778548627" last_build_size="584992"/>
-        <Report name="capclean_impl1.lsedata" last_build_time="1778548418" last_build_size="18413612"/>
-        <Report name="capclean_impl1.mcs" last_build_time="1778548632" last_build_size="1645437"/>
-        <Report name="capclean_impl1.ncd" last_build_time="1778548610" last_build_size="10544812"/>
-        <Report name="capclean_impl1.ngd" last_build_time="1778548463" last_build_size="7699848"/>
-        <Report name="capclean_impl1.twr" last_build_time="1778548619" last_build_size="124608"/>
-        <Report name="capclean_impl1_map.ncd" last_build_time="1778548472" last_build_size="7409501"/>
+        <Report name=".vdbs/capclean_impl1_map.vdb" last_build_time="1778838767" last_build_size="2400890"/>
+        <Report name="capclean_impl1.bgn" last_build_time="1778838875" last_build_size="4612"/>
+        <Report name="capclean_impl1.bit" last_build_time="1778838875" last_build_size="584992"/>
+        <Report name="capclean_impl1.lsedata" last_build_time="1778838718" last_build_size="19541969"/>
+        <Report name="capclean_impl1.mcs" last_build_time="1778838877" last_build_size="1645437"/>
+        <Report name="capclean_impl1.ncd" last_build_time="1778838867" last_build_size="11332976"/>
+        <Report name="capclean_impl1.ngd" last_build_time="1778838757" last_build_size="8350967"/>
+        <Report name="capclean_impl1.twr" last_build_time="1778838870" last_build_size="122697"/>
+        <Report name="capclean_impl1_map.ncd" last_build_time="1778838765" last_build_size="7956774"/>
     </Strategy>
 </BuildStatus>

@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon May 11 21:13:32 2026
+Fri May 15 05:51:53 2026
 
 
 Command Line:  synthesis -f capclean_impl1_lattice.synproj 
@@ -75,10 +75,15 @@ Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/fpga_top.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/framebuffer_capture.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/ov5640_sccb_init.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/pll_24m_to_120m.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/reset_sync.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/sd_spi_writer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/sdram_single_req_probe.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/sdram_stress_tester.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/uart_rx.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/uart_tx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/w9825_direct_req_sdram_ctrl.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/w9825_ref_sdram_ctrl.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/w9825_sdram_ctrl.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/debug_uart_min.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/debug_uart_status.v
@@ -100,27 +105,39 @@ Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_text.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_cmd_rx.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v. VERI-1482
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(123): analyzing included file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/model_box20_linear_plus_neg300/box20_linear_params.vh. VERI-1328
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(122): analyzing included file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/model_box20_linear_plus_neg300/box20_linear_params.vh. VERI-1328
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4908): analyzing included file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_burst_selftest.v. VERI-1328
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/framebuffer_capture.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/pll_24m_to_120m.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/reset_sync.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sd_spi_writer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sdram_single_req_probe.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sdram_stress_tester.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_rx.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_tx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_ref_sdram_ctrl.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_min.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_status.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): fpga_top
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1): compiling module fpga_top. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/pll_24m_to_120m.v(2): compiling module pll_24m_to_120m. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(1696): compiling module EHXPLLL(CLKFB_DIV=5,CLKOP_DIV=5,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=4,CLKOP_TRIM_POL="FALLING",CLKOS_TRIM_POL="FALLING"). VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/reset_sync.v(1): compiling module reset_sync. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(1): compiling module ov5640_sccb_init. VERI-1018
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(36): net reg_addr does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(37): net reg_data does not have a driver. VDB-1002
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_rx.v(1): compiling module uart_rx. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_cmd_rx.v(1): compiling module fpga_cmd_rx. VERI-1018
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(1): compiling module w9825_sdram_ctrl. VERI-1018
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(97): expression size 32 truncated to fit in target size 6. VERI-1209
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(55): compiling module BB. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_burst_selftest.v(1): compiling module w9825_burst_selftest(CLK_HZ=120000000,USE_ODDR_CLK=1'b0). VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sdram_single_req_probe.v(1): compiling module sdram_single_req_probe. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4910): compiling module sdram_req_cdc_bridge. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v(1): compiling module w9825_direct_req_sdram_ctrl. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/async_fifo_16x1024.v(1): compiling module async_fifo_16x1024. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/async_fifo_16x1024.v(1): compiling module async_fifo_16x1024(AW=15). VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/framebuffer_capture.v(1): compiling module framebuffer_capture. VERI-1018
@@ -131,20 +148,21 @@ WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/b
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/box20_cnn_int8_core.v(150): net w1 does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/box20_cnn_int8_core.v(151): net b1 does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/box20_cnn_int8_core.v(152): net fcw does not have a driver. VDB-1002
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1191): expression size 13 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1227): expression size 10 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1228): expression size 10 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1229): expression size 10 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1259): expression size 8 truncated to fit in target size 5. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1260): expression size 9 truncated to fit in target size 6. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1261): expression size 8 truncated to fit in target size 5. VERI-1209
-Constant propagated thru Write Port :clk_write_port_1179.
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1606): expression size 13 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1642): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1643): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1644): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1674): expression size 8 truncated to fit in target size 5. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1675): expression size 9 truncated to fit in target size 6. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1676): expression size 8 truncated to fit in target size 5. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3820): Register qvga_sdram_wr_req_4573 is stuck at Zero. VDB-5013
+Constant propagated thru Write Port :clk_write_port_1261.
 
-Constant propagated thru Write Port :clk_write_port_1180.
+Constant propagated thru Write Port :clk_write_port_1262.
 
-Constant propagated thru Write Port :clk_write_port_1181.
+Constant propagated thru Write Port :clk_write_port_1263.
 
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2157): Register qvga_avg_pending_pclk_3881 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2606): Register qvga_avg_pending_pclk_4449 is stuck at Zero. VDB-5013
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -205,6 +223,70 @@ WARNING - synthesis: Bit 3 of Register qvga_prev_v_pclk is stuck at Zero
 WARNING - synthesis: Bit 2 of Register qvga_prev_v_pclk is stuck at Zero
 WARNING - synthesis: Bit 1 of Register qvga_prev_v_pclk is stuck at Zero
 WARNING - synthesis: Bit 0 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 21 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 21 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_state_sys is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_state_sys is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_state_sys is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(487): Removing unused instance _5136. VDB-5034
 WARNING - synthesis: I/O Port RX 's net has no driver and is unused.
 WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
 WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
@@ -213,9 +295,19 @@ WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
 ######## Converting I/O port M_D2 to output.
 ######## Converting I/O port M_D3 to output.
 ######## Converting I/O port M_CMD to output.
-WARNING - synthesis: Bit 1 of Register \u_sdram/SD_DQM is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \u_sdram/SD_DQM is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(105): Register \u_sdram/SD_CKE_220 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4993): Register \u_qvga_sdram_bridge/src_is_read_hold_126 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_ack_sync is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_req_sync is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(5040): Register \u_qvga_sdram_bridge/dst_req_seen_136 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v(432): Register \u_sdram/SD_DQM_i0 is stuck at Zero. VDB-5013
 Constant propagated thru Write Port :\u_box20_cnn_scanner/pclk_I_0.
 
 Constant propagated thru Read Port :\u_box20_cnn_scanner/rd_addr_14__I_0.
@@ -237,11 +329,153 @@ WARNING - synthesis: Bit 2 of Register \u_box20_cnn_scanner/rd_data is stuck at 
 WARNING - synthesis: Bit 1 of Register \u_box20_cnn_scanner/rd_data is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_box20_cnn_scanner/rd_data is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_rst/shreg is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_ack_sync is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_req_sync is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \u_rst/shreg is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_rst/shreg is stuck at Zero
 WARNING - synthesis: Bit 0 of Register pclk_rst_sync is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(105): Register \u_sdram/SD_CS_N_221 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 0 of Register \u_sdram_rst/shreg is stuck at Zero
 WARNING - synthesis: Bit 1 of Register pclk_rst_sync is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_sdram_rst/shreg is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_sdram_rst/shreg is stuck at Zero
 INFO - synthesis: Extracted state machine for register 'qvga_tx_state_sys' with gray encoding
 original encoding -> new encoding (gray encoding)
 
@@ -269,37 +503,6 @@ original encoding -> new encoding (gray encoding)
 
  10 -> 11
 
-INFO - synthesis: Extracted state machine for register '\u_sdram/state' with one-hot encoding
-original encoding -> new encoding (one-hot encoding)
-
- 000001 -> 00000000000001
-
- 000010 -> 00000000000010
-
- 000011 -> 00000000000100
-
- 000100 -> 00000000001000
-
- 000101 -> 00000000010000
-
- 000110 -> 00000000100000
-
- 000111 -> 00000001000000
-
- 001000 -> 00000010000000
-
- 001001 -> 00000100000000
-
- 001010 -> 00001000000000
-
- 001011 -> 00010000000000
-
- 001100 -> 00100000000000
-
- 001101 -> 01000000000000
-
- 001110 -> 10000000000000
-
 
 
 
@@ -314,11 +517,12 @@ WARNING - synthesis: Bit 0 of Register \u_cam_init/bytes[3] is stuck at Zero
 WARNING - synthesis: Bit 21 of Register sdram_rd_addr is stuck at Zero
 WARNING - synthesis: Bit 20 of Register sdram_rd_addr is stuck at Zero
 WARNING - synthesis: Bit 19 of Register sdram_rd_addr is stuck at Zero
-WARNING - synthesis: Bit 13 of Register \u_sdram/state_FSM is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \u_cam_init/retry_ctr is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_cam_init/retry_ctr is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v(432): Register \u_sdram/init_done_310 is stuck at One. VDB-5014
 WARNING - synthesis: Bit 5 of Register \u_cam_init/state is stuck at Zero
 WARNING - synthesis: Bit 4 of Register \u_cam_init/state is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_sdram/next_state is stuck at Zero
 ######## Found 2 RTL RAMs in the design.
 ######## Mapping RTL RAM \u_qvga_fifo/mem to 32 EBR blocks in PSEUDO_DUAL_PORT Mode
 
@@ -328,62 +532,58 @@ WARNING - synthesis: Bit 4 of Register \u_cam_init/state is stuck at Zero
 WARNING - synthesis: I/O Port RX 's net has no driver and is unused.
 WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
 WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
-######## Converting I/O port SD_DQ[15] to output.
-######## Converting I/O port SD_DQ[14] to output.
-######## Converting I/O port SD_DQ[13] to output.
-######## Converting I/O port SD_DQ[12] to output.
-######## Converting I/O port SD_DQ[11] to output.
-######## Converting I/O port SD_DQ[10] to output.
-######## Converting I/O port SD_DQ[9] to output.
-######## Converting I/O port SD_DQ[8] to output.
-######## Converting I/O port SD_DQ[7] to output.
-######## Converting I/O port SD_DQ[6] to output.
-######## Converting I/O port SD_DQ[5] to output.
-######## Converting I/O port SD_DQ[4] to output.
-######## Converting I/O port SD_DQ[3] to output.
-######## Converting I/O port SD_DQ[2] to output.
-######## Converting I/O port SD_DQ[1] to output.
-######## Converting I/O port SD_DQ[0] to output.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[15] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[14] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[13] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[12] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[11] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[10] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[9] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[8] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[0] due to black_box_pad_pin attribute.
 WARNING - synthesis: Bit 1 of Register qvga_tx_state_sys is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(103): Register \u_sdram/state_FSM_i13 is stuck at Zero. VDB-5013
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(542): Register \u_cam_init/init_done_r_162 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2157): Register cam_init_pclk_sync_i0 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3915): Register tx_preview_replay_active_4067 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3915): Register tx_preview_col_gap_4074 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3717): Register tx_preview_col_gap_ctr_8415__i0 is stuck at Zero. VDB-5013
-Duplicate register/latch removal. \u_snap_fifo/mem_9342 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i5.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9086 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i14.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9083 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i13.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9081 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i12.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9079 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i11.
-Duplicate register/latch removal. \u_snap_fifo/rd_bin_rep_19_i0 is a one-to-one match with \u_snap_fifo/mem_9332.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9077 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_21__0_i0.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9075 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i9.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9073 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i8.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9071 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i7.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9069 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i6.
-Duplicate register/latch removal. \u_snap_fifo/mem_9340 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i4.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9067 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i5.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9065 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i4.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9063 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i3.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9061 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i2.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9059 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i1.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9057 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i0.
-Duplicate register/latch removal. \u_snap_fifo/mem_9348 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i8.
-Duplicate register/latch removal. \u_snap_fifo/mem_9334 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i1.
-Duplicate register/latch removal. \u_snap_fifo/mem_9344 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i6.
-Duplicate register/latch removal. \u_snap_fifo/mem_9346 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i7.
-Duplicate register/latch removal. \u_snap_fifo/mem_9336 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i2.
-Duplicate register/latch removal. \u_snap_fifo/mem_9338 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i3.
-Duplicate register/latch removal. \u_snap_fifo/mem_9351 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i9.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_20_i10 is a one-to-one match with \u_qvga_fifo/mem_9077.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i1 is a one-to-one match with \u_qvga_fifo/mem_9079.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i2 is a one-to-one match with \u_qvga_fifo/mem_9081.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i3 is a one-to-one match with \u_qvga_fifo/mem_9083.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i4 is a one-to-one match with \u_qvga_fifo/mem_9086.
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3764): Register tx_snap_preamble_left_8416__i0 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3764): Register tx_snap_preamble_left_8416__i1 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3693): Register tx_snap_row_gap_ctr_8412__i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2606): Register cam_init_pclk_sync_i0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4848): Register tx_preview_replay_active_4652 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4848): Register tx_preview_col_gap_4659 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4650): Register tx_preview_col_gap_ctr_9451__i0 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \u_qvga_fifo/mem_10228 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i14.
+Duplicate register/latch removal. \u_snap_fifo/mem_10484 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i5.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10225 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i13.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10223 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i12.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10221 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i11.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10219 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_18__0_i0.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10217 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i9.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10215 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i8.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10213 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i7.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10211 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i6.
+Duplicate register/latch removal. \u_snap_fifo/rd_bin_rep_16_i0 is a one-to-one match with \u_snap_fifo/mem_10474.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10209 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i5.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10207 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i4.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10205 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i3.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_17_i0 is a one-to-one match with \u_qvga_fifo/mem_10199.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10203 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i2.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10201 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i1.
+Duplicate register/latch removal. \u_snap_fifo/mem_10490 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i8.
+Duplicate register/latch removal. \u_snap_fifo/mem_10476 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i1.
+Duplicate register/latch removal. \u_snap_fifo/mem_10486 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i6.
+Duplicate register/latch removal. \u_snap_fifo/mem_10488 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i7.
+Duplicate register/latch removal. \u_snap_fifo/mem_10478 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i2.
+Duplicate register/latch removal. \u_snap_fifo/mem_10480 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i3.
+Duplicate register/latch removal. \u_snap_fifo/mem_10493 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i9.
+Duplicate register/latch removal. \u_snap_fifo/mem_10482 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i4.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_17_i10 is a one-to-one match with \u_qvga_fifo/mem_10219.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i1 is a one-to-one match with \u_qvga_fifo/mem_10221.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i2 is a one-to-one match with \u_qvga_fifo/mem_10223.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i3 is a one-to-one match with \u_qvga_fifo/mem_10225.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i4 is a one-to-one match with \u_qvga_fifo/mem_10228.
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 Duplicate register/latch removal. \u_snap_fifo/wr_gray_i0_i10 is a one-to-one match with \u_snap_fifo/wr_bin_i0_i10.
 Duplicate register/latch removal. \u_qvga_fifo/wr_gray_i0_i15 is a one-to-one match with \u_qvga_fifo/wr_bin_i0_i15.
@@ -407,56 +607,57 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file capclean_impl1.ngd.
 
 ################### Begin Area Report (fpga_top)######################
-Number of register bits => 6582 of 24879 (26 % )
-CCU2C => 417
+Number of register bits => 6854 of 24879 (27 % )
+BB => 16
+CCU2C => 519
 DP16KD => 33
-FD1P3AX => 3164
-FD1P3IX => 2938
-FD1P3JX => 13
-FD1S3AX => 393
-FD1S3IX => 67
-FD1S3JX => 7
+FD1P3AX => 3334
+FD1P3IX => 2968
+FD1P3JX => 17
+FD1S3AX => 415
+FD1S3IX => 80
+FD1S3JX => 40
 GSR => 1
 IB => 13
-L6MUX21 => 1080
-LUT4 => 5110
+L6MUX21 => 1083
+LUT4 => 5871
 MULT18X18D => 4
-OB => 38
-OBZ => 20
+OB => 37
+OBZ => 4
 PDPW16KD => 1
-PFUMX => 1563
+PFUMX => 1631
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
   Net : PCLK_c, loads : 5748
-  Net : CRYSTAL_c, loads : 903
+  Net : CRYSTAL_c, loads : 1175
 Clock Enable Nets
-Number of Clock Enables: 290
+Number of Clock Enables: 353
 Top 10 highest fanout Clock Enables:
-  Net : u_qvga_fifo/CRYSTAL_c_enable_292, loads : 52
-  Net : PCLK_c_enable_2577, loads : 51
-  Net : PCLK_c_enable_3499, loads : 50
-  Net : PCLK_c_enable_3599, loads : 50
-  Net : PCLK_c_enable_2727, loads : 50
-  Net : PCLK_c_enable_3925, loads : 50
-  Net : PCLK_c_enable_3975, loads : 50
-  Net : PCLK_c_enable_5225, loads : 50
-  Net : PCLK_c_enable_4025, loads : 50
-  Net : PCLK_c_enable_2627, loads : 50
+  Net : PCLK_c_enable_2589, loads : 51
+  Net : PCLK_c_enable_3841, loads : 50
+  Net : PCLK_c_enable_3891, loads : 50
+  Net : PCLK_c_enable_3941, loads : 50
+  Net : PCLK_c_enable_3991, loads : 50
+  Net : PCLK_c_enable_4041, loads : 50
+  Net : PCLK_c_enable_2639, loads : 50
+  Net : PCLK_c_enable_4191, loads : 50
+  Net : PCLK_c_enable_2739, loads : 50
+  Net : PCLK_c_enable_4241, loads : 50
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n117262, loads : 2581
+  Net : n131738, loads : 2591
   Net : box20_eval_idx_pclk_0, loads : 1000
   Net : box20_accum_idx_reg_pclk_0, loads : 1000
-  Net : box20_eval_idx_pclk_1, loads : 657
+  Net : box20_eval_idx_pclk_1, loads : 654
   Net : box20_accum_idx_reg_pclk_1, loads : 648
-  Net : box20_accum_idx_reg_pclk_2, loads : 335
-  Net : box20_eval_idx_pclk_2, loads : 333
-  Net : maxfan_replicated_net_289, loads : 290
-  Net : maxfan_replicated_net_284, loads : 285
-  Net : u_qvga_fifo/n73169, loads : 257
+  Net : box20_accum_idx_reg_pclk_2, loads : 340
+  Net : box20_eval_idx_pclk_2, loads : 330
+  Net : maxfan_replicated_net_288, loads : 289
+  Net : n134063, loads : 284
+  Net : u_qvga_fifo/n76902, loads : 257
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -466,10 +667,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CRYSTAL_c]               |  200.000 MHz|   53.274 MHz|    14 *
+clk1 [get_nets CRYSTAL_c]               |  200.000 MHz|   63.012 MHz|    13 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets PCLK_c]                  |  200.000 MHz|   49.838 MHz|    17 *
+clk0 [get_nets PCLK_c]                  |  200.000 MHz|   53.735 MHz|    16 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -477,8 +678,8 @@ clk0 [get_nets PCLK_c]                  |  200.000 MHz|   49.838 MHz|    17 *
 2 constraints not met.
 
 
-Peak Memory Usage: 252.012  MB
+Peak Memory Usage: 261.488  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 48.891  secs
+Elapsed CPU time for LSE flow : 42.234  secs
 --------------------------------------------------------------

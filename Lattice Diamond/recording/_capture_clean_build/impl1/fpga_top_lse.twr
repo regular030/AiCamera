@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Mon May 11 21:14:20 2026
+Fri May 15 05:52:34 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,156 +23,150 @@ Constraint: create_clock -period 5.000000 -name clk1 [get_nets CRYSTAL_c]
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 13.771ns
+Error:  The following path violates requirements by 10.870ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             qvga_tx_col_sys_i6  (from CRYSTAL_c +)
+   Source:         FD1P3AX    CK             qvga_tx_col_sys_i4  (from CRYSTAL_c +)
    Destination:    FD1P3IX    CD             qvga_word_sys_i0_i0  (to CRYSTAL_c +)
 
-   Delay:                  18.946ns  (13.1% logic, 86.9% route), 14 logic levels.
+   Delay:                  16.045ns  (14.1% logic, 85.9% route), 13 logic levels.
 
  Constraint Details:
 
-     18.946ns data_path qvga_tx_col_sys_i6 to qvga_word_sys_i0_i0 violates
+     16.045ns data_path qvga_tx_col_sys_i4 to qvga_word_sys_i0_i0 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 13.771ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 10.870ns
 
- Path Details: qvga_tx_col_sys_i6 to qvga_word_sys_i0_i0
+ Path Details: qvga_tx_col_sys_i4 to qvga_word_sys_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              qvga_tx_col_sys_i6 (from CRYSTAL_c)
-Route        17   e 1.686                                  qvga_tx_col_sys[6]
-LUT4        ---     0.166              B to Z              i1_2_lut_rep_760
-Route         3   e 1.239                                  n117192
-LUT4        ---     0.166              B to Z              i31690_4_lut
-Route         4   e 1.297                                  n98364
-LUT4        ---     0.166              B to Z              i30558_3_lut
-Route         8   e 1.435                                  n43829
-LUT4        ---     0.166              D to Z              i30559_2_lut_rep_601_4_lut
-Route        68   e 1.863                                  n117033
-LUT4        ---     0.166              A to Z              i46943_3_lut_4_lut
-Route         1   e 1.020                                  n113761
-LUT4        ---     0.166              B to Z              n115290_bdd_4_lut_52461
-Route         1   e 1.020                                  n115878
-LUT4        ---     0.166              A to Z              n115878_bdd_4_lut
-Route         3   e 1.239                                  n29
-LUT4        ---     0.166              D to Z              Mux_2142_i30_3_lut_3_lut_4_lut
-Route         1   e 1.020                                  n30_adj_15773
-LUT4        ---     0.166              A to Z              Mux_2142_i31_4_lut
-Route         1   e 0.020                                  n31_adj_15774
-MUXL5       ---     0.116           ALUT to Z              Mux_2142_i63
-Route         1   e 1.020                                  n44045
-LUT4        ---     0.166              D to Z              i1_4_lut_adj_740
-Route         1   e 1.020                                  n106818
-LUT4        ---     0.166              A to Z              i1_4_lut_adj_733
-Route         1   e 1.020                                  n107289
-LUT4        ---     0.166              D to Z              i1_4_lut_adj_728
-Route        16   e 1.574                                  n91762
+L_CO        ---     0.365             CK to Q              qvga_tx_col_sys_i4 (from CRYSTAL_c)
+Route        39   e 1.852                                  qvga_tx_col_sys[4]
+LUT4        ---     0.166              B to Z              qvga_tx_col_sys[3]_bdd_2_lut
+Route         1   e 0.020                                  n129614
+MUXL5       ---     0.116           ALUT to Z              i62289
+Route         1   e 1.020                                  n129616
+LUT4        ---     0.166              B to Z              n129622_bdd_3_lut
+Route        76   e 1.886                                  n99418
+LUT4        ---     0.166              A to Z              i52946_3_lut_4_lut
+Route         1   e 1.020                                  n122305
+LUT4        ---     0.166              C to Z              n45562_bdd_4_lut
+Route         1   e 1.020                                  n129342
+LUT4        ---     0.166              A to Z              n129342_bdd_4_lut
+Route         2   e 1.158                                  n29_adj_16781
+LUT4        ---     0.166              C to Z              Mux_2254_i30_3_lut_4_lut
+Route         2   e 1.158                                  n30_adj_16780
+LUT4        ---     0.166              A to Z              Mux_2254_i31_4_lut
+Route         1   e 0.020                                  n31_adj_16779
+MUXL5       ---     0.116           ALUT to Z              Mux_2254_i63
+Route         1   e 1.020                                  n45678
+LUT4        ---     0.166              C to Z              i1_4_lut_adj_1404
+Route         1   e 1.020                                  n70_adj_17057
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_1397
+Route         1   e 1.020                                  n118644
+LUT4        ---     0.166              D to Z              i1_4_lut_adj_1394
+Route        16   e 1.574                                  n95514
                   --------
-                   18.946  (13.1% logic, 86.9% route), 14 logic levels.
+                   16.045  (14.1% logic, 85.9% route), 13 logic levels.
 
 
-Error:  The following path violates requirements by 13.771ns
+Error:  The following path violates requirements by 10.870ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             qvga_tx_col_sys_i6  (from CRYSTAL_c +)
+   Source:         FD1P3AX    CK             qvga_tx_col_sys_i4  (from CRYSTAL_c +)
    Destination:    FD1P3IX    CD             qvga_word_sys_i0_i0  (to CRYSTAL_c +)
 
-   Delay:                  18.946ns  (13.1% logic, 86.9% route), 14 logic levels.
+   Delay:                  16.045ns  (14.1% logic, 85.9% route), 13 logic levels.
 
  Constraint Details:
 
-     18.946ns data_path qvga_tx_col_sys_i6 to qvga_word_sys_i0_i0 violates
+     16.045ns data_path qvga_tx_col_sys_i4 to qvga_word_sys_i0_i0 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 13.771ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 10.870ns
 
- Path Details: qvga_tx_col_sys_i6 to qvga_word_sys_i0_i0
+ Path Details: qvga_tx_col_sys_i4 to qvga_word_sys_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              qvga_tx_col_sys_i6 (from CRYSTAL_c)
-Route        17   e 1.686                                  qvga_tx_col_sys[6]
-LUT4        ---     0.166              B to Z              i1_2_lut_rep_760
-Route         3   e 1.239                                  n117192
-LUT4        ---     0.166              B to Z              i31690_4_lut
-Route         4   e 1.297                                  n98364
-LUT4        ---     0.166              B to Z              i30558_3_lut
-Route         8   e 1.435                                  n43829
-LUT4        ---     0.166              D to Z              i30559_2_lut_rep_601_4_lut
-Route        68   e 1.863                                  n117033
-LUT4        ---     0.166              A to Z              i46951_3_lut_4_lut
-Route         1   e 1.020                                  n113769
-LUT4        ---     0.166              C to Z              n115289_bdd_4_lut_52478
-Route         1   e 1.020                                  n115872
-LUT4        ---     0.166              A to Z              n115872_bdd_4_lut
-Route         3   e 1.239                                  n38_adj_15775
-LUT4        ---     0.166              C to Z              n116135_bdd_3_lut_4_lut
-Route         1   e 1.020                                  n116136
-LUT4        ---     0.166              B to Z              Mux_2142_i31_4_lut
-Route         1   e 0.020                                  n31_adj_15774
-MUXL5       ---     0.116           ALUT to Z              Mux_2142_i63
-Route         1   e 1.020                                  n44045
-LUT4        ---     0.166              D to Z              i1_4_lut_adj_740
-Route         1   e 1.020                                  n106818
-LUT4        ---     0.166              A to Z              i1_4_lut_adj_733
-Route         1   e 1.020                                  n107289
-LUT4        ---     0.166              D to Z              i1_4_lut_adj_728
-Route        16   e 1.574                                  n91762
+L_CO        ---     0.365             CK to Q              qvga_tx_col_sys_i4 (from CRYSTAL_c)
+Route        39   e 1.852                                  qvga_tx_col_sys[4]
+LUT4        ---     0.166              C to Z              n129621_bdd_3_lut_else_4_lut
+Route         1   e 0.020                                  n131852
+MUXL5       ---     0.116           BLUT to Z              i63275
+Route         1   e 1.020                                  n131854
+LUT4        ---     0.166              A to Z              n129622_bdd_3_lut
+Route        76   e 1.886                                  n99418
+LUT4        ---     0.166              A to Z              i52945_3_lut_4_lut
+Route         1   e 1.020                                  n122304
+LUT4        ---     0.166              B to Z              n45562_bdd_4_lut
+Route         1   e 1.020                                  n129342
+LUT4        ---     0.166              A to Z              n129342_bdd_4_lut
+Route         2   e 1.158                                  n29_adj_16781
+LUT4        ---     0.166              C to Z              Mux_2254_i30_3_lut_4_lut
+Route         2   e 1.158                                  n30_adj_16780
+LUT4        ---     0.166              A to Z              Mux_2254_i31_4_lut
+Route         1   e 0.020                                  n31_adj_16779
+MUXL5       ---     0.116           ALUT to Z              Mux_2254_i63
+Route         1   e 1.020                                  n45678
+LUT4        ---     0.166              C to Z              i1_4_lut_adj_1404
+Route         1   e 1.020                                  n70_adj_17057
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_1397
+Route         1   e 1.020                                  n118644
+LUT4        ---     0.166              D to Z              i1_4_lut_adj_1394
+Route        16   e 1.574                                  n95514
                   --------
-                   18.946  (13.1% logic, 86.9% route), 14 logic levels.
+                   16.045  (14.1% logic, 85.9% route), 13 logic levels.
 
 
-Error:  The following path violates requirements by 13.771ns
+Error:  The following path violates requirements by 10.870ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             qvga_tx_col_sys_i6  (from CRYSTAL_c +)
+   Source:         FD1P3AX    CK             qvga_tx_col_sys_i4  (from CRYSTAL_c +)
    Destination:    FD1P3IX    CD             qvga_word_sys_i0_i0  (to CRYSTAL_c +)
 
-   Delay:                  18.946ns  (13.1% logic, 86.9% route), 14 logic levels.
+   Delay:                  16.045ns  (14.1% logic, 85.9% route), 13 logic levels.
 
  Constraint Details:
 
-     18.946ns data_path qvga_tx_col_sys_i6 to qvga_word_sys_i0_i0 violates
+     16.045ns data_path qvga_tx_col_sys_i4 to qvga_word_sys_i0_i0 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 13.771ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 10.870ns
 
- Path Details: qvga_tx_col_sys_i6 to qvga_word_sys_i0_i0
+ Path Details: qvga_tx_col_sys_i4 to qvga_word_sys_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              qvga_tx_col_sys_i6 (from CRYSTAL_c)
-Route        17   e 1.686                                  qvga_tx_col_sys[6]
-LUT4        ---     0.166              B to Z              i1_2_lut_rep_760
-Route         3   e 1.239                                  n117192
-LUT4        ---     0.166              B to Z              i31690_4_lut
-Route         4   e 1.297                                  n98364
-LUT4        ---     0.166              B to Z              i30558_3_lut
-Route         8   e 1.435                                  n43829
-LUT4        ---     0.166              D to Z              i30559_2_lut_rep_601_4_lut
-Route        68   e 1.863                                  n117033
-LUT4        ---     0.166              A to Z              i46937_3_lut_4_lut
-Route         1   e 1.020                                  n113755
-LUT4        ---     0.166              C to Z              n115290_bdd_4_lut_51297
-Route         1   e 1.020                                  n115854
-LUT4        ---     0.166              A to Z              n115854_bdd_4_lut
-Route         3   e 1.239                                  n22
-LUT4        ---     0.166              C to Z              Mux_2142_i30_3_lut_3_lut_4_lut
-Route         1   e 1.020                                  n30_adj_15773
-LUT4        ---     0.166              A to Z              Mux_2142_i31_4_lut
-Route         1   e 0.020                                  n31_adj_15774
-MUXL5       ---     0.116           ALUT to Z              Mux_2142_i63
-Route         1   e 1.020                                  n44045
-LUT4        ---     0.166              D to Z              i1_4_lut_adj_740
-Route         1   e 1.020                                  n106818
-LUT4        ---     0.166              A to Z              i1_4_lut_adj_733
-Route         1   e 1.020                                  n107289
-LUT4        ---     0.166              D to Z              i1_4_lut_adj_728
-Route        16   e 1.574                                  n91762
+L_CO        ---     0.365             CK to Q              qvga_tx_col_sys_i4 (from CRYSTAL_c)
+Route        39   e 1.852                                  qvga_tx_col_sys[4]
+LUT4        ---     0.166              C to Z              n129621_bdd_3_lut_else_4_lut
+Route         1   e 0.020                                  n131852
+MUXL5       ---     0.116           BLUT to Z              i63275
+Route         1   e 1.020                                  n131854
+LUT4        ---     0.166              A to Z              n129622_bdd_3_lut
+Route        76   e 1.886                                  n99418
+LUT4        ---     0.166              A to Z              i52946_3_lut_4_lut
+Route         1   e 1.020                                  n122305
+LUT4        ---     0.166              C to Z              n45562_bdd_4_lut
+Route         1   e 1.020                                  n129342
+LUT4        ---     0.166              A to Z              n129342_bdd_4_lut
+Route         2   e 1.158                                  n29_adj_16781
+LUT4        ---     0.166              C to Z              Mux_2254_i30_3_lut_4_lut
+Route         2   e 1.158                                  n30_adj_16780
+LUT4        ---     0.166              A to Z              Mux_2254_i31_4_lut
+Route         1   e 0.020                                  n31_adj_16779
+MUXL5       ---     0.116           ALUT to Z              Mux_2254_i63
+Route         1   e 1.020                                  n45678
+LUT4        ---     0.166              C to Z              i1_4_lut_adj_1404
+Route         1   e 1.020                                  n70_adj_17057
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_1397
+Route         1   e 1.020                                  n118644
+LUT4        ---     0.166              D to Z              i1_4_lut_adj_1394
+Route        16   e 1.574                                  n95514
                   --------
-                   18.946  (13.1% logic, 86.9% route), 14 logic levels.
+                   16.045  (14.1% logic, 85.9% route), 13 logic levels.
 
-Warning: 18.771 ns is the maximum delay for this constraint.
+Warning: 15.870 ns is the maximum delay for this constraint.
 
 
 
@@ -182,174 +176,168 @@ Constraint: create_clock -period 5.000000 -name clk0 [get_nets PCLK_c]
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 15.065ns
+Error:  The following path violates requirements by 13.610ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             box20_grid_eval_idx_pclk_8402__i2  (from PCLK_c +)
-   Destination:    FD1S3AX    D              box20_grid_eval_mask_pclk_i37  (to PCLK_c +)
+   Source:         FD1P3IX    CK             box20_grid_eval_idx_pclk_9437__i2  (from PCLK_c +)
+   Destination:    FD1P3AX    SP             box20_grid_eval_mask_pclk_i46  (to PCLK_c +)
 
-   Delay:                  20.240ns  (14.2% logic, 85.8% route), 17 logic levels.
+   Delay:                  18.689ns  (14.5% logic, 85.5% route), 16 logic levels.
 
  Constraint Details:
 
-     20.240ns data_path box20_grid_eval_idx_pclk_8402__i2 to box20_grid_eval_mask_pclk_i37 violates
+     18.689ns data_path box20_grid_eval_idx_pclk_9437__i2 to box20_grid_eval_mask_pclk_i46 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 15.065ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 13.610ns
 
- Path Details: box20_grid_eval_idx_pclk_8402__i2 to box20_grid_eval_mask_pclk_i37
+ Path Details: box20_grid_eval_idx_pclk_9437__i2 to box20_grid_eval_mask_pclk_i46
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              box20_grid_eval_idx_pclk_8402__i2 (from PCLK_c)
-Route        89   e 2.017                                  box20_grid_eval_idx_pclk[2]
-LUT4        ---     0.166              B to Z              box20_grid_eval_idx_pclk[1]_bdd_4_lut
-Route         1   e 0.020                                  n116766
-MUXL5       ---     0.116           BLUT to Z              i51843
-Route         1   e 1.020                                  n116767
-LUT4        ---     0.166              A to Z              n115926_bdd_4_lut
-Route         2   e 1.158                                  n45_adj_15780
-LUT4        ---     0.166              B to Z              Mux_5068_i46_3_lut
-Route         1   e 1.020                                  n46_adj_15783
-LUT4        ---     0.166              B to Z              box20_grid_eval_idx_pclk[4]_bdd_4_lut_51857
-Route         1   e 1.020                                  n115884
-LUT4        ---     0.166              A to Z              n115884_bdd_4_lut
-Route         2   e 1.158                                  n115887
-LUT4        ---     0.166              C to Z              i664_2_lut_rep_580_3_lut_4_lut
-Route         5   e 1.341                                  n117012
-LUT4        ---     0.166              C to Z              n9942_bdd_4_lut
-Route         6   e 1.378                                  n9996
-LUT4        ---     0.166              B to Z              i9771_4_lut
-Route         1   e 1.020                                  n10038_adj_16106
-LUT4        ---     0.166              D to Z              i9947_4_lut_4_lut_adj_893
-Route         1   e 0.020                                  n4_adj_16107
-MUXL5       ---     0.116           BLUT to Z              i40136
-Route         1   e 1.020                                  n3
-LUT4        ---     0.166              B to Z              i6_3_lut
-Route         1   e 0.020                                  n4_adj_16050
-MUXL5       ---     0.116           ALUT to Z              mux_9011_i1
-Route         1   e 1.020                                  n108833
-LUT4        ---     0.166              B to Z              i42024_2_lut
-Route        44   e 1.776                                  n70264
-LUT4        ---     0.166              B to Z              i1_4_lut_adj_841
-Route         5   e 1.341                                  n105980
-LUT4        ---     0.166              D to Z              i24931_4_lut
-Route         1   e 1.020                                  n91629
+L_CO        ---     0.365             CK to Q              box20_grid_eval_idx_pclk_9437__i2 (from PCLK_c)
+Route        82   e 2.001                                  box20_grid_eval_idx_pclk[2]
+LUT4        ---     0.166              C to Z              box20_grid_eval_idx_pclk[1]_bdd_4_lut_62210_else_4_lut
+Route         1   e 0.020                                  n131775
+MUXL5       ---     0.116           BLUT to Z              i63224
+Route         1   e 1.020                                  n131777
+LUT4        ---     0.166              A to Z              n129432_bdd_4_lut
+Route         2   e 1.158                                  n22
+LUT4        ---     0.166              A to Z              Mux_5687_i30_3_lut
+Route         2   e 1.158                                  n30_adj_16799
+LUT4        ---     0.166              D to Z              i52791_3_lut_3_lut_4_lut
+Route         1   e 0.020                                  n122150
+MUXL5       ---     0.116           BLUT to Z              i52793
+Route         3   e 1.239                                  n68472
+LUT4        ---     0.166              C to Z              i1_2_lut_3_lut_4_lut_adj_1182
+Route         2   e 1.158                                  n4_adj_16861
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_898
+Route         1   e 1.020                                  n118640
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_897
+Route         1   e 1.020                                  n117634
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_895
+Route         2   e 1.158                                  n75728
+LUT4        ---     0.166              B to Z              i1_2_lut_adj_894
+Route         1   e 1.020                                  n118624
+LUT4        ---     0.166              D to Z              i11317_4_lut
+Route         1   e 0.020                                  n76104
+MUXL5       ---     0.116           BLUT to Z              mux_10156_i1
+Route        48   e 1.794                                  n74512
+LUT4        ---     0.166              B to Z              i61716_4_lut
+Route         2   e 1.158                                  box20_grid_eval_mask_pclk_47__N_6730[46]
+LUT4        ---     0.166              B to Z              i1_2_lut_adj_1357
+Route         1   e 1.020                                  PCLK_c_enable_3370
                   --------
-                   20.240  (14.2% logic, 85.8% route), 17 logic levels.
+                   18.689  (14.5% logic, 85.5% route), 16 logic levels.
 
 
-Error:  The following path violates requirements by 15.065ns
+Error:  The following path violates requirements by 13.610ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             box20_grid_eval_idx_pclk_8402__i2  (from PCLK_c +)
-   Destination:    FD1S3AX    D              box20_grid_eval_mask_pclk_i37  (to PCLK_c +)
+   Source:         FD1P3IX    CK             box20_grid_eval_idx_pclk_9437__i2  (from PCLK_c +)
+   Destination:    FD1P3AX    SP             box20_grid_eval_mask_pclk_i46  (to PCLK_c +)
 
-   Delay:                  20.240ns  (14.2% logic, 85.8% route), 17 logic levels.
+   Delay:                  18.689ns  (14.5% logic, 85.5% route), 16 logic levels.
 
  Constraint Details:
 
-     20.240ns data_path box20_grid_eval_idx_pclk_8402__i2 to box20_grid_eval_mask_pclk_i37 violates
+     18.689ns data_path box20_grid_eval_idx_pclk_9437__i2 to box20_grid_eval_mask_pclk_i46 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 15.065ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 13.610ns
 
- Path Details: box20_grid_eval_idx_pclk_8402__i2 to box20_grid_eval_mask_pclk_i37
+ Path Details: box20_grid_eval_idx_pclk_9437__i2 to box20_grid_eval_mask_pclk_i46
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              box20_grid_eval_idx_pclk_8402__i2 (from PCLK_c)
-Route        89   e 2.017                                  box20_grid_eval_idx_pclk[2]
-LUT4        ---     0.166              C to Z              box20_grid_eval_idx_pclk[1]_bdd_3_lut_3_lut
-Route         1   e 0.020                                  n116765
-MUXL5       ---     0.116           ALUT to Z              i51843
-Route         1   e 1.020                                  n116767
-LUT4        ---     0.166              A to Z              n115926_bdd_4_lut
-Route         2   e 1.158                                  n45_adj_15780
-LUT4        ---     0.166              B to Z              Mux_5068_i46_3_lut
-Route         1   e 1.020                                  n46_adj_15783
-LUT4        ---     0.166              B to Z              box20_grid_eval_idx_pclk[4]_bdd_4_lut_51857
-Route         1   e 1.020                                  n115884
-LUT4        ---     0.166              A to Z              n115884_bdd_4_lut
-Route         2   e 1.158                                  n115887
-LUT4        ---     0.166              C to Z              i664_2_lut_rep_580_3_lut_4_lut
-Route         5   e 1.341                                  n117012
-LUT4        ---     0.166              C to Z              n9942_bdd_4_lut
-Route         6   e 1.378                                  n9996
-LUT4        ---     0.166              B to Z              i9771_4_lut
-Route         1   e 1.020                                  n10038_adj_16106
-LUT4        ---     0.166              D to Z              i9947_4_lut_4_lut_adj_893
-Route         1   e 0.020                                  n4_adj_16107
-MUXL5       ---     0.116           BLUT to Z              i40136
-Route         1   e 1.020                                  n3
-LUT4        ---     0.166              B to Z              i6_3_lut
-Route         1   e 0.020                                  n4_adj_16050
-MUXL5       ---     0.116           ALUT to Z              mux_9011_i1
-Route         1   e 1.020                                  n108833
-LUT4        ---     0.166              B to Z              i42024_2_lut
-Route        44   e 1.776                                  n70264
-LUT4        ---     0.166              B to Z              i1_4_lut_adj_841
-Route         5   e 1.341                                  n105980
-LUT4        ---     0.166              D to Z              i24931_4_lut
-Route         1   e 1.020                                  n91629
+L_CO        ---     0.365             CK to Q              box20_grid_eval_idx_pclk_9437__i2 (from PCLK_c)
+Route        82   e 2.001                                  box20_grid_eval_idx_pclk[2]
+LUT4        ---     0.166              C to Z              box20_grid_eval_idx_pclk[1]_bdd_4_lut_62200_then_4_lut
+Route         1   e 0.020                                  n131786
+MUXL5       ---     0.116           ALUT to Z              i63230
+Route         1   e 1.020                                  n131787
+LUT4        ---     0.166              A to Z              n129420_bdd_4_lut
+Route         2   e 1.158                                  n38_adj_16656
+LUT4        ---     0.166              A to Z              Mux_5687_i46_3_lut
+Route         2   e 1.158                                  n46_adj_16798
+LUT4        ---     0.166              C to Z              i52792_3_lut_3_lut_4_lut
+Route         1   e 0.020                                  n122151
+MUXL5       ---     0.116           ALUT to Z              i52793
+Route         3   e 1.239                                  n68472
+LUT4        ---     0.166              C to Z              i1_2_lut_3_lut_4_lut_adj_1182
+Route         2   e 1.158                                  n4_adj_16861
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_898
+Route         1   e 1.020                                  n118640
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_897
+Route         1   e 1.020                                  n117634
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_895
+Route         2   e 1.158                                  n75728
+LUT4        ---     0.166              B to Z              i1_2_lut_adj_894
+Route         1   e 1.020                                  n118624
+LUT4        ---     0.166              D to Z              i11317_4_lut
+Route         1   e 0.020                                  n76104
+MUXL5       ---     0.116           BLUT to Z              mux_10156_i1
+Route        48   e 1.794                                  n74512
+LUT4        ---     0.166              B to Z              i61716_4_lut
+Route         2   e 1.158                                  box20_grid_eval_mask_pclk_47__N_6730[46]
+LUT4        ---     0.166              B to Z              i1_2_lut_adj_1357
+Route         1   e 1.020                                  PCLK_c_enable_3370
                   --------
-                   20.240  (14.2% logic, 85.8% route), 17 logic levels.
+                   18.689  (14.5% logic, 85.5% route), 16 logic levels.
 
 
-Error:  The following path violates requirements by 15.065ns
+Error:  The following path violates requirements by 13.610ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             box20_grid_eval_idx_pclk_8402__i2  (from PCLK_c +)
-   Destination:    FD1S3AX    D              box20_grid_eval_mask_pclk_i37  (to PCLK_c +)
+   Source:         FD1P3IX    CK             box20_grid_eval_idx_pclk_9437__i2  (from PCLK_c +)
+   Destination:    FD1P3AX    SP             box20_grid_eval_mask_pclk_i46  (to PCLK_c +)
 
-   Delay:                  20.240ns  (14.2% logic, 85.8% route), 17 logic levels.
+   Delay:                  18.689ns  (14.5% logic, 85.5% route), 16 logic levels.
 
  Constraint Details:
 
-     20.240ns data_path box20_grid_eval_idx_pclk_8402__i2 to box20_grid_eval_mask_pclk_i37 violates
+     18.689ns data_path box20_grid_eval_idx_pclk_9437__i2 to box20_grid_eval_mask_pclk_i46 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 15.065ns
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 13.610ns
 
- Path Details: box20_grid_eval_idx_pclk_8402__i2 to box20_grid_eval_mask_pclk_i37
+ Path Details: box20_grid_eval_idx_pclk_9437__i2 to box20_grid_eval_mask_pclk_i46
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              box20_grid_eval_idx_pclk_8402__i2 (from PCLK_c)
-Route        89   e 2.017                                  box20_grid_eval_idx_pclk[2]
-LUT4        ---     0.166              C to Z              box20_grid_eval_idx_pclk[1]_bdd_4_lut_51342_else_4_lut
-Route         1   e 0.020                                  n117296
-MUXL5       ---     0.116           BLUT to Z              i51982
-Route         1   e 1.020                                  n117298
-LUT4        ---     0.166              A to Z              n115932_bdd_4_lut
-Route         2   e 1.158                                  n38_adj_15779
-LUT4        ---     0.166              A to Z              Mux_5068_i46_3_lut
-Route         1   e 1.020                                  n46_adj_15783
-LUT4        ---     0.166              B to Z              box20_grid_eval_idx_pclk[4]_bdd_4_lut_51857
-Route         1   e 1.020                                  n115884
-LUT4        ---     0.166              A to Z              n115884_bdd_4_lut
-Route         2   e 1.158                                  n115887
-LUT4        ---     0.166              C to Z              i664_2_lut_rep_580_3_lut_4_lut
-Route         5   e 1.341                                  n117012
-LUT4        ---     0.166              C to Z              n9942_bdd_4_lut
-Route         6   e 1.378                                  n9996
-LUT4        ---     0.166              B to Z              i9771_4_lut_adj_916
-Route         1   e 1.020                                  n10038
-LUT4        ---     0.166              D to Z              i9947_4_lut_4_lut
-Route         1   e 0.020                                  n4_adj_16053
-MUXL5       ---     0.116           ALUT to Z              i40136
-Route         1   e 1.020                                  n3
-LUT4        ---     0.166              B to Z              i6_3_lut
-Route         1   e 0.020                                  n4_adj_16050
-MUXL5       ---     0.116           ALUT to Z              mux_9011_i1
-Route         1   e 1.020                                  n108833
-LUT4        ---     0.166              B to Z              i42024_2_lut
-Route        44   e 1.776                                  n70264
-LUT4        ---     0.166              B to Z              i1_4_lut_adj_841
-Route         5   e 1.341                                  n105980
-LUT4        ---     0.166              D to Z              i24931_4_lut
-Route         1   e 1.020                                  n91629
+L_CO        ---     0.365             CK to Q              box20_grid_eval_idx_pclk_9437__i2 (from PCLK_c)
+Route        82   e 2.001                                  box20_grid_eval_idx_pclk[2]
+LUT4        ---     0.166              C to Z              box20_grid_eval_idx_pclk[1]_bdd_4_lut_62210_else_4_lut
+Route         1   e 0.020                                  n131775
+MUXL5       ---     0.116           BLUT to Z              i63224
+Route         1   e 1.020                                  n131777
+LUT4        ---     0.166              A to Z              n129432_bdd_4_lut
+Route         2   e 1.158                                  n22
+LUT4        ---     0.166              A to Z              Mux_5687_i30_3_lut
+Route         2   e 1.158                                  n30_adj_16799
+LUT4        ---     0.166              D to Z              i52791_3_lut_3_lut_4_lut
+Route         1   e 0.020                                  n122150
+MUXL5       ---     0.116           BLUT to Z              i52793
+Route         3   e 1.239                                  n68472
+LUT4        ---     0.166              C to Z              i1_2_lut_3_lut_4_lut_adj_1182
+Route         2   e 1.158                                  n4_adj_16861
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_898
+Route         1   e 1.020                                  n118640
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_897
+Route         1   e 1.020                                  n117634
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_895
+Route         2   e 1.158                                  n75728
+LUT4        ---     0.166              D to Z              i11603_4_lut
+Route         1   e 1.020                                  n4_adj_16870
+LUT4        ---     0.166              B to Z              i1_4_lut_adj_1216
+Route         1   e 0.020                                  n117405
+MUXL5       ---     0.116           ALUT to Z              mux_10156_i1
+Route        48   e 1.794                                  n74512
+LUT4        ---     0.166              B to Z              i61716_4_lut
+Route         2   e 1.158                                  box20_grid_eval_mask_pclk_47__N_6730[46]
+LUT4        ---     0.166              B to Z              i1_2_lut_adj_1357
+Route         1   e 1.020                                  PCLK_c_enable_3370
                   --------
-                   20.240  (14.2% logic, 85.8% route), 17 logic levels.
+                   18.689  (14.5% logic, 85.5% route), 16 logic levels.
 
-Warning: 20.065 ns is the maximum delay for this constraint.
+Warning: 18.610 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -359,10 +347,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CRYSTAL_c]               |     5.000 ns|    18.771 ns|    14 *
+clk1 [get_nets CRYSTAL_c]               |     5.000 ns|    15.870 ns|    13 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets PCLK_c]                  |     5.000 ns|    20.065 ns|    17 *
+clk0 [get_nets PCLK_c]                  |     5.000 ns|    18.610 ns|    16 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -372,107 +360,83 @@ clk0 [get_nets PCLK_c]                  |     5.000 ns|    20.065 ns|    17 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-n43829                                  |       8|    4024|     49.12%
+n74512                                  |      48|    4096|     50.00%
                                         |        |        |
-n91762                                  |      16|    4024|     49.12%
+n95514                                  |      16|    4096|     50.00%
                                         |        |        |
-n107289                                 |       1|    4024|     49.12%
+n99418                                  |      76|    3776|     46.09%
                                         |        |        |
-n117033                                 |      68|    4024|     49.12%
+n4_adj_16861                            |       2|    3344|     40.82%
                                         |        |        |
-n44045                                  |       1|    3000|     36.62%
+n68472                                  |       3|    3344|     40.82%
                                         |        |        |
-n106818                                 |       1|    3000|     36.62%
+n75728                                  |       2|    3344|     40.82%
                                         |        |        |
-n31_adj_15774                           |       1|    2744|     33.50%
+n117634                                 |       1|    3344|     40.82%
                                         |        |        |
-n88056                                  |       2|    2364|     28.86%
+n118640                                 |       1|    3344|     40.82%
                                         |        |        |
-n102686                                 |       3|    2364|     28.86%
+box20_grid_eval_idx_pclk[0]             |      76|    2592|     31.64%
                                         |        |        |
-n102706                                 |       6|    2364|     28.86%
+n118644                                 |       1|    2496|     30.47%
                                         |        |        |
-n102934                                 |       1|    2364|     28.86%
+n4_adj_16870                            |       1|    2444|     29.83%
                                         |        |        |
-n102990                                 |       1|    2364|     28.86%
+n117405                                 |       1|    2444|     29.83%
                                         |        |        |
-n116999                                 |       2|    2364|     28.86%
+n29_adj_16781                           |       2|    2240|     27.34%
                                         |        |        |
-n88060                                  |       4|    2352|     28.71%
+n122150                                 |       1|    2216|     27.05%
                                         |        |        |
-n117253                                 |       7|    2288|     27.93%
+n30_adj_16780                           |       2|    2016|     24.61%
                                         |        |        |
-n116257                                 |       1|    2040|     24.90%
+n131854                                 |       1|    1920|     23.44%
                                         |        |        |
-n30_adj_15773                           |       1|    1826|     22.29%
+qvga_tx_col_sys[4]                      |      39|    1856|     22.66%
                                         |        |        |
-yuv_order_pclk[1]                       |      25|    1712|     20.90%
+n129616                                 |       1|    1824|     22.27%
                                         |        |        |
-n102851                                 |       1|    1640|     20.02%
+n70_adj_17057                           |       1|    1760|     21.48%
                                         |        |        |
-n98364                                  |       4|    1600|     19.53%
+n45678                                  |       1|    1760|     21.48%
                                         |        |        |
-n102852                                 |       1|    1588|     19.38%
+n76104                                  |       1|    1652|     20.17%
                                         |        |        |
-n70264                                  |      44|    1584|     19.34%
+n118624                                 |       1|    1652|     20.17%
                                         |        |        |
-n105980                                 |       5|    1584|     19.34%
+box20_grid_eval_idx_pclk[2]             |      82|    1504|     18.36%
                                         |        |        |
-n108833                                 |       1|    1584|     19.34%
+n129342                                 |       1|    1504|     18.36%
                                         |        |        |
-n3                                      |       1|    1379|     16.83%
+n113                                    |       1|    1376|     16.80%
                                         |        |        |
-n4_adj_16050                            |       1|    1379|     16.83%
+n114                                    |       1|    1376|     16.80%
                                         |        |        |
-n102989                                 |       1|    1320|     16.11%
+n122165                                 |       1|    1376|     16.80%
                                         |        |        |
-n102853                                 |       1|    1272|     15.53%
+n122167                                 |       1|    1376|     16.80%
                                         |        |        |
-n22                                     |       3|    1184|     14.45%
+n31_adj_16779                           |       1|    1280|     15.63%
                                         |        |        |
-n106160                                 |       1|    1182|     14.43%
+n129615                                 |       1|    1152|     14.06%
                                         |        |        |
-n106162                                 |       1|    1182|     14.43%
+n15_adj_16800                           |       2|    1128|     13.77%
                                         |        |        |
-qvga_yuv_word0_12__N_6376[2]            |       4|    1182|     14.43%
+n46_adj_16798                           |       2|    1128|     13.77%
                                         |        |        |
-qvga_yuv_word0_12__N_6376[3]            |       4|    1182|     14.43%
+n122151                                 |       1|    1128|     13.77%
                                         |        |        |
-n38_adj_15775                           |       3|    1174|     14.33%
+n30_adj_16799                           |       2|    1088|     13.28%
                                         |        |        |
-n29                                     |       3|    1154|     14.09%
+n38_adj_16656                           |       2|     940|     11.47%
                                         |        |        |
-qvga_tx_col_sys[6]                      |      17|    1152|     14.06%
+n45                                     |       2|     940|     11.47%
                                         |        |        |
-n44080                                  |       1|    1024|     12.50%
+qvga_tx_col_sys[5]                      |      36|     928|     11.33%
                                         |        |        |
-n116411                                 |       1|    1024|     12.50%
+n131852                                 |       1|     912|     11.13%
                                         |        |        |
-n116255                                 |       1|     992|     12.11%
-                                        |        |        |
-n116256                                 |       1|     992|     12.11%
-                                        |        |        |
-n115854                                 |       1|     928|     11.33%
-                                        |        |        |
-n115872                                 |       1|     918|     11.21%
-                                        |        |        |
-n116136                                 |       1|     918|     11.21%
-                                        |        |        |
-n115878                                 |       1|     898|     10.96%
-                                        |        |        |
-qvga_tx_col_sys[5]                      |      20|     896|     10.94%
-                                        |        |        |
-n596                                    |      20|     884|     10.79%
-                                        |        |        |
-n4_adj_16057                            |       3|     834|     10.18%
-                                        |        |        |
-n72073                                  |       3|     834|     10.18%
-                                        |        |        |
-n106130                                 |       1|     834|     10.18%
-                                        |        |        |
-n107295                                 |       1|     834|     10.18%
-                                        |        |        |
-n109038                                 |       1|     834|     10.18%
+n131853                                 |       1|     912|     11.13%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -480,10 +444,10 @@ n109038                                 |       1|     834|     10.18%
 Timing summary:
 ---------------
 
-Timing errors: 8192  Score: 110953346
+Timing errors: 8192  Score: 95829008
 
-Constraints cover  23092401 paths, 15795 nets, and 49351 connections (99.5% coverage)
+Constraints cover  17910605 paths, 17184 nets, and 53205 connections (99.4% coverage)
 
 
-Peak memory: 263725056 bytes, TRCE: 6991872 bytes, DLYMAN: 0 bytes
+Peak memory: 273620992 bytes, TRCE: 5021696 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

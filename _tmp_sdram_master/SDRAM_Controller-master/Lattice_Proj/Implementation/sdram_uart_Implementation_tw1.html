@@ -1,0 +1,424 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file sdram_uart_implementation_map.ncd.
+Design name: sdram_uart_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HC
+Package:     TQFP144
+Performance: 6
+Loading device for application trce from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2</big></U></B>
+Sun May 26 19:32:19 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o sdram_uart_Implementation.tw1 -gui -msgset C:/lscc/sd_ram_uart/promote.xml sdram_uart_Implementation_map.ncd sdram_uart_Implementation.prf 
+Design file:     sdram_uart_implementation_map.ncd
+Preference file: sdram_uart_implementation.prf
+Device,speed:    LCMXO2-7000HC,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<FONT COLOR=red><LI><A href='#map_twr_pref_0_0' Target='right'><FONT COLOR=red>FREQUENCY NET "SD_CLK_c" 133.333333 MHz (80 errors)</FONT></A></LI>
+</FONT>            3195 items scored, 80 timing errors detected.
+Warning: 101.636MHz is the maximum frequency for this preference.
+
+<LI><A href='#map_twr_pref_0_1' Target='right'>FREQUENCY NET "clk_c" 50.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
+            3195 items scored, 80 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 2.339ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              all_modules1/sdram_controller1/initTimer/count_769__i2  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:               9.706ns  (37.4% logic, 62.6% route), 9 logic levels.
+
+ Constraint Details:
+
+      9.706ns physical path delay all_modules1/sdram_controller1/initTimer/SLICE_34 to all_modules1/sdram_controller1/SLICE_169 exceeds
+      7.500ns delay constraint less
+      0.133ns DIN_SET requirement (totaling 7.367ns) by 2.339ns
+
+ Physical Path Details:
+
+      Data path all_modules1/sdram_controller1/initTimer/SLICE_34 to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367 */SLICE_34.CLK to *r/SLICE_34.Q1 all_modules1/sdram_controller1/initTimer/SLICE_34 (from SD_CLK_c)
+ROUTE         2   e 0.896 *r/SLICE_34.Q1 to */SLICE_243.B1 all_modules1/sdram_controller1/initTimer/count_2
+CTOF_DEL    ---     0.408 */SLICE_243.B1 to */SLICE_243.F1 all_modules1/SLICE_243
+ROUTE         1   e 0.349 */SLICE_243.F1 to */SLICE_243.A0 all_modules1/sdram_controller1/initTimer/n6
+CTOF_DEL    ---     0.408 */SLICE_243.A0 to */SLICE_243.F0 all_modules1/SLICE_243
+ROUTE         1   e 0.896 */SLICE_243.F0 to */SLICE_242.C1 all_modules1/sdram_controller1/initTimer/n12
+CTOF_DEL    ---     0.408 */SLICE_242.C1 to */SLICE_242.F1 all_modules1/SLICE_242
+ROUTE         1   e 0.349 */SLICE_242.F1 to */SLICE_242.C0 all_modules1/sdram_controller1/initTimer/n10
+CTOF_DEL    ---     0.408 */SLICE_242.C0 to */SLICE_242.F0 all_modules1/SLICE_242
+ROUTE         1   e 0.896 */SLICE_242.F0 to */SLICE_241.C1 all_modules1/sdram_controller1/initTimer/n24
+CTOF_DEL    ---     0.408 */SLICE_241.C1 to */SLICE_241.F1 all_modules1/SLICE_241
+ROUTE         3   e 0.896 */SLICE_241.F1 to */SLICE_271.A0 all_modules1/sdram_controller1/initTimer/n30
+CTOF_DEL    ---     0.408 */SLICE_271.A0 to */SLICE_271.F0 all_modules1/SLICE_271
+ROUTE         2   e 0.896 */SLICE_271.F0 to */SLICE_224.A1 all_modules1/sdram_controller1/n4836
+CTOF_DEL    ---     0.408 */SLICE_224.A1 to */SLICE_224.F1 all_modules1/SLICE_224
+ROUTE         1   e 0.896 */SLICE_224.F1 to */SLICE_169.D0 all_modules1/sdram_controller1/n324
+CTOF_DEL    ---     0.408 */SLICE_169.D0 to */SLICE_169.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1   e 0.001 */SLICE_169.F0 to *SLICE_169.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
+                  --------
+                    9.706   (37.4% logic, 62.6% route), 9 logic levels.
+
+Warning: 101.636MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="map_twr_pref_0_1"></A>Preference: FREQUENCY NET "clk_c" 50.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "SD_CLK_c" 133.333333 MHz |             |             |
+;                                       |  133.333 MHz|  101.636 MHz|   9 *
+                                        |             |             |
+FREQUENCY NET "clk_c" 50.000000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+all_modules1/sdram_controller1/initTimer|        |        |
+/n10                                    |       1|      42|     52.50%
+                                        |        |        |
+all_modules1/sdram_controller1/initTimer|        |        |
+/n24                                    |       1|      42|     52.50%
+                                        |        |        |
+all_modules1/sdram_controller1/initTimer|        |        |
+/n30                                    |       3|      42|     52.50%
+                                        |        |        |
+all_modules1/sdram_controller1/initTimer|        |        |
+/n12                                    |       1|      39|     48.75%
+                                        |        |        |
+all_modules1/sdram_controller1/refreshTi|        |        |
+mer/n5                                  |       1|      38|     47.50%
+                                        |        |        |
+all_modules1/sdram_controller1/refreshTi|        |        |
+mer/n9_adj_888                          |       1|      38|     47.50%
+                                        |        |        |
+refresh_tim_flag                        |       3|      38|     47.50%
+                                        |        |        |
+all_modules1/sdram_controller1/initTimer|        |        |
+/n6                                     |       1|      36|     45.00%
+                                        |        |        |
+all_modules1/sdram_controller1/refreshTi|        |        |
+mer/n12_adj_892                         |       1|      33|     41.25%
+                                        |        |        |
+all_modules1/sdram_controller1/refreshTi|        |        |
+mer/n10                                 |       1|      30|     37.50%
+                                        |        |        |
+all_modules1/sdram_controller1/SD_CLK_c_|        |        |
+enable_68                               |       9|      27|     33.75%
+                                        |        |        |
+SD_CLK_c_enable_117                     |      13|      26|     32.50%
+                                        |        |        |
+all_modules1/sdram_controller1/n4836    |       2|      24|     30.00%
+                                        |        |        |
+all_modules1/sdram_controller1/n324     |       1|      19|     23.75%
+                                        |        |        |
+all_modules1/sdram_controller1/n4546    |       1|      19|     23.75%
+                                        |        |        |
+all_modules1/sdram_controller1/refreshTi|        |        |
+mer/count_11                            |       2|      15|     18.75%
+                                        |        |        |
+all_modules1/sdram_controller1/refreshTi|        |        |
+mer/count_9                             |       2|      15|     18.75%
+                                        |        |        |
+all_modules1/sdram_controller1/initTimer|        |        |
+/count_1                                |       2|      12|     15.00%
+                                        |        |        |
+all_modules1/sdram_controller1/initTimer|        |        |
+/count_2                                |       2|      12|     15.00%
+                                        |        |        |
+all_modules1/sdram_controller1/initTimer|        |        |
+/count_0                                |       2|      12|     15.00%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1   Loads: 24
+   No transfer within this clock domain is found
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: SD_CLK_c   Source: clk_multiply/PLLInst_0.CLKOP   Loads: 196
+   Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 1
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 80  Score: 42647
+Cumulative negative slack: 42647
+
+Constraints cover 3525 paths, 2 nets, and 1673 connections (85.71% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2</big></U></B>
+Sun May 26 19:32:19 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o sdram_uart_Implementation.tw1 -gui -msgset C:/lscc/sd_ram_uart/promote.xml sdram_uart_Implementation_map.ncd sdram_uart_Implementation.prf 
+Design file:     sdram_uart_implementation_map.ncd
+Preference file: sdram_uart_implementation.prf
+Device,speed:    LCMXO2-7000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "SD_CLK_c" 133.333333 MHz (0 errors)</A></LI>            3195 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_1' Target='right'>FREQUENCY NET "clk_c" 50.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
+            3195 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.290ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         Sync_RAM   Q              all_modules1/fifo2/m_RAM1/RAM0  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo2/s_RAM_i0_i0  (to SD_CLK_c +)
+
+   Delay:               0.277ns  (99.6% logic, 0.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.277ns physical path delay all_modules1/fifo2/SLICE_49 to all_modules1/fifo2/SLICE_49 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.290ns
+
+ Physical Path Details:
+
+      Data path all_modules1/fifo2/SLICE_49 to all_modules1/fifo2/SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKTOF_DEL  ---     0.276 */SLICE_49.WCK to *2/SLICE_49.F0 all_modules1/fifo2/SLICE_49 (from SD_CLK_c)
+ROUTE         1   e 0.001 *2/SLICE_49.F0 to */SLICE_49.DI0 all_modules1/fifo2/o_data_7_N_190_0 (to SD_CLK_c)
+                  --------
+                    0.277   (99.6% logic, 0.4% route), 1 logic levels.
+
+
+================================================================================
+<A name="map_twr_pref_1_1"></A>Preference: FREQUENCY NET "clk_c" 50.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "SD_CLK_c" 133.333333 MHz |             |             |
+;                                       |     0.000 ns|     0.290 ns|   1  
+                                        |             |             |
+FREQUENCY NET "clk_c" 50.000000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1   Loads: 24
+   No transfer within this clock domain is found
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: SD_CLK_c   Source: clk_multiply/PLLInst_0.CLKOP   Loads: 196
+   Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 1
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 3525 paths, 2 nets, and 1673 connections (85.71% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 80 (setup), 0 (hold)
+Score: 42647 (setup), 0 (hold)
+Cumulative negative slack: 42647 (42647+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

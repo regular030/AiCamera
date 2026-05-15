@@ -6,7 +6,7 @@ Performance Grade:      6
 PACKAGE:          CABGA256
 Package Status:                     Final          Version 1.44
 
-Mon May 11 21:15:33 2026
+Fri May 15 05:53:40 2026
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
@@ -47,7 +47,6 @@ Pinout by Port Name:
 | SD_BA[0]  | K12/3    | LVCMOS33_OUT | PR29B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | SD_BA[1]  | L12/3    | LVCMOS33_OUT | PR29D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | SD_CAS_N  | R13/3    | LVCMOS33_OUT | PR41C |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| SD_CKE    | P8/8     | LVCMOS25_OUT | PB13B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | SD_CLK    | J15/2    | LVCMOS33_OUT | PR23B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | SD_CS_N   | R15/3    | LVCMOS33_OUT | PR38C |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | SD_DQM[0] | T15/3    | LVCMOS33_OUT | PR38D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
@@ -277,7 +276,7 @@ Pinout by Pin Number:
 | P5/6     |     unused, PULL:DOWN |            |              | PL47D | LLC_GPLL0C_IN/LDQ44      |           |
 | P6/6     |     unused, PULL:DOWN |            |              | PL47C | LLC_GPLL0T_IN/LDQ44      |           |
 | P7/8     |     unused, PULL:DOWN |            |              | PB6B  | D4/MOSI2/IO4             |           |
-| P8/8     | SD_CKE                |            | LVCMOS25_OUT | PB13B | CS1N                     |           |
+| P8/8     |     unused, PULL:DOWN |            |              | PB13B | CS1N                     |           |
 | P11/3    |     unused, PULL:DOWN |            |              | PR47C | LRC_GPLL0T_IN/RDQ44      |           |
 | P12/3    |     unused, PULL:DOWN |            |              | PR47D | LRC_GPLL0C_IN/RDQ44      |           |
 | P13/3    |     unused, PULL:DOWN |            |              | PR41A | RDQ44                    |           |
@@ -353,7 +352,6 @@ LOCATE  COMP  "SD_A[9]"  SITE  "A7";
 LOCATE  COMP  "SD_BA[0]"  SITE  "K12";
 LOCATE  COMP  "SD_BA[1]"  SITE  "L12";
 LOCATE  COMP  "SD_CAS_N"  SITE  "R13";
-LOCATE  COMP  "SD_CKE"  SITE  "P8";
 LOCATE  COMP  "SD_CLK"  SITE  "J15";
 LOCATE  COMP  "SD_CS_N"  SITE  "R15";
 LOCATE  COMP  "SD_DQM[0]"  SITE  "T15";
@@ -400,5 +398,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon May 11 21:15:34 2026
+Fri May 15 05:53:41 2026
 

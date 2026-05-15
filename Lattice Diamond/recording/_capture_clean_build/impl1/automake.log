@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon May 11 21:13:32 2026
+Fri May 15 05:51:53 2026
 
 
 Command Line:  synthesis -f capclean_impl1_lattice.synproj 
@@ -78,10 +78,15 @@ Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/fpga_top.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/framebuffer_capture.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/ov5640_sccb_init.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/pll_24m_to_120m.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/reset_sync.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/sd_spi_writer.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/sdram_single_req_probe.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/sdram_stress_tester.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/uart_rx.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/uart_tx.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/w9825_direct_req_sdram_ctrl.v
+Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/w9825_ref_sdram_ctrl.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/w9825_sdram_ctrl.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/debug_uart_min.v
 Verilog design file = C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/debug_uart_status.v
@@ -103,27 +108,39 @@ Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_text.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_cmd_rx.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v. VERI-1482
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(123): analyzing included file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/model_box20_linear_plus_neg300/box20_linear_params.vh. VERI-1328
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(122): analyzing included file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/model_box20_linear_plus_neg300/box20_linear_params.vh. VERI-1328
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4908): analyzing included file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_burst_selftest.v. VERI-1328
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/framebuffer_capture.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/pll_24m_to_120m.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/reset_sync.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sd_spi_writer.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sdram_single_req_probe.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sdram_stress_tester.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_rx.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_tx.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v. VERI-1482
+Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_ref_sdram_ctrl.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_min.v. VERI-1482
 Analyzing Verilog file c:/users/kunsh/desktop/aicamera/lattice diamond/recording/debug_uart_status.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): fpga_top
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1): compiling module fpga_top. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/pll_24m_to_120m.v(2): compiling module pll_24m_to_120m. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(1696): compiling module EHXPLLL(CLKFB_DIV=5,CLKOP_DIV=5,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=4,CLKOP_TRIM_POL="FALLING",CLKOS_TRIM_POL="FALLING"). VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/reset_sync.v(1): compiling module reset_sync. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(1): compiling module ov5640_sccb_init. VERI-1018
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(36): net reg_addr does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(37): net reg_data does not have a driver. VDB-1002
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/uart_rx.v(1): compiling module uart_rx. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_cmd_rx.v(1): compiling module fpga_cmd_rx. VERI-1018
-INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(1): compiling module w9825_sdram_ctrl. VERI-1018
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(97): expression size 32 truncated to fit in target size 6. VERI-1209
+INFO - synthesis: C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(55): compiling module BB. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_burst_selftest.v(1): compiling module w9825_burst_selftest(CLK_HZ=120000000,USE_ODDR_CLK=1'b0). VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/sdram_single_req_probe.v(1): compiling module sdram_single_req_probe. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4910): compiling module sdram_req_cdc_bridge. VERI-1018
+INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v(1): compiling module w9825_direct_req_sdram_ctrl. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/async_fifo_16x1024.v(1): compiling module async_fifo_16x1024. VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/async_fifo_16x1024.v(1): compiling module async_fifo_16x1024(AW=15). VERI-1018
 INFO - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/framebuffer_capture.v(1): compiling module framebuffer_capture. VERI-1018
@@ -134,20 +151,21 @@ WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/b
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/box20_cnn_int8_core.v(150): net w1 does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/box20_cnn_int8_core.v(151): net b1 does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/box20_cnn_int8_core.v(152): net fcw does not have a driver. VDB-1002
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1191): expression size 13 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1227): expression size 10 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1228): expression size 10 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1229): expression size 10 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1259): expression size 8 truncated to fit in target size 5. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1260): expression size 9 truncated to fit in target size 6. VERI-1209
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1261): expression size 8 truncated to fit in target size 5. VERI-1209
-Constant propagated thru Write Port :clk_write_port_1179.
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1606): expression size 13 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1642): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1643): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1644): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1674): expression size 8 truncated to fit in target size 5. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1675): expression size 9 truncated to fit in target size 6. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(1676): expression size 8 truncated to fit in target size 5. VERI-1209
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3820): Register qvga_sdram_wr_req_4573 is stuck at Zero. VDB-5013
+Constant propagated thru Write Port :clk_write_port_1261.
 
-Constant propagated thru Write Port :clk_write_port_1180.
+Constant propagated thru Write Port :clk_write_port_1262.
 
-Constant propagated thru Write Port :clk_write_port_1181.
+Constant propagated thru Write Port :clk_write_port_1263.
 
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2157): Register qvga_avg_pending_pclk_3881 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2606): Register qvga_avg_pending_pclk_4449 is stuck at Zero. VDB-5013
 Last elaborated design is fpga_top()
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -209,6 +227,70 @@ WARNING - synthesis: Bit 3 of Register qvga_prev_v_pclk is stuck at Zero
 WARNING - synthesis: Bit 2 of Register qvga_prev_v_pclk is stuck at Zero
 WARNING - synthesis: Bit 1 of Register qvga_prev_v_pclk is stuck at Zero
 WARNING - synthesis: Bit 0 of Register qvga_prev_v_pclk is stuck at Zero
+WARNING - synthesis: Bit 21 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_wr_data is stuck at Zero
+WARNING - synthesis: Bit 21 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register qvga_sdram_state_sys is stuck at Zero
+WARNING - synthesis: Bit 1 of Register qvga_sdram_state_sys is stuck at Zero
+WARNING - synthesis: Bit 0 of Register qvga_sdram_state_sys is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(487): Removing unused instance _5136. VDB-5034
 WARNING - synthesis: I/O Port RX 's net has no driver and is unused.
 WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
 WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
@@ -217,9 +299,19 @@ WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
 ######## Converting I/O port M_D2 to output.
 ######## Converting I/O port M_D3 to output.
 ######## Converting I/O port M_CMD to output.
-WARNING - synthesis: Bit 1 of Register \u_sdram/SD_DQM is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \u_sdram/SD_DQM is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(105): Register \u_sdram/SD_CKE_220 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4993): Register \u_qvga_sdram_bridge/src_is_read_hold_126 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_ack_sync is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_req_sync is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(5040): Register \u_qvga_sdram_bridge/dst_req_seen_136 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v(432): Register \u_sdram/SD_DQM_i0 is stuck at Zero. VDB-5013
 Constant propagated thru Write Port :\u_box20_cnn_scanner/pclk_I_0.
 
 Constant propagated thru Read Port :\u_box20_cnn_scanner/rd_addr_14__I_0.
@@ -241,11 +333,153 @@ WARNING - synthesis: Bit 2 of Register \u_box20_cnn_scanner/rd_data is stuck at 
 WARNING - synthesis: Bit 1 of Register \u_box20_cnn_scanner/rd_data is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_box20_cnn_scanner/rd_data is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_rst/shreg is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/src_addr_hold is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/src_data_hold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/src_ack_sync is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/src_rd_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_qvga_sdram_bridge/dst_req_sync is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_wr_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_wr_data is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_rd_addr is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/dst_rd_hold is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_qvga_sdram_bridge/bridge_rd_data is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \u_rst/shreg is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_rst/shreg is stuck at Zero
 WARNING - synthesis: Bit 0 of Register pclk_rst_sync is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(105): Register \u_sdram/SD_CS_N_221 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 0 of Register \u_sdram_rst/shreg is stuck at Zero
 WARNING - synthesis: Bit 1 of Register pclk_rst_sync is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \u_sdram_rst/shreg is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \u_sdram_rst/shreg is stuck at Zero
 INFO - synthesis: Extracted state machine for register 'qvga_tx_state_sys' with gray encoding
 original encoding -> new encoding (gray encoding)
 
@@ -273,37 +507,6 @@ original encoding -> new encoding (gray encoding)
 
  10 -> 11
 
-INFO - synthesis: Extracted state machine for register '\u_sdram/state' with one-hot encoding
-original encoding -> new encoding (one-hot encoding)
-
- 000001 -> 00000000000001
-
- 000010 -> 00000000000010
-
- 000011 -> 00000000000100
-
- 000100 -> 00000000001000
-
- 000101 -> 00000000010000
-
- 000110 -> 00000000100000
-
- 000111 -> 00000001000000
-
- 001000 -> 00000010000000
-
- 001001 -> 00000100000000
-
- 001010 -> 00001000000000
-
- 001011 -> 00010000000000
-
- 001100 -> 00100000000000
-
- 001101 -> 01000000000000
-
- 001110 -> 10000000000000
-
 
 
 
@@ -318,11 +521,12 @@ WARNING - synthesis: Bit 0 of Register \u_cam_init/bytes[3] is stuck at Zero
 WARNING - synthesis: Bit 21 of Register sdram_rd_addr is stuck at Zero
 WARNING - synthesis: Bit 20 of Register sdram_rd_addr is stuck at Zero
 WARNING - synthesis: Bit 19 of Register sdram_rd_addr is stuck at Zero
-WARNING - synthesis: Bit 13 of Register \u_sdram/state_FSM is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \u_cam_init/retry_ctr is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \u_cam_init/retry_ctr is stuck at Zero
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_direct_req_sdram_ctrl.v(432): Register \u_sdram/init_done_310 is stuck at One. VDB-5014
 WARNING - synthesis: Bit 5 of Register \u_cam_init/state is stuck at Zero
 WARNING - synthesis: Bit 4 of Register \u_cam_init/state is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \u_sdram/next_state is stuck at Zero
 ######## Found 2 RTL RAMs in the design.
 ######## Mapping RTL RAM \u_qvga_fifo/mem to 32 EBR blocks in PSEUDO_DUAL_PORT Mode
 
@@ -332,62 +536,58 @@ WARNING - synthesis: Bit 4 of Register \u_cam_init/state is stuck at Zero
 WARNING - synthesis: I/O Port RX 's net has no driver and is unused.
 WARNING - synthesis: I/O Port DIN 's net has no driver and is unused.
 WARNING - synthesis: I/O Port CCLK 's net has no driver and is unused.
-######## Converting I/O port SD_DQ[15] to output.
-######## Converting I/O port SD_DQ[14] to output.
-######## Converting I/O port SD_DQ[13] to output.
-######## Converting I/O port SD_DQ[12] to output.
-######## Converting I/O port SD_DQ[11] to output.
-######## Converting I/O port SD_DQ[10] to output.
-######## Converting I/O port SD_DQ[9] to output.
-######## Converting I/O port SD_DQ[8] to output.
-######## Converting I/O port SD_DQ[7] to output.
-######## Converting I/O port SD_DQ[6] to output.
-######## Converting I/O port SD_DQ[5] to output.
-######## Converting I/O port SD_DQ[4] to output.
-######## Converting I/O port SD_DQ[3] to output.
-######## Converting I/O port SD_DQ[2] to output.
-######## Converting I/O port SD_DQ[1] to output.
-######## Converting I/O port SD_DQ[0] to output.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[15] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[14] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[13] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[12] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[11] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[10] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[9] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[8] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SD_DQ[0] due to black_box_pad_pin attribute.
 WARNING - synthesis: Bit 1 of Register qvga_tx_state_sys is stuck at Zero
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/w9825_sdram_ctrl.v(103): Register \u_sdram/state_FSM_i13 is stuck at Zero. VDB-5013
 WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/ov5640_sccb_init.v(542): Register \u_cam_init/init_done_r_162 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2157): Register cam_init_pclk_sync_i0 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3915): Register tx_preview_replay_active_4067 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3915): Register tx_preview_col_gap_4074 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3717): Register tx_preview_col_gap_ctr_8415__i0 is stuck at Zero. VDB-5013
-Duplicate register/latch removal. \u_snap_fifo/mem_9342 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i5.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9086 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i14.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9083 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i13.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9081 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i12.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9079 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i11.
-Duplicate register/latch removal. \u_snap_fifo/rd_bin_rep_19_i0 is a one-to-one match with \u_snap_fifo/mem_9332.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9077 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_21__0_i0.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9075 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i9.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9073 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i8.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9071 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i7.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9069 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i6.
-Duplicate register/latch removal. \u_snap_fifo/mem_9340 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i4.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9067 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i5.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9065 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i4.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9063 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i3.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9061 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i2.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9059 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i1.
-Duplicate register/latch removal. \u_qvga_fifo/mem_9057 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_20_i0.
-Duplicate register/latch removal. \u_snap_fifo/mem_9348 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i8.
-Duplicate register/latch removal. \u_snap_fifo/mem_9334 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i1.
-Duplicate register/latch removal. \u_snap_fifo/mem_9344 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i6.
-Duplicate register/latch removal. \u_snap_fifo/mem_9346 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i7.
-Duplicate register/latch removal. \u_snap_fifo/mem_9336 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i2.
-Duplicate register/latch removal. \u_snap_fifo/mem_9338 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i3.
-Duplicate register/latch removal. \u_snap_fifo/mem_9351 is a one-to-one match with \u_snap_fifo/rd_bin_rep_19_i9.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_20_i10 is a one-to-one match with \u_qvga_fifo/mem_9077.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i1 is a one-to-one match with \u_qvga_fifo/mem_9079.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i2 is a one-to-one match with \u_qvga_fifo/mem_9081.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i3 is a one-to-one match with \u_qvga_fifo/mem_9083.
-Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_21__0_i4 is a one-to-one match with \u_qvga_fifo/mem_9086.
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3764): Register tx_snap_preamble_left_8416__i0 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3764): Register tx_snap_preamble_left_8416__i1 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(3693): Register tx_snap_row_gap_ctr_8412__i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(2606): Register cam_init_pclk_sync_i0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4848): Register tx_preview_replay_active_4652 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4848): Register tx_preview_col_gap_4659 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/kunsh/desktop/aicamera/lattice diamond/recording/fpga_top.v(4650): Register tx_preview_col_gap_ctr_9451__i0 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \u_qvga_fifo/mem_10228 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i14.
+Duplicate register/latch removal. \u_snap_fifo/mem_10484 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i5.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10225 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i13.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10223 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i12.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10221 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i11.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10219 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_18__0_i0.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10217 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i9.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10215 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i8.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10213 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i7.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10211 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i6.
+Duplicate register/latch removal. \u_snap_fifo/rd_bin_rep_16_i0 is a one-to-one match with \u_snap_fifo/mem_10474.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10209 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i5.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10207 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i4.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10205 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i3.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_17_i0 is a one-to-one match with \u_qvga_fifo/mem_10199.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10203 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i2.
+Duplicate register/latch removal. \u_qvga_fifo/mem_10201 is a one-to-one match with \u_qvga_fifo/rd_bin_rep_17_i1.
+Duplicate register/latch removal. \u_snap_fifo/mem_10490 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i8.
+Duplicate register/latch removal. \u_snap_fifo/mem_10476 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i1.
+Duplicate register/latch removal. \u_snap_fifo/mem_10486 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i6.
+Duplicate register/latch removal. \u_snap_fifo/mem_10488 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i7.
+Duplicate register/latch removal. \u_snap_fifo/mem_10478 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i2.
+Duplicate register/latch removal. \u_snap_fifo/mem_10480 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i3.
+Duplicate register/latch removal. \u_snap_fifo/mem_10493 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i9.
+Duplicate register/latch removal. \u_snap_fifo/mem_10482 is a one-to-one match with \u_snap_fifo/rd_bin_rep_16_i4.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_17_i10 is a one-to-one match with \u_qvga_fifo/mem_10219.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i1 is a one-to-one match with \u_qvga_fifo/mem_10221.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i2 is a one-to-one match with \u_qvga_fifo/mem_10223.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i3 is a one-to-one match with \u_qvga_fifo/mem_10225.
+Duplicate register/latch removal. \u_qvga_fifo/rd_bin_rep_18__0_i4 is a one-to-one match with \u_qvga_fifo/mem_10228.
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 Duplicate register/latch removal. \u_snap_fifo/wr_gray_i0_i10 is a one-to-one match with \u_snap_fifo/wr_bin_i0_i10.
 Duplicate register/latch removal. \u_qvga_fifo/wr_gray_i0_i15 is a one-to-one match with \u_qvga_fifo/wr_bin_i0_i15.
@@ -413,62 +613,63 @@ WARNING - synthesis: input pad net 'CCLK' has no legal load.
 WARNING - synthesis: DRC complete with 6 warnings.
 
 Design Results:
-  14865 blocks expanded
+  16070 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file capclean_impl1.ngd.
 
 ################### Begin Area Report (fpga_top)######################
-Number of register bits => 6582 of 24879 (26 % )
-CCU2C => 417
+Number of register bits => 6854 of 24879 (27 % )
+BB => 16
+CCU2C => 519
 DP16KD => 33
-FD1P3AX => 3164
-FD1P3IX => 2938
-FD1P3JX => 13
-FD1S3AX => 393
-FD1S3IX => 67
-FD1S3JX => 7
+FD1P3AX => 3334
+FD1P3IX => 2968
+FD1P3JX => 17
+FD1S3AX => 415
+FD1S3IX => 80
+FD1S3JX => 40
 GSR => 1
 IB => 13
-L6MUX21 => 1080
-LUT4 => 5110
+L6MUX21 => 1083
+LUT4 => 5871
 MULT18X18D => 4
-OB => 38
-OBZ => 20
+OB => 37
+OBZ => 4
 PDPW16KD => 1
-PFUMX => 1563
+PFUMX => 1631
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
   Net : PCLK_c, loads : 5748
-  Net : CRYSTAL_c, loads : 903
+  Net : CRYSTAL_c, loads : 1175
 Clock Enable Nets
-Number of Clock Enables: 290
+Number of Clock Enables: 353
 Top 10 highest fanout Clock Enables:
-  Net : u_qvga_fifo/CRYSTAL_c_enable_292, loads : 52
-  Net : PCLK_c_enable_2577, loads : 51
-  Net : PCLK_c_enable_3499, loads : 50
-  Net : PCLK_c_enable_3599, loads : 50
-  Net : PCLK_c_enable_2727, loads : 50
-  Net : PCLK_c_enable_3925, loads : 50
-  Net : PCLK_c_enable_3975, loads : 50
-  Net : PCLK_c_enable_5225, loads : 50
-  Net : PCLK_c_enable_4025, loads : 50
-  Net : PCLK_c_enable_2627, loads : 50
+  Net : PCLK_c_enable_2589, loads : 51
+  Net : PCLK_c_enable_3841, loads : 50
+  Net : PCLK_c_enable_3891, loads : 50
+  Net : PCLK_c_enable_3941, loads : 50
+  Net : PCLK_c_enable_3991, loads : 50
+  Net : PCLK_c_enable_4041, loads : 50
+  Net : PCLK_c_enable_2639, loads : 50
+  Net : PCLK_c_enable_4191, loads : 50
+  Net : PCLK_c_enable_2739, loads : 50
+  Net : PCLK_c_enable_4241, loads : 50
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n117262, loads : 2581
+  Net : n131738, loads : 2591
   Net : box20_eval_idx_pclk_0, loads : 1000
   Net : box20_accum_idx_reg_pclk_0, loads : 1000
-  Net : box20_eval_idx_pclk_1, loads : 657
+  Net : box20_eval_idx_pclk_1, loads : 654
   Net : box20_accum_idx_reg_pclk_1, loads : 648
-  Net : box20_accum_idx_reg_pclk_2, loads : 335
-  Net : box20_eval_idx_pclk_2, loads : 333
-  Net : maxfan_replicated_net_289, loads : 290
-  Net : maxfan_replicated_net_284, loads : 285
-  Net : u_qvga_fifo/n73169, loads : 257
+  Net : box20_accum_idx_reg_pclk_2, loads : 340
+  Net : box20_eval_idx_pclk_2, loads : 330
+  Net : maxfan_replicated_net_288, loads : 289
+  Net : n134063, loads : 284
+  Net : u_qvga_fifo/n76902, loads : 257
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -478,10 +679,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CRYSTAL_c]               |  200.000 MHz|   53.274 MHz|    14 *
+clk1 [get_nets CRYSTAL_c]               |  200.000 MHz|   63.012 MHz|    13 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets PCLK_c]                  |  200.000 MHz|   49.838 MHz|    17 *
+clk0 [get_nets PCLK_c]                  |  200.000 MHz|   53.735 MHz|    16 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -489,10 +690,10 @@ clk0 [get_nets PCLK_c]                  |  200.000 MHz|   49.838 MHz|    17 *
 2 constraints not met.
 
 
-Peak Memory Usage: 252.012  MB
+Peak Memory Usage: 261.488  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 48.891  secs
+Elapsed CPU time for LSE flow : 42.234  secs
 --------------------------------------------------------------
 
 map -a "ECP5U" -p LFE5U-25F -t CABGA256 -s 6 -oc Commercial   "capclean_impl1.ngd" -o "capclean_impl1_map.ncd" -pr "capclean_impl1.prf" -mp "capclean_impl1.mrp" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/_capture_clean_build/impl1/capclean_impl1.lpf" -lpf "C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/record.lpf"             
@@ -522,15 +723,51 @@ WARNING - map: C:/Users/kunsh/Desktop/AiCamera/Lattice Diamond/recording/record.
 Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
 Package Status:                     Final          Version 1.44.
 
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_9..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_6..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_5..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_11..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_3..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_2..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_1..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_0..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_15..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_14..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_13..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_12..u_dq_bb/IOBUF violates legal combination and is ignored.
+
 WARNING - map: DOUT_pad/IOBUF has conflicing BANK and VCCIO settings, which will be ignored
 
 WARNING - map: OPENDRAIN=OFF for DOUT_pad/IOBUF violates legal combination and is ignored.
 
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_10..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_7..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_8..u_dq_bb/IOBUF violates legal combination and is ignored.
+
+WARNING - map: HYSTERESIS=NA for g_sdram_dq_bb_4..u_dq_bb/IOBUF violates legal combination and is ignored.
+
 WARNING - map: SD_A_pad_10/IOBUF has conflicing BANK and VCCIO settings, which will be ignored
+
+WARNING - map: PULLMODE=UP for SD_A_pad_10/IOBUF violates legal combination and is ignored.
 
 WARNING - map: OPENDRAIN=OFF for SD_A_pad_10/IOBUF violates legal combination and is ignored.
 
 WARNING - map: SD_A_pad_0/IOBUF has conflicing BANK and VCCIO settings, which will be ignored
+
+WARNING - map: PULLMODE=UP for SD_A_pad_0/IOBUF violates legal combination and is ignored.
 
 WARNING - map: OPENDRAIN=OFF for SD_A_pad_0/IOBUF violates legal combination and is ignored.
 
@@ -543,7 +780,7 @@ Removing unused logic...
 
 Optimizing...
 
-1231 CCU2 constant inputs absorbed.
+1704 CCU2 constant inputs absorbed.
 
 WARNING - map: IO buffer missing for top level port RX...logic will be discarded.
 WARNING - map: IO buffer missing for top level port DIN...logic will be discarded.
@@ -552,19 +789,19 @@ WARNING - map: IO buffer missing for top level port CCLK...logic will be discard
 
 
 Design Summary:
-   Number of registers:   6582 out of 24879 (26%)
-      PFU registers:         6582 out of 24288 (27%)
+   Number of registers:   6806 out of 24879 (27%)
+      PFU registers:         6806 out of 24288 (28%)
       PIO registers:            0 out of   591 (0%)
-   Number of SLICEs:      6132 out of 12144 (50%)
-      SLICEs as Logic/ROM:   6132 out of 12144 (50%)
+   Number of SLICEs:      6625 out of 12144 (55%)
+      SLICEs as Logic/ROM:   6625 out of 12144 (55%)
       SLICEs as RAM:            0 out of  9108 (0%)
-      SLICEs as Carry:        417 out of 12144 (3%)
-   Number of LUT4s:        5991 out of 24288 (25%)
-      Number used as logic LUTs:        5157
+      SLICEs as Carry:        519 out of 12144 (4%)
+   Number of LUT4s:        6896 out of 24288 (28%)
+      Number used as logic LUTs:        5858
       Number used as distributed RAM:     0
-      Number used as ripple logic:      834
+      Number used as ripple logic:      1038
       Number used as shift registers:     0
-   Number of PIO sites used: 71 out of 197 (36%)
+   Number of PIO sites used: 70 out of 197 (36%)
    Number of block RAMs:  34 out of 56 (61%)
    Number of GSRs:  0 out of 1 (0%)
    JTAG used :      No
@@ -598,376 +835,445 @@ Design Summary:
    Number of Used DSP ALU Sites:  0 out of 28 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
    Number of clocks:  2
-     Net PCLK_c: 3031 loads, 3031 rising, 0 falling (Driver: PIO PCLK )
-     Net CRYSTAL_c: 527 loads, 527 rising, 0 falling (Driver: PIO CRYSTAL )
-   Number of Clock Enables:  289
+     Net PCLK_c: 3038 loads, 3038 rising, 0 falling (Driver: PIO PCLK )
+     Net CRYSTAL_c: 657 loads, 657 rising, 0 falling (Driver: PIO CRYSTAL )
+   Number of Clock Enables:  353
+     Net n134059: 3 loads, 3 LSLICEs
+     Net PCLK_c_enable_3741: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_664: 6 loads, 6 LSLICEs
+     Net PCLK_c_enable_5510: 24 loads, 24 LSLICEs
+     Net CRYSTAL_c_enable_612: 16 loads, 16 LSLICEs
+     Net CRYSTAL_c_enable_600: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_643: 10 loads, 10 LSLICEs
+     Net CRYSTAL_c_enable_304: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4591: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_2547: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_2589: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3225: 4 loads, 4 LSLICEs
+     Net tx_in_gap: 13 loads, 13 LSLICEs
+     Net PCLK_c_enable_4641: 25 loads, 25 LSLICEs
      Net href_pclk: 5 loads, 5 LSLICEs
-     Net box20_grid_eval_active_pclk: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5453: 6 loads, 6 LSLICEs
-     Net PCLK_c_enable_5459: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_4125: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_661: 6 loads, 6 LSLICEs
-     Net PCLK_c_enable_5462: 24 loads, 24 LSLICEs
-     Net PCLK_c_enable_4175: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_2528: 4 loads, 4 LSLICEs
-     Net PCLK_c_enable_2535: 4 loads, 4 LSLICEs
-     Net PCLK_c_enable_2577: 25 loads, 25 LSLICEs
-     Net qvga_tx_busy_sys_N_12793: 6 loads, 6 LSLICEs
-     Net CRYSTAL_c_enable_4: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_3023: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_3029: 4 loads, 4 LSLICEs
-     Net PCLK_c_enable_3036: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_3272: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3319: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_5507: 12 loads, 12 LSLICEs
+     Net PCLK_c_enable_10: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_12: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4071: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_20: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_85: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_4086: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_246: 25 loads, 25 LSLICEs
+     Net CRYSTAL_c_enable_36: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_35: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_347: 13 loads, 13 LSLICEs
+     Net CRYSTAL_c_enable_157: 1 loads, 1 LSLICEs
      Net qvga_fifo_rd_en: 9 loads, 9 LSLICEs
-     Net CRYSTAL_c_enable_490: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_3084: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3131: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_5297: 12 loads, 12 LSLICEs
-     Net box20_eval_active_pclk: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_3842: 8 loads, 8 LSLICEs
-     Net PCLK_c_enable_24: 2 loads, 2 LSLICEs
-     Net PCLK_c_enable_3857: 8 loads, 8 LSLICEs
-     Net PCLK_c_enable_5025: 26 loads, 26 LSLICEs
-     Net CRYSTAL_c_enable_122: 25 loads, 25 LSLICEs
-     Net CRYSTAL_c_enable_127: 5 loads, 5 LSLICEs
-     Net CRYSTAL_c_enable_26: 2 loads, 2 LSLICEs
-     Net PCLK_c_enable_4225: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_3872: 8 loads, 8 LSLICEs
-     Net PCLK_c_enable_3879: 4 loads, 4 LSLICEs
-     Net PCLK_c_enable_3881: 2 loads, 2 LSLICEs
-     Net PCLK_c_enable_5075: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_5125: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_5175: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_5225: 26 loads, 26 LSLICEs
-     Net CRYSTAL_c_enable_272: 20 loads, 20 LSLICEs
-     Net PCLK_c_enable_5314: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_4325: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_5322: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5461: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5272: 24 loads, 24 LSLICEs
-     Net PCLK_c_enable_4275: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_26: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_23: 1 loads, 1 LSLICEs
-     Net qvga_frame_pending_sys_N_12828: 4 loads, 4 LSLICEs
-     Net PCLK_c_enable_3499: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_25: 1 loads, 1 LSLICEs
-     Net cmd_snapshot_pulse: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5303: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5304: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5299: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5300: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5301: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5400: 30 loads, 30 LSLICEs
-     Net PCLK_c_enable_5404: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_5336: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5329: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5331: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5330: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5332: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5333: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5335: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5313: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5305: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_3882: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5312: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5307: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5451: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5450: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5449: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5448: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5447: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5446: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5445: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5444: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5443: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5442: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5441: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5440: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5439: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5438: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5437: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5436: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5435: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5434: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5433: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5432: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5431: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5430: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5429: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5428: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5427: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5426: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5425: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5424: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5423: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5422: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5421: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5420: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5419: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5418: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5417: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5416: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5415: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5414: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5413: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5412: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5411: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5410: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5409: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5408: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5407: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5406: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_5405: 23 loads, 23 LSLICEs
-     Net PCLK_c_enable_671: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_681: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_691: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_701: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_711: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_721: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_731: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_741: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_751: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_761: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_771: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_781: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_791: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_801: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_811: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_821: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_831: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_841: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_851: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_861: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_871: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_881: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_891: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_901: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_911: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_921: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_931: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_941: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_951: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_961: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_971: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_981: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_991: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1001: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1011: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1021: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1031: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1041: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1051: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1061: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1071: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1081: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1091: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1101: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1111: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1121: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_1131: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_5308: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5309: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5311: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_2627: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_2677: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_2727: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_2777: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_2827: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_2877: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_2927: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_2977: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_3149: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_3030: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_3037: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_3199: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3249: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3299: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3349: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3399: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3449: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3549: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3599: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3649: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3699: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3749: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3799: 25 loads, 25 LSLICEs
-     Net PCLK_c_enable_3807: 4 loads, 4 LSLICEs
-     Net PCLK_c_enable_5460: 9 loads, 9 LSLICEs
-     Net CRYSTAL_c_enable_129: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_3925: 22 loads, 22 LSLICEs
-     Net PCLK_c_enable_3975: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_4025: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_4075: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4375: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4425: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_4475: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_4525: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4575: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_4625: 27 loads, 27 LSLICEs
-     Net PCLK_c_enable_4675: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4725: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4775: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4825: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4875: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4925: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_4975: 26 loads, 26 LSLICEs
-     Net PCLK_c_enable_5342: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5338: 1 loads, 1 LSLICEs
+     Net qvga_tx_busy_sys_N_12846: 3 loads, 3 LSLICEs
+     Net CRYSTAL_c_enable_31: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_32: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_48: 3 loads, 3 LSLICEs
+     Net CRYSTAL_c_enable_44: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_258: 6 loads, 6 LSLICEs
+     Net CRYSTAL_c_enable_633: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_626: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_270: 7 loads, 7 LSLICEs
+     Net PCLK_c_enable_4173: 8 loads, 8 LSLICEs
+     Net CRYSTAL_c_enable_303: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_4176: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_4183: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_302: 13 loads, 13 LSLICEs
+     Net PCLK_c_enable_21: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_22: 1 loads, 1 LSLICEs
+     Net cmd_snapshot_pulse: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_508: 10 loads, 10 LSLICEs
+     Net PCLK_c_enable_5494: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5495: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4190: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_5492: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5493: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5491: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5489: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5490: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5469: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5470: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5471: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5468: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5467: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5465: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5466: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4684: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_5462: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5486: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5502: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5458: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5482: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5498: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5412: 7 loads, 7 LSLICEs
+     Net PCLK_c_enable_4174: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4141: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_3039: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_5503: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_2989: 26 loads, 26 LSLICEs
+     Net CRYSTAL_c_enable_77: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4706: 25 loads, 25 LSLICEs
+     Net CRYSTAL_c_enable_78: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_79: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_518: 20 loads, 20 LSLICEs
+     Net PCLK_c_enable_4756: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4806: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4856: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3189: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_4906: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4091: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4089: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4087: 23 loads, 23 LSLICEs
+     Net PCLK_c_enable_27: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4093: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4088: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4094: 22 loads, 22 LSLICEs
+     Net qvga_frame_pending_sys_N_12881: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_4092: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_1074: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1064: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1084: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1094: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1104: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1114: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1124: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1134: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4090: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4100: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4102: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4097: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4098: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4096: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4095: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4101: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_984: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_994: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1004: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1014: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1024: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1034: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1044: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_1054: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4099: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_744: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4123: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_764: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4122: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4121: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4124: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_804: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_754: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_814: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_784: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_794: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_774: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4120: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4119: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4125: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4126: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_734: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4127: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4128: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_724: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_714: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4129: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4130: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_704: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_694: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4131: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4956: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_684: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4132: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4133: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_674: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_29: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5463: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5487: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5500: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5499: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5497: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5501: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3391: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3089: 26 loads, 26 LSLICEs
+     Net CRYSTAL_c_enable_349: 13 loads, 13 LSLICEs
+     Net CRYSTAL_c_enable_601: 9 loads, 9 LSLICEs
+     Net PCLK_c_enable_5453: 30 loads, 30 LSLICEs
+     Net PCLK_c_enable_5508: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_5006: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_5056: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_5106: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_5156: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_5206: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_5256: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_5306: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3441: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_5356: 27 loads, 27 LSLICEs
+     Net PCLK_c_enable_4341: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_5403: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_4391: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_4441: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_4491: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_4541: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_5478: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5473: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5474: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5476: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5477: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5475: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4118: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4117: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4116: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4115: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4114: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4113: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4112: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4111: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4110: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4109: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4108: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4107: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4106: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_5479: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4105: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4104: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_4103: 22 loads, 22 LSLICEs
+     Net PCLK_c_enable_824: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_834: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_844: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_854: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_864: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_874: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_884: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_894: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_904: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_914: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_924: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_934: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_944: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_954: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_964: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_974: 5 loads, 5 LSLICEs
+     Net CRYSTAL_c_enable_159: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5415: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_5509: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_604: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_639: 9 loads, 9 LSLICEs
+     Net PCLK_c_enable_2639: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2689: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2739: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2789: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2839: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2889: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_2939: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3139: 26 loads, 26 LSLICEs
+     Net PCLK_c_enable_3325: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3326: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3327: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3328: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3329: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3330: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3331: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3332: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3333: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3334: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3335: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3336: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3337: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3338: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3339: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3340: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3341: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3342: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3343: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3344: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3345: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3346: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3347: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3348: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3349: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3350: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3351: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3352: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3353: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3354: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3355: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3356: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3357: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3358: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3359: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3360: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3361: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3362: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3363: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3364: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3365: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3366: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3367: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3368: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3369: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3370: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_3491: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3541: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3591: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3641: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3691: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3791: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3841: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3891: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3941: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_3991: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_4041: 25 loads, 25 LSLICEs
+     Net CRYSTAL_c_enable_613: 4 loads, 4 LSLICEs
+     Net CRYSTAL_c_enable_614: 5 loads, 5 LSLICEs
+     Net PCLK_c_enable_4150: 6 loads, 6 LSLICEs
+     Net PCLK_c_enable_4191: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_4241: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_4291: 25 loads, 25 LSLICEs
+     Net PCLK_c_enable_5413: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_619: 3 loads, 3 LSLICEs
+     Net CRYSTAL_c_enable_607: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_608: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_609: 1 loads, 1 LSLICEs
      Net state_0: 19 loads, 19 LSLICEs
-     Net CRYSTAL_c_enable_477: 12 loads, 12 LSLICEs
-     Net PCLK_c_enable_5341: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_480: 7 loads, 7 LSLICEs
-     Net CRYSTAL_c_enable_481: 5 loads, 5 LSLICEs
-     Net CRYSTAL_c_enable_483: 4 loads, 4 LSLICEs
-     Net CRYSTAL_c_enable_484: 4 loads, 4 LSLICEs
-     Net CRYSTAL_c_enable_485: 10 loads, 10 LSLICEs
-     Net PCLK_c_enable_5319: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5317: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5316: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5315: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5320: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5327: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5325: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5324: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5323: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5321: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5454: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5328: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_493: 8 loads, 8 LSLICEs
-     Net CRYSTAL_c_enable_489: 1 loads, 1 LSLICEs
-     Net u_uart_rx/CRYSTAL_c_enable_177: 4 loads, 4 LSLICEs
-     Net u_uart_rx/CRYSTAL_c_enable_185: 4 loads, 4 LSLICEs
-     Net u_uart_rx/CRYSTAL_c_enable_476: 2 loads, 2 LSLICEs
-     Net PCLK_c_enable_5463: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_5456: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_486: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_287: 8 loads, 8 LSLICEs
-     Net PCLK_c_enable_5455: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5343: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5337: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5457: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5302: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5310: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5318: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5326: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5334: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5458: 7 loads, 7 LSLICEs
-     Net PCLK_c_enable_5298: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5306: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5339: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5340: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_358: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_487: 2 loads, 2 LSLICEs
-     Net u_sdram/CRYSTAL_c_enable_492: 12 loads, 12 LSLICEs
-     Net u_sdram/CRYSTAL_c_enable_144: 8 loads, 8 LSLICEs
-     Net u_sdram/SD_CS_N_N_14031: 8 loads, 8 LSLICEs
-     Net u_sdram/CRYSTAL_c_enable_354: 9 loads, 9 LSLICEs
-     Net u_sdram/CRYSTAL_c_enable_15: 1 loads, 1 LSLICEs
-     Net u_sdram/CRYSTAL_c_enable_491: 8 loads, 8 LSLICEs
-     Net u_sdram/CRYSTAL_c_enable_482: 3 loads, 3 LSLICEs
-     Net u_snap_fifo/wr_bin_next_10_N_14176_0: 11 loads, 11 LSLICEs
+     Net CRYSTAL_c_enable_490: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_5459: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5460: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5461: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5481: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5483: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5484: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5485: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5504: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5505: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_646: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_611: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5414: 1 loads, 1 LSLICEs
+     Net PCLK_c_enable_5496: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_5506: 1 loads, 1 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_338: 4 loads, 4 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_345: 4 loads, 4 LSLICEs
+     Net u_uart_rx/CRYSTAL_c_enable_620: 2 loads, 2 LSLICEs
+     Net CRYSTAL_c_enable_603: 2 loads, 2 LSLICEs
+     Net PCLK_c_enable_5472: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_530: 28 loads, 28 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_4: 1 loads, 1 LSLICEs
      Net u_cam_init/tick: 5 loads, 4 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_146: 2 loads, 2 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_170: 12 loads, 12 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_494: 1 loads, 1 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_147: 1 loads, 1 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_475: 17 loads, 17 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_355: 1 loads, 1 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_478: 2 loads, 2 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_479: 1 loads, 1 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_496: 1 loads, 1 LSLICEs
-     Net u_cam_init/CRYSTAL_c_enable_495: 1 loads, 1 LSLICEs
-     Net u_snap_capture/CRYSTAL_c_enable_22: 1 loads, 1 LSLICEs
-     Net u_snap_capture/CRYSTAL_c_enable_24: 1 loads, 1 LSLICEs
-     Net u_qvga_fifo/wr_bin_next_15_N_14439_0: 17 loads, 17 LSLICEs
-     Net u_qvga_fifo/CRYSTAL_c_enable_292: 28 loads, 28 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_2: 1 loads, 1 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_178: 1 loads, 1 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_319: 2 loads, 2 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_35: 4 loads, 4 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_43: 4 loads, 4 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_51: 4 loads, 4 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_59: 4 loads, 4 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_67: 5 loads, 5 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_75: 4 loads, 4 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_474: 4 loads, 4 LSLICEs
-   Number of LSRs:  58
-     Net n116984: 1 loads, 1 LSLICEs
-     Net n117262: 1313 loads, 1313 LSLICEs
-     Net n92089: 6 loads, 6 LSLICEs
-     Net n117145: 18 loads, 18 LSLICEs
-     Net PCLK_c_enable_2577: 5 loads, 5 LSLICEs
-     Net n91891: 3 loads, 3 LSLICEs
-     Net PCLK_c_enable_3131: 1 loads, 1 LSLICEs
-     Net n106568: 1 loads, 1 LSLICEs
-     Net n116991: 1 loads, 1 LSLICEs
-     Net n80842: 1 loads, 1 LSLICEs
-     Net n80838: 1 loads, 1 LSLICEs
-     Net CRYSTAL_c_enable_26: 3 loads, 3 LSLICEs
-     Net n117057: 1 loads, 1 LSLICEs
-     Net n91710: 1 loads, 1 LSLICEs
-     Net PCLK_c_enable_5272: 2 loads, 2 LSLICEs
-     Net qvga_frame_pending_sys_N_12828: 1 loads, 1 LSLICEs
-     Net n88609: 5 loads, 5 LSLICEs
-     Net PCLK_c_enable_3807: 41 loads, 41 LSLICEs
-     Net PCLK_c_enable_3925: 7 loads, 7 LSLICEs
-     Net n92035: 12 loads, 12 LSLICEs
-     Net n91938: 5 loads, 5 LSLICEs
-     Net n94114: 4 loads, 4 LSLICEs
-     Net n91922: 4 loads, 4 LSLICEs
-     Net n91905: 10 loads, 10 LSLICEs
-     Net n65695: 3 loads, 3 LSLICEs
-     Net n92103: 8 loads, 8 LSLICEs
-     Net n93064: 2 loads, 2 LSLICEs
-     Net n93068: 6 loads, 6 LSLICEs
-     Net n91756: 10 loads, 10 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_645: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_307: 2 loads, 2 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_331: 12 loads, 12 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_598: 2 loads, 2 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_599: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_89: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_534: 17 loads, 17 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_597: 1 loads, 1 LSLICEs
+     Net u_cam_init/CRYSTAL_c_enable_308: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_636: 12 loads, 12 LSLICEs
+     Net u_sdram/state_4: 2 loads, 2 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_305: 1 loads, 1 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_63: 1 loads, 1 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_353: 4 loads, 4 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_596: 12 loads, 12 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_386: 8 loads, 8 LSLICEs
+     Net u_sdram/CRYSTAL_c_enable_644: 1 loads, 1 LSLICEs
+     Net u_snap_fifo/wr_bin_next_10_N_14968_0: 11 loads, 11 LSLICEs
+     Net u_snap_capture/CRYSTAL_c_enable_83: 1 loads, 1 LSLICEs
+     Net u_snap_capture/CRYSTAL_c_enable_634: 1 loads, 1 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_565: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_581: 5 loads, 5 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_253: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_549: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_64: 1 loads, 1 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_346: 1 loads, 1 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_557: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_573: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_589: 4 loads, 4 LSLICEs
+     Net u_qvga_fifo/wr_bin_next_15_N_15231_0: 17 loads, 17 LSLICEs
+   Number of LSRs:  63
+     Net n131539: 8 loads, 8 LSLICEs
+     Net n131738: 1312 loads, 1312 LSLICEs
+     Net n76289: 10 loads, 10 LSLICEs
+     Net n95530: 13 loads, 13 LSLICEs
+     Net n72345: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_2589: 5 loads, 5 LSLICEs
+     Net n131478: 24 loads, 24 LSLICEs
+     Net PCLK_c_enable_3319: 1 loads, 1 LSLICEs
+     Net n131390: 1 loads, 1 LSLICEs
+     Net n117552: 1 loads, 1 LSLICEs
+     Net n131393: 1 loads, 1 LSLICEs
+     Net CRYSTAL_c_enable_85: 2 loads, 2 LSLICEs
+     Net n131491: 1 loads, 1 LSLICEs
+     Net n95532: 13 loads, 13 LSLICEs
+     Net n84406: 1 loads, 1 LSLICEs
+     Net n84402: 1 loads, 1 LSLICEs
+     Net n76305: 13 loads, 13 LSLICEs
+     Net CRYSTAL_c_enable_508: 1 loads, 1 LSLICEs
+     Net tx_read_pending: 1 loads, 1 LSLICEs
+     Net n76268: 4 loads, 4 LSLICEs
+     Net n131489: 3 loads, 3 LSLICEs
+     Net n76273: 8 loads, 8 LSLICEs
+     Net n117426: 1 loads, 1 LSLICEs
+     Net n106511: 4 loads, 4 LSLICEs
+     Net n95522: 1 loads, 1 LSLICEs
+     Net qvga_frame_pending_sys_N_12881: 1 loads, 1 LSLICEs
+     Net n131391: 1 loads, 1 LSLICEs
+     Net n95485: 3 loads, 3 LSLICEs
      Net snap_fifo_full: 1 loads, 1 LSLICEs
-     Net u_uart_rx/n71661: 9 loads, 9 LSLICEs
-     Net u_uart_rx/n63974: 1 loads, 1 LSLICEs
-     Net u_uart_rx/n91755: 2 loads, 2 LSLICEs
-     Net n91762: 8 loads, 8 LSLICEs
-     Net n91844: 6 loads, 6 LSLICEs
-     Net n91760: 5 loads, 5 LSLICEs
-     Net n80839: 1 loads, 1 LSLICEs
-     Net n85791: 1 loads, 1 LSLICEs
-     Net n93977: 6 loads, 6 LSLICEs
-     Net n91943: 7 loads, 7 LSLICEs
-     Net n91901: 2 loads, 2 LSLICEs
-     Net n91889: 1 loads, 1 LSLICEs
-     Net u_sdram/op_is_read_N_14012: 1 loads, 1 LSLICEs
-     Net u_sdram/n91754: 5 loads, 5 LSLICEs
-     Net u_sdram/op_is_read: 1 loads, 1 LSLICEs
-     Net u_sdram/SD_CS_N_N_14031: 1 loads, 1 LSLICEs
-     Net u_sdram/SD_CS_N_N_14029: 1 loads, 1 LSLICEs
-     Net u_sdram/SD_CS_N_N_14032: 1 loads, 1 LSLICEs
-     Net u_sdram/SD_CS_N_N_14027: 1 loads, 1 LSLICEs
-     Net u_sdram/n91935: 2 loads, 2 LSLICEs
-     Net u_sdram/n92016: 3 loads, 3 LSLICEs
-     Net u_cam_init/tick_N_13468: 9 loads, 9 LSLICEs
-     Net u_cam_init/n92058: 17 loads, 17 LSLICEs
-     Net u_cam_init/n91742: 2 loads, 2 LSLICEs
-     Net u_cam_init/n91741: 1 loads, 1 LSLICEs
-     Net n36_adj_16059: 1 loads, 1 LSLICEs
-     Net u_cmd_rx/n91750: 2 loads, 2 LSLICEs
-     Net u_cmd_rx/CRYSTAL_c_enable_474: 4 loads, 4 LSLICEs
+     Net PCLK_c_enable_5403: 2 loads, 2 LSLICEs
+     Net n95615: 6 loads, 6 LSLICEs
+     Net n91006: 1 loads, 1 LSLICEs
+     Net n95606: 4 loads, 4 LSLICEs
+     Net n95599: 4 loads, 4 LSLICEs
+     Net n95802: 2 loads, 2 LSLICEs
+     Net n108773: 6 loads, 6 LSLICEs
+     Net n97115: 3 loads, 3 LSLICEs
+     Net n92360: 5 loads, 5 LSLICEs
+     Net n95525: 4 loads, 4 LSLICEs
+     Net n95524: 5 loads, 5 LSLICEs
+     Net n95928: 6 loads, 6 LSLICEs
+     Net n95536: 9 loads, 9 LSLICEs
+     Net n95514: 8 loads, 8 LSLICEs
+     Net PCLK_c_enable_4191: 48 loads, 48 LSLICEs
+     Net n99652: 1 loads, 1 LSLICEs
+     Net n87171: 1 loads, 1 LSLICEs
+     Net u_uart_rx/n75368: 9 loads, 9 LSLICEs
+     Net u_uart_rx/n67659: 1 loads, 1 LSLICEs
+     Net u_uart_rx/n95523: 2 loads, 2 LSLICEs
+     Net u_cam_init/tick_N_13626: 9 loads, 9 LSLICEs
+     Net u_cam_init/n115274: 2 loads, 2 LSLICEs
+     Net u_cam_init/n95497: 1 loads, 1 LSLICEs
+     Net u_cam_init/n95535: 17 loads, 17 LSLICEs
+     Net n95734: 12 loads, 12 LSLICEs
+     Net u_sdram/state_4: 3 loads, 3 LSLICEs
+     Net u_sdram/n103738: 1 loads, 1 LSLICEs
+     Net u_sdram/n9: 2 loads, 2 LSLICEs
+     Net u_sdram/n133999: 2 loads, 2 LSLICEs
+     Net u_sdram/SD_DQ_OE_N_14795: 5 loads, 5 LSLICEs
+     Net u_sdram/n101541: 2 loads, 2 LSLICEs
+     Net u_snap_capture/n93134: 1 loads, 1 LSLICEs
+     Net u_cmd_rx/CRYSTAL_c_enable_253: 4 loads, 4 LSLICEs
+     Net u_cmd_rx/n95516: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n117262: 1328 loads
+     Net n131738: 1338 loads
      Net box20_accum_idx_reg_pclk_0: 1000 loads
      Net box20_eval_idx_pclk_0: 1000 loads
-     Net box20_eval_idx_pclk_1: 657 loads
+     Net box20_eval_idx_pclk_1: 654 loads
      Net box20_accum_idx_reg_pclk_1: 648 loads
-     Net box20_accum_idx_reg_pclk_2: 335 loads
-     Net box20_eval_idx_pclk_2: 333 loads
-     Net maxfan_replicated_net_289: 290 loads
-     Net maxfan_replicated_net_284: 285 loads
-     Net u_qvga_fifo/n73169: 257 loads
+     Net box20_accum_idx_reg_pclk_2: 340 loads
+     Net box20_eval_idx_pclk_2: 330 loads
+     Net maxfan_replicated_net_288: 289 loads
+     Net n134063: 284 loads
+     Net u_qvga_fifo/n76902: 257 loads
  
 
-   Number of warnings:  15
+   Number of warnings:  33
    Number of errors:    0
 
 
-. MULT18X18D  mult_570:
+. MULT18X18D  mult_641:
 
 Multiplier
 	Operation A		Signed
@@ -1012,7 +1318,7 @@ Other
 
 	C_PSE17		0b00000000000000000
 
-. MULT18X18D  mult_567:
+. MULT18X18D  mult_638:
 
 Multiplier
 	Operation A		Signed
@@ -1057,7 +1363,7 @@ Other
 
 	C_PSE17		0b00000000000000000
 
-. MULT18X18D  mult_564:
+. MULT18X18D  mult_635:
 
 Multiplier
 	Operation A		Signed
@@ -1102,7 +1408,7 @@ Other
 
 	C_PSE17		0b00000000000000000
 
-. MULT18X18D  mult_561:
+. MULT18X18D  mult_632:
 
 Multiplier
 	Operation A		Signed
@@ -1148,9 +1454,9 @@ Other
 	C_PSE17		0b00000000000000000
 
 
-Total CPU Time: 8 secs  
+Total CPU Time: 7 secs  
 Total REAL Time: 8 secs  
-Peak Memory Usage: 189 MB
+Peak Memory Usage: 195 MB
 
 Dumping design to file capclean_impl1_map.ncd.
 
@@ -1165,7 +1471,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "capclean_impl1_map.ncd"
-Mon May 11 21:14:35 2026
+Fri May 15 05:52:47 2026
 
 PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 capclean_impl1_map.ncd capclean_impl1.dir/5_1.ncd capclean_impl1.prf
@@ -1189,55 +1495,54 @@ License checked out.
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)      71/197          36% used
-                     71/197          36% bonded
+   PIO (prelim)      70/197          35% used
+                     70/197          35% bonded
 
-   SLICE           6132/12144        50% used
+   SLICE           6625/12144        54% used
 
    EBR               34/56           60% used
    MULT18             4/28           14% used
 
 
-Number of Signals: 12910
-Number of Connections: 39138
+Number of Signals: 14051
+Number of Connections: 42476
 
 Pin Constraint Summary:
-   70 out of 71 pins locked (98% locked).
+   70 out of 70 pins locked (100% locked).
 
 
 The following 14 signals are selected to use the primary clock routing resources:
-    PCLK_c (driver: PCLK, clk/ce/sr load #: 3031/0/0)
-    CRYSTAL_c (driver: CRYSTAL, clk/ce/sr load #: 527/0/0)
-    n117262 (driver: SLICE_5374, clk/ce/sr load #: 0/0/1313)
-    PCLK_c_enable_3807 (driver: SLICE_5653, clk/ce/sr load #: 0/4/41)
-    PCLK_c_enable_2577 (driver: SLICE_5680, clk/ce/sr load #: 0/25/5)
-    PCLK_c_enable_5400 (driver: SLICE_5441, clk/ce/sr load #: 0/30/0)
-    u_qvga_fifo/CRYSTAL_c_enable_292 (driver: u_qvga_fifo/SLICE_6125, clk/ce/sr load #: 0/28/0)
-    PCLK_c_enable_4125 (driver: SLICE_5329, clk/ce/sr load #: 0/27/0)
-    PCLK_c_enable_4175 (driver: SLICE_5648, clk/ce/sr load #: 0/27/0)
-    PCLK_c_enable_4325 (driver: SLICE_5655, clk/ce/sr load #: 0/27/0)
-    n117145 (driver: SLICE_5286, clk/ce/sr load #: 0/0/18)
-    u_cam_init/n92058 (driver: u_cam_init/SLICE_5313, clk/ce/sr load #: 0/0/17)
-    n92035 (driver: SLICE_5413, clk/ce/sr load #: 0/0/12)
-    n91905 (driver: SLICE_5277, clk/ce/sr load #: 0/0/10)
+    PCLK_c (driver: PCLK, clk/ce/sr load #: 3038/0/0)
+    CRYSTAL_c (driver: CRYSTAL, clk/ce/sr load #: 657/0/0)
+    n131738 (driver: SLICE_5593, clk/ce/sr load #: 0/0/1312)
+    PCLK_c_enable_4191 (driver: SLICE_5999, clk/ce/sr load #: 0/1/48)
+    PCLK_c_enable_2589 (driver: SLICE_6020, clk/ce/sr load #: 0/25/5)
+    PCLK_c_enable_5453 (driver: SLICE_5787, clk/ce/sr load #: 0/30/0)
+    CRYSTAL_c_enable_530 (driver: SLICE_6454, clk/ce/sr load #: 0/28/0)
+    PCLK_c_enable_4756 (driver: SLICE_5997, clk/ce/sr load #: 0/27/0)
+    PCLK_c_enable_4806 (driver: SLICE_5998, clk/ce/sr load #: 0/27/0)
+    PCLK_c_enable_4906 (driver: SLICE_6001, clk/ce/sr load #: 0/27/0)
+    n131478 (driver: SLICE_5589, clk/ce/sr load #: 0/0/24)
+    u_cam_init/n95535 (driver: u_cam_init/SLICE_5545, clk/ce/sr load #: 0/0/17)
+    n95530 (driver: SLICE_5559, clk/ce/sr load #: 0/0/13)
+    n95532 (driver: SLICE_5589, clk/ce/sr load #: 0/0/13)
 
 
 No signal is selected as Global Set/Reset.
-.
 Starting Placer Phase 0.
 ...........
-Finished Placer Phase 0.  REAL time: 11 secs 
+Finished Placer Phase 0.  REAL time: 9 secs 
 
 
 Starting Placer Phase 1.
 ..............................
-Placer score = 3587348.
-Finished Placer Phase 1.  REAL time: 53 secs 
+Placer score = 3719080.
+Finished Placer Phase 1.  REAL time: 48 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  3474788
-Finished Placer Phase 2.  REAL time: 58 secs 
+Placer score =  3618271
+Finished Placer Phase 2.  REAL time: 53 secs 
 
 
 ------------------ Clock Report ------------------
@@ -1251,52 +1556,49 @@ Global Clock Resources:
   CLKDIV     : 0 out of 4 (0%)
 
 Quadrant TL Clocks:
-  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 811
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 10
-  PRIMARY "n117262" from F1 on comp "SLICE_5374" on site "R29C23C", CLK/CE/SR load = 381
-  PRIMARY "PCLK_c_enable_2577" from F0 on comp "SLICE_5680" on site "R31C45A", CLK/CE/SR load = 4
-  PRIMARY "PCLK_c_enable_4125" from F0 on comp "SLICE_5329" on site "R31C22B", CLK/CE/SR load = 10
-  PRIMARY "PCLK_c_enable_4175" from F0 on comp "SLICE_5648" on site "R27C33B", CLK/CE/SR load = 6
-  PRIMARY "PCLK_c_enable_4325" from F0 on comp "SLICE_5655" on site "R22C45B", CLK/CE/SR load = 7
-  PRIMARY "n117145" from F1 on comp "SLICE_5286" on site "R26C19A", CLK/CE/SR load = 13
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 1177
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 5
+  PRIMARY "n131738" from F1 on comp "SLICE_5593" on site "R38C37D", CLK/CE/SR load = 561
+  PRIMARY "PCLK_c_enable_2589" from F1 on comp "SLICE_6020" on site "R21C20B", CLK/CE/SR load = 10
+  PRIMARY "PCLK_c_enable_5453" from F0 on comp "SLICE_5787" on site "R28C25C", CLK/CE/SR load = 30
+  PRIMARY "PCLK_c_enable_4756" from F0 on comp "SLICE_5997" on site "R39C18B", CLK/CE/SR load = 25
+  PRIMARY "PCLK_c_enable_4806" from F0 on comp "SLICE_5998" on site "R36C16B", CLK/CE/SR load = 23
+  PRIMARY "PCLK_c_enable_4906" from F0 on comp "SLICE_6001" on site "R40C17D", CLK/CE/SR load = 25
 
   PRIMARY  : 8 out of 16 (50%)
 
 Quadrant TR Clocks:
-  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 914
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 123
-  PRIMARY "n117262" from F1 on comp "SLICE_5374" on site "R29C23C", CLK/CE/SR load = 378
-  PRIMARY "PCLK_c_enable_3807" from F1 on comp "SLICE_5653" on site "R18C24C", CLK/CE/SR load = 35
-  PRIMARY "PCLK_c_enable_2577" from F0 on comp "SLICE_5680" on site "R31C45A", CLK/CE/SR load = 3
-  PRIMARY "PCLK_c_enable_5400" from F0 on comp "SLICE_5441" on site "R18C48C", CLK/CE/SR load = 30
-  PRIMARY "PCLK_c_enable_4125" from F0 on comp "SLICE_5329" on site "R31C22B", CLK/CE/SR load = 17
-  PRIMARY "PCLK_c_enable_4175" from F0 on comp "SLICE_5648" on site "R27C33B", CLK/CE/SR load = 21
-  PRIMARY "PCLK_c_enable_4325" from F0 on comp "SLICE_5655" on site "R22C45B", CLK/CE/SR load = 20
-  PRIMARY "u_cam_init/n92058" from F0 on comp "u_cam_init/SLICE_5313" on site "R15C62A", CLK/CE/SR load = 17
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 440
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 395
+  PRIMARY "n131738" from F1 on comp "SLICE_5593" on site "R38C37D", CLK/CE/SR load = 189
+  PRIMARY "PCLK_c_enable_2589" from F1 on comp "SLICE_6020" on site "R21C20B", CLK/CE/SR load = 15
+  PRIMARY "n131478" from F0 on comp "SLICE_5589" on site "R7C51B", CLK/CE/SR load = 24
+  PRIMARY "u_cam_init/n95535" from F0 on comp "u_cam_init/SLICE_5545" on site "R22C54D", CLK/CE/SR load = 17
+  PRIMARY "n95530" from F0 on comp "SLICE_5559" on site "R9C47C", CLK/CE/SR load = 13
+  PRIMARY "n95532" from F1 on comp "SLICE_5589" on site "R7C51B", CLK/CE/SR load = 13
 
-  PRIMARY  : 10 out of 16 (62%)
+  PRIMARY  : 8 out of 16 (50%)
 
 Quadrant BL Clocks:
-  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 400
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 154
-  PRIMARY "n117262" from F1 on comp "SLICE_5374" on site "R29C23C", CLK/CE/SR load = 159
-  PRIMARY "PCLK_c_enable_3807" from F1 on comp "SLICE_5653" on site "R18C24C", CLK/CE/SR load = 2
-  PRIMARY "u_qvga_fifo/CRYSTAL_c_enable_292" from F0 on comp "u_qvga_fifo/SLICE_6125" on site "R38C18B", CLK/CE/SR load = 8
-  PRIMARY "n117145" from F1 on comp "SLICE_5286" on site "R26C19A", CLK/CE/SR load = 5
-  PRIMARY "n91905" from F1 on comp "SLICE_5277" on site "R41C18B", CLK/CE/SR load = 10
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 1054
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 5
+  PRIMARY "n131738" from F1 on comp "SLICE_5593" on site "R38C37D", CLK/CE/SR load = 498
+  PRIMARY "PCLK_c_enable_4191" from F1 on comp "SLICE_5999" on site "R27C22B", CLK/CE/SR load = 33
+  PRIMARY "PCLK_c_enable_2589" from F1 on comp "SLICE_6020" on site "R21C20B", CLK/CE/SR load = 5
+  PRIMARY "PCLK_c_enable_4756" from F0 on comp "SLICE_5997" on site "R39C18B", CLK/CE/SR load = 2
+  PRIMARY "PCLK_c_enable_4806" from F0 on comp "SLICE_5998" on site "R36C16B", CLK/CE/SR load = 4
+  PRIMARY "PCLK_c_enable_4906" from F0 on comp "SLICE_6001" on site "R40C17D", CLK/CE/SR load = 2
 
-  PRIMARY  : 7 out of 16 (43%)
+  PRIMARY  : 8 out of 16 (50%)
 
 Quadrant BR Clocks:
-  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 906
-  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 240
-  PRIMARY "n117262" from F1 on comp "SLICE_5374" on site "R29C23C", CLK/CE/SR load = 395
-  PRIMARY "PCLK_c_enable_3807" from F1 on comp "SLICE_5653" on site "R18C24C", CLK/CE/SR load = 8
-  PRIMARY "PCLK_c_enable_2577" from F0 on comp "SLICE_5680" on site "R31C45A", CLK/CE/SR load = 23
-  PRIMARY "u_qvga_fifo/CRYSTAL_c_enable_292" from F0 on comp "u_qvga_fifo/SLICE_6125" on site "R38C18B", CLK/CE/SR load = 20
-  PRIMARY "n92035" from F0 on comp "SLICE_5413" on site "R29C36C", CLK/CE/SR load = 12
+  PRIMARY "PCLK_c" from comp "PCLK" on CLK_PIN site "C8 (PT35A)", CLK/CE/SR load = 367
+  PRIMARY "CRYSTAL_c" from comp "CRYSTAL" on CLK_PIN site "M1 (PL26C)", CLK/CE/SR load = 252
+  PRIMARY "n131738" from F1 on comp "SLICE_5593" on site "R38C37D", CLK/CE/SR load = 64
+  PRIMARY "PCLK_c_enable_4191" from F1 on comp "SLICE_5999" on site "R27C22B", CLK/CE/SR load = 16
+  PRIMARY "CRYSTAL_c_enable_530" from F0 on comp "SLICE_6454" on site "R32C56D", CLK/CE/SR load = 28
 
-  PRIMARY  : 7 out of 16 (43%)
+  PRIMARY  : 5 out of 16 (31%)
 
 Edge Clocks:
 
@@ -1308,9 +1610,9 @@ Edge Clocks:
 
 +
 I/O Usage Summary (final):
-   71 out of 197 (36.0%) PIO sites used.
-   71 out of 197 (36.0%) bonded PIO sites used.
-   Number of PIO comps: 71; differential: 0.
+   70 out of 197 (35.5%) PIO sites used.
+   70 out of 197 (35.5%) bonded PIO sites used.
+   Number of PIO comps: 70; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
@@ -1323,41 +1625,41 @@ I/O Bank Usage Summary:
 | 3        | 13 / 32 ( 40%) | 3.3V       | -          | -          |
 | 6        | 5 / 32 ( 15%)  | 3.3V       | -          | -          |
 | 7        | 11 / 32 ( 34%) | 3.3V       | -          | -          |
-| 8        | 4 / 13 ( 30%)  | 2.5V       | -          | -          |
+| 8        | 3 / 13 ( 23%)  | 2.5V       | -          | -          |
 +----------+----------------+------------+------------+------------+
 
 ---------------------------------- DSP Report ----------------------------------
 
 DSP Slice #:           1  2  3  4  5  6  7  8  9 10 11 12 13 14
 # of MULT9                                                     
-# of MULT18                                 1  2  1            
+# of MULT18               1     1  2                           
 # of ALU24                                                     
 # of ALU54                                                     
 # of PRADD9                                                    
 # of PRADD18                                                   
 
-DSP Slice  8         Component_Type       Physical_Type       Instance_Name     
- MULT18_R13C37         MULT18X18D             MULT18             mult_567       
+DSP Slice  2         Component_Type       Physical_Type       Instance_Name     
+  MULT18_R13C9         MULT18X18D             MULT18             mult_641       
 
-DSP Slice  9         Component_Type       Physical_Type       Instance_Name     
- MULT18_R13C42         MULT18X18D             MULT18             mult_564       
- MULT18_R13C43         MULT18X18D             MULT18             mult_561       
+DSP Slice  4         Component_Type       Physical_Type       Instance_Name     
+ MULT18_R13C18         MULT18X18D             MULT18             mult_632       
 
-DSP Slice 10         Component_Type       Physical_Type       Instance_Name     
- MULT18_R13C46         MULT18X18D             MULT18             mult_570       
+DSP Slice  5         Component_Type       Physical_Type       Instance_Name     
+ MULT18_R13C22         MULT18X18D             MULT18             mult_638       
+ MULT18_R13C23         MULT18X18D             MULT18             mult_635       
 
 ------------------------------ End of DSP Report -------------------------------
-Total placer CPU time: 57 secs 
+Total placer CPU time: 52 secs 
 
 Dumping design to file capclean_impl1.dir/5_1.ncd.
 
-0 connections routed; 39138 unrouted.
+0 connections routed; 42476 unrouted.
 Starting router resource preassignment
 DSP info: No dsp pins have been swapped.
 
-Completed router resource preassignment. Real time: 1 mins 7 secs 
+Completed router resource preassignment. Real time: 1 mins 2 secs 
 
-Start NBR router at 21:15:43 05/11/26
+Start NBR router at 05:53:49 05/15/26
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -1372,68 +1674,65 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 21:15:45 05/11/26
+Start NBR special constraint process at 05:53:51 05/15/26
 
-Start NBR section for initial routing at 21:15:46 05/11/26
+Start NBR section for initial routing at 05:53:51 05/15/26
 Level 1, iteration 1
-0(0.00%) conflict; 30613(78.22%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.554ns/0.000ns; real time: 1 mins 15 secs 
+0(0.00%) conflict; 33469(78.80%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.632ns/0.000ns; real time: 1 mins 6 secs 
 Level 2, iteration 1
-5(0.00%) conflicts; 30482(77.88%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.000ns/0.000ns; real time: 1 mins 19 secs 
+12(0.00%) conflicts; 33373(78.57%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.208ns/0.000ns; real time: 1 mins 8 secs 
 Level 3, iteration 1
-73(0.01%) conflicts; 26741(68.32%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.203ns/0.000ns; real time: 1 mins 32 secs 
+66(0.01%) conflicts; 29515(69.49%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.706ns/0.000ns; real time: 1 mins 13 secs 
 Level 4, iteration 1
-1833(0.16%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.127ns/0.000ns; real time: 1 mins 41 secs 
+1830(0.16%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.752ns/0.000ns; real time: 1 mins 18 secs 
 
 Info: Initial congestion level at 75% usage is 0
-Info: Initial congestion area  at 75% usage is 0 (0.00%)
+Info: Initial congestion area  at 75% usage is 5 (0.15%)
 
-Start NBR section for normal routing at 21:16:16 05/11/26
+Start NBR section for normal routing at 05:54:05 05/15/26
 Level 1, iteration 1
-13(0.00%) conflicts; 2545(6.50%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.123ns/0.000ns; real time: 1 mins 42 secs 
-Level 1, iteration 2
-4(0.00%) conflicts; 2554(6.53%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.127ns/0.000ns; real time: 1 mins 43 secs 
+20(0.00%) conflicts; 2574(6.06%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.741ns/0.000ns; real time: 1 mins 19 secs 
 Level 4, iteration 1
-1031(0.09%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.171ns/0.000ns; real time: 1 mins 49 secs 
+1201(0.10%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.730ns/0.000ns; real time: 1 mins 22 secs 
 Level 4, iteration 2
-912(0.08%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.717ns/0.000ns; real time: 1 mins 52 secs 
+594(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.619ns/0.000ns; real time: 1 mins 23 secs 
 Level 4, iteration 3
-367(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.737ns/0.000ns; real time: 1 mins 55 secs 
+290(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 25 secs 
 Level 4, iteration 4
-212(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.737ns/0.000ns; real time: 1 mins 56 secs 
+142(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 25 secs 
 Level 4, iteration 5
-101(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.607ns/0.000ns; real time: 1 mins 58 secs 
+73(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 26 secs 
 Level 4, iteration 6
-43(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.607ns/0.000ns; real time: 1 mins 58 secs 
+39(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 26 secs 
 Level 4, iteration 7
-9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.480ns/0.000ns; real time: 1 mins 59 secs 
+16(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 27 secs 
 Level 4, iteration 8
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.480ns/0.000ns; real time: 1 mins 59 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 27 secs 
 Level 4, iteration 9
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.480ns/0.000ns; real time: 2 mins 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 27 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 21:16:35 05/11/26
+Start NBR section for setup/hold timing optimization with effort level 3 at 05:54:14 05/15/26
 
-Start NBR section for re-routing at 21:16:38 05/11/26
+Start NBR section for re-routing at 05:54:17 05/15/26
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.480ns/0.000ns; real time: 2 mins 3 secs 
+Estimated worst slack/total negative slack<setup>: 3.609ns/0.000ns; real time: 1 mins 30 secs 
 
-Start NBR section for post-routing at 21:16:38 05/11/26
+Start NBR section for post-routing at 05:54:17 05/15/26
 
 End NBR router with 0 unrouted connection
 
@@ -1441,17 +1740,17 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 2.480ns
+  Estimated worst slack<setup> : 3.609ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 2 mins 8 secs 
-Total REAL time: 2 mins 11 secs 
+Total CPU time 1 mins 35 secs 
+Total REAL time: 1 mins 38 secs 
 Completely routed.
-End of route.  39138 routed (100.00%); 0 unrouted.
+End of route.  42476 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -1462,14 +1761,14 @@ Dumping design to file capclean_impl1.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 2.480
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 3.609
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.174
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 2 mins 11 secs 
-Total REAL time to completion: 2 mins 15 secs 
+Total CPU  time to completion: 1 mins 37 secs 
+Total REAL time to completion: 1 mins 40 secs 
 
 par done!
 
@@ -1506,7 +1805,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Mon May 11 21:16:56 2026
+Fri May 15 05:54:29 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1531,11 +1830,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 17640391 paths, 2 nets, and 38903 connections (99.40% coverage)
+Constraints cover 13549799 paths, 3 nets, and 42200 connections (99.35% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Mon May 11 21:16:57 2026
+Fri May 15 05:54:29 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1560,7 +1859,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 17640391 paths, 2 nets, and 38903 connections (99.40% coverage)
+Constraints cover 13549799 paths, 3 nets, and 42200 connections (99.35% coverage)
 
 
 
@@ -1574,9 +1873,9 @@ Cumulative negative slack: 0 (0+0)
 
 --------------------------------------------------------------------------------
 
-Total CPU Time: 5 secs 
-Total REAL Time: 6 secs 
-Peak Memory Usage: 251 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 256 MB
 
 
 tmcheck -par "capclean_impl1.par" 
@@ -1660,9 +1959,9 @@ Creating bit map...
 Bitstream Status: Final           Version 10.27.
  
 Saving bit stream in "capclean_impl1.bit".
-Total CPU Time: 6 secs 
-Total REAL Time: 7 secs 
-Peak Memory Usage: 321 MB
+Total CPU Time: 4 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 324 MB
 
 ddtcmd -dev LFE5U-25F -if capclean_impl1.bit -oft -int -of capclean_impl1.mcs 
 Lattice Diamond Deployment Tool 3.14 Command Line

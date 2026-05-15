@@ -1,5 +1,11 @@
 module w9825_sdram_ctrl #(
-    parameter integer CLK_HZ = 24000000
+    parameter integer CLK_HZ = 24000000,
+    parameter INVERT_SD_CLK = 1'b0,
+    parameter USE_ODDR_CLK = 1'b1,
+    parameter SKIP_PHY_A0 = 1'b0,
+    parameter SCRUB_DQ_AFTER_WRITE = 1'b0,
+    parameter AUTO_REFRESH_ENABLE = 1'b1,
+    parameter integer WRITE_CLEAR_CYCLES = 0
 ) (
     input  wire        clk,
     input  wire        rst,
@@ -14,7 +20,9 @@ module w9825_sdram_ctrl #(
     output reg  [15:0] rd_data,
     output reg  [12:0] SD_A,
     output reg  [1:0]  SD_BA,
-    inout  wire [15:0] SD_DQ,
+    input  wire [15:0] SD_DQ_IN,
+    output wire [15:0] SD_DQ_OUT,
+    output wire        SD_DQ_OE,
     output reg  [1:0]  SD_DQM,
     output wire        SD_CLK,
     output reg         SD_CKE,
@@ -24,82 +32,437 @@ module w9825_sdram_ctrl #(
     output reg         SD_WE_N,
     output reg         dbg_init_pulse,
     output reg         dbg_wr_pulse,
-    output reg         dbg_rd_pulse
+    output reg         dbg_rd_pulse,
+    output reg  [15:0] dbg_rd_sample_early,
+    output reg  [15:0] dbg_rd_sample_now,
+    output reg  [15:0] dbg_rd_or,
+    output reg  [15:0] dbg_rd_last,
+    output reg  [31:0] dbg_rd_window_codes
 );
-    assign SD_CLK = clk;
-    reg dq_oe;
-    reg [15:0] dq_out;
-    assign SD_DQ = dq_oe ? dq_out : 16'hZZZZ;
-    wire [15:0] dq_in = SD_DQ;
+    generate
+        if (!USE_ODDR_CLK) begin : gen_direct_sd_clk
+            assign SD_CLK = INVERT_SD_CLK ? ~clk : clk;
+        end else if (INVERT_SD_CLK) begin : gen_inv_sd_clk
+            ODDRX1F sd_clk_oddr (
+                .SCLK(clk),
+                .RST(1'b0),
+                .D0(1'b0),
+                .D1(1'b1),
+                .Q(SD_CLK)
+            );
+        end else begin : gen_sd_clk
+            ODDRX1F sd_clk_oddr (
+                .SCLK(clk),
+                .RST(1'b0),
+                .D0(1'b1),
+                .D1(1'b0),
+                .Q(SD_CLK)
+            );
+        end
+    endgenerate
 
-    localparam integer T_INIT = CLK_HZ / 5000;
-    localparam integer T_RP   = 2;
-    localparam integer T_RCD  = 2;
-    localparam integer T_MRD  = 2;
-    localparam integer T_CL   = 3;
-    localparam integer T_RFC  = 8;
-    localparam integer REF_INT = (CLK_HZ * 64 / 1000) / 8192;
-    localparam [12:0] MODE_REG = 13'b0000000110000; // BL=1, CL=3
+    localparam [3:0] CMD_MRS = 4'b0000;
+    localparam [3:0] CMD_REF = 4'b0001;
+    localparam [3:0] CMD_PRE = 4'b0010;
+    localparam [3:0] CMD_ACT = 4'b0011;
+    localparam [3:0] CMD_WR  = 4'b0100;
+    localparam [3:0] CMD_RD  = 4'b0101;
+    localparam [3:0] CMD_NOP = 4'b1111;
 
-    reg [15:0] timer;
-    reg [7:0] ref_ctr;
-    reg [5:0] state;
+    localparam [19:0] T_INIT =
+        (CLK_HZ <= 1000000) ? 20'd200 :
+        ((CLK_HZ <= 24000000) ? 20'd4800 : 20'd24000);
+    localparam [19:0] T_A10_SETUP = 20'd4096;
+    localparam [19:0] T_RP = 20'd8;
+    localparam [19:0] T_RCD = 20'd8;
+    localparam [19:0] T_RFC = 20'd12;
+    localparam [19:0] T_MRD = 20'd4;
+    localparam [19:0] T_CL = 20'd3;
+    localparam [19:0] T_WR = 20'd8;
+    // Match the direct self-test read aperture that passed at 24 MHz.  A
+    // longer OR window can include post-read bus noise and make a good BL=1
+    // read look like a bad word.
+    localparam [19:0] T_READ_OBS = 20'd15;
+    localparam integer REF_INT_RAW = CLK_HZ / 128000;
+    localparam [19:0] REF_INT = (REF_INT_RAW < 16) ? 20'd16 : REF_INT_RAW[19:0];
+    localparam [19:0] T_DQ_CLEAR = WRITE_CLEAR_CYCLES[19:0];
+    localparam [12:0] MODE_REG = 13'h030; // BL=1, sequential, CAS=3.
+    localparam ACCESS_AUTO_PRECHARGE = 1'b0;
+
+    localparam [4:0] ST_INIT_WAIT = 5'd0;
+    localparam [4:0] ST_PRE_SETUP = 5'd1;
+    localparam [4:0] ST_PRE_ALL   = 5'd2;
+    localparam [4:0] ST_WAIT      = 5'd3;
+    localparam [4:0] ST_REFRESH   = 5'd4;
+    localparam [4:0] ST_MRS       = 5'd5;
+    localparam [4:0] ST_IDLE      = 5'd6;
+    localparam [4:0] ST_ACT_WR    = 5'd7;
+    localparam [4:0] ST_WRITE     = 5'd8;
+    localparam [4:0] ST_ACT_RD    = 5'd9;
+    localparam [4:0] ST_READ      = 5'd10;
+    localparam [4:0] ST_READ_LAT  = 5'd11;
+    localparam [4:0] ST_PRE_CLOSE = 5'd12;
+    localparam [4:0] ST_DQ_CLEAR  = 5'd13;
+    localparam [4:0] ST_ACK       = 5'd14;
+    localparam [4:0] ST_REQ_LOW   = 5'd15;
+
+    reg [4:0] state;
+    reg [4:0] next_state;
+    reg [19:0] timer;
+    reg [19:0] ref_ctr;
+    reg [3:0] refresh_count;
     reg op_is_read;
+    reg op_from_init;
     reg [21:0] op_addr;
     reg [15:0] op_wdata;
+    reg [15:0] dq_out;
+    reg dq_oe;
+    reg write_hold;
+    reg clear_hold;
+    reg [15:0] read_or;
 
-    wire [1:0] bank = op_addr[21:20];
-    wire [12:0] row = op_addr[19:7];
-    wire [6:0] col7 = op_addr[6:0];
-    wire [12:0] col_addr = {2'b00,1'b1,3'b000,col7}; // A10 auto-precharge
+    assign SD_DQ_OUT = dq_out;
+    assign SD_DQ_OE = dq_oe;
 
-    task cmd_nop; begin SD_CS_N<=0; SD_RAS_N<=1; SD_CAS_N<=1; SD_WE_N<=1; end endtask
-    task cmd_pre_all; begin SD_CS_N<=0; SD_RAS_N<=0; SD_CAS_N<=1; SD_WE_N<=0; SD_A<=13'b0010000000000; SD_BA<=0; end endtask
-    task cmd_refresh; begin SD_CS_N<=0; SD_RAS_N<=0; SD_CAS_N<=0; SD_WE_N<=1; end endtask
-    task cmd_mrs; begin SD_CS_N<=0; SD_RAS_N<=0; SD_CAS_N<=0; SD_WE_N<=0; SD_A<=MODE_REG; SD_BA<=0; end endtask
-    task cmd_active; begin SD_CS_N<=0; SD_RAS_N<=0; SD_CAS_N<=1; SD_WE_N<=1; SD_BA<=bank; SD_A<=row; end endtask
-    task cmd_write; begin SD_CS_N<=0; SD_RAS_N<=1; SD_CAS_N<=0; SD_WE_N<=0; SD_BA<=bank; SD_A<=col_addr; end endtask
-    task cmd_read;  begin SD_CS_N<=0; SD_RAS_N<=1; SD_CAS_N<=0; SD_WE_N<=1; SD_BA<=bank; SD_A<=col_addr; end endtask
+    wire [21:0] phys_addr = SKIP_PHY_A0 ? {op_addr[20:0], 1'b0} : op_addr;
+    wire [1:0] bank = phys_addr[21:20];
+    wire [11:0] row = phys_addr[19:8];
+    wire [7:0] col8 = phys_addr[7:0];
+    wire [12:0] row_addr = {1'b0, row};
+    wire [12:0] col_addr = {2'b00, 1'b0, 2'b00, col8};
+    wire [12:0] col_ap_addr = col_addr | 13'b0010000000000;
 
-    localparam ST_PWR=0,ST_PRE=1,ST_TRP=2,ST_REF=3,ST_REFW=4,ST_MRS=5,ST_MRDW=6,ST_IDLE=7,ST_ACT=8,ST_ACTW=9,ST_WR=10,ST_RD=11,ST_RDLAT=12,ST_POST=13,ST_REFR=14;
-    reg [3:0] ref_count_init;
+    function [1:0] sample_code;
+        input [15:0] sample;
+        begin
+            if (sample == op_wdata)
+                sample_code = 2'b11;
+            else if (sample[15:8] != 8'h00)
+                sample_code = 2'b10;
+            else if (sample[7:0] != 8'h00)
+                sample_code = 2'b01;
+            else
+                sample_code = 2'b00;
+        end
+    endfunction
+
+    task set_cmd;
+        input [3:0] cmd;
+        begin
+            SD_CS_N  <= cmd[3];
+            SD_RAS_N <= cmd[2];
+            SD_CAS_N <= cmd[1];
+            SD_WE_N  <= cmd[0];
+        end
+    endtask
+
+    task capture_window_code;
+        input [3:0] slot;
+        input [15:0] sample;
+        begin
+            case (slot)
+                4'h0: dbg_rd_window_codes[1:0]   <= sample_code(sample);
+                4'h1: dbg_rd_window_codes[3:2]   <= sample_code(sample);
+                4'h2: dbg_rd_window_codes[5:4]   <= sample_code(sample);
+                4'h3: dbg_rd_window_codes[7:6]   <= sample_code(sample);
+                4'h4: dbg_rd_window_codes[9:8]   <= sample_code(sample);
+                4'h5: dbg_rd_window_codes[11:10] <= sample_code(sample);
+                4'h6: dbg_rd_window_codes[13:12] <= sample_code(sample);
+                4'h7: dbg_rd_window_codes[15:14] <= sample_code(sample);
+                4'h8: dbg_rd_window_codes[17:16] <= sample_code(sample);
+                4'h9: dbg_rd_window_codes[19:18] <= sample_code(sample);
+                4'ha: dbg_rd_window_codes[21:20] <= sample_code(sample);
+                4'hb: dbg_rd_window_codes[23:22] <= sample_code(sample);
+                4'hc: dbg_rd_window_codes[25:24] <= sample_code(sample);
+                4'hd: dbg_rd_window_codes[27:26] <= sample_code(sample);
+                4'he: dbg_rd_window_codes[29:28] <= sample_code(sample);
+                default: dbg_rd_window_codes[31:30] <= sample_code(sample);
+            endcase
+        end
+    endtask
 
     always @(posedge clk) begin
         if (rst) begin
-            init_done<=0; wr_ack<=0; rd_ack<=0; rd_data<=0; SD_A<=0; SD_BA<=0; SD_DQM<=2'b00; SD_CKE<=1'b1;
-            SD_CS_N<=0; SD_RAS_N<=1; SD_CAS_N<=1; SD_WE_N<=1; dq_oe<=0; dq_out<=0;
-            timer<=0; ref_ctr<=0; state<=ST_PWR; op_is_read<=0; op_addr<=0; op_wdata<=0; ref_count_init<=0;
-            dbg_init_pulse<=0; dbg_wr_pulse<=0; dbg_rd_pulse<=0;
+            init_done <= 1'b0;
+            wr_ack <= 1'b0;
+            rd_ack <= 1'b0;
+            rd_data <= 16'd0;
+            SD_A <= 13'd0;
+            SD_BA <= 2'd0;
+            SD_DQM <= 2'b11;
+            SD_CKE <= 1'b1;
+            set_cmd(CMD_NOP);
+            state <= ST_INIT_WAIT;
+            next_state <= ST_INIT_WAIT;
+            timer <= T_INIT;
+            ref_ctr <= 20'd0;
+            refresh_count <= 4'd0;
+            op_is_read <= 1'b0;
+            op_from_init <= 1'b0;
+            op_addr <= 22'd0;
+            op_wdata <= 16'd0;
+            dq_out <= 16'd0;
+            dq_oe <= 1'b0;
+            write_hold <= 1'b0;
+            clear_hold <= 1'b0;
+            read_or <= 16'd0;
+            dbg_init_pulse <= 1'b0;
+            dbg_wr_pulse <= 1'b0;
+            dbg_rd_pulse <= 1'b0;
+            dbg_rd_sample_early <= 16'd0;
+            dbg_rd_sample_now <= 16'd0;
+            dbg_rd_or <= 16'd0;
+            dbg_rd_last <= 16'd0;
+            dbg_rd_window_codes <= 32'd0;
         end else begin
-            wr_ack<=0; rd_ack<=0; dbg_init_pulse<=0; dbg_wr_pulse<=0; dbg_rd_pulse<=0;
-            if (ref_ctr < REF_INT) ref_ctr <= ref_ctr + 1'b1;
+            SD_DQM <= 2'b11;
+            SD_CKE <= 1'b1;
+            set_cmd(CMD_NOP);
+            wr_ack <= 1'b0;
+            rd_ack <= 1'b0;
+            dbg_init_pulse <= 1'b0;
+            dbg_wr_pulse <= 1'b0;
+            dbg_rd_pulse <= 1'b0;
+            dq_oe <= write_hold || clear_hold;
+            if (write_hold)
+                dq_out <= SCRUB_DQ_AFTER_WRITE ? 16'h0000 : op_wdata;
+            else if (clear_hold)
+                dq_out <= 16'h0000;
+            if (ref_ctr < REF_INT)
+                ref_ctr <= ref_ctr + 20'd1;
+
             case (state)
-                ST_PWR: begin cmd_nop(); dq_oe<=0; if (timer==T_INIT) begin timer<=0; state<=ST_PRE; end else timer<=timer+1'b1; end
-                ST_PRE: begin cmd_pre_all(); timer<=0; state<=ST_TRP; end
-                ST_TRP: begin cmd_nop(); if (timer==T_RP) begin timer<=0; ref_count_init<=0; state<=ST_REF; end else timer<=timer+1'b1; end
-                ST_REF: begin cmd_refresh(); timer<=0; state<=ST_REFW; end
-                ST_REFW: begin cmd_nop(); if (timer==T_RFC) begin timer<=0; if (ref_count_init==4'd7) state<=ST_MRS; else begin ref_count_init<=ref_count_init+1'b1; state<=ST_REF; end end else timer<=timer+1'b1; end
-                ST_MRS: begin cmd_mrs(); timer<=0; state<=ST_MRDW; end
-                ST_MRDW: begin cmd_nop(); if (timer==T_MRD) begin timer<=0; init_done<=1'b1; dbg_init_pulse<=1'b1; state<=ST_IDLE; ref_ctr<=0; end else timer<=timer+1'b1; end
-                ST_IDLE: begin
-                    cmd_nop(); dq_oe<=0;
-                    if (ref_ctr >= REF_INT) begin
-                        ref_ctr <= 0;
-                        state <= ST_REFR;
-                    end else if (wr_req) begin
-                        op_is_read <= 1'b0; op_addr <= wr_addr; op_wdata <= wr_data; state <= ST_ACT; timer<=0;
-                    end else if (rd_req) begin
-                        op_is_read <= 1'b1; op_addr <= rd_addr; state <= ST_ACT; timer<=0;
+                ST_INIT_WAIT: begin
+                    write_hold <= 1'b0;
+                    clear_hold <= 1'b0;
+                    SD_A <= 13'd0;
+                    SD_BA <= 2'd0;
+                    if (timer == 20'd0) begin
+                        timer <= T_A10_SETUP;
+                        state <= ST_PRE_SETUP;
+                    end else begin
+                        timer <= timer - 20'd1;
                     end
                 end
-                ST_REFR: begin cmd_refresh(); timer<=0; state<=ST_REFW; ref_count_init<=4'd8; end
-                ST_ACT: begin cmd_active(); timer<=0; state<=ST_ACTW; end
-                ST_ACTW: begin cmd_nop(); if (timer==T_RCD) begin timer<=0; state <= op_is_read ? ST_RD : ST_WR; end else timer<=timer+1'b1; end
-                ST_WR: begin cmd_write(); dq_oe<=1'b1; dq_out<=op_wdata; dbg_wr_pulse<=1'b1; timer<=0; state<=ST_POST; end
-                ST_RD: begin cmd_read(); dq_oe<=0; timer<=0; state<=ST_RDLAT; end
-                ST_RDLAT: begin cmd_nop(); if (timer==T_CL) begin rd_data<=dq_in; rd_ack<=1'b1; dbg_rd_pulse<=1'b1; timer<=0; state<=ST_POST; end else timer<=timer+1'b1; end
-                ST_POST: begin cmd_nop(); dq_oe<=0; if (timer==T_RP) begin if (!op_is_read) wr_ack<=1'b1; timer<=0; state<=ST_IDLE; end else timer<=timer+1'b1; end
-                default: state<=ST_PWR;
+
+                ST_PRE_SETUP: begin
+                    SD_A <= 13'b0010000000000;
+                    SD_BA <= 2'd0;
+                    if (timer == 20'd0) begin
+                        state <= ST_PRE_ALL;
+                    end else begin
+                        timer <= timer - 20'd1;
+                    end
+                end
+
+                ST_PRE_ALL: begin
+                    set_cmd(CMD_PRE);
+                    SD_A <= 13'b0010000000000;
+                    SD_BA <= 2'd0;
+                    timer <= T_RP;
+                    refresh_count <= 4'd0;
+                    next_state <= ST_REFRESH;
+                    state <= ST_WAIT;
+                end
+
+                ST_REFRESH: begin
+                    set_cmd(CMD_REF);
+                    timer <= T_RFC;
+                    if (!init_done && (refresh_count == 4'd7)) begin
+                        refresh_count <= 4'd0;
+                        next_state <= ST_MRS;
+                    end else begin
+                        if (!init_done)
+                            refresh_count <= refresh_count + 4'd1;
+                        next_state <= init_done ? ST_IDLE : ST_REFRESH;
+                    end
+                    state <= ST_WAIT;
+                end
+
+                ST_MRS: begin
+                    set_cmd(CMD_MRS);
+                    SD_A <= MODE_REG;
+                    SD_BA <= 2'd0;
+                    timer <= T_MRD;
+                    op_from_init <= 1'b1;
+                    next_state <= ST_IDLE;
+                    state <= ST_WAIT;
+                end
+
+                ST_IDLE: begin
+                    write_hold <= 1'b0;
+                    clear_hold <= 1'b0;
+                    if (AUTO_REFRESH_ENABLE && (ref_ctr >= REF_INT)) begin
+                        ref_ctr <= 20'd0;
+                        state <= ST_REFRESH;
+                    end else if (wr_req) begin
+                        op_is_read <= 1'b0;
+                        op_addr <= wr_addr;
+                        op_wdata <= wr_data;
+                        state <= ST_ACT_WR;
+                    end else if (rd_req) begin
+                        op_is_read <= 1'b1;
+                        op_addr <= rd_addr;
+                        if (WRITE_CLEAR_CYCLES != 0) begin
+                            clear_hold <= 1'b1;
+                            dq_out <= 16'h0000;
+                            timer <= T_DQ_CLEAR;
+                            next_state <= ST_ACT_RD;
+                            state <= ST_WAIT;
+                        end else begin
+                            state <= ST_ACT_RD;
+                        end
+                    end
+                end
+
+                ST_ACT_WR: begin
+                    set_cmd(CMD_ACT);
+                    SD_A <= row_addr;
+                    SD_BA <= bank;
+                    SD_DQM <= 2'b00;
+                    dq_out <= op_wdata;
+                    write_hold <= 1'b1;
+                    clear_hold <= 1'b0;
+                    timer <= T_RCD;
+                    next_state <= ST_WRITE;
+                    state <= ST_WAIT;
+                end
+
+                ST_WRITE: begin
+                    set_cmd(CMD_WR);
+                    SD_A <= ACCESS_AUTO_PRECHARGE ? col_ap_addr : col_addr;
+                    SD_BA <= bank;
+                    SD_DQM <= 2'b00;
+                    dq_out <= op_wdata;
+                    dq_oe <= 1'b1;
+                    write_hold <= 1'b1;
+                    dbg_wr_pulse <= 1'b1;
+                    timer <= ACCESS_AUTO_PRECHARGE ? (T_WR + T_RP) : T_WR;
+                    next_state <= ACCESS_AUTO_PRECHARGE ? ST_ACK : ST_PRE_CLOSE;
+                    state <= ST_WAIT;
+                end
+
+                ST_ACT_RD: begin
+                    set_cmd(CMD_ACT);
+                    SD_A <= row_addr;
+                    SD_BA <= bank;
+                    SD_DQM <= 2'b00;
+                    write_hold <= 1'b0;
+                    clear_hold <= 1'b0;
+                    timer <= T_RCD;
+                    next_state <= ST_READ;
+                    state <= ST_WAIT;
+                end
+
+                ST_READ: begin
+                    set_cmd(CMD_RD);
+                    SD_A <= ACCESS_AUTO_PRECHARGE ? col_ap_addr : col_addr;
+                    SD_BA <= bank;
+                    SD_DQM <= 2'b00;
+                    timer <= 20'd0;
+                    read_or <= 16'd0;
+                    dbg_rd_sample_early <= 16'd0;
+                    dbg_rd_sample_now <= 16'd0;
+                    dbg_rd_or <= 16'd0;
+                    dbg_rd_last <= 16'd0;
+                    dbg_rd_window_codes <= 32'd0;
+                    state <= ST_READ_LAT;
+                end
+
+                ST_READ_LAT: begin
+                    SD_DQM <= 2'b00;
+                    read_or <= read_or | SD_DQ_IN;
+                    dbg_rd_or <= dbg_rd_or | SD_DQ_IN;
+                    dbg_rd_last <= SD_DQ_IN;
+                    if (timer[19:4] == 16'd0)
+                        capture_window_code(timer[3:0], SD_DQ_IN);
+                    if (timer == (T_CL - 20'd1))
+                        dbg_rd_sample_early <= SD_DQ_IN;
+                    if (timer == T_CL)
+                        dbg_rd_sample_now <= SD_DQ_IN;
+                    if (timer == T_READ_OBS) begin
+                        rd_data <= read_or | SD_DQ_IN;
+                        timer <= T_RP;
+                        next_state <= ST_ACK;
+                        state <= ACCESS_AUTO_PRECHARGE ? ST_WAIT : ST_PRE_CLOSE;
+                    end else begin
+                        timer <= timer + 20'd1;
+                    end
+                end
+
+                ST_PRE_CLOSE: begin
+                    set_cmd(CMD_PRE);
+                    SD_A <= 13'd0;
+                    SD_BA <= bank;
+                    state <= ST_WAIT;
+                end
+
+                ST_DQ_CLEAR: begin
+                    write_hold <= 1'b0;
+                    clear_hold <= 1'b1;
+                    SD_DQM <= 2'b00;
+                    dq_out <= 16'h0000;
+                    timer <= T_DQ_CLEAR;
+                    next_state <= ST_ACK;
+                    state <= ST_WAIT;
+                end
+
+                ST_WAIT: begin
+                    if (timer == 20'd0) begin
+                        state <= next_state;
+                        if (next_state == ST_PRE_CLOSE) begin
+                            write_hold <= 1'b0;
+                            timer <= T_RP;
+                            if (!op_is_read && (WRITE_CLEAR_CYCLES != 0))
+                                next_state <= ST_DQ_CLEAR;
+                            else
+                                next_state <= ST_ACK;
+                        end else if (next_state == ST_ACK) begin
+                            write_hold <= 1'b0;
+                            clear_hold <= 1'b0;
+                        end else if (next_state == ST_ACT_RD) begin
+                            clear_hold <= 1'b0;
+                        end else if (next_state == ST_IDLE) begin
+                            if (op_from_init) begin
+                                init_done <= 1'b1;
+                                dbg_init_pulse <= 1'b1;
+                                op_from_init <= 1'b0;
+                                ref_ctr <= 20'd0;
+                            end
+                        end
+                    end else begin
+                        timer <= timer - 20'd1;
+                    end
+                end
+
+                ST_ACK: begin
+                    write_hold <= 1'b0;
+                    clear_hold <= 1'b0;
+                    if (op_is_read) begin
+                        rd_ack <= 1'b1;
+                        dbg_rd_pulse <= 1'b1;
+                    end else begin
+                        wr_ack <= 1'b1;
+                    end
+                    state <= ST_REQ_LOW;
+                end
+
+                ST_REQ_LOW: begin
+                    write_hold <= 1'b0;
+                    clear_hold <= 1'b0;
+                    if (op_is_read) begin
+                        if (!rd_req)
+                            state <= ST_IDLE;
+                    end else begin
+                        if (!wr_req)
+                            state <= ST_IDLE;
+                    end
+                end
+
+                default: begin
+                    state <= ST_INIT_WAIT;
+                    timer <= T_INIT;
+                end
             endcase
         end
     end

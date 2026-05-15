@@ -1,7 +1,8 @@
-// AiCamera ESP32 bridge: true 160x120 live preview receiver.
+// AiCamera ESP32 serial bridge: true 160x120 live preview receiver.
 //
 // The FPGA owns camera capture, downsample, and color packing. The ESP32 only
-// samples the FPGA's phase-tagged RGB565 stream and serves the received pixels.
+// samples the FPGA's phase-tagged RGB565 stream and forwards complete frames
+// over USB/UART. A PC-side script serves the localhost preview.
 
 #include <inttypes.h>
 #include <stdbool.h>
@@ -16,6 +17,7 @@
 #include "esp_log.h"
 #include "esp_netif.h"
 #include "esp_rom_sys.h"
+#include "esp_system.h"
 #include "esp_timer.h"
 #include "esp_wifi.h"
 #include "freertos/FreeRTOS.h"
@@ -24,8 +26,12 @@
 #include "freertos/task.h"
 #include "nvs_flash.h"
 #include "soc/gpio_reg.h"
+#include "soc/rtc_cntl_reg.h"
 #include "soc/soc.h"
 #include "driver/gpio.h"
+#include "driver/usb_serial_jtag.h"
+#include "tinyusb.h"
+#include "tusb_cdc_acm.h"
 
 #include "wifi_profile.h"
 
@@ -33,14 +39,18 @@
 #include "esp_eap_client.h"
 #endif
 
-#define BUILD_ID 325
+#define BUILD_ID 370
 
 #define PREVIEW_W 160
 #define PREVIEW_H 120
 #define FRAME_PIXELS (PREVIEW_W * PREVIEW_H)
+#define FRAME_BYTES (FRAME_PIXELS * 2)
 #define SYMBOLS_PER_PIXEL 3
 #define FRAME_SYMBOLS (FRAME_PIXELS * SYMBOLS_PER_PIXEL)
 #define ROW_SYMBOLS (PREVIEW_W * SYMBOLS_PER_PIXEL)
+#define SEG_PIXELS 40u
+#define ROW_SEGMENTS (PREVIEW_W / SEG_PIXELS)
+#define SEG_SYMBOLS (SEG_PIXELS * SYMBOLS_PER_PIXEL)
 #define BMP_SCALE 1
 #define BMP_W (PREVIEW_W * BMP_SCALE)
 #define BMP_H (PREVIEW_H * BMP_SCALE)
@@ -61,10 +71,30 @@
 #define QHDR3 5
 #define QHDR6 51
 #define QHDR7 12
+#define RHDR0 62
+#define RHDR1 17
+#define RHDR5 45
+#define CHDR1 18
+#define CHDR5 44
 
 #define RECENT_SYMS 64
 #define GATE_WAIT_YIELD_LOOPS 250000u
 #define GATE_EDGE_YIELD_LOOPS 4000000u
+#define ROW_START_TIMEOUT_LOOPS 12000000u
+#define ROW_GAP_IDLE_LOOPS 2048u
+#define ROW_MARKER_SCAN_SYMBOLS 1024u
+#define SERIAL_HEADER_LEN 32u
+#define SERIAL_MAGIC "AICAMF1"
+#define SERIAL_STATUS_LEN 64u
+#define SERIAL_STATUS_MAGIC "AICAMS1"
+#define SERIAL_FORMAT_RGB565_LE 0x0565u
+#define SERIAL_FORMAT_RGB444_PACKED 0x0444u
+#define SERIAL_FORMAT_RGB332_PACKED 0x0332u
+#define SERIAL_FRAME_FORMAT SERIAL_FORMAT_RGB332_PACKED
+#define USB_JTAG_WRITE_CHUNK 4096u
+#define TINYUSB_WRITE_CHUNK 4096u
+#define MAX_BAD_PIXELS_PER_FRAME 4096u
+#define ROW_REPAIR_HOLD_THRESHOLD 320u
 
 static const char *TAG = "aicamera";
 static const EventBits_t WIFI_READY_BIT = BIT0;
@@ -113,17 +143,345 @@ static SemaphoreHandle_t g_frame_mutex;
 static uint16_t g_frame[PREVIEW_H][PREVIEW_W];
 static uint16_t g_build_frame[PREVIEW_H][PREVIEW_W];
 static uint16_t g_http_frame[PREVIEW_H][PREVIEW_W];
+static uint16_t g_serial_frame[PREVIEW_H][PREVIEW_W];
+static uint16_t g_serial_send_frame[PREVIEW_H][PREVIEW_W];
+static uint16_t g_prev_frame[PREVIEW_H][PREVIEW_W];
 static uint8_t g_row_symbols[ROW_SYMBOLS];
 static preview_stats_t g_stats;
+static preview_stats_t g_serial_frame_stats;
 static EventGroupHandle_t g_wifi_events;
-static portMUX_TYPE g_capture_spinlock = portMUX_INITIALIZER_UNLOCKED;
+static SemaphoreHandle_t g_serial_mutex;
+static SemaphoreHandle_t g_serial_frame_mutex;
+static SemaphoreHandle_t g_serial_wake;
+static bool g_serial_ready;
+static bool g_serial_uses_tinyusb;
+static volatile bool g_reboot_to_bootloader;
+static uint32_t g_serial_frame_seq;
+static uint32_t g_serial_sent_seq;
 static volatile uint32_t g_gate_seen;
 static volatile uint32_t g_clk_edges_seen;
 static volatile uint32_t g_no_clock_abort;
 static int64_t g_last_gate_start_us;
 
 static void configure_gpio_receiver(void);
-static void publish_frame(uint16_t first_word, uint8_t row_repairs);
+static void publish_frame(uint16_t first_word, uint32_t row_repairs);
+
+static inline void put_le16(uint8_t *p, uint16_t v)
+{
+    p[0] = (uint8_t)(v & 0xffu);
+    p[1] = (uint8_t)(v >> 8);
+}
+
+static inline void put_le32(uint8_t *p, uint32_t v)
+{
+    p[0] = (uint8_t)(v & 0xffu);
+    p[1] = (uint8_t)((v >> 8) & 0xffu);
+    p[2] = (uint8_t)((v >> 16) & 0xffu);
+    p[3] = (uint8_t)((v >> 24) & 0xffu);
+}
+
+static void serial_write_all(const void *data, size_t len)
+{
+    const uint8_t *p = (const uint8_t *)data;
+    while (len != 0) {
+        if (g_serial_uses_tinyusb) {
+            const size_t chunk = len > TINYUSB_WRITE_CHUNK ? TINYUSB_WRITE_CHUNK : len;
+            const size_t wrote = tinyusb_cdcacm_write_queue(TINYUSB_CDC_ACM_0, p, chunk);
+            if (wrote > 0) {
+                p += wrote;
+                len -= wrote;
+                (void)tinyusb_cdcacm_write_flush(TINYUSB_CDC_ACM_0, 0);
+            } else {
+                (void)tinyusb_cdcacm_write_flush(TINYUSB_CDC_ACM_0, 0);
+                vTaskDelay(1);
+            }
+            continue;
+        }
+
+        const size_t chunk = len > USB_JTAG_WRITE_CHUNK ? USB_JTAG_WRITE_CHUNK : len;
+        const int wrote = usb_serial_jtag_write_bytes(p, chunk, pdMS_TO_TICKS(1));
+        if (wrote > 0) {
+            p += (size_t)wrote;
+            len -= (size_t)wrote;
+        } else {
+            vTaskDelay(1);
+        }
+    }
+
+    if (g_serial_uses_tinyusb) {
+        (void)tinyusb_cdcacm_write_flush(TINYUSB_CDC_ACM_0, pdMS_TO_TICKS(1));
+    }
+}
+
+static void reboot_to_usb_bootloader_if_requested(void)
+{
+    if (!g_reboot_to_bootloader) {
+        return;
+    }
+    const char ack[] = "\r\nAICAMERA entering USB download mode\r\n";
+    if (g_serial_uses_tinyusb) {
+        (void)tinyusb_cdcacm_write_queue(TINYUSB_CDC_ACM_0, (const uint8_t *)ack, sizeof(ack) - 1u);
+        (void)tinyusb_cdcacm_write_flush(TINYUSB_CDC_ACM_0, pdMS_TO_TICKS(20));
+    }
+    vTaskDelay(pdMS_TO_TICKS(25));
+    REG_WRITE(RTC_CNTL_OPTION1_REG, RTC_CNTL_FORCE_DOWNLOAD_BOOT);
+    esp_restart();
+}
+
+static void tinyusb_rx_callback(int itf, cdcacm_event_t *event)
+{
+    (void)event;
+    uint8_t buf[64];
+    size_t n = 0;
+    static uint8_t match;
+    static const char boot_cmd[] = "BOOT";
+
+    if (tinyusb_cdcacm_read((tinyusb_cdcacm_itf_t)itf, buf, sizeof(buf), &n) != ESP_OK) {
+        return;
+    }
+    for (size_t i = 0; i < n; i++) {
+        const char c = (char)buf[i];
+        if (c == boot_cmd[match]) {
+            match++;
+            if (match == sizeof(boot_cmd) - 1u) {
+                g_reboot_to_bootloader = true;
+                match = 0;
+            }
+        } else {
+            match = (c == boot_cmd[0]) ? 1u : 0u;
+        }
+    }
+}
+
+static size_t pack_serial_frame(uint16_t frame[PREVIEW_H][PREVIEW_W])
+{
+#if SERIAL_FRAME_FORMAT == SERIAL_FORMAT_RGB444_PACKED
+    size_t out = 0;
+    const uint16_t *p = &frame[0][0];
+    uint8_t *payload = (uint8_t *)&frame[0][0];
+    for (uint32_t i = 0; i < FRAME_PIXELS; i += 2u) {
+        const uint16_t w0 = p[i];
+        const uint16_t w1 = p[i + 1u];
+        const uint8_t lo0 = (uint8_t)(w0 >> 8);
+        const uint8_t hi0 = (uint8_t)(w0 & 0xffu);
+        const uint8_t lo1 = (uint8_t)(w1 >> 8);
+        const uint8_t hi1 = (uint8_t)(w1 & 0xffu);
+        const uint8_t r0 = hi0 >> 4;
+        const uint8_t g0 = (uint8_t)((((hi0 & 0x07u) << 3) | (lo0 >> 5)) >> 2);
+        const uint8_t b0 = (uint8_t)((lo0 & 0x1fu) >> 1);
+        const uint8_t r1 = hi1 >> 4;
+        const uint8_t g1 = (uint8_t)((((hi1 & 0x07u) << 3) | (lo1 >> 5)) >> 2);
+        const uint8_t b1 = (uint8_t)((lo1 & 0x1fu) >> 1);
+        payload[out++] = (uint8_t)((r0 << 4) | g0);
+        payload[out++] = (uint8_t)((b0 << 4) | r1);
+        payload[out++] = (uint8_t)((g1 << 4) | b1);
+    }
+    return out;
+#elif SERIAL_FRAME_FORMAT == SERIAL_FORMAT_RGB332_PACKED
+    size_t out = 0;
+    const uint16_t *p = &frame[0][0];
+    uint8_t *payload = (uint8_t *)&frame[0][0];
+    for (uint32_t i = 0; i < FRAME_PIXELS; i++) {
+        const uint16_t w = p[i];
+        const uint8_t lo = (uint8_t)(w >> 8);
+        const uint8_t hi = (uint8_t)(w & 0xffu);
+        const uint8_t r3 = hi >> 5;
+        const uint8_t g3 = (uint8_t)((((hi & 0x07u) << 3) | (lo >> 5)) >> 3);
+        const uint8_t b2 = (uint8_t)((lo & 0x1fu) >> 3);
+        payload[out++] = (uint8_t)((r3 << 5) | (g3 << 2) | b2);
+    }
+    return out;
+#else
+    return FRAME_BYTES;
+#endif
+}
+
+static void send_serial_frame(uint16_t frame[PREVIEW_H][PREVIEW_W],
+                              const preview_stats_t *stats)
+{
+    if (!g_serial_ready) {
+        return;
+    }
+    if (g_serial_mutex &&
+        xSemaphoreTake(g_serial_mutex, pdMS_TO_TICKS(25)) != pdTRUE) {
+        return;
+    }
+
+    uint8_t hdr[SERIAL_HEADER_LEN] = {0};
+    memcpy(&hdr[0], SERIAL_MAGIC, 7);
+    hdr[7] = 0;
+    put_le16(&hdr[8], PREVIEW_W);
+    put_le16(&hdr[10], PREVIEW_H);
+    const size_t payload_len = pack_serial_frame(frame);
+    put_le16(&hdr[12], SERIAL_FRAME_FORMAT);
+    put_le16(&hdr[14], SERIAL_HEADER_LEN);
+    put_le32(&hdr[16], stats->frame_id);
+    put_le32(&hdr[20], (uint32_t)payload_len);
+    put_le32(&hdr[24], stats->capture_us);
+    put_le32(&hdr[28], stats->gate_period_us);
+
+    serial_write_all(hdr, sizeof(hdr));
+    serial_write_all(frame, payload_len);
+
+    if (g_serial_mutex) {
+        xSemaphoreGive(g_serial_mutex);
+    }
+}
+
+static void serial_frame_task(void *arg)
+{
+    (void)arg;
+    while (true) {
+        reboot_to_usb_bootloader_if_requested();
+        xSemaphoreTake(g_serial_wake, pdMS_TO_TICKS(1000));
+
+        preview_stats_t stats;
+        bool have_frame = false;
+        if (xSemaphoreTake(g_serial_frame_mutex, pdMS_TO_TICKS(20)) == pdTRUE) {
+            if (g_serial_sent_seq != g_serial_frame_seq) {
+                memcpy(g_serial_send_frame, g_serial_frame, sizeof(g_serial_send_frame));
+                stats = g_serial_frame_stats;
+                g_serial_sent_seq = g_serial_frame_seq;
+                have_frame = true;
+            }
+            xSemaphoreGive(g_serial_frame_mutex);
+        }
+
+        if (have_frame) {
+            send_serial_frame(g_serial_send_frame, &stats);
+        }
+    }
+}
+
+static void send_serial_status(void)
+{
+    if (!g_serial_ready) {
+        return;
+    }
+    if (g_serial_mutex &&
+        xSemaphoreTake(g_serial_mutex, pdMS_TO_TICKS(10)) != pdTRUE) {
+        return;
+    }
+
+    const uint32_t gpio_lo = REG_READ(GPIO_IN_REG);
+    const uint32_t gpio_hi = REG_READ(GPIO_IN1_REG);
+    preview_stats_t s = g_stats;
+    uint8_t pkt[SERIAL_STATUS_LEN] = {0};
+    memcpy(&pkt[0], SERIAL_STATUS_MAGIC, 7);
+    pkt[7] = 0;
+    put_le16(&pkt[8], SERIAL_STATUS_LEN);
+    put_le16(&pkt[10], BUILD_ID);
+    put_le32(&pkt[12], s.frame_id);
+    put_le32(&pkt[16], s.complete);
+    put_le32(&pkt[20], s.partial);
+    put_le32(&pkt[24], s.sync_count);
+    put_le32(&pkt[28], g_gate_seen);
+    put_le32(&pkt[32], g_clk_edges_seen);
+    put_le32(&pkt[36], g_no_clock_abort);
+    put_le32(&pkt[40], s.first_word);
+    put_le32(&pkt[44], s.capture_us);
+    put_le32(&pkt[48], s.gate_period_us);
+    put_le32(&pkt[52], gpio_lo);
+    put_le32(&pkt[56], gpio_hi);
+    put_le32(&pkt[60], (s.valid ? 1u : 0u) | ((s.row_resync & 0xffffu) << 8));
+
+    serial_write_all(pkt, sizeof(pkt));
+
+    if (g_serial_mutex) {
+        xSemaphoreGive(g_serial_mutex);
+    }
+}
+
+static void status_task(void *arg)
+{
+    (void)arg;
+    while (true) {
+        reboot_to_usb_bootloader_if_requested();
+        send_serial_status();
+        vTaskDelay(pdMS_TO_TICKS(2000));
+    }
+}
+
+static bool start_tinyusb_cdc_stream(void)
+{
+    const tinyusb_config_t tusb_cfg = {
+        .device_descriptor = NULL,
+        .string_descriptor = NULL,
+        .string_descriptor_count = 0,
+        .external_phy = false,
+#if (TUD_OPT_HIGH_SPEED)
+        .fs_configuration_descriptor = NULL,
+        .hs_configuration_descriptor = NULL,
+        .qualifier_descriptor = NULL,
+#else
+        .configuration_descriptor = NULL,
+#endif
+        .self_powered = false,
+        .vbus_monitor_io = -1,
+    };
+
+    esp_err_t err = tinyusb_driver_install(&tusb_cfg);
+    if (err != ESP_OK) {
+        return false;
+    }
+
+    const tinyusb_config_cdcacm_t acm_cfg = {
+        .usb_dev = TINYUSB_USBDEV_0,
+        .cdc_port = TINYUSB_CDC_ACM_0,
+        .rx_unread_buf_sz = 512,
+        .callback_rx = tinyusb_rx_callback,
+        .callback_rx_wanted_char = NULL,
+        .callback_line_state_changed = NULL,
+        .callback_line_coding_changed = NULL,
+    };
+    err = tusb_cdc_acm_init(&acm_cfg);
+    if (err != ESP_OK) {
+        return false;
+    }
+
+    g_serial_uses_tinyusb = true;
+    g_serial_ready = true;
+
+    char banner[96];
+    const int n = snprintf(banner, sizeof(banner),
+                           "\r\nAICAMERA tinyusb-cdc RGB332 160x120 build=%u\r\n",
+                           BUILD_ID);
+    if (n > 0) {
+        const size_t send_len = ((size_t)n < sizeof(banner)) ? (size_t)n : sizeof(banner) - 1u;
+        (void)tinyusb_cdcacm_write_queue(TINYUSB_CDC_ACM_0, (const uint8_t *)banner, send_len);
+        (void)tinyusb_cdcacm_write_flush(TINYUSB_CDC_ACM_0, 0);
+    }
+    return true;
+}
+
+static void start_usb_serial_jtag_stream(void)
+{
+    usb_serial_jtag_driver_config_t cfg = USB_SERIAL_JTAG_DRIVER_CONFIG_DEFAULT();
+    cfg.tx_buffer_size = 65536;
+    cfg.rx_buffer_size = 256;
+    if (!usb_serial_jtag_is_driver_installed()) {
+        ESP_ERROR_CHECK(usb_serial_jtag_driver_install(&cfg));
+    }
+
+    char banner[96];
+    const int n = snprintf(banner, sizeof(banner),
+                           "\r\nAICAMERA usb-serial-jtag RGB565 160x120 build=%u\r\n",
+                           BUILD_ID);
+    if (n > 0) {
+        const size_t send_len = ((size_t)n < sizeof(banner)) ? (size_t)n : sizeof(banner) - 1u;
+        usb_serial_jtag_write_bytes(banner, send_len, pdMS_TO_TICKS(20));
+    }
+    g_serial_ready = true;
+}
+
+static void start_serial_stream(void)
+{
+    esp_log_level_set("*", ESP_LOG_NONE);
+    if (start_tinyusb_cdc_stream()) {
+        return;
+    }
+    start_usb_serial_jtag_stream();
+}
 
 static inline uint8_t IRAM_ATTR read_qvga_sym6(uint32_t lo, uint32_t hi)
 {
@@ -189,16 +547,193 @@ static uint32_t IRAM_ATTR read_qvga_symbols_burst(uint8_t *syms, uint32_t count,
 
     while (got < count) {
         const uint32_t lo = REG_READ(GPIO_IN_REG);
+        if (!qvga_gate_high(lo)) {
+            break;
+        }
         const bool clk = qvga_clk_high(lo);
         if (!prev_clk && clk) {
             const uint32_t hi = REG_READ(GPIO_IN1_REG);
-            if (qvga_gate_high(lo)) {
-                g_gate_seen++;
-            }
+            g_gate_seen++;
             syms[got++] = read_qvga_sym6(lo, hi);
             g_clk_edges_seen++;
             idle_loops = 0;
         } else if (++idle_loops >= max_idle_loops) {
+            break;
+        }
+        prev_clk = clk;
+    }
+
+    return got;
+}
+
+static bool IRAM_ATTR read_qvga_symbol_wait(uint8_t *sym, uint32_t max_idle_loops)
+{
+    bool prev_clk = qvga_clk_high(REG_READ(GPIO_IN_REG));
+    uint32_t idle_loops = 0;
+
+    while (idle_loops < max_idle_loops) {
+        const uint32_t lo = REG_READ(GPIO_IN_REG);
+        if (!qvga_gate_high(lo)) {
+            return false;
+        }
+        const bool clk = qvga_clk_high(lo);
+        if (!prev_clk && clk) {
+            const uint32_t hi = REG_READ(GPIO_IN1_REG);
+            g_gate_seen++;
+            *sym = read_qvga_sym6(lo, hi);
+            g_clk_edges_seen++;
+            return true;
+        }
+        prev_clk = clk;
+        idle_loops++;
+    }
+
+    return false;
+}
+
+static bool IRAM_ATTR read_qvga_row_marker(uint32_t *marker_row, uint8_t marker[6])
+{
+    uint32_t state = 0;
+    uint32_t scanned = 0;
+
+    while (scanned < ROW_MARKER_SCAN_SYMBOLS) {
+        uint8_t s = 0;
+        if (!read_qvga_symbol_wait(&s, ROW_START_TIMEOUT_LOOPS)) {
+            return false;
+        }
+        s &= 0x3fu;
+        scanned++;
+
+        switch (state) {
+        case 0:
+            if (s == RHDR0) {
+                marker[0] = s;
+                state = 1;
+            }
+            break;
+        case 1:
+            if (s == RHDR1) {
+                marker[1] = s;
+                state = 2;
+            } else {
+                state = (s == RHDR0) ? 1u : 0u;
+                marker[0] = (s == RHDR0) ? s : 0u;
+            }
+            break;
+        case 2:
+            marker[2] = s;
+            state = 3;
+            break;
+        case 3:
+            marker[3] = s;
+            state = 4;
+            break;
+        case 4:
+            marker[4] = s;
+            state = 5;
+            break;
+        default:
+            marker[5] = s;
+            if (marker[5] == RHDR5 &&
+                (((marker[2] ^ marker[4]) & 0x3fu) == 0x3fu)) {
+                *marker_row = (uint32_t)(marker[2] | ((marker[3] & 1u) << 6));
+                return true;
+            }
+            state = (s == RHDR0) ? 1u : 0u;
+            marker[0] = (s == RHDR0) ? s : 0u;
+            break;
+        }
+    }
+
+    return false;
+}
+
+static bool IRAM_ATTR read_qvga_col_marker(uint32_t *marker_row,
+                                           uint32_t *marker_seg,
+                                           uint8_t marker[6])
+{
+    uint32_t state = 0;
+    uint32_t scanned = 0;
+
+    while (scanned < ROW_MARKER_SCAN_SYMBOLS) {
+        uint8_t s = 0;
+        if (!read_qvga_symbol_wait(&s, ROW_START_TIMEOUT_LOOPS)) {
+            return false;
+        }
+        s &= 0x3fu;
+        scanned++;
+
+        switch (state) {
+        case 0:
+            if (s == RHDR0) {
+                marker[0] = s;
+                state = 1;
+            }
+            break;
+        case 1:
+            if (s == CHDR1) {
+                marker[1] = s;
+                state = 2;
+            } else {
+                state = (s == RHDR0) ? 1u : 0u;
+                marker[0] = (s == RHDR0) ? s : 0u;
+            }
+            break;
+        case 2:
+            marker[2] = s;
+            state = 3;
+            break;
+        case 3:
+            marker[3] = s;
+            state = 4;
+            break;
+        case 4:
+            marker[4] = s;
+            state = 5;
+            break;
+        default:
+            marker[5] = s;
+            if (marker[5] == CHDR5 &&
+                (((marker[2] ^ (marker[3] & 0x03u) ^ marker[4]) & 0x3fu) == 0x3fu)) {
+                *marker_row = (uint32_t)marker[2];
+                *marker_seg = (uint32_t)(marker[3] & 0x03u);
+                return true;
+            }
+            state = (s == RHDR0) ? 1u : 0u;
+            marker[0] = (s == RHDR0) ? s : 0u;
+            break;
+        }
+    }
+
+    return false;
+}
+
+static uint32_t IRAM_ATTR read_qvga_data_symbols(uint8_t *syms, uint32_t count)
+{
+    bool prev_clk = qvga_clk_high(REG_READ(GPIO_IN_REG));
+    uint32_t start_idle = 0;
+    uint32_t gap_idle = 0;
+    uint32_t got = 0;
+
+    while (got < count) {
+        const uint32_t lo = REG_READ(GPIO_IN_REG);
+        if (!qvga_gate_high(lo)) {
+            break;
+        }
+
+        const bool clk = qvga_clk_high(lo);
+        if (!prev_clk && clk) {
+            const uint32_t hi = REG_READ(GPIO_IN1_REG);
+            g_gate_seen++;
+            syms[got++] = read_qvga_sym6(lo, hi);
+            g_clk_edges_seen++;
+            start_idle = 0;
+            gap_idle = 0;
+        } else if (got == 0) {
+            if (++start_idle >= ROW_START_TIMEOUT_LOOPS) {
+                break;
+            }
+        } else if (++gap_idle >= ROW_GAP_IDLE_LOOPS) {
             break;
         }
         prev_clk = clk;
@@ -212,7 +747,7 @@ static void wait_for_gate_low(void)
     uint32_t loops = 0;
     while (qvga_gate_high(REG_READ(GPIO_IN_REG))) {
         if (++loops >= GATE_WAIT_YIELD_LOOPS) {
-            taskYIELD();
+            vTaskDelay(1);
             loops = 0;
         }
     }
@@ -223,7 +758,7 @@ static void wait_for_gate_high(void)
     uint32_t loops = 0;
     while (!qvga_gate_high(REG_READ(GPIO_IN_REG))) {
         if (++loops >= GATE_EDGE_YIELD_LOOPS) {
-            taskYIELD();
+            vTaskDelay(1);
             loops = 0;
         }
     }
@@ -307,6 +842,47 @@ static inline bool word_is_bus_artifact(uint16_t word)
     int b;
     rgb565_components(word, &r, &g, &b);
     return color_is_bus_artifact(r, g, b);
+}
+
+static inline bool word_is_dark_dropout(uint16_t word)
+{
+    int r;
+    int g;
+    int b;
+    rgb565_components(word, &r, &g, &b);
+    const int sum = r + g + b;
+    return sum <= 18 || (sum <= 28 && b <= 2 && g <= 12);
+}
+
+static inline bool word_is_repairable_glitch(uint16_t word)
+{
+    return word_is_bus_artifact(word) || word_is_dark_dropout(word);
+}
+
+static inline uint32_t word_luma6(uint16_t word)
+{
+    int r;
+    int g;
+    int b;
+    rgb565_components(word, &r, &g, &b);
+    return (uint32_t)((r * 2) + (g * 3) + b);
+}
+
+static inline uint16_t avg_rgb565_like(uint16_t a, uint16_t b)
+{
+    int ar;
+    int ag;
+    int ab;
+    int br;
+    int bg;
+    int bb;
+    rgb565_components(a, &ar, &ag, &ab);
+    rgb565_components(b, &br, &bg, &bb);
+    const uint16_t r5 = (uint16_t)((ar + br) >> 2);
+    const uint16_t g6 = (uint16_t)((ag + bg) >> 1);
+    const uint16_t b5 = (uint16_t)((ab + bb) >> 2);
+    return (uint16_t)(((g6 & 0x07u) << 13) | ((b5 & 0x1fu) << 8) |
+                      ((r5 & 0x1fu) << 3) | ((g6 >> 3) & 0x07u));
 }
 
 static void summarize_frame_color(const uint16_t frame[PREVIEW_H][PREVIEW_W],
@@ -555,21 +1131,179 @@ static uint32_t scrub_artifact_pixels(void)
     return fixed;
 }
 
-static void publish_frame(uint16_t first_word, uint8_t row_repairs)
+static uint32_t repair_dropout_rows_from_history(void)
 {
-    const uint32_t fixed_pixels = scrub_artifact_pixels();
-    bool hold_frame = false;
+    uint32_t fixed = 0;
+    uint32_t row_flags[PREVIEW_H] = {0};
+    uint32_t seg_flags[PREVIEW_H][ROW_SEGMENTS] = {{0}};
 
-    if (g_stats.valid && row_repairs > 1) {
-        g_stats.row_hold++;
-        g_stats.partial_publish++;
-        hold_frame = true;
+    for (uint32_t y = 0; y < PREVIEW_H; y++) {
+        uint32_t row_glitches = 0;
+        uint32_t longest_run = 0;
+        uint32_t run = 0;
+        for (uint32_t x = 0; x < PREVIEW_W; x++) {
+            const bool glitch = word_is_repairable_glitch(g_build_frame[y][x]);
+            if (glitch) {
+                row_glitches++;
+                run++;
+                if (run > longest_run) {
+                    longest_run = run;
+                }
+            } else {
+                run = 0;
+            }
+        }
+        row_flags[y] = (row_glitches >= 42u || longest_run >= 18u);
+
+        for (uint32_t seg = 0; seg < ROW_SEGMENTS; seg++) {
+            uint32_t seg_glitches = 0;
+            uint32_t seg_run = 0;
+            uint32_t seg_longest = 0;
+            const uint32_t x0 = seg * SEG_PIXELS;
+            for (uint32_t x = 0; x < SEG_PIXELS; x++) {
+                const bool glitch = word_is_repairable_glitch(g_build_frame[y][x0 + x]);
+                if (glitch) {
+                    seg_glitches++;
+                    seg_run++;
+                    if (seg_run > seg_longest) {
+                        seg_longest = seg_run;
+                    }
+                } else {
+                    seg_run = 0;
+                }
+            }
+            seg_flags[y][seg] = (seg_glitches >= 14u || seg_longest >= 10u);
+        }
     }
 
-    if (g_stats.valid && fixed_pixels > 7200u) {
+    for (uint32_t y = 0; y < PREVIEW_H; y++) {
+        for (uint32_t seg = 0; seg < ROW_SEGMENTS; seg++) {
+            if (!row_flags[y] && !seg_flags[y][seg]) {
+                continue;
+            }
+            const uint32_t x0 = seg * SEG_PIXELS;
+            for (uint32_t x = 0; x < SEG_PIXELS; x++) {
+                uint16_t replacement = g_prev_frame[y][x0 + x];
+                if (word_is_repairable_glitch(replacement)) {
+                    if (y != 0 && !word_is_repairable_glitch(g_build_frame[y - 1u][x0 + x])) {
+                        replacement = g_build_frame[y - 1u][x0 + x];
+                    } else if ((y + 1u) < PREVIEW_H &&
+                               !word_is_repairable_glitch(g_build_frame[y + 1u][x0 + x])) {
+                        replacement = g_build_frame[y + 1u][x0 + x];
+                    } else {
+                        replacement = g_build_frame[y][x0 + x];
+                    }
+                }
+                if (replacement != g_build_frame[y][x0 + x]) {
+                    g_build_frame[y][x0 + x] = replacement;
+                    fixed++;
+                }
+            }
+        }
+    }
+
+    if (fixed != 0) {
+        g_stats.row_bad += (fixed + 15u) >> 4;
+    }
+    return fixed;
+}
+
+static uint32_t repair_thin_horizontal_dropouts(void)
+{
+    uint32_t fixed = 0;
+
+    for (uint32_t y = 1; y + 1u < PREVIEW_H; y++) {
+        uint32_t row_hits = 0;
+        bool hit[PREVIEW_W] = {0};
+
+        for (uint32_t x = 0; x < PREVIEW_W; x++) {
+            const uint16_t cur = g_build_frame[y][x];
+            const uint16_t up = g_build_frame[y - 1u][x];
+            const uint16_t down = g_build_frame[y + 1u][x];
+            const uint32_t cur_l = word_luma6(cur);
+            const uint32_t up_l = word_luma6(up);
+            const uint32_t down_l = word_luma6(down);
+            const uint32_t avg_l = (up_l + down_l) >> 1;
+
+            const bool vertical_line =
+                !word_is_repairable_glitch(up) &&
+                !word_is_repairable_glitch(down) &&
+                (avg_l > 42u) &&
+                ((cur_l + 44u) < avg_l);
+            const bool obvious_glitch =
+                word_is_repairable_glitch(cur) &&
+                !word_is_repairable_glitch(g_prev_frame[y][x]);
+
+            if (vertical_line || obvious_glitch) {
+                hit[x] = true;
+                row_hits++;
+            }
+        }
+
+        if (row_hits < 6u) {
+            continue;
+        }
+
+        for (uint32_t x = 0; x < PREVIEW_W; x++) {
+            if (!hit[x]) {
+                continue;
+            }
+            uint16_t replacement = g_prev_frame[y][x];
+            if (word_is_repairable_glitch(replacement)) {
+                replacement = avg_rgb565_like(g_build_frame[y - 1u][x],
+                                              g_build_frame[y + 1u][x]);
+            }
+            if (replacement != g_build_frame[y][x]) {
+                g_build_frame[y][x] = replacement;
+                fixed++;
+            }
+        }
+    }
+
+    if (fixed != 0) {
+        g_stats.row_bad += (fixed + 15u) >> 4;
+    }
+    return fixed;
+}
+
+static inline uint16_t repair_word_for_pixel(uint32_t pixel_idx, uint16_t *dst)
+{
+    const uint32_t x = pixel_idx % PREVIEW_W;
+    const uint32_t y = pixel_idx / PREVIEW_W;
+
+    if (x != 0 && !word_is_bus_artifact(dst[-1])) {
+        return dst[-1];
+    }
+    if (y != 0) {
+        const uint16_t above = g_build_frame[y - 1u][x];
+        if (!word_is_bus_artifact(above)) {
+            return above;
+        }
+    }
+    if (!word_is_bus_artifact(*dst)) {
+        return *dst;
+    }
+    if (x != 0) {
+        return dst[-1];
+    }
+    return 0u;
+}
+
+static void publish_frame(uint16_t first_word, uint32_t row_repairs)
+{
+    const uint32_t fixed_pixels = scrub_artifact_pixels();
+    const uint32_t dropout_fixed = 0;
+    const uint32_t line_fixed = repair_thin_horizontal_dropouts();
+    bool hold_frame = false;
+
+    if (g_stats.valid && row_repairs > ROW_REPAIR_HOLD_THRESHOLD) {
+        g_stats.row_hold++;
+        g_stats.partial_publish++;
+    }
+
+    if (g_stats.valid && (fixed_pixels + dropout_fixed + line_fixed) > 9000u) {
         g_stats.artifact_hold++;
         g_stats.partial_publish++;
-        hold_frame = true;
     }
 
     if (g_stats.valid && frame_is_bad_green_tint()) {
@@ -582,13 +1316,20 @@ static void publish_frame(uint16_t first_word, uint8_t row_repairs)
         return;
     }
 
-    if (xSemaphoreTake(g_frame_mutex, pdMS_TO_TICKS(10)) == pdTRUE) {
+    g_stats.frame_id++;
+    g_stats.complete++;
+    g_stats.first_word = first_word;
+    g_stats.valid = 1;
+    if (xSemaphoreTake(g_frame_mutex, pdMS_TO_TICKS(2)) == pdTRUE) {
         memcpy(g_frame, g_build_frame, sizeof(g_frame));
-        g_stats.frame_id++;
-        g_stats.complete++;
-        g_stats.first_word = first_word;
-        g_stats.valid = 1;
         xSemaphoreGive(g_frame_mutex);
+    }
+    if (xSemaphoreTake(g_serial_frame_mutex, pdMS_TO_TICKS(2)) == pdTRUE) {
+        memcpy(g_serial_frame, g_build_frame, sizeof(g_serial_frame));
+        g_serial_frame_stats = g_stats;
+        g_serial_frame_seq++;
+        xSemaphoreGive(g_serial_frame_mutex);
+        xSemaphoreGive(g_serial_wake);
     }
 }
 
@@ -598,6 +1339,20 @@ static void capture_task(void *arg)
     configure_gpio_receiver();
 
     while (true) {
+        bool have_prev_frame = false;
+        if (xSemaphoreTake(g_frame_mutex, pdMS_TO_TICKS(1)) == pdTRUE) {
+            have_prev_frame = g_stats.valid != 0;
+            if (have_prev_frame) {
+                memcpy(g_prev_frame, g_frame, sizeof(g_prev_frame));
+                memcpy(g_build_frame, g_frame, sizeof(g_build_frame));
+            }
+            xSemaphoreGive(g_frame_mutex);
+        }
+        if (!have_prev_frame) {
+            memset(g_prev_frame, 0, sizeof(g_prev_frame));
+            memset(g_build_frame, 0, sizeof(g_build_frame));
+        }
+
         wait_for_gate_low();
         wait_for_gate_high();
 
@@ -606,12 +1361,12 @@ static void capture_task(void *arg)
         uint32_t first_count = 8u;
         uint32_t payload_symbols = 0;
         uint32_t pixel_idx = 0;
+        bool first_word_set = false;
         const int64_t capture_start_us = esp_timer_get_time();
         if (g_last_gate_start_us != 0) {
             g_stats.gate_period_us = (uint32_t)(capture_start_us - g_last_gate_start_us);
         }
         g_last_gate_start_us = capture_start_us;
-        portENTER_CRITICAL(&g_capture_spinlock);
         bool ok = read_qvga_header_at_gate(header);
 
         const bool header_ok = header[0] == QHDR0 &&
@@ -634,61 +1389,129 @@ static void capture_task(void *arg)
         uint16_t *dst = &g_build_frame[0][0];
 
         if (!ok) {
-            portEXIT_CRITICAL(&g_capture_spinlock);
             g_no_clock_abort++;
             g_stats.partial++;
+            vTaskDelay(1);
             continue;
         }
 
-        for (uint32_t row = 0; row < PREVIEW_H && ok; row++) {
-            const uint32_t got = read_qvga_symbols_burst(g_row_symbols, ROW_SYMBOLS, 160000u);
-            if (got != ROW_SYMBOLS) {
-                note_symbol_batch(g_row_symbols, got);
-                append_first_symbols(&first_count, g_row_symbols, got);
-                payload_symbols += got;
+        uint32_t bad_used = 0;
+        uint32_t short_rows = 0;
+        uint32_t row = 0;
+        while (ok && row < PREVIEW_H) {
+            uint8_t marker[6] = {0};
+            uint32_t marker_row = row;
+            if (!read_qvga_row_marker(&marker_row, marker)) {
+                g_stats.row_bad++;
                 ok = false;
                 break;
             }
+            note_symbol_batch(marker, sizeof(marker));
+            append_first_symbols(&first_count, marker, sizeof(marker));
+            payload_symbols += sizeof(marker);
 
-            note_symbol_batch(g_row_symbols, ROW_SYMBOLS);
-            append_first_symbols(&first_count, g_row_symbols, ROW_SYMBOLS);
-            payload_symbols += ROW_SYMBOLS;
+            if (marker_row >= PREVIEW_H) {
+                g_stats.row_bad++;
+                marker_row = row;
+            }
+            if (marker_row > row) {
+                short_rows += marker_row - row;
+                row = marker_row;
+            } else if (marker_row != row) {
+                g_stats.row_bad++;
+            }
 
-            for (uint32_t x = 0; x < PREVIEW_W; x++) {
-                const uint32_t base = x * SYMBOLS_PER_PIXEL;
-                uint8_t phase_syms[SYMBOLS_PER_PIXEL] = {
-                    g_row_symbols[base],
-                    g_row_symbols[base + 1u],
-                    g_row_symbols[base + 2u],
-                };
-
-                uint16_t word = 0;
-                if (!unpack_rgb565_packed3(phase_syms[0], phase_syms[1], phase_syms[2], &word)) {
-                    g_stats.row_resync++;
-                    ok = false;
+            for (uint32_t seg = 0; ok && seg < ROW_SEGMENTS; seg++) {
+                const uint32_t seg_col = seg * SEG_PIXELS;
+                pixel_idx = row * PREVIEW_W + seg_col;
+                dst = &g_build_frame[row][seg_col];
+                const uint32_t got = read_qvga_data_symbols(g_row_symbols, SEG_SYMBOLS);
+                if (got != 0) {
+                    note_symbol_batch(g_row_symbols, got);
+                    append_first_symbols(&first_count, g_row_symbols, got);
                 }
-                if (!ok) {
+                payload_symbols += got;
+
+                if (got == 0) {
+                    g_stats.row_bad++;
+                    ok = false;
                     break;
                 }
-
-                if (pixel_idx == 0) {
-                    first_word = word;
+                if (got != SEG_SYMBOLS) {
+                    const uint32_t missing = SEG_SYMBOLS - got;
+                    short_rows++;
+                    bad_used += (missing + (SYMBOLS_PER_PIXEL - 1u)) / SYMBOLS_PER_PIXEL;
+                    g_stats.row_bad++;
                 }
-                *dst++ = word;
-                pixel_idx++;
-            }
-        }
-        portEXIT_CRITICAL(&g_capture_spinlock);
 
+                for (uint32_t col = 0; col < SEG_PIXELS; col++) {
+                    const uint32_t i = col * SYMBOLS_PER_PIXEL;
+                    uint16_t word = 0;
+                    if ((i + 2u) >= got) {
+                        bad_used++;
+                        word = repair_word_for_pixel(pixel_idx, dst);
+                    } else if (!unpack_rgb565_packed3(g_row_symbols[i],
+                                                      g_row_symbols[i + 1u],
+                                                      g_row_symbols[i + 2u],
+                                                      &word)) {
+                        bad_used++;
+                        word = repair_word_for_pixel(pixel_idx, dst);
+                    }
+
+                    if (pixel_idx == 0) {
+                        first_word = word;
+                        first_word_set = true;
+                    }
+                    *dst++ = word;
+                    pixel_idx++;
+                }
+
+                if ((seg + 1u) < ROW_SEGMENTS) {
+                    uint8_t col_marker[6] = {0};
+                    uint32_t marker_seg = seg;
+                    uint32_t marker_row2 = row;
+                    if (!read_qvga_col_marker(&marker_row2, &marker_seg, col_marker)) {
+                        g_stats.row_bad++;
+                        ok = false;
+                        break;
+                    }
+                    note_symbol_batch(col_marker, sizeof(col_marker));
+                    append_first_symbols(&first_count, col_marker, sizeof(col_marker));
+                    payload_symbols += sizeof(col_marker);
+                    if (marker_row2 != row || marker_seg != seg) {
+                        g_stats.row_bad++;
+                    }
+                }
+            }
+            row++;
+        }
+        if (ok && !first_word_set) {
+            first_word = g_build_frame[0][0];
+        }
+        if (ok && row != PREVIEW_H) {
+            ok = false;
+            g_stats.row_bad++;
+        }
+        if (ok && bad_used > MAX_BAD_PIXELS_PER_FRAME) {
+            ok = false;
+            g_stats.row_bad += bad_used;
+        }
         const int64_t capture_end_us = esp_timer_get_time();
         g_stats.capture_us = (uint32_t)(capture_end_us - capture_start_us);
         g_stats.payload_symbols = payload_symbols;
+        g_stats.row_resync += bad_used + short_rows;
 
         if (ok) {
-            publish_frame(first_word, 0);
+            publish_frame(first_word, bad_used + short_rows);
         } else {
             g_no_clock_abort++;
             g_stats.partial++;
+        }
+
+        if ((g_stats.sync_count & 7u) == 0) {
+            vTaskDelay(1);
+        } else {
+            taskYIELD();
         }
     }
 }
@@ -740,20 +1563,6 @@ static esp_err_t raw565_handler(httpd_req_t *req)
     httpd_resp_set_hdr(req, "Cache-Control", "no-store");
     httpd_resp_set_hdr(req, "X-Frame-Id", frame_hdr);
     return httpd_resp_send(req, (const char *)g_http_frame, sizeof(g_http_frame));
-}
-
-static inline void put_le16(uint8_t *p, uint16_t v)
-{
-    p[0] = (uint8_t)(v & 0xffu);
-    p[1] = (uint8_t)(v >> 8);
-}
-
-static inline void put_le32(uint8_t *p, uint32_t v)
-{
-    p[0] = (uint8_t)(v & 0xffu);
-    p[1] = (uint8_t)((v >> 8) & 0xffu);
-    p[2] = (uint8_t)((v >> 16) & 0xffu);
-    p[3] = (uint8_t)((v >> 24) & 0xffu);
 }
 
 static esp_err_t bmp_handler(httpd_req_t *req)
@@ -836,9 +1645,14 @@ static esp_err_t stats_handler(httpd_req_t *req)
 
     const uint32_t gpio_lo = REG_READ(GPIO_IN_REG);
     const uint32_t gpio_hi = REG_READ(GPIO_IN1_REG);
+    const uint8_t sdram_diag = s.first_syms[4] & 0x3fu;
+    const uint8_t sdram_diag_page = sdram_diag >> 2;
+    const uint8_t sdram_diag_bits = sdram_diag & 3u;
     char json[1536];
     snprintf(json, sizeof(json),
              "{\"build\":%u,\"transport\":\"fpga_native_160x120_tile_grid_cnn_orange20_fpga\","
+             "\"sdram_clk_mhz\":24,\"sdram_diag\":%u,\"sdram_diag_page\":%u,"
+             "\"sdram_diag_bits\":%u,"
              "\"valid\":%u,\"frame\":%" PRIu32 ",\"complete\":%" PRIu32 ","
              "\"symbols\":%" PRIu32 ",\"sync\":%" PRIu32 ",\"partial\":%" PRIu32 ","
              "\"row_resync\":%" PRIu32 ",\"row_bad\":%" PRIu32 ",\"tint_hold\":%" PRIu32 ","
@@ -852,7 +1666,8 @@ static esp_err_t stats_handler(httpd_req_t *req)
              "\"gate_seen\":%" PRIu32 ",\"clk_edges\":%" PRIu32 ",\"no_clk_abort\":%" PRIu32 ","
              "\"first\":[%s],\"recent\":[%s],"
              "\"wire\":\"native_160x120\",\"bmp\":\"160x120\"}",
-             BUILD_ID, s.valid, s.frame_id, s.complete, s.symbols, s.sync_count, s.partial,
+             BUILD_ID, sdram_diag, sdram_diag_page, sdram_diag_bits,
+             s.valid, s.frame_id, s.complete, s.symbols, s.sync_count, s.partial,
              s.row_resync, s.row_bad, s.tint_hold, s.partial_publish,
              s.row_hold, s.artifact_hold, s.blank_hold,
              s.overflow, s.ring_depth, s.max_ring_depth,
@@ -1002,10 +1817,15 @@ void app_main(void)
     g_cpu_cycles_per_us = esp_rom_get_cpu_ticks_per_us();
     g_frame_mutex = xSemaphoreCreateMutex();
     ESP_ERROR_CHECK(g_frame_mutex ? ESP_OK : ESP_ERR_NO_MEM);
+    g_serial_mutex = xSemaphoreCreateMutex();
+    ESP_ERROR_CHECK(g_serial_mutex ? ESP_OK : ESP_ERR_NO_MEM);
+    g_serial_frame_mutex = xSemaphoreCreateMutex();
+    ESP_ERROR_CHECK(g_serial_frame_mutex ? ESP_OK : ESP_ERR_NO_MEM);
+    g_serial_wake = xSemaphoreCreateBinary();
+    ESP_ERROR_CHECK(g_serial_wake ? ESP_OK : ESP_ERR_NO_MEM);
 
+    start_serial_stream();
     xTaskCreatePinnedToCore(capture_task, "capture", 4096, NULL, 18, NULL, 1);
-
-    start_wifi();
-    start_web_server();
-    ESP_LOGI(TAG, "AiCamera build %u ready", BUILD_ID);
+    xTaskCreatePinnedToCore(serial_frame_task, "serial_frame", 4096, NULL, 12, NULL, 0);
+    xTaskCreatePinnedToCore(status_task, "status", 3072, NULL, 6, NULL, 0);
 }

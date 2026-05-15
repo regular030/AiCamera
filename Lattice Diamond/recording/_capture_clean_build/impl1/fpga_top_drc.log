@@ -16,7 +16,7 @@ WARNING - synthesis: input pad net 'CCLK' has no legal load.
 WARNING - synthesis: DRC complete with 6 warnings.
 
 Design Results:
-  14865 blocks expanded
+  16070 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file capclean_impl1.ngd.

@@ -1,0 +1,2 @@
+Open http://127.0.0.1:8000/
+Reading AiCamera serial stream on COM9 @ 2000000 baud, read=32768, timeout=0.01s

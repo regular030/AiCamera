@@ -1,0 +1,276 @@
+# Waveform file 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/untitled.awc' connected to 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/src/wave.asdb'.
+designverincludedir -clear
+designverlibrarysim -PL -clear
+designverlibrarysim -L -clear
+designverlibrarysim -PL pmi_work
+designverlibrarysim ovi_machxo2
+designverdefinemacro -clear
+addfile C:/lscc/sd_ram_uart/src/fifo.v
+# Adding file C:\lscc\sd_ram_uart\src\fifo.v ... Done
+addfile C:/lscc/sd_ram_uart/src/sdram_to_uart.v
+# Adding file C:\lscc\sd_ram_uart\src\sdram_to_uart.v ... Done
+addfile C:/lscc/sd_ram_uart/src/Timer.v
+# Adding file C:\lscc\sd_ram_uart\src\Timer.v ... Done
+addfile C:/lscc/sd_ram_uart/src/SDRAM_Controller.v
+# Adding file C:\lscc\sd_ram_uart\src\SDRAM_Controller.v ... Done
+addfile C:/lscc/sd_ram_uart/src/uart_to_sdram.v
+# Adding file C:\lscc\sd_ram_uart\src\uart_to_sdram.v ... Done
+addfile C:/lscc/sd_ram_uart/src/all_modules.v
+# Adding file C:\lscc\sd_ram_uart\src\all_modules.v ... Done
+addfile C:/lscc/sd_ram_uart/src/all_mod_testbench.v
+# Adding file C:\lscc\sd_ram_uart\src\all_mod_testbench.v ... Done
+vlib C:/lscc/sd_ram_uart/Simulation/sdram_uart/work
+# Warning: Library work already exists
+adel -all
+# Library contents cleared.
+vlog -dbg -work work C:/lscc/sd_ram_uart/src/fifo.v
+# Pass 1. Scanning modules hierarchy.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Unit top modules: fifo.
+# $root top modules: fifo.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/lscc/sd_ram_uart/src/sdram_to_uart.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/sdram_to_uart.v, ln 38).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/sdram_to_uart.v, ln 55).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/sdram_to_uart.v, ln 66).
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: sdram_to_uart.
+# $root top modules: fifo sdram_to_uart.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/lscc/sd_ram_uart/src/Timer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Timer.
+# $root top modules: fifo sdram_to_uart Timer.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/lscc/sd_ram_uart/src/SDRAM_Controller.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Timer found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/SDRAM_Controller.v, ln 94).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/SDRAM_Controller.v, ln 127).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/SDRAM_Controller.v, ln 212).
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: SDRAM_Controller.
+# $root top modules: fifo sdram_to_uart SDRAM_Controller.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+vlog -dbg -work work C:/lscc/sd_ram_uart/src/uart_to_sdram.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/uart_to_sdram.v, ln 48).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/uart_to_sdram.v, ln 62).
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: uart_to_sdram.
+# $root top modules: fifo sdram_to_uart SDRAM_Controller uart_to_sdram.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/lscc/sd_ram_uart/src/all_modules.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module fifo found in current working library.
+# Info: VCP2113 Module uart_to_sdram found in current working library.
+# Info: VCP2113 Module SDRAM_Controller found in current working library.
+# Info: VCP2113 Module sdram_to_uart found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: all_modules.
+# $root top modules: all_modules.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/lscc/sd_ram_uart/src/all_mod_testbench.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module all_modules found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/src/all_mod_testbench.v, ln 73).
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: sdram_uart_testbench.
+# $root top modules: sdram_uart_testbench.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+module sdram_uart_testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'all_modules' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'fifo' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'uart_to_sdram' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'SDRAM_Controller' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'sdram_to_uart' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'Timer' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'bankArbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+vsim +access +r sdram_uart_testbench -PL pmi_work -L ovi_machxo2
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'all_modules' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'fifo' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'uart_to_sdram' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'SDRAM_Controller' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'sdram_to_uart' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'Timer' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'bankArbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.7 [s]
+# SLP: Finished : 0.7 [s]
+# SLP: 0 primitives and 68 (100.00%) other processes in SLP
+# SLP: 186 (98.41%) signals in SLP and 3 (1.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 1.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5609 kB (elbread=1280 elab2=4184 kernel=144 sdf=0)
+# KERNEL: ASDB file was created in location C:\lscc\sd_ram_uart\Simulation\sdram_uart\src\wave.asdb
+#  17:24, 26 мая 2019 г.
+#  Simulation has been initialized
+# Waveform file 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/untitled.awc' connected to 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/src/wave.asdb'.
+add wave *
+# 20 signal(s) traced.
+run 1000ns
+# KERNEL: stopped at time: 1 us
+alog -O2 -sve -msg 5 -sv2k12 -work work $dsn/../../src/fifo.v $dsn/../../src/sdram_to_uart.v $dsn/../../src/Timer.v $dsn/../../src/SDRAM_Controller.v $dsn/../../src/uart_to_sdram.v $dsn/../../src/all_modules.v $dsn/../../src/all_mod_testbench.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/sdram_to_uart.v, ln 38).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/sdram_to_uart.v, ln 55).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/sdram_to_uart.v, ln 66).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/SDRAM_Controller.v, ln 94).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/SDRAM_Controller.v, ln 127).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/SDRAM_Controller.v, ln 212).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/uart_to_sdram.v, ln 48).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/uart_to_sdram.v, ln 62).
+# Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/all_mod_testbench.v, ln 73).
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: sdram_uart_testbench.
+# $root top modules: sdram_uart_testbench.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'all_modules' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'fifo' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'uart_to_sdram' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'SDRAM_Controller' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'sdram_to_uart' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'Timer' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'bankArbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.5 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 61 (100.00%) other processes in SLP
+# SLP: 186 (98.41%) signals in SLP and 3 (1.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5590 kB (elbread=1280 elab2=4165 kernel=144 sdf=0)
+# KERNEL: ASDB file was created in location C:\lscc\sd_ram_uart\Simulation\sdram_uart\src\wave.asdb
+#  17:24, 26 мая 2019 г.
+#  Simulation has been initialized
+# Waveform file 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/untitled.awc' connected to 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/src/wave.asdb'.
+# 17 signal(s) traced.
+# 13 signal(s) traced.
+# 44 signal(s) traced.
+# 13 signal(s) traced.
+# 17 signal(s) traced.
+# WAVEFORM: 124 signal(s) removed.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'all_modules' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'fifo' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'uart_to_sdram' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'SDRAM_Controller' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'sdram_to_uart' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'Timer' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'bankArbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 61 (100.00%) other processes in SLP
+# SLP: 186 (98.41%) signals in SLP and 3 (1.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5590 kB (elbread=1280 elab2=4165 kernel=144 sdf=0)
+# KERNEL: ASDB file was created in location C:\lscc\sd_ram_uart\Simulation\sdram_uart\src\wave.asdb
+#  17:25, 26 мая 2019 г.
+#  Simulation has been initialized
+# Waveform file 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/untitled.awc' connected to 'C:/lscc/sd_ram_uart/Simulation/sdram_uart/src/wave.asdb'.
+# WAVEFORM: 20 signal(s) inserted to virtual group.
+# WAVEFORM: 17 signal(s) inserted to virtual group.
+# WAVEFORM: 13 signal(s) inserted to virtual group.
+# WAVEFORM: 44 signal(s) inserted to virtual group.
+# WAVEFORM: 13 signal(s) inserted to virtual group.
+# WAVEFORM: 17 signal(s) inserted to virtual group.
+run @200ns
+# KERNEL: stopped at time: 200 ns
+run @300ns
+# KERNEL: stopped at time: 300 ns
+run @400us
+# KERNEL: stopped at time: 400 us
+# Adding file C:\lscc\sd_ram_uart\Simulation\sdram_uart\untitled.awc ... Done
