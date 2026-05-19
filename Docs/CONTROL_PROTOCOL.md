@@ -1,128 +1,82 @@
-# Control Protocol
+# Protocols And Data Formats
 
-This document explains the current ESP32-to-FPGA command protocol that exists in the uploaded repo.
+There are two important protocols in the current project:
 
-## Current flow
+1. FPGA to ESP32 packed GPIO video transport.
+2. ESP32 to host USB/serial frame packets.
+
+Older UART command/control code still exists in the repo, but it is not the main
+live-preview path.
+
+## FPGA To ESP32 Video Transport
+
+The FPGA outputs true 160x120 RGB565 frames over a custom parallel GPIO link.
+
+Current link shape:
+
+- 6 data lanes.
+- 1 strobe/clock line.
+- 1 frame gate line.
+- 3 symbols per RGB565 pixel.
+- frame header before payload.
+- row markers for resynchronization.
+
+Why this exists:
+
+- UART is too slow for live video.
+- SPI experiments were unstable/expensive during bring-up.
+- A simple parallel strobe bus is easy for the FPGA to generate.
+- The ESP32 can sample GPIO registers directly.
+
+The link is still software-captured by the ESP32, so the practical speed is
+limited by ESP32 polling, row-locking, repair logic, and serial forwarding.
+
+## ESP32 To Host Serial Frames
+
+The ESP32 sends frame packets with a fixed 32-byte little-endian header:
 
 ```text
-HTTP request
-   ↓
-ESP32 handler in main.c
-   ↓
-fpga_make_cmd_packet(...)
-   ↓
-UART write from ESP32
-   ↓
-fpga_uart_cmd_parser.v
-   ↓
-fpga_control_regs.v
-   ↓
-fpga_ack_packetizer.v
-   ↓
-UART TX back from FPGA
+magic[8]       = "AICAMF1\0"
+u16 width      = 160
+u16 height     = 120
+u16 format     = payload format
+u16 header_len = 32
+u32 frame_id
+u32 payload_len
+u32 capture_us
+u32 gate_period_us
 ```
 
-## Command packet format
-
-The current command packet is 8 bytes long:
+Known format IDs in firmware:
 
 ```text
-Byte 0: sync      = 0xA5
-Byte 1: opcode
-Byte 2: arg[7:0]
-Byte 3: arg[15:8]
-Byte 4: arg[23:16]
-Byte 5: arg[31:24]
-Byte 6: sequence
-Byte 7: checksum  = XOR of bytes 0..6
+0x0565 = RGB565 little-endian
+0x0444 = packed RGB444
+0x0332 = packed RGB332
 ```
 
-This is defined in:
-- `ESP32/main/cmd_protocol.c`
-- `Lattice Diamond/fpga_uart_cmd_parser.v`
+The Python preview server accepts these packet types and converts them into a
+browser preview.
 
-## Sync bytes
-From `cmd_protocol.h`:
-- command sync = `0xA5`
-- ACK sync = `0xA6`
+## ESP32 Status Packets
 
-## Opcodes
+Status packets use:
 
-Defined in `ESP32/main/cmd_protocol.h` and handled in `fpga_control_regs.v`:
-- `0x01` = `PING`
-- `0x10` = `SET_CAPTURE`
-- `0x11` = `SET_MODE`
-- `0x12` = `SET_STRIDE`
-- `0x13` = `CLEAR_COUNTS`
-- `0x14` = `SNAPSHOT`
-- `0x20` = `GET_STATUS`
-
-## What the FPGA currently does with them
-
-### `PING`
-Returns:
-- `ACK_PONG`
-
-### `SET_CAPTURE`
-Updates:
-- `capture_enable`
-
-### `SET_MODE`
-Updates:
-- `mode`
-
-### `SET_STRIDE`
-Updates:
-- `frame_stride`
-- treats `0` as `1`
-
-### `CLEAR_COUNTS`
-Pulses:
-- `clear_counts_pulse`
-
-### `SNAPSHOT`
-Pulses:
-- `snapshot_pulse`
-
-### `GET_STATUS`
-Returns a packed status value containing:
-- capture enable
-- mode
-- frame stride
-
-## ACK types
-
-From `fpga_control_regs.v`:
-- `0x80` = `ACK_OK`
-- `0x81` = `ACK_ERR`
-- `0x82` = `ACK_STATUS`
-- `0x83` = `ACK_PONG`
-
-## Current HTTP mapping
-
-From `ESP32/main/main.c`:
-- `/ping`
-- `/status`
-- `/capture?enable=1`
-- `/mode?value=0`
-- `/stride?value=1`
-
-Examples:
-```bash
-curl http://<esp32-ip>/ping
-curl "http://<esp32-ip>/capture?enable=1"
-curl "http://<esp32-ip>/mode?value=1"
-curl "http://<esp32-ip>/stride?value=2"
+```text
+magic[8] = "AICAMS1\0"
 ```
 
-## Why this protocol is small
+They include build/frame/status counters, capture timing, GPIO register samples,
+valid-frame state, and row/sync diagnostics.
 
-The current protocol is intentionally lightweight because FPGA area matters.
+## Old UART Command Protocol
 
-That is why the current preferred path is:
-- small UART RX/TX
-- simple command packet
-- simple control register layer
-- simple ACK packet generation
+Older docs and source files refer to an 8-byte UART command packet:
 
-Heavier telemetry and more elaborate protocol features can come later if the design budget allows.
+```text
+sync, opcode, u32 arg, sequence, checksum
+```
+
+That path was useful during earlier Wi-Fi/HTTP control work, but it is not the
+current primary live-preview flow. Treat it as legacy/experimental unless you
+are deliberately restoring the Wi-Fi command path.

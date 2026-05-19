@@ -1,98 +1,125 @@
 # Bring-Up Plan
 
-This is the recommended bring-up order for AiCamera hardware.
+This is the practical bring-up order for SaturnAI Camera hardware.
 
-## Core rule
-Do not debug later stages when earlier stages are still uncertain.
+## Rule Zero
 
----
+Do not debug camera frames before power, clocks, reset, and programming are
+trusted.
 
-## 1. Physical inspection
+## 1. Inspect The Board
+
 Before power:
-- inspect assembly
-- check polarity and orientation
-- look for shorts, lifted pins, solder issues, missing parts
 
-## 2. Power rails
+- inspect assembly and orientation.
+- check for solder bridges, lifted parts, and damaged pads.
+- compare assembled PCBA against the known Rev 1 errata.
+- inspect FPGA/BGA area as much as practical.
+
+## 2. Check Power Rails Before Power-Up
+
+Measure resistance/continuity:
+
+- 1.1 V to ground.
+- 1.8 V to ground.
+- 3.3 V to ground.
+- 1.1 V to 3.3 V.
+- 1.1 V to 1.8 V.
+- 1.8 V to 3.3 V.
+
+Rev 1 had a real assembled-board 1.1 V to 3.3 V issue, so this step is not
+optional.
+
+## 3. Power Rails Under Power
+
 Verify:
-- all expected rails are present
-- no obvious overcurrent
-- no heating surprises
-- no FPGA brownout during startup
 
-## 3. Clocks and reset
+- 1.1 V FPGA core rail.
+- 1.8 V rail where used.
+- 3.3 V rail.
+- regulator temperature.
+- current draw.
+- reset/enable behavior.
+
+## 4. Clocks And Reset
+
 Verify:
-- crystal activity
-- PLL output
-- camera MCLK
-- reset release
 
-## 4. FPGA configuration
+- FPGA input clock.
+- FPGA PLL outputs.
+- 24 MHz camera clock if enabled.
+- ESP32 EN/reset behavior.
+- camera reset/powerdown behavior.
+
+## 5. FPGA Programming
+
+Start with a simple known-good or current exported bitstream. Program through
+the external programmer path using `openFPGALoader`.
+
+Do not rely on ESP32-to-FPGA programming on Rev 1.0.
+
+## 6. ESP32 Flash And Serial
+
 Verify:
-- programming path works
-- bitstream loads repeatably
-- use a simple known-good image first if possible
 
-## 5. ESP32 bring-up
+- ESP32 flashes.
+- boot log appears.
+- USB/serial stream starts.
+- status packets appear if the FPGA stream is present.
+
+## 7. Camera Bring-Up
+
 Verify:
-- firmware flashes
-- boot is sane
-- Wi-Fi joins
-- HTTP endpoints respond
-- UART peripheral is active
 
-## 6. Camera init
+- SCCB/I2C camera initialization completes.
+- camera PCLK toggles.
+- VSYNC/HREF behavior is plausible.
+- data pins toggle with a real scene.
+
+## 8. FPGA-To-ESP32 Video Link
+
 Verify:
-- SCCB traffic
-- `init_done`
-- no unexpected `init_err`
 
-## 7. Camera timing
+- frame gate toggles.
+- strobe/clock toggles.
+- 6 data lanes change.
+- ESP32 sees headers/row markers.
+- frame counters increase.
+- localhost preview updates.
+
+## 9. Image Quality
+
+Only after link lock is stable, tune:
+
+- YUYV byte/phase assumptions.
+- RGB565 conversion.
+- row marker/recovery thresholds.
+- tint-hold rejection.
+- camera exposure/gain choices.
+
+## 10. Detector
+
 Verify:
-- PCLK
-- VSYNC
-- HREF
-- Y bus changes
 
-## 8. Raw capture path
-Verify:
-- frame counters
-- payload sizing
-- SDRAM-side write acceptance
-- stable repeated behavior
+- orange object appears with real color.
+- detector boxes appear on the right tiles.
+- false positives are understood and turned into training negatives.
+- FPGA model parameters match the trained/exported files.
 
-## 9. SDRAM validation
-Verify:
-- write/read behavior
-- occupancy / level behavior
-- no obvious corruption
+## 11. SDRAM And SD
 
-## 10. FPGA command path
-Verify:
-- UART packets arrive
-- parser accepts commands
-- control registers update
-- ACK path works
+Keep these as separate tests:
 
-## 11. Detect path
-Verify in order:
-1. proposal generation
-2. crop path
-3. classifier path
-4. candidate stability
-5. count logic
+- SDRAM stress tests can be run independently of live preview.
+- SD logging is paused on Rev 1 and should not block the camera/preview path.
 
-## 12. Logging / visualization
-Once the core path is trustworthy:
-- export useful logs
-- inspect packed metadata
-- use the video overlay workflow once metadata export is stable
+## Bring-Up Notes To Keep
 
----
+For each working build, record:
 
-## Bring-up discipline
-- change one major variable at a time
-- keep notes
-- save working bitstreams
-- save working ESP32 firmware revisions
-- keep simple known-good tests
+- FPGA bitstream path and build ID.
+- ESP32 git state/build time.
+- camera module used.
+- observed preview FPS.
+- visible image artifacts.
+- any hardware rework or solder changes.

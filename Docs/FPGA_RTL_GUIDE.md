@@ -1,201 +1,102 @@
 # FPGA RTL Guide
 
-This document explains the current FPGA architecture and what the major RTL files are doing.
+The active FPGA design lives in:
 
-## Top-level file
+```text
+Lattice Diamond/recording/
+```
 
-### `fpga_top.v`
-This is the current main integration point.
+The main file is:
 
-It wires together:
-- clocks and reset
-- camera config
-- camera ingest
-- SDRAM path
-- proposal and crop path
-- classifier scheduling
-- candidate/counting logic
-- SD logging path
-- UART control bridge
+```text
+Lattice Diamond/recording/fpga_top.v
+```
 
-If you want to understand the live datapath, this is the best starting point.
+## Current Video Pipeline
 
----
+The current working path is true 160x120 camera preview:
 
-## Clocking and reset
+```text
+OV-series DVP YUYV camera input
+  -> FPGA byte/phase capture
+  -> FPGA YUYV to RGB565 conversion
+  -> 160x120 frame generation
+  -> tile-grid orange detector and overlay
+  -> packed 6-lane GPIO stream to ESP32-S3
+```
 
-### `PLL/PLL.v`
-Generated PLL block used for system clock generation.
+The FPGA owns timing-critical work. The ESP32 should be treated as the host
+bridge, not the vision engine.
 
-### `reset_sync.v`
-Reset synchronizer used to create:
-- system reset
-- PCLK-domain reset
+## Key RTL Files
 
-This matters because the design spans at least:
-- a system clock domain
-- the camera PCLK domain
+- `fpga_top.v` - top-level camera, RGB conversion, transport, detector, and
+  SDRAM-test integration.
+- `ov5640_sccb_init.v` - SCCB/I2C camera register initialization.
+- `pll_24m_to_120m.v` - generated PLL block for the 120 MHz side.
+- `reset_sync.v` - reset synchronization.
+- `uart_rx.v`, `uart_tx.v` - debug/control UART blocks.
+- `cam_capture_rgb565.v`, `framebuffer_capture.v` - camera/frame capture support.
+- `async_fifo_16x1024.v` - cross-clock buffering support.
+- `w9825_sdram_ctrl.v`, `w9825_ref_sdram_ctrl.v`,
+  `w9825_direct_req_sdram_ctrl.v` - SDRAM controller/test variants.
+- `sdram_stress_tester.v`, `w9825_burst_selftest.v` - SDRAM validation logic.
+- `sd_spi_writer.v` - SD-card write experiment, currently paused.
+- `box20_cnn_int8_core.v`, `box20_cnn_frame_scanner.v` - experimental CNN/tile
+  detector logic.
 
----
+## Important Current Parameters
 
-## Camera configuration
+`fpga_top.v` contains the active tuning parameters. At the time of this doc:
 
-### `ov5640_sccb.v`
-Performs OV5640 register initialization using SCCB.
+- `SENSOR_W = 160`, `SENSOR_H = 120`
+- `PREVIEW_SYMBOLS_PER_PIXEL = 3`
+- `QVGA_PARLIO_STREAM = 1`
+- `QVGA_BYTE_STREAM = 0`
+- `QVGA_FIFO_AW = 15`
+- `BOX20_TILE_COLS = 8`
+- `BOX20_TILE_ROWS = 6`
+- `BOX20_DETECT_ENABLE = 1`
+- `BOX20_GRID_CNN_ENABLE = 1`
+- `BOX20_LINEAR_ENABLE = 1`
+- `SDRAM_STRESS_CLK_HZ = 120000000`
 
-Exposes:
-- `init_done`
-- `init_err`
+## Detector Path
 
-Includes or depends on initialization ROM content.
+The current detector is an FPGA-friendly 20x20 tile-grid orange detector:
 
-This is the gatekeeper for the image path. Until it works, nothing downstream should be trusted.
+- Frame is 160x120.
+- Grid is 8 columns by 6 rows.
+- Each tile is 20x20 pixels.
+- FPGA accumulates RGB/orange features per tile.
+- Learned scoring and neighborhood filtering reduce false positives.
+- Boxes are drawn directly in hardware.
 
----
+This is not a full desktop CNN. A fuller CNN was explored, but the current
+timing-clean path is a compact learned tile detector plus grid filtering that
+fits the ECP5 budget.
 
-## Frame ingest
+## SDRAM And SD Status
 
-### `raw_frame_capture.v`
-Captures incoming camera data and feeds a system-side write path.
+SDRAM:
 
-Its job includes:
-- watching `VSYNC`, `HREF`, and pixel bytes
-- selecting the Y data path
-- handling frame and line progression
-- pushing data toward the SDRAM-side path
+- 120 MHz SDRAM test infrastructure exists.
+- SDRAM framebuffering is not required for the current live preview path.
+- See `Lattice Diamond/recording/SDRAM_STRESS_TEST.md`.
 
-This is one of the most important bring-up blocks in the design.
+microSD:
 
----
+- SD write RTL exists as an experiment.
+- The SD path is paused because Rev 1.0 hardware/debug time is better spent on
+  the camera-to-preview path.
 
-## Proposal and crop path
+## Recommended RTL Reading Order
 
-### `motion_block_frontend.v`
-Computes coarse activity or motion-related block information.
-
-### `proposal_gen.v`
-Converts block-level scoring into candidate proposal regions.
-
-### `cropper_128_to_64.v`
-Converts selected proposals into fixed-size crop streams for the classifier path.
-
-The big architectural idea is:
-- do not classify everything
-- reduce the scene first
-- only spend classifier work on candidate regions
-
-That is a good fit for a resource-limited FPGA.
-
----
-
-## Classifier path
-
-### `cnn_scheduler.v`
-Controls the flow of crops into the compact classifier path and gathers scores.
-
-### `cnn_int8_core.v`
-INT8-oriented compact classifier core.
-
-### `saturn_core.v`
-Present in the repo as another core-related block; treat it as part of the model/processing experimentation space unless actively integrated into the current top-level.
-
-This classifier path is intentionally small and fit-aware.
-
----
-
-## Candidate / counting path
-
-### `candidate_bus.v`
-Aggregates proposal/crop/classifier outputs into candidate metadata and count-related state.
-
-### `track_count.v`
-Provides supporting logic for tracking/counting behavior.
-
-This is where the project transitions from raw candidate classification to useful outputs like counts.
-
----
-
-## Buffering and logging
-
-### `sdram_ctrl_simple.v`
-Current SDRAM interface block.
-
-### `frame_packer.v`
-Combines frame metadata and candidate/count information into a packed stream.
-
-### `sd_spi_writer.v`
-Drives the SD-card write path.
-
-Logging matters because bring-up becomes much easier when the FPGA can export what it believes it saw.
-
----
-
-## Control path
-
-### `uart_rx.v`
-UART receiver.
-
-### `uart_tx.v`
-UART transmitter.
-
-### `uart_loopback.v`
-Useful for isolated UART sanity testing.
-
-### `fpga_uart_cmd_parser.v`
-Parses the current 8-byte command packet format.
-
-### `fpga_control_regs.v`
-Maps parsed commands into control registers and emits ACK/status information.
-
-### `fpga_ack_packetizer.v`
-Builds outgoing ACK packets.
-
-### `esp32_ctrl_uart_min_bridge.v`
-Current lightweight control bridge tying together:
-- UART RX
-- command parser
-- control registers
-- ACK packetizer
-- UART TX
-
-This is the current preferred control path because it is lighter than the older protocol bridge.
-
-### Files also present but not the preferred current path
-- `esp32_ctrl_uart_protocol_bridge.v`
-- `fpga_detection_packetizer.v`
-
-These reflect earlier / heavier control and telemetry work but are not the current fit-first direction.
-
----
-
-## Memory and data assets
-
-The repo also includes memory files such as:
-- `cnn_w1.memh`
-- `cnn_b1.memh`
-- `cnn_fcw.memh`
-- `cnn_fcb.memh`
-- `ov5640_1080p_yuyv.memh`
-- `ov5640_vga_yuyv.memh`
-
-These are useful for:
-- initialized classifier weights/biases
-- simulation and bring-up stimulus
-
----
-
-## Practical way to read the RTL
-
-Recommended order:
 1. `fpga_top.v`
-2. `ov5640_sccb.v`
-3. `raw_frame_capture.v`
-4. `motion_block_frontend.v`
-5. `proposal_gen.v`
-6. `cropper_128_to_64.v`
-7. `cnn_scheduler.v`
-8. `candidate_bus.v`
-9. current control blocks
-10. packing / SDRAM / SD path
-
-That order follows the real flow of data and makes the project easier to understand.
+2. `ov5640_sccb_init.v`
+3. `record.lpf`
+4. camera capture/RGB conversion blocks
+5. packed GPIO transport logic inside `fpga_top.v`
+6. box20 detector parameters and scanner/core files
+7. SDRAM stress-test modules
+8. UART/debug blocks

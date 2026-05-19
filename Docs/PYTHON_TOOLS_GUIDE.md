@@ -1,90 +1,67 @@
 # Python Tools Guide
 
-This guide documents the current Python-side workflow for AiCamera.
+The current Python tools are used for local preview, SDRAM debug reads, and
+orange-detector training.
 
-## Current reality
+## Local Serial Preview
 
-At the moment, the Python side of the project should be treated very narrowly:
+Main script:
 
-- the main Python workflow is the **video overlay script**
-- it is intended to draw FPGA detections and count metadata onto saved video
-- it is **not fully tested end to end yet**
+```text
+scripts/serial_preview_server.py
+```
 
-That means it should be treated as:
-- a bring-up/debug support tool
-- a visualization helper
-- something that still needs validation against real FPGA-exported metadata
+Run:
 
-It should **not** be described as a finished or fully validated host software stack.
+```powershell
+python scripts\serial_preview_server.py --port auto --baud 2000000 --http-port 8000
+```
 
----
+Open:
 
-## Current Python workflow in scope
+```text
+http://127.0.0.1:8000/
+```
 
-### Video overlay script
-Purpose:
-- take saved video
-- take exported detection/count metadata
-- draw bounding boxes, labels, IDs, and total-count style information onto the frames
-- produce a visual output that is easier to inspect than raw metadata alone
+The script reads ESP32 USB/serial packets, decodes `AICAMF1` frame packets and
+`AICAMS1` status packets, and serves a browser preview from the host PC.
 
-Why it matters:
-- makes FPGA outputs easier to sanity-check
-- helps compare what the hardware thinks it saw against the underlying scene
-- can become a very useful bring-up/debug tool once validated
+## SDRAM Debug Scripts
 
----
+Current scripts:
 
-## What still needs testing
+- `scripts/read_sdram_stress.ps1`
+- `scripts/read_sdram_sample_window.ps1`
+- `scripts/read_sdram_read_return.ps1`
 
-The overlay workflow still needs real end-to-end validation for things like:
-- frame indexing alignment
-- box placement
-- coordinate scaling
-- metadata formatting
-- count display correctness
-- compatibility with the actual exported FPGA metadata format
+These are bring-up helpers for reading/debugging SDRAM test output. The live
+preview path does not currently depend on SDRAM framebuffering.
 
-Until those checks are done on real outputs, the script should be treated as:
-- useful
-- promising
-- not yet proven
+## Orange Detector Training
 
----
+Training tools live in:
 
-## Recommended validation path
+```text
+training/box20/
+```
 
-### 1. Offline sanity test
-Use:
-- a short known video clip
-- a tiny hand-written metadata file
+Important scripts:
 
-Confirm:
-- the script runs
-- output video is written
-- frame indexing behaves as expected
-- boxes appear where they should
+- `capture_esp32_frames.py` - collect frames from an ESP32 HTTP preview path
+  when that path is enabled.
+- `label_frames_gui.py` - GUI labeling tool.
+- `make_crops_from_boxes.py` - creates 20x20 positive/negative crops.
+- `train_box20.py` - trains and exports the small FPGA-friendly model.
+- `scan_box20.py` - scans frames and writes overlay previews.
 
-### 2. Format validation
-Take one real metadata export from the FPGA flow and verify:
-- fields match what the overlay script expects
-- units and coordinate conventions are correct
-- track IDs / labels / counts are interpreted correctly
+Read:
 
-### 3. End-to-end validation
-Run the full path:
-- FPGA produces metadata
-- metadata is saved/exported
-- overlay script consumes it
-- visual output matches what actually happened in the scene
+```text
+training/box20/README.md
+```
 
----
+## Legacy Overlay Script
 
-## Documentation rule for now
-
-When describing the Python side of AiCamera, the safest accurate statement is:
-- there is currently a **video overlay workflow**
-- it is intended for visualization/debug
-- it is **not fully end-to-end tested yet**
-
-That is the correct current status.
+`scripts/render_fpga_people_video.py` is historical/support tooling from earlier
+metadata-overlay experiments. It is kept for reference, but the active demo path
+is the live orange-detector preview.

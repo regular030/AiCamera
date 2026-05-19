@@ -1,83 +1,109 @@
 # Getting Started
 
-This guide explains how to get the current AiCamera project opened, built, and understood.
+This guide gets the current SaturnAI Camera repo built, flashed, and previewing
+frames.
 
-## 1. Clone the repo
+## 1. Read The Hardware Warning
 
-```bash
-git clone <your-repo-url>
-cd AiCamera
-```
+Before ordering or powering hardware, read:
 
-## 2. Learn the repo layout first
-
-Before building anything, know where the main work lives:
-- `Lattice Diamond/` = FPGA project
-- `ESP32/` = ESP-IDF firmware project
-- `PCB/` = board design files
-- `ansys/` = SI/PI/EMI-related assets
-- `Docs/` = documentation
-
-## 3. FPGA prerequisites
-
-Install:
-- Lattice Diamond
-- a waveform viewer if you want simulation or report inspection
-- Verilator + GTKWave if you want HDL simulation outside Diamond
-
-### Open the FPGA project
-Use:
 ```text
-Lattice Diamond/AICAM.ldf
+PCB/REV1_ERRATA.md
 ```
 
-## 4. ESP32 prerequisites
+Rev 1.0 is a repaired bring-up board. Do not manufacture it unchanged.
 
-Install ESP-IDF and make sure `idf.py` works in your shell.
+## 2. Install Tools
 
-Typical sanity check:
-```bash
-idf.py --version
+Required host tools:
+
+- Windows 10/11
+- Git
+- Python 3.11 or newer
+- Lattice Diamond 3.14
+- MSYS2 with `openFPGALoader`
+- ESP-IDF 5.5.x
+- `pyserial`
+
+Install the preview dependency:
+
+```powershell
+python -m pip install pyserial
 ```
 
-### Build the ESP32 firmware
-```bash
-cd ESP32
-idf.py set-target esp32s3
-idf.py build
-```
+## 3. Build And Flash The FPGA
 
-### Flash and monitor
-```bash
-idf.py flash
-idf.py monitor
-```
+The active FPGA project is:
 
-## 5. Configure Wi-Fi
-
-The firmware uses:
 ```text
-ESP32/main/wifi_profile.h
+Lattice Diamond/recording/
 ```
 
-A template also exists:
+Current primary build script:
+
+```powershell
+& 'C:\lscc\diamond\3.14\bin\nt64\pnmainc.exe' `
+  'C:\Users\User\Desktop\AiCamera\Lattice Diamond\recording\run_capture_clean_export_tasks.tcl'
+```
+
+Flash the exported bitstream:
+
+```powershell
+& 'C:\msys64\ucrt64\bin\openFPGALoader.exe' `
+  -c ft232 `
+  'C:\Users\User\Desktop\AiCamera\Lattice Diamond\recording\_capture_clean_build\impl1\capclean_impl1.bit'
+```
+
+Update paths for your machine. During bring-up, the FPGA programming adapter was
+used through `openFPGALoader`.
+
+## 4. Build And Flash The ESP32-S3
+
+The active ESP-IDF project is:
+
 ```text
-ESP32/main/wifi_profile.h.example
+ESP32/
 ```
 
-## 6. Verilator install
+On the development machine used during bring-up, ESP-IDF used this Python env:
 
-On Ubuntu / WSL:
-```bash
-sudo apt update
-sudo apt install verilator gtkwave build-essential
+```text
+C:\Users\User\.espressif\python_env\idf5.5_py3.11_env
 ```
 
-## 7. Read these docs next
+Example flow:
 
-Recommended order:
-1. `PROJECT_STRUCTURE.md`
-2. `FPGA_RTL_GUIDE.md`
-3. `ESP32_FIRMWARE_GUIDE.md`
-4. `CONTROL_PROTOCOL.md`
-5. `BRINGUP_PLAN.md`
+```powershell
+$env:IDF_PYTHON_ENV_PATH = 'C:\Users\User\.espressif\python_env\idf5.5_py3.11_env'
+cmd /c "C:\Users\User\esp\v5.5.1\export.bat && cd /d C:\Users\User\Desktop\AiCamera\ESP32 && idf.py -p COM3 build flash monitor"
+```
+
+Use the correct serial port for your board.
+
+## 5. Start The Local Preview
+
+After the FPGA and ESP32 are running, start the host preview:
+
+```powershell
+python scripts\serial_preview_server.py --port auto --baud 2000000 --http-port 8000
+```
+
+Open:
+
+```text
+http://127.0.0.1:8000/
+```
+
+The preview server reads ESP32 USB/serial packets, displays the newest frame,
+and shows status telemetry.
+
+## 6. Optional Wi-Fi Files
+
+The ESP32 project still includes `wifi_profile.h.example` because earlier
+bring-up used Wi-Fi/HTTP preview. If that path is re-enabled, copy:
+
+```powershell
+Copy-Item ESP32\main\wifi_profile.h.example ESP32\main\wifi_profile.h
+```
+
+Then edit the local credentials. `wifi_profile.h` should stay untracked.

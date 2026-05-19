@@ -1,133 +1,74 @@
 # Project Structure
 
-This document explains the actual current repo structure based on the uploaded project.
-
-## Top level
+This is the current cleaned-up repo layout.
 
 ```text
 AiCamera/
-├── Docs/
-├── ESP32/
-├── Lattice Diamond/
-├── PCB/
-├── ansys/
-├── obj_dir/
-├── .vscode/
-├── README.md
-├── LICENSE
-├── .gitignore
-└── .gitattributes
+|-- Docs/                       Project documentation
+|-- ESP32/                      ESP-IDF firmware for the ESP32-S3 bridge
+|-- Lattice Diamond/recording/   Current FPGA RTL, constraints, and build scripts
+|-- PCB/                        EasyEDA/Altium exports, datasheets, board docs
+|-- ansys/, siwave/             SI/PI/EMI simulation assets
+|-- scripts/                    Host preview and debug scripts
+|-- sim/                        Verilator testbenches
+|-- training/                   Orange-detector training tools
+|-- archive/                    Old code, generated outputs, historical captures
+|-- README.md
+|-- LICENSE
+`-- .gitignore
 ```
 
-## `Docs/`
-Documentation folder for setup, architecture, build flow, bring-up, and protocol notes.
+## Current Source Of Truth
 
-## `ESP32/`
-ESP-IDF firmware project for the ESP32-S3.
+Use these folders for active work:
 
-### Important files
-- `CMakeLists.txt`  
-  top-level ESP-IDF project entry
-- `main/`  
-  main firmware component
-- `main/main.c`  
-  Wi-Fi + HTTP + UART application
-- `main/cmd_protocol.h`  
-  packet opcode declarations
-- `main/cmd_protocol.c`  
-  packet builder implementation
-- `main/wifi_profile.h`  
-  active local Wi-Fi config
-- `main/wifi_profile.h.example`  
-  template Wi-Fi config
-- `sdkconfig`  
-  current ESP-IDF config
-- `build/`  
-  generated build output currently present in repo snapshot
+- `Lattice Diamond/recording/` for FPGA RTL and build scripts.
+- `ESP32/` for ESP32-S3 firmware.
+- `scripts/` for the serial localhost preview and debug helpers.
+- `training/box20/` for orange-detector data, labeling, training, and export.
+- `PCB/` for board files, PCB notes, and Rev 1 errata.
 
-## `Lattice Diamond/`
-Main FPGA project area.
+## Archived Material
 
-### Core project files
-- `AICAM.ldf`  
-  Diamond project file
-- `AICAM.lpf`  
-  pin constraints
-- `timing.sdc`  
-  timing constraints
-- `fpga_top.v`  
-  top-level RTL module
+Old experiments and generated outputs were moved under `archive/`:
 
-### Camera / input path
-- `ov5640_sccb.v`
-- `raw_frame_capture.v`
+```text
+archive/legacy-code/       Old imported/reference SDRAM/HUB75/etc. projects
+archive/generated/         Old Verilator outputs, VCDs, logs, generated images
+archive/datasets/          Historical captures and training data
+archive/local-config/      Editor/local config moved out of the root
+```
 
-### Proposal / detection path
-- `motion_block_frontend.v`
-- `proposal_gen.v`
-- `cropper_128_to_64.v`
-- `cnn_scheduler.v`
-- `cnn_int8_core.v`
-- `candidate_bus.v`
-- `track_count.v`
-- `saturn_core.v`
+Archive files are kept for traceability, but new development should not use
+them as the active source path.
 
-### Buffering / logging
-- `sdram_ctrl_simple.v`
-- `frame_packer.v`
-- `sd_spi_writer.v`
+## Key Active Files
 
-### Control path
-- `uart_rx.v`
-- `uart_tx.v`
-- `uart_loopback.v`
-- `fpga_uart_cmd_parser.v`
-- `fpga_control_regs.v`
-- `fpga_ack_packetizer.v`
-- `esp32_ctrl_uart_min_bridge.v`
+FPGA:
 
-### Other control-related files present
-These are in the repo but not the current preferred minimal path:
-- `esp32_ctrl_uart_protocol_bridge.v`
-- `fpga_detection_packetizer.v`
-- `esp32_ctrl_spi.v`
+- `Lattice Diamond/recording/fpga_top.v`
+- `Lattice Diamond/recording/ov5640_sccb_init.v`
+- `Lattice Diamond/recording/record.lpf`
+- `Lattice Diamond/recording/run_capture_clean_export_tasks.tcl`
+- `Lattice Diamond/recording/SDRAM_STRESS_TEST.md`
 
-### Generated / implementation outputs present
-The uploaded repo also contains:
-- `impl1/`
-- PLL-generated folders
-- reports
-- intermediate netlists
-- bitstreams
-- Verilog/VHDL export artifacts
+ESP32:
 
-## `PCB/`
-Board design area.
+- `ESP32/main/main.c`
+- `ESP32/main/upload.c`
+- `ESP32/main/wifi_profile.h.example`
+- `ESP32/main/idf_component.yml`
 
-Contains:
-- project file `Ai-Camera.eprj`
-- backups of PCB revisions
-- datasheets
-- exported Altium data
+Host:
 
-## `ansys/`
-SIwave / Ansys-related assets:
-- SIwave database content
-- IBIS files
-- stackups and related setup content
+- `scripts/serial_preview_server.py`
+- `scripts/read_sdram_stress.ps1`
+- `scripts/read_sdram_sample_window.ps1`
+- `scripts/read_sdram_read_return.ps1`
 
-## `obj_dir/`
-Current Verilator-generated build output checked into the project snapshot.
+Training:
 
-## `.vscode/`
-Local editor configuration files.
-
-## Practical note
-
-This repo currently mixes:
-- source
-- generated outputs
-- tool artifacts
-- project metadata
-
-That is normal for an in-progress hardware repo, but it is important to know which files are source-of-truth and which are generated.
+- `training/box20/capture_esp32_frames.py`
+- `training/box20/label_frames_gui.py`
+- `training/box20/train_box20.py`
+- `training/box20/scan_box20.py`

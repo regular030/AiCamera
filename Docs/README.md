@@ -1,36 +1,42 @@
-# Docs
+# SaturnAI Camera Docs
 
-This folder contains the main written documentation for AiCamera.
+This folder contains the project documentation for SaturnAI Camera. The root
+`README.md` is the quick public overview; these files go deeper into setup,
+hardware bring-up, firmware, FPGA RTL, protocols, and training tools.
 
-## Files
+## Recommended Reading Order
 
-- `GETTING_STARTED.md`  
-  environment setup, install steps, and first workflow
+1. `GETTING_STARTED.md` - build/flash/preview workflow.
+2. `HARDWARE_PCB_GUIDE.md` - PCB purpose, parts, design rationale, and Rev 1.0 warnings.
+3. `PROJECT_STRUCTURE.md` - where current source, archived code, and generated files live.
+4. `FPGA_RTL_GUIDE.md` - current FPGA video pipeline and detector path.
+5. `ESP32_FIRMWARE_GUIDE.md` - current ESP32 GPIO capture and USB/serial bridge.
+6. `CONTROL_PROTOCOL.md` - FPGA-to-ESP32 wire symbols and host serial packets.
+7. `PYTHON_TOOLS_GUIDE.md` - localhost preview and orange-detector training tools.
+8. `BUILD_AND_SIMULATION.md` - Diamond, ESP-IDF, Verilator, and SDRAM tests.
+9. `BRINGUP_PLAN.md` - practical board bring-up order and Rev 1 lessons.
 
-- `PROJECT_STRUCTURE.md`  
-  explanation of the real repo layout and what the major folders/files are for
+## Important Hardware Warning
 
-- `FPGA_RTL_GUIDE.md`  
-  explanation of the current FPGA architecture and the main RTL blocks
+Rev 1.0 is a repaired bring-up board, not an orderable release. Read
+`../PCB/REV1_ERRATA.md` before using the PCB files. The current revision proved
+the architecture, but it had hardware issues that must be fixed before another
+fabrication/assembly run.
 
-- `ESP32_FIRMWARE_GUIDE.md`  
-  how the ESP32 firmware is structured, built, flashed, and used
+## Current Working System
 
-- `BUILD_AND_SIMULATION.md`  
-  Diamond build flow, current generated outputs in the repo, and Verilator workflow
+The current working path is:
 
-- `BRINGUP_PLAN.md`  
-  stage-by-stage bring-up order for the real hardware
+```text
+OV-series DVP camera
+  -> ECP5 FPGA YUYV capture and RGB565 conversion
+  -> FPGA 160x120 frame generation
+  -> FPGA tile-grid orange detector and overlay
+  -> 6-lane packed GPIO stream to ESP32-S3
+  -> ESP32 USB/serial frame packets
+  -> Python localhost preview
+```
 
-- `CONTROL_PROTOCOL.md`  
-  documentation for the current ESP32-to-FPGA control packet format
-
-- `PYTHON_TOOLS_GUIDE.md`  
-  documentation for the current Python-side workflow, which is currently just the video overlay path
-
-## Python tooling note
-
-At the current stage of the project, the Python side should be documented narrowly:
-- the relevant Python workflow is the **video overlay path**
-- it is still **not fully tested end to end**
-- the docs should not imply a complete validated Python host suite exists yet
+The ESP32 Wi-Fi/HTTP code still exists in the firmware file, but the current
+active bring-up path is the USB/serial preview because it removes Wi-Fi from the
+main video-throughput bottleneck.
