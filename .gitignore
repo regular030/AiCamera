@@ -1,3 +1,73 @@
-ansys\02-06\main.siwaveresults\
-/ansys/02-06/main.siwaveresults
+# Local credentials / machine-specific config
 ESP32/main/wifi_profile.h
+*.local
+*.secret
+*.env
+
+# ESP-IDF / CMake build outputs
+ESP32/build/
+sdramtest/ESP32/**/build/
+build/
+cmake-build-*/
+sdkconfig.old
+
+# Lattice Diamond generated outputs
+**/impl1/
+**/impl*/
+**/*.bit
+**/*.jed
+**/*.svf
+**/*.map
+**/*.mrp
+**/*.par
+**/*.pad
+**/*.pt
+**/*.twr
+**/*.tw1
+**/*.log
+**/*.jou
+**/*.dir/
+**/*.tmp
+
+# Verilator / simulation outputs
+obj_dir*/
+*.vcd
+*.fst
+*.vvp
+*.o
+*.d
+*.a
+
+# Captured frames, generated previews, and training outputs
+captures/
+scripts/*.png
+scripts/*.bmp
+scripts/*_live_*.png
+scripts/*_frame_*.png
+scripts/last_*.png
+data/
+training/**/runs/
+training/**/outputs/
+training/**/*.pt
+training/**/*.pth
+training/**/*.onnx
+
+# Temporary imported reference projects
+_tmp*/
+
+# Archive is intentionally visible even when it contains old generated files.
+!archive/
+!archive/**
+
+# Python / editor cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+
+# OS cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
