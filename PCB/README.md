@@ -7,10 +7,10 @@ ECP5 + ESP32-S3 camera PCBA.
 
 The current PCB files are **not an orderable release**.
 
-Rev 1.0 is the bring-up board used during development and has a known PCB/design
-issue that will be fixed in the next revision. Do not send the current files
-directly to fabrication or PCBA unless you intentionally want to reproduce the
-bring-up board and debug it yourself.
+Rev 1.0 is the repaired bring-up board used during development. In the October
+24, 2026 update, the schematic connects FPGA G9 to `+1V1`, but the PCB layout
+inside `Ai-Camera.eprj` still assigns G9 to `+3V3`. Propagate the schematic fix
+into the layout and complete the remaining errata before fabrication or PCBA.
 
 If you want to build this board, contact me first so I can share the latest
 revision status, known issue, and corrected ordering notes.
@@ -82,10 +82,15 @@ test-access placement.
 
 ## Current Files
 
-- `Ai-Camera.eprj` - EasyEDA project database.
-- `REV1_ERRATA.md` - known Rev 1.0 hardware issues and required fixes.
+- [Ai-Camera.eprj](Ai-Camera.eprj) - updated EasyEDA project database; corrected
+  G9 schematic, with the PCB layout correction still pending.
+- [Schematic PDF](SCH_Schematic1_2026-10-24.pdf) - two-page export dated October
+  24, 2026; page 1 is P1 and page 2 is FPGA. Page 2 shows G9 on `+1V1`.
+- [REV1_ERRATA.md](REV1_ERRATA.md) - known Rev 1.0 hardware issues and required fixes.
+- [FPGA power-short investigation](../Docs/FPGA_POWER_SHORT_DEBUG.md) - diagnosis,
+  technician repair, evidence, and remaining verification.
 - `Ai-Camera_backup/` - historical EasyEDA backups.
-- `altium/` - exported Altium project files.
+- `altium/` - historical February 2026 exports; not updated with the G9 correction.
 - `Datasheets/` - local datasheets/pinout references used during layout.
 
 ## Bring-Up Status

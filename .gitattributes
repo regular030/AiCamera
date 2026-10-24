@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve binary document offsets and project databases byte-for-byte.
+*.pdf binary
+*.eprj binary

@@ -12,12 +12,16 @@ localhost preview server.
 
 Demo video: [SaturnAI Camera test video](https://youtu.be/1sOSSh_YdGI)
 
+[Schematic PDF (October 24, 2026)](PCB/SCH_Schematic1_2026-10-24.pdf)
+| [How I diagnosed the FPGA power short](Docs/FPGA_POWER_SHORT_DEBUG.md)
+| [Project documentation](Docs/README.md)
+
 > [!WARNING]
 > The current PCB files are **not a manufacturing release**. Rev 1.0 is the
-> bring-up board and has a known PCB/design issue that will be fixed in the next
-> revision. Please do **not** order the board directly from the current files. If
-> you want to build one, contact me first so I can point you at the corrected
-> revision or explain the required changes.
+> repaired bring-up board. The updated schematic connects FPGA G9 to `+1V1`,
+> but the PCB layout in the EasyEDA project still assigns G9 to `+3V3`.
+> Complete the layout correction and the [Rev 1 errata](PCB/REV1_ERRATA.md)
+> before fabrication. Please do **not** order the board from the current files.
 
 > This repository is an active hardware bring-up repo. The top-level folders now
 > point to the current working design; old reference projects and generated
@@ -29,6 +33,8 @@ Demo video: [SaturnAI Camera test video](https://youtu.be/1sOSSh_YdGI)
 
 - Custom **ECP5 FPGA + ESP32-S3 camera PCBA** designed in EasyEDA.
 - Current PCB revision is a bring-up board and should **not** be ordered as-is.
+- FPGA power short repaired on the prototype; G9 corrected in the schematic.
+  Propagating that correction into the PCB layout remains outstanding.
 - FPGA DVP camera ingest is working at true **160x120** preview resolution.
 - FPGA performs **YUYV to RGB565** conversion before the ESP32 receives pixels.
 - FPGA transport uses **6 data lanes + strobe + frame gate**.
@@ -42,6 +48,25 @@ Demo video: [SaturnAI Camera test video](https://youtu.be/1sOSSh_YdGI)
   capture and USB/serial transfer.
 - SDRAM bring-up/test infrastructure exists at **120 MHz**, but the current live
   preview path does not require SDRAM framebuffering.
+
+---
+
+## How I Found The FPGA Power Short
+
+My first clue was the ECP5 FPGA becoming extremely hot and appearing to burn.
+I suspected a supply short to ground or another voltage rail, then found the
+1.1 V and 3.3 V rails connected together. I recall about 3.38 V on the higher
+rail and roughly 1.8 V on the core rail during the fault; these values are
+approximate recollections.
+
+The assembled boards showed the short while the bare PCBs did not. I checked
+the FPGA pin assignments and found **G9, a VCC core-supply ball, accidentally
+connected to 3.3 V instead of 1.1 V**. A technician added resin and disconnected
+that ball so bring-up could continue. I have now corrected the schematic;
+the routed PCB still needs the corresponding change.
+
+The [full debugging writeup](Docs/FPGA_POWER_SHORT_DEBUG.md) records the
+observations, reasoning, repair, and remaining checks.
 
 ---
 

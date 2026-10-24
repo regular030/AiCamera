@@ -29,6 +29,14 @@ sdkconfig.old
 **/*.dir/
 **/*.tmp
 
+# Diamond session state and run history (keep project, constraints, and RTL)
+**/.recovery
+**/*.recovery
+**/.build_status
+**/*_tcl.html
+**/promote.xml
+**/reportview.xml
+
 # Verilator / simulation outputs
 obj_dir*/
 *.vcd

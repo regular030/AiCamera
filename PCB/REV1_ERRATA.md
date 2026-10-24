@@ -13,8 +13,10 @@ revision unchanged.
   short.
 - The issue was traced to the FPGA G9 ball/nearby routing being tied to 3.3 V
   instead of the intended FPGA core rail.
-- A board repair technician repaired the affected hardware so bring-up could
-  continue.
+- A board repair technician added resin and disconnected the G9 ball so
+  bring-up could continue.
+- As of October 24, 2026, G9 is corrected to `+1V1` in the schematic/PDF,
+  but the PCB layout inside `Ai-Camera.eprj` still assigns G9 to `+3V3`.
 - The microSD path is paused and should not be treated as validated.
 - ESP32-to-FPGA programming is not supported on this revision.
 - The ESP32 reset-button path needed solder/rework attention and should be
@@ -22,38 +24,46 @@ revision unchanged.
 
 ## 1. FPGA Power Rail Short
 
-The largest Rev 1.0 hardware issue was a short between the FPGA 1.1 V core rail
-and 3.3 V on the assembled boards.
+The first symptom was the ECP5 becoming extremely hot and appearing to burn.
+This prompted a power-fault investigation. The assembled PCBA showed a
+connection between the nominal 1.1 V and 3.3 V rails; bare PCBs did not show
+the same short. Approximate recalled readings were 3.38 V on the higher rail
+and 1.8 V on the core rail during the fault. These are not archived meter
+readings, and the exact internal damage mechanism was not established.
 
-Observed behavior:
+Reviewing the package pins and nets identified G9 as the incorrect connection.
+For `LFE5U-25F-6BG256C`, G9 is a VCC core-supply ball and belongs on `+1V1`.
+The technician added resin and disconnected the ball. No reroute to `+1V1`
+or FPGA replacement is claimed. The repaired prototype was used for further
+FPGA/ESP32/camera bring-up.
 
-- Assembled PCBA showed a 1.1 V to 3.3 V short.
-- Bare unassembled PCB did not show the same short.
-- The fault localized near the FPGA/BGA area.
-- The working conclusion was that FPGA ball G9/nearby routing was tied to 3.3 V
-  instead of the intended 1.1 V FPGA core rail.
+The [full first-person debugging account](../Docs/FPGA_POWER_SHORT_DEBUG.md)
+explains the observations and how each narrowed the investigation.
 
-Impact:
+### Status As Of October 24, 2026
 
-- The board could not be powered safely until the rail issue was isolated.
-- Bring-up had to start with continuity checks and rail validation instead of
-  normal firmware/FPGA testing.
-- Repair required BGA-level or near-BGA rework, so this is not a casual user
-  fix.
+| Area | Status |
+| --- | --- |
+| Prototype repair | Short reported fixed by technician isolation of G9. |
+| Schematic | G9 now connects to `+1V1`; visible on page 2 of the [new PDF](SCH_Schematic1_2026-10-24.pdf). |
+| PCB layout | Still contains `["PAD_NET","e1","G9","+3V3","e650"]` in the decoded `pcb1` document. Layout correction is outstanding. |
+| Manufacturing exports | Older Altium files/backups remain historical and must not be used as corrected release files. |
+| Electrical qualification | Fresh measured rail voltages, current, temperature, and run duration are not recorded in this update. |
 
-Current status:
+### Required Before The Next Fabrication Run
 
-- The issue was repaired by a board repair technician.
-- The repaired board was used for continuing FPGA/ESP32/camera bring-up.
+- [x] Correct the G9 connection in the schematic and export the schematic PDF.
+- [ ] Update the PCB from the schematic; remove the old G9 connection and route
+  the ball to `+1V1`, including affected vias/copper pours.
+- [ ] Re-check every FPGA core, auxiliary, bank-supply, and ground pin against
+  the pinout for the actual package; run ERC/DRC and inspect the routed result.
+- [ ] Regenerate and review manufacturing outputs from the corrected layout.
+- [ ] Keep accessible rail test points and record rail-to-ground and rail-to-rail
+  checks before power-up, followed by voltages/current/temperature under power.
 
-Next revision action:
-
-- Correct the FPGA G9 power/net assignment and routing.
-- Re-check FPGA bank/core power pins against the package pinout before layout
-  release.
-- Add/keep accessible rail test points for 1.1 V, 1.8 V, and 3.3 V.
-- Keep the pre-power-up checklist: check shorts from each rail to ground and
-  between rails before applying power.
+An isolated VCC ball is a prototype repair, not the intended supply connection
+for a new board. Continued camera operation does not qualify the repaired FPGA
+for long-term reliability after overheating.
 
 ## 2. microSD Path Paused
 

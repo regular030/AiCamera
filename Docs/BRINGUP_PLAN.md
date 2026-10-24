@@ -7,6 +7,11 @@ This is the practical bring-up order for SaturnAI Camera hardware.
 Do not debug camera frames before power, clocks, reset, and programming are
 trusted.
 
+The [G9 investigation](FPGA_POWER_SHORT_DEBUG.md) explains why this matters.
+The repaired prototype and corrected schematic are separate from the PCB
+layout: the October 24, 2026 EasyEDA layout still assigns G9 to `+3V3`. Correct
+and review the layout before ordering another board.
+
 ## 1. Inspect The Board
 
 Before power:
@@ -15,6 +20,9 @@ Before power:
 - check for solder bridges, lifted parts, and damaged pads.
 - compare assembled PCBA against the known Rev 1 errata.
 - inspect FPGA/BGA area as much as practical.
+- check G9 against the `CABGA256` pinout: it is VCC and belongs on `+1V1`.
+- record whether the board is the original layout, the repaired prototype, or
+  a newly corrected layout; record any ball isolation/rework.
 
 ## 2. Check Power Rails Before Power-Up
 
@@ -22,13 +30,19 @@ Measure resistance/continuity:
 
 - 1.1 V to ground.
 - 1.8 V to ground.
+- 2.5 V auxiliary and 2.8 V camera rails to ground.
 - 3.3 V to ground.
 - 1.1 V to 3.3 V.
 - 1.1 V to 1.8 V.
 - 1.8 V to 3.3 V.
+- other rail pairs present on the board, including 2.5 V and 2.8 V.
 
 Rev 1 had a real assembled-board 1.1 V to 3.3 V issue, so this step is not
 optional.
+
+Disconnect power and allow capacitors to discharge before resistance checks.
+Record resistance values and compare them with expected loads; a continuity
+beep alone does not establish a short on a low-resistance FPGA supply.
 
 ## 3. Power Rails Under Power
 
@@ -36,10 +50,17 @@ Verify:
 
 - 1.1 V FPGA core rail.
 - 1.8 V rail where used.
+- 2.5 V auxiliary and 2.8 V camera rails.
 - 3.3 V rail.
+- FPGA temperature.
 - regulator temperature.
 - current draw.
 - reset/enable behavior.
+
+Use a current-limited supply for initial power-up. Stop if the FPGA heats
+rapidly or a rail is outside its expected range. Record actual voltages,
+supply current, temperature, and test duration before continuing. The recalled
+1.8 V on the faulty core rail is an incident observation, not a target value.
 
 ## 4. Clocks And Reset
 

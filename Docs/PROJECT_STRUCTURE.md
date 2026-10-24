@@ -42,6 +42,11 @@ archive/local-config/      Editor/local config moved out of the root
 Archive files are kept for traceability, but new development should not use
 them as the active source path.
 
+Diamond recovery files, run-history directories, build-status markers, and
+generated session reports are ignored and removed from version control.
+Cleanup keeps any existing local copies. Project/strategy files, RTL,
+constraints, model parameters, and historical design assets remain available.
+
 ## Key Active Files
 
 FPGA:

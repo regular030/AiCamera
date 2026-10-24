@@ -23,6 +23,18 @@ Known Rev 1.0 issues include:
 - unsupported ESP32-to-FPGA programming path on this revision.
 - ESP32 reset-button behavior that required solder/rework attention.
 
+### October 24, 2026 Power-Fix Update
+
+The prototype's G9 short was repaired by a technician who added resin and
+disconnected the ball. The updated schematic and
+[schematic PDF](../PCB/SCH_Schematic1_2026-10-24.pdf) now connect G9 to `+1V1`.
+The PCB layout inside the EasyEDA project still assigns G9 to `+3V3`, so the
+layout correction and manufacturing checks remain open.
+
+Read [How I Found The FPGA Power Short](FPGA_POWER_SHORT_DEBUG.md) for the
+first-person investigation: overheating, approximate rail readings, the
+assembled-versus-bare-board comparison, and the G9 pin/net check.
+
 ## What You Need To Build/Test A Future Revision
 
 For the corrected future revision, expect roughly:
